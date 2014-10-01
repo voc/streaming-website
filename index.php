@@ -10,12 +10,5 @@ echo $tpl->render(array(
 	'baseurl' => baseurl(),
 	'title' => 'Rooms',
 
-	'rooms' => array(
-		'saal1' => 'Saal 1',
-		'saal2' => 'Saal 2',
-		'saalg' => 'Saal G',
-		'saalz' => 'Saal Z',
-		'lounge' => 'Lounge',
-		'sendezentrum' => 'Sendezentrum',
-	),
+	'rooms' => $GLOBALS['CONFIG']['ROOMS'],
 ));

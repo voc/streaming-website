@@ -11,7 +11,7 @@ echo $tpl->render(array(
 	'page' => 'formats',
 	'baseurl' => baseurl(),
 	'title' => 'Stream-Formats',
-	'subtitle' => ucfirst($room),
+	'subtitle' => $GLOBALS['CONFIG']['ROOMS'][$room],
 
 	'room' => $room,
 	'formats' => array(
