@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+
+# / -> index.php - room/streams list
+
+# /room/ -> room.php - list of qualities/formats
+RewriteRule ^(saal1|saal2|saalg|saalz)/?$ room.php?room=$1 [L]
+
+# /room/format/ -> player.php - native av-player for room
+RewriteRule ^(saal1|saal2|saalg|saalz)/(hd|hq|lq|audio|slides)/?$ player.php?room=$1&format=$2&language=native [L]
+
+# /room/format/translated -> player.php - translated av-player for room
+RewriteRule ^(saal1|saal2|saalg|saalz)/(hd|hq|lq|audio|slides)/translated/?$ player.php?room=$1&format=$2&language=translated [L]
+
+# /party/ -> player.php - simple audio-player for party
+RewriteRule ^(launge|sendezentrum)/?$ player.php?room=$1&format=audio&language=native [L]
+
+ErrorDocument 404 404.php
