@@ -10,5 +10,12 @@ echo $tpl->render(array(
 	'baseurl' => baseurl(),
 	'title' => 'Rooms',
 
-	'rooms' => array('saal1','saal2','saalg','saalz','launge','sendezentrum'),
+	'rooms' => array(
+		'saal1' => 'Saal 1',
+		'saal2' => 'Saal 2',
+		'saalg' => 'Saal G',
+		'saalz' => 'Saal Z',
+		'launge' => 'Launge',
+		'sendezentrum' => 'Sendezentrum',
+	),
 ));

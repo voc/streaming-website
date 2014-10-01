@@ -1,8 +1,8 @@
 <ul>
-	<? foreach($formats as $format): ?>
-		<li class="<?=h($format)?>">
-			<a href="<?=h(link_player($room, $format))?>"><?=h(ucfirst($format))?></a>
-			(<a href="<?=h(link_player($room, $format, true))?>">translated</a>)
+	<? foreach($rooms as $room => $display): ?>
+		<li class="<?=h($room)?>">
+			<a href="<?=h(link_room($room))?>"><?=h($display)?></a>
+			(<a href="<?=h(link_room($room, true))?>">translated</a>)
 		</li>
 	<? endforeach ?>
 </ul>

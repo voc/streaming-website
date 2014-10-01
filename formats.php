@@ -14,5 +14,11 @@ echo $tpl->render(array(
 	'subtitle' => ucfirst($room),
 
 	'room' => $room,
-	'formats' => array('hd','hq','lq','audio','slides'),
+	'formats' => array(
+		'hd' => 'FullHD',
+		'hq' => 'High Quality',
+		'lq' => 'Low Quality',
+		'audio' => 'Audio-Only',
+		'slides' => 'Slide-Images + Audio',
+	),
 ));
