@@ -8,7 +8,7 @@ $room = $_GET['room'];
 
 $tpl = new PhpTemplate('template/page.phtml');
 echo $tpl->render(array(
-	'page' => 'rooms',
+	'page' => 'formats',
 	'baseurl' => baseurl(),
 	'title' => 'Stream-Formats',
 	'subtitle' => ucfirst($room),

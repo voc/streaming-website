@@ -6,6 +6,7 @@ RewriteCond %{REQUEST_FILENAME} !-l
 
 
 # / -> index.php - room/streams list
+DirectoryIndex index.php
 
 # /room/ -> formats.php - list of qualities/formats
 RewriteRule ^(saal1|saal2|saalg|saalz)/?$ formats.php?room=$1 [L]

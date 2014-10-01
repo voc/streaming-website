@@ -2,7 +2,6 @@
 	<? foreach($rooms as $room => $display): ?>
 		<li class="<?=h($room)?>">
 			<a href="<?=h(link_room($room))?>"><?=h($display)?></a>
-			(<a href="<?=h(link_room($room, true))?>">translated</a>)
 		</li>
 	<? endforeach ?>
 </ul>
