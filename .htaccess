@@ -17,6 +17,6 @@ RewriteRule ^(saal1|saal2|saalg|saalz)/(hd|hq|lq|audio|slides)/?$ player.php?roo
 RewriteRule ^(saal1|saal2|saalg|saalz)/(hd|hq|lq|audio|slides)/translated/?$ player.php?room=$1&format=$2&language=translated [L]
 
 # /party/ -> player.php - simple audio-player for party
-RewriteRule ^(launge|sendezentrum)/?$ player.php?room=$1&format=audio&language=native [L]
+RewriteRule ^(lounge|sendezentrum)/?$ player.php?room=$1&format=audio&language=native [L]
 
 ErrorDocument 404 404.php

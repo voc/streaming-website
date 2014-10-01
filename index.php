@@ -15,7 +15,7 @@ echo $tpl->render(array(
 		'saal2' => 'Saal 2',
 		'saalg' => 'Saal G',
 		'saalz' => 'Saal Z',
-		'launge' => 'Launge',
+		'lounge' => 'Lounge',
 		'sendezentrum' => 'Sendezentrum',
 	),
 ));
