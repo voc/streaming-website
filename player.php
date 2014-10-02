@@ -17,19 +17,19 @@ switch($format) {
 		$type = 'slides';
 		break;
 
-	case 'hq':
+	case 'hd':
 		$type = 'video';
 		$width = 1920;
 		$height = 1080;
 		break;
 
-	case 'hd':
+	case 'hq':
 		$type = 'video';
 		$width = 1024;
 		$height = 576;
 		break;
 
-	case 'ld':
+	case 'lq':
 		$type = 'video';
 		$width = 640;
 		$height = 360;
@@ -38,9 +38,12 @@ switch($format) {
 
 $tpl = new PhpTemplate('template/page.phtml');
 echo $tpl->render(array(
-	'page' => $type,
+	'page' => 'player',
+	'playertype' => $type,
+
 	'baseurl' => baseurl(),
-	'title' => 'Rooms',
+	'title' => $GLOBALS['CONFIG']['ROOMS'][$room],
+	'subtitle' => $GLOBALS['CONFIG']['FORMATS'][$format],
 
 	'room' => $room,
 	'roomname' => $GLOBALS['CONFIG']['ROOMS'][$room],

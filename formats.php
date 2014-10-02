@@ -14,11 +14,5 @@ echo $tpl->render(array(
 	'subtitle' => $GLOBALS['CONFIG']['ROOMS'][$room],
 
 	'room' => $room,
-	'formats' => array(
-		'hd' => 'FullHD',
-		'hq' => 'High Quality',
-		'lq' => 'Low Quality',
-		'audio' => 'Audio-Only',
-		'slides' => 'Slide-Images + Audio',
-	),
+	'formats' => $GLOBALS['CONFIG']['FORMATS'],
 ));

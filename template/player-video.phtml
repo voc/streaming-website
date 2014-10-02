@@ -1,0 +1,30 @@
+<video
+	autoplay="autoplay"
+	controls="controls"
+	id="video-tag"
+	preload="auto"
+	width="<?=h($width)?>"
+	height="<?=h($height)?>"
+>
+	<source
+		data-plugin-type="flash"
+		src="rtmp://rtmp.streaming.media.ccc.de:1935/stream/<?=h($room)?>_<?=h($language)?>_<?=h($format)?>"
+		title="h.H264 (RTMP)"
+		type="video/rtmp"
+	/>
+	<source
+		data-plugin-type="native"
+		src="http://hls.streaming.media.ccc.de/hls/<?=h($room)?>_<?=h($language)?>_<?=h($format)?>.m3u8"
+		title="h.264 (HLS)"
+		type="application/vnd.apple.mpegURL"
+	/>
+
+	<object
+		data="static/flashmediaelement.swf"
+		type="application/x-shockwave-flash"
+		width="<?=h($width)?>"
+		height="<?=h($height)?>"
+	>
+		<param name="allowFullScreen" value="true">
+	</object>
+</video>

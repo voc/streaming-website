@@ -12,4 +12,12 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	'sendezentrum' => 'Sendezentrum',
 );
 
+$GLOBALS['CONFIG']['FORMATS'] = array(
+	'hd' => 'FullHD',
+	'hq' => 'High Quality',
+	'lq' => 'Low Quality',
+	'audio' => 'Audio-Only',
+	'slides' => 'Slide-Images + Audio',
+);
+
 ?>
