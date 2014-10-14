@@ -22,7 +22,7 @@ function baseurl()
 
 	$base  = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']) ? 'https://' : 'http://';
 	$base .= $_SERVER['HTTP_HOST'];
-	$base .=  dirname($_SERVER['SCRIPT_NAME']).'/';
+	$base .=  rtrim(dirname($_SERVER['SCRIPT_NAME']), '/').'/';
 
 	return $base;
 }
