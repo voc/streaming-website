@@ -7,8 +7,11 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	'saal1' => 'Saal 1',
 	'saal2' => 'Saal 2',
 	'saalg' => 'Saal G',
-	'saalz' => 'Saal Z',
+	'saal6' => 'Saal 6',
+
 	'lounge' => 'Lounge',
+	'ambient' => 'Ambient',
+
 	'sendezentrum' => 'Sendezentrum',
 );
 

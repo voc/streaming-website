@@ -1,7 +1,44 @@
-<ul>
-	<? foreach($rooms as $room => $display): ?>
-		<li class="<?=h($room)?>">
-			<a href="<?=h(link_room($room))?>"><?=h($display)?></a>
-		</li>
-	<? endforeach ?>
-</ul>
+<? include('assemblies/banner.phtml') ?>
+
+<div class="container-fluid rooms">
+	<h1>Live-Streams</h1>
+
+	<div class="room-group">
+		<h2>Lecture Rooms</h2>
+
+		<ul>
+			<? foreach(array('saal1', 'saal2', 'saalg', 'saal6') as $room): ?>
+				<li class="<?=h($room)?>">
+					<a href="<?=h(link_room($room))?>"><?=h($rooms[$room])?></a>
+				</li>
+			<? endforeach ?>
+		</ul>
+	</div>
+
+
+	<div class="room-group">
+		<h2>Live DJ Sets</h2>
+
+		<ul>
+			<? foreach(array('lounge', 'ambient') as $room): ?>
+				<li class="<?=h($room)?>">
+					<a href="<?=h(link_room($room))?>"><?=h($rooms[$room])?></a>
+				</li>
+			<? endforeach ?>
+		</ul>
+	</div>
+
+
+	<div class="room-group">
+		<h2>Live Podcasts</h2>
+
+		<ul>
+			<? foreach(array('sendezentrum') as $room): ?>
+				<li class="<?=h($room)?>">
+					<a href="<?=h(link_room($room))?>"><?=h($rooms[$room])?></a>
+				</li>
+			<? endforeach ?>
+		</ul>
+	</div>
+
+</div>
