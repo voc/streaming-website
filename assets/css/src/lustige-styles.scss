@@ -1,7 +1,7 @@
 // customize bootstrap variables here:
 @import "fonts";
 @import "variables";
-@import "bootstrap";
+@import "../lib/bootstrap";
 
 $max-width: $container-lg;
 
