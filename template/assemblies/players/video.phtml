@@ -1,10 +1,10 @@
 <pre><?=print_r(array(
+	'file' => basename(__FILE__),
 	'room' => $room,
 	'language' => $language,
 	'format' => $format
 ), true)?></pre>
 
-<?/*
 <video
 	autoplay="autoplay"
 	controls="controls"
@@ -15,19 +15,19 @@
 >
 	<source
 		data-plugin-type="flash"
-		src="rtmp://rtmp.streaming.media.ccc.de:1935/stream/<?=h($room)?>_<?=h($language)?>_<?=h($format)?>"
+		src="<?=h(link_stream('rtmp', $room, $format, $translated))?>"
 		title="h.H264 (RTMP)"
 		type="video/rtmp"
 	/>
 	<source
 		data-plugin-type="native"
-		src="http://hls.streaming.media.ccc.de/hls/<?=h($room)?>_<?=h($language)?>_<?=h($format)?>.m3u8"
+		src="<?=h(link_stream('hls', $room, $format, $translated))?>"
 		title="h.264 (HLS)"
 		type="application/vnd.apple.mpegURL"
 	/>
 
 	<object
-		data="static/flashmediaelement.swf"
+		data="/assets/js/lib/flashmediaelement.swf"
 		type="application/x-shockwave-flash"
 		width="<?=h($width)?>"
 		height="<?=h($height)?>"
@@ -35,4 +35,3 @@
 		<param name="allowFullScreen" value="true">
 	</object>
 </video>
-*/?>

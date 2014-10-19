@@ -17,6 +17,21 @@ function link_player($room, $format, $translated = false)
 	return rawurlencode($room).'/'.($isDefaultFormat ? '' : rawurlencode($format).'/').($translated ? 'translated/' : '');
 }
 
+function link_stream($protocol, $room, $format, $translated = false)
+{
+	$language = $translated ? 'translated' : 'native';
+
+	switch ($protocol) {
+		case 'rtmp':
+			return 'rtmp://rtmp.streaming.media.ccc.de:1935/stream/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format);
+
+		case 'hls':
+			return 'http://hls.streaming.media.ccc.de/hls/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format).'.m3u8';
+	}
+
+	return '#';
+}
+
 function baseurl()
 {
 	if(isset($GLOBALS['CONFIG']['baseurl']))

@@ -53,5 +53,6 @@ echo $tpl->render(array(
 	'width' => @$width,
 	'height' => @$height,
 	'language' => $language,
+	'translated' => ($language == 'translated'),
 	'format' => $format,
 ));
