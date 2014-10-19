@@ -334,9 +334,49 @@ a.inverted {
 
 }
 
+/* extra large mejs controls on tablet & phone */
+@media only screen and (max-device-width: 768px)
+{
+  .mejs-container .mejs-controls {
+    height: 48px;
+    div {
+      width: 52px;
+      height: 52px;
+    }
+    .mejs-button button {
+      background-size: 288px 64px !important;
+      width: 32px;
+      height: 32px;
+    }
+    .mejs-playpause-button {
+      &.mejs-play button {
+        background-position: 0 0;
+      }
+      &.mejs-pause button {
+        background-position: 0 -32px;
+      }
+    }
+    .mejs-volume-button {
+      &.mejs-mute button {
+        background-position: -32px -32px;
+      }
+      &.mejs-unmute button {
+        background-position: -32px 0;
+      }
+      .mejs-volume-slider {
+        left: 8px;
+      }
+    }
+    .mejs-fullscreen-button button {
+      background-position: -64px 0;
+    }
+  }
+}
+
 /* and now for medium screens: */
 @media all and (min-width: $screen-sm-min) and (max-width: $container-desktop) {
   
+
   /* events overview */
   .event-previews .event-preview {
     h3 {

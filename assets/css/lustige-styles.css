@@ -5548,6 +5548,28 @@ a.inverted {
     .rooms .room-group li:nth-child(2n+1) {
       margin-right: 1%; }
 
+@media only screen and (max-device-width: 768px) {
+  .mejs-container .mejs-controls {
+    height: 48px; }
+    .mejs-container .mejs-controls div {
+      width: 52px;
+      height: 52px; }
+    .mejs-container .mejs-controls .mejs-button button {
+      background-size: 288px 64px !important;
+      width: 32px;
+      height: 32px; }
+    .mejs-container .mejs-controls .mejs-playpause-button.mejs-play button {
+      background-position: 0 0; }
+    .mejs-container .mejs-controls .mejs-playpause-button.mejs-pause button {
+      background-position: 0 -32px; }
+    .mejs-container .mejs-controls .mejs-volume-button.mejs-mute button {
+      background-position: -32px -32px; }
+    .mejs-container .mejs-controls .mejs-volume-button.mejs-unmute button {
+      background-position: -32px 0; }
+    .mejs-container .mejs-controls .mejs-volume-button .mejs-volume-slider {
+      left: 8px; }
+    .mejs-container .mejs-controls .mejs-fullscreen-button button {
+      background-position: -64px 0; } }
 /* and now for medium screens: */
 @media all and (min-width: 450px) and (max-width: 700px) {
   /* events overview */
