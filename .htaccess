@@ -21,7 +21,7 @@ RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|lq|audio|slides)/?$ room.php?room=$1&
 RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|lq|audio|slides)/translated/?$ room.php?room=$1&format=$2&language=translated [L]
 
 # /party/ -> player.php - simple audio-player for party
-RewriteRule ^(lounge|ambient|sendezentrum)/?$ audio.php?room=$1&format=audio [L]
+RewriteRule ^(lounge|ambient|sendezentrum)/?$ party.php?room=$1&format=audio [L]
 
 # Show a known page in case of as miss
 ErrorDocument 404 404.php
