@@ -1,16 +1,23 @@
 <div style="width: 100%; height: 100%; max-width: <?=h($width)?>px; margin: 0 auto;">
 	<video
 		autoplay="autoplay"
-		id="video-tag"
 		preload="auto"
 		width="<?=h($width)?>"
 		height="<?=h($height)?>"
 		style="width: 100%; height: 100%;"
 	>
+		<? if($format == 'hq'): ?>
+			<source
+				data-plugin-type="native"
+				src="<?=h(link_stream('icecast', $room, $format, $translated))?>"
+				title="WebM (Icecast)"
+				type="video/webm"
+			/>
+		<? endif ?>
 		<source
 			data-plugin-type="flash"
 			src="<?=h(link_stream('rtmp', $room, $format, $translated))?>"
-			title="h.H264 (RTMP)"
+			title="h.264 (RTMP)"
 			type="video/rtmp"
 		/>
 		<source

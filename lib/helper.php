@@ -27,6 +27,9 @@ function link_stream($protocol, $room, $format, $translated = false)
 
 		case 'hls':
 			return 'http://hls.streaming.media.ccc.de/hls/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format).'.m3u8';
+
+		case 'icecast':
+			return 'http://webm.streaming.media.ccc.de:8000/'.rawurlencode($room).'_'.rawurlencode($language).'.'.rawurlencode($format);
 	}
 
 	return '#';

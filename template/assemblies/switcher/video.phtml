@@ -35,3 +35,18 @@
 		<? endforeach ?>
 	</ul>
 <? endforeach ?>
+
+<h3>Direktlinks (WebM)</h3>
+<ul>
+	<li>
+		<span class="label filetype">HQ</span>
+		<a href="<?=h(link_stream('icecast', $room, 'hq'))?>">
+			<span class="fa fa-flag-o"></span>
+			native
+		</a>
+		<a href="<?=h(link_stream('icecast', $room, 'hq', true))?>">
+			<span class="fa fa-flag"></span>
+			translated
+		</a>
+	</li>
+</ul>
