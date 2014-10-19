@@ -3,7 +3,7 @@ $(function() {
 	$('video').mediaelementplayer({
 		usePluginFullScreen: true,
 
-		pluginPath: '/assets/js/lib/',
+		pluginPath: 'assets/js/lib/',
 		enableAutosize: true,
 
 		success: function (mediaElement) {
