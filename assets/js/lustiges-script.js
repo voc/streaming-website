@@ -1,19 +1,12 @@
 $(function() {
 
 	$('video').mediaelementplayer({
+		mode: 'auto_plugin',
 		usePluginFullScreen: true,
+		enableAutosize: true,
 
 		pluginPath: 'assets/js/lib/',
-		enableAutosize: true,
-		features: ['playpause', 'volume','fullscreen'],
-
-		success: function (mediaElement) {
-			/*
-			mediaElement.addEventListener('playing', function () {
-				$.post("http://api.media.ccc.de/public/recordings/count", {event_id: 1609,src: mediaElement.src});
-			}, false);
-			*/
-		}
+		features: ['playpause', 'volume','fullscreen']
 	});
 	$('audio').mediaelementplayer();
 
