@@ -26,19 +26,5 @@
 			title="h.264 (HLS)"
 			type="application/vnd.apple.mpegURL"
 		/>
-
-		<object
-			data="assets/js/lib/flashmediaelement.swf"
-			type="application/x-shockwave-flash"
-			width="<?=h($width)?>"
-			height="<?=h($height)?>"
-		>
-			<param name="movie" value="assets/js/lib/flashmediaelement.swf" />
-			<param name="flashvars" value="controls=false&file=<?=h(link_stream('rtmp', $room, $format, $translated))?>" />
-
-			<param name="allowFullScreen" value="true">
-
-			<pre>Sorry, Lynx is not supported.</pre>
-		</object>
 	</video>
 </div>
