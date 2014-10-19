@@ -38,12 +38,13 @@ switch($format) {
 
 $tpl = new PhpTemplate('template/page.phtml');
 echo $tpl->render(array(
-	'page' => 'player',
-	'playertype' => $type,
+	'page' => 'room',
 
 	'baseurl' => baseurl(),
-	'title' => $GLOBALS['CONFIG']['ROOMS'][$room],
-	'subtitle' => $GLOBALS['CONFIG']['FORMATS'][$format],
+	'title' => $GLOBALS['CONFIG']['ROOMS'][$room].' – '.$GLOBALS['CONFIG']['FORMATS'][$format],
+
+	'rooms' => $GLOBALS['CONFIG']['ROOMS'],
+	'formats' => $GLOBALS['CONFIG']['FORMATS'],
 
 	'room' => $room,
 	'roomname' => $GLOBALS['CONFIG']['ROOMS'][$room],
@@ -51,4 +52,6 @@ echo $tpl->render(array(
 	'type' => $type,
 	'width' => @$width,
 	'height' => @$height,
+	'language' => $language,
+	'format' => $format,
 ));

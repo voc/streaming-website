@@ -1,0 +1,16 @@
+<h3>Video</h3>
+<ul>
+	<? foreach(array('hd', 'hq', 'lq') as $iter): ?>
+		<li>
+			<span class="label filetype"><?=h(strtoupper($iter))?></span>
+			<a href="<?=h(link_player($room, $iter))?>">
+				<span class="fa fa-download"></span>
+				native
+			</a>
+			<a href="<?=h(link_player($room, $iter, true))?>">
+				<span class="fa fa-download"></span>
+				translated
+			</a>
+		</li>
+	<? endforeach ?>
+</ul>

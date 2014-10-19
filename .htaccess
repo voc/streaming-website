@@ -1,23 +1,31 @@
 RewriteEngine On
 
+# Deliver literal files as-is
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 
-
 # / -> index.php - room/streams list
 DirectoryIndex index.php
 
-# /room/ -> formats.php - list of qualities/formats
-RewriteRule ^(saal1|saal2|saalg|saalz)/?$ formats.php?room=$1 [L]
+# /room/ -> room.php - native av-player in hq (with format switcher included)
+RewriteRule ^(saal1|saal2|saalg|saal6)/?$ room.php?room=$1&format=hq&language=native& [L]
 
-# /room/format/ -> player.php - native av-player for room
-RewriteRule ^(saal1|saal2|saalg|saalz)/(hd|hq|lq|audio|slides)/?$ player.php?room=$1&format=$2&language=native [L]
+# /room/ -> room.php - translated av-player in hq (with format switcher included)
+RewriteRule ^(saal1|saal2|saalg|saal6)/translated/?$ room.php?room=$1&format=hq&language=translated& [L]
 
-# /room/format/translated -> player.php - translated av-player for room
-RewriteRule ^(saal1|saal2|saalg|saalz)/(hd|hq|lq|audio|slides)/translated/?$ player.php?room=$1&format=$2&language=translated [L]
+# /room/format/ -> room.php - native av-player in $format (with format switcher included)
+RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|lq|audio|slides)/?$ room.php?room=$1&format=$2&language=native [L]
+
+# /room/format/translated -> room.php - translated av-player in $format (with format switcher included)
+RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|lq|audio|slides)/translated/?$ room.php?room=$1&format=$2&language=translated [L]
 
 # /party/ -> player.php - simple audio-player for party
-RewriteRule ^(lounge|sendezentrum)/?$ player.php?room=$1&format=audio&language=native [L]
+RewriteRule ^(lounge|ambient|sendezentrum)/?$ audio.php?room=$1&format=audio [L]
 
+# Show a known page in case of as miss
 ErrorDocument 404 404.php
+
+# Allow Caches & Proxies to Cache all resources
+#ExpiresActive On
+#ExpiresDefault "access plus 4 hours"

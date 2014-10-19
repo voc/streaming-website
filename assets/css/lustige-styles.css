@@ -5440,27 +5440,27 @@ h1 + .news-item {
       max-width: 100%; }
   .tab-content #audio * {
     max-width: 100%; }
-  .tab-content #download {
+  .tab-content .switcher {
     padding: 16px; }
-    .tab-content #download h3 {
+    .tab-content .switcher h3 {
       color: #777777; }
-      .tab-content #download h3:first-child {
+      .tab-content .switcher h3:first-child {
         margin-top: 0; }
-    .tab-content #download ul {
+    .tab-content .switcher ul {
       list-style-type: none;
       padding: 0; }
-      .tab-content #download ul li {
+      .tab-content .switcher ul li {
         min-width: 49%;
         display: inline-block; }
-      .tab-content #download ul a {
+      .tab-content .switcher ul a {
         margin: 0 5px; }
-    .tab-content #download .filetype {
+    .tab-content .switcher .filetype {
       text-transform: uppercase;
       margin-right: 10px;
       color: #000;
       background-color: #fff;
       min-width: 4em; }
-    .tab-content #download a:hover, .tab-content #download a:focus, .tab-content #download a:active {
+    .tab-content .switcher a:hover, .tab-content .switcher a:focus, .tab-content .switcher a:active {
       text-decoration: none; }
 
 ul.metadata {
@@ -5531,21 +5531,29 @@ a.inverted {
   .rooms .room-group h2 {
     margin: 0.6em 1.2em; }
   .rooms .room-group ul {
-    list-style-type: none; }
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
   .rooms .room-group li {
     list-style-type: none;
     width: 49%;
-    margin-bottom: 1%;
-    height: 3em;
+    margin: 0;
+    padding: 0;
+    margin-top: 1%;
+    height: 4em;
     float: left; }
     .rooms .room-group li a {
       color: white;
       display: block;
       width: 100%;
       height: 100%;
-      line-height: 100%;
+      line-height: 2.4em;
       font-size: 1.75em;
-      font-weight: bold; }
+      font-weight: bold;
+      text-align: center; }
+      .rooms .room-group li a:hover {
+        background-color: #1a1a1a;
+        text-decoration: none; }
     .rooms .room-group li:nth-child(2n+1) {
       margin-right: 1%; }
 

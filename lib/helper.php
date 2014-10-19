@@ -12,7 +12,9 @@ function link_room($room)
 
 function link_player($room, $format, $translated = false)
 {
-	return rawurlencode($room).'/'.rawurlencode($format).'/'.($translated ? 'translated/' : '');
+	$isDefaultFormat = in_array($format, array('hq', 'video'));
+
+	return rawurlencode($room).'/'.($isDefaultFormat ? '' : rawurlencode($format).'/').($translated ? 'translated/' : '');
 }
 
 function baseurl()

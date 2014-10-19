@@ -1,0 +1,23 @@
+<div class="container-fluid rooms">
+	<h1><?=h($title)?></h1>
+
+	<ul class="nav nav-tabs nav-justified">
+		<? foreach(array('video', 'audio', 'slides') as $iter): ?>
+			<li
+				<? if($type == $iter):?>class="active"<? endif ?>
+			>
+				<a href="<?=h(link_player($room, $iter))?>">
+					<?=h(ucfirst($iter))?>
+				</a>
+			</li>
+		<? endforeach ?>
+	</ul>
+
+
+	<div class="tab-content">
+		<? include("players/$type.phtml") ?>
+		<div class="switcher">
+			<? include("assemblies/switcher/$type.phtml") ?>
+		</div>
+	</div>
+</div>

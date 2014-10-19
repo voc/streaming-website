@@ -8,7 +8,7 @@ $tpl = new PhpTemplate('template/page.phtml');
 echo $tpl->render(array(
 	'page' => 'rooms',
 	'baseurl' => baseurl(),
-	'title' => 'Rooms',
+	'title' => 'Overview',
 
 	'rooms' => $GLOBALS['CONFIG']['ROOMS'],
 ));
