@@ -31,8 +31,8 @@ switch($format) {
 
 	case 'lq':
 		$type = 'video';
-		$width = 512;
-		$height = 288;
+		$width = 640;
+		$height = 360;
 		break;
 }
 
