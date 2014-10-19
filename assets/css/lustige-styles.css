@@ -5550,6 +5550,8 @@ a.inverted {
 
 .room.lq .tab-content {
   padding-top: 32px; }
+.room.audio .tab-content {
+  padding-top: 32px; }
 
 /* extra large mejs controls on tablet & phone */
 @media only screen and (max-device-width: 768px) {
