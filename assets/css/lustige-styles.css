@@ -5548,6 +5548,10 @@ a.inverted {
     .rooms .room-group li:nth-child(2n+1) {
       margin-right: 1%; }
 
+.room.lq .tab-content {
+  padding-top: 32px; }
+
+/* extra large mejs controls on tablet & phone */
 @media only screen and (max-device-width: 768px) {
   .mejs-container .mejs-controls {
     height: 48px; }
