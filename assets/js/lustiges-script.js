@@ -5,6 +5,7 @@ $(function() {
 
 		pluginPath: 'assets/js/lib/',
 		enableAutosize: true,
+		features: ['playpause', 'volume','fullscreen'],
 
 		success: function (mediaElement) {
 			/*

@@ -1349,7 +1349,7 @@ pre {
       width: 700px; } }
   @media (min-width: 1200px) {
     .container {
-      width: 700px; } }
+      width: 1024px; } }
 
 .container-fluid {
   margin-right: auto;
@@ -5346,7 +5346,8 @@ p {
     font-size: 1.1em; }
 
 .container, .container-fluid {
-  max-width: 700px; }
+  max-width: 1024px;
+  padding: 0; }
 
 .label {
   display: inline-block;
@@ -5387,7 +5388,7 @@ p {
   background-color: #555555;
   font-size: 16px; }
   #breadcrumb ol {
-    max-width: 700px;
+    max-width: 1024px;
     padding: 5px 16px;
     margin-bottom: 0; }
     #breadcrumb ol li + li:before {
@@ -5428,18 +5429,8 @@ h1 + .news-item {
 
 .tab-content {
   background-color: #333333; }
-  .tab-content .tab-pane {
-    display: block; }
-  .tab-content .tab-pane:not(:target) {
-    display: none; }
-  .tab-content #video {
-    text-align: center; }
-    .tab-content #video .video {
-      margin: auto; }
-    .tab-content #video * {
-      max-width: 100%; }
-  .tab-content #audio * {
-    max-width: 100%; }
+  .tab-content .mejs-container {
+    margin: auto; }
   .tab-content .switcher {
     padding: 16px; }
     .tab-content .switcher h3 {
@@ -5540,14 +5531,14 @@ a.inverted {
     margin: 0;
     padding: 0;
     margin-top: 1%;
-    height: 4em;
+    height: 6em;
     float: left; }
     .rooms .room-group li a {
       color: white;
       display: block;
       width: 100%;
       height: 100%;
-      line-height: 2.4em;
+      line-height: 3.4em;
       font-size: 1.75em;
       font-weight: bold;
       text-align: center; }
@@ -5600,10 +5591,10 @@ a.inverted {
       text-align: right;
       margin-top: 10px; }
 
-  /* promoted videos */
-  .promoted {
+  /* banner area */
+  .banner {
     height: 230px; }
-    .promoted img {
+    .banner img {
       height: 120px;
       width: auto; }
 

@@ -59,6 +59,7 @@ p {
 
 .container, .container-fluid {
   max-width: $max-width;
+  padding: 0;
 }
 
 .label {
@@ -169,38 +170,21 @@ h1 + .news-item {
 
 .tab-content {
   background-color: $gray-dark;
-  
-  .tab-pane {
-    display: block;
+
+  .mejs-container {
+    margin: auto;
   }
-  .tab-pane:not(:target) {
-    // hide unselected tab panes
-    // browser not supporting this selector will show all panes
-    display: none;
-  }
-  
-  #video {
-    text-align: center;
-    .video {
-      margin: auto;
-    }
-    * {
-      max-width: 100%;
-    }
-  }
-  
-  #audio * {
-    max-width: 100%;
-  }
-  
+
   .switcher {
     padding: $padding-large-horizontal;
+
     h3 {
       color: $gray-light;
       &:first-child {
         margin-top: 0;
       }
     }
+
     ul {
       list-style-type: none;
       padding: 0;
@@ -212,6 +196,7 @@ h1 + .news-item {
         margin: 0 $padding-xs-horizontal;
       }
     }
+
     .filetype {
       text-transform: uppercase;
       margin-right: $padding-small-horizontal;
@@ -219,6 +204,7 @@ h1 + .news-item {
       background-color: #fff;
       min-width: 4em;
     }
+
     a:hover, a:focus, a:active {
       text-decoration: none;
     }
@@ -320,7 +306,7 @@ a.inverted {
       margin: 0;
       padding: 0;
       margin-top: 1%;
-      height: 4em;
+      height: 6em;
       float: left;
 
       a {
@@ -328,7 +314,7 @@ a.inverted {
         display: block;
         width: 100%;
         height: 100%;
-        line-height: 2.4em;
+        line-height: 3.4em;
         font-size: 1.75em;
         font-weight: bold;
         text-align: center;
@@ -409,8 +395,8 @@ a.inverted {
     }
   }
   
-  /* promoted videos */
-  .promoted {
+  /* banner area */
+  .banner {
     height: 230px;
     img {
       height: 120px;

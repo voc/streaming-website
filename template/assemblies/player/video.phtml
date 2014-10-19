@@ -1,35 +1,37 @@
-<video
-	autoplay="autoplay"
-	controls="controls"
-	id="video-tag"
-	preload="auto"
-	width="<?=h($width)?>"
-	height="<?=h($height)?>"
->
-	<source
-		data-plugin-type="flash"
-		src="<?=h(link_stream('rtmp', $room, $format, $translated))?>"
-		title="h.H264 (RTMP)"
-		type="video/rtmp"
-	/>
-	<source
-		data-plugin-type="native"
-		src="<?=h(link_stream('hls', $room, $format, $translated))?>"
-		title="h.264 (HLS)"
-		type="application/vnd.apple.mpegURL"
-	/>
-
-	<object
-		data="assets/js/lib/flashmediaelement.swf"
-		type="application/x-shockwave-flash"
+<div style="width: 100%; height: 100%; max-width: <?=h($width)?>px; margin: 0 auto;">
+	<video
+		autoplay="autoplay"
+		id="video-tag"
+		preload="auto"
 		width="<?=h($width)?>"
 		height="<?=h($height)?>"
+		style="width: 100%; height: 100%;"
 	>
-		<param name="movie" value="assets/js/lib/flashmediaelement.swf" />
-		<param name="flashvars" value="controls=true&file=<?=h(link_stream('rtmp', $room, $format, $translated))?>" />
+		<source
+			data-plugin-type="flash"
+			src="<?=h(link_stream('rtmp', $room, $format, $translated))?>"
+			title="h.H264 (RTMP)"
+			type="video/rtmp"
+		/>
+		<source
+			data-plugin-type="native"
+			src="<?=h(link_stream('hls', $room, $format, $translated))?>"
+			title="h.264 (HLS)"
+			type="application/vnd.apple.mpegURL"
+		/>
 
-		<param name="allowFullScreen" value="true">
+		<object
+			data="assets/js/lib/flashmediaelement.swf"
+			type="application/x-shockwave-flash"
+			width="<?=h($width)?>"
+			height="<?=h($height)?>"
+		>
+			<param name="movie" value="assets/js/lib/flashmediaelement.swf" />
+			<param name="flashvars" value="controls=false&file=<?=h(link_stream('rtmp', $room, $format, $translated))?>" />
 
-		<pre>Sorry, Lynx is not supported.</pre>
-	</object>
-</video>
+			<param name="allowFullScreen" value="true">
+
+			<pre>Sorry, Lynx is not supported.</pre>
+		</object>
+	</video>
+</div>
