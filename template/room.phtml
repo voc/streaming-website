@@ -13,11 +13,31 @@
 		<? endforeach ?>
 	</ul>
 
+	<div class="player-wrap">
+		<? include("assemblies/player/$type.phtml") ?>
+	</div>
+
+	<ul class="nav nav-tabs nav-justified" role="tablist">
+		<li class="active">
+			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
+		</li>
+		<li>
+			<a href="#irc" role="tab" data-toggle="tab">IRC</a>
+		</li>
+		<li>
+			<a href="#program" role="tab" data-toggle="tab">Program</a>
+		</li>
+	</ul>
 
 	<div class="tab-content">
-		<? include("assemblies/player/$type.phtml") ?>
-		<div class="switcher">
+		<div class="tab-pane active switcher" id="switcher">
 			<? include("assemblies/switcher/$type.phtml") ?>
+		</div>
+		<div class="tab-pane irc" id="irc">
+			<? include("assemblies/irc.phtml") ?>
+		</div>
+		<div class="tab-pane program" id="program">
+			Program
 		</div>
 	</div>
 </div>

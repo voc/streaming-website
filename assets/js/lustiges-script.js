@@ -10,7 +10,6 @@ $(function() {
 	});
 	$('audio').mediaelementplayer();
 
-/*
 	// activate tab via hash and default to video
 	function setTabToHash() {
 		var activeTab = $('.nav-tabs a[href=' + window.location.hash + ']').tab('show');
@@ -19,8 +18,6 @@ $(function() {
 			window.location.hash = '#video';
 		}
 	}
-	setTabToHash();
-
 
 	// change hash on tab change
 	$('.nav-tabs').on('shown.bs.tab', 'a', function (e) {
@@ -28,6 +25,15 @@ $(function() {
 	});
 
 	// adjust tabs when hash changes
-	$(window).on('hashchange', setTabToHash);
-*/
+	$(window).on('hashchange', setTabToHash).trigger('hashchange');
+
+	$('.click-to-irc').one('click', function() {
+		var
+			$irc = $(this),
+			$iframe = $(this).find('iframe');
+
+		$iframe.on('load', function() {
+			$irc.addClass('active');
+		}).attr('src', $iframe.data('src'));
+	});
 });

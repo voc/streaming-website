@@ -5427,31 +5427,34 @@ h1 + .news-item {
     color: white;
     background-color: #333333; }
 
+.player-wrap {
+  background-color: #333333; }
+
 .tab-content {
   background-color: #333333; }
   .tab-content .mejs-container {
     margin: auto; }
-  .tab-content .switcher {
+  .tab-content #switcher {
     padding: 16px; }
-    .tab-content .switcher h3 {
+    .tab-content #switcher h3 {
       color: #777777; }
-      .tab-content .switcher h3:first-child {
+      .tab-content #switcher h3:first-child {
         margin-top: 0; }
-    .tab-content .switcher ul {
+    .tab-content #switcher ul {
       list-style-type: none;
       padding: 0; }
-      .tab-content .switcher ul li {
+      .tab-content #switcher ul li {
         min-width: 49%;
         display: inline-block; }
-      .tab-content .switcher ul a {
+      .tab-content #switcher ul a {
         margin: 0 5px; }
-    .tab-content .switcher .filetype {
+    .tab-content #switcher .filetype {
       text-transform: uppercase;
       margin-right: 10px;
       color: #000;
       background-color: #fff;
       min-width: 4em; }
-    .tab-content .switcher a:hover, .tab-content .switcher a:focus, .tab-content .switcher a:active {
+    .tab-content #switcher a:hover, .tab-content #switcher a:focus, .tab-content #switcher a:active {
       text-decoration: none; }
 
 ul.metadata {
@@ -5548,10 +5551,27 @@ a.inverted {
     .rooms .room-group li:nth-child(2n+1) {
       margin-right: 1%; }
 
-.room.lq .tab-content {
-  padding-top: 32px; }
-.room.audio .tab-content {
-  padding-top: 32px; }
+.room.lq .player-wrap {
+  padding: 32px 0; }
+.room.audio .player-wrap {
+  padding: 64px 32px; }
+.room .click-to-irc {
+  background-image: url(../img/irc-soft.png);
+  height: 376px;
+  line-height: 376px;
+  border: 2px solid #333333;
+  text-align: center;
+  cursor: pointer; }
+  .room .click-to-irc span {
+    font-size: 60px; }
+  .room .click-to-irc iframe {
+    display: none; }
+  .room .click-to-irc.active {
+    background-image: none; }
+    .room .click-to-irc.active span {
+      display: none; }
+    .room .click-to-irc.active iframe {
+      display: block; }
 
 /* extra large mejs controls on tablet & phone */
 @media only screen and (max-device-width: 768px) {
