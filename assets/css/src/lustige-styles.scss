@@ -23,6 +23,8 @@ body {
   width: 100%;
   overflow: hidden;
   overflow-y: initial;
+
+  margin-bottom: 10px;
 }
 
 .top-space {
@@ -350,18 +352,23 @@ a.inverted {
   .click-to-irc {
     background-image: url(../img/irc-soft.png);
     height: 376px;
-    line-height: 376px;
     border: 2px solid $gray-dark;
 
     text-align: center;
     cursor: pointer;
 
-    span { font-size: 60px; }
+    .activator {
+      margin-top: 120px;
+      font-size: 60px;
+      a {
+        font-size: 40px;
+      }
+    }
     iframe { display: none; }
 
     &.active {
       background-image: none;
-      span { display: none; }
+      .activator { display: none; }
       iframe { display: block; }
     }
 

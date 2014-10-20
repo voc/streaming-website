@@ -27,9 +27,15 @@ $(function() {
 	// adjust tabs when hash changes
 	$(window).on('hashchange', setTabToHash).trigger('hashchange');
 
-	$('.click-to-irc').one('click', function() {
+	$('.click-to-irc').on('click', function(e) {
+		if($(this).hasClass('activating'))
+			return;
+
+		if($(e.target).hasClass('irclink'))
+			return;
+
 		var
-			$irc = $(this),
+			$irc = $(this).addClass('activating'),
 			$iframe = $(this).find('iframe');
 
 		$iframe.on('load', function() {

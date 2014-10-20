@@ -5318,7 +5318,8 @@ body {
   padding-top: 48px;
   width: 100%;
   overflow: hidden;
-  overflow-y: initial; }
+  overflow-y: initial;
+  margin-bottom: 10px; }
 
 .top-space {
   padding-top: 40px; }
@@ -5558,17 +5559,19 @@ a.inverted {
 .room .click-to-irc {
   background-image: url(../img/irc-soft.png);
   height: 376px;
-  line-height: 376px;
   border: 2px solid #333333;
   text-align: center;
   cursor: pointer; }
-  .room .click-to-irc span {
+  .room .click-to-irc .activator {
+    margin-top: 120px;
     font-size: 60px; }
+    .room .click-to-irc .activator a {
+      font-size: 40px; }
   .room .click-to-irc iframe {
     display: none; }
   .room .click-to-irc.active {
     background-image: none; }
-    .room .click-to-irc.active span {
+    .room .click-to-irc.active .activator {
       display: none; }
     .room .click-to-irc.active iframe {
       display: block; }
