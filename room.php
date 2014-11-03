@@ -2,7 +2,7 @@
 
 require_once('lib/PhpTemplate.php');
 require_once('lib/helper.php');
-require_once('config.php');
+require_once('lib/config.php');
 
 $room = $_GET['room'];
 $language = $_GET['language'];
@@ -48,6 +48,8 @@ echo $tpl->render(array(
 
 	'room' => $room,
 	'roomname' => $GLOBALS['CONFIG']['ROOMS'][$room],
+
+	'program' => program(),
 
 	'type' => $type,
 	'width' => @$width,

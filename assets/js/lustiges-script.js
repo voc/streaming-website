@@ -13,10 +13,6 @@ $(function() {
 	// activate tab via hash and default to video
 	function setTabToHash() {
 		var activeTab = $('.nav-tabs a[href=' + window.location.hash + ']').tab('show');
-
-		if (activeTab.length === 0) {
-			window.location.hash = '#video';
-		}
 	}
 
 	// change hash on tab change

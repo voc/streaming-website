@@ -1,0 +1,38 @@
+<?
+$room = 'Grossbaustelle BER';
+
+foreach($program[$room] as $event)
+{
+	$width += intval(isset($event['duration']) ? $event['duration'] : 5);
+}
+?>
+
+<div class="program">
+	<div class="now">now</div>
+	<div class="inner" style="width: <?=$width * $GLOBALS['CONFIG']['SCHEDULE_SCALE'] ?>px">
+		<? foreach($program[$room] as $event): ?>
+			<? if(@$event['special'] == 'daychange'): ?>
+
+				<div class="block daychange" style="width: <?=h($GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px"></div>
+
+			<? elseif(@$event['special'] == 'gap'): ?>
+
+				<div class="block daychange" style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px"></div>
+
+			<? elseif(@$event['special']): ?>
+
+				<div class="block <?=h($event['special'])?>" style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px">
+					<h3><?=h($event['title'])?></h3>
+				</div>
+
+			<? else: ?>
+
+				<div class="block event" style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px">
+					<h3><?=h($event['title'])?></h3>
+				</div>
+
+			<? endif ?>
+
+		<? endforeach ?>
+	</div>
+</div>

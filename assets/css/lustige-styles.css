@@ -5695,5 +5695,24 @@ a.inverted {
   .event-previews-tags .event-preview .caption,
   .event-previews-search .event-preview .caption {
     margin-left: 60px; } }
+.program {
+  overflow: hidden;
+  overflow-x: scroll;
+  position: relative; }
+  .program .now {
+    position: absolute;
+    left: 100px;
+    width: 1px;
+    height: 100%;
+    background-color: red;
+    color: red;
+    font-size: 14px;
+    text-indent: 4px; }
+  .program .block {
+    overflow: hidden;
+    float: left;
+    height: 100px;
+    border-right: 1px solid white;
+    color: white; }
 
 /*# sourceMappingURL=lustige-styles.css.map */

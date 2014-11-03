@@ -1,5 +1,7 @@
 <?php
 
+require_once('program.php');
+
 function link_index()
 {
 	return '';
@@ -45,4 +47,10 @@ function baseurl()
 	$base .=  rtrim(dirname($_SERVER['SCRIPT_NAME']), '/').'/';
 
 	return $base;
+}
+
+function strtoduration($str)
+{
+	$parts = explode(':', $str);
+	return ((int)$parts[0] * 60 + (int)$parts[1]) * 60;
 }
