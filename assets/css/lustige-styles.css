@@ -5695,24 +5695,56 @@ a.inverted {
   .event-previews-tags .event-preview .caption,
   .event-previews-search .event-preview .caption {
     margin-left: 60px; } }
-.program {
+.program.scroll-container {
   overflow: hidden;
-  overflow-x: scroll;
+  overflow-x: scroll; }
+.program .scroll-element {
   position: relative; }
-  .program .now {
+.program .room {
+  overflow: hidden; }
+.program .now {
+  position: absolute;
+  left: 0;
+  width: 150px;
+  height: 500px;
+  background-color: rgba(255, 0, 0, 0.5);
+  font-size: 14px; }
+  .program .now span {
+    display: block;
     position: absolute;
-    left: 100px;
-    width: 1px;
-    height: 100%;
-    background-color: red;
-    color: red;
-    font-size: 14px;
-    text-indent: 4px; }
-  .program .block {
-    overflow: hidden;
-    float: left;
-    height: 100px;
-    border-right: 1px solid white;
-    color: white; }
+    right: -25px;
+    color: red; }
+.program .block {
+  overflow: hidden;
+  float: left;
+  height: 100px;
+  /* and now for small screens: */
+  padding: 10px;
+  border: 1px solid white; }
+  @media all and (max-width: 449px) {
+    .program .block {
+      height: 75px; } }
+  .program .block h3 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    /* and now for small screens: */ }
+    @media all and (max-width: 449px) {
+      .program .block h3 {
+        font-size: 22px; } }
+  .program .block h4 {
+    margin: 3px 0;
+    color: #eeeeee; }
+  .program .block.event h3 {
+    height: 48px;
+    overflow: hidden; }
+  .program .block.gap {
+    background-image: url(../img/stripes/gap.png);
+    background-color: rgba(255, 255, 255, 0.3); }
+  .program .block.daychange {
+    background-image: url(../img/stripes/gap.png);
+    background-color: rgba(216, 117, 0, 0.7); }
+  .program .block.pause {
+    background-color: rgba(255, 255, 255, 0.3); }
 
 /*# sourceMappingURL=lustige-styles.css.map */

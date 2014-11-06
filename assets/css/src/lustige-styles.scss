@@ -555,19 +555,33 @@ a.inverted {
 }
 
 .program {
-  overflow: hidden;
-  overflow-x: scroll;
-  position: relative;
+  &.scroll-container {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .scroll-element {
+    position: relative;
+  }
+
+  .room {
+    overflow: hidden;
+  }
 
   .now {
     position: absolute;
-    left: 100px;
-    width: 1px;
-    height: 100%;
-    background-color: red;
-    color: red;
+    left: 0;
+    width: 150px;
+    height: 500px;
+    background-color: transparentize(red, 0.5);
     font-size: 14px;
-    text-indent: 4px;
+
+    span {
+      display: block;
+      position: absolute;
+      right: -25px;
+      color: red;
+    }
   }
 
   .block {
@@ -575,7 +589,49 @@ a.inverted {
     float: left;
     height: 100px;
 
-    border-right: 1px solid white;
-    color: white;
+    /* and now for small screens: */
+    @media all and (max-width: $screen-xs-max) {
+      height: 75px;
+    }
+
+
+    padding: 10px;
+
+    border: 1px solid white;
+
+    h3 {
+      color: white;
+      margin: 0;
+      padding: 0;
+
+      /* and now for small screens: */
+      @media all and (max-width: $screen-xs-max) {
+        font-size: 22px;
+      }
+    }
+
+    h4 {
+      margin: 3px 0;
+      color: $gray-lighter;
+    }
+
+    &.event h3 {
+      height: 48px;
+      overflow: hidden;
+    }
+
+    &.gap {
+      background-image: url(../img/stripes/gap.png);
+      background-color: rgba(255,255,255,0.3);
+    }
+
+    &.daychange { 
+      background-image: url(../img/stripes/gap.png);
+      background-color: transparentize($brand-primary, 0.3);
+    }
+
+    &.pause {
+      background-color: rgba(255,255,255,0.3);
+    }
   }
 }

@@ -1,38 +1,44 @@
 <?
-$room = 'Grossbaustelle BER';
 
-foreach($program[$room] as $event)
-{
-	$width += intval(isset($event['duration']) ? $event['duration'] : 5);
-}
+foreach(reset($program) as $event)
+	$width += $event['duration'];
+
 ?>
+<div class="program scroll-container" data-offset="<?=h($GLOBALS['CONFIG']['SCHEDULE_OFFSET'])?>">
+	<div class="scroll-element">
+		<div class="now"><span>now</span></div>
+		<? foreach($program as $name => $events): ?>
+			<div class="room" style="width: <?=$width * $GLOBALS['CONFIG']['SCHEDULE_SCALE'] ?>px">
+				<? foreach($events as $event): ?>
 
-<div class="program">
-	<div class="now">now</div>
-	<div class="inner" style="width: <?=$width * $GLOBALS['CONFIG']['SCHEDULE_SCALE'] ?>px">
-		<? foreach($program[$room] as $event): ?>
-			<? if(@$event['special'] == 'daychange'): ?>
+					<div
+						class="block <?=h(@$event['special'] ?: 'event')?>"
+						style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px"
+						data-start="<?=intval($event['start'])?>"
+						data-end="<?=intval($event['end'])?>"
+					>
+						<? if(@$event['special'] == 'daychange'): ?>
 
-				<div class="block daychange" style="width: <?=h($GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px"></div>
+							<h3><?=h($event['title'])?></h3>
 
-			<? elseif(@$event['special'] == 'gap'): ?>
+						<? elseif(@$event['special'] == 'gap'): ?>
 
-				<div class="block daychange" style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px"></div>
+							<!--h3>Gap</h3-->
 
-			<? elseif(@$event['special']): ?>
+						<? elseif(@$event['special'] == 'pause'): ?>
 
-				<div class="block <?=h($event['special'])?>" style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px">
-					<h3><?=h($event['title'])?></h3>
-				</div>
+							<h3><?=h($event['title'])?></h3>
 
-			<? else: ?>
+						<? else: ?>
 
-				<div class="block event" style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px">
-					<h3><?=h($event['title'])?></h3>
-				</div>
+							<h4><?=h(strftime('%H:%M', $event['start']))?>&nbsp;&ndash;&nbsp;<?=h(strftime('%H:%M', $event['end']))?></h4>
+							<h3><?=h($event['title'])?></h3>
 
-			<? endif ?>
+						<? endif ?>
+					</div>
 
+				<? endforeach ?>
+			</div>
 		<? endforeach ?>
 	</div>
 </div>

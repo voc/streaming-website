@@ -6,7 +6,6 @@ function program()
 	if(function_exists('apc_fetch') && $program = apc_fetch($cacheidx))
 		return $program;
 
-	echo 'fresh';
 	$program = array();
 	$schedule = simplexml_load_file($GLOBALS['CONFIG']['SCHEDULE']);
 
@@ -95,6 +94,10 @@ function program()
 				$program[$name][] = array(
 					'special' => 'daychange',
 					'title' => 'Daychange from Day '.$dayidx.' to '.($dayidx+1),
+
+					'start' => $dayend,
+					'end' => strtotime((string)$schedule->day[$dayidx+1]['start']),
+					'duration' => 60*60,
 				);
 			}
 		}
