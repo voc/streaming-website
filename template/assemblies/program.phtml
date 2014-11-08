@@ -31,7 +31,12 @@ foreach(reset($program) as $event)
 
 						<? else: ?>
 
-							<h4><?=h(strftime('%H:%M', $event['start']))?>&nbsp;&ndash;&nbsp;<?=h(strftime('%H:%M', $event['end']))?></h4>
+							<h4><?=h(strftime('%H:%M', $event['start']))?>
+								&nbsp;&ndash;&nbsp;
+								<?=h(strftime('%H:%M', $event['end']))?>
+								&nbsp;&nbsp;&nbsp;&ndash;&nbsp;
+								<?=h($name)?>
+							</h4>
 							<h3><?=h($event['title'])?></h3>
 
 						<? endif ?>
