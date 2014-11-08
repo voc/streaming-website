@@ -2,19 +2,45 @@
 
 function program()
 {
-	$cacheidx = __FILE__.':'.__FUNCTION__.':program';
+	$cacheidx = __FILE__.':'.__FUNCTION__.':program:'.$GLOBALS['CONFIG']['SCHEDULE'];
 	if(function_exists('apc_fetch') && $program = apc_fetch($cacheidx))
 		return $program;
 
 	$program = array();
 	$schedule = simplexml_load_file($GLOBALS['CONFIG']['SCHEDULE']);
 
+	// re-calculate day-ends
+	// some schedules have long gaps before the first talk or talks that expand beyond the dayend
+	// (fiffkon, i look at you)
+	// so to be on the safer side we calculate our own daystart/end here
+	foreach($schedule->day as $day)
+	{
+		$daystart = PHP_INT_MAX;
+		$dayend = 0;
+
+		foreach($day->room as $room)
+		{
+			foreach($room->event as $event)
+			{
+				$start = strtotime((string)$event->date);
+				$duration = strtoduration((string)$event->duration);
+				$end = $start + $duration;
+
+				$daystart = min($daystart, $start);
+				$dayend = max($dayend, $end);
+			}
+		}
+
+		$day['start'] = $daystart;
+		$day['end'] = $dayend;
+	}
+
 	$dayidx = 0;
 	foreach($schedule->day as $day)
 	{
 		$dayidx++;
-		$daystart = strtotime((string)$day['start']);
-		$dayend = strtotime((string)$day['end']);
+		$daystart = (int)$day['start'];
+		$dayend = (int)$day['end'];
 
 		$roomidx = 0;
 		foreach($day->room as $room)
@@ -23,7 +49,7 @@ function program()
 			$name = (string)$room['name'];
 			$lastend = false;
 
-			foreach ($room->event as $event)
+			foreach($room->event as $event)
 			{
 				$start = strtotime((string)$event->date);
 				$duration = strtoduration((string)$event->duration);
