@@ -5743,8 +5743,10 @@ a.inverted {
     background-color: rgba(255, 255, 255, 0.3); }
   .program .block.daychange {
     background-image: url(../img/stripes/gap.png);
-    background-color: rgba(216, 117, 0, 0.7); }
+    background-color: rgba(216, 117, 0, 0.7) !important; }
   .program .block.pause {
     background-color: rgba(255, 255, 255, 0.3); }
+.program .room.highlight .block {
+  background-color: #96d600; }
 
 /*# sourceMappingURL=lustige-styles.css.map */

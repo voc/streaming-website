@@ -8,7 +8,7 @@ foreach(reset($program) as $event)
 	<div class="scroll-element">
 		<div class="now"><span>now</span></div>
 		<? foreach($program as $name => $events): ?>
-			<div class="room" style="width: <?=$width * $GLOBALS['CONFIG']['SCHEDULE_SCALE'] ?>px">
+			<div class="room <? if($name == $room): ?>highlight<? endif ?>" style="width: <?=$width * $GLOBALS['CONFIG']['SCHEDULE_SCALE'] ?>px">
 				<? foreach($events as $event): ?>
 
 					<div

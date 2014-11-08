@@ -555,6 +555,10 @@ a.inverted {
 }
 
 .program {
+  $now: red;
+  $hightlight: #96d600;
+  $daychange: $brand-primary;
+
   &.scroll-container {
     overflow: hidden;
     overflow-x: scroll;
@@ -573,7 +577,7 @@ a.inverted {
     left: 0;
     width: 150px;
     height: 500px;
-    background-color: transparentize(red, 0.5);
+    background-color: transparentize($now, 0.5);
     font-size: 14px;
 
     span {
@@ -627,11 +631,15 @@ a.inverted {
 
     &.daychange { 
       background-image: url(../img/stripes/gap.png);
-      background-color: transparentize($brand-primary, 0.3);
+      background-color: transparentize($daychange, 0.3) !important;
     }
 
     &.pause {
       background-color: rgba(255,255,255,0.3);
     }
+  }
+
+  .room.highlight .block {
+    background-color: $hightlight;
   }
 }
