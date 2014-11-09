@@ -90,6 +90,9 @@ $(function() {
 				return $(this).data('start') < now;
 			}).last();
 
+		if($block.length == 0)
+			return $now.css('width', 0);
+
 		var
 			// start & end-timestamp
 			start = $block.data('start'),
