@@ -4,10 +4,10 @@ date_default_timezone_set('Europe/Berlin');
 // guessed automatically
 // $GLOBALS['CONFIG']['baseurl'] = 'http://foo.com/bar/';
 
-$GLOBALS['CONFIG']['SCHEDULE'] = 'https://fiffkon.de/app/schedule.xml';
+$GLOBALS['CONFIG']['SCHEDULE'] = 'http://fahrplan.mrmcd.net/schedule.xml';
 $GLOBALS['CONFIG']['SCHEDULE_CACHE_TTL'] = 5;
 $GLOBALS['CONFIG']['SCHEDULE_SCALE'] = 0.2; // float, px per second
-$GLOBALS['CONFIG']['SCHEDULE_OFFSET'] = 0;//strtotime('2014-11-06T17:00:00+01:00') - strtotime('2014-09-05T17:00:00+02:00');
+$GLOBALS['CONFIG']['SCHEDULE_OFFSET'] = strtotime('2014-11-09T17:00:00+01:00') - strtotime('2014-09-05T17:00:00+02:00');
 
 
 $GLOBALS['CONFIG']['ROOMS'] = array(
