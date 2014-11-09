@@ -12,14 +12,21 @@ if(!function_exists('h'))
 
 class PhpTemplate
 {
+	private $data = array();
+
 	public function __construct($file)
 	{
 		$this -> file = $file;
 	}
 
+	public function set($___data = array())
+	{
+		$this->data = array_merge($this->data, $___data);
+	}
+
 	public function render($___data = array())
 	{
-		extract((array)$___data);
+		extract(array_merge($this->data, $___data));
 		unset($___data);
 
 		ob_start();

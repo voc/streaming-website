@@ -1,8 +1,6 @@
 <?php
 
-require_once('lib/PhpTemplate.php');
-require_once('lib/helper.php');
-require_once('lib/config.php');
+require_once('lib/bootstrap.php');
 
 $room = $_GET['room'];
 $language = $_GET['language'];
@@ -36,11 +34,9 @@ switch($format) {
 		break;
 }
 
-$tpl = new PhpTemplate('template/page.phtml');
 echo $tpl->render(array(
 	'page' => 'room',
 
-	'baseurl' => baseurl(),
 	'title' => $GLOBALS['CONFIG']['ROOMS'][$room].' – '.$GLOBALS['CONFIG']['FORMATS'][$format],
 
 	'rooms' => $GLOBALS['CONFIG']['ROOMS'],
