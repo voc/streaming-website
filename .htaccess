@@ -33,8 +33,4 @@ RewriteRule ^(lounge|ambient)/?$ party.php?room=$1&format=audio [L]
 
 
 # Show a known page in case of as miss
-ErrorDocument 404 404.php
-
-# Allow Caches & Proxies to Cache all resources
-#ExpiresActive On
-#ExpiresDefault "access plus 4 hours"
+ErrorDocument 404 /~peter/voc-frontends/31c3/404.php

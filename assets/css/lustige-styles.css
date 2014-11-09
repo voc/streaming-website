@@ -5754,4 +5754,11 @@ a.inverted {
 .program .room.highlight .block {
   background-color: #96d600; }
 
+.e404 {
+  text-align: center; }
+  .e404 h2 {
+    margin: 20px 0 40px 0; }
+  .e404 img {
+    max-width: 100%; }
+
 /*# sourceMappingURL=lustige-styles.css.map */

@@ -1,2 +1,8 @@
-404
-<? print_r($_GET) ?>
+<?php
+
+require_once('lib/bootstrap.php');
+
+echo $tpl->render(array(
+	'page' => '404',
+	'title' => '404 Not Found',
+));
