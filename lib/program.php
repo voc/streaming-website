@@ -122,7 +122,7 @@ function program()
 					'title' => 'Daychange from Day '.$dayidx.' to '.($dayidx+1),
 
 					'start' => $dayend,
-					'end' => strtotime((string)$schedule->day[$dayidx]['start']),
+					'end' => (int)$schedule->day[$dayidx]['start'],
 					'duration' => 60*60,
 				);
 			}
