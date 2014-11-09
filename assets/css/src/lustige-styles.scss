@@ -349,6 +349,10 @@ a.inverted {
     padding: 64px 32px;
   }
 
+  &.party #switcher ul li {
+    min-width: 33%;
+  }
+
   &.slides .player-wrap .slide-audio {
     padding: 32px 32px;
   }

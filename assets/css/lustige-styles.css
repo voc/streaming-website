@@ -5556,6 +5556,8 @@ a.inverted {
   padding: 32px 0; }
 .room.audio .player-wrap {
   padding: 64px 32px; }
+.room.party #switcher ul li {
+  min-width: 32.5%; }
 .room.slides .player-wrap .slide-audio {
   padding: 32px 32px; }
 .room .click-to-irc {
