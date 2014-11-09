@@ -5536,6 +5536,8 @@ a.inverted {
     margin-top: 1%;
     height: 6em;
     float: left; }
+    .rooms .room-group li.wide {
+      width: 100%; }
     .rooms .room-group li a {
       color: white;
       display: block;

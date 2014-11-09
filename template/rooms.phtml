@@ -34,10 +34,22 @@
 
 		<ul>
 			<? foreach(array('sendezentrum') as $room): ?>
-				<li class="<?=h($room)?>">
+				<li class="<?=h($room)?> wide">
 					<a href="<?=h(link_room($room))?>"><?=h($rooms[$room])?></a>
 				</li>
 			<? endforeach ?>
+		</ul>
+	</div>
+
+
+
+	<div class="room-group">
+		<h2>Recordings</h2>
+
+		<ul>
+			<li class="recordings wide">
+				<a href="//media.ccc.de/browse/congress/2014/index.html">Recordings</a>
+			</li>
 		</ul>
 	</div>
 
