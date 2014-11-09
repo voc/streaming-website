@@ -32,6 +32,9 @@ function link_stream($protocol, $room, $format, $translated = false)
 
 		case 'icecast':
 			return 'http://webm.streaming.media.ccc.de:8000/'.rawurlencode($room).'_'.rawurlencode($language).'.'.rawurlencode($format);
+
+		case 'slide':
+			return 'http://localhost/~peter/slide-stream-test/'.rawurlencode($room).'/current.png';
 	}
 
 	return '#';

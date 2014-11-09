@@ -349,6 +349,10 @@ a.inverted {
     padding: 64px 32px;
   }
 
+  &.slides .player-wrap .slide-audio {
+    padding: 32px 32px;
+  }
+
   .click-to-irc {
     background-image: url(../img/irc-soft.png);
     height: 376px;

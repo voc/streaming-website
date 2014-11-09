@@ -1,5 +1,5 @@
+// mediaelement-player
 $(function() {
-
 	$('video').mediaelementplayer({
 		mode: 'auto_plugin',
 		usePluginFullScreen: true,
@@ -9,7 +9,11 @@ $(function() {
 		features: ['playpause', 'volume','fullscreen']
 	});
 	$('audio').mediaelementplayer();
+});
 
+
+// tabs
+$(function() {
 	// activate tab via hash and default to video
 	function setTabToHash() {
 		var activeTab = $('.nav-tabs a[href=' + window.location.hash + ']').tab('show');
@@ -22,8 +26,11 @@ $(function() {
 
 	// adjust tabs when hash changes
 	$(window).on('hashchange', setTabToHash).trigger('hashchange');
+});
 
-	// click-to-irc
+
+// click-to-irc
+$(function() {
 	$('.click-to-irc').on('click', function(e) {
 		if($(this).hasClass('activating'))
 			return;
@@ -132,4 +139,25 @@ $(function() {
 	$('.nav-tabs').on('shown.bs.tab', 'a', function (e) {
 		interval(true);
 	});
+});
+
+// slide-stream
+$(function() {
+	var
+		updateTimer = 5000, /* reload slide image 2 seconds after the previous image was loaded */
+		$template = $('img.slide.template').clone().detach();
+
+	function updateSlideImage() {console.log('updateSlideImage');
+		// no way around breaking the cache hard in FF
+		// -> https://bugzilla.mozilla.org/show_bug.cgi?id=295942
+		$template
+			.clone()
+			.on('load', function() {
+				$(this).replaceAll($('img.slide'));
+				setTimeout(updateSlideImage, updateTimer);
+			})
+			.attr('src', $template.data('src')+'?'+Date.now());
+	}
+
+	updateSlideImage();
 });
