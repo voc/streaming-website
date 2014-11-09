@@ -25,16 +25,19 @@ function link_stream($protocol, $room, $format, $translated = false)
 
 	switch ($protocol) {
 		case 'rtmp':
-			return 'rtmp://rtmp.streaming.media.ccc.de:1935/stream/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format);
+			return 'rtmp://'.($format == 'hd' ? 'rtmp' : 'rtmp-sd').'.stream.c3voc.de:1935/stream/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format);
 
 		case 'hls':
-			return 'http://hls.streaming.media.ccc.de/hls/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format).'.m3u8';
+			return 'http://hls.stream.c3voc.de/hls/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format).'.m3u8';
 
-		case 'icecast':
-			return 'http://webm.streaming.media.ccc.de:8000/'.rawurlencode($room).'_'.rawurlencode($language).'.'.rawurlencode($format);
+		case 'webm':
+			return 'http://webm.stream.c3voc.de:8000/'.rawurlencode($room).'_'.rawurlencode($language).'.'.rawurlencode($format);
+
+		case 'audio':
+			return 'http://audio.stream.c3voc.de:8000/'.rawurlencode($room).'_'.rawurlencode($language).'.'.rawurlencode($format);
 
 		case 'slide':
-			return 'http://localhost/~peter/slide-stream-test/'.rawurlencode($room).'/current.png';
+			return 'http://www.stream.c3voc.de/slides/'.rawurlencode($room).'/current.png';
 	}
 
 	return '#';

@@ -4,15 +4,15 @@
 	style="width: 960px;"
 >
 	<source
-		src="<?=h(link_stream('icecast', $room, 'mp3', $translated))?>"
+		src="<?=h(link_stream('audio', $room, 'mp3', $translated))?>"
 		type="audio/mp3"
 	/>
 	<source
-		src="<?=h(link_stream('icecast', $room, 'ogg', $translated))?>"
+		src="<?=h(link_stream('audio', $room, 'ogg', $translated))?>"
 		type="audio/ogg"
 	/>
 	<source
-		src="<?=h(link_stream('icecast', $room, 'opus', $translated))?>"
+		src="<?=h(link_stream('audio', $room, 'opus', $translated))?>"
 		type="audio/opus"
 	/>
 </audio>
