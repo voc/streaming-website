@@ -46,15 +46,18 @@ $(function() {
 			$irc.addClass('active');
 		}).attr('src', $iframe.data('src'));
 	});
+});
 
+// programm-timeline
+$(function() {
 	var
 		$program = $('.program'),
 		$now = $program.find('.now'),
 		scrollLock = false,
 		rewindTimeout,
-		rewindTime = 10000 /* 10 seconds after manual navigation */,
-
-		scrollDuration = 500 /* 1/2s animation on the scolling element */;
+		rewindTime = 10000, /* 10 seconds after manual navigation */
+		scrollDuration = 500, /* 1/2s animation on the scolling element */
+		updateTimer = 500; /* update now-pointer placement every 1/2s */
 
 	$program.on('mouseenter mouseleave touchstart touchend', function(e) {
 		if(e.type == 'mouseleave' || e.type == 'touchend') {
@@ -68,7 +71,7 @@ $(function() {
 	});
 
 	// program now-marker & scrolling
-	function interval(initial) {
+	function updateProgramView(initial) {console.log('updateProgramView');
 		var
 			// offset to the browsers realtime (for simulation
 			offset = $('.program').data('offset'),
@@ -129,15 +132,30 @@ $(function() {
 		}
 	}
 
-	// initial trigger
-	interval(true);
 
-	// timed triggers
-	setInterval(interval, 500);
+	// when on programs tab
+	var updateInterval;
+	function on() {
+		// initial trigger
+		updateProgramView(true);
+
+		// timed triggers
+		updateInterval = setInterval(updateProgramView, updateTimer);
+	}
+
+	function off() {
+		clearInterval(updateInterval);
+	}
+
+	if(window.location.hash == '#program')
+		on();
 
 	// trigger when a tab was changed
-	$('.nav-tabs').on('shown.bs.tab', 'a', function (e) {
-		interval(true);
+	$('.nav-tabs').on('shown.bs.tab', 'a', function(e) {
+		if(e.target.hash == '#program')
+			on();
+		else
+			off();
 	});
 });
 
