@@ -4,9 +4,9 @@
 	<ul class="nav nav-tabs nav-justified">
 		<?
 			if($miniroom)
-				$tabs = array('video', 'audio', 'slides');
-			else
 				$tabs = array('video', 'audio');
+			else
+				$tabs = array('video', 'audio', 'slides');
 		?>
 		<? foreach($tabs as $iter): ?>
 			<li
