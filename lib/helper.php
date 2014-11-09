@@ -40,6 +40,11 @@ function link_stream($protocol, $room, $format, $translated = false)
 	return '#';
 }
 
+function irc_channel($room)
+{
+	return '31C3-hall-'.strtoupper(substr($room, 4, 1));
+}
+
 function baseurl()
 {
 	if(isset($GLOBALS['CONFIG']['baseurl']))
