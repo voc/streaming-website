@@ -2,7 +2,13 @@
 	<h1><?=h($title)?></h1>
 
 	<ul class="nav nav-tabs nav-justified">
-		<? foreach(array('video', 'audio', 'slides') as $iter): ?>
+		<?
+			if($miniroom)
+				$tabs = array('video', 'audio', 'slides');
+			else
+				$tabs = array('video', 'audio');
+		?>
+		<? foreach($tabs as $iter): ?>
 			<li
 				<? if($type == $iter):?>class="active"<? endif ?>
 			>
@@ -17,27 +23,35 @@
 		<? include("assemblies/player/$type.phtml") ?>
 	</div>
 
-	<ul class="nav nav-tabs nav-justified" role="tablist">
-		<li class="active">
-			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
-		</li>
-		<li>
-			<a href="#irc" role="tab" data-toggle="tab">IRC</a>
-		</li>
-		<li>
-			<a href="#program" role="tab" data-toggle="tab">Program</a>
-		</li>
-	</ul>
+	<? if(!$miniroom): ?>
+		<ul class="nav nav-tabs nav-justified" role="tablist">
+			<li class="active">
+				<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
+			</li>
+			<li>
+				<a href="#irc" role="tab" data-toggle="tab">IRC</a>
+			</li>
+			<li>
+				<a href="#program" role="tab" data-toggle="tab">Program</a>
+			</li>
+		</ul>
+	<? endif ?>
 
 	<div class="tab-content">
 		<div class="tab-pane active" id="switcher">
-			<? include("assemblies/switcher/$type.phtml") ?>
+			<? if($miniroom): ?>
+				<? include("assemblies/switcher/miniroom-$type.phtml") ?>
+			<? else: ?>
+				<? include("assemblies/switcher/$type.phtml") ?>
+			<? endif ?>
 		</div>
-		<div class="tab-pane" id="irc">
-			<? include("assemblies/irc.phtml") ?>
-		</div>
-		<div class="tab-pane" id="program">
-			<? include("assemblies/program.phtml") ?>
-		</div>
+		<? if(!$miniroom): ?>
+			<div class="tab-pane" id="irc">
+				<? include("assemblies/irc.phtml") ?>
+			</div>
+			<div class="tab-pane" id="program">
+				<? include("assemblies/program.phtml") ?>
+			</div>
+		<? endif ?>
 	</div>
 </div>
