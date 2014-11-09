@@ -33,4 +33,5 @@ RewriteRule ^(lounge|ambient)/?$ party.php?room=$1&format=audio [L]
 
 
 # Show a known page in case of as miss
+RewriteRule ^404.html$ 404.php [L]
 ErrorDocument 404 /~peter/voc-frontends/31c3/404.php

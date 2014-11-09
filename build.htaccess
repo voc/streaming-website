@@ -1,0 +1,8 @@
+DirectoryIndex index.html
+
+# Show a known page in case of as miss
+ErrorDocument 404 /404.html
+
+# Allow Caches & Proxies to Cache all resources
+ExpiresActive On
+ExpiresDefault "access plus 4 hours"
