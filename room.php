@@ -56,5 +56,5 @@ echo $tpl->render(array(
 
 	// miniroom = no hd, no translation, no slides, no irc, no program
 	//   -> sendezentrum, workshops
-	'miniroom' => in_array($room, array('sendezentrum')=,
+	'miniroom' => in_array($room, array('sendezentrum')),
 ));
