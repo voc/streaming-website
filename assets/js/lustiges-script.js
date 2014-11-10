@@ -182,3 +182,40 @@ $(function() {
 
 	updateSlideImage();
 });
+
+// startpage program teaser
+$(function() {
+	var
+		updateTimer = 5000, /* update display every 5 seconds */
+		refetchTimer = 5*60*1000, /* re-request current / upcoming program every 5 minutes */
+		programData = {},
+		$rooms = $('.rooms .lecture li');
+
+	if($rooms.length == 0)
+		return;
+
+	function fetchProgram() {
+		console.log('fetchProgram');
+		$.ajax({
+			url: 'program.json',
+			dataType: 'json',
+			success: function(data) {
+				console.log('fetchProgram returned');
+				programData = data;
+				updateProgtamTeaser();
+			},
+
+			// success & error
+			complete: function() {
+				setTimeout(fetchProgram, refetchTimer);
+			}
+		});
+	}
+
+	function updateProgtamTeaser() {
+		console.log('updateProgtamTeaser');
+		setTimeout(updateProgtamTeaser, updateTimer);
+	}
+
+	fetchProgram();
+});

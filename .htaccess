@@ -35,6 +35,10 @@ RewriteRule ^(lounge|ambient)/?$ party.php?room=$1&format=audio [L]
 # /about/ -> about.php
 RewriteRule ^about/?$ about.php [L]
 
+# /program.json -> program-json.php
+RewriteRule ^program.json?$ program-json.php [L]
+
+
 # Show a known page in case of as miss
 RewriteRule ^404.html$ 404.php [L]
 ErrorDocument 404 /~peter/voc-frontends/31c3/404.php

@@ -1,4 +1,7 @@
 #!/bin/sh
+
+LOCAL_SERVER='http://localhost/~peter/voc-frontends/31c3/'
+
 echo "building scss"
 scss assets/css/src/lustige-styles.scss assets/css/lustige-styles.css
 
@@ -16,8 +19,9 @@ wget \
 	--recursive \
 	--no-parent \
 	--page-requisites \
-	http://localhost/~peter/voc-frontends/31c3/ \
-	http://localhost/~peter/voc-frontends/31c3/404.html
+	$LOCAL_SERVER \
+	$LOCAL_SERVER/404.html
+	$LOCAL_SERVER/program.json
 
 echo "setting <base />-tag"
 find build -name "*.html" -print0 | xargs -0 -exec sed -i 's~<base href="[^"]*" />~<base href="/" />~g';
