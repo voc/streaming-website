@@ -46,8 +46,10 @@ function program()
 		foreach($day->room as $room)
 		{
 			$roomidx++;
-			$name = (string)$room['name'];
 			$lastend = false;
+			$name = (string)$room['name'];
+			if(isset($GLOBALS['CONFIG']['FAHRPLAN_ROOM_MAPPING'][$name]))
+				$name = $GLOBALS['CONFIG']['FAHRPLAN_ROOM_MAPPING'][$name];
 
 			foreach($room->event as $event)
 			{
@@ -85,8 +87,13 @@ function program()
 					);
 				}
 
-				$program[$name][] = array(
+			$personnames = array();
+			foreach($event->persons->person as $person)
+				$personnames[] = (string)$person;
+
+			$program[$name][] = array(
 					'title' => (string)$event->title,
+					'speaker' => implode(', ', $personnames),
 
 					'fstart' => date('c', $start),
 					'fend' => date('c', $end),

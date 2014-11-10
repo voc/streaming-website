@@ -3,13 +3,30 @@
 <div class="container-fluid rooms">
 	<h1>Live-Streams</h1>
 
-	<div class="room-group lecture">
+	<div class="room-group lecture" data-offset="<?=h($GLOBALS['CONFIG']['SCHEDULE_OFFSET'])?>">
 		<h2>Lecture Rooms</h2>
 
 		<ul>
 			<? foreach(array('saal1', 'saal2', 'saalg', 'saal6') as $room): ?>
 				<li class="<?=h($room)?>">
-					<a href="<?=h(link_room($room))?>"><?=h($rooms[$room])?></a>
+					<a href="<?=h(link_room($room))?>">
+						<div class="title"><?=h($rooms[$room])?></div>
+
+						<div class="program-teaser">
+
+							<span class="current-talk hidden">
+								<strong>Current Talk:</strong>
+								<span class="t">none</span>
+							</span>
+
+							<br />
+
+							<span class="next-talk hidden">
+								<strong>Next Talk:</strong>
+								<span class="t">none</span>
+							</span>
+						</div>
+					</a>
 				</li>
 			<? endforeach ?>
 		</ul>
@@ -22,7 +39,7 @@
 		<ul>
 			<? foreach(array('lounge', 'ambient') as $room): ?>
 				<li class="<?=h($room)?>">
-					<a href="<?=h(link_room($room))?>"><?=h($rooms[$room])?></a>
+					<a href="<?=h(link_room($room))?>" class="title"><?=h($rooms[$room])?></a>
 				</li>
 			<? endforeach ?>
 		</ul>
@@ -35,7 +52,7 @@
 		<ul>
 			<? foreach(array('sendezentrum') as $room): ?>
 				<li class="<?=h($room)?> wide">
-					<a href="<?=h(link_room($room))?>"><?=h($rooms[$room])?></a>
+					<a href="<?=h(link_room($room))?>" class="title"><?=h($rooms[$room])?></a>
 				</li>
 			<? endforeach ?>
 		</ul>
@@ -48,7 +65,7 @@
 
 		<ul>
 			<li class="recordings wide">
-				<a href="//media.ccc.de/browse/congress/2014/index.html">Recordings</a>
+				<a href="//media.ccc.de/browse/congress/2014/index.html" class="title">Recordings</a>
 			</li>
 		</ul>
 	</div>

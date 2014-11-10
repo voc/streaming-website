@@ -29,3 +29,10 @@ $GLOBALS['CONFIG']['FORMATS'] = array(
 	'audio' => 'Audio',
 	'slides' => 'Slide-Images',
 );
+
+// various room-name nappings
+$GLOBALS['CONFIG']['FAHRPLAN_ROOM_MAPPING'] = array(
+	'Grossbaustelle BER' => 'saal1',
+	'Tiefbaustelle S21' => 'saal2',
+	'Hochbaustelle Elbphilharmonie' => 'saal6',
+);

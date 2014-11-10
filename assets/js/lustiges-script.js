@@ -71,7 +71,7 @@ $(function() {
 	});
 
 	// program now-marker & scrolling
-	function updateProgramView(initial) {console.log('updateProgramView');
+	function updateProgramView(initial) {
 		var
 			// offset to the browsers realtime (for simulation
 			offset = $('.program').data('offset'),
@@ -165,10 +165,10 @@ $(function() {
 // slide-stream
 $(function() {
 	var
-		updateTimer = 5000, /* reload slide image 2 seconds after the previous image was loaded */
+		updateTimer = 5000, /* reload slide image 5 seconds after the previous image was loaded */
 		$template = $('img.slide.template').clone().detach();
 
-	function updateSlideImage() {console.log('updateSlideImage');
+	function updateSlideImage() {
 		// no way around breaking the cache hard in FF
 		// -> https://bugzilla.mozilla.org/show_bug.cgi?id=295942
 		$template
@@ -186,21 +186,20 @@ $(function() {
 // startpage program teaser
 $(function() {
 	var
-		updateTimer = 5000, /* update display every 5 seconds */
-		refetchTimer = 5*60*1000, /* re-request current / upcoming program every 5 minutes */
+		updateTimer = 5*1000, /* update display every 5 seconds */
+		refetchTimer = 10*60*1000, /* re-request current / upcoming program every 10 minutes */
 		programData = {},
-		$rooms = $('.rooms .lecture li');
+		$lecture = $('.rooms .lecture');
 
-	if($rooms.length == 0)
+
+	if($lecture.length == 0)
 		return;
 
 	function fetchProgram() {
-		console.log('fetchProgram');
 		$.ajax({
 			url: 'program.json',
 			dataType: 'json',
 			success: function(data) {
-				console.log('fetchProgram returned');
 				programData = data;
 				updateProgtamTeaser();
 			},
@@ -213,7 +212,41 @@ $(function() {
 	}
 
 	function updateProgtamTeaser() {
-		console.log('updateProgtamTeaser');
+		var
+			// offset to the browsers realtime (for simulation
+			offset = $lecture.data('offset'),
+
+			// corrected "now" timestamp in unix-counting (seconds, not microseconds)
+			now = (Date.now() / 1000) - offset;
+
+		$.each(programData, function(room, talks) {
+			var currentTalk, nextTalk;
+
+			$.each(talks, function(room, talk) {
+
+				if(talk.start < now)
+					currentTalk = talk;
+
+				if(!nextTalk && !talk.special && talk.start > now)
+					nextTalk = talk;
+
+			});
+
+			$lecture.find('.'+room)
+				.find('.current-talk')
+					.removeClass('hidden')
+					.find('.t')
+						.text(currentTalk.special ? 'none' : currentTalk.title)
+					.end()
+				.end()
+				.find('.next-talk')
+					.toggleClass('hidden', !nextTalk || nextTalk.special || (nextTalk.start - now > 60*60))
+					.find('.t')
+						.text(nextTalk ? nextTalk.title : '')
+					.end()
+				.end();
+		});
+
 		setTimeout(updateProgtamTeaser, updateTimer);
 	}
 
