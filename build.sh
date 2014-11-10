@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LOCAL_SERVER='http://localhost/~peter/voc-frontends/31c3/'
+LOCAL_SERVER='http://localhost/~peter/voc-frontends/31c3'
 
 echo "building scss"
 scss assets/css/src/lustige-styles.scss assets/css/lustige-styles.css
@@ -19,8 +19,8 @@ wget \
 	--recursive \
 	--no-parent \
 	--page-requisites \
-	$LOCAL_SERVER \
-	$LOCAL_SERVER/404.html
+	$LOCAL_SERVER/ \
+	$LOCAL_SERVER/404.html \
 	$LOCAL_SERVER/program.json
 
 echo "setting <base />-tag"
