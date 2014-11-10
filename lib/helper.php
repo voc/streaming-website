@@ -48,6 +48,11 @@ function irc_channel($room)
 	return '31C3-hall-'.strtoupper(substr($room, 4, 1));
 }
 
+function format_text($format)
+{
+	return @$GLOBALS['CONFIG']['FORMAT_TEXT'][$format] ?: '';
+}
+
 function baseurl()
 {
 	if(isset($GLOBALS['CONFIG']['baseurl']))

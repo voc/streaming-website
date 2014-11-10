@@ -30,6 +30,16 @@ $GLOBALS['CONFIG']['FORMATS'] = array(
 	'slides' => 'Slide-Images',
 );
 
+$GLOBALS['CONFIG']['FORMAT_TEXT'] = array(
+	'hd' =>   '1920x1080, h264+aac, 5 MBit/s',
+	'hq' =>   '1024x576, h264+aac, 1 MBit/s',
+	'lq' =>   '640x360, h264+aac, 0.5 MBit/s',
+	'webm' => '1024x576 vp8+vorbis in webm, zzz MBit/s',
+	'mp3' =>  'MP3, 192 kBit/s',
+	'ogg' =>  'OGG Vorbis, xxx kBit/s',
+	'opus' => 'Opus (RFC 6716), yyy kBit/s',
+);
+
 // various room-name nappings
 $GLOBALS['CONFIG']['FAHRPLAN_ROOM_MAPPING'] = array(
 	'Grossbaustelle BER' => 'saal1',
