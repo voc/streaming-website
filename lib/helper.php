@@ -14,7 +14,7 @@ function link_room($room)
 
 function link_player($room, $format, $translated = false)
 {
-	$isDefaultFormat = in_array($format, array('hq', 'video'));
+	$isDefaultFormat = in_array($format, array('sd', 'video'));
 
 	return rawurlencode($room).'/'.($isDefaultFormat ? '' : rawurlencode($format).'/').($translated ? 'translated/' : '');
 }
@@ -25,22 +25,38 @@ function link_stream($protocol, $room, $format, $translated = false)
 
 	switch ($protocol) {
 		case 'rtmp':
-			return 'rtmp://'.($format == 'hd' ? 'rtmp' : 'rtmp-sd').'.stream.c3voc.de:1935/stream/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format);
+			return 'rtmp://rtmp.stream.c3voc.de:1935/stream/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'_'.rawurlencode($format);
 
 		case 'hls':
-			return 'http://hls.stream.c3voc.de/hls/'.rawurlencode($room).'_'.rawurlencode($language).'_'.rawurlencode($format).'.m3u8';
+			return 'http://hls.stream.c3voc.de/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).($format == 'auto' ? '' : '_'.rawurlencode($format)).'.m3u8';
 
 		case 'webm':
-			return 'http://webm.stream.c3voc.de:8000/'.rawurlencode($room).'_'.rawurlencode($language).'.'.rawurlencode($format);
+			return 'http://webm.stream.c3voc.de:8000/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'_'.rawurlencode($format).'.webm';
 
 		case 'audio':
-			return 'http://audio.stream.c3voc.de:8000/'.rawurlencode($room).'_'.rawurlencode($language).'.'.rawurlencode($format);
+			if(in_array($room, array('lounge', 'ambient')))
+				return 'http://audio.stream.c3voc.de:8000/'.rawurlencode(streamname($room)).'.'.rawurlencode($format);
+			else
+				return 'http://audio.stream.c3voc.de:8000/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'.'.rawurlencode($format);
 
 		case 'slide':
-			return 'http://www.stream.c3voc.de/slides/'.rawurlencode($room).'/current.png';
+			return 'http://www.stream.c3voc.de/slides/'.rawurlencode(streamname($room)).'/current.png';
 	}
 
 	return '#';
+}
+
+function streamname($room)
+{
+	switch($room)
+	{
+		case 'saal1': return 's1';
+		case 'saal2': return 's2';
+		case 'saalg': return 's3';
+		case 'saal6': return 's4';
+		case 'sendezentrum': return 's5';
+		default: return $room;
+	}
 }
 
 function irc_channel($room)

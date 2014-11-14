@@ -8,24 +8,24 @@ RewriteCond %{REQUEST_FILENAME} !-l
 # / -> index.php - room/streams list
 DirectoryIndex index.php
 
-# /room/ -> room.php - native av-player in hq (with format switcher included)
-RewriteRule ^(saal1|saal2|saalg|saal6)/?$ room.php?room=$1&format=hq&language=native [L]
+# /room/ -> room.php - native av-player in sd (with format switcher included)
+RewriteRule ^(saal1|saal2|saalg|saal6)/?$ room.php?room=$1&format=sd&language=native [L]
 
-# /room/translated -> room.php - translated av-player in hq (with format switcher included)
-RewriteRule ^(saal1|saal2|saalg|saal6)/translated/?$ room.php?room=$1&format=hq&language=translated [L]
+# /room/translated -> room.php - translated av-player in sd (with format switcher included)
+RewriteRule ^(saal1|saal2|saalg|saal6)/translated/?$ room.php?room=$1&format=sd&language=translated [L]
 
 # /room/format/ -> room.php - native av-player in $format (with format switcher included)
-RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|lq|audio|slides)/?$ room.php?room=$1&format=$2&language=native [L]
+RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|audio|slides)/?$ room.php?room=$1&format=$2&language=native [L]
 
 # /room/format/translated -> room.php - translated av-player in $format (with format switcher included)
-RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|lq|audio|slides)/translated/?$ room.php?room=$1&format=$2&language=translated [L]
+RewriteRule ^(saal1|saal2|saalg|saal6)/(hd|audio|slides)/translated/?$ room.php?room=$1&format=$2&language=translated [L]
 
 
-# /miniroom/ -> room.php - native av-player in hq
-RewriteRule ^(sendezentrum)/?$ room.php?room=$1&format=hq&language=native [L]
+# /miniroom/ -> room.php - native av-player in sd
+RewriteRule ^(sendezentrum)/?$ room.php?room=$1&format=sd&language=native [L]
 
 # /miniroom/format/ -> room.php - native av-player in $format (no hd, no slides)
-RewriteRule ^(sendezentrum)/(lq|audio)/?$ room.php?room=$1&format=$2&language=native [L]
+RewriteRule ^(sendezentrum)/(audio)/?$ room.php?room=$1&format=$2&language=native [L]
 
 
 # /party/ -> player.php - simple audio-player for party

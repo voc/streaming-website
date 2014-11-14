@@ -21,16 +21,10 @@ switch($format) {
 		$height = 1080;
 		break;
 
-	case 'hq':
+	case 'sd':
 		$type = 'video';
 		$width = 1024;
 		$height = 576;
-		break;
-
-	case 'lq':
-		$type = 'video';
-		$width = 640;
-		$height = 360;
 		break;
 }
 

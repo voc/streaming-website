@@ -1,6 +1,6 @@
 <h3>Directlinks</h3>
 <ul>
-	<? foreach(array('mp3', 'ogg', 'opus') as $iter): ?>
+	<? foreach(array('mp3', 'opus') as $iter): ?>
 		<li>
 			<span class="label filetype"><?=h(strtoupper($iter))?></span>
 			<a href="<?=h(link_stream('audio', $room, $iter))?>">
