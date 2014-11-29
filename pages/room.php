@@ -48,7 +48,7 @@ echo $tpl->render(array(
 	'translated' => ($language == 'translated'),
 	'format' => $format,
 
-	// miniroom = no hd, no translation, no slides, no irc, no program
+	// miniroom = no translation, no slides, no irc, no program
 	//   -> sendezentrum, workshops
 	'miniroom' => in_array($room, array('sendezentrum')),
 ));
