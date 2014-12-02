@@ -162,27 +162,6 @@ $(function() {
 	});
 });
 
-// slide-stream
-$(function() {
-	var
-		updateTimer = 5000, /* reload slide image 5 seconds after the previous image was loaded */
-		$template = $('img.slide.template').clone().detach();
-
-	function updateSlideImage() {
-		// no way around breaking the cache hard in FF
-		// -> https://bugzilla.mozilla.org/show_bug.cgi?id=295942
-		$template
-			.clone()
-			.on('load', function() {
-				$(this).replaceAll($('img.slide'));
-				setTimeout(updateSlideImage, updateTimer);
-			})
-			.attr('src', $template.data('src')+'?'+Date.now());
-	}
-
-	updateSlideImage();
-});
-
 // startpage program teaser
 $(function() {
 	var

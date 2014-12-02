@@ -1,13 +1,28 @@
-<img
-	width="1024"
-	height="576"
-
-	data-src="<?=h(link_stream('slide', $room, null, $translated))?>"
-
-	alt="<?=h($title)?>"
-	class="slide template"
-/>
-
-<div class="slide-audio">
-	<? include('audio.phtml') ?>
+<div style="width: 100%; height: 100%; max-width: <?=h($width)?>px; margin: 0 auto;">
+	<video
+		autoplay="autoplay"
+		preload="auto"
+		width="<?=h($width)?>"
+		height="<?=h($height)?>"
+		style="width: 100%; height: 100%;"
+	>
+		<!--source
+			data-plugin-type="native"
+			src="<?=h(link_stream('webm', $room, 'webm_slides', $translated))?>"
+			title="WebM (Icecast)"
+			type="video/webm"
+		/-->
+		<source
+			data-plugin-type="flash"
+			src="<?=h(link_stream('rtmp', $room, 'slides', $translated))?>"
+			title="h.264 (RTMP)"
+			type="video/rtmp"
+		/>
+		<source
+			data-plugin-type="native"
+			src="<?=h(link_stream('hls', $room, 'slides', $translated))?>"
+			title="h.264 (HLS)"
+			type="application/vnd.apple.mpegURL"
+		/>
+	</video>
 </div>
