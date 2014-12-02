@@ -47,6 +47,7 @@ echo $tpl->render(array(
 	'language' => $language,
 	'translated' => ($language == 'translated'),
 	'format' => $format,
+	'hlsformat' => ($format == 'sd' ? 'auto' : $format),
 
 	// miniroom = no translation, no slides, no irc, no program
 	//   -> sendezentrum, workshops
