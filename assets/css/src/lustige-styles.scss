@@ -76,7 +76,14 @@ p {
 /* navigation bar */
 .navbar {
   border: none;
-  
+
+  background-image: url('../img/video-blur.png');
+  background-position: 50% 75;
+
+  body.rooms & {
+    background-image: none;
+  }
+
   .navbar-brand {
     font-size: 24px;
     padding: 12px 15px;
@@ -259,32 +266,22 @@ a.inverted {
 /* banner area */
 .banner {
   width: 100%;
-  height: 300px;
+  height: 280px;
   overflow: hidden;
   text-align: center;
-  background-image: url('../img/promoted_bg.jpg');
+  background-image: url('../img/video-blur.png');
+  background-position: 50% 50%;
   position: relative;
 
-  img {
+  .logo {
     position: relative;
     z-index: 1;
-    height: 190px;
     display: inline-block;
     margin-top: 12px;
+
+    padding: 25px;
     border: 1px solid $transparent-white;
     background-color: $transparent-white;
-  }
-
-  .titlebar {
-    width: 100%;
-    height: 112px;
-    background-color: $transparent-white;
-    position: absolute;
-    line-height: 112px;
-    bottom: 0;
-    color: white;
-    font-size: 30px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
   }
 }
 
