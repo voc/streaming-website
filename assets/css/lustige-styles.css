@@ -5362,7 +5362,7 @@ p {
 /* navigation bar */
 .navbar {
   border: none;
-  background-image: url("../img/video-blur.jpg");
+  background-image: url("../img/bg.png");
   background-position: 50% 75; }
   body.rooms .navbar {
     background-image: none; }
@@ -5501,17 +5501,15 @@ a.inverted {
   height: 280px;
   overflow: hidden;
   text-align: center;
-  background-image: url("../img/video-blur.jpg");
+  background-image: url("../img/bg.png");
   background-position: 50% 50%;
+  background-repeat: repeat-x;
   position: relative; }
   .banner .logo {
     position: relative;
     z-index: 1;
     display: inline-block;
-    margin-top: 12px;
-    padding: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.3); }
+    margin-top: 37px; }
 
 .rooms .room-group {
   background-color: #222222;
