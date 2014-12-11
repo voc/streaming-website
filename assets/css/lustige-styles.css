@@ -5363,7 +5363,7 @@ p {
 .navbar {
   border: none;
   background-image: url("../img/bg.png");
-  background-position: 50% 75; }
+  background-position: 50% -9px; }
   body.rooms .navbar {
     background-image: none; }
   .navbar .navbar-brand {
@@ -5578,8 +5578,38 @@ a.inverted {
     .room .click-to-irc.active iframe {
       display: block; }
 
+.mejs-container .mejs-subs-line {
+  position: absolute;
+  bottom: 50px;
+  height: 85px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  font-size: 65px;
+  text-align: center;
+  opacity: 0;
+  padding: 5px 0; }
+  .mejs-container .mejs-subs-line .silence {
+    font-size: 49%;
+    opacity: 0;
+    color: #555; }
+  .mejs-container .mejs-subs-line.silence .silence {
+    opacity: 1; }
+  .mejs-container .mejs-subs-line .error {
+    color: red;
+    opacity: 0; }
+  .mejs-container .mejs-subs-line.error .error {
+    opacity: 1; }
+
 .mejs-container .mejs-controls {
+  visibility: visible !important;
   height: 39px; }
+  .mejs-container .mejs-controls .mejs-subs-button > span {
+    cursor: pointer;
+    color: #e3e3e3;
+    font-size: 28px;
+    padding-top: 5px;
+    padding-left: 5px; }
   .mejs-container .mejs-controls div {
     width: 39px;
     height: 39px; }

@@ -1,12 +1,150 @@
+$.fn.pulseSubsLine = function(klass) {
+	var e = this;
+	e
+		.find('.text')
+			.hide()
+		.end()
+		.addClass(klass)
+		.animate({opacity: 1, duration: .75}, function() {
+			setTimeout(function() {
+				e.animate({opacity: 0, duration: .5}, function() {
+					e.removeClass(klass);
+				})
+			}, 5000);
+		});
+}
+
+$.fn.autoScale = function() {
+	if(!this.data('autoScaleOriginal')) {
+		this.data('autoScaleOriginal', parseInt(this.css('font-size')));
+	}
+
+	var
+		maxSize = this.data('autoScaleOriginal');
+		maxH = this.parent().innerHeight(),
+		thisH = this.css('font-size', maxSize).outerHeight();
+
+	while(thisH > maxH && maxSize > 0) {
+		thisH = this.css('font-size', --maxSize).outerHeight();
+	}
+
+	return this;
+}
+
+// mediaelement subtitles button
+MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, media) {
+	var
+		//host = 'http://frontend.c3voc.mazdermind.de:33133/',
+		host = 'http://localhost:33133/',
+		room = $('.room.video').data('room'),
+		isLoaded = false,
+		t = 200,
+		$btn = $([
+			'<div class="mejs-button mejs-subs-button">',
+				'<span class="fa fa-comments-o"></span>',
+			'</div>'
+		].join('')),
+		$line = $([
+			'<div class="mejs-subs-line">',
+				'<div class="text"></div>',
+				'<div class="silence">',
+					'<i>(silence)</i>',
+					'<br />',
+					'Maybe no-one is currently writing Live-Subtitles',
+				'</div>',
+				'<div class="error">',
+					'Sorry, an Error occured.',
+				'</div>',
+			'</div>'
+		].join('')),
+		$text = $line.find('.text'),
+		$silence = $line.find('.silence'),
+		$error = $line.find('.error');
+
+
+
+	$btn
+		.appendTo(controls)
+		.click(function() {
+			$.ajax({
+				url: host+'status/'+encodeURIComponent(room),
+				//dataType: $.support.cors ? 'json' : 'jsonp',
+				dataType: 'jsonp',
+				success: function(status) {
+					if(!status)
+						return $line.pulseSubsLine('silence');
+
+					if(!isLoaded) {
+						isLoaded = true;
+						return loadAndOpenSocket();
+					}
+
+					$line.fadeToggle(t);
+				},
+				error: function() {
+					$line.pulseSubsLine('error');
+				}
+			});
+		});
+
+	function loadAndOpenSocket() {
+		if(window.io)
+			return openSocket();
+
+		console.log('load');
+		$.getScript(host+'socket.io/socket.io.js', openSocket);
+	}
+
+	function openSocket() {
+		var hideTimeout;
+		var socket = io(host);
+
+		socket.on('connect', function() {
+			$line.animate({opacity: 1}, t);
+			console.log('fade');
+			socket.emit('join', room);
+		});
+
+		socket.on('line', function(stamp, line, duration) {
+			if(hideTimeout)
+				clearTimeout(hideTimeout);
+
+			hideTimeout = setTimeout(function() {
+				$text.animate({opacity: 0}, t)
+				clearTimeout(hideTimeout);
+				hideTimeout = null;
+
+			}, duration*1000);
+
+
+
+			$text.animate({
+				opacity: 0
+			}, {
+				duration: t,
+				complete: function() {
+					$text.show().text(line).autoScale().animate({
+						opacity: 1
+					});
+				}
+			});
+		});
+	}
+
+	$line.appendTo(layers);
+}
+
 // mediaelement-player
 $(function() {
 	$('video').mediaelementplayer({
 		mode: 'auto_plugin',
+
+		// hack z-index so that the flash plugin get's the click on the fullscreen button
 		usePluginFullScreen: true,
 		enableAutosize: true,
 
 		pluginPath: 'assets/js/lib/',
-		features: ['playpause', 'volume','fullscreen']
+		features: ['playpause', 'volume', 'fullscreen', $('video').hasClass('subs') ? 'subs' : '']
 	});
 	$('audio').mediaelementplayer();
 });

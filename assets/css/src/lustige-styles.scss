@@ -86,7 +86,7 @@ p {
   border: none;
 
   background-image: url($bg);
-  background-position: 50% 75;
+  background-position: 50% -9px;
 
   body.rooms & {
     background-image: none;
@@ -399,10 +399,43 @@ a.inverted {
   }
 
 }
+.mejs-container .mejs-subs-line {
+  position: absolute;
+  bottom: 50px;
+  height: 85px;
+  width: 100%;
+  background-color: rgba(white, .85);
+  color: black;
+  font-size: 65px;
+  text-align: center;
+  opacity: 0;
+  padding: 5px 0;
 
+  .silence {
+    font-size: 49%;
+    opacity: 0;
+    color: #555;
+  }
+  &.silence .silence { opacity: 1; }
+
+  .error {
+    color: red;
+    opacity: 0;
+  }
+  &.error .error { opacity: 1; }
+}
 
 .mejs-container .mejs-controls {
   $factor: 1.5;
+  visibility: visible !important;
+
+  .mejs-subs-button > span {
+    cursor: pointer;
+    color: #e3e3e3;
+    font-size: 28px;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
 
   height: 12px + 18px * $factor;
   div {
