@@ -28,7 +28,7 @@ function link_stream($protocol, $room, $format, $translated = false)
 			return 'rtmp://rtmp.stream.c3voc.de:1935/stream/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'_'.rawurlencode($format);
 
 		case 'hls':
-			return 'http://hls.stream.c3voc.de/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).($format == 'auto' ? '' : '_'.rawurlencode($format)).'.m3u8';
+			return 'http://hls.stream.c3voc.de/hls/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).($format == 'auto' ? '' : '_'.rawurlencode($format)).'.m3u8';
 
 		case 'webm':
 			return 'http://webm.stream.c3voc.de:8000/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'_'.rawurlencode($format).'.webm';
