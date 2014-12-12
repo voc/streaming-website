@@ -2,7 +2,9 @@
 	<div class="activator">
 		Click to Activate
 		<br />
-		<a class="irclink" href="irc://irc.hackint.eu:6667/<?=h(irc_channel($room))?>">(Directlink)</a>
+		<a class="irclink" href="irc://irc.hackint.eu:6667/<?=h(urlencode(irc_channel($room)))?>">#<?=h(irc_channel($room))?> @ hackint</a>
+		<br />
+		<a class="twitterlink" href="https://twitter.com/intent/tweet?text=<?=h(urlencode(twitter_hashtag($room)))?>" target="_blank"><?=h(twitter_hashtag($room))?> @ twitter</a>
 	</div>
 	<iframe data-src="https://kthx.de:9090/?channels=<?=h(irc_channel($room))?>-<?=h($room)?>&uio=d4" width="1020" height="372" border="0"></iframe>
 </div>

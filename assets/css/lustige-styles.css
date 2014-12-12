@@ -5569,6 +5569,8 @@ a.inverted {
     font-size: 60px; }
     .room .click-to-irc .activator a {
       font-size: 40px; }
+    .room .click-to-irc .activator a.twitterlink {
+      font-size: 30px; }
   .room .click-to-irc iframe {
     display: none; }
   .room .click-to-irc.active {
