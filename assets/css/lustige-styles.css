@@ -5590,7 +5590,8 @@ a.inverted {
   font-size: 65px;
   text-align: center;
   opacity: 0;
-  padding: 5px 0; }
+  padding: 5px 0;
+  overflow: hidden; }
   .mejs-container .mejs-subs-line .silence {
     font-size: 49%;
     opacity: 0;
