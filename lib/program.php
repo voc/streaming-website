@@ -3,8 +3,19 @@
 function program()
 {
 	$program = array();
-	$schedule = simplexml_load_file($GLOBALS['CONFIG']['SCHEDULE']);
+	$schedule = file_get_contents($GLOBALS['CONFIG']['SCHEDULE']);
 
+	// loading failed, try tmp-file
+	if(!$schedule)
+		$schedule = file_get_contents('/tmp/website-schedule-fallback.xml');
+
+	// failed, too, give up
+	if(!$schedule)
+		return array();
+
+	// save tmp-file (for when uplink goes down or such)
+	file_put_contents('/tmp/website-schedule-fallback.xml', $schedule);
+	$schedule = simplexml_load_string($schedule);
 	// re-calculate day-ends
 	// some schedules have long gaps before the first talk or talks that expand beyond the dayend
 	// (fiffkon, i look at you)
