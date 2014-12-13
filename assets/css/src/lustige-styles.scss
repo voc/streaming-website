@@ -475,8 +475,23 @@ a.inverted {
     .mejs-fullscreen-button button {
       background-position: -32px * $factor 0;
     }
+
+    $top: $factor * 12px - 12px;
+    .mejs-time {
+      padding-top: $top + 8px;
+    }
+    .mejs-horizontal-volume-slider {
+      width: 110px;
+      top: $top;
+      .mejs-horizontal-volume-total {
+        width: 100px;
+      }
+    }
   }
 
+  &.mejs-audio {
+    margin: 0 auto;
+  }
   .mejs-overlay-loading {
     background: none !important;
   }

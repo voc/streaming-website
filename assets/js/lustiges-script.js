@@ -145,7 +145,9 @@ $(function() {
 		pluginPath: 'assets/js/lib/',
 		features: ['playpause', 'volume', 'fullscreen', $('video').hasClass('subs') ? 'subs' : '']
 	});
-	$('audio').mediaelementplayer();
+	$('audio').mediaelementplayer({
+		features: ['playpause', 'volume', 'current']
+	});
 });
 
 

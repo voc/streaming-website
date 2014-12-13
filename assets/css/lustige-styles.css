@@ -5631,6 +5631,15 @@ a.inverted {
     left: 6px; }
   .mejs-container .mejs-controls .mejs-fullscreen-button button {
     background-position: -48px 0; }
+  .mejs-container .mejs-controls .mejs-time {
+    padding-top: 14px; }
+  .mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+    width: 110px;
+    top: 6px; }
+    .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+      width: 100px; }
+.mejs-container.mejs-audio {
+  margin: 0 auto; }
 .mejs-container .mejs-overlay-loading {
   background: none !important; }
 
