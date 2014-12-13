@@ -12,7 +12,7 @@ function link_room($room)
 	return rawurlencode($room).'/';
 }
 
-function link_player($room, $format, $translated = false)
+function link_player($room, $format = 'sd', $translated = false)
 {
 	$isDefaultFormat = in_array($format, array('sd', 'video'));
 

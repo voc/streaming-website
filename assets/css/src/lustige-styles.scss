@@ -701,6 +701,10 @@ a.inverted {
       color: $gray-lighter;
     }
 
+    a {
+      color: white;
+    }
+
     &.event h3 {
       height: 48px;
       overflow: hidden;

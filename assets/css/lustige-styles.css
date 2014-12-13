@@ -5779,6 +5779,8 @@ a.inverted {
   .program .block h4 {
     margin: 3px 0;
     color: #eeeeee; }
+  .program .block a {
+    color: white; }
   .program .block.event h3 {
     height: 48px;
     overflow: hidden; }

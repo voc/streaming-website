@@ -37,7 +37,12 @@ foreach(reset($program) as $event)
 								&nbsp;in&nbsp;
 								<?=h($GLOBALS['CONFIG']['ROOMS'][$name])?>
 							</h4>
-							<h3><?=h($event['title'])?></h3>
+							<h3>
+								<a
+									href="<?=h(link_player($name))?>"
+									title="Switch to <?=h($GLOBALS['CONFIG']['ROOMS'][$name])?>"
+								><?=h($event['title'])?></a>
+							</h3>
 
 						<? endif ?>
 					</div>
