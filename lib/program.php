@@ -2,10 +2,6 @@
 
 function program()
 {
-	$cacheidx = __FILE__.':'.__FUNCTION__.':program:'.$GLOBALS['CONFIG']['SCHEDULE'];
-	if(function_exists('apc_fetch') && $program = apc_fetch($cacheidx))
-		return $program;
-
 	$program = array();
 	$schedule = simplexml_load_file($GLOBALS['CONFIG']['SCHEDULE']);
 
@@ -135,9 +131,6 @@ function program()
 			}
 		}
 	}
-
-	if(function_exists('apc_store'))
-		apc_store($cacheidx, $program, $GLOBALS['CONFIG']['SCHEDULE_CACHE_TTL']);
 
 	return $program;
 }
