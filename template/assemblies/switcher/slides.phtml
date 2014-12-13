@@ -1,7 +1,7 @@
 <h3>Slides</h3>
 <ul>
 	<li>
-		<span class="label filetype">JPG &amp; MP3</span>
+		<span class="label filetype">SLIDES</span>
 		<a href="<?=h(link_player($room, 'slides'))?>">
 			<span class="fa fa-flag-o"></span>
 			native
@@ -11,4 +11,21 @@
 			translated
 		</a>
 	</li>
+</ul>
+
+<h3>Directlinks</h3>
+<ul>
+	<? foreach(array('rtmp', 'hls') as $protocol): ?>
+		<li>
+			<span class="label filetype" title="<?=h(format_text($iter))?>"><?=h(strtoupper($protocol))?></span>
+			<a href="<?=h(link_stream($protocol, $room, 'slides'))?>">
+				<span class="fa fa-flag-o"></span>
+				native
+			</a>
+			<a href="<?=h(link_stream($protocol, $room, 'slides', true))?>">
+				<span class="fa fa-flag"></span>
+				translated
+			</a>
+		</li>
+	<? endforeach ?>
 </ul>
