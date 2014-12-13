@@ -34,8 +34,8 @@ foreach(reset($program) as $event)
 							<h4><?=h(strftime('%H:%M', $event['start']))?>
 								&nbsp;&ndash;&nbsp;
 								<?=h(strftime('%H:%M', $event['end']))?>
-								&nbsp;&nbsp;&nbsp;&ndash;&nbsp;
-								<?=h($name)?>
+								&nbsp;in&nbsp;
+								<?=h($GLOBALS['CONFIG']['ROOMS'][$name])?>
 							</h4>
 							<h3><?=h($event['title'])?></h3>
 
