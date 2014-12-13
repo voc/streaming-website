@@ -5603,7 +5603,6 @@ a.inverted {
     opacity: 0; }
   .mejs-container .mejs-subs-line.error .error {
     opacity: 1; }
-
 .mejs-container .mejs-controls {
   visibility: visible !important;
   height: 39px; }
@@ -5632,6 +5631,8 @@ a.inverted {
     left: 6px; }
   .mejs-container .mejs-controls .mejs-fullscreen-button button {
     background-position: -48px 0; }
+.mejs-container .mejs-overlay-loading {
+  background: none !important; }
 
 /* and now for medium screens: */
 @media all and (min-width: 450px) and (max-width: 700px) {
