@@ -90,19 +90,24 @@ MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, medi
 		if(window.io)
 			return openSocket();
 
-		console.log('load');
 		$.getScript(host+'socket.io/socket.io.js', openSocket);
 	}
 
+	function silence() {
+		$text.hide();
+		$silence.show().animate({opacity: 1, duration: .75});
+	}
+
 	function openSocket() {
-		var hideTimeout;
+		var hideTimeout, silenceTimeout, silenceWait = 15*1000;
 		var socket = io(host);
 
 		socket.on('connect', function() {
 			$line.animate({opacity: 1}, t);
-			console.log('fade');
 			socket.emit('join', room);
 		});
+
+		silenceTimeout = setTimeout(silence, silenceWait);
 
 		socket.on('line', function(stamp, line, duration) {
 			if(hideTimeout)
@@ -112,9 +117,13 @@ MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, medi
 				$text.animate({opacity: 0}, t)
 				clearTimeout(hideTimeout);
 				hideTimeout = null;
-
 			}, duration*1000);
 
+
+			if(silenceTimeout)
+				clearTimeout(silenceTimeout);
+
+			silenceTimeout = setTimeout(silence, silenceWait);
 
 
 			$text.animate({
