@@ -17,6 +17,10 @@
 
 <hr />
 
+<? include("$assemblies/desktop-player.phtml") ?>
+
+<hr />
+
 <? foreach(array('rtmp', 'hls') as $protocol): ?>
 	<h3>Directlinks (<?=h(strtoupper($protocol))?>)</h3>
 	<ul>
@@ -58,7 +62,3 @@
 		</li>
 	<? endforeach ?>
 </ul>
-
-<hr />
-
-<? include("$assemblies/desktop-player.phtml") ?>
