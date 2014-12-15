@@ -5444,6 +5444,9 @@ h1 + .news-item {
       color: #777777; }
       .tab-content #switcher h3:first-child {
         margin-top: 0; }
+    .tab-content #switcher p {
+      color: white;
+      font-size: 120%; }
     .tab-content #switcher ul {
       list-style-type: none;
       padding: 0; }
