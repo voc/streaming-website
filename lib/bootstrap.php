@@ -7,4 +7,5 @@ require_once('lib/config.php');
 $tpl = new PhpTemplate('template/page.phtml');
 $tpl->set(array(
 	'baseurl' => baseurl(),
+	'assemblies' => './template/assemblies/',
 ));

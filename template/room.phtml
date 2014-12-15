@@ -20,7 +20,7 @@
 	</ul>
 
 	<div class="player-wrap">
-		<? include("assemblies/player/$type.phtml") ?>
+		<? include("$assemblies/player/$type.phtml") ?>
 	</div>
 
 	<? if(!$miniroom): ?>
@@ -39,18 +39,19 @@
 
 	<div class="tab-content">
 		<div class="tab-pane active" id="switcher">
+
 			<? if($miniroom): ?>
-				<? include("assemblies/switcher/miniroom-$type.phtml") ?>
+				<? include("$assemblies/switcher/miniroom-$type.phtml") ?>
 			<? else: ?>
-				<? include("assemblies/switcher/$type.phtml") ?>
+				<? include("$assemblies/switcher/$type.phtml") ?>
 			<? endif ?>
 		</div>
 		<? if(!$miniroom): ?>
 			<div class="tab-pane" id="irc">
-				<? include("assemblies/irc.phtml") ?>
+				<? include("$assemblies/irc.phtml") ?>
 			</div>
 			<div class="tab-pane" id="program">
-				<? include("assemblies/program.phtml") ?>
+				<? include("$assemblies/program.phtml") ?>
 			</div>
 		<? endif ?>
 	</div>

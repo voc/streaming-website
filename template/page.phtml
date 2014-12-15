@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<? include('assemblies/motd.phtml') ?>
+<? include("$assemblies/motd.phtml") ?>
 
 <html>
 	<head>
@@ -40,8 +40,8 @@
 		<script type="text/javascript" src="assets/js/lustiges-script.js"></script>
 	</head>
 	<body class="<?=h($page)?>">
-		<? include('assemblies/header.phtml') ?>
+		<? include("$assemblies/header.phtml") ?>
 		<? include("$page.phtml") ?>
-		<? include('assemblies/footer.phtml') ?>
+		<? include("$assemblies/footer.phtml") ?>
 	</body>
 </html>
