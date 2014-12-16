@@ -6,5 +6,5 @@
 		<br />
 		<a class="twitterlink" href="https://twitter.com/intent/tweet?text=<?=h(urlencode(twitter_hashtag($room)))?>" target="_blank"><?=h(twitter_hashtag($room))?> @ twitter</a>
 	</div>
-	<iframe data-src="http://evility.net/cgiirc/irc.cgi?chan=<?=h(rawurlencode('#'.irc_channel($room).'-'.h($room)))?>" width="1020" height="372" border="0"></iframe>
+	<iframe data-src="http://evility.net/cgiirc/irc.cgi?chan=<?=h(rawurlencode('#'.irc_channel($room)))?>" width="1020" height="372" border="0"></iframe>
 </div>
