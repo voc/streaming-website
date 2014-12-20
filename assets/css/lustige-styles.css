@@ -5363,7 +5363,8 @@ p {
 .navbar {
   border: none;
   background-image: url("../img/bg.png");
-  background-position: 50% -9px; }
+  background-position: 50% -9px;
+  padding: 0 15px; }
   body.rooms .navbar {
     background-image: none; }
   .navbar .navbar-brand {
