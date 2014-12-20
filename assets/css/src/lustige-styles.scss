@@ -233,6 +233,16 @@ h1 + .news-item {
       text-decoration: none;
     }
   }
+
+  #feedback {
+    padding: 20px;
+
+    label { color: white; }
+
+    .col {
+      padding: 0 30px;
+    }
+  }
 }
 
 ul.metadata {

@@ -1,0 +1,132 @@
+<form action="http://c3voc.de/feedback/" target="_blank" method="post" role="form" class="form-horizontal row">
+	<div class="col-sm-4 col">
+		<div class="form-group">
+			<label for="net">Network Connection</label>
+			<select class="form-control" name="net" id="net">
+				<option></option>
+				<option>EDGE</option>
+				<option>3G</option>
+				<option>LTE</option>
+				<option>DSL &lt;2000</option>
+				<option>DSL 2000-6000</option>
+				<option>DSL &gt;6000</option>
+				<option>VDSL</option>
+				<option>Public Hotspot</option>
+				<option>WLAN Inside the CCH</option>
+				<option>Ethernet Inside the CCH</option>
+				<option>Something else</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="os">Operating System</label>
+			<select class="form-control" name="os" id="os">
+				<option></option>
+				<option>Unixoid</option>
+				<option>OS/X</option>
+				<option>Windows</option>
+				<option>Something else</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="player">Player</label>
+			<select class="form-control" name="player" id="player">
+				<option></option>
+				<option>Firefox</option>
+				<option>Chrome/Chromium</option>
+				<option>Anderer Browser</option>
+				<option>VLC</option>
+				<option>MPlayer</option>
+				<option>Totem</option>
+				<option>ffplay</option>
+				<option>Something else</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="stream">Stream</label>
+			<select class="form-control" name="stream" id="stream">
+				<option></option>
+				<? foreach(array('saal1', 'saal2', 'saalg', 'saal6', 'sendezentrum') as $roomIter): ?>
+					<? foreach($GLOBALS['CONFIG']['FORMATS'] as $formatIter => $formatDislay): ?>
+						<option
+							<? if($roomIter == $room && $formatIter == $format): ?>selected<? endif ?>
+						value="<?=h("$roomIter-$formatIter")?>"><?=h($GLOBALS['CONFIG']['ROOMS'][$roomIter])?> – <?=h($formatDislay)?></option>
+					<? endforeach ?>
+				<? endforeach ?>
+
+				<? foreach(array('lounge', 'ambient') as $roomIter): ?>
+					<option value="<?=h("$roomIter")?>"><?=h($GLOBALS['CONFIG']['ROOMS'][$roomIter])?></option>
+				<? endforeach ?>
+			</select>
+		</div>
+	</div>
+
+	<div class="col-sm-4 col">
+		<div class="form-group">
+			<label>IP-Connectivity</label>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="v4" name="ipproto" checked /> IPv4
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="v6" name="ipproto" /> IPv6
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="datetime" class="text">Date/Time</label>
+			<input type="text" value="<?=h(strftime('%d.%m.%Y %H:%I'))?>" name="datetime" id="datetime" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<label for="provider" class="text">Provider</label>
+			<input type="text" value="" name="provider" id="provider" class="form-control" />
+		</div>
+	</div>
+
+	<div class="col-sm-4 col">
+		<div class="form-group">
+			<label>Did you have Issues?</label>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="Dropouts" name="issues[]"/> Dropouts
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="Hickups/Jerking" name="issues[]"/> Hickups/Jerking
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="Loops" name="issues[]"/> Loops
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="Image" name="issues[]"/> No Image
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="Audio" name="issues[]"/> No Audio
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="Artifacts" name="issues[]"/> Artifacts
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<input type="submit" value="Submit" />
+		</div>
+	</div>
+
+</form>

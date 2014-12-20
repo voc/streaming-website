@@ -5463,6 +5463,12 @@ h1 + .news-item {
       min-width: 4em; }
     .tab-content #switcher a:hover, .tab-content #switcher a:focus, .tab-content #switcher a:active {
       text-decoration: none; }
+  .tab-content #feedback {
+    padding: 20px; }
+    .tab-content #feedback label {
+      color: white; }
+    .tab-content #feedback .col {
+      padding: 0 30px; }
 
 ul.metadata {
   list-style: none;
