@@ -238,6 +238,8 @@ h1 + .news-item {
     padding: 20px;
 
     label { color: white; }
+    h3 { display: none; color: white; }
+    iframe { display: none; }
 
     .col {
       padding: 0 30px;

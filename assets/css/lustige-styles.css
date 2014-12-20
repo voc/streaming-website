@@ -5467,6 +5467,11 @@ h1 + .news-item {
     padding: 20px; }
     .tab-content #feedback label {
       color: white; }
+    .tab-content #feedback h3 {
+      display: none;
+      color: white; }
+    .tab-content #feedback iframe {
+      display: none; }
     .tab-content #feedback .col {
       padding: 0 30px; }
 

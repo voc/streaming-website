@@ -1,4 +1,4 @@
-<form action="http://c3voc.de/feedback/" target="_blank" method="post" role="form" class="form-horizontal row">
+<form action="http://c3voc.de/feedback/" target="feedback-target" method="post" role="form" class="feedback-form form-horizontal row">
 	<div class="col-sm-4 col">
 		<div class="form-group">
 			<label for="net">Network Connection</label>
@@ -125,8 +125,14 @@
 		</div>
 
 		<div class="form-group">
+		<label for="issuetext">Something else was good/bad</label>
+			<input type="text" value="" name="issuetext" id="issuetext" class="form-control" />
+		</div>
+
+		<div class="form-group">
 			<input type="submit" value="Submit" />
 		</div>
 	</div>
-
 </form>
+<h3 class="feedback-thankyou">Thank you!</h3>
+<iframe name="feedback-target"></iframe>

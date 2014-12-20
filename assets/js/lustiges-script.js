@@ -379,3 +379,12 @@ $(function() {
 
 	fetchProgram();
 });
+
+
+// feedback form
+$(function() {
+	$('.feedback-form').on('submit', function() {
+		$('.feedback-form').hide();
+		$('.feedback-thankyou').show();
+	});
+});
