@@ -5473,6 +5473,8 @@ h1 + .news-item {
       color: white; }
     .tab-content #feedback iframe {
       display: none; }
+    .tab-content #feedback input[type="radio"], .tab-content #feedback input[type="checkbox"] {
+      margin-top: 0; }
     .tab-content #feedback .col {
       padding: 0 30px; }
 

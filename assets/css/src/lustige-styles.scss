@@ -243,6 +243,10 @@ h1 + .news-item {
     h3 { display: none; color: white; }
     iframe { display: none; }
 
+    input[type="radio"], input[type="checkbox"] {
+      margin-top: 0;
+    }
+
     .col {
       padding: 0 30px;
     }
