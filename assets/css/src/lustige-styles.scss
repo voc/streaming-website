@@ -327,19 +327,12 @@ a.inverted {
 
     ul {
       list-style-type: none;
-      margin: 0;
-      padding: 0;
+      padding: 0 0 5px 0;
+      margin: 0 -5px;
     }
 
     li {
-      background-color: $gray-dark;
-      list-style-type: none;
-      width: 49.5%;
-      &.wide { width: 100%; }
-      margin: 0;
-      padding: 0;
-      margin-top: 1%;
-      float: left;
+      padding: 5px !important;
 
       .title {
         font-size: 1.75em;
@@ -348,6 +341,7 @@ a.inverted {
       }
 
       a {
+        background-color: $gray-dark;
         color: white;
         display: block;
         width: 100%;
@@ -359,11 +353,6 @@ a.inverted {
           background-color: #1a1a1a;
           text-decoration: none;
         }
-      }
-
-
-      &:nth-child(2n+1) {
-        margin-right: 1%;
       }
     }
   }

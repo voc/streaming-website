@@ -6,9 +6,9 @@
 	<div class="room-group lecture" data-offset="<?=h($GLOBALS['CONFIG']['SCHEDULE_OFFSET'])?>">
 		<h2>Lecture Rooms</h2>
 
-		<ul>
+		<ul class="row">
 			<? foreach(array('saal1', 'saal2', 'saalg', 'saal6') as $room): ?>
-				<li class="<?=h($room)?>">
+				<li class="<?=h($room)?> col-sm-6">
 					<a href="<?=h(link_room($room))?>">
 						<div class="title"><?=h($rooms[$room])?></div>
 
@@ -36,9 +36,9 @@
 	<div class="room-group">
 		<h2>Live DJ Sets</h2>
 
-		<ul>
+		<ul class="row">
 			<? foreach(array('lounge', 'ambient') as $room): ?>
-				<li class="<?=h($room)?>">
+				<li class="<?=h($room)?> col-sm-6">
 					<a href="<?=h(link_room($room))?>" class="title"><?=h($rooms[$room])?></a>
 				</li>
 			<? endforeach ?>
@@ -49,9 +49,9 @@
 	<div class="room-group">
 		<h2>Live Podcasts</h2>
 
-		<ul>
+		<ul class="row">
 			<? foreach(array('sendezentrum') as $room): ?>
-				<li class="<?=h($room)?> wide">
+				<li class="<?=h($room)?> col-sm-12">
 					<a href="<?=h(link_room($room))?>" class="title"><?=h($rooms[$room])?></a>
 				</li>
 			<? endforeach ?>
@@ -63,8 +63,8 @@
 	<div class="room-group">
 		<h2>Recordings</h2>
 
-		<ul>
-			<li class="recordings wide">
+		<ul class="row">
+			<li class="recordings col-sm-12">
 				<a href="//media.ccc.de/browse/congress/2014/index.html" class="title">Recordings</a>
 			</li>
 		</ul>

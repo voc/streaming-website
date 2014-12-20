@@ -5533,23 +5533,16 @@ a.inverted {
     margin: 0.6em 1.2em; }
   .rooms .room-group ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0; }
+    padding: 0 0 5px 0;
+    margin: 0 -5px; }
   .rooms .room-group li {
-    background-color: #333333;
-    list-style-type: none;
-    width: 49.5%;
-    margin: 0;
-    padding: 0;
-    margin-top: 1%;
-    float: left; }
-    .rooms .room-group li.wide {
-      width: 100%; }
+    padding: 5px !important; }
     .rooms .room-group li .title {
       font-size: 1.75em;
       font-weight: bold;
       padding-bottom: 20px; }
     .rooms .room-group li a {
+      background-color: #333333;
       color: white;
       display: block;
       width: 100%;
@@ -5558,8 +5551,6 @@ a.inverted {
       .rooms .room-group li a:hover {
         background-color: #1a1a1a;
         text-decoration: none; }
-    .rooms .room-group li:nth-child(2n+1) {
-      margin-right: 1%; }
 .rooms .program-teaser {
   color: #eeeeee;
   text-align: center; }
