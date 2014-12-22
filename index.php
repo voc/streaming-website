@@ -69,6 +69,11 @@ else if(preg_match('@^program.json$@', $route, $m))
 	include('pages/program-json.php');
 }
 
+else if(preg_match('@^feedback$@', $route, $m))
+{
+	include('pages/feedback.php');
+}
+
 else
 {
 	include('pages/404.php');
