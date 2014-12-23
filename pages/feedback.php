@@ -14,6 +14,7 @@ if(
 	echo $tpl->render(array(
 		'page' => 'feedback',
 		'title' => 'Give Feedback',
+		'room' => null,
 	));
 }
 else
