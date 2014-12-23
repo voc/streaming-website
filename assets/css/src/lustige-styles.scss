@@ -382,6 +382,11 @@ a.inverted {
           left: 60px;
 
           font-weight: bold;
+          text-shadow:
+            $gray-dark -3px -3px 5px,
+            $gray-dark 3px 3px 5px,
+            $gray-dark -3px 3px 5px,
+            $gray-dark 3px -3px 5px;
           padding-bottom: 20px;
         }
 
