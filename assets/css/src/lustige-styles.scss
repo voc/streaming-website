@@ -332,6 +332,15 @@ a.inverted {
     overflow: hidden;
     margin-bottom: 2em;
 
+    &.recordings {
+      text-align: center;
+      font-size: 3.25em;
+      padding: .75em;
+      a:hover {
+        text-decoration: none;
+      }
+    }
+
     h2 {
       margin: 0.6em 1.2em 0.3em;
     }
