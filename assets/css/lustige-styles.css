@@ -5533,32 +5533,49 @@ a.inverted {
   overflow: hidden;
   margin-bottom: 2em; }
   .rooms .room-group h2 {
-    margin: 0.6em 1.2em; }
+    margin: 0.6em 1.2em 0.3em; }
   .rooms .room-group ul {
     list-style-type: none;
     padding: 0 0 5px 0;
     margin: 0 -5px; }
   .rooms .room-group li {
     padding: 5px !important; }
-    .rooms .room-group li .title {
-      font-size: 1.75em;
-      font-weight: bold;
-      padding-bottom: 20px; }
     .rooms .room-group li a {
       background-color: #333333;
       color: white;
       display: block;
+      position: relative;
       width: 100%;
-      padding: 2em;
-      text-align: center; }
+      height: 120px;
+      padding: .5em;
+      text-align: center;
+      font-size: 2.75em; }
       .rooms .room-group li a:hover {
         background-color: #1a1a1a;
         text-decoration: none; }
-.rooms .program-teaser {
-  color: #eeeeee;
-  text-align: center; }
-  .rooms .program-teaser .hidden {
-    visibility: hidden; }
+      .rooms .room-group li a .teaser {
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .rooms .room-group li a .title {
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        font-weight: bold;
+        padding-bottom: 20px; }
+      .rooms .room-group li a .program-teaser {
+        color: #eeeeee;
+        text-align: left;
+        position: absolute;
+        left: 230px;
+        font-size: 14px; }
+        .rooms .room-group li a .program-teaser strong {
+          display: block; }
+        .rooms .room-group li a .program-teaser .next-talk {
+          display: block;
+          margin-top: 10px; }
+        .rooms .room-group li a .program-teaser .hidden {
+          visibility: hidden; }
 
 .room.lq .player-wrap {
   padding: 32px 0; }

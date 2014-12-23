@@ -359,6 +359,7 @@ $(function() {
 
 			});
 
+			var s = new Date(nextTalk.start*1000);
 			$lecture.find('.'+room)
 				.find('.current-talk')
 					.removeClass('hidden')
@@ -368,6 +369,9 @@ $(function() {
 				.end()
 				.find('.next-talk')
 					.toggleClass('hidden', !nextTalk || nextTalk.special || (nextTalk.start - now > 60*60))
+					.find('strong')
+						.text(s.getHours()+':'+(s.getMinutes() < 10 ? '0' : '')+s.getMinutes())
+					.end()
 					.find('.t')
 						.text(nextTalk ? nextTalk.title : '')
 					.end()

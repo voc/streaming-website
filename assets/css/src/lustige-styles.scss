@@ -328,7 +328,7 @@ a.inverted {
     margin-bottom: 2em;
 
     h2 {
-      margin: 0.6em 1.2em;
+      margin: 0.6em 1.2em 0.3em;
     }
 
     ul {
@@ -340,34 +340,56 @@ a.inverted {
     li {
       padding: 5px !important;
 
-      .title {
-        font-size: 1.75em;
-        font-weight: bold;
-        padding-bottom: 20px;
-      }
-
       a {
         background-color: $gray-dark;
         color: white;
         display: block;
+        position: relative;
         width: 100%;
-        padding: 2em;
+        height: 120px;
+        padding: .5em;
         text-align: center;
-
+        font-size: 2.75em;
 
         &:hover {
           background-color: #1a1a1a;
           text-decoration: none;
         }
+
+        .teaser {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .title {
+          position: absolute;
+          top: 40px;
+          left: 60px;
+
+          font-weight: bold;
+          padding-bottom: 20px;
+        }
+
+        .program-teaser {
+          color: $gray-lighter;
+          text-align: left;
+          position: absolute;
+          left: 230px;
+          font-size: 14px;
+
+          strong {
+            display: block;
+          }
+          .next-talk {
+            display: block;
+            margin-top: 10px;
+          }
+
+          .hidden { visibility: hidden; }
+        }
       }
     }
-  }
-
-  .program-teaser {
-    color: $gray-lighter;
-    text-align: center;
-
-    .hidden { visibility: hidden; }
   }
 }
 

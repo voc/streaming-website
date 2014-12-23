@@ -8,14 +8,15 @@
 
 		<ul class="row">
 			<? foreach(array('saal1', 'saal2', 'saalg', 'saal6') as $room): ?>
-				<li class="<?=h($room)?> col-sm-6">
+				<li class="<?=h($room)?> col-md-6 col-sm-12">
 					<a href="<?=h(link_room($room))?>">
+						<img class="teaser" src="assets/img/rooms/<?=h($room)?>.png" alt="" width="213" height="120" />
 						<div class="title"><?=h($rooms[$room])?></div>
 
 						<div class="program-teaser">
 
 							<span class="current-talk hidden">
-								<strong>Current Talk:</strong>
+								<strong>Now:</strong>
 								<span class="t">none</span>
 							</span>
 
