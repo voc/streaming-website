@@ -392,3 +392,25 @@ $(function() {
 		$('.feedback-thankyou').show();
 	});
 });
+
+
+// update teaser images
+$(function() {
+	setInterval(function() {
+		$('.rooms .lecture .teaser').each(function() {
+			var
+				$teaser = $(this),
+				$preload = $('<img />'),
+				src = $teaser.data('src');
+
+			if(!src) {
+				src = $teaser.prop('src');
+				$teaser.data('src', src);
+			}
+
+			$preload.on('load', function() {
+				$teaser.prop('src', $preload.prop('src'));
+			}).prop('src', src + '?'+(new Date()).getTime());
+		});
+	}, 1000*10);
+});
