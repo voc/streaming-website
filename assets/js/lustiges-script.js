@@ -412,5 +412,5 @@ $(function() {
 				$teaser.prop('src', $preload.prop('src'));
 			}).prop('src', src + '?'+(new Date()).getTime());
 		});
-	}, 1000*10);
+	}, 1000*60);
 });
