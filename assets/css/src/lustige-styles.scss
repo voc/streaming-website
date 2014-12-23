@@ -275,6 +275,10 @@ footer {
   color: $gray-light;
   background-color: $gray-dark;
   text-align: center;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* links */
@@ -563,6 +567,10 @@ a.inverted {
   /* large buttons */
   .btn-lg, .btn-group-lg>.btn {
     font-size: 23px;
+  }
+
+  footer {
+    position: initial;
   }
 
   /* navigation bar */

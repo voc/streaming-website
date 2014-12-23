@@ -5496,7 +5496,10 @@ footer {
   margin-top: 2em;
   color: #777777;
   background-color: #333333;
-  text-align: center; }
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
 /* links */
 a.inverted {
@@ -5689,6 +5692,9 @@ a.inverted {
   /* large buttons */
   .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn {
     font-size: 23px; }
+
+  footer {
+    position: initial; }
 
   /* navigation bar */
   .navbar {
