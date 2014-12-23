@@ -5318,7 +5318,8 @@ body {
   padding-top: 48px;
   width: 100%;
   overflow: hidden;
-  overflow-y: initial; }
+  overflow-y: initial;
+  margin-bottom: 20px; }
 
 .top-space {
   padding-top: 40px; }
