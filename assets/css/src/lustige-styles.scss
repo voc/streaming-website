@@ -467,21 +467,24 @@ a.inverted {
     font-size: 65px;
     text-align: center;
     opacity: 0;
+    display: none;
     padding: 5px 0;
     overflow: hidden;
 
     .silence {
       font-size: 49%;
       opacity: 0;
+      display: none;
       color: #555;
     }
-    &.silence .silence { opacity: 1; }
+    &.silence .silence { opacity: 1; display: block; }
 
     .error {
       color: red;
       opacity: 0;
+      display: none;
     }
-    &.error .error { opacity: 1; }
+    &.error .error { opacity: 1; display: block; }
   }
 
   .mejs-controls {

@@ -5,10 +5,11 @@ $.fn.pulseSubsLine = function(klass) {
 			.hide()
 		.end()
 		.addClass(klass)
+		.css({display: 'block'})
 		.animate({opacity: 1, duration: .75}, function() {
 			setTimeout(function() {
 				e.animate({opacity: 0, duration: .5}, function() {
-					e.removeClass(klass);
+					e.css({display: 'none'}).removeClass(klass);
 				})
 			}, 5000);
 		});
@@ -103,7 +104,7 @@ MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, medi
 		var socket = io(host);
 
 		socket.on('connect', function() {
-			$line.animate({opacity: 1}, t);
+			$line.show().animate({opacity: 1}, t);
 			socket.emit('join', room);
 		});
 

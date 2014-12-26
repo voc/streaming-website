@@ -5626,19 +5626,24 @@ a.inverted {
   font-size: 65px;
   text-align: center;
   opacity: 0;
+  display: none;
   padding: 5px 0;
   overflow: hidden; }
   .mejs-container .mejs-subs-line .silence {
     font-size: 49%;
     opacity: 0;
+    display: none;
     color: #555; }
   .mejs-container .mejs-subs-line.silence .silence {
-    opacity: 1; }
+    opacity: 1;
+    display: block; }
   .mejs-container .mejs-subs-line .error {
     color: red;
-    opacity: 0; }
+    opacity: 0;
+    display: none; }
   .mejs-container .mejs-subs-line.error .error {
-    opacity: 1; }
+    opacity: 1;
+    display: block; }
 .mejs-container .mejs-controls {
   visibility: visible !important;
   height: 39px; }
