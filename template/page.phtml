@@ -40,6 +40,10 @@
 		<script type="text/javascript" src="assets/js/lib/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/lib/mediaelement-and-player.min.js"></script>
 		<script type="text/javascript" src="assets/js/lustiges-script.js"></script>
+
+		<? if(isset($extraScripts)) foreach($extraScripts as $script): ?>
+			<script type="text/javascript" src="<?=h($script)?>"></script>
+		<? endforeach ?>
 	</head>
 	<body class="<?=h($page)?>">
 		<? include("$assemblies/header.phtml") ?>

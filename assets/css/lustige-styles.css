@@ -5684,6 +5684,37 @@ a.inverted {
 .mejs-container .mejs-overlay-loading {
   background: none !important; }
 
+/* events overview */
+.event-previews .event-preview {
+  margin: 16px 0;
+  display: block;
+  clear: both;
+  height: 120px;
+  color: black; }
+  .event-previews .event-preview.template {
+    display: none; }
+  .event-previews .event-preview .video-thumbnail {
+    float: left;
+    height: 120px;
+    width: 160px; }
+  .event-previews .event-preview:hover, .event-previews .event-preview:focus, .event-previews .event-preview:active {
+    text-decoration: none; }
+    .event-previews .event-preview:hover .metadata li, .event-previews .event-preview:hover h3, .event-previews .event-preview:focus .metadata li, .event-previews .event-preview:focus h3, .event-previews .event-preview:active .metadata li, .event-previews .event-preview:active h3 {
+      color: #d87500; }
+  .event-previews .event-preview .metadata {
+    text-align: left;
+    border: none; }
+    .event-previews .event-preview .metadata li {
+      padding: 1px;
+      padding-right: 5px;
+      color: #333333;
+      min-width: inherit; }
+  .event-previews .event-preview .caption {
+    margin-left: 160px;
+    padding-left: 16px; }
+    .event-previews .event-preview .caption h3 {
+      margin-top: 0; }
+
 /* and now for medium screens: */
 @media all and (min-width: 450px) and (max-width: 700px) {
   /* events overview */

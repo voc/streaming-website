@@ -74,6 +74,11 @@ else if(preg_match('@^feedback$@', $route, $m))
 	include('pages/feedback.php');
 }
 
+else if(preg_match('@^relive$@', $route, $m))
+{
+	include('pages/relive.php');
+}
+
 else
 {
 	include('pages/404.php');

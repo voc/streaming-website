@@ -553,6 +553,54 @@ a.inverted {
   }
 }
 
+/* events overview */
+.event-previews {
+  .event-preview {
+    margin: 16px 0;
+    display: block;
+    clear: both;
+    height: 120px;
+    color: black;
+
+    &.template { display: none; }
+    
+    .video-thumbnail {
+      float: left;
+      height: 120px;
+      width: 160px;
+    }
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      .metadata li, h3 {
+        color: $link-color;
+      }
+    }
+
+    
+    .metadata {
+      text-align: left;
+      border: none;
+
+      li {
+        padding: $padding-xs-vertical;
+        padding-right: $padding-xs-horizontal;
+        color: $gray-dark;
+        min-width: inherit;
+      }
+    }
+    
+    .caption {
+      margin-left: 160px;
+      padding-left: $padding-large-horizontal;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 /* and now for medium screens: */
 @media all and (min-width: $screen-sm-min) and (max-width: $container-desktop) {
   
