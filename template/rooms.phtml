@@ -53,7 +53,10 @@
 		<ul class="row">
 			<? foreach(array('sendezentrum') as $room): ?>
 				<li class="<?=h($room)?> col-sm-12">
-					<a href="<?=h(link_room($room))?>" class="title"><?=h($rooms[$room])?></a>
+					<a href="<?=h(link_room($room))?>">
+						<img class="teaser" src="thumbs/rooms/<?=h($room)?>.png" alt="" width="213" height="120" />
+						<div class="title"><?=h($rooms[$room])?></div>
+					</a>
 				</li>
 			<? endforeach ?>
 		</ul>

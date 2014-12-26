@@ -354,6 +354,12 @@ a.inverted {
     li {
       padding: 5px !important;
 
+      &.sendezentrum a .title {
+        left: 240px;
+        text-shadow: none;
+        font-weight: normal;
+      }
+
       a {
         background-color: $gray-dark;
         color: white;

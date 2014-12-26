@@ -5550,6 +5550,10 @@ a.inverted {
     margin: 0 -5px; }
   .rooms .room-group li {
     padding: 5px !important; }
+    .rooms .room-group li.sendezentrum a .title {
+      left: 240px;
+      text-shadow: none;
+      font-weight: normal; }
     .rooms .room-group li a {
       background-color: #333333;
       color: white;
