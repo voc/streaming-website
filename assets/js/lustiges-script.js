@@ -360,7 +360,7 @@ $(function() {
 
 			});
 
-			var s = new Date(nextTalk.start*1000);
+			var s = nextTalk ? new Date(nextTalk.start*1000) : new Date();
 			$lecture.find('.'+room)
 				.find('.current-talk')
 					.removeClass('hidden')
