@@ -35,7 +35,7 @@ $.fn.autoScale = function() {
 // mediaelement subtitles button
 MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, media) {
 	var
-		host = 'http://frontend.c3voc.mazdermind.de:33133/',
+		host = 'http://subtitles.c3voc.de/',
 		room = $('.room.video').data('room'),
 		isLoaded = false,
 		t = 200,
