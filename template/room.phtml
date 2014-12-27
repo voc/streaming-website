@@ -3,7 +3,7 @@
 
 	<ul class="nav nav-tabs nav-justified">
 		<?
-			if($miniroom)
+			if($miniroom || $room == 'saal6')
 				$tabs = array('video', 'audio');
 			else
 				$tabs = array('video', 'audio', 'slides');
