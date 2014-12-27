@@ -334,10 +334,13 @@ a.inverted {
 
     &.recordings {
       text-align: center;
-      font-size: 3.25em;
-      padding: .75em;
-      a:hover {
-        text-decoration: none;
+      li a {
+        color: $brand-primary;
+        font-size: 4em;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
 
