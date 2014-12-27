@@ -35,7 +35,7 @@ $.fn.autoScale = function() {
 // mediaelement subtitles button
 MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, media) {
 	var
-		host = 'http://frontend.c3voc.mazdermind.de:33133/',
+		host = 'http://subtitles.c3voc.de/',
 		room = $('.room.video').data('room'),
 		isLoaded = false,
 		t = 200,
@@ -145,6 +145,12 @@ MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, medi
 
 // mediaelement-player
 $(function() {
+	(function(strings) {
+		strings['en-US'] = {
+			'Download File': 'Open RTMP-Stream in Desktop-Player'
+		}
+	})(mejs.i18n.locale.strings);
+
 	$('video').mediaelementplayer({
 		mode: 'auto_plugin',
 
@@ -360,7 +366,7 @@ $(function() {
 
 			});
 
-			var s = new Date(nextTalk.start*1000);
+			var s = nextTalk ? new Date(nextTalk.start*1000) : new Date();
 			$lecture.find('.'+room)
 				.find('.current-talk')
 					.removeClass('hidden')

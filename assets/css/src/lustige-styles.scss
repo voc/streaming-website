@@ -31,7 +31,7 @@ body {
   width: 100%;
   overflow: hidden;
   overflow-y: initial;
-  margin-bottom: 20px;
+  margin-bottom: 55px;
 }
 
 .top-space {
@@ -334,10 +334,13 @@ a.inverted {
 
     &.recordings {
       text-align: center;
-      font-size: 3.25em;
-      padding: .75em;
-      a:hover {
-        text-decoration: none;
+      li a {
+        color: $brand-primary;
+        font-size: 4em;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
 
@@ -353,6 +356,12 @@ a.inverted {
 
     li {
       padding: 5px !important;
+
+      &.sendezentrum a .title {
+        left: 240px;
+        text-shadow: none;
+        font-weight: normal;
+      }
 
       a {
         background-color: $gray-dark;
@@ -809,12 +818,16 @@ a.inverted {
       color: $gray-lighter;
     }
 
+    h5 {
+      color: $gray-lighter;
+    }
+
     a {
       color: white;
     }
 
     &.event h3 {
-      height: 48px;
+      //height: 48px;
       overflow: hidden;
     }
 

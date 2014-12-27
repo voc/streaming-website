@@ -10,7 +10,7 @@
 			<? foreach(array('saal1', 'saal2', 'saalg', 'saal6') as $room): ?>
 				<li class="<?=h($room)?> col-md-6 col-sm-12">
 					<a href="<?=h(link_room($room))?>">
-						<img class="teaser" src="assets/img/rooms/<?=h($room)?>.png" alt="" width="213" height="120" />
+						<img class="teaser" src="thumbs/rooms/<?=h($room)?>.png" alt="" width="213" height="120" />
 						<div class="title"><?=h($rooms[$room])?></div>
 
 						<div class="program-teaser">
@@ -53,7 +53,10 @@
 		<ul class="row">
 			<? foreach(array('sendezentrum') as $room): ?>
 				<li class="<?=h($room)?> col-sm-12">
-					<a href="<?=h(link_room($room))?>" class="title"><?=h($rooms[$room])?></a>
+					<a href="<?=h(link_room($room))?>">
+						<img class="teaser" src="thumbs/rooms/<?=h($room)?>.png" alt="" width="213" height="120" />
+						<div class="title"><?=h($rooms[$room])?></div>
+					</a>
 				</li>
 			<? endforeach ?>
 		</ul>
@@ -62,7 +65,18 @@
 
 
 	<div class="room-group recordings">
-		<a href="//media.ccc.de/browse/congress/2014/index.html"><span class="fa fa-video-camera"></span> Recordings</a>
+		<h2>Recordings</h2>
+
+		<ul class="row">
+			<li class="col-sm-6">
+				<div class="title">
+					<a href="http://media.ccc.de/browse/congress/2014/index.html"><span class="fa fa-video-camera"></span> Releases</a>
+				</div>
+			</li>
+			<li class="col-sm-6">
+				<a href="http://vod.c3voc.de/relive/"><span class="fa fa-play-circle"></span> ReLive</a>
+			</li>
+		</ul>
 	</div>
 
 </div>

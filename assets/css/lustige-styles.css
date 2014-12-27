@@ -5319,7 +5319,7 @@ body {
   width: 100%;
   overflow: hidden;
   overflow-y: initial;
-  margin-bottom: 20px; }
+  margin-bottom: 55px; }
 
 .top-space {
   padding-top: 40px; }
@@ -5537,11 +5537,12 @@ a.inverted {
   overflow: hidden;
   margin-bottom: 2em; }
   .rooms .room-group.recordings {
-    text-align: center;
-    font-size: 3.25em;
-    padding: .75em; }
-    .rooms .room-group.recordings a:hover {
-      text-decoration: none; }
+    text-align: center; }
+    .rooms .room-group.recordings li a {
+      color: #d87500;
+      font-size: 4em; }
+      .rooms .room-group.recordings li a:hover {
+        text-decoration: none; }
   .rooms .room-group h2 {
     margin: 0.6em 1.2em 0.3em; }
   .rooms .room-group ul {
@@ -5550,6 +5551,10 @@ a.inverted {
     margin: 0 -5px; }
   .rooms .room-group li {
     padding: 5px !important; }
+    .rooms .room-group li.sendezentrum a .title {
+      left: 240px;
+      text-shadow: none;
+      font-weight: normal; }
     .rooms .room-group li a {
       background-color: #333333;
       color: white;
@@ -5854,10 +5859,11 @@ a.inverted {
   .program .block h4 {
     margin: 3px 0;
     color: #eeeeee; }
+  .program .block h5 {
+    color: #eeeeee; }
   .program .block a {
     color: white; }
   .program .block.event h3 {
-    height: 48px;
     overflow: hidden; }
   .program .block.gap {
     background-image: url(../img/stripes/gap.png);
