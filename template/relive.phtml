@@ -1,29 +1,32 @@
 <div class="container-fluid">
-	<h1>Experimetal ReLive Recordings</h1>
+	<h1><?=h($title)?></h1>
 
-	<div class="event-previews">
-		<h2 class="loading">Loading…</h2>
+	<div class="event-previews relive">
 
-		<a class="event-preview template" href="url.html">
-			<img alt="Readable Title" class="video-thumbnail" src="">
-			<div class="caption">
-				<ul class="metadata">
-					<li>
-						<span class="fa fa-clock-o"></span>
-						36 min
-					</li>
-					<li>
-						<span class="fa fa-calendar-o"></span>
-						2013-12-28
-					</li>
-					<li class="persons">
-						<span class="fa fa-user"></span>
-						C B
-					</li>
-				</ul>
-				<h3>Readable Title</h3>
-			</div>
-		</a>
+		<? foreach ($talks as $talk): ?>
+			<a class="event-preview <?=h($talk['status'])?>" href="<?=h(link_vod($talk['id']))?>">
+				<img alt="<?=h($talk['title'])?>" class="video-thumbnail" src="http://vod.c3voc.de/relive/<?=h($talk['thumbnail'])?>">
+				<div class="caption">
+					<ul class="metadata">
+						<li>
+							<span class="fa fa-clock-o"></span>
+							<?=h(round($talk['duration']/60))?> min
+						</li>
+						<li>
+							<span class="fa fa-cogs"></span>
+							<?=h($talk['status'])?>
+						</li>
+						<li>
+							<span class="fa fa-sign-in"></span>
+							<?=h($talk['room'])?>
+						</li>
+					</ul>
+					<h3><?=h($talk['title'])?>
+						<? if($talk['status'] == 'live'): ?>&nbsp;(Currently Live!)<? endif ?>
+					</h3>
+				</div>
+			</a>
+		<? endforeach ?>
 
 	</div>
 </div>

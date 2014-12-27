@@ -1,0 +1,15 @@
+<div class="container-fluid">
+	<h1><?=h($title)?></h1>
+	<h2><?=h($talk['title'])?></h2>
+	<? include("$assemblies/player/relive.phtml") ?>
+
+	<div class="text">
+		<h3>Use a Desktop-Player!</h3>
+		<p>Browsers and Video doesn't go together well, even in 2014 and especially when it's live. So for your best viewing-experience please use a Desktop-Player like VLC or mplayer: <a href="http://vod.c3voc.de/relive/<?=h($talk['playlist'])?>">HLS-Playlist</a></p>
+
+		<? if($talk['status'] == 'released'): ?>
+			<h3>Released</h3>
+			<p>This talk is already released! Take a look at <a href="<?=h($talk['release_url'])?>">media.ccc.de</a>.</p>
+		<? endif ?>
+	</div>
+</div>

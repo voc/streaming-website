@@ -1,14 +1,17 @@
+// mediaelement-player
 $(function() {
-	var
-		$parent = $('.event-previews'),
-		$loading = $parent,
-		$tpl = $parent.find('.template').detach().removeClass('template');
-
-	$.ajax({
-		url: '/~peter/relive.json',
-		success: function(els) {
-			console.log(els);
-			$loading.hide();
+	(function(strings) {
+		strings['en-US'] = {
+			'Download File': 'Open HLS-Stream in Desktop-Player'
 		}
+	})(mejs.i18n.locale.strings);
+
+	$('video').mediaelementplayer({
+		mode: 'auto_plugin',
+
+		// hack z-index so that the flash plugin get's the click on the fullscreen button
+		enableAutosize: true,
+
+		pluginPath: 'assets/js/lib/relive/',
 	});
 });

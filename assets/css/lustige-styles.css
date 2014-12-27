@@ -5696,12 +5696,19 @@ a.inverted {
   clear: both;
   height: 120px;
   color: black; }
+  .event-previews .event-preview.live {
+    background-color: #d87500; }
+    .event-previews .event-preview.live .metadata li, .event-previews .event-preview.live h3 {
+      color: white; }
+    .event-previews .event-preview.live:hover .metadata li, .event-previews .event-preview.live:hover h3 {
+      color: white; }
+    .event-previews .event-preview.live:hover h3 {
+      text-decoration: underline; }
   .event-previews .event-preview.template {
     display: none; }
   .event-previews .event-preview .video-thumbnail {
     float: left;
-    height: 120px;
-    width: 160px; }
+    height: 120px; }
   .event-previews .event-preview:hover, .event-previews .event-preview:focus, .event-previews .event-preview:active {
     text-decoration: none; }
     .event-previews .event-preview:hover .metadata li, .event-previews .event-preview:hover h3, .event-previews .event-preview:focus .metadata li, .event-previews .event-preview:focus h3, .event-previews .event-preview:active .metadata li, .event-previews .event-preview:active h3 {
@@ -5715,7 +5722,7 @@ a.inverted {
       color: #333333;
       min-width: inherit; }
   .event-previews .event-preview .caption {
-    margin-left: 160px;
+    margin-left: 220px;
     padding-left: 16px; }
     .event-previews .event-preview .caption h3 {
       margin-top: 0; }
@@ -5759,7 +5766,7 @@ a.inverted {
       padding: 0;
       margin-top: 0;
       margin-bottom: 0;
-      min-width: 75px; }
+      min-width: 95px; }
     .navbar .input-group {
       margin-bottom: 5px; }
     .navbar .button-wrapper {
@@ -5818,7 +5825,14 @@ a.inverted {
     width: 60px; }
   .event-previews-tags .event-preview .caption,
   .event-previews-search .event-preview .caption {
-    margin-left: 60px; } }
+    margin-left: 60px; }
+
+  .rooms .room-group li.sendezentrum a .teaser {
+    display: none; }
+  .rooms .room-group li.sendezentrum a .title {
+    position: static;
+    margin-top: 10px;
+    text-align: center; } }
 .program.scroll-container {
   overflow: hidden;
   overflow-x: scroll; }

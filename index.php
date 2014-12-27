@@ -74,6 +74,14 @@ else if(preg_match('@^feedback$@', $route, $m))
 	include('pages/feedback.php');
 }
 
+else if(preg_match('@^relive/([0-9]+)$@', $route, $m))
+{
+	$_GET = array(
+		'id' => $m[1],
+	);
+	include('pages/relive-player.php');
+}
+
 else if(preg_match('@^relive$@', $route, $m))
 {
 	include('pages/relive.php');

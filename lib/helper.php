@@ -46,6 +46,11 @@ function link_stream($protocol, $room, $format, $translated = false)
 	return '#';
 }
 
+function link_vod($id)
+{
+	return 'relive/'.rawurlencode($id).'/';
+}
+
 function streamname($room)
 {
 	switch($room)

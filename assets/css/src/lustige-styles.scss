@@ -571,12 +571,28 @@ a.inverted {
     height: 120px;
     color: black;
 
+    &.live {
+      background-color: $brand-primary;
+      .metadata li, h3 {
+        color: white;
+      }
+
+      &:hover {
+        .metadata li, h3 {
+          color: white;
+        }
+
+        h3 {
+          text-decoration: underline;
+        }
+      }
+    }
+
     &.template { display: none; }
     
     .video-thumbnail {
       float: left;
       height: 120px;
-      width: 160px;
     }
 
     &:hover, &:focus, &:active {
@@ -600,7 +616,7 @@ a.inverted {
     }
     
     .caption {
-      margin-left: 160px;
+      margin-left: 220px;
       padding-left: $padding-large-horizontal;
 
       h3 {
@@ -665,7 +681,7 @@ a.inverted {
       padding: 0;
       margin-top: 0;
       margin-bottom: 0;
-      min-width: 75px;
+      min-width: 95px;
     }
     .input-group {
       margin-bottom: $padding-small-vertical;
@@ -749,6 +765,15 @@ a.inverted {
     }
     .caption {
       margin-left: 60px;
+    }
+  }
+
+  .rooms .room-group li.sendezentrum a {
+    .teaser { display: none; }
+    .title {
+      position: static;
+      margin-top: 10px;
+      text-align: center;
     }
   }
 }

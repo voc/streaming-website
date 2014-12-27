@@ -1,0 +1,16 @@
+<div style="width: 100%; height: 100%; max-width: <?=h($width)?>px; margin: 0 auto;">
+	<video
+		autoplay="autoplay"
+		preload="auto"
+		width="<?=h($width)?>"
+		height="<?=h($height)?>"
+		style="width: 100%; height: 100%;"
+		class="nosubs relive"
+	>
+		<source
+			src="http://vod.c3voc.de/relive/<?=h($talk['playlist'])?>"
+			title="h.264 (HLS)"
+			type="application/x-mpegURL"
+		/>
+	</video>
+</div>
