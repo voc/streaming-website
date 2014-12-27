@@ -145,6 +145,12 @@ MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, medi
 
 // mediaelement-player
 $(function() {
+	(function(strings) {
+		strings['en-US'] = {
+			'Download File': 'Open RTMP-Stream in Desktop-Player'
+		}
+	})(mejs.i18n.locale.strings);
+
 	$('video').mediaelementplayer({
 		mode: 'auto_plugin',
 
