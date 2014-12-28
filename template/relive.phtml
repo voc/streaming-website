@@ -5,7 +5,13 @@
 	<div class="event-previews relive">
 
 		<? foreach ($talks as $talk): ?>
-			<a class="event-preview <?=h($talk['status'])?>" href="<?=h(link_vod($talk['id']))?>">
+			<a class="event-preview <?=h($talk['status'])?>"
+				<? if($talk['status'] == 'released'): ?>
+					href="<?=h($talk['release_url'])?>"
+				<? else: ?>
+					href="<?=h(link_vod($talk['id']))?>"
+				<? endif ?>
+			>
 				<img alt="<?=h($talk['title'])?>" class="video-thumbnail" src="http://vod.c3voc.de/relive/<?=h($talk['thumbnail'])?>">
 				<div class="caption">
 					<ul class="metadata">

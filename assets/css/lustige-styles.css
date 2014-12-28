@@ -5696,6 +5696,8 @@ a.inverted {
   clear: both;
   height: 120px;
   color: black; }
+  .event-previews .event-preview.released {
+    background-color: #96d600; }
   .event-previews .event-preview.live {
     background-color: #d87500; }
     .event-previews .event-preview.live .metadata li, .event-previews .event-preview.live h3 {

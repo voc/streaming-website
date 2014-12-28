@@ -571,6 +571,10 @@ a.inverted {
     height: 120px;
     color: black;
 
+    &.released {
+      background-color: #96d600;
+    }
+
     &.live {
       background-color: $brand-primary;
       .metadata li, h3 {
