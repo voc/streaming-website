@@ -3,9 +3,9 @@
 function program()
 {
 	$program = array();
-	$opts = array('http' => array('timeout' => 2));
+	$opts = array('http' => array('timeout' => 2, 'user_agent' => 'Fahrplan'));
 	$context  = stream_context_create($opts);
-	$schedule = file_get_contents($GLOBALS['CONFIG']['SCHEDULE'], false, $context);
+	$schedule = file_get_contents('http://fahrplan-31c3.mkswap.net/fahrplan?a=1', false, $context);
 
 	// loading failed, try tmp-file
 	if(!$schedule)
