@@ -3,7 +3,9 @@
 function program()
 {
 	$program = array();
-	$schedule = file_get_contents($GLOBALS['CONFIG']['SCHEDULE']);
+	$opts = array('http' => array('timeout' => 2));
+	$context  = stream_context_create($opts);
+	$schedule = file_get_contents($GLOBALS['CONFIG']['SCHEDULE'], false, $context);
 
 	// loading failed, try tmp-file
 	if(!$schedule)
