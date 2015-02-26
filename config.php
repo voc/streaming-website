@@ -78,7 +78,9 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 		/**
 		 * Vefügbare Streaming-Formate
-		 * FIXME: Die Formate müssen in $GLOBALS['CONFIG']['FORMATS'] benannt sein
+		 * Die Formate müssen in $GLOBALS['CONFIG']['FORMATS'] benannt sein, es
+		 * können jedoch über die Config keine neuen erfunden werden; dazu sind
+		 * Änderungen am Code erforderlich.
 		 */
 		'FORMATS' => array(
 			'rtmp-sd', 'rtmp-hd',
@@ -94,6 +96,13 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * s1 bis s5 durchnummeriert.
 		 */
 		'STREAM' => 's1',
+
+		/**
+		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
+		 * Damit das funktioniert muss der entsprechende runit-Task auf dem
+		 * CDN-Quell-Host (live.ber) laufen.
+		 */
+		'PREVIEW' => true,
 
 		/**
 		 * Übersetzungstonspur aktivieren
