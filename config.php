@@ -465,7 +465,7 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
 $GLOBALS['CONFIG']['FORMATS'] = array(
 	'rtmp-sd' => array(
 		'DISPLAY' => 'SD Video',
-		'TECH' => '1024x576, h264+AAC im FLV-Container via RTMP, 1 MBit/s',
+		'TECH' => '1024x576, h264+AAC im FLV-Container via RTMP, 800 kBit/s',
 	),
 	'rtmp-hd' => array(
 		'DISPLAY' => 'FullHD Video',
@@ -475,7 +475,7 @@ $GLOBALS['CONFIG']['FORMATS'] = array(
 
 	'hls-sd' => array(
 		'DISPLAY' => 'SD Video',
-		'TECH' => '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 1 MBit/s',
+		'TECH' => '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s',
 	),
 	'hls-hd' => array(
 		'DISPLAY' => 'FullHD Video',
@@ -485,7 +485,7 @@ $GLOBALS['CONFIG']['FORMATS'] = array(
 
 	'webm-sd' => array(
 		'DISPLAY' => 'SD Video',
-		'TECH' => '1024x576, VP8+Vorbis in WebM, 1.5 MBit/s',
+		'TECH' => '1024x576, VP8+Vorbis in WebM, 800 kBit/s',
 	),
 	'webm-hd' => array(
 		'DISPLAY' => 'SD Video',
@@ -495,13 +495,21 @@ $GLOBALS['CONFIG']['FORMATS'] = array(
 
 	'audio-mp3' => array(
 		'DISPLAY' => 'Audio',
-		'TECH' => 'MP3-Audio, 192 kBit/s',
+		'TECH' => 'MP3-Audio, 96 kBit/s',
+	),
+	'audio-opus' => array(
+		'DISPLAY' => 'Audio',
+		'TECH' => 'Opus-Audio, 64 kBit/s',
 	),
 
 
-	'audio-opus' => array(
-		'DISPLAY' => 'Audio',
-		'TECH' => 'Opus-Audi, 128 kBit/s',
+	'music-mp3' => array(
+		'DISPLAY' => 'Musik',
+		'TECH' => 'MP3-Audio, 320 kBit/s',
+	),
+	'music-opus' => array(
+		'DISPLAY' => 'Musik',
+		'TECH' => 'Opus-Audio, 128 kBit/s',
 	),
 
 
