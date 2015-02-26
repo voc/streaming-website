@@ -5,7 +5,8 @@ date_default_timezone_set('Europe/Berlin');
  * Während der Entwicklung wird die BASEURL automatisch erraten
  * In Produktionssituationen sollte manuell eine konfiguriert werden um Überraschungen zu vermeiden
  */
-//$GLOBALS['CONFIG']['BASEURL'] = 'http://foo.com/bar/';
+if($_SERVER['HTTP_HOST'] != 'localhost')
+	$GLOBALS['CONFIG']['BASEURL'] = 'http://streaming.media.ccc.de/';
 
 
 
