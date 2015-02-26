@@ -1,0 +1,32 @@
+@footer-height:                    30px;
+@footer-margin-bottom:             @line-height-computed;
+
+@footer-default-color:             @navbar-default-color;
+@footer-default-bg:                @navbar-default-bg;
+@footer-default-link-color:        @navbar-default-link-color;
+@footer-default-link-hover-color:  @navbar-default-link-hover-color;
+@footer-default-link-hover-bg:     @navbar-default-link-hover-bg;
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: @footer-height;
+	line-height: @footer-height;
+
+	background-color: @footer-default-bg;
+	color: @footer-default-color;
+
+	text-align: center;
+
+	a {
+		color: @footer-default-link-color;
+
+		&:hover,
+		&:focus {
+			color: @footer-default-link-hover-color;
+			background-color: @footer-default-link-hover-bg;
+			text-decoration: none;
+		}
+	}
+}

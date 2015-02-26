@@ -7,10 +7,10 @@ $route = rtrim($route, '/');
 
 if($route == '')
 {
-	include('pages/rooms.php');
+	include('pages/overview.php');
 }
 
-else if(preg_match('@^(saal1|saal2|saalg|saal6|sendezentrum)$@', $route, $m))
+else if(preg_match('@^([^/]+)$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
@@ -20,7 +20,7 @@ else if(preg_match('@^(saal1|saal2|saalg|saal6|sendezentrum)$@', $route, $m))
 	include('pages/room.php');
 }
 
-else if(preg_match('@^(saal1|saal2|saalg|saal6)/translated$@', $route, $m))
+else if(preg_match('@^([^/]+)/translated$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
@@ -30,7 +30,7 @@ else if(preg_match('@^(saal1|saal2|saalg|saal6)/translated$@', $route, $m))
 	include('pages/room.php');
 }
 
-else if(preg_match('@^(saal1|saal2|saalg|saal6|sendezentrum)/(hd|audio|slides)$@', $route, $m))
+else if(preg_match('@^([^/]+)/(hd|audio|slides)$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
@@ -40,7 +40,7 @@ else if(preg_match('@^(saal1|saal2|saalg|saal6|sendezentrum)/(hd|audio|slides)$@
 	include('pages/room.php');
 }
 
-else if(preg_match('@^(saal1|saal2|saalg|saal6)/(hd|audio|slides)/translated$@', $route, $m))
+else if(preg_match('@^([^/]+)/(hd|audio|slides)/translated$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
@@ -48,15 +48,6 @@ else if(preg_match('@^(saal1|saal2|saalg|saal6)/(hd|audio|slides)/translated$@',
 		'language' => 'translated',
 	);
 	include('pages/room.php');
-}
-
-else if(preg_match('@^(lounge|ambient)$@', $route, $m))
-{
-	$_GET = array(
-		'room' => $m[1],
-		'format' => 'audio',
-	);
-	include('pages/party.php');
 }
 
 else if(preg_match('@^about$@', $route, $m))
@@ -72,6 +63,11 @@ else if(preg_match('@^program.json$@', $route, $m))
 else if(preg_match('@^feedback$@', $route, $m))
 {
 	include('pages/feedback.php');
+}
+
+else if(preg_match('@^feedback/read$@', $route, $m))
+{
+	include('pages/feedback-read.php');
 }
 
 else if(preg_match('@^relive/([0-9]+)$@', $route, $m))

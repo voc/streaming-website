@@ -9,6 +9,23 @@ if($_SERVER['HTTP_HOST'] != 'localhost')
 	$GLOBALS['CONFIG']['BASEURL'] = 'http://streaming.media.ccc.de/';
 
 
+$GLOBALS['CONFIG']['CONFERENCE'] = array(
+	'TITLE' => '31C3',
+	'AUTHOR' => 'CCC',
+	'DESCRIPTION' => 'Video Live-Streaming vom 31C3',
+	'KEYWORDS' => '31C3, Hacking, Chaos Computer Club, Video, Media, Streaming, Hacker',
+/*
+	'BANNER_HTML' => '
+		<img src="assets/img/logo.png" height="190" width="161" />
+	',
+*/
+	'FOOTER_HTML' => '
+		by <a href="https://ccc.de">Chaos Computer Club e.V</a>,
+		<a href="http://fem.tu-ilmenau.de/">FeM</a>,
+		<a href="http://www.ags.tu-bs.de/">ags</a> &amp;
+		<a href="https://c3voc.de">c3voc</a>
+	',
+);
 
 /**
  * Konfiguration der Stream-Übersicht auf der Startseite
@@ -226,6 +243,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 			'slides',
 		),
 		'STREAM' => 's2',
+		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SCHEDULE' => true,
 		'FEEDBACK' => true,
@@ -252,6 +270,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 			'slides',
 		),
 		'STREAM' => 's3',
+		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SCHEDULE' => true,
 		'FEEDBACK' => true,
@@ -278,6 +297,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 			'slides',
 		),
 		'STREAM' => 's4',
+		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SCHEDULE' => true,
 		'FEEDBACK' => true,
@@ -319,7 +339,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		),
 		'STREAM' => 's5',
 		'TRANSLATION' => false,
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'IRC' => false,
@@ -334,7 +354,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
 $GLOBALS['CONFIG']['SCHEDULE'] = array(
-	'URL'   => 'http://events.ccc.de/congress/2014/Fahrplan/schedule.xml';
+	'URL'   => 'http://events.ccc.de/congress/2014/Fahrplan/schedule.xml',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -375,7 +395,7 @@ $GLOBALS['CONFIG']['FEEDBACK'] = array(
 	 * die .sqlite3-Datei schreiben darf, er muss auch im übergeordneten Order neue
 	 * (Lock-)Dateien anlegen dürfen
 	 */
-	'DSN' => 'sqlite:/opt/31c3-streaming-feedback/feedback.sqlite3'
+	'DSN' => 'sqlite:/opt/31c3-streaming-feedback/feedback.sqlite3',
 
 	/**
 	 * Login-Daten für die /feedback/read/-Seite, auf der eingegangenes

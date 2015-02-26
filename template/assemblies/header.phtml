@@ -1,33 +1,22 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="">
-				<img alt="ccc-tv logo, a tv displaying a play icon" src="assets/img/tv.png">
-				31C3 Streaming
+				<img alt="ccc-tv logo, a tv displaying a play icon" src="assets/img/tv.png" />
+				<span><?=h(get('CONFERENCE.TITLE', 'C3Voc'))?> Streaming</span>
 			</a>
 		</div>
 
 		<div class="nav navbar-form navbar-right button-wrapper">
-			<a class="form-control btn btn-default" href="feedback/" title="Feedback">
+			<a class="form-control btn btn-default" href="feedback/">
 				<span class="fa fa-bullhorn"></span>
 			</a>
-			<a class="form-control btn btn-default" href="//media.ccc.de/browse/congress/2014/index.html" title="Recordings">
+			<a class="form-control btn btn-default" href="//media.ccc.de/browse/congress/2014/index.html">
 				<span class="fa fa-video-camera"></span>
 			</a>
-			<a class="form-control btn btn-default" href="about/" title="About">
+			<a class="form-control btn btn-default" href="about/">
 				<span class="fa fa-info"></span>
 			</a>
 		</div>
-
-		<!-- form action="/search/" class="navbar-form navbar-right" id="media-search" method="get" role="search">
-			<div class="form-group input-group">
-				<input class="form-control" name="q" placeholder="Search…" size="17" type="search">
-				<span class="input-group-btn">
-					<button class="btn btn-default" type="submit">
-					<span class="fa fa-search"></span>
-				</button>
-				</span>
-			</div>
-		</form -->
 	</div>
-</div>
+</nav>

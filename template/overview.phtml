@@ -1,0 +1,98 @@
+<? include("$assemblies/banner.phtml") ?>
+
+<div class="container overview">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>Live-Streams</h1>
+		</div>
+	</div>
+
+	<? foreach(get('OVERVIEW.GROUPS') as $group => $rooms): ?>
+		<div class="row room-group">
+			<div class="col-xs-12">
+				<h2><?=h($group)?></h2>
+			</div>
+
+			<? $count = count($rooms); ?>
+			<? foreach($rooms as $idx => $slug): ?>
+				<div class="
+					room room-<?=h($slug)?>
+
+					<? if($count % 2 == 1 && $idx == $count - 1): ?>
+						col-sm-12 wide
+					<? else: ?>
+						col-md-6 col-sm-12 narrow
+					<? endif ?>
+
+					<? if(get("ROOMS.$slug.PREVIEW")): ?>
+						has-preview
+					<? endif ?>
+
+					<? if(get("ROOMS.$slug.SCHEDULE") && has("SCHEDULE")): ?>
+						has-schedule
+					<? endif ?>
+				">
+					<? /* when the count is odd and this is the last item - make it full width */ ?>
+					<div class="
+						panel panel-default
+						<? if(get("ROOMS.$slug.PREVIEW")): ?>has-preview<? endif ?>
+					">
+						<? if(get("ROOMS.$slug.PREVIEW") && get("ROOMS.$slug.SCHEDULE") && has("SCHEDULE")): ?>
+							<div class="panel-heading">
+								<a href="<?=h(link_room($slug))?>">
+									<?=h(get("ROOMS.$slug.DISPLAY"))?>
+								</a>
+							</div>
+						<? endif ?>
+
+						<div class="panel-body">
+							<? if(get("ROOMS.$slug.PREVIEW")): ?>
+								<a href="<?=h(link_room($slug))?>">
+									<img class="preview" src="thumbs/<?=h(get("ROOMS.$slug.STREAM"))?>.png" alt="" width="213" height="120" />
+								</a>
+							<? endif ?>
+
+							<? if(!get("ROOMS.$slug.PREVIEW") || !get("ROOMS.$slug.SCHEDULE") || !has("SCHEDULE")): ?>
+								<a href="<?=h(link_room($slug))?>" class="title">
+									<?=h(get("ROOMS.$slug.DISPLAY"))?>
+								</a>
+							<? endif ?>
+
+							<? if(get("ROOMS.$slug.SCHEDULE") && has("SCHEDULE")): ?>
+								Schedule
+								<div class="program-schedule">
+									<span class="current-talk hidden">
+										<strong>Now:</strong>
+										<span class="t">none</span>
+									</span>
+
+									<br />
+
+									<span class="next-talk hidden">
+										<strong>Next Talk:</strong>
+										<span class="t">none</span>
+									</span>
+								</div>
+							<? endif ?>
+						</div>
+					</div>
+				</div>
+			<? endforeach ?>
+		</div>
+	<? endforeach ?>
+
+	<div class="room-group recordings">
+		<h2>Recordings</h2>
+
+		<ul class="row">
+			<li class="col-sm-6">
+				<div class="title">
+					<a href="http://media.ccc.de/browse/congress/2014/index.html"><span class="fa fa-video-camera"></span> Releases</a>
+				</div>
+			</li>
+			<li class="col-sm-6">
+				<a href="relive/"><span class="fa fa-play-circle"></span> ReLive</a>
+			</li>
+		</ul>
+	</div>
+</div>

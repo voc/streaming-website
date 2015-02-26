@@ -1,6 +1,7 @@
 <footer>
-	by <a class='inverted' href='https://ccc.de'>Chaos Computer Club e.V</a>,
-	<a class='inverted' href='http://fem.tu-ilmenau.de/'>FeM</a>,
-	<a class='inverted' href='http://www.ags.tu-bs.de/'>ags</a> &amp;
-	<a class='inverted' href='https://c3voc.de'>c3voc</a>
+	<? if(has('CONFERENCE.FOOTER_HTML')): ?>
+		<?= get('CONFERENCE.FOOTER_HTML') ?>
+	<? else: ?>
+		by <a href="https://c3voc.de">c3voc</a>
+	<? endif ?>
 </footer>
