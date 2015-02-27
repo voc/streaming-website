@@ -1,0 +1,25 @@
+video, audio {
+	display: block;
+}
+
+.tab-content {
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+
+	padding: 40px 0;
+}
+
+.video.hd .tab-content {
+	padding: 0;
+}
+
+@media (max-width: @screen-md-max) {
+	.video.sd .tab-content {
+		padding: 0;
+	}
+}
+
+.player-wrap {
+	margin-bottom: 60px;
+}

@@ -1,14 +1,12 @@
-<div class="container-fluid room <?=h($type)?> <?=h($format)?> <?=h($language)?>" data-room="<?=h($GLOBALS['CONFIG']['ROOMS'][$room])?>">
-	<h1><?=h($title)?></h1>
+<div class="container <?=h($type)?> <?=h($selection)?> <?=h($language)?>">
+	<div class="row headline">
+		<div class="col-xs-12">
+			<h1 data-room="<?=h(get("ROOMS.$room.DISPLAY"))?>"><?=h($title)?></h1>
+		</div>
+	</div>
 
 	<ul class="nav nav-tabs nav-justified">
-		<?
-			if($miniroom || $room == 'saal6')
-				$tabs = array('video', 'audio');
-			else
-				$tabs = array('video', 'audio', 'slides');
-		?>
-		<? foreach($tabs as $iter): ?>
+		<? foreach($types as $iter): ?>
 			<li
 				<? if($type == $iter):?>class="active"<? endif ?>
 			>
@@ -19,45 +17,51 @@
 		<? endforeach ?>
 	</ul>
 
-	<div class="player-wrap">
-		<? include("$assemblies/player/$type.phtml") ?>
+	<div class="player-wrap tab-content">
+		<div class="tab-pane active">
+			<? include("$assemblies/player/$type.phtml") ?>
+		</div>
 	</div>
 
 	<ul class="nav nav-tabs nav-justified" role="tablist">
 		<li class="active">
 			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
 		</li>
-		<? if(!$miniroom): ?>
+		<? if(get("ROOMS.$room.IRC") && has("IRC")): ?>
 			<li>
 				<a href="#irc" role="tab" data-toggle="tab">IRC</a>
 			</li>
+		<? endif ?>
+		<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
 			<li>
 				<a href="#program" role="tab" data-toggle="tab">Program</a>
 			</li>
 		<? endif ?>
-		<li>
-			<a href="#feedback" role="tab" data-toggle="tab">Feedback</a>
-		</li>
+		<? if(get("ROOMS.$room.FEEDBACK") && has("FEEDBACK")): ?>
+			<li>
+				<a href="#feedback" role="tab" data-toggle="tab">Feedback</a>
+			</li>
+		<? endif ?>
 	</ul>
 
 	<div class="tab-content">
 		<div class="tab-pane active" id="switcher">
-			<? if($miniroom): ?>
-				<? include("$assemblies/switcher/miniroom-$type.phtml") ?>
-			<? else: ?>
-				<? include("$assemblies/switcher/$type.phtml") ?>
-			<? endif ?>
+			<? include("$assemblies/switcher/$type.phtml") ?>
 		</div>
-		<? if(!$miniroom): ?>
+		<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
 			<div class="tab-pane" id="irc">
 				<? include("$assemblies/irc.phtml") ?>
 			</div>
+		<? endif ?>
+		<? if(get("ROOMS.$room.FEEDBACK") && has("FEEDBACK")): ?>
 			<div class="tab-pane" id="program">
 				<? include("$assemblies/program.phtml") ?>
 			</div>
 		<? endif ?>
-		<div class="tab-pane" id="feedback">
-			<? include("$assemblies/feedback.phtml") ?>
-		</div>
+		<? if(get("ROOMS.$room.FEEDBACK") && has("FEEDBACK")): ?>
+			<div class="tab-pane" id="feedback">
+				<? include("$assemblies/feedback.phtml") ?>
+			</div>
+		<? endif ?>
 	</div>
 </div>

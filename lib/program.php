@@ -2,22 +2,32 @@
 
 function program()
 {
+	if(!has('SCHEDULE'))
+		return;
+
+	if(has('SCHEDULE.CACHE'))
+	{
+		$program = apc_fetch('SCHEDULE.CACHE');
+		if($program) return $program;
+	}
+
+
 	$program = array();
-	$opts = array('http' => array('timeout' => 2, 'user_agent' => 'Fahrplan'));
+	$opts = array(
+		'http' => array(
+			'timeout' => 2,
+			'user_agent' => 'C3Voc Universal Streaming-Website Backend @ '.$_SERVER['HTTP_HOST'],
+		)
+	);
 	$context  = stream_context_create($opts);
-	$schedule = file_get_contents('http://fahrplan-31c3.mkswap.net/fahrplan?a=1', false, $context);
+	$schedule = file_get_contents(get('SCHEDULE.URL'), false, $context);
 
-	// loading failed, try tmp-file
-	if(!$schedule)
-		$schedule = file_get_contents('/tmp/website-schedule-fallback.xml');
-
-	// failed, too, give up
+	// failed, give up
 	if(!$schedule)
 		return array();
 
-	// save tmp-file (for when uplink goes down or such)
-	file_put_contents('/tmp/website-schedule-fallback.xml', $schedule);
 	$schedule = simplexml_load_string($schedule);
+
 	// re-calculate day-ends
 	// some schedules have long gaps before the first talk or talks that expand beyond the dayend
 	// (fiffkon, i look at you)
@@ -143,6 +153,15 @@ function program()
 				);
 			}
 		}
+	}
+
+	if(has('SCHEDULE.CACHE'))
+	{
+		apc_store(
+			'SCHEDULE.CACHE',
+			$program,
+			get('SCHEDULE.CACHE')
+		);
 	}
 
 	return $program;

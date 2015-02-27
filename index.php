@@ -14,7 +14,7 @@ else if(preg_match('@^([^/]+)$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
-		'format' => 'sd',
+		'selection' => 'hd',
 		'language' => 'native',
 	);
 	include('pages/room.php');
@@ -24,27 +24,27 @@ else if(preg_match('@^([^/]+)/translated$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
-		'format' => 'sd',
+		'selection' => 'hd',
 		'language' => 'translated',
 	);
 	include('pages/room.php');
 }
 
-else if(preg_match('@^([^/]+)/(hd|audio|slides)$@', $route, $m))
+else if(preg_match('@^([^/]+)/(sd|audio|slides)$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
-		'format' => $m[2],
+		'selection' => $m[2],
 		'language' => 'native',
 	);
 	include('pages/room.php');
 }
 
-else if(preg_match('@^([^/]+)/(hd|audio|slides)/translated$@', $route, $m))
+else if(preg_match('@^([^/]+)/(sd|audio|slides)/translated$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
-		'format' => $m[2],
+		'selection' => $m[2],
 		'language' => 'translated',
 	);
 	include('pages/room.php');

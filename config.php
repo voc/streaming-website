@@ -350,7 +350,14 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
 $GLOBALS['CONFIG']['SCHEDULE'] = array(
-	'URL'   => 'http://events.ccc.de/congress/2014/Fahrplan/schedule.xml',
+	/**
+	 * URL zum Fahrplan-XML
+	 *
+	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
+	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
+	 * externer HTTP-Cache vorgeschaltet werden.
+	 */
+	'URL' => 'http://events.ccc.de/congress/2014/Fahrplan/schedule.xml',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -478,7 +485,7 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
 
 
 /**
- * Konfiguration der Streaming-Formate
+ * Beschreibung der Streaming-Formate
  *
  * Achtung: Über diese Sektion können keine zusätzlichen Formate erstellt werden -- dazu
  * sind Code-Anpassungen erforderlich.
@@ -487,59 +494,21 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
  * Streaming-Formate bearbeitet werden. Für jedes Streamingformat das in einem Raum
  * verwendet wird müssen hier Texte hinterlegt sein.
  */
-$GLOBALS['CONFIG']['FORMATS'] = array(
-	'rtmp-sd' => array(
-		'DISPLAY' => 'SD Video',
-		'TECH' => '1024x576, h264+AAC im FLV-Container via RTMP, 800 kBit/s',
-	),
-	'rtmp-hd' => array(
-		'DISPLAY' => 'FullHD Video',
-		'TECH' => '1920x1080, h264+AAC im FLV-Container via RTMP, 3 MBit/s',
-	),
+$GLOBALS['CONFIG']['FORMAT'] = array(
+	'rtmp-sd' => '1024x576, h264+AAC im FLV-Container via RTMP, 800 kBit/s',
+	'rtmp-hd' => '1920x1080, h264+AAC im FLV-Container via RTMP, 3 MBit/s',
 
+	'hls-sd' => '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s',
+	'hls-hd' => '1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s',
 
-	'hls-sd' => array(
-		'DISPLAY' => 'SD Video',
-		'TECH' => '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s',
-	),
-	'hls-hd' => array(
-		'DISPLAY' => 'FullHD Video',
-		'TECH' => '1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s',
-	),
+	'webm-sd' => '1024x576, VP8+Vorbis in WebM, 800 kBit/s',
+	'webm-hd' => '1920x1080, VP8+Vorbis in WebM, 3 MBit/s',
 
+	'audio-mp3' => 'MP3-Audio, 96 kBit/s',
+	'audio-opus' => 'Opus-Audio, 64 kBit/s',
 
-	'webm-sd' => array(
-		'DISPLAY' => 'SD Video',
-		'TECH' => '1024x576, VP8+Vorbis in WebM, 800 kBit/s',
-	),
-	'webm-hd' => array(
-		'DISPLAY' => 'SD Video',
-		'TECH' => '1920x1080, VP8+Vorbis in WebM, 3 MBit/s',
-	),
+	'music-mp3' => 'MP3-Audio, 320 kBit/s',
+	'music-opus' => 'Opus-Audio, 128 kBit/s',
 
-
-	'audio-mp3' => array(
-		'DISPLAY' => 'Audio',
-		'TECH' => 'MP3-Audio, 96 kBit/s',
-	),
-	'audio-opus' => array(
-		'DISPLAY' => 'Audio',
-		'TECH' => 'Opus-Audio, 64 kBit/s',
-	),
-
-
-	'music-mp3' => array(
-		'DISPLAY' => 'Musik',
-		'TECH' => 'MP3-Audio, 320 kBit/s',
-	),
-	'music-opus' => array(
-		'DISPLAY' => 'Musik',
-		'TECH' => 'Opus-Audio, 128 kBit/s',
-	),
-
-
-	'slides' => array(
-		'DISPLAY' => 'Audio',
-		'TECH' => '1024x576, h264+AAC, <500 kBit/s',
-	),
+	'slides' => '1024x576, h264+AAC, <500 kBit/s',
 );

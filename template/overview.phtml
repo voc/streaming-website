@@ -1,9 +1,9 @@
 <? include("$assemblies/banner.phtml") ?>
 
-<div class="container overview">
+<div class="container">
 	<div class="row headline">
 		<div class="col-xs-12">
-			<h1>Live-Streams</h1>
+			<h1><?=h($title)?></h1>
 		</div>
 	</div>
 
@@ -14,9 +14,9 @@
 			</div>
 
 			<? $count = count($rooms); ?>
-			<? foreach($rooms as $idx => $slug): ?>
+			<? foreach($rooms as $idx => $room): ?>
 				<div class="
-					room room-<?=h($slug)?>
+					room room-<?=h($room)?>
 
 					<? /* when the count is odd and this is the last item - make it full width */ ?>
 					<? if($count % 2 == 1 && $idx == $count - 1): ?>
@@ -25,33 +25,33 @@
 						col-md-6 col-sm-12 narrow
 					<? endif ?>
 
-					<? if(get("ROOMS.$slug.PREVIEW")): ?>
+					<? if(get("ROOMS.$room.PREVIEW")): ?>
 						has-preview
 					<? endif ?>
 
-					<? if(get("ROOMS.$slug.SCHEDULE") && has("SCHEDULE")): ?>
+					<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
 						has-schedule
 					<? endif ?>
 				">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<a href="<?=h(link_room($slug))?>">
-								<?=h(get("ROOMS.$slug.DISPLAY"))?>
+							<a href="<?=h(link_room($room))?>">
+								<?=h(get("ROOMS.$room.DISPLAY"))?>
 							</a>
 						</div>
 
 						<div class="panel-body">
-							<? if(get("ROOMS.$slug.PREVIEW")): ?>
-								<a href="<?=h(link_room($slug))?>">
-									<img class="preview" src="thumbs/<?=h(get("ROOMS.$slug.STREAM"))?>.png" alt="" width="213" height="120" />
+							<? if(get("ROOMS.$room.PREVIEW")): ?>
+								<a href="<?=h(link_room($room))?>">
+									<img class="preview" src="thumbs/<?=h(get("ROOMS.$room.STREAM"))?>.png" alt="" width="213" height="120" />
 								</a>
 							<? endif ?>
 
-							<a href="<?=h(link_room($slug))?>" class="title">
-								<?=h(get("ROOMS.$slug.DISPLAY"))?>
+							<a href="<?=h(link_room($room))?>" class="title">
+								<?=h(get("ROOMS.$room.DISPLAY"))?>
 							</a>
 
-							<? if(get("ROOMS.$slug.SCHEDULE") && has("SCHEDULE")): ?>
+							<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
 								<div class="program-schedule">
 									<div class="talk current-talk">
 										<strong>Now:</strong>
