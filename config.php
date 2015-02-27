@@ -55,13 +55,13 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RECORDINGS' => 'http://media.ccc.de/browse/congress/2014/index.html',
+	'RELEASES' => 'http://media.ccc.de/browse/congress/2014/index.html',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE' => 'https://foo',
+	//'RELIVE' => 'http://vod.c3voc.de/',
 
 	/**
 	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne

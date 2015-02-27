@@ -1,3 +1,55 @@
-.room-group .room {
+.room {
+	text-align: center;
 
+	.panel-heading {
+		display: none;
+	}
+
+	&.has-schedule.has-preview {
+		text-align: left;
+
+		.panel-heading {
+			display: block;
+		}
+		.title {
+			display: none;
+		}
+	}
+
+	.preview {
+		float: left;
+		margin-right: @padding-base-horizontal;
+	}
+
+	a.title {
+		font-size: 2.5em;
+		display: block;
+	}
+
+	.program-schedule .talk {
+		display: inline;
+		margin-right: @padding-base-horizontal;
+	}
+
+	&.has-schedule.has-preview {
+		.program-schedule .talk {
+			display: block;
+		}
+	}
+
+	&.has-preview {
+		.program-schedule .next-talk {
+			margin-top: @padding-base-vertical;
+		}
+	}
+}
+
+.recordings a {
+	font-size: 2.5em;
+	display: block;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+	}
 }

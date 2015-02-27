@@ -1,12 +1,6 @@
 <? include("$assemblies/banner.phtml") ?>
 
 <div class="container overview">
-	<div class="row">
-		<div class="col-xs-12">
-			<h1>Live-Streams</h1>
-		</div>
-	</div>
-
 	<? foreach(get('OVERVIEW.GROUPS') as $group => $rooms): ?>
 		<div class="row room-group">
 			<div class="col-xs-12">
@@ -18,6 +12,7 @@
 				<div class="
 					room room-<?=h($slug)?>
 
+					<? /* when the count is odd and this is the last item - make it full width */ ?>
 					<? if($count % 2 == 1 && $idx == $count - 1): ?>
 						col-sm-12 wide
 					<? else: ?>
@@ -32,18 +27,12 @@
 						has-schedule
 					<? endif ?>
 				">
-					<? /* when the count is odd and this is the last item - make it full width */ ?>
-					<div class="
-						panel panel-default
-						<? if(get("ROOMS.$slug.PREVIEW")): ?>has-preview<? endif ?>
-					">
-						<? if(get("ROOMS.$slug.PREVIEW") && get("ROOMS.$slug.SCHEDULE") && has("SCHEDULE")): ?>
-							<div class="panel-heading">
-								<a href="<?=h(link_room($slug))?>">
-									<?=h(get("ROOMS.$slug.DISPLAY"))?>
-								</a>
-							</div>
-						<? endif ?>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="<?=h(link_room($slug))?>">
+								<?=h(get("ROOMS.$slug.DISPLAY"))?>
+							</a>
+						</div>
 
 						<div class="panel-body">
 							<? if(get("ROOMS.$slug.PREVIEW")): ?>
@@ -52,26 +41,21 @@
 								</a>
 							<? endif ?>
 
-							<? if(!get("ROOMS.$slug.PREVIEW") || !get("ROOMS.$slug.SCHEDULE") || !has("SCHEDULE")): ?>
-								<a href="<?=h(link_room($slug))?>" class="title">
-									<?=h(get("ROOMS.$slug.DISPLAY"))?>
-								</a>
-							<? endif ?>
+							<a href="<?=h(link_room($slug))?>" class="title">
+								<?=h(get("ROOMS.$slug.DISPLAY"))?>
+							</a>
 
 							<? if(get("ROOMS.$slug.SCHEDULE") && has("SCHEDULE")): ?>
-								Schedule
 								<div class="program-schedule">
-									<span class="current-talk hidden">
+									<div class="talk current-talk">
 										<strong>Now:</strong>
 										<span class="t">none</span>
-									</span>
+									</div>
 
-									<br />
-
-									<span class="next-talk hidden">
+									<div class="talk next-talk">
 										<strong>Next Talk:</strong>
 										<span class="t">none</span>
-									</span>
+									</div>
 								</div>
 							<? endif ?>
 						</div>
@@ -81,18 +65,42 @@
 		</div>
 	<? endforeach ?>
 
-	<div class="room-group recordings">
-		<h2>Recordings</h2>
-
-		<ul class="row">
-			<li class="col-sm-6">
-				<div class="title">
-					<a href="http://media.ccc.de/browse/congress/2014/index.html"><span class="fa fa-video-camera"></span> Releases</a>
+	<? if(has('OVERVIEW.RELEASES') || has('OVERVIEW.RELIVE') || has('OVERVIEW.RELIVE_JSON')): ?>
+		<? $class = has('OVERVIEW.RELEASES') && (has('OVERVIEW.RELIVE') || has('OVERVIEW.RELIVE_JSON')) ? 'col-sm-6 col-xs-12' : 'col-xs-12' ?>
+		<div class="row recordings">
+				<div class="col-xs-12">
+					<h2>Recordings</h2>
 				</div>
-			</li>
-			<li class="col-sm-6">
-				<a href="relive/"><span class="fa fa-play-circle"></span> ReLive</a>
-			</li>
-		</ul>
-	</div>
+
+				<? if(has('OVERVIEW.RELEASES')): ?>
+					<div class="<?=h($class)?>">
+						<div class="panel panel-primary">
+							<div class="panel-body">
+								<a href="http://media.ccc.de/browse/congress/2014/index.html">
+									<span class="fa fa-video-camera"></span> Releases
+								</a>
+							</div>
+						</div>
+					</div>
+				<? endif ?>
+
+				<? if(has('OVERVIEW.RELIVE') || has('OVERVIEW.RELIVE_JSON')): ?>
+					<div class="<?=h($class)?>">
+						<div class="panel panel-primary">
+							<div class="panel-body">
+								<? if(has('OVERVIEW.RELIVE')): ?>
+									<a href="<?=h(get('OVERVIEW.RELIVE'))?>">
+								<? else: ?>
+									<a href="relive/">
+								<? endif ?>
+
+									<span class="fa fa-play-circle"></span> ReLive
+								</a>
+							</div>
+						</div>
+					</div>
+				<? endif ?>
+			</ul>
+		</div>
+	<? endif ?>
 </div>
