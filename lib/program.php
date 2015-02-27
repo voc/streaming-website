@@ -5,7 +5,7 @@ function program()
 	if(!has('SCHEDULE'))
 		return;
 
-	if(has('SCHEDULE.CACHE'))
+	if(has('SCHEDULE.CACHE') && function_exists('apc_fetch'))
 	{
 		$program = apc_fetch('SCHEDULE.CACHE');
 		if($program) return $program;
@@ -155,7 +155,7 @@ function program()
 		}
 	}
 
-	if(has('SCHEDULE.CACHE'))
+	if(has('SCHEDULE.CACHE') && function_exists('apc_store'))
 	{
 		apc_store(
 			'SCHEDULE.CACHE',
