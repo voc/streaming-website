@@ -14,11 +14,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	'AUTHOR' => 'CCC',
 	'DESCRIPTION' => 'Video Live-Streaming vom 31C3',
 	'KEYWORDS' => '31C3, Hacking, Chaos Computer Club, Video, Media, Streaming, Hacker',
-/*
-	'BANNER_HTML' => '
-		<img src="assets/img/logo.png" height="190" width="161" />
-	',
-*/
+
 	'FOOTER_HTML' => '
 		by <a href="https://ccc.de">Chaos Computer Club e.V</a>,
 		<a href="http://fem.tu-ilmenau.de/">FeM</a>,
