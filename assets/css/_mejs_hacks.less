@@ -1,0 +1,96 @@
+.mejs-container {
+	.mejs-subs-line {
+		position: absolute;
+		bottom: 50px;
+		height: 85px;
+		width: 100%;
+		background-color: fade(white, 85%);
+		color: black;
+		font-size: 65px;
+		text-align: center;
+		opacity: 0;
+		display: none;
+		padding: 5px 0;
+		overflow: hidden;
+
+		.silence {
+			font-size: 49%;
+			opacity: 0;
+			display: none;
+			color: #555;
+		}
+		&.silence .silence { opacity: 1; display: block; }
+
+		.error {
+			color: red;
+			opacity: 0;
+			display: none;
+		}
+		&.error .error { opacity: 1; display: block; }
+	}
+
+	.mejs-controls {
+		@factor: 1.5;
+		visibility: visible !important;
+
+		.mejs-subs-button > span {
+			cursor: pointer;
+			color: #e3e3e3;
+			font-size: 28px;
+			padding-top: 5px;
+			padding-left: 5px;
+		}
+
+		height: 12px + 18px * @factor;
+		div {
+			width: 26px * @factor;
+			height: 26px * @factor;
+		}
+		.mejs-button button {
+			background-size: 144px * @factor 32px * @factor !important;
+			width: 16px * @factor;
+			height: 16px * @factor;
+		}
+		.mejs-playpause-button {
+			&.mejs-play button {
+				background-position: 0 0;
+			}
+			&.mejs-pause button {
+				background-position: 0 -16px * @factor;
+			}
+		}
+		.mejs-volume-button {
+			&.mejs-mute button {
+				background-position: -16px * @factor -16px * @factor;
+			}
+			&.mejs-unmute button {
+				background-position: -16px * @factor 0;
+			}
+			.mejs-volume-slider {
+				left: 4px * @factor;
+			}
+		}
+		.mejs-fullscreen-button button {
+			background-position: -32px * @factor 0;
+		}
+
+		@top: @factor * 12px - 12px;
+		.mejs-time {
+			padding-top: @top + 8px;
+		}
+		.mejs-horizontal-volume-slider {
+			width: 110px;
+			top: @top;
+			.mejs-horizontal-volume-total {
+				width: 100px;
+			}
+		}
+	}
+
+	&.mejs-audio {
+		margin: 0 auto;
+	}
+	.mejs-overlay-loading {
+		background: none !important;
+	}
+}

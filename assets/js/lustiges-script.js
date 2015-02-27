@@ -160,6 +160,10 @@ $(function() {
 	$('audio').mediaelementplayer({
 		features: ['playpause', 'volume', 'current']
 	});
+
+	$(window).on('load', function() {
+		$(window).trigger('resize');
+	});
 });
 
 
