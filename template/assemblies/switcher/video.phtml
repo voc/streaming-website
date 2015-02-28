@@ -1,64 +1,64 @@
 <h3>Formats</h3>
-<ul>
-	<? foreach(array('hd', 'sd') as $iter): ?>
+<ul class="formats">
+	<? foreach($videores as $iter): ?>
 		<li>
 			<span class="label filetype" title="<?=h(format_text($iter))?>"><?=h(strtoupper($iter))?></span>
-			<a href="<?=h(link_player($room, $iter))?>">
-				<span class="fa fa-flag-o"></span>
-				native
-			</a>
-			<a href="<?=h(link_player($room, $iter, true))?>">
-				<span class="fa fa-flag"></span>
-				translated
-			</a>
-		</li>
-	<? endforeach ?>
-</ul>
 
-<hr />
+			<? if($has_translation): ?>
 
-<? include("$assemblies/desktop-player.phtml") ?>
-
-<hr />
-
-<? foreach(array('rtmp', 'hls') as $protocol): ?>
-	<h3>Directlinks (<?=h(strtoupper($protocol))?>)</h3>
-	<ul>
-		<?
-			if($protocol == 'hls')
-				$formats = array('hd', 'sd', 'auto');
-			else
-				$formats = array('hd', 'sd');
-		?>
-		<? foreach($formats as $iter): ?>
-			<li>
-				<span class="label filetype" title="<?=h(format_text($iter))?>"><?=h(strtoupper($iter))?></span>
-				<a href="<?=h(link_stream($protocol, $room, $iter))?>">
+				<a href="<?=h(link_player($room, $iter))?>">
 					<span class="fa fa-flag-o"></span>
 					native
 				</a>
-				<a href="<?=h(link_stream($protocol, $room, $iter, true))?>">
+				<a href="<?=h(link_player($room, $iter, true))?>">
 					<span class="fa fa-flag"></span>
 					translated
 				</a>
-			</li>
-		<? endforeach ?>
-	</ul>
-<? endforeach ?>
 
-<h3>Directlinks (WebM)</h3>
-<ul>
-	<? foreach(array('hd', 'sd') as $iter): ?>
-		<li>
-			<span class="label filetype" title="<?=h(format_text('webm'))?>"><?=h(strtoupper($iter))?></span>
-			<a href="<?=h(link_stream('webm', $room, $iter))?>">
-				<span class="fa fa-flag-o"></span>
-				native
-			</a>
-			<a href="<?=h(link_stream('webm', $room, $iter, true))?>">
-				<span class="fa fa-flag"></span>
-				translated
-			</a>
+			<? else: ?>
+
+				<a href="<?=h(link_player($room, $iter))?>">
+					<span class="fa fa-video-camera"></span>
+					video
+				</a>
+
+			<? endif ?>
 		</li>
 	<? endforeach ?>
 </ul>
+
+<? include("$assemblies/desktop-player.phtml") ?>
+
+<div class="directlinks">
+	<? foreach($protos as $proto): ?>
+		<h3>Directlinks (<?=h(strtoupper($proto))?>)</h3>
+		<ul>
+			<? foreach($formats as $format): ?>
+				<? if(!startswith($proto, $format)) continue ?>
+				<? $res = substr($format, -2) ?>
+				<li>
+					<span class="label filetype" title="<?=h(format_text($res))?>"><?=h(strtoupper($res))?></span>
+					<? if($has_translation): ?>
+
+						<a href="<?=h(link_stream($proto, $room, $res))?>">
+							<span class="fa fa-flag-o"></span>
+							native
+						</a>
+						<a href="<?=h(link_stream($proto, $room, $res, true))?>">
+							<span class="fa fa-flag"></span>
+							translated
+						</a>
+
+					<? else: ?>
+
+						<a href="<?=h(link_stream($proto, $room, $res))?>">
+							<span class="fa fa-video-camera"></span>
+							video
+						</a>
+
+					<? endif ?>
+				</li>
+			<? endforeach ?>
+		</ul>
+	<? endforeach ?>
+</div>

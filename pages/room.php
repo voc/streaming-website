@@ -8,35 +8,47 @@ $language = $_GET['language'];
 $selection = $_GET['selection'];
 
 $formats = get("ROOMS.$room.FORMATS");
+$has_translation = get("ROOMS.$room.TRANSLATION");
 
+$protos = array();
 $selections = array();
 $tabs = array();
+$videores = array();
 
+if(room_has_hd($room))
+	$selections[] = $videores[] = 'hd';
 
-if(count(array_intersect(array('rtmp-hd', 'hls-hd', 'webm-hd'), $formats)) > 0)
-	$selections[] = 'hd';
+if(room_has_sd($room))
+	$selections[] = $videores[] = 'sd';
 
-if(count(array_intersect(array('rtmp-sd', 'hls-sd', 'webm-sd'), $formats)) > 0)
-	$selections[] = 'sd';
-
-if(count(array_intersect(array('rtmp-sd', 'rtmp-hd', 'hls-sd', 'hls-hd', 'webm-sd', 'webm-hd'), $formats)) > 0)
+if(room_has_video($room))
 	$tabs[] = 'video';
 
-if(count(array_intersect(array('audio-mp3', 'audio-opus'), $formats)) > 0)
+
+if(room_has_audio($room))
 	$selections[] = $tabs[] = 'audio';
 
-if(count(array_intersect(array('slides'), $formats)) > 0)
+if(room_has_slides($room))
 	$selections[] = $tabs[] = 'slides';
+
+
+if(room_has_rtmp($room))
+	$protos[] = 'rtmp';
+
+if(room_has_webm($room))
+	$protos[] = 'webm';
+
+if(room_has_hls($room))
+	$protos[] = 'hls';
 
 
 // default page
 if(!$selection)
 	$selection = $selections[0];
 
-if(!in_array($selection, $selections)) {
-	include('404.php');
-	exit;
-}
+if(!in_array($selection, $selections))
+	return include('404.php');
+
 
 
 switch($selection) {
@@ -53,6 +65,8 @@ switch($selection) {
 	case 'slides':
 		$tab = 'slides';
 		$title = 'Slides';
+		$width = 1024;
+		$height = 576;
 		break;
 
 	case 'hd':
@@ -71,7 +85,12 @@ switch($selection) {
 }
 
 if($language == 'translated')
+{
+	if(!$has_translation)
+		return include('404.php');
+
 	$title = 'Translated '.$title;
+}
 
 echo $tpl->render(array(
 	'page' => 'room',
@@ -90,5 +109,9 @@ echo $tpl->render(array(
 	'translated' => ($language == 'translated'),
 	'selection' => $selection,
 	'hlsformat' => ($selection == 'hd' ? 'auto' : $selection),
+
+	'has_translation' => $has_translation,
 	'formats' => $formats,
+	'protos' => $protos,
+	'videores' => $videores,
 ));

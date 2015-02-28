@@ -14,9 +14,9 @@ function link_room($room)
 
 function link_player($room, $format = 'hd', $translated = false)
 {
-	$isDefaultFormat = in_array($format, array('hd', 'video'));
+	$defaultformat = room_has_hd($room) ? 'hd' : 'sd';
 
-	return rawurlencode($room).'/'.($isDefaultFormat ? '' : rawurlencode($format).'/').($translated ? 'translated/' : '');
+	return rawurlencode($room).'/'.($defaultformat == $format ? '' : rawurlencode($format).'/').($translated ? 'translated/' : '');
 }
 
 function link_stream($protocol, $room, $format, $translated = false)
@@ -133,4 +133,58 @@ function _get($array, $keychain, $default)
 		return $array[$key];
 
 	return _get($array[$key], array_slice($keychain, 1), $default);
+}
+
+
+
+function room_has_hd($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('rtmp-hd', 'hls-hd', 'webm-hd'), $formats)) > 0;
+}
+
+function room_has_sd($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('rtmp-sd', 'hls-sd', 'webm-sd'), $formats)) > 0;
+}
+
+function room_has_video($room)
+{
+	return room_has_hd($room) || room_has_sd($room);
+}
+
+function room_has_audio($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('audio-mp3', 'audio-opus'), $formats)) > 0;
+}
+
+function room_has_slides($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('slides'), $formats)) > 0;
+}
+
+function room_has_rtmp($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('rtmp-hd', 'rtmp-sd'), $formats)) > 0;
+}
+
+function room_has_webm($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('webm-hd', 'webm-sd'), $formats)) > 0;
+}
+
+function room_has_hls($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('hls-hd', 'hls-sd'), $formats)) > 0;
+}
+
+function startswith($needle, $haystack)
+{
+	return substr($haystack, 0, strlen($needle)) == $needle;
 }
