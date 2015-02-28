@@ -14,7 +14,7 @@ else if(preg_match('@^([^/]+)$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
-		'selection' => 'hd',
+		'selection' => '',
 		'language' => 'native',
 	);
 	include('pages/room.php');
@@ -24,7 +24,7 @@ else if(preg_match('@^([^/]+)/translated$@', $route, $m))
 {
 	$_GET = array(
 		'room' => $m[1],
-		'selection' => 'hd',
+		'selection' => '',
 		'language' => 'translated',
 	);
 	include('pages/room.php');

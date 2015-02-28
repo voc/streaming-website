@@ -1,14 +1,14 @@
-<div class="container <?=h($type)?> <?=h($selection)?> <?=h($language)?>">
+<div class="container <?=h($tab)?> <?=h($selection)?> <?=h($language)?>">
 	<div class="row headline">
 		<div class="col-xs-12">
 			<h1 data-room="<?=h(get("ROOMS.$room.DISPLAY"))?>"><?=h($title)?></h1>
 		</div>
 	</div>
 
-	<ul class="nav nav-tabs nav-justified">
-		<? foreach($types as $iter): ?>
+	<ul class="nav nav-player nav-tabs nav-justified">
+		<? foreach($tabs as $iter): ?>
 			<li
-				<? if($type == $iter):?>class="active"<? endif ?>
+				<? if($tab == $iter):?>class="active"<? endif ?>
 			>
 				<a href="<?=h(link_player($room, $iter))?>">
 					<?=h(ucfirst($iter))?>
@@ -19,11 +19,11 @@
 
 	<div class="player-wrap tab-content">
 		<div class="tab-pane active">
-			<? include("$assemblies/player/$type.phtml") ?>
+			<? include("$assemblies/player/$tab.phtml") ?>
 		</div>
 	</div>
 
-	<ul class="nav nav-tabs nav-justified" role="tablist">
+	<ul class="nav nav-functions nav-tabs nav-justified" role="tablist">
 		<li class="active">
 			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
 		</li>
@@ -44,9 +44,9 @@
 		<? endif ?>
 	</ul>
 
-	<div class="tab-content">
+	<div class="functions-wrap tab-content">
 		<div class="tab-pane active" id="switcher">
-			<? include("$assemblies/switcher/$type.phtml") ?>
+			<? include("$assemblies/switcher/$tab.phtml") ?>
 		</div>
 		<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
 			<div class="tab-pane" id="irc">

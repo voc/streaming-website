@@ -5,27 +5,30 @@
 		width="<?=h($width)?>"
 		height="<?=h($height)?>"
 		style="width: 100%; height: 100%;"
-		class="<?=h($miniroom ? 'nosubs' : 'subs')?>"
 	>
-		<? if(!$translated): ?>
-		<source
-			data-plugin-type="native"
-			src="<?=h(link_stream('webm', $room, $format, $translated))?>"
-			title="WebM (Icecast)"
-			type="video/webm"
-		/>
+		<? if(in_array("webm-$selection", $formats)): ?>
+			<source
+				data-plugin-type="native"
+				src="<?=h(link_stream('webm', $room, $selection, $translated))?>"
+				title="WebM (Icecast)"
+				type="video/webm"
+			/>
 		<? endif ?>
-		<source
-			data-plugin-type="flash"
-			src="<?=h(link_stream('rtmp', $room, $format, $translated))?>"
-			title="h.264 (RTMP)"
-			type="video/rtmp"
-		/>
-		<source
-			data-plugin-type="native"
-			src="<?=h(link_stream('hls', $room, $hlsformat, $translated))?>"
-			title="h.264 (HLS)"
-			type="application/vnd.apple.mpegURL"
-		/>
+		<? if(in_array("hls-$selection", $formats)): ?>
+			<source
+				data-plugin-type="native"
+				src="<?=h(link_stream('hls', $room, $hlsformat, $translated))?>"
+				title="h.264 (HLS)"
+				type="application/vnd.apple.mpegURL"
+			/>
+		<? endif ?>
+		<? if(in_array("rtmp-$selection", $formats)): ?>
+			<source
+				data-plugin-type="flash"
+				src="<?=h(link_stream('rtmp', $room, $selection, $translated))?>"
+				title="h.264 (RTMP)"
+				type="video/rtmp"
+			/>
+		<? endif ?>
 	</video>
 </div>
