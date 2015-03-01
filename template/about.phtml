@@ -1,7 +1,7 @@
-<div class="container-fluid about">
+<div class="container about">
 	<h1>About the Live-Streams and Recordings</h1>
 	<p>
-		Lecture recording and streaming at 31st Chaos Communication Congress in Hamburg is organized and performed by a joint venture of <a href="http://fem.tu-ilmenau.de">Forschungsgemeinschaft elektronische Medien e.V.</a>, <a href="http://www.ags.tu-bs.de/">Wissenschaftliche Arbeitsgemeinschaft für Studio- und Senderfragen an der TU Braunschweig e.V.</a> and <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>.
+		Lecture recording and streaming at <?=h(get('CONFERENCE.TITLE'))?> is organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>.
 	</p>
 	<p>
 		If you like what we're doing, you can flattr us:<br /><br />
@@ -14,16 +14,20 @@
 		The video stream is licensed under <a href="https://creativecommons.org/licenses/by/3.0/de/">CC Attribution 3.0 Germany (CC BY 3.0 DE)</a>. This may not hold true for the slides or the actual performance. If in doubt please contact the speaker directly.
 	</p>
 	<p>
-		Although the licence permits it, we would like to ask you to <strong>don't distribute stream dumps</strong>. We try to release finished cuts of recordings as quickly as possible on <a href="http://media.ccc.de/browse/congress/2014/index.html">media.ccc.de</a> and <a href="https://www.youtube.com/user/mediacccde">YouTube</a>. Early releases of incomplete stream dumps without audio translation, subtitles, intros, <a href="https://auphonic.com/">unprocessed audio</a> and missing meta data is not what we have in mind when we spend three month of preparation in our spare time.
+		Although the licence permits it, we would like to ask you to don't distribute stream dumps. We try to release finished cuts of recordings as quickly as possible
+		<? if(has('OVERVIEW.RELEASES')): ?>
+			on <a href="<?=h(get('OVERVIEW.RELEASES'))?>"><?=h(get('OVERVIEW.RELEASES'))?></a>
+		<? endif ?>.
+		Early releases of incomplete stream dumps without audio translation, subtitles, intros, <a href="https://auphonic.com/">unprocessed audio</a> and missing meta data is not what we have in mind when we spend three month of preparation in our spare time.
 	</p>
 
 	<h2>Privacy Policy</h2>
 	<p>
-		During 31C3, we'll log all accesses to this website
-		(streaming.media.ccc.de) and the servers providing the video and audio
+		During the Conference, we'll log all accesses to this website
+		and the servers providing the video and audio
 		streams. We do this to get an idea how the users are distributed though
 		the internet, what streaming formats are popular and which players are
-		used. We'll use this information for debugging during 31C3 and to
+		used. We'll use this information for debugging during the Conference and to
 		optimize our streaming CDN configuration in the future.
 	</p>
 
@@ -39,11 +43,11 @@
 
 	<p>
 		Only statistical data which cannot be used to identify a person will be
-		retained after <strong>2015-01-02</strong>. We'll destroy the original log files to the
-		best of our knowledge and ability on that date.
+		retained after the Conference. We'll destroy the original log files to the
+		best of our knowledge and ability.
 	</p>
 	<p>
-		Beware that all of our CDN servers are donated by various entities. We
+		Beware that some of our CDN servers are donated by various entities. We
 		cannot guarantee that (for example) their network infrastructure will
 		comply to this policy.
 	</p>
