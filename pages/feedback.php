@@ -1,5 +1,7 @@
 <?php
 
+require_once('lib/bootstrap.php');
+
 if(
 	!isset($_POST['datetime']) ||
 	!isset($_POST['net']) ||
@@ -9,8 +11,6 @@ if(
 	!isset($_POST['provider']) ||
 	!isset($_POST['issuetext'])
 ) {
-	require_once('lib/bootstrap.php');
-
 	echo $tpl->render(array(
 		'page' => 'feedback',
 		'title' => 'Give Feedback',
@@ -19,7 +19,7 @@ if(
 }
 else
 {
-	$db = new PDO('sqlite:/opt/31c3-streaming-feedback/feedback.sqlite3');
+	$db = new PDO(get('FEEDBACK.DSN'));
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	$stm = $db->prepare('
