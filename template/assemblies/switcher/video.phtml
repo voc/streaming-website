@@ -45,7 +45,7 @@
 					<? if(!startswith($proto, $format)) continue ?>
 					<? $res = substr($format, -2) ?>
 					<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-						<div class="btn-group" role="group">
+						<div class="btn-group" role="group" title="<?=h(get("FORMAT.$format"))?>">
 							<div class="btn btn-primary" disabled><?=h(strtoupper($res))?></div>
 							<? if($has_translation): ?>
 

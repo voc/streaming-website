@@ -27,7 +27,7 @@
 
 		<? foreach(array_intersect($protos, array('rtmp', 'hls')) as $proto): ?>
 			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-				<div class="btn-group" role="group">
+				<div class="btn-group" role="group" title="<?=h(get("FORMAT.slides"))?>">
 					<div class="btn btn-primary" disabled><?=h(strtoupper($proto))?></div>
 
 					<? if($has_translation): ?>
