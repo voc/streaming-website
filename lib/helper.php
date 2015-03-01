@@ -16,7 +16,7 @@ function link_player($room, $format = 'hd', $translated = false)
 {
 	$defaultformat = room_has_hd($room) ? 'hd' : 'sd';
 
-	return rawurlencode($room).'/'.($defaultformat == $format ? '' : rawurlencode($format).'/').($translated ? 'translated/' : '');
+	return rawurlencode($room).'/'.(($defaultformat == $format || 'video' == $format) ? '' : rawurlencode($format).'/').($translated ? 'translated/' : '');
 }
 
 function link_stream($protocol, $room, $format, $translated = false)

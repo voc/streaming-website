@@ -1,31 +1,67 @@
-<h3>Slides</h3>
-<ul>
-	<li>
-		<span class="label filetype">SLIDES</span>
-		<a href="<?=h(link_player($room, 'slides'))?>">
-			<span class="fa fa-flag-o"></span>
-			native
-		</a>
-		<a href="<?=h(link_player($room, 'slides', true))?>">
-			<span class="fa fa-flag"></span>
-			translated
-		</a>
-	</li>
-</ul>
+<div class="container-fluid">
+	<h3>Slides</h3>
+	<div class="formats row">
 
-<h3>Directlinks</h3>
-<ul>
-	<? foreach(array('rtmp', 'hls') as $protocol): ?>
-		<li>
-			<span class="label filetype" title="<?=h(format_text($iter))?>"><?=h(strtoupper($protocol))?></span>
-			<a href="<?=h(link_stream($protocol, $room, 'slides'))?>">
-				<span class="fa fa-flag-o"></span>
-				native
-			</a>
-			<a href="<?=h(link_stream($protocol, $room, 'slides', true))?>">
-				<span class="fa fa-flag"></span>
-				translated
-			</a>
-		</li>
-	<? endforeach ?>
-</ul>
+		<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+			<div class="btn-group" role="group">
+				<div class="btn btn-primary" disabled>Slides</div>
+
+				<? if($has_translation): ?>
+
+					<a href="<?=h(link_player($room, 'slides'))?>" class="btn btn-default">
+						<span class="fa fa-flag-o"></span>
+						native
+					</a>
+					<a href="<?=h(link_player($room, 'slides', true))?>" class="btn btn-default">
+						<span class="fa fa-flag"></span>
+						translated
+					</a>
+
+				<? else: ?>
+
+					<a href="<?=h(link_player($room, 'slides'))?>" class="btn btn-default">
+						<span class="fa fa-video-camera"></span>
+						native
+					</a>
+
+				<? endif ?>
+			</div>
+		</div>
+
+	</div>
+
+	<h3>Directlinks</h3>
+	<div class="formats row">
+
+		<? foreach(array_intersect($protos, array('rtmp', 'hls')) as $proto): ?>
+			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+				<div class="btn-group" role="group">
+					<div class="btn btn-primary" disabled><?=h(strtoupper($proto))?></div>
+
+					<? if($has_translation): ?>
+
+						<a href="<?=h(link_stream($proto, $room, 'slides'))?>" class="btn btn-default">
+							<span class="fa fa-flag-o"></span>
+							native
+						</a>
+						<a href="<?=h(link_stream($proto, $room, 'slides', true))?>" class="btn btn-default">
+							<span class="fa fa-flag"></span>
+							translated
+						</a>
+
+					<? else: ?>
+
+						<a href="<?=h(link_stream($proto, $room, 'slides'))?>" class="btn btn-default">
+							<span class="fa fa-video-camera"></span>
+							video
+						</a>
+
+					<? endif ?>
+
+				</div>
+			</div>
+		<? endforeach ?>
+
+	</div>
+
+</div>
