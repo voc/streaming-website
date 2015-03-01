@@ -55,6 +55,20 @@
 			}
 		}
 	}
-}
 
-@import "_program.less";
+	#feedback {
+		padding: floor(@grid-gutter-width/2) 0;
+
+		.feedback-thankyou {
+			font-size: @jumbo-font-size;
+			text-align: center;
+			padding: 30px;
+
+			display: none;
+		}
+	}
+
+	#program {
+		@import "_program.less";
+	}
+}

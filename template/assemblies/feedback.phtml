@@ -1,4 +1,4 @@
-<form action="feedback/" target="feedback-target" method="post" role="form" class="feedback-form form-horizontal">
+<form action="feedback/" target="feedback-target" method="post" role="form" class="feedback-form">
 	<div class="col-sm-4 col">
 		<div class="form-group">
 			<label for="net">Network Connection</label>
@@ -134,9 +134,10 @@
 		</div>
 
 		<div class="form-group">
-			<input type="submit" value="Submit" />
+			<input class="btn btn-primary" type="submit" value="Submit" />
 		</div>
 	</div>
 </form>
+
 <h3 class="feedback-thankyou">Thank you!</h3>
-<iframe name="feedback-target"></iframe>
+<iframe name="feedback-target" style="display: none;"></iframe>

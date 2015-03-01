@@ -1,16 +1,14 @@
-<div class="chat">
-	<? if(room_has_irc($room)): ?>
-		<div>
-			<a class="btn btn-primary irclink" href="<?=h(room_get_irc_url($room))?>">
-				<span class="fa fa-comment"></span> <?=h(room_get_irc_display($room))?>
-			</a>
-		</div>
-	<? endif ?>
-	<? if(room_has_twitter($room)): ?>
-		<div>
-			<a class="btn btn-success twitterlink" href="https://twitter.com/intent/tweet?text=<?=h(rawurlencode(room_get_twitter_hashtag($room)))?>" target="_blank">
-				<span class="fa fa-twitter"></span> <?=h(room_get_twitter_display($room))?>
-			</a>
-		</div>
-	<? endif ?>
-</div>
+<? if(room_has_irc($room)): ?>
+	<div>
+		<a class="btn btn-primary irclink" href="<?=h(room_get_irc_url($room))?>">
+			<span class="fa fa-comment"></span> <?=h(room_get_irc_display($room))?>
+		</a>
+	</div>
+<? endif ?>
+<? if(room_has_twitter($room)): ?>
+	<div>
+		<a class="btn btn-success twitterlink" href="https://twitter.com/intent/tweet?text=<?=h(rawurlencode(room_get_twitter_hashtag($room)))?>" target="_blank">
+			<span class="fa fa-twitter"></span> <?=h(room_get_twitter_display($room))?>
+		</a>
+	</div>
+<? endif ?>
