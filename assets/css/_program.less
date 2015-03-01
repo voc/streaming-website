@@ -1,0 +1,94 @@
+.program {
+	&.scroll-container {
+		overflow: hidden;
+		overflow-x: scroll;
+	}
+
+	.scroll-element {
+		position: relative;
+	}
+
+	.room {
+		overflow: hidden;
+	}
+
+	.now {
+		position: absolute;
+		left: 0;
+		width: 150px;
+		height: 500px;
+		background-color: @program-now-bg;
+		font-size: 14px;
+
+		//z-index: -5;
+
+		span {
+			display: block;
+			position: absolute;
+			right: -28px;
+			color: @program-now;
+		}
+	}
+
+	.block {
+		overflow: hidden;
+		float: left;
+		height: 100px;
+
+		/* and now for small screens: */
+		@media all and (max-width: @screen-xs-max) {
+			height: 75px;
+		}
+
+
+		padding: 10px;
+		border: 1px solid white;
+
+		h3 {
+			margin: 0;
+			padding: 0;
+
+			/* and now for small screens: */
+			@media all and (max-width: @screen-xs-max) {
+				font-size: 22px;
+			}
+		}
+
+		h4 {
+			margin: 3px 0;
+			color: @program-room;
+			a {
+				color: @program-room;
+			}
+		}
+
+		h5 {
+			color: @program-author;
+		}
+
+		&.event h3 {
+			overflow: hidden;
+		}
+
+		&.gap {
+			background-image: url(../img/stripes/gap.png);
+			background-color: @program-gap-bg;
+			color: @program-gap;
+		}
+
+		&.daychange { 
+			background-image: url(../img/stripes/gap.png);
+			background-color: @program-daychange-bg;
+			color: @program-daychange;
+		}
+
+		&.pause {
+			background-color: @program-pause-bg;
+			color: @program-pause;
+		}
+	}
+
+	.room.highlight .block {
+		background-color: @program-selected-room;
+	}
+}

@@ -190,9 +190,18 @@ $(function() {
 		$now = $program.find('.now'),
 		scrollLock = false,
 		rewindTimeout,
-		rewindTime = 10000, /* 10 seconds after manual navigation */
-		scrollDuration = 500, /* 1/2s animation on the scolling element */
-		updateTimer = 500; /* update now-pointer placement every 1/2s */
+
+		/* 10 seconds after manual navigation */
+		rewindTime = 10000,
+
+		/* 1/2s animation on the scolling element */
+		scrollDuration = 500,
+
+		/* update now-pointer placement every 1/2s */
+		updateTimer = 500,
+
+		/* offset to the browsers realtime (for simulation) */
+		offset = $('.js-settings').data('scheduleoffset');
 
 	$program.on('mouseenter mouseleave touchstart touchend', function(e) {
 		if(e.type == 'mouseleave' || e.type == 'touchend') {
@@ -208,11 +217,8 @@ $(function() {
 	// program now-marker & scrolling
 	function updateProgramView(initial) {
 		var
-			// offset to the browsers realtime (for simulation
-			offset = $('.program').data('offset'),
-
 			// corrected "now" timestamp in unix-counting (seconds, not microseconds)
-			now = (Date.now() / 1000) - offset;
+			now = (Date.now() / 1000) + offset;
 
 		// only check the first room (shouldn't matter anyway)
 		// find the newest block that starts in the past
@@ -327,11 +333,8 @@ $(function() {
 
 	function updateProgtamTeaser() {
 		var
-			// offset to the browsers realtime (for simulation
-			offset = $lecture.data('offset'),
-
 			// corrected "now" timestamp in unix-counting (seconds, not microseconds)
-			now = (Date.now() / 1000) - offset;
+			now = (Date.now() / 1000) + offset;
 
 		$.each(programData, function(room, talks) {
 			var currentTalk, nextTalk;

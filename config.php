@@ -147,7 +147,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		//'SCHEDULE_NAME' => 'saal-1',
+		'SCHEDULE_NAME' => 'Saal 1',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -242,6 +242,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Saal 2',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
 		'IRC' => true,
@@ -269,6 +270,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Saal G',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
 		'IRC' => true,
@@ -296,6 +298,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Saal 6',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
 		'IRC' => true,
@@ -377,8 +380,8 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
-	// 'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2014-12-29') - strtotime(/* Today */ '2015-02-24'),
-	'SIMULATE_OFFSET' => 0,
+	'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2014-12-28') - strtotime(/* Today */ '2015-03-01'),
+	//'SIMULATE_OFFSET' => 0,
 );
 
 

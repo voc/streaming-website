@@ -4,16 +4,16 @@ foreach(reset($program) as $event)
 	$width += $event['duration'];
 
 ?>
-<div class="program scroll-container" data-offset="<?=h($GLOBALS['CONFIG']['SCHEDULE_OFFSET'])?>">
+<div class="program scroll-container">
 	<div class="scroll-element">
 		<div class="now"><span>now</span></div>
 		<? foreach($program as $name => $events): ?>
-			<div class="room <? if($name == $room): ?>highlight<? endif ?>" style="width: <?=$width * $GLOBALS['CONFIG']['SCHEDULE_SCALE'] ?>px">
+			<div class="room <? if($name == get("ROOMS.$room.SCHEDULE_NAME", $room)): ?>highlight<? endif ?>" style="width: <?=$width / get('SCHEDULE.SCALE')?>px">
 				<? foreach($events as $event): ?>
 
 					<div
 						class="block <?=h(@$event['special'] ?: 'event')?>"
-						style="width: <?=h($event['duration'] * $GLOBALS['CONFIG']['SCHEDULE_SCALE'])?>px"
+						style="width: <?=h($event['duration'] / get('SCHEDULE.SCALE'))?>px"
 						data-start="<?=intval($event['start'])?>"
 						data-end="<?=intval($event['end'])?>"
 					>
@@ -32,15 +32,17 @@ foreach(reset($program) as $event)
 						<? else: ?>
 
 							<h4><?=h(strftime('%H:%M', $event['start']))?>
-								&nbsp;&ndash;&nbsp;
+								&ndash;
 								<?=h(strftime('%H:%M', $event['end']))?>
 								&nbsp;in&nbsp;
-								<?=h($GLOBALS['CONFIG']['ROOMS'][$name])?>
+								<a href="<?=h(link_player($room))?>">
+									<?=h(get("ROOMS.$room.DISPLAY"))?>
+								</a>
 							</h4>
 							<h3>
 								<a
-									href="<?=h(link_player($name))?>"
-									title="Switch to <?=h($GLOBALS['CONFIG']['ROOMS'][$name])?>"
+									href="<?=h(link_player($room))?>"
+									title="Switch to <?=h(get("ROOMS.$room.DISPLAY"))?>"
 								><?=h($event['title'])?></a>
 							</h3>
 							<h5>by&nbsp;<?=h($event['speaker'])?></h5>

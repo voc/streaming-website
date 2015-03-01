@@ -28,25 +28,30 @@
 	margin: 0 auto;
 }
 
-.functions-wrap #switcher {
-	.row {
-		margin-bottom: @padding-large-vertical;
+.functions-wrap
+{
+	#switcher {
+		.row {
+			margin-bottom: @padding-large-vertical;
+		}
+
+		.btn-group {
+			margin-bottom: @padding-base-vertical;
+		}
 	}
 
-	.btn-group {
-		margin-bottom: @padding-base-vertical;
-	}
-}
+	#chat {
+		text-align: center;
+		overflow: hidden;
 
-.functions-wrap .chat {
-	text-align: center;
-	overflow: hidden;
+		> div {
+			margin: 25px;
 
-	> div {
-		margin: 25px;
-
-		> a {
-			font-size: @jumbo-font-size;
+			> a {
+				font-size: @jumbo-font-size;
+			}
 		}
 	}
 }
+
+@import "_program.less";
