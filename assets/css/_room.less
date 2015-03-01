@@ -6,12 +6,12 @@
 	padding: 40px 0;
 }
 
-.video.hd .tab-content {
+.video.hd .player-wrap.tab-content {
 	padding: 0;
 }
 
 @media (max-width: @screen-md-max) {
-	.video.sd .tab-content {
+	.video.sd .player-wrap.tab-content {
 		padding: 0;
 	}
 }
@@ -27,4 +27,15 @@
 
 .functions-wrap {
 	h3 { margin-top: 0; }
+
+	.row {
+		margin-bottom: 36px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.btn-group {
+		margin-bottom: @padding-base-horizontal;
+	}
 }

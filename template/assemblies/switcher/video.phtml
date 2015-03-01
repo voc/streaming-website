@@ -1,64 +1,72 @@
-<h3>Formats</h3>
-<ul class="formats">
-	<? foreach($videores as $iter): ?>
-		<li>
-			<span class="label filetype" title="<?=h(format_text($iter))?>"><?=h(strtoupper($iter))?></span>
+<div class="container-fluid">
+	<h3>Formats</h3>
+	<div class="formats row">
+		<? foreach($videores as $iter): ?>
+			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+				<div class="btn-group" role="group">
+					 <div class="btn btn-primary" disabled><?=h(strtoupper($iter))?></div>
 
-			<? if($has_translation): ?>
-
-				<a href="<?=h(link_player($room, $iter))?>">
-					<span class="fa fa-flag-o"></span>
-					native
-				</a>
-				<a href="<?=h(link_player($room, $iter, true))?>">
-					<span class="fa fa-flag"></span>
-					translated
-				</a>
-
-			<? else: ?>
-
-				<a href="<?=h(link_player($room, $iter))?>">
-					<span class="fa fa-video-camera"></span>
-					video
-				</a>
-
-			<? endif ?>
-		</li>
-	<? endforeach ?>
-</ul>
-
-<? include("$assemblies/desktop-player.phtml") ?>
-
-<div class="directlinks">
-	<? foreach($protos as $proto): ?>
-		<h3>Directlinks (<?=h(strtoupper($proto))?>)</h3>
-		<ul>
-			<? foreach($formats as $format): ?>
-				<? if(!startswith($proto, $format)) continue ?>
-				<? $res = substr($format, -2) ?>
-				<li>
-					<span class="label filetype" title="<?=h(format_text($res))?>"><?=h(strtoupper($res))?></span>
 					<? if($has_translation): ?>
 
-						<a href="<?=h(link_stream($proto, $room, $res))?>">
+						<a href="<?=h(link_player($room, $iter))?>" class="btn btn-default">
 							<span class="fa fa-flag-o"></span>
 							native
 						</a>
-						<a href="<?=h(link_stream($proto, $room, $res, true))?>">
+						<a href="<?=h(link_player($room, $iter, true))?>" class="btn btn-default">
 							<span class="fa fa-flag"></span>
 							translated
 						</a>
 
 					<? else: ?>
 
-						<a href="<?=h(link_stream($proto, $room, $res))?>">
+						<a href="<?=h(link_player($room, $iter))?>" class="btn btn-default">
 							<span class="fa fa-video-camera"></span>
 							video
 						</a>
 
 					<? endif ?>
-				</li>
-			<? endforeach ?>
-		</ul>
-	<? endforeach ?>
+				</div>
+			</div>
+		<? endforeach ?>
+	</div>
+
+	<div class="notes well">
+		<? include("$assemblies/desktop-player.phtml") ?>
+	</div>
+
+	<div class="directlinks">
+		<? foreach($protos as $proto): ?>
+			<h3>Directlinks (<?=h(strtoupper($proto))?>)</h3>
+			<div class="row">
+				<? foreach($formats as $format): ?>
+					<? if(!startswith($proto, $format)) continue ?>
+					<? $res = substr($format, -2) ?>
+					<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+						<div class="btn-group" role="group">
+							<div class="btn btn-primary" disabled><?=h(strtoupper($res))?></div>
+							<? if($has_translation): ?>
+
+								<a href="<?=h(link_stream($proto, $room, $res))?>" class="btn btn-default">
+									<span class="fa fa-flag-o"></span>
+									native
+								</a>
+								<a href="<?=h(link_stream($proto, $room, $res, true))?>" class="btn btn-default">
+									<span class="fa fa-flag"></span>
+									translated
+								</a>
+
+							<? else: ?>
+
+								<a href="<?=h(link_stream($proto, $room, $res))?>" class="btn btn-default">
+									<span class="fa fa-video-camera"></span>
+									video
+								</a>
+
+							<? endif ?>
+						</div>
+					</div>
+				<? endforeach ?>
+			</div>
+		<? endforeach ?>
+	</div>
 </div>

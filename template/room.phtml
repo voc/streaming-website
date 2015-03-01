@@ -18,7 +18,7 @@
 	</ul>
 
 	<div class="player-wrap tab-content">
-		<div class="tab-pane active">
+		<div role="tabpanel" class="tab-pane active">
 			<? include("$assemblies/player/$tab.phtml") ?>
 		</div>
 	</div>
@@ -27,9 +27,9 @@
 		<li class="active">
 			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
 		</li>
-		<? if(get("ROOMS.$room.IRC") && has("IRC")): ?>
+		<? if((get("ROOMS.$room.IRC") && has("IRC")) || (get("ROOMS.$room.TWITTER") && has("TWITTER"))): ?>
 			<li>
-				<a href="#irc" role="tab" data-toggle="tab">IRC</a>
+				<a href="#chat" role="tab" data-toggle="tab">Chat</a>
 			</li>
 		<? endif ?>
 		<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
@@ -45,21 +45,21 @@
 	</ul>
 
 	<div class="functions-wrap tab-content">
-		<div class="tab-pane active" id="switcher">
+		<div role="tabpanel" class="tab-pane active" id="switcher">
 			<? include("$assemblies/switcher/$tab.phtml") ?>
 		</div>
-		<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
-			<div class="tab-pane" id="irc">
-				<? include("$assemblies/irc.phtml") ?>
+		<? if((get("ROOMS.$room.IRC") && has("IRC")) || (get("ROOMS.$room.TWITTER") && has("TWITTER"))): ?>
+			<div role="tabpanel" class="tab-pane" id="chat">
+				<? include("$assemblies/chat.phtml") ?>
 			</div>
 		<? endif ?>
 		<? if(get("ROOMS.$room.FEEDBACK") && has("FEEDBACK")): ?>
-			<div class="tab-pane" id="program">
+			<div role="tabpanel" class="tab-pane" id="program">
 				<? include("$assemblies/program.phtml") ?>
 			</div>
 		<? endif ?>
 		<? if(get("ROOMS.$room.FEEDBACK") && has("FEEDBACK")): ?>
-			<div class="tab-pane" id="feedback">
+			<div role="tabpanel" class="tab-pane" id="feedback">
 				<? include("$assemblies/feedback.phtml") ?>
 			</div>
 		<? endif ?>
