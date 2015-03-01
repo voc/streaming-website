@@ -33,11 +33,11 @@ function link_stream($protocol, $room, $format, $translated = false)
 		case 'webm':
 			return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'_'.rawurlencode($format).'.webm';
 
+		case 'music':
+			return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'.'.rawurlencode($format);
+
 		case 'audio':
-			if(in_array($room, array('lounge', 'ambient')))
-				return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'.'.rawurlencode($format);
-			else
-				return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'.'.rawurlencode($format);
+			return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'.'.rawurlencode($format);
 
 		case 'slide':
 			return 'http://cdn.c3voc.de/slides/'.rawurlencode(streamname($room)).'/current.png';
@@ -157,7 +157,13 @@ function room_has_video($room)
 function room_has_audio($room)
 {
 	$formats = get("ROOMS.$room.FORMATS");
-	return count(array_intersect(array('audio-mp3', 'audio-opus'), $formats)) > 0;
+	return count(array_intersect(array('audio-mp3', 'audio-opus', 'audio-ogg'), $formats)) > 0;
+}
+
+function room_has_music($room)
+{
+	$formats = get("ROOMS.$room.FORMATS");
+	return count(array_intersect(array('music-mp3', 'music-opus', 'music-ogg'), $formats)) > 0;
 }
 
 function room_has_slides($room)

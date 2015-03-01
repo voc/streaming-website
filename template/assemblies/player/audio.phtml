@@ -3,12 +3,22 @@
 	preload="auto"
 	style="width: 230px;"
 >
-	<source
-		src="<?=h(link_stream('audio', $room, 'mp3', @$translated))?>"
-		type="audio/mp3"
-	/>
-	<source
-		src="<?=h(link_stream('audio', $room, 'opus', @$translated))?>"
-		type="audio/opus"
-	/>
+	<? if(in_array("audio-mp3", $formats)): ?>
+		<source
+			src="<?=h(link_stream('audio', $room, 'mp3', @$translated))?>"
+			type="audio/mp3"
+		/>
+	<? endif ?>
+	<? if(in_array("audio-opus", $formats)): ?>
+		<source
+			src="<?=h(link_stream('audio', $room, 'opus', @$translated))?>"
+			type="audio/opus"
+		/>
+	<? endif ?>
+	<? if(in_array("audio-ogg", $formats)): ?>
+		<source
+			src="<?=h(link_stream('audio', $room, 'ogg', @$translated))?>"
+			type="audio/ogg"
+		/>
+	<? endif ?>
 </audio>

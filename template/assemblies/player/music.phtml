@@ -1,0 +1,24 @@
+<audio
+	autoplay="autoplay"
+	preload="auto"
+	style="width: 230px;"
+>
+	<? if(in_array("music-mp3", $formats)): ?>
+		<source
+			src="<?=h(link_stream('music', $room, 'mp3', @$translated))?>"
+			type="audio/mp3"
+		/>
+	<? endif ?>
+	<? if(in_array("music-opus", $formats)): ?>
+		<source
+			src="<?=h(link_stream('music', $room, 'opus', @$translated))?>"
+			type="audio/opus"
+		/>
+	<? endif ?>
+	<? if(in_array("music-ogg", $formats)): ?>
+		<source
+			src="<?=h(link_stream('music', $room, 'ogg', @$translated))?>"
+			type="audio/ogg"
+		/>
+	<? endif ?>
+</audio>

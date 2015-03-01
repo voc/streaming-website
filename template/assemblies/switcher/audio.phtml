@@ -1,12 +1,11 @@
 <div class="container-fluid">
-	<h3>Audio</h3>
-	<div class="formats row">
+	<? if($has_translation): ?>
+		<h3>Audio</h3>
+		<div class="formats row">
 
-		<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-			<div class="btn-group" role="group">
-				<div class="btn btn-primary" disabled>Audio</div>
-
-				<? if($has_translation): ?>
+			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+				<div class="btn-group" role="group">
+					<div class="btn btn-primary" disabled>Audio</div>
 
 					<a href="<?=h(link_player($room, 'audio'))?>" class="btn btn-default">
 						<span class="fa fa-flag-o"></span>
@@ -17,24 +16,17 @@
 						translated
 					</a>
 
-				<? else: ?>
-
-					<a href="<?=h(link_player($room, 'audio'))?>" class="btn btn-default">
-						<span class="fa fa-video-camera"></span>
-						video
-					</a>
-
-				<? endif ?>
+				</div>
 			</div>
-		</div>
 
-	</div>
+		</div>
+	<? endif ?>
 
 
 	<h3>Directlinks</h3>
 	<div class="formats row">
 
-		<? foreach(array_intersect($formats, array('audio-mp3', 'audio-opus')) as $format): ?>
+		<? foreach(array_intersect($formats, array('audio-mp3', 'audio-opus', 'audio-ogg')) as $format): ?>
 			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
 				<? $proto = substr($format, 6) ?>
 				<div class="btn-group" role="group">
@@ -54,8 +46,8 @@
 						<? else: ?>
 
 							<a href="<?=h(link_stream('audio', $room, $proto))?>" class="btn btn-default">
-								<span class="fa fa-video-camera"></span>
-								video
+								<span class="fa fa-volume-up"></span>
+								audio
 							</a>
 
 						<? endif ?>

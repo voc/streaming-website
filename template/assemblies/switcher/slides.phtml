@@ -1,12 +1,11 @@
 <div class="container-fluid">
-	<h3>Slides</h3>
-	<div class="formats row">
+	<? if($has_translation): ?>
+		<h3>Slides</h3>
+		<div class="formats row">
 
-		<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-			<div class="btn-group" role="group">
-				<div class="btn btn-primary" disabled>Slides</div>
-
-				<? if($has_translation): ?>
+			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+				<div class="btn-group" role="group">
+					<div class="btn btn-primary" disabled>Slides</div>
 
 					<a href="<?=h(link_player($room, 'slides'))?>" class="btn btn-default">
 						<span class="fa fa-flag-o"></span>
@@ -17,18 +16,11 @@
 						translated
 					</a>
 
-				<? else: ?>
-
-					<a href="<?=h(link_player($room, 'slides'))?>" class="btn btn-default">
-						<span class="fa fa-video-camera"></span>
-						native
-					</a>
-
-				<? endif ?>
+				</div>
 			</div>
-		</div>
 
-	</div>
+		</div>
+	<? endif ?>
 
 	<h3>Directlinks</h3>
 	<div class="formats row">
@@ -52,8 +44,8 @@
 					<? else: ?>
 
 						<a href="<?=h(link_stream($proto, $room, 'slides'))?>" class="btn btn-default">
-							<span class="fa fa-video-camera"></span>
-							video
+							<span class="fa fa-picture-o"></span>
+							slides
 						</a>
 
 					<? endif ?>

@@ -28,6 +28,9 @@ if(room_has_video($room))
 if(room_has_audio($room))
 	$selections[] = $tabs[] = 'audio';
 
+if(room_has_music($room))
+	$selections[] = $tabs[] = 'music';
+
 if(room_has_slides($room))
 	$selections[] = $tabs[] = 'slides';
 
@@ -40,6 +43,7 @@ if(room_has_webm($room))
 
 if(room_has_hls($room))
 	$protos[] = 'hls';
+
 
 
 // default page
@@ -58,7 +62,7 @@ switch($selection) {
 		break;
 
 	case 'music':
-		$tab = 'audio';
+		$tab = 'music';
 		$title = 'Music';
 		break;
 
