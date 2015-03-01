@@ -183,26 +183,6 @@ $(function() {
 	$(window).on('hashchange', setTabToHash).trigger('hashchange');
 });
 
-
-// click-to-irc
-$(function() {
-	$('.click-to-irc').on('click', function(e) {
-		if($(this).hasClass('activating'))
-			return;
-
-		if($(e.target).hasClass('irclink'))
-			return;
-
-		var
-			$irc = $(this).addClass('activating'),
-			$iframe = $(this).find('iframe');
-
-		$iframe.on('load', function() {
-			$irc.addClass('active');
-		}).attr('src', $iframe.data('src'));
-	});
-});
-
 // programm-timeline
 $(function() {
 	var

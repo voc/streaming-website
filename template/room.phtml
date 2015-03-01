@@ -27,7 +27,7 @@
 		<li class="active">
 			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
 		</li>
-		<? if((get("ROOMS.$room.IRC") && has("IRC")) || (get("ROOMS.$room.TWITTER") && has("TWITTER"))): ?>
+		<? if(room_has_chat($room)): ?>
 			<li>
 				<a href="#chat" role="tab" data-toggle="tab">Chat</a>
 			</li>
@@ -48,7 +48,7 @@
 		<div role="tabpanel" class="tab-pane active" id="switcher">
 			<? include("$assemblies/switcher/$tab.phtml") ?>
 		</div>
-		<? if((get("ROOMS.$room.IRC") && has("IRC")) || (get("ROOMS.$room.TWITTER") && has("TWITTER"))): ?>
+		<? if(room_has_chat($room)): ?>
 			<div role="tabpanel" class="tab-pane" id="chat">
 				<? include("$assemblies/chat.phtml") ?>
 			</div>

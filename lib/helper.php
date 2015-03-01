@@ -184,6 +184,45 @@ function room_has_hls($room)
 	return count(array_intersect(array('hls-hd', 'hls-sd'), $formats)) > 0;
 }
 
+function room_has_irc($room)
+{
+	return get("ROOMS.$room.IRC") && has("IRC");
+}
+
+function room_has_twitter($room)
+{
+	return get("ROOMS.$room.TWITTER") && has("TWITTER");
+}
+
+function room_has_chat($room)
+{
+	return room_has_irc($room) || room_has_twitter($room);
+}
+
+function room_get_irc_url($room)
+{
+	$cfg = get("ROOMS.$room.IRC_CONFIG", get("IRC"));
+	return sprintf($cfg['URL'], rawurlencode($room));
+}
+
+function room_get_irc_display($room)
+{
+	$cfg = get("ROOMS.$room.IRC_CONFIG", get("IRC"));
+	return sprintf($cfg['DISPLAY'], $room);
+}
+
+function room_get_twitter_hashtag($room)
+{
+	$cfg = get("ROOMS.$room.TWITTER_CONFIG", get("TWITTER"));
+	return sprintf($cfg['TEXT'], $room);
+}
+
+function room_get_twitter_display($room)
+{
+	$cfg = get("ROOMS.$room.TWITTER_CONFIG", get("TWITTER"));
+	return sprintf($cfg['DISPLAY'], $room);
+}
+
 function startswith($needle, $haystack)
 {
 	return substr($haystack, 0, strlen($needle)) == $needle;

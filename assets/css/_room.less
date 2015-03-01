@@ -3,6 +3,9 @@
 	border-bottom: 1px solid #ddd;
 	border-right: 1px solid #ddd;
 
+}
+
+.player-wrap.tab-content {
 	padding: 40px 0;
 }
 
@@ -25,17 +28,25 @@
 	margin: 0 auto;
 }
 
-.functions-wrap {
-	h3 { margin-top: 0; }
-
+.functions-wrap #switcher {
 	.row {
-		margin-bottom: 36px;
-		&:last-child {
-			margin-bottom: 0;
-		}
+		margin-bottom: @padding-large-vertical;
 	}
 
 	.btn-group {
-		margin-bottom: @padding-base-horizontal;
+		margin-bottom: @padding-base-vertical;
+	}
+}
+
+.functions-wrap .chat {
+	text-align: center;
+	overflow: hidden;
+
+	> div {
+		margin: 25px;
+
+		> a {
+			font-size: @jumbo-font-size;
+		}
 	}
 }
