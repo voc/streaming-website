@@ -51,7 +51,7 @@
 		<script type="text/javascript" src="assets/mejs/mediaelement-and-player.min.js"></script>
 		<script type="text/javascript" src="assets/js/lustiges-script.js"></script>
 	</head>
-	<body class="<?=h($page)?>">
+	<body class="<?=h(is_numeric($page[0]) ? 'e'.$page : $page)?>">
 		<? include("$assemblies/header.phtml") ?>
 		<? include("$page.phtml") ?>
 		<? include("$assemblies/footer.phtml") ?>

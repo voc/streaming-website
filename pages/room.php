@@ -7,6 +7,9 @@ $room = $_GET['room'];
 $language = $_GET['language'];
 $selection = $_GET['selection'];
 
+if(!has("ROOMS.$room"))
+	return include('404.php');
+
 $formats = get("ROOMS.$room.FORMATS");
 $has_translation = get("ROOMS.$room.TRANSLATION");
 

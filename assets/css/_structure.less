@@ -5,6 +5,8 @@
 
 @img: '../img/';
 
+@grid-float-breakpoint:     0;
+
 @jumbo-font-size:   52px;
 @jumbo-line-height: 45px;
 
@@ -49,4 +51,19 @@ body.overview {
 }
 body.room {
 	@import "_room.less";
+}
+
+body.e404 {
+	> .container {
+		text-align: center;
+		h1 {
+			font-size: @jumbo-font-size;
+			margin: 50px 0 50px 0;
+		}
+
+		img {
+			background-color: @brand-primary;
+			max-width: 80%;
+		}
+	}
 }
