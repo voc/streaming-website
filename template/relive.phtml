@@ -12,44 +12,54 @@
 
 	<div class="row">
 
-	<? foreach ($talks as $talk): ?>
-		<? $url = ($talk['status'] == 'released') ? $talk['release_url'] : link_vod($talk['id']) ?>
-		<div class="col-xs-12 recording">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-
-					<h3 class="panel-title">
-						<a href="<?=h($url)?>">
-							<?=h($talk['title'])?>
-						</a>
-					</h3>
-
-				</div>
-				<div class="panel-body">
-					<a href="<?=h($url)?>">
-						<img class="preview" alt="<?=h($talk['title'])?>" class="video-thumbnail" src="<?=h($talk['thumbnail'])?>" width="213" height="120" />
-					</a>
-
-
-					<ul class="metadata">
-						<li>
-							<span class="fa fa-clock-o"></span>
-							<?=h(round($talk['duration']/60))?> min
-						</li>
-						<li>
-							<span class="fa fa-cogs"></span>
-							<?=h($talk['status'])?>
-						</li>
-						<li>
-							<span class="fa fa-sign-in"></span>
-							<?=h($talk['room'])?>
-						</li>
-					</ul>
-
-
+		<? if(!$talks): ?>
+			<div class="col-xs-10 col-xs-offset-1">
+				<div class="alert alert-warning" role="alert">
+					<i class="fa fa-bug"></i>
+					No ReLive-Talks avaiable, check your config!
 				</div>
 			</div>
-		</div>
-	<? endforeach ?>
+		<? else: ?>
+			<? foreach ($talks as $talk): ?>
+				<? $url = ($talk['status'] == 'released') ? $talk['release_url'] : link_vod($talk['id']) ?>
+				<div class="col-xs-12 recording">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+
+							<h3 class="panel-title">
+								<a href="<?=h($url)?>">
+									<?=h($talk['title'])?>
+								</a>
+							</h3>
+
+						</div>
+						<div class="panel-body">
+							<a href="<?=h($url)?>">
+								<img class="preview" alt="<?=h($talk['title'])?>" class="video-thumbnail" src="<?=h($talk['thumbnail'])?>" width="213" height="120" />
+							</a>
+
+
+							<ul class="metadata">
+								<li>
+									<span class="fa fa-clock-o"></span>
+									<?=h(round($talk['duration']/60))?> min
+								</li>
+								<li>
+									<span class="fa fa-cogs"></span>
+									<?=h($talk['status'])?>
+								</li>
+								<li>
+									<span class="fa fa-sign-in"></span>
+									<?=h($talk['room'])?>
+								</li>
+							</ul>
+
+
+						</div>
+					</div>
+				</div>
+			<? endforeach ?>
+		<? endif ?>
+	</div>
 
 </div>
