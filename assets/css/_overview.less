@@ -19,6 +19,10 @@
 	.preview {
 		float: left;
 		margin-right: @padding-base-horizontal;
+
+		@media (max-width: @screen-xs-min) {
+			margin-bottom: @padding-base-vertical;
+		}
 	}
 
 	a.title {
@@ -35,6 +39,12 @@
 		.program-schedule .talk {
 			display: block;
 		}
+
+		@media (max-width: @screen-xs-min) {
+			.program-schedule {
+				clear: both;
+			}
+		}
 	}
 
 	&.has-preview {
@@ -47,6 +57,11 @@
 .recordings a {
 	font-size: @jumbo-font-size;
 	line-height: @jumbo-line-height;
+
+	@media (max-width: @screen-xs-min) {
+		font-size: @jumbo-font-size-xs;
+	}
+
 	display: block;
 	text-align: center;
 

@@ -372,7 +372,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
-	'SCALE' => 5,
+	'SCALE' => 7,
 
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute

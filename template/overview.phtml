@@ -16,13 +16,18 @@
 			<? $count = count($rooms); ?>
 			<? foreach($rooms as $idx => $room): ?>
 				<div class="
-					room room-<?=h($room)?>
+					room room-<?=h($room)?> clearfix
 
 					<? /* when the count is odd and this is the last item - make it full width */ ?>
 					<? if($count % 2 == 1 && $idx == $count - 1): ?>
-						col-sm-12 wide
+						col-xs-12 wide
 					<? else: ?>
-						col-md-6 col-sm-12 narrow
+						<? if(get("ROOMS.$room.PREVIEW") && get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
+							col-md-6
+						<? else: ?>
+							col-sm-6
+						<? endif ?>
+						narrow
 					<? endif ?>
 
 					<? if(get("ROOMS.$room.PREVIEW")): ?>

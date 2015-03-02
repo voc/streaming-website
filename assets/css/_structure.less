@@ -5,13 +5,15 @@
 
 @img: '../img/';
 
-@grid-float-breakpoint:     0;
+@grid-float-breakpoint:     @screen-xs-min;
 
-@jumbo-font-size:   52px;
-@jumbo-line-height: 45px;
+@jumbo-font-size:    52px;
+@jumbo-font-size-xs: 2.5em;
+@jumbo-line-height:  45px;
 
 @program-now:       @brand-danger;
 @program-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+@program-border:    lighten(@brand-primary, 50%);
 
 @program-room:      darken(@brand-primary, 15%);
 @program-author:    #444;
@@ -30,7 +32,7 @@
 
 // website configuration styles
 
-.navbar {
+nav {
 	.navbar-brand > img {
 		float: left;
 		margin-right: @navbar-padding-horizontal;
@@ -42,9 +44,23 @@
 }
 
 body {
-	padding: 50px 0;
+	padding: 50px 0 30px 0;
+
+	@media (max-width: @grid-float-breakpoint) {
+		padding: 120px 0 30px 0;
+	}
 }
 
+
+@media (max-width: @screen-sm-min) {
+	nav {
+		position: absolute !important;
+	}
+
+	footer {
+		display: none;
+	}
+}
 
 body.overview {
 	@import "_overview.less";

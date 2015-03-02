@@ -1,8 +1,9 @@
-.tab-content {
-	border-left: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-
+@media (min-width: @screen-sm-min) {
+	.tab-content {
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+	}
 }
 
 .player-wrap.tab-content {
@@ -51,7 +52,11 @@
 			margin: 25px;
 
 			> a {
-				font-size: @jumbo-font-size;
+				font-size: 18px;
+
+				@media (min-width: @screen-sm-min) {
+					font-size: @jumbo-font-size;
+				}
 			}
 		}
 	}
