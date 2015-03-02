@@ -3,7 +3,7 @@
 @import "_mejs_hacks.less";
 @import "_footer.less";
 
-@img: '../img/';
+@img: '../img';
 
 @grid-float-breakpoint:     @screen-xs-min;
 
@@ -33,9 +33,23 @@
 // website configuration styles
 
 nav {
-	.navbar-brand > img {
-		float: left;
-		margin-right: @navbar-padding-horizontal;
+	.navbar-brand {
+		line-height: 27px;
+
+		.icon {
+			background-repeat: no-repeat;
+			background-image: url("@{img}/tv.png");
+
+			float: left;
+			display: block;
+			width: 27px;
+			height: 27px;
+			margin-right: @padding-base-horizontal;
+		}
+
+		.icon when (luma(@navbar-default-bg) > 50%) {
+			background-image: url("@{img}/tv-inverse.png");
+		}
 	}
 	
 	.button-wrapper > .btn {
