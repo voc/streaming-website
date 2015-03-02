@@ -1,0 +1,29 @@
+[
+	{
+		"status": "live",
+		"release_url": "",
+		"title": "Title",
+		"id": 123,
+		"thumbnail": "123.png",
+		"duration": 3600,
+		"room": "Saal 1"
+	},
+	{
+		"status": "released",
+		"release_url": "http://media.ccc.de/",
+		"title": "Title",
+		"id": 123,
+		"thumbnail": "123.png",
+		"duration": 3600,
+		"room": "Saal 1"
+	},
+	{
+		"status": "recorded",
+		"release_url": "",
+		"title": "Title",
+		"id": 123,
+		"thumbnail": "123.png",
+		"duration": 3600,
+		"room": "Saal 1"
+	}
+]
