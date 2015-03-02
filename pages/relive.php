@@ -2,7 +2,7 @@
 
 require_once('lib/bootstrap.php');
 
-$talks = file_get_contents('http://vod.c3voc.de/relive/index.json');
+$talks = file_get_contents(get('OVERVIEW.RELIVE_JSON'));
 $talks = utf8_decode($talks);
 $talks = json_decode($talks, true);
 

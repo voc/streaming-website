@@ -3,7 +3,8 @@
 $route = @$_GET['route'];
 $route = rtrim($route, '/');
 
-
+require_once('config.php');
+require_once('lib/helper.php');
 
 if($route == '')
 {
@@ -18,7 +19,7 @@ else if(preg_match('@^about$@', $route, $m))
 else if(preg_match('@^program.json$@', $route, $m))
 {
 	if(!has('SCHEDULE'))
-		return include('404.php');
+		return include('pages/404.php');
 
 	include('pages/program-json.php');
 }
@@ -26,7 +27,7 @@ else if(preg_match('@^program.json$@', $route, $m))
 else if(preg_match('@^feedback$@', $route, $m))
 {
 	if(!has('FEEDBACK'))
-		return include('404.php');
+		return include('pages/404.php');
 
 	include('pages/feedback.php');
 }
@@ -34,7 +35,7 @@ else if(preg_match('@^feedback$@', $route, $m))
 else if(preg_match('@^feedback/read$@', $route, $m))
 {
 	if(!has('FEEDBACK'))
-		return include('404.php');
+		return include('pages/404.php');
 
 	include('pages/feedback-read.php');
 }
@@ -42,7 +43,7 @@ else if(preg_match('@^feedback/read$@', $route, $m))
 else if(preg_match('@^relive/([0-9]+)$@', $route, $m))
 {
 	if(!has('OVERVIEW.RELIVE_JSON'))
-		return include('404.php');
+		return include('pages/404.php');
 
 	$_GET = array(
 		'id' => $m[1],
@@ -53,7 +54,7 @@ else if(preg_match('@^relive/([0-9]+)$@', $route, $m))
 else if(preg_match('@^relive$@', $route, $m))
 {
 	if(!has('OVERVIEW.RELIVE_JSON'))
-		return include('404.php');
+		return include('pages/404.php');
 
 	include('pages/relive.php');
 }
