@@ -2,24 +2,17 @@
 
 require_once('lib/bootstrap.php');
 
-$talks = file_get_contents('http://vod.c3voc.de/relive/index.json');
-$talks = utf8_decode($talks);
-$talks = json_decode($talks, true);
+$talks_by_id = relive_talks();
+$talk = @$talks_by_id[intval($_GET['id'])];
 
-$talkhit = null;
-foreach($talks as $talk) {
-	if($talk['id'] == $_GET['id'])
-		$talkhit = $talk;
-}
-
-if(!$talkhit) return;
+if(!$talk)
+	return include('page/404.php');
 
 echo $tpl->render(array(
 	'page' => 'relive-player',
 	'title' => 'Relive!',
-	'talk' => $talkhit,
+	'talk' => $talk,
 
 	'width' => 1024,
 	'height' => 576,
-	'relive' => true,
 ));

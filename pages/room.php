@@ -8,7 +8,7 @@ $language = $_GET['language'];
 $selection = $_GET['selection'];
 
 if(!has("ROOMS.$room"))
-	return include('404.php');
+	return include('pages/404.php');
 
 $formats = get("ROOMS.$room.FORMATS");
 $has_translation = get("ROOMS.$room.TRANSLATION");
@@ -54,7 +54,7 @@ if(!$selection)
 	$selection = $selections[0];
 
 if(!in_array($selection, $selections))
-	return include('404.php');
+	return include('pages/404.php');
 
 
 
@@ -94,7 +94,7 @@ switch($selection) {
 if($language == 'translated')
 {
 	if(!$has_translation)
-		return include('404.php');
+		return include('pages/404.php');
 
 	$title = 'Translated '.$title;
 }

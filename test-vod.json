@@ -4,7 +4,8 @@
 		"release_url": "",
 		"title": "Title",
 		"id": 123,
-		"thumbnail": "123.png",
+		"thumbnail": "http://vod.c3voc.de/123.png",
+		"playlist": "http://vod.c3voc.de/123.m3u8",
 		"duration": 3600,
 		"room": "Saal 1"
 	},
@@ -12,8 +13,9 @@
 		"status": "released",
 		"release_url": "http://media.ccc.de/",
 		"title": "Title",
-		"id": 123,
-		"thumbnail": "123.png",
+		"id": 234,
+		"thumbnail": "http://vod.c3voc.de/234.png",
+		"playlist": "http://vod.c3voc.de/234.m3u8",
 		"duration": 3600,
 		"room": "Saal 1"
 	},
@@ -21,8 +23,9 @@
 		"status": "recorded",
 		"release_url": "",
 		"title": "Title",
-		"id": 123,
-		"thumbnail": "123.png",
+		"id": 456,
+		"thumbnail": "http://vod.c3voc.de/456.png",
+		"playlist": "http://vod.c3voc.de/456.m3u8",
 		"duration": 3600,
 		"room": "Saal 1"
 	}

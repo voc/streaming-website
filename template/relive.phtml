@@ -2,24 +2,35 @@
 	<h1><?=h($title)?></h1>
 
 	<div class="row">
-		<div class="alert alert-danger" role="alert">
-			<i class="fa fa-exclamation-circle"></i>
-			<strong>Danger!</strong> Extreme Beta!!!
+		<div class="col-xs-12">
+			<div class="alert alert-danger" role="alert">
+				<i class="fa fa-exclamation-circle"></i>
+				<strong>Danger!</strong> Extreme Beta!!!
+			</div>
 		</div>
 	</div>
 
-	<div class="event-previews relive">
+	<div class="row">
 
-		<? foreach ($talks as $talk): ?>
-			<a class="event-preview <?=h($talk['status'])?>"
-				<? if($talk['status'] == 'released'): ?>
-					href="<?=h($talk['release_url'])?>"
-				<? else: ?>
-					href="<?=h(link_vod($talk['id']))?>"
-				<? endif ?>
-			>
-				<img alt="<?=h($talk['title'])?>" class="video-thumbnail" src="http://vod.c3voc.de/relive/<?=h($talk['thumbnail'])?>">
-				<div class="caption">
+	<? foreach ($talks as $talk): ?>
+		<? $url = ($talk['status'] == 'released') ? $talk['release_url'] : link_vod($talk['id']) ?>
+		<div class="col-xs-12 recording">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+
+					<h3 class="panel-title">
+						<a href="<?=h($url)?>">
+							<?=h($talk['title'])?>
+						</a>
+					</h3>
+
+				</div>
+				<div class="panel-body">
+					<a href="<?=h($url)?>">
+						<img class="preview" alt="<?=h($talk['title'])?>" class="video-thumbnail" src="<?=h($talk['thumbnail'])?>" width="213" height="120" />
+					</a>
+
+
 					<ul class="metadata">
 						<li>
 							<span class="fa fa-clock-o"></span>
@@ -34,12 +45,11 @@
 							<?=h($talk['room'])?>
 						</li>
 					</ul>
-					<h3><?=h($talk['title'])?>
-						<? if($talk['status'] == 'live'): ?>&nbsp;(Currently Live!)<? endif ?>
-					</h3>
-				</div>
-			</a>
-		<? endforeach ?>
 
-	</div>
+
+				</div>
+			</div>
+		</div>
+	<? endforeach ?>
+
 </div>
