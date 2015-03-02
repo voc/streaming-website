@@ -236,9 +236,9 @@ function startswith($needle, $haystack)
 
 function relive_talks()
 {
-	$talks = file_get_contents(get('OVERVIEW.RELIVE_JSON'));
+	$talks = @file_get_contents(get('OVERVIEW.RELIVE_JSON'));
 	$talks = utf8_decode($talks);
-	$talks = json_decode($talks, true);
+	$talks = (array)json_decode($talks, true);
 
 	usort($talks, function($a, $b) {
 		$sort = array('live', 'recorded', 'released');

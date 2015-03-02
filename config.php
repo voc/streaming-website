@@ -70,7 +70,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://localhost/streaming-website/test-vod.json',
+	'RELIVE_JSON' => 'http://vod.c3voc.de/index.json',
 );
 
 
