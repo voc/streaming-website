@@ -25,22 +25,22 @@ function link_stream($protocol, $room, $format, $translated = false)
 
 	switch ($protocol) {
 		case 'rtmp':
-			return 'rtmp://cdn.c3voc.de/stream/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'_'.rawurlencode($format);
+			return 'rtmp://cdn.c3voc.de/stream/'.rawurlencode(get("ROOMS.$room.STREAM", $room)).'_'.rawurlencode($language).'_'.rawurlencode($format);
 
 		case 'hls':
-			return 'http://cdn.c3voc.de/hls/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).($format == 'auto' ? '' : '_'.rawurlencode($format)).'.m3u8';
+			return 'http://cdn.c3voc.de/hls/'.rawurlencode(get("ROOMS.$room.STREAM", $room)).'_'.rawurlencode($language).($format == 'auto' ? '' : '_'.rawurlencode($format)).'.m3u8';
 
 		case 'webm':
-			return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'_'.rawurlencode($format).'.webm';
+			return 'http://cdn.c3voc.de/'.rawurlencode(get("ROOMS.$room.STREAM", $room)).'_'.rawurlencode($language).'_'.rawurlencode($format).'.webm';
 
 		case 'music':
-			return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'.'.rawurlencode($format);
+			return 'http://cdn.c3voc.de/'.rawurlencode(get("ROOMS.$room.STREAM", $room)).'.'.rawurlencode($format);
 
 		case 'audio':
-			return 'http://cdn.c3voc.de/'.rawurlencode(streamname($room)).'_'.rawurlencode($language).'.'.rawurlencode($format);
+			return 'http://cdn.c3voc.de/'.rawurlencode(get("ROOMS.$room.STREAM", $room)).'_'.rawurlencode($language).'.'.rawurlencode($format);
 
 		case 'slide':
-			return 'http://cdn.c3voc.de/slides/'.rawurlencode(streamname($room)).'/current.png';
+			return 'http://cdn.c3voc.de/slides/'.rawurlencode(get("ROOMS.$room.STREAM", $room)).'/current.png';
 	}
 
 	return '#';
