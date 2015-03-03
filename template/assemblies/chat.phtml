@@ -7,7 +7,7 @@
 <? endif ?>
 <? if(room_has_twitter($room)): ?>
 	<div>
-		<a class="btn btn-success twitterlink" href="https://twitter.com/intent/tweet?text=<?=h(rawurlencode(room_get_twitter_hashtag($room)))?>" target="_blank">
+		<a class="btn twitterlink" href="https://twitter.com/intent/tweet?text=<?=h(rawurlencode(room_get_twitter_hashtag($room)))?>" target="_blank">
 			<span class="fa fa-twitter"></span> <?=h(room_get_twitter_display($room))?>
 		</a>
 	</div>
