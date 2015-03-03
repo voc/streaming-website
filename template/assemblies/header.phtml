@@ -3,17 +3,21 @@
 		<div class="navbar-header">
 			<a class="navbar-brand" href="">
 				<i class="icon"></i>
-				<?=h(get('CONFERENCE.TITLE', 'C3Voc'))?> Streaming
+				<?=h(get('CONFERENCE.TITLE', 'C3Voc Streaming'))?>
 			</a>
 		</div>
 
 		<div class="nav navbar-form navbar-right button-wrapper">
-			<a class="form-control btn btn-default" href="feedback/">
-				<span class="fa fa-bullhorn"></span>
-			</a>
-			<a class="form-control btn btn-default" href="//media.ccc.de/browse/congress/2014/index.html">
-				<span class="fa fa-video-camera"></span>
-			</a>
+			<? if(has('FEEDBACK')): ?>
+				<a class="form-control btn btn-default" href="feedback/">
+					<span class="fa fa-bullhorn"></span>
+				</a>
+			<? endif ?>
+			<? if(has('OVERVIEW.RELEASES')): ?>
+				<a class="form-control btn btn-default" href="<?=h(get('OVERVIEW.RELEASES'))?>">
+					<span class="fa fa-video-camera"></span>
+				</a>
+			<? endif ?>
 			<a class="form-control btn btn-default" href="about/">
 				<span class="fa fa-info"></span>
 			</a>
