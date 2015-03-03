@@ -7,10 +7,9 @@ foreach(reset($program) as $event)
 <div class="program scroll-container">
 	<div class="scroll-element">
 		<div class="now"><span>now</span></div>
-		<? foreach($program as $name => $events): ?>
-			<div class="room <? if($name == get("ROOMS.$room.SCHEDULE_NAME", $room)): ?>highlight<? endif ?>" style="width: <?=$width / get('SCHEDULE.SCALE')?>px">
+		<? foreach($program as $roomname => $events): ?>
+			<div class="room <? if($roomname == get("ROOMS.$room.SCHEDULE_NAME", $room)): ?>highlight<? endif ?>" style="width: <?=$width / get('SCHEDULE.SCALE')?>px">
 				<? foreach($events as $event): ?>
-
 					<div
 						class="block <?=h(@$event['special'] ?: 'event')?>"
 						style="width: <?=h($event['duration'] / get('SCHEDULE.SCALE'))?>px"
@@ -35,17 +34,27 @@ foreach(reset($program) as $event)
 								&ndash;
 								<?=h(strftime('%H:%M', $event['end']))?>
 								&nbsp;in&nbsp;
-								<a href="<?=h(link_player($room))?>">
-									<?=h(get("ROOMS.$room.DISPLAY"))?>
-								</a>
+								<? if(has("ROOMS.$roomname")): ?>
+									<a href="<?=h(link_player($roomname))?>">
+										<?=h(get("ROOMS.$roomname.DISPLAY"))?>
+									</a>
+								<? else: ?>
+									<?=h($roomname) ?>
+								<? endif ?>
 							</h4>
 							<h3>
-								<a
-									href="<?=h(link_player($room))?>"
-									title="Switch to <?=h(get("ROOMS.$room.DISPLAY"))?>"
-								><?=h($event['title'])?></a>
+								<? if(has("ROOMS.$roomname")): ?>
+									<a
+										href="<?=h(link_player($roomname))?>"
+										title="Switch to <?=h(get("ROOMS.$roomname.DISPLAY"))?>"
+									><?=h($event['title'])?></a>
+								<? else: ?>
+									<?=h($event['title'])?>
+								<? endif ?>
 							</h3>
-							<h5>by&nbsp;<?=h($event['speaker'])?></h5>
+							<? if($event['speaker']): ?>
+								<h5>by&nbsp;<?=h($event['speaker'])?></h5>
+							<? endif ?>
 						<? endif ?>
 					</div>
 
