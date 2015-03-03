@@ -86,9 +86,18 @@ function baseurl()
 
 	$base  = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']) ? 'https://' : 'http://';
 	$base .= $_SERVER['HTTP_HOST'];
-	$base .=  rtrim(dirname($_SERVER['SCRIPT_NAME']), '/').'/';
+	$base .=  forceslash(dirname($_SERVER['SCRIPT_NAME']));
 
 	return $base;
+}
+
+function forceslash($url)
+{
+	$url =  rtrim($url, '/');
+	if(strlen($url) > 0)
+		$url .= '/';
+
+	return $url;
 }
 
 function strtoduration($str)

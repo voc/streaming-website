@@ -2,6 +2,7 @@
 
 $route = @$_GET['route'];
 $route = rtrim($route, '/');
+$GLOBALS['ROUTE'] = $route;
 
 require_once('config.php');
 require_once('lib/helper.php');

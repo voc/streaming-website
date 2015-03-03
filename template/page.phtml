@@ -27,7 +27,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<base href="<?=h($baseurl)?>" />
-		<link href="<?=h($baseurl.ltrim($_SERVER['REQUEST_URI'], '/'))?>" rel="canonical" />
+		<link href="<?=h($baseurl.forceslash($GLOBALS['ROUTE']))?>" rel="canonical" />
 
 		<link href="assets/img/apple-touch-icon/76x76.png" rel="apple-touch-icon" />
 		<link href="assets/img/apple-touch-icon/76x76.png" rel="apple-touch-icon" sizes="76x76" />
