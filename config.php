@@ -10,17 +10,57 @@ if($_SERVER['HTTP_HOST'] != 'localhost')
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
+	/**
+	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
+	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
+	 * Anzeigetext benutzt
+	 */
 	'TITLE' => '31C3',
+
+	/**
+	 * Veranstalter
+	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
+	 * <meta>-Tag generiert.
+	 */
 	'AUTHOR' => 'CCC',
+
+	/**
+	 * Beschreibungstext
+	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
+	 * <meta>-Tag generiert.
+	 */
 	'DESCRIPTION' => 'Video Live-Streaming vom 31C3',
+
+	/**
+	 * Schlüsselwortliste, Kommasepariert
+	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
+	 * <meta>-Tag generiert.
+	 */
 	'KEYWORDS' => '31C3, Hacking, Chaos Computer Club, Video, Media, Streaming, Hacker',
 
+	/**
+	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
+	 * Sollte üblicherweise nur Inline-Elemente enthalten
+	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
+	 */
 	'FOOTER_HTML' => '
 		by <a href="https://ccc.de">Chaos Computer Club e.V</a>,
 		<a href="http://fem.tu-ilmenau.de/">FeM</a>,
 		<a href="http://www.ags.tu-bs.de/">ags</a> &amp;
 		<a href="https://c3voc.de">c3voc</a>
 	',
+
+	/**
+	 * HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)
+	 * wird üblicherweise für KeyVisuals oder Textmarke verwendet (vgl. Blaues
+	 * Wischiwaschi auf http://media.ccc.de/)
+	 *
+	 * Dieser HTML-Block wird üblicherweise in der main.less speziell für die
+	 * Konferenz umgestaltet.
+	 *
+	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
+	 */
+	//'BANNER_HTML' => '31C3 – a new dawn',
 );
 
 /**
