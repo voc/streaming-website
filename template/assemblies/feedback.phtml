@@ -52,16 +52,13 @@
 			<label for="stream">Stream</label>
 			<select class="form-control" name="stream" id="stream">
 				<option></option>
-				<? foreach(array('saal1', 'saal2', 'saalg', 'saal6', 'sendezentrum') as $roomIter): ?>
-					<? foreach($GLOBALS['CONFIG']['FORMATS'] as $formatIter => $formatDislay): ?>
+				<? foreach(get('ROOMS') as $roomSlug => $roomInfo): ?>
+					<? if(!has("ROOMS.$roomSlug.FEEDBACK")) continue ?>
+					<? foreach(room_get_possible_selections($roomSlug) as $selectionIter): ?>
 						<option
-							<? if($roomIter == $room && $formatIter == $format): ?>selected<? endif ?>
-						value="<?=h("$roomIter-$formatIter")?>"><?=h($GLOBALS['CONFIG']['ROOMS'][$roomIter])?> – <?=h($formatDislay)?></option>
+							<? if($roomSlug == $room && $selectionIter == @$selection): ?>selected<? endif ?>
+						value="<?=h("$roomSlug-$selectionIter")?>"><?=h(get("ROOMS.$roomSlug.DISPLAY", $roomSlug))?> – <?=h($selectionIter)?></option>
 					<? endforeach ?>
-				<? endforeach ?>
-
-				<? foreach(array('lounge', 'ambient') as $roomIter): ?>
-					<option value="<?=h("$roomIter")?>"><?=h($GLOBALS['CONFIG']['ROOMS'][$roomIter])?></option>
 				<? endforeach ?>
 			</select>
 		</div>

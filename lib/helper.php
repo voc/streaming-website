@@ -153,6 +153,19 @@ function room_has_slides($room)
 	return count(array_intersect(array('slides'), $formats)) > 0;
 }
 
+function room_get_possible_selections($room)
+{
+	$selections = array();
+
+	if(room_has_hd($room)) $selections[] = 'hd';
+	if(room_has_sd($room)) $selections[] = 'sd';
+	if(room_has_audio($room)) $selections[] = 'audio';
+	if(room_has_music($room)) $selections[] = 'music';
+	if(room_has_slides($room)) $selections[] = 'slides';
+
+	return $selections;
+}
+
 function room_has_rtmp($room)
 {
 	$formats = get("ROOMS.$room.FORMATS");
