@@ -51,34 +51,6 @@ function link_vod($id)
 	return 'relive/'.rawurlencode($id).'/';
 }
 
-function streamname($room)
-{
-	switch($room)
-	{
-		case 'saal1': return 's1';
-		case 'saal2': return 's2';
-		case 'saalg': return 's3';
-		case 'saal6': return 's4';
-		case 'sendezentrum': return 's5';
-		default: return $room;
-	}
-}
-
-function irc_channel($room)
-{
-	return '31C3-hall-'.strtoupper(substr($room, 4, 1));
-}
-
-function twitter_hashtag($room)
-{
-	return '#hall'.strtoupper(substr($room, 4, 1));
-}
-
-function format_text($format)
-{
-	return @$GLOBALS['CONFIG']['FORMAT_TEXT'][$format] ?: '';
-}
-
 function baseurl()
 {
 	if(isset($GLOBALS['CONFIG']['baseurl']))
