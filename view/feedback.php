@@ -1,7 +1,5 @@
 <?php
 
-require_once('lib/bootstrap.php');
-
 if(
 	!isset($_POST['datetime']) ||
 	!isset($_POST['net']) ||

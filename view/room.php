@@ -1,8 +1,5 @@
 <?php
 
-require_once('lib/bootstrap.php');
-
-
 $room = $_GET['room'];
 $language = $_GET['language'];
 $selection = $_GET['selection'];

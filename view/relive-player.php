@@ -1,7 +1,5 @@
 <?php
 
-require_once('lib/bootstrap.php');
-
 $talks_by_id = relive_talks();
 $talk = @$talks_by_id[intval($_GET['id'])];
 

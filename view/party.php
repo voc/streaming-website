@@ -1,7 +1,5 @@
 <?php
 
-require_once('lib/bootstrap.php');
-
 $room = $_GET['room'];
 echo $tpl->render(array(
 	'page' => 'party',
