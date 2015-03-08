@@ -1,6 +1,6 @@
 <? if(room_has_irc($room)): ?>
 	<div>
-		<a class="btn btn-primary irclink" href="<?=h(room_get_irc_url($room))?>">
+		<a class="btn btn-primary irclink" href="<?=h(room_get_irc_url($room))?>" target="_blank">
 			<span class="fa fa-comment"></span> <?=h(room_get_irc_display($room))?>
 		</a>
 	</div>
