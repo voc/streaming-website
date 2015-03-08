@@ -1,9 +1,10 @@
 #!/bin/sh
 
-LOCAL_SERVER='http://localhost/~peter/voc-frontends/31c3'
+LOCAL_SERVER='http://localhost/streaming-website'
 
-echo "building scss"
-scss assets/css/src/lustige-styles.scss assets/css/lustige-styles.css
+echo "building less"
+rm -f assets/css/main.css
+lessc assets/css/main.less assets/css/main.css
 
 echo "removing old build"
 rm -rf build
@@ -13,7 +14,7 @@ mkdir -p build
 wget \
 	--no-verbose \
 	--no-host-directories \
-	--cut-dirs=3 \
+	--cut-dirs=1 \
 	--directory-prefix=build \
 	--user-agent=StaticBuildScript \
 	--recursive \
