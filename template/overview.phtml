@@ -99,34 +99,35 @@
 				'col-xs-12';
 		?>
 		<div class="row recordings">
-				<div class="col-xs-12">
-					<h2>Recordings</h2>
+
+			<div class="col-xs-12">
+				<h2>Recordings</h2>
+			</div>
+
+			<? if($overview->hasReleases()): ?>
+				<div class="<?=h($class)?>">
+					<div class="panel panel-primary">
+						<div class="panel-body">
+							<a href="<?=h($overview->getReleasesUrl())?>">
+								<span class="fa fa-video-camera"></span> Releases
+							</a>
+						</div>
+					</div>
 				</div>
+			<? endif ?>
 
-				<? if($overview->hasReleases()): ?>
-					<div class="<?=h($class)?>">
-						<div class="panel panel-primary">
-							<div class="panel-body">
-								<a href="<?=h($overview->getReleasesUrl())?>">
-									<span class="fa fa-video-camera"></span> Releases
-								</a>
-							</div>
+			<? if($overview->hasRelive()): ?>
+				<div class="<?=h($class)?>">
+					<div class="panel panel-primary">
+						<div class="panel-body">
+							<a href="<?=h($overview->getReliveUrl())?>">
+								<span class="fa fa-play-circle"></span> ReLive
+							</a>
 						</div>
 					</div>
-				<? endif ?>
+				</div>
+			<? endif ?>
 
-				<? if($overview->hasRelive()): ?>
-					<div class="<?=h($class)?>">
-						<div class="panel panel-primary">
-							<div class="panel-body">
-								<a href="<?=h($overview->getReliveUrl())?>">
-									<span class="fa fa-play-circle"></span> ReLive
-								</a>
-							</div>
-						</div>
-					</div>
-				<? endif ?>
-			</ul>
 		</div>
 	<? endif ?>
 </div>
