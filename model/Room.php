@@ -1,6 +1,7 @@
 <?php
 
-class Room {
+class Room
+{
 	private $slug;
 
 	public static function get($slug)

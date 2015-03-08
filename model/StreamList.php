@@ -1,6 +1,7 @@
 <?php
 
-class StreamList implements AggregateIterator {
+class StreamList implements AggregateIterator
+{
 	private $streams = array();
 
 	public function getIterator() {
