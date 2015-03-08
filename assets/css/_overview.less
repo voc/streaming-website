@@ -5,6 +5,13 @@
 		display: none;
 	}
 
+	&.has-preview {
+		.title {
+			text-align: left;
+			line-height: 120px;
+		}
+	}
+
 	&.has-schedule.has-preview {
 		text-align: left;
 
@@ -13,6 +20,7 @@
 		}
 		.title {
 			display: none;
+			line-height: inherit;
 		}
 	}
 
@@ -28,10 +36,6 @@
 	a.title {
 		font-size: 2.5em;
 		display: block;
-	}
-
-	&.wide {
-		a.title { width: 50%; }
 	}
 
 
