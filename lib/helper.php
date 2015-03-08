@@ -2,16 +2,6 @@
 
 require_once('program.php');
 
-function link_index()
-{
-	return '';
-}
-
-function link_room($room)
-{
-	return rawurlencode($room).'/';
-}
-
 function link_player($room, $format = 'video', $translated = false)
 {
 	$defaultformat = room_has_hd($room) ? 'hd' : 'sd';

@@ -7,7 +7,7 @@
 		</div>
 	</div>
 
-	<? foreach(get('OVERVIEW.GROUPS') as $group => $rooms): ?>
+	<? foreach($overview->getGroups() as $group => $rooms): ?>
 		<div class="row room-group">
 			<div class="col-xs-12">
 				<h2><?=h($group)?></h2>
@@ -16,49 +16,60 @@
 			<? $count = count($rooms); ?>
 			<? foreach($rooms as $idx => $room): ?>
 				<div class="
-					room room-<?=h($room)?> clearfix
+					room
+					room-<?=h($room->getSlug())?>
+					clearfix
 
 					<? /* when the count is odd and this is the last item - make it full width */ ?>
-					<? if($count % 2 == 1 && $idx == $count - 1): ?>
-						col-xs-12 wide
+					<? if( ($count % 2 == 1) && ($idx == $count - 1) ): ?>
+						wide
+						col-xs-12
 					<? else: ?>
-						<? if(get("ROOMS.$room.PREVIEW") && get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
+						narrow
+						<? if($room->hasPreview() && $room->hasSchedule()): ?>
 							col-md-6
 						<? else: ?>
 							col-sm-6
 						<? endif ?>
-						narrow
 					<? endif ?>
 
-					<? if(get("ROOMS.$room.PREVIEW")): ?>
+					<? if($room->hasPreview()): ?>
 						has-preview
 					<? endif ?>
 
-					<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
+					<? if($room->hasSchedule()): ?>
 						has-schedule
 					<? endif ?>
 				">
+
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<div class="panel-title">
-								<a href="<?=h(link_room($room))?>">
-									<?=h(get("ROOMS.$room.DISPLAY"))?>
+								<a href="<?=h($room->getLink())?>">
+									<?=h($room->getDisplay())?>
 								</a>
 							</div>
 						</div>
 
 						<div class="panel-body">
-							<? if(get("ROOMS.$room.PREVIEW")): ?>
-								<a href="<?=h(link_room($room))?>">
-									<img class="preview" src="thumbs/<?=h(get("ROOMS.$room.STREAM"))?>.png" alt="" width="213" height="120" />
+							<? if($room->hasPreview()): ?>
+
+								<a href="<?=h($room->getLink())?>">
+									<img
+										class="preview"
+										src="<?=h($room->getThumb())?>"
+										alt="<?=h($room->getDisplay())?>"
+										width="213" height="120"
+									/>
 								</a>
+
 							<? endif ?>
 
-							<a href="<?=h(link_room($room))?>" class="title">
-								<?=h(get("ROOMS.$room.DISPLAY"))?>
+							<a href="<?=h($room->getLink())?>" class="title">
+								<?=h($room->getDisplay())?>
 							</a>
 
-							<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
+							<? if($room->hasSchedule()): ?>
 								<div class="program-schedule">
 									<div class="talk current-talk">
 										<strong>Now:</strong>
@@ -78,18 +89,25 @@
 		</div>
 	<? endforeach ?>
 
-	<? if(has('OVERVIEW.RELEASES') || has('OVERVIEW.RELIVE') || has('OVERVIEW.RELIVE_JSON')): ?>
-		<? $class = has('OVERVIEW.RELEASES') && (has('OVERVIEW.RELIVE') || has('OVERVIEW.RELIVE_JSON')) ? 'col-sm-6 col-xs-12' : 'col-xs-12' ?>
+	<? if($overview->hasReleases() || $overview->hasRelive()): ?>
+		<?
+			$class = ($overview->hasReleases() && $overview->hasRelive()) ?
+				// both enabled
+				'col-sm-6 col-xs-12' :
+
+				// only one of both enabled
+				'col-xs-12';
+		?>
 		<div class="row recordings">
 				<div class="col-xs-12">
 					<h2>Recordings</h2>
 				</div>
 
-				<? if(has('OVERVIEW.RELEASES')): ?>
+				<? if($overview->hasReleases()): ?>
 					<div class="<?=h($class)?>">
 						<div class="panel panel-primary">
 							<div class="panel-body">
-								<a href="<?=h(get('OVERVIEW.RELEASES'))?>">
+								<a href="<?=h($overview->getReleasesUrl())?>">
 									<span class="fa fa-video-camera"></span> Releases
 								</a>
 							</div>
@@ -97,16 +115,11 @@
 					</div>
 				<? endif ?>
 
-				<? if(has('OVERVIEW.RELIVE') || has('OVERVIEW.RELIVE_JSON')): ?>
+				<? if($overview->hasRelive()): ?>
 					<div class="<?=h($class)?>">
 						<div class="panel panel-primary">
 							<div class="panel-body">
-								<? if(has('OVERVIEW.RELIVE')): ?>
-									<a href="<?=h(get('OVERVIEW.RELIVE'))?>">
-								<? else: ?>
-									<a href="relive/">
-								<? endif ?>
-
+								<a href="<?=h($overview->getReliveUrl())?>">
 									<span class="fa fa-play-circle"></span> ReLive
 								</a>
 							</div>
