@@ -309,7 +309,10 @@ $(function() {
 		updateTimer = 5*1000, /* update display every 5 seconds */
 		refetchTimer = 10*60*1000, /* re-request current / upcoming program every 10 minutes */
 		programData = {},
-		$lecture = $('.rooms .lecture');
+		$lecture = $('.room.has-schedule'),
+
+		/* offset to the browsers realtime (for simulation) */
+		offset = $('.js-settings').data('scheduleoffset');;
 
 
 	if($lecture.length == 0)
@@ -350,7 +353,7 @@ $(function() {
 			});
 
 			var s = nextTalk ? new Date(nextTalk.start*1000) : new Date();
-			$lecture.find('.'+room)
+			$lecture.filter('.room-'+room)
 				.find('.current-talk')
 					.removeClass('hidden')
 					.find('.t')
