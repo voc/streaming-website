@@ -12,7 +12,7 @@ class Overview
 			foreach($rooms as $room)
 			{
 				try {
-					$groups[$group][] = Room::get($room);
+					$groups[$group][] = new Room($room);
 				}
 				catch(NotFountException $e)
 				{

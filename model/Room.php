@@ -4,12 +4,7 @@ class Room
 {
 	private $slug;
 
-	public static function get($slug)
-	{
-		return new Room($slug);
-	}
-
-	private function __construct($slug)
+	public function __construct($slug)
 	{
 		if(! has('ROOMS.'.$slug))
 			throw new NotFoundException('Room '.$slug);
