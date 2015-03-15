@@ -61,6 +61,27 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	//'BANNER_HTML' => '31C3 – a new dawn',
+
+	/**
+	 * Link zu den Recordings
+	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
+	 */
+	'RELEASES' => 'http://media.ccc.de/browse/congress/2014/index.html',
+
+	/**
+	 * Link zu einer (externen) ReLive-Übersichts-Seite
+	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
+	 */
+	//'RELIVE' => 'http://vod.c3voc.de/',
+
+	/**
+	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne
+	 * ReLive-Ansicht zu aktivieren.
+	 *
+	 * Wird beides aktiviert, hat der externe Link Vorrang!
+	 * Wird beides auskommentiert, wird der Link nicht angezeigt
+	 */
+	'RELIVE_JSON' => 'http://vod.c3voc.de/index.json',
 );
 
 /**
@@ -90,27 +111,6 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 			'sendezentrum',
 		),
 	),
-
-	/**
-	 * Link zu den Recordings
-	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
-	 */
-	'RELEASES' => 'http://media.ccc.de/browse/congress/2014/index.html',
-
-	/**
-	 * Link zu einer (externen) ReLive-Übersichts-Seite
-	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
-	 */
-	//'RELIVE' => 'http://vod.c3voc.de/',
-
-	/**
-	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne
-	 * ReLive-Ansicht zu aktivieren.
-	 *
-	 * Wird beides aktiviert, hat der externe Link Vorrang!
-	 * Wird beides auskommentiert, wird der Link nicht angezeigt
-	 */
-	'RELIVE_JSON' => 'http://vod.c3voc.de/index.json',
 );
 
 

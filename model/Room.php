@@ -1,12 +1,12 @@
 <?php
 
-class Room
+class Room extends ModelBase
 {
 	private $slug;
 
 	public function __construct($slug)
 	{
-		if(! has('ROOMS.'.$slug))
+		if(! $this->has('ROOMS.'.$slug))
 			throw new NotFoundException('Room '.$slug);
 
 		$this->slug = $slug;
@@ -26,11 +26,11 @@ class Room
 	}
 
 	public function getStream() {
-		return get('ROOMS.'.$this->getSlug().'.STREAM', $this->getSlug());
+		return $this->get('ROOMS.'.$this->getSlug().'.STREAM', $this->getSlug());
 	}
 
 	public function getDisplay() {
-		return get('ROOMS.'.$this->getSlug().'.DISPLAY', $this->getSlug());
+		return $this->get('ROOMS.'.$this->getSlug().'.DISPLAY', $this->getSlug());
 	}
 
 
@@ -40,6 +40,6 @@ class Room
 	}
 
 	public function hasSchedule() {
-		return get('ROOMS.'.$this->getSlug().'.SCHEDULE') && has('SCHEDULE');
+		return $this->get('ROOMS.'.$this->getSlug().'.SCHEDULE') && $this->has('SCHEDULE');
 	}
 }

@@ -89,9 +89,9 @@
 		</div>
 	<? endforeach ?>
 
-	<? if($overview->hasReleases() || $overview->hasRelive()): ?>
+	<? if($conference->hasReleases() || $conference->hasRelive()): ?>
 		<?
-			$class = ($overview->hasReleases() && $overview->hasRelive()) ?
+			$class = ($conference->hasReleases() && $conference->hasRelive()) ?
 				// both enabled
 				'col-sm-6 col-xs-12' :
 
@@ -104,11 +104,11 @@
 				<h2>Recordings</h2>
 			</div>
 
-			<? if($overview->hasReleases()): ?>
+			<? if($conference->hasReleases()): ?>
 				<div class="<?=h($class)?>">
 					<div class="panel panel-primary">
 						<div class="panel-body">
-							<a href="<?=h($overview->getReleasesUrl())?>">
+							<a href="<?=h($conference->getReleasesUrl())?>">
 								<span class="fa fa-video-camera"></span> Releases
 							</a>
 						</div>
@@ -116,11 +116,11 @@
 				</div>
 			<? endif ?>
 
-			<? if($overview->hasRelive()): ?>
+			<? if($conference->hasRelive()): ?>
 				<div class="<?=h($class)?>">
 					<div class="panel panel-primary">
 						<div class="panel-body">
-							<a href="<?=h($overview->getReliveUrl())?>">
+							<a href="<?=h($conference->getReliveUrl())?>">
 								<span class="fa fa-play-circle"></span> ReLive
 							</a>
 						</div>

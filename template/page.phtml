@@ -8,20 +8,20 @@
 
 <? include("$assemblies/motd.phtml") ?>
 
-		<title><?=h($title)?> – <?=h(get('CONFERENCE.TITLE', 'C3Voc'))?> Streaming</title>
+		<title><?=h($title)?> – <?=h($conference->getTitle())?> Streaming</title>
 
 		<meta name="robots" content="index,follow" />
 
-		<? if(has('CONFERENCE.AUTHOR')): ?>
-			<meta name="author" content="<?=h(get('CONFERENCE.AUTHOR'))?>" />
+		<? if($conference->hasAuthor()): ?>
+			<meta name="author" content="<?=h($conference->getAuthor())?>" />
 		<? endif ?>
 
-		<? if(has('CONFERENCE.DESCRIPTION')): ?>
-			<meta name="description" content="<?=h(get('CONFERENCE.DESCRIPTION'))?>" />
+		<? if($conference->hasDescription()): ?>
+			<meta name="description" content="<?=h($conference->getDescription())?>" />
 		<? endif ?>
 
-		<? if(has('CONFERENCE.KEYWORDS')): ?>
-			<meta name="keywords" content="<?=h(get('CONFERENCE.KEYWORDS'))?>" />
+		<? if($conference->hasKeywords()): ?>
+			<meta name="keywords" content="<?=h($conference->getKeywords())?>" />
 		<? endif ?>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
 		<? include("$assemblies/footer.phtml") ?>
 
 		<span class="js-settings"
-			data-scheduleoffset="<?=h(get('SCHEDULE.SIMULATE_OFFSET', 0))?>"
+			data-scheduleoffset="<?=h($schedule->getSimulationOffset())?>"
 		></span>
 	</body>
 </html>

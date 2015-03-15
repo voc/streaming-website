@@ -1,13 +1,11 @@
 <?php
 
-require_once('model/Room.php');
-
-class Overview
+class Overview extends ModelBase
 {
 	public function getGroups() {
 		$groups = array();
 
-		foreach(get('OVERVIEW.GROUPS') as $group => $rooms)
+		foreach($this->get('OVERVIEW.GROUPS') as $group => $rooms)
 		{
 			foreach($rooms as $room)
 			{
@@ -23,30 +21,5 @@ class Overview
 		}
 
 		return $groups;
-	}
-
-	public function getReleasesUrl() {
-		return get('OVERVIEW.RELEASES');
-	}
-
-	public function getReliveUrl() {
-		if(has('OVERVIEW.RELIVE'))
-			return get('OVERVIEW.RELIVE');
-
-		elseif(has('OVERVIEW.RELIVE_JSON'))
-			return 'relive/';
-
-		else
-			return null;
-	}
-
-
-
-	public function hasRelive() {
-		return has('OVERVIEW.RELIVE') || has('OVERVIEW.RELIVE_JSON');
-	}
-
-	public function hasReleases() {
-		return has('OVERVIEW.RELEASES');
 	}
 }

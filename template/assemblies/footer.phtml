@@ -1,6 +1,6 @@
 <footer>
-	<? if(has('CONFERENCE.FOOTER_HTML')): ?>
-		<?= get('CONFERENCE.FOOTER_HTML') ?>
+	<? if($conference->hasFooterHtml()): ?>
+		<?= $conference->getFooterHtml() ?>
 	<? else: ?>
 		by <a href="https://c3voc.de">c3voc</a>
 	<? endif ?>

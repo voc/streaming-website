@@ -6,6 +6,10 @@ require_once('lib/PhpTemplate.php');
 require_once('lib/Exceptions.php');
 require_once('lib/helper.php');
 
+require_once('model/ModelBase.php');
+require_once('model/Conference.php');
+require_once('model/Feedback.php');
+require_once('model/Schedule.php');
 require_once('model/Overview.php');
 require_once('model/Room.php');
 
@@ -17,6 +21,10 @@ $tpl = new PhpTemplate('template/page.phtml');
 $tpl->set(array(
 	'baseurl' => baseurl(),
 	'assemblies' => './template/assemblies/',
+
+	'conference' => new Conference(),
+	'feedback' => new Feedback(),
+	'schedule' => new Schedule(),
 ));
 
 
