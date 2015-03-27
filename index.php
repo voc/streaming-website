@@ -32,8 +32,8 @@ $tpl->set(array(
 ));
 
 
+ob_start();
 try {
-
 	if($route == '')
 	{
 		include('view/overview.php');
@@ -135,10 +135,11 @@ try {
 }
 catch(NotFoundException $e)
 {
+	ob_clean();
 	include('view/404.php');
 }
 catch(Exception $e)
 {
-	header("HTTP/1.1 500 Internal Server Error");
-	die($e);
+	ob_clean();
+	include('view/500.php');
 }

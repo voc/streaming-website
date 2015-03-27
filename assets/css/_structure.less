@@ -89,7 +89,8 @@ body.relive-player {
 	@import "_relive_player.less";
 }
 
-body.e404 {
+body.e404,
+body.e500 {
 	> .container {
 		text-align: center;
 		h1 {
@@ -101,6 +102,16 @@ body.e404 {
 			background-color: @brand-primary;
 			max-width: 80%;
 		}
+	}
+}
+
+body.e500 {
+	pre {
+		text-align: left;
+	}
+
+	img {
+		.rotate(180deg);
 	}
 }
 
