@@ -195,8 +195,14 @@ class Room extends ModelBase
 		return $selections;
 	}
 
-	public function createSelectionObject($selection)
+	public function createSelectionObject($selection = null)
 	{
+		if(!$selection)
+		{
+			$selections = $this->getSelectionNames();
+			$selection = $selections[0];
+		}
+
 		return new RoomSelection($this, $selection);
 	}
 
@@ -209,8 +215,14 @@ class Room extends ModelBase
 		return $tabs;
 	}
 
-	public function createTabObject($tab)
+	public function createTabObject($tab = null)
 	{
+		if(!$tab)
+		{
+			$tabs = $this->getTabNames();
+			$tab = $tabs[0];
+		}
+
 		return new RoomTab($this, $tab);
 	}
 
