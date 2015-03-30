@@ -1,12 +1,16 @@
 <?php
 
-class Modelbase
+class ModelBase
 {
 	protected function has($keychain)
 	{
-		return $this->_has($GLOBALS['CONFIG'], $keychain);
+		return ModelBase::_has($GLOBALS['CONFIG'], $keychain);
 	}
-	private function _has($array, $keychain)
+	protected static function staticHas($keychain)
+	{
+		return ModelBase::_has($GLOBALS['CONFIG'], $keychain);
+	}
+	private static function _has($array, $keychain)
 	{
 		if(!is_array($keychain))
 			$keychain = explode('.', $keychain);
@@ -18,14 +22,18 @@ class Modelbase
 		if(count($keychain) == 1)
 			return true;
 
-		return $this->_has($array[$key], array_slice($keychain, 1));
+		return ModelBase::_has($array[$key], array_slice($keychain, 1));
 	}
 
 	protected function get($keychain, $default = null)
 	{
-		return $this->_get($GLOBALS['CONFIG'], $keychain, $default);
+		return ModelBase::_get($GLOBALS['CONFIG'], $keychain, $default);
 	}
-	private function _get($array, $keychain, $default)
+	protected static function staticGet($keychain, $default = null)
+	{
+		return ModelBase::_get($GLOBALS['CONFIG'], $keychain, $default);
+	}
+	private static function _get($array, $keychain, $default)
 	{
 		if(!is_array($keychain))
 			$keychain = explode('.', $keychain);
@@ -37,6 +45,6 @@ class Modelbase
 		if(count($keychain) == 1)
 			return $array[$key];
 
-		return $this->_get($array[$key], array_slice($keychain, 1), $default);
+		return ModelBase::_get($array[$key], array_slice($keychain, 1), $default);
 	}
 }
