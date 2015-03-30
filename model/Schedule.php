@@ -2,29 +2,20 @@
 
 class Schedule extends ModelBase
 {
+	public function isEnabled() {
+		return $this->has('SCHEDULE');
+	}
+
 	public function getSimulationOffset() {
 		return $this->get('SCHEDULE.SIMULATE_OFFSET', 0);
 	}
 
-	private function strtoduration($str)
-	{
-		$parts = explode(':', $str);
-		return ((int)$parts[0] * 60 + (int)$parts[1]) * 60;
+	public function getScale() {
+		return floatval(get('SCHEDULE.SCALE', 7));
 	}
 
-	function program()
+	private function fetchSchedule()
 	{
-		if(!has('SCHEDULE'))
-			return;
-
-		if(has('SCHEDULE.CACHE') && function_exists('apc_fetch'))
-		{
-			$program = apc_fetch('SCHEDULE.CACHE');
-			if($program) return $program;
-		}
-
-
-		$program = array();
 		$opts = array(
 			'http' => array(
 				'timeout' => 2,
@@ -32,13 +23,24 @@ class Schedule extends ModelBase
 			)
 		);
 		$context  = stream_context_create($opts);
-		$schedule = file_get_contents(get('SCHEDULE.URL'), false, $context);
+		$schedule = file_get_contents($this->getScheduleUrl(), false, $context);
 
-		// failed, give up
 		if(!$schedule)
-			return array();
+			throw new ScheduleException("Error Downloading Schedule from ".$this->getScheduleUrl());
 
-		$schedule = simplexml_load_string($schedule);
+		return simplexml_load_string($schedule);
+	}
+
+	public function getSchedule()
+	{
+		if($schedule = $this->getCached())
+			return $schedule;
+
+		// download schedule-xml
+		$schedule = $this->fetchSchedule();
+
+		$mapping = $this->getScheduleToRoomSlugMapping();
+		$program = array();
 
 		// re-calculate day-ends
 		// some schedules have long gaps before the first talk or talks that expand beyond the dayend
@@ -54,7 +56,7 @@ class Schedule extends ModelBase
 				foreach($room->event as $event)
 				{
 					$start = strtotime((string)$event->date);
-					$duration = strtoduration((string)$event->duration);
+					$duration = $this->strToDuration((string)$event->duration);
 					$end = $start + $duration;
 
 					$daystart = min($daystart, $start);
@@ -78,14 +80,15 @@ class Schedule extends ModelBase
 			{
 				$roomidx++;
 				$lastend = false;
+
 				$name = (string)$room['name'];
-				if(isset($GLOBALS['CONFIG']['FAHRPLAN_ROOM_MAPPING'][$name]))
-					$name = $GLOBALS['CONFIG']['FAHRPLAN_ROOM_MAPPING'][$name];
+				if(isset($mapping[$name]))
+					$name = $mapping[$name];
 
 				foreach($room->event as $event)
 				{
 					$start = strtotime((string)$event->date);
-					$duration = strtoduration((string)$event->duration);
+					$duration = $this->strToDuration((string)$event->duration);
 					$end = $start + $duration;
 
 					if($lastend && $lastend < $start)
@@ -167,15 +170,74 @@ class Schedule extends ModelBase
 			}
 		}
 
-		if(has('SCHEDULE.CACHE') && function_exists('apc_store'))
+		return $this->doCache($program);
+	}
+
+
+	public function getDurationSum()
+	{
+		$sum = 0;
+		foreach(reset($this->getSchedule()) as $event)
+			$sum += $event['duration'];
+
+		return $sum;
+	}
+
+
+
+	private function strToDuration($str)
+	{
+		$parts = explode(':', $str);
+		return ((int)$parts[0] * 60 + (int)$parts[1]) * 60;
+	}
+
+	private function getScheduleUrl()
+	{
+		return get('SCHEDULE.URL');
+	}
+
+	private function isCacheEnabled()
+	{
+		return has('SCHEDULE.CACHE') && function_exists('apc_fetch') && function_exists('apc_store');
+	}
+
+	private function getCacheDuration()
+	{
+		return get('SCHEDULE.CACHE', 60*10 /* 10 minutes */);
+	}
+
+	private $localCache = null;
+	private function getCached()
+	{
+		if($this->localCache)
+			return $this->localCache;
+
+		if(!$this->isCacheEnabled())
+			return null;
+
+		return apc_fetch('SCHEDULE.CACHE');
+	}
+
+	private function doCache($value)
+	{
+		$this->localCache = $value;
+
+		if(!$this->isCacheEnabled())
+			return $value;
+
+		apc_store('SCHEDULE.CACHE', $value, $this->getCacheDuration());
+		return $value;
+	}
+
+	private function getScheduleToRoomSlugMapping()
+	{
+		$mapping = array();
+		foreach($this->get('ROOMS') as $slug => $room)
 		{
-			apc_store(
-				'SCHEDULE.CACHE',
-				$program,
-				get('SCHEDULE.CACHE')
-			);
+			if(isset($room['SCHEDULE_NAME']))
+				$mapping[ $room['SCHEDULE_NAME'] ] = $slug;
 		}
 
-		return $program;
+		return $mapping;
 	}
 }

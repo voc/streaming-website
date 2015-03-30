@@ -29,6 +29,10 @@ class Room extends ModelBase
 		return $this->get('ROOMS.'.$this->getSlug().'.STREAM', $this->getSlug());
 	}
 
+	public function getScheduleName() {
+		return $this->get('ROOMS.'.$this->getSlug().'.SCHEDULE_NAME', $this->getSlug());
+	}
+
 	public function getDisplay() {
 		return $this->get('ROOMS.'.$this->getSlug().'.DISPLAY', $this->getSlug());
 	}
