@@ -12,6 +12,9 @@ require_once('model/Feedback.php');
 require_once('model/Schedule.php');
 require_once('model/Overview.php');
 require_once('model/Room.php');
+require_once('model/RoomTab.php');
+require_once('model/RoomSelection.php');
+require_once('model/Stream.php');
 
 $route = @$_GET['route'];
 $route = rtrim($route, '/');
@@ -20,6 +23,7 @@ $route = rtrim($route, '/');
 $tpl = new PhpTemplate('template/page.phtml');
 $tpl->set(array(
 	'baseurl' => baseurl(),
+	'route' => $route,
 	'assemblies' => './template/assemblies/',
 
 	'conference' => new Conference(),

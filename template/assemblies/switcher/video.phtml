@@ -2,25 +2,26 @@
 	<h3>Video</h3>
 	<div class="formats row">
 
-		<? foreach($videores as $iter): ?>
+		<? foreach($room->getVideoResolutions() as $res): ?>
+			<? $selection = $room->createSelectionObject($res) ?>
 			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
 				<div class="btn-group" role="group">
-					 <div class="btn btn-primary" disabled><?=h(strtoupper($iter))?></div>
+					 <div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
 
-					<? if($has_translation): ?>
+					<? if($room->hasTranslation()): ?>
 
-						<a href="<?=h(link_player($room, $iter))?>" class="btn btn-default">
+						<a href="<?=h($selection->getLink())?>" class="btn btn-default">
 							<span class="fa fa-flag-o"></span>
 							native
 						</a>
-						<a href="<?=h(link_player($room, $iter, true))?>" class="btn btn-default">
+						<a href="<?=h($selection->getTranslatedLink())?>" class="btn btn-default">
 							<span class="fa fa-flag"></span>
 							translated
 						</a>
 
 					<? else: ?>
 
-						<a href="<?=h(link_player($room, $iter))?>" class="btn btn-default">
+						<a href="<?=h($selection->getLink())?>" class="btn btn-default">
 							<span class="fa fa-video-camera"></span>
 							video
 						</a>
@@ -37,30 +38,28 @@
 	</div>
 
 	<div class="directlinks">
-
-		<? foreach($protos as $proto): ?>
-			<h3>Directlinks (<?=h(strtoupper($proto))?>)</h3>
+		<? foreach(Stream::getVideoProtos() as $proto => $display): ?>
+			<h3>Directlinks (<?=h($display)?>)</h3>
 			<div class="row">
-				<? foreach($formats as $format): ?>
-					<? if(!startswith($proto, $format)) continue ?>
-					<? $res = substr($format, -2) ?>
+				<? foreach($room->getVideoResolutions() as $res): ?>
+					<? $selection = $room->createSelectionObject($res) ?>
 					<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-						<div class="btn-group" role="group" title="<?=h(get("FORMAT.$format"))?>">
-							<div class="btn btn-primary" disabled><?=h(strtoupper($res))?></div>
-							<? if($has_translation): ?>
+						<div class="btn-group" role="group">
+							<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
+							<? if($room->hasTranslation()): ?>
 
-								<a href="<?=h(link_stream($proto, $room, $res))?>" class="btn btn-default">
+								<a href="<?=h($room->createStreamObject($res, 'native')->getVideoUrl($proto))?>" class="btn btn-default">
 									<span class="fa fa-flag-o"></span>
 									native
 								</a>
-								<a href="<?=h(link_stream($proto, $room, $res, true))?>" class="btn btn-default">
+								<a href="<?=h($room->createStreamObject($res, 'translated')->getVideoUrl($proto))?>" class="btn btn-default">
 									<span class="fa fa-flag"></span>
 									translated
 								</a>
 
 							<? else: ?>
 
-								<a href="<?=h(link_stream($proto, $room, $res))?>" class="btn btn-default">
+								<a href="<?=h($room->createStreamObject($res)->getVideoUrl($proto))?>" class="btn btn-default">
 									<span class="fa fa-video-camera"></span>
 									video
 								</a>
@@ -71,6 +70,5 @@
 				<? endforeach ?>
 			</div>
 		<? endforeach ?>
-
 	</div>
 </div>

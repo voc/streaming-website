@@ -1,26 +1,20 @@
-<div style="width: 100%; height: 100%; max-width: <?=h($width)?>px; margin: 0 auto;">
+<div style="max-width: <?=h($stream->getVideoWidth())?>px; max-height: <?=h($stream->getVideoHeight())?>px;" class="video-wrap">
 	<video
 		autoplay="autoplay"
 		preload="auto"
-		width="<?=h($width)?>"
-		height="<?=h($height)?>"
+		width="<?=h($stream->getVideoWidth())?>"
+		height="<?=h($stream->getVideoHeight())?>"
 		style="width: 100%; height: 100%;"
 	>
-		<!--source
+		<source
 			data-plugin-type="native"
-			src="<?=h(link_stream('webm', $room, 'webm_slides', $translated))?>"
+			src="<?=h($stream->getSlidesUrl('webm'))?>"
 			title="WebM (Icecast)"
 			type="video/webm"
-		/-->
-		<source
-			data-plugin-type="flash"
-			src="<?=h(link_stream('rtmp', $room, 'slides', $translated))?>"
-			title="h.264 (RTMP)"
-			type="video/rtmp"
 		/>
 		<source
 			data-plugin-type="native"
-			src="<?=h(link_stream('hls', $room, 'slides', $translated))?>"
+			src="<?=h($stream->getSlidesUrl('hls'))?>"
 			title="h.264 (HLS)"
 			type="application/vnd.apple.mpegURL"
 		/>

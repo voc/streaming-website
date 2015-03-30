@@ -130,20 +130,6 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'DISPLAY' => 'Saal 1',
 
 		/**
-		 * Vefügbare Streaming-Formate
-		 * Die Formate müssen in $GLOBALS['CONFIG']['FORMATS'] benannt sein, es
-		 * können jedoch über die Config keine neuen erfunden werden; dazu sind
-		 * Änderungen am Code erforderlich.
-		 */
-		'FORMATS' => array(
-			'rtmp-sd', 'rtmp-hd',
-			'hls-sd', 'hls-hd',
-			'webm-sd', 'webm-hd',
-			'audio-mp3', 'audio-opus',
-			'slides',
-		),
-
-		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
@@ -163,13 +149,14 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden nur
 		 * die native-Streams verwendet, andernfalls wird native und translated
 		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
-		 *
-		 * Der Spezialwert 'stereo' (oder ein beliebiger anderer String) kann
-		 * verwendet werden, um statt s1_native_sd Streamnamen in der Art von
-		 * s1_<string>_sd, also z.B. s1_stereo_sd zu benutzen. Abgesehen von den
-		 * anderen Streamnamen verhält sich die Seite, als wäre false gesetzt.
 		 */
 		'TRANSLATION' => true,
+
+		//'STEREO' => true,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'AUDIO' => true,
+		'SLIDES' => true,
 
 		/**
 		 * Fahrplan-Ansicht auf der Raum-Seite aktivieren (boolean)
@@ -271,16 +258,16 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 	'saal2' => array(
 		'DISPLAY' => 'Saal 2',
-		'FORMATS' => array(
-			'rtmp-sd', 'rtmp-hd',
-			'hls-sd', 'hls-hd',
-			'webm-sd', 'webm-hd',
-			'audio-mp3', 'audio-opus',
-			'slides',
-		),
 		'STREAM' => 's2',
 		'PREVIEW' => true,
+
 		'TRANSLATION' => true,
+		//'STEREO' => true,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'AUDIO' => true,
+		'SLIDES' => true,
+
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Saal 2',
 		'FEEDBACK' => true,
@@ -299,16 +286,16 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 	'saalg' => array(
 		'DISPLAY' => 'Saal G',
-		'FORMATS' => array(
-			'rtmp-sd', 'rtmp-hd',
-			'hls-sd', 'hls-hd',
-			'webm-sd',
-			'audio-mp3', 'audio-opus',
-			'slides',
-		),
 		'STREAM' => 's3',
 		'PREVIEW' => true,
+
 		'TRANSLATION' => true,
+		//'STEREO' => true,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'AUDIO' => true,
+		'SLIDES' => true,
+
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Saal G',
 		'FEEDBACK' => true,
@@ -327,16 +314,16 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 	'saal6' => array(
 		'DISPLAY' => 'Saal 6',
-		'FORMATS' => array(
-			'rtmp-sd', 'rtmp-hd',
-			'hls-sd', 'hls-hd',
-			'webm-sd', 'webm-hd',
-			'audio-mp3', 'audio-opus',
-			'slides',
-		),
 		'STREAM' => 's4',
 		'PREVIEW' => true,
+
 		'TRANSLATION' => true,
+		//'STEREO' => true,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'AUDIO' => true,
+		'SLIDES' => true,
+
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Saal 6',
 		'FEEDBACK' => true,
@@ -356,28 +343,23 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 	'lounge' => array(
 		'DISPLAY' => 'Lounge',
-		'FORMATS' => array(
-			'music-mp3', 'music-opus',
-		),
+		'MUSIC' => true,
 	),
 	'ambient' => array(
 		'DISPLAY' => 'Ambient',
-		'FORMATS' => array(
-			'music-mp3', 'music-opus',
-		),
+		'MUSIC' => true,
 	),
 
 
 	'sendezentrum' => array(
 		'DISPLAY' => 'Sendezentrum',
-		'FORMATS' => array(
-			'rtmp-sd', 'rtmp-hd',
-			'hls-sd', 'hls-hd',
-			'webm-sd', 'webm-hd',
-			'audio-mp3', 'audio-opus',
-		),
 		'STREAM' => 's5',
-		'TRANSLATION' => false,
+
+		//'STEREO' => true,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'AUDIO' => true,
+
 		'SCHEDULE' => true,
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
@@ -489,8 +471,11 @@ $GLOBALS['CONFIG']['IRC'] = array(
 
 	/**
 	 * URL für die IRC-Links.
+	 * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
+	 * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#31C3-%s'
+	 * verwendet werden.
 	 *
-	 * %s wird durch den Raum-Slug ersetzt.
+	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
 	'URL' => 'irc://irc.hackint.eu:6667/31C3-%s',
@@ -522,36 +507,4 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
 	'TEXT' => '#31C3 #%s',
-);
-
-
-
-
-/**
- * Beschreibung der Streaming-Formate
- *
- * Achtung: Über diese Sektion können keine zusätzlichen Formate erstellt werden -- dazu
- * sind Code-Anpassungen erforderlich.
- *
- * In diesem Abschnitt können ausschließlich die Anzeigetexte für die verschiedenen
- * Streaming-Formate bearbeitet werden. Für jedes Streamingformat das in einem Raum
- * verwendet wird müssen hier Texte hinterlegt sein.
- */
-$GLOBALS['CONFIG']['FORMAT'] = array(
-	'rtmp-sd' => '1024x576, h264+AAC im FLV-Container via RTMP, 800 kBit/s',
-	'rtmp-hd' => '1920x1080, h264+AAC im FLV-Container via RTMP, 3 MBit/s',
-
-	'hls-sd' => '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s',
-	'hls-hd' => '1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s',
-
-	'webm-sd' => '1024x576, VP8+Vorbis in WebM, 800 kBit/s',
-	'webm-hd' => '1920x1080, VP8+Vorbis in WebM, 3 MBit/s',
-
-	'audio-mp3' => 'MP3-Audio, 96 kBit/s',
-	'audio-opus' => 'Opus-Audio, 64 kBit/s',
-
-	'music-mp3' => 'MP3-Audio, 320 kBit/s',
-	'music-opus' => 'Opus-Audio, 128 kBit/s',
-
-	'slides' => '1024x576, h264+AAC, <500 kBit/s',
 );

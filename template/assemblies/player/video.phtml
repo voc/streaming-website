@@ -1,34 +1,22 @@
-<div style="max-width: <?=h($width)?>px; max-height: <?=h($height)?>px;" class="video-wrap">
+<div style="max-width: <?=h($stream->getVideoWidth())?>px; max-height: <?=h($stream->getVideoHeight())?>px;" class="video-wrap">
 	<video
 		autoplay="autoplay"
 		preload="auto"
-		width="<?=h($width)?>"
-		height="<?=h($height)?>"
+		width="<?=h($stream->getVideoWidth())?>"
+		height="<?=h($stream->getVideoHeight())?>"
 		style="width: 100%; height: 100%;"
 	>
-		<? if(in_array("webm-$selection", $formats)): ?>
-			<source
-				data-plugin-type="native"
-				src="<?=h(link_stream('webm', $room, $selection, $translated))?>"
-				title="WebM (Icecast)"
-				type="video/webm"
-			/>
-		<? endif ?>
-		<? if(in_array("hls-$selection", $formats)): ?>
-			<source
-				data-plugin-type="native"
-				src="<?=h(link_stream('hls', $room, $hlsformat, $translated))?>"
-				title="h.264 (HLS)"
-				type="application/vnd.apple.mpegURL"
-			/>
-		<? endif ?>
-		<? if(in_array("rtmp-$selection", $formats)): ?>
-			<source
-				data-plugin-type="flash"
-				src="<?=h(link_stream('rtmp', $room, $selection, $translated))?>"
-				title="h.264 (RTMP)"
-				type="video/rtmp"
-			/>
-		<? endif ?>
+		<source
+			data-plugin-type="native"
+			src="<?=h($stream->getVideoUrl('webm'))?>"
+			title="WebM (Icecast)"
+			type="video/webm"
+		/>
+		<source
+			data-plugin-type="native"
+			src="<?=h($stream->getVideoUrl('hls'))?>"
+			title="h.264 (HLS)"
+			type="application/vnd.apple.mpegURL"
+		/>
 	</video>
 </div>

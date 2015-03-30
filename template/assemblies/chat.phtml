@@ -1,14 +1,15 @@
-<? if(room_has_irc($room)): ?>
+<? if($room->hasIrc()): ?>
 	<div>
-		<a class="btn btn-primary irclink" href="<?=h(room_get_irc_url($room))?>" target="_blank">
-			<span class="fa fa-comment"></span> <?=h(room_get_irc_display($room))?>
+		<a class="btn btn-primary irclink" href="<?=h($room->getIrcUrl())?>" target="_blank">
+			<span class="fa fa-comment"></span> <?=h($room->getIrcDisplay())?>
 		</a>
 	</div>
 <? endif ?>
-<? if(room_has_twitter($room)): ?>
+
+<? if($room->hasTwitter($room)): ?>
 	<div>
-		<a class="btn twitterlink" href="https://twitter.com/intent/tweet?text=<?=h(rawurlencode(room_get_twitter_hashtag($room)))?>" target="_blank">
-			<span class="fa fa-twitter"></span> <?=h(room_get_twitter_display($room))?>
+		<a class="btn twitterlink" href="<?=h($room->getTwitterUrl())?>" target="_blank">
+			<span class="fa fa-twitter"></span> <?=h($room->getTwitterDisplay())?>
 		</a>
 	</div>
 <? endif ?>

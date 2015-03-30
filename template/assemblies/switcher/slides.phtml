@@ -1,5 +1,6 @@
 <div class="container-fluid">
-	<? if($has_translation): ?>
+	<? $selection = $room->createSelectionObject('audio') ?>
+	<? if($room->hasTranslation()): ?>
 		<h3>Slides</h3>
 		<div class="formats row">
 
@@ -7,11 +8,11 @@
 				<div class="btn-group" role="group">
 					<div class="btn btn-primary" disabled>Slides</div>
 
-					<a href="<?=h(link_player($room, 'slides'))?>" class="btn btn-default">
+					<a href="<?=h($selection->getLink())?>" class="btn btn-default">
 						<span class="fa fa-flag-o"></span>
 						native
 					</a>
-					<a href="<?=h(link_player($room, 'slides', true))?>" class="btn btn-default">
+					<a href="<?=h($selection->getTranslatedLink())?>" class="btn btn-default">
 						<span class="fa fa-flag"></span>
 						translated
 					</a>
@@ -22,38 +23,39 @@
 		</div>
 	<? endif ?>
 
-	<h3>Directlinks</h3>
-	<div class="formats row">
 
-		<? foreach(array_intersect($protos, array('rtmp', 'hls')) as $proto): ?>
-			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-				<div class="btn-group" role="group" title="<?=h(get("FORMAT.slides"))?>">
-					<div class="btn btn-primary" disabled><?=h(strtoupper($proto))?></div>
 
-					<? if($has_translation): ?>
+	<div class="directlinks">
 
-						<a href="<?=h(link_stream($proto, $room, 'slides'))?>" class="btn btn-default">
-							<span class="fa fa-flag-o"></span>
-							native
-						</a>
-						<a href="<?=h(link_stream($proto, $room, 'slides', true))?>" class="btn btn-default">
-							<span class="fa fa-flag"></span>
-							translated
-						</a>
+		<? foreach(Stream::getSlidesProtos() as $proto => $display): ?>
+			<h3>Directlinks (<?=h($display)?>)</h3>
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+					<div class="btn-group" role="group" title="<?=h(get("FORMAT.slides"))?>">
+						<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
+						<? if($room->hasTranslation()): ?>
 
-					<? else: ?>
+							<a href="<?=h($room->createStreamObject('slides', 'native')->getSlidesUrl($proto))?>" class="btn btn-default">
+								<span class="fa fa-flag-o"></span>
+								native
+							</a>
+							<a href="<?=h($room->createStreamObject('slides', 'translated')->getSlidesUrl($proto))?>" class="btn btn-default">
+								<span class="fa fa-flag"></span>
+								translated
+							</a>
 
-						<a href="<?=h(link_stream($proto, $room, 'slides'))?>" class="btn btn-default">
-							<span class="fa fa-picture-o"></span>
-							slides
-						</a>
+						<? else: ?>
 
-					<? endif ?>
+							<a href="<?=h($room->createStreamObject('slides')->getSlidesUrl($proto))?>" class="btn btn-default">
+								<span class="fa fa-picture-o"></span>
+								slides
+							</a>
 
+						<? endif ?>
+					</div>
 				</div>
 			</div>
 		<? endforeach ?>
 
 	</div>
-
 </div>

@@ -1,17 +1,17 @@
-<div class="container <?=h($tab)?> <?=h($selection)?> <?=h($language)?>">
+<div class="container <?=h($stream->getTab())?> <?=h($stream->getSelection())?> <?=h($stream->getLanguage())?>">
 	<div class="row headline">
 		<div class="col-xs-12">
-			<h1 data-room="<?=h(get("ROOMS.$room.DISPLAY"))?>"><?=h($title)?></h1>
+			<h1 data-room="<?=h($room->getDisplay())?>"><?=h($stream->getDisplay())?></h1>
 		</div>
 	</div>
 
 	<ul class="nav nav-player nav-tabs nav-justified">
-		<? foreach($tabs as $iter): ?>
+		<? foreach($room->getTabs() as $tab): ?>
 			<li
-				<? if($tab == $iter):?>class="active"<? endif ?>
+				<? if($tab->getTab() == $stream->getTab()): ?>class="active"<? endif ?>
 			>
-				<a href="<?=h(link_player($room, $iter))?>">
-					<?=h(ucfirst($iter))?>
+				<a href="<?=h($tab->getLink())?>">
+					<?=h($tab->getDisplay())?>
 				</a>
 			</li>
 		<? endforeach ?>
@@ -19,7 +19,7 @@
 
 	<div class="player-wrap tab-content">
 		<div role="tabpanel" class="tab-pane active">
-			<? include("$assemblies/player/$tab.phtml") ?>
+			<? require("$assemblies/player/".$stream->getPlayerType().".phtml") ?>
 		</div>
 	</div>
 
@@ -27,17 +27,17 @@
 		<li class="active">
 			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
 		</li>
-		<? if(room_has_chat($room)): ?>
+		<? if($room->hasChat()): ?>
 			<li>
 				<a href="#chat" role="tab" data-toggle="tab">Chat</a>
 			</li>
 		<? endif ?>
-		<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
+		<? if($room->hasSchedule()): ?>
 			<li>
-				<a href="#program" role="tab" data-toggle="tab">Program</a>
+				<a href="#schedule" role="tab" data-toggle="tab">Schedule</a>
 			</li>
 		<? endif ?>
-		<? if(get("ROOMS.$room.FEEDBACK") && has("FEEDBACK")): ?>
+		<? if($room->hasFeedback()): ?>
 			<li>
 				<a href="#feedback" role="tab" data-toggle="tab">Feedback</a>
 			</li>
@@ -46,21 +46,21 @@
 
 	<div class="functions-wrap tab-content">
 		<div role="tabpanel" class="tab-pane active" id="switcher">
-			<? include("$assemblies/switcher/$tab.phtml") ?>
+			<? require("$assemblies/switcher/".$stream->getPlayerType().".phtml") ?>
 		</div>
-		<? if(room_has_chat($room)): ?>
+		<? if($room->hasChat()): ?>
 			<div role="tabpanel" class="tab-pane" id="chat">
-				<? include("$assemblies/chat.phtml") ?>
+				<? require("$assemblies/chat.phtml") ?>
 			</div>
 		<? endif ?>
-		<? if(get("ROOMS.$room.SCHEDULE") && has("SCHEDULE")): ?>
+		<? if($room->hasSchedule()): ?>
 			<div role="tabpanel" class="tab-pane" id="program">
-				<? include("$assemblies/program.phtml") ?>
+				<? require("$assemblies/program.phtml") ?>
 			</div>
 		<? endif ?>
-		<? if(get("ROOMS.$room.FEEDBACK") && has("FEEDBACK")): ?>
+		<? if($room->hasFeedback()): ?>
 			<div role="tabpanel" class="tab-pane" id="feedback">
-				<? include("$assemblies/feedback.phtml") ?>
+				<? require("$assemblies/feedback.phtml") ?>
 			</div>
 		<? endif ?>
 	</div>

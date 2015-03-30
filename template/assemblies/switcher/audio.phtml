@@ -1,5 +1,6 @@
 <div class="container-fluid">
-	<? if($has_translation): ?>
+	<? $selection = $room->createSelectionObject('audio') ?>
+	<? if($room->hasTranslation()): ?>
 		<h3>Audio</h3>
 		<div class="formats row">
 
@@ -7,11 +8,11 @@
 				<div class="btn-group" role="group">
 					<div class="btn btn-primary" disabled>Audio</div>
 
-					<a href="<?=h(link_player($room, 'audio'))?>" class="btn btn-default">
+					<a href="<?=h($selection->getLink())?>" class="btn btn-default">
 						<span class="fa fa-flag-o"></span>
 						native
 					</a>
-					<a href="<?=h(link_player($room, 'audio', true))?>" class="btn btn-default">
+					<a href="<?=h($selection->getTranslatedLink())?>" class="btn btn-default">
 						<span class="fa fa-flag"></span>
 						translated
 					</a>
@@ -23,35 +24,35 @@
 	<? endif ?>
 
 
-	<h3>Directlinks</h3>
-	<div class="formats row">
 
-		<? foreach(array_intersect($formats, array('audio-mp3', 'audio-opus', 'audio-ogg')) as $format): ?>
-			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-				<? $proto = substr($format, 6) ?>
-				<div class="btn-group" role="group" title="<?=h(get("FORMAT.$format"))?>">
-					<div class="btn btn-primary" disabled><?=h(strtoupper($proto))?></div>
+	<div class="directlinks">
 
-						<? if($has_translation): ?>
+		<? foreach(Stream::getAudioProtos() as $proto => $display): ?>
+			<h3>Directlinks (<?=h($display)?>)</h3>
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+					<div class="btn-group" role="group">
+						<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
+						<? if($room->hasTranslation()): ?>
 
-							<a href="<?=h(link_stream('audio', $room, $proto))?>" class="btn btn-default">
+							<a href="<?=h($room->createStreamObject('audio', 'native')->getAudioUrl($proto))?>" class="btn btn-default">
 								<span class="fa fa-flag-o"></span>
 								native
 							</a>
-							<a href="<?=h(link_stream('audio', $room, $proto, true))?>" class="btn btn-default">
+							<a href="<?=h($room->createStreamObject('audio', 'translated')->getAudioUrl($proto))?>" class="btn btn-default">
 								<span class="fa fa-flag"></span>
 								translated
 							</a>
 
 						<? else: ?>
 
-							<a href="<?=h(link_stream('audio', $room, $proto))?>" class="btn btn-default">
+							<a href="<?=h($room->createStreamObject('audio')->getAudioUrl($proto))?>" class="btn btn-default">
 								<span class="fa fa-volume-up"></span>
-								audio
+								video
 							</a>
 
 						<? endif ?>
-
+					</div>
 				</div>
 			</div>
 		<? endforeach ?>
