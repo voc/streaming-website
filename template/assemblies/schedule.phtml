@@ -24,27 +24,28 @@
 
 						<? else: ?>
 
+							<? $scheduleRoom = Room::createIfExists($roomname) ?>
 							<h4><?=h(strftime('%H:%M', $event['start']))?>
 								&ndash;
 								<?=h(strftime('%H:%M', $event['end']))?>
 								&nbsp;in&nbsp;
-								<? /*if(has("ROOMS.$roomname")): ?>
-									<a href="<?=h(link_player($roomname))?>">
-										<?=h(get("ROOMS.$roomname.DISPLAY"))?>
+								<? if($scheduleRoom): ?>
+									<a href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>">
+										<?=h($scheduleRoom->getDisplay())?>
 									</a>
-								<? else:*/ ?>
+								<? else: ?>
 									<?=h($roomname) ?>
-								<? /*endif*/ ?>
+								<? endif ?>
 							</h4>
 							<h3>
-								<? /*if(has("ROOMS.$roomname")): ?>
+								<? if($scheduleRoom): ?>
 									<a
-										href="<?=h(link_player($roomname))?>"
-										title="Switch to <?=h(get("ROOMS.$roomname.DISPLAY"))?>"
+										href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>"
+										title="Switch to <?=h($scheduleRoom->getDisplay())?>"
 									><?=h($event['title'])?></a>
-								<? else:*/ ?>
+								<? else: ?>
 									<?=h($event['title'])?>
-								<? /*endif*/ ?>
+								<? endif ?>
 							</h3>
 							<? if($event['speaker']): ?>
 								<h5>by&nbsp;<?=h($event['speaker'])?></h5>
