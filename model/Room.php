@@ -12,6 +12,19 @@ class Room extends ModelBase
 		$this->slug = $slug;
 	}
 
+	public static function exists($slug)
+	{
+		return ModelBase::staticHas('ROOMS.'.$slug);
+	}
+
+	public static function createIfExists($room)
+	{
+		if(Room::exists($room))
+			return new Room($room);
+
+		return null;
+	}
+
 
 	public function getSlug() {
 		return $this->slug;
