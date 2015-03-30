@@ -183,11 +183,11 @@ $(function() {
 	$(window).on('hashchange', setTabToHash).trigger('hashchange');
 });
 
-// programm-timeline
+// schedule-timeline
 $(function() {
 	var
-		$program = $('.program'),
-		$now = $program.find('.now'),
+		$schedule = $('.schedule'),
+		$now = $schedule.find('.now'),
 		scrollLock = false,
 		rewindTimeout,
 
@@ -203,7 +203,7 @@ $(function() {
 		/* offset to the browsers realtime (for simulation) */
 		offset = $('.js-settings').data('scheduleoffset');
 
-	$program.on('mouseenter mouseleave touchstart touchend', function(e) {
+	$schedule.on('mouseenter mouseleave touchstart touchend', function(e) {
 		if(e.type == 'mouseleave' || e.type == 'touchend') {
 			rewindTimeout = setTimeout(function() {
 				scrollLock = false;
@@ -214,7 +214,7 @@ $(function() {
 		}
 	});
 
-	// program now-marker & scrolling
+	// schedule now-marker & scrolling
 	function updateProgramView(initial) {
 		var
 			// corrected "now" timestamp in unix-counting (seconds, not microseconds)
@@ -223,7 +223,7 @@ $(function() {
 		// only check the first room (shouldn't matter anyway)
 		// find the newest block that starts in the past
 		// that's the one that is most probably currently still running
-		var $block = $program
+		var $block = $schedule
 			.find('.room')
 			.first()
 			.find('.block')
@@ -242,16 +242,16 @@ $(function() {
 			// place of the now-marker between 0 and 1 within this block
 			normalized = Math.max(0, Math.min(1, (now - start) / (end - start))),
 
-			// projected to pixels with respect to the programms left end
+			// projected to pixels with respect to the schedules left end
 			px = $block.position().left + ($block.outerWidth() * normalized),
 
-			// visible width of the program display
-			displayw = $program.width(),
+			// visible width of the schedule display
+			displayw = $schedule.width(),
 
 			// current scroll position
-			scrollx = $program.scrollLeft(),
+			scrollx = $schedule.scrollLeft(),
 
-			// distance of the now-marker to the left border of the program display
+			// distance of the now-marker to the left border of the schedule display
 			px_in_display = px - scrollx;
 
 		//console.log($block.get(0), new Date(start*1000), new Date(now*1000), new Date(end*1000), normalized, px);
@@ -262,14 +262,14 @@ $(function() {
 			return;
 
 		if(
-			// now marker is > 2/3 of the program-display-width
+			// now marker is > 2/3 of the schedule-display-width
 			px_in_display > (displayw * 2/3) || 
 
-			// now marker is <1/7 of the program-display-width
+			// now marker is <1/7 of the schedule-display-width
 			px_in_display < (displayw/7)
 		) {
-			// scroll program so that now-marker is as 1/5 of the screen
-			$program.stop().scrollTo(px - displayw/6, {
+			// scroll schedule so that now-marker is as 1/5 of the screen
+			$schedule.stop().scrollTo(px - displayw/6, {
 				axis: 'x',
 				duration: initial ? 0 : scrollDuration,
 			});
@@ -277,7 +277,7 @@ $(function() {
 	}
 
 
-	// when on programs tab
+	// when on schedules tab
 	var updateInterval;
 	function on() {
 		// initial trigger
@@ -291,24 +291,24 @@ $(function() {
 		clearInterval(updateInterval);
 	}
 
-	if(window.location.hash == '#program')
+	if(window.location.hash == '#schedule')
 		on();
 
 	// trigger when a tab was changed
 	$('.nav-tabs').on('shown.bs.tab', 'a', function(e) {
-		if(e.target.hash == '#program')
+		if(e.target.hash == '#schedule')
 			on();
 		else
 			off();
 	});
 });
 
-// startpage program teaser
+// startpage schedule teaser
 $(function() {
 	var
 		updateTimer = 5*1000, /* update display every 5 seconds */
-		refetchTimer = 10*60*1000, /* re-request current / upcoming program every 10 minutes */
-		programData = {},
+		refetchTimer = 10*60*1000, /* re-request current / upcoming schedule every 10 minutes */
+		scheduleData = {},
 		$lecture = $('.room.has-schedule'),
 
 		/* offset to the browsers realtime (for simulation) */
@@ -320,10 +320,10 @@ $(function() {
 
 	function fetchProgram() {
 		$.ajax({
-			url: 'program.json',
+			url: 'schedule.json',
 			dataType: 'json',
 			success: function(data) {
-				programData = data;
+				scheduleData = data;
 				updateProgtamTeaser();
 			},
 
@@ -339,7 +339,7 @@ $(function() {
 			// corrected "now" timestamp in unix-counting (seconds, not microseconds)
 			now = (Date.now() / 1000) + offset;
 
-		$.each(programData, function(room, talks) {
+		$.each(scheduleData, function(room, talks) {
 			var currentTalk, nextTalk;
 
 			$.each(talks, function(room, talk) {

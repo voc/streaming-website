@@ -54,8 +54,8 @@
 			</div>
 		<? endif ?>
 		<? if($room->hasSchedule()): ?>
-			<div role="tabpanel" class="tab-pane" id="program">
-				<? require("$assemblies/program.phtml") ?>
+			<div role="tabpanel" class="tab-pane" id="schedule">
+				<? require("$assemblies/schedule.phtml") ?>
 			</div>
 		<? endif ?>
 		<? if($room->hasFeedback()): ?>

@@ -1,18 +1,12 @@
-<?
-
-foreach(reset($program) as $event)
-	$width += $event['duration'];
-
-?>
-<div class="program scroll-container">
+<div class="schedule scroll-container">
 	<div class="scroll-element">
 		<div class="now"><span>now</span></div>
-		<? foreach($program as $roomname => $events): ?>
-			<div class="room <? if($roomname == get("ROOMS.$room.SCHEDULE_NAME", $room)): ?>highlight<? endif ?>" style="width: <?=$width / get('SCHEDULE.SCALE')?>px">
+		<? foreach($schedule->getSchedule() as $roomname => $events): ?>
+			<div class="room <? if($roomname == $room->getSlug()): ?>highlight<? endif ?>" style="width: <?=ceil($schedule->getDurationSum() / $schedule->getScale())?>px">
 				<? foreach($events as $event): ?>
 					<div
 						class="block <?=h(@$event['special'] ?: 'event')?>"
-						style="width: <?=h($event['duration'] / get('SCHEDULE.SCALE'))?>px"
+						style="width: <?=h(round($event['duration'] / $schedule->getScale()))?>px"
 						data-start="<?=intval($event['start'])?>"
 						data-end="<?=intval($event['end'])?>"
 					>
@@ -34,23 +28,23 @@ foreach(reset($program) as $event)
 								&ndash;
 								<?=h(strftime('%H:%M', $event['end']))?>
 								&nbsp;in&nbsp;
-								<? if(has("ROOMS.$roomname")): ?>
+								<? /*if(has("ROOMS.$roomname")): ?>
 									<a href="<?=h(link_player($roomname))?>">
 										<?=h(get("ROOMS.$roomname.DISPLAY"))?>
 									</a>
-								<? else: ?>
+								<? else:*/ ?>
 									<?=h($roomname) ?>
-								<? endif ?>
+								<? /*endif*/ ?>
 							</h4>
 							<h3>
-								<? if(has("ROOMS.$roomname")): ?>
+								<? /*if(has("ROOMS.$roomname")): ?>
 									<a
 										href="<?=h(link_player($roomname))?>"
 										title="Switch to <?=h(get("ROOMS.$roomname.DISPLAY"))?>"
 									><?=h($event['title'])?></a>
-								<? else: ?>
+								<? else:*/ ?>
 									<?=h($event['title'])?>
-								<? endif ?>
+								<? /*endif*/ ?>
 							</h3>
 							<? if($event['speaker']): ?>
 								<h5>by&nbsp;<?=h($event['speaker'])?></h5>

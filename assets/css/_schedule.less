@@ -1,4 +1,4 @@
-.program {
+.schedule {
 	&.scroll-container {
 		overflow: hidden;
 		overflow-x: scroll;
@@ -17,7 +17,7 @@
 		left: 0;
 		width: 150px;
 		height: 100%;
-		background-color: @program-now-bg;
+		background-color: @schedule-now-bg;
 		font-size: 14px;
 
 		//z-index: -5;
@@ -26,7 +26,7 @@
 			display: block;
 			position: absolute;
 			right: -28px;
-			color: @program-now;
+			color: @schedule-now;
 		}
 	}
 
@@ -42,7 +42,7 @@
 
 
 		padding: 10px;
-		border: 1px solid @program-border;
+		border: 1px solid @schedule-border;
 
 		h3 {
 			margin: 0;
@@ -58,7 +58,7 @@
 		h4 {
 
 			margin: 3px 0;
-			color: @program-room;
+			color: @schedule-room;
 			font-size: 14px;
 
 			@media (max-width: @screen-xs-max) {
@@ -66,7 +66,7 @@
 			}
 
 			a {
-				color: @program-room;
+				color: @schedule-room;
 			}
 		}
 
@@ -75,7 +75,7 @@
 				margin: 0;
 			}
 
-			color: @program-author;
+			color: @schedule-author;
 		}
 
 		&.event h3 {
@@ -84,25 +84,25 @@
 
 		&.gap {
 			background-image: url("@{img}/stripes/gap.png");
-			background-color: @program-gap-bg;
-			color: @program-gap;
-			text-shadow: 0 0 3px @program-gap;
+			background-color: @schedule-gap-bg;
+			color: @schedule-gap;
+			text-shadow: 0 0 3px @schedule-gap;
 		}
 
 		&.daychange { 
 			background-image: url("@{img}/stripes/gap.png");
-			background-color: @program-daychange-bg;
-			color: @program-daychange;
-			text-shadow: 0 0 3px @program-daychange;
+			background-color: @schedule-daychange-bg;
+			color: @schedule-daychange;
+			text-shadow: 0 0 3px @schedule-daychange;
 		}
 
 		&.pause {
-			background-color: @program-pause-bg;
-			color: @program-pause;
+			background-color: @schedule-pause-bg;
+			color: @schedule-pause;
 		}
 	}
 
 	.room.highlight .block {
-		background-color: @program-selected-room;
+		background-color: @schedule-selected-room;
 	}
 }
