@@ -199,7 +199,7 @@ class Room extends ModelBase
 	{
 		$selections = array();
 		foreach($this->getSelectionNames() as $selection)
-			$selections[$tab] = $this->createSelectionObject($selection);
+			$selections[$selection] = $this->createSelectionObject($selection);
 
 		return $selections;
 	}
