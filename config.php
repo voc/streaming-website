@@ -152,11 +152,68 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 */
 		'TRANSLATION' => true,
 
-		//'STEREO' => true,
+		/**
+		 * stereo-Tonspur statt native-Tonspur benutzen
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden
+		 * die "native"-Mono-Streams verwendet, andernfalls wird statt "native"
+		 * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
+		 * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
+		 */
+		'STEREO' => false,
+
+		/**
+		 * SD-Video-Stream (1024×576) verfügbar
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein SD-Video
+		 * angeboten. Wird auch HD_VIDEO auf false gesetzt oder auskommentiert ist, wird
+		 * für diesen Raum überhaupt kein Video angeboten.
+		 *
+		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
+		 * als Default-Stream angenommen.
+		 */
 		'SD_VIDEO' => true,
+
+		/**
+		 * HD-Video-Stream (1920×1080) verfügbar
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein HD-Video
+		 * angeboten. Wird auch SD_VIDEO auf false gesetzt oder auskommentiert ist, wird
+		 * für diesen Raum überhaupt kein Video angeboten.
+		 *
+		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
+		 * als Default-Stream angenommen.
+		 */
 		'HD_VIDEO' => true,
-		'AUDIO' => true,
+
+		/**
+		 * Slide-Only-Stream (1024×576) verfügbar
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Slide-Only-
+		 * Stream angeboten. Für diesen Raum wird dann keim Slides-Tab angeboten.
+		 *
+		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
+		 * Default-Stream angenommen.
+		 */
 		'SLIDES' => true,
+
+		/**
+		 * Audio-Only-Stream verfügbar
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Audio-Only-
+		 * Stream angeboten. Für diesen Raum wird dann keim Audio-Tab angeboten.
+		 *
+		 * In diesem Fall wird, sofern aktiviert, Musik als Default-Stream angenommen.
+		 */
+		'AUDIO' => true,
+
+		/**
+		 * Musik-Stream verfügbar
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Musik-Stream
+		 * angeboten. Für diesen Raum wird dann keim Musik-Tab angeboten.
+		 */
+		'MUSIC' => false,
 
 		/**
 		 * Fahrplan-Ansicht auf der Raum-Seite aktivieren (boolean)
@@ -267,6 +324,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
 		'SLIDES' => true,
+		'MUSIC' => false,
 
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Saal 2',
@@ -295,6 +353,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
 		'SLIDES' => true,
+		'MUSIC' => false,
 
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Saal G',
@@ -323,6 +382,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
 		'SLIDES' => true,
+		'MUSIC' => false,
 
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Saal 6',
@@ -355,7 +415,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'DISPLAY' => 'Sendezentrum',
 		'STREAM' => 's5',
 
-		//'STEREO' => true,
+		'STEREO' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
