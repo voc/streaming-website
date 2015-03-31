@@ -1,6 +1,9 @@
 <?php
 
 $feedback = new Feedback();
+if(!$feedback->isEnabled())
+	throw new NotFoundException('Feedback is disabled');
+
 $info = $_POST;
 
 if(!$feedback->validate($info)) {

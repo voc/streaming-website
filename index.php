@@ -54,17 +54,11 @@ try {
 
 	else if(preg_match('@^feedback$@', $route, $m))
 	{
-		if(!has('FEEDBACK'))
-			return include('view/404.php');
-
 		include('view/feedback.php');
 	}
 
 	else if(preg_match('@^feedback/read$@', $route, $m))
 	{
-		if(!has('FEEDBACK'))
-			return include('view/404.php');
-
 		include('view/feedback-read.php');
 	}
 
