@@ -63,8 +63,4 @@ class Conference extends ModelBase
 	public function getFooterHtml() {
 		return $this->get('CONFERENCE.FOOTER_HTML');
 	}
-
-	public function getAboutUrl() {
-		return 'about/';
-	}
 }
