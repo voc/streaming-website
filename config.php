@@ -212,6 +212,9 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 *
 		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Musik-Stream
 		 * angeboten. Für diesen Raum wird dann keim Musik-Tab angeboten.
+		 *
+		 * Ist kein einziger Stream angebote, wird statt der Stream-Seite ein 404-Fehler
+		 * angezeigt.
 		 */
 		'MUSIC' => false,
 

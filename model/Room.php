@@ -251,6 +251,9 @@ class Room extends ModelBase
 	{
 		$selections = $this->getSelectionNames();
 
+		if(count($selections) == 0)
+			throw new NotFoundException('No Streams activated');
+
 		// default page
 		if(!$selection)
 			$selection = $selections[0];
