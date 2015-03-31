@@ -6,15 +6,16 @@ if(!$feedback->isEnabled())
 
 $info = $_POST;
 
-if(!$feedback->validate($info)) {
-	echo $tpl->render(array(
-		'page' => 'feedback',
-		'title' => 'Give Feedback',
-		'room' => null,
-	));
-}
-else
+if($feedback->validate($info))
 {
 	$feedback->store($info);
-	echo 1;
+
+	header('Content-Type: application/json');
+	echo json_encode(true);
+	exit;
 }
+
+echo $tpl->render(array(
+	'page' => 'feedback',
+	'title' => 'Give Feedback',
+));
