@@ -147,7 +147,7 @@ MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, medi
 $(function() {
 	(function(strings) {
 		strings['en-US'] = {
-			'Download File': 'Open RTMP-Stream in Desktop-Player'
+			'Download File': 'Open Stream in Desktop-Player'
 		}
 	})(mejs.i18n.locale.strings);
 
