@@ -11,7 +11,7 @@ class Schedule extends ModelBase
 	}
 
 	public function getScale() {
-		return floatval(get('SCHEDULE.SCALE', 7));
+		return floatval($this->get('SCHEDULE.SCALE', 7));
 	}
 
 	private function fetchSchedule()
@@ -205,12 +205,12 @@ class Schedule extends ModelBase
 
 	private function isCacheEnabled()
 	{
-		return has('SCHEDULE.CACHE') && function_exists('apc_fetch') && function_exists('apc_store');
+		return $this->has('SCHEDULE.CACHE') && function_exists('apc_fetch') && function_exists('apc_store');
 	}
 
 	private function getCacheDuration()
 	{
-		return get('SCHEDULE.CACHE', 60*10 /* 10 minutes */);
+		return $this->get('SCHEDULE.CACHE', 60*10 /* 10 minutes */);
 	}
 
 	private $localCache = null;
