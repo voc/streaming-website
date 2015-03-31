@@ -1,7 +1,7 @@
 <div class="container about">
 	<h1>About the Live-Streams and Recordings</h1>
 	<p>
-		Lecture recording and streaming at <?=h(get('CONFERENCE.TITLE'))?> is organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>.
+		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> is organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>.
 	</p>
 	<p>
 		If you like what we're doing, you can flattr us:<br /><br />
@@ -17,8 +17,8 @@
 	</p>
 	<p>
 		Although the licence permits it, we would like to ask you to don't distribute stream dumps. We try to release finished cuts of recordings as quickly as possible
-		<? if(has('OVERVIEW.RELEASES')): ?>
-			on <a href="<?=h(get('OVERVIEW.RELEASES'))?>"><?=h(get('OVERVIEW.RELEASES'))?></a>
+		<? if($conference->hasReleases()): ?>
+			on <a href="<?=h($conference->getReleasesUrl())?>"><?=h($conference->getReleasesUrl())?></a>
 		<? endif ?>.
 		Early releases of incomplete stream dumps without audio translation, subtitles, intros, <a href="https://auphonic.com/">unprocessed audio</a> and missing meta data is not what we have in mind when we spend three month of preparation in our spare time.
 	</p>
