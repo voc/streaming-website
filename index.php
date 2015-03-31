@@ -46,9 +46,6 @@ try {
 
 	else if(preg_match('@^program.json$@', $route, $m))
 	{
-		if(!has('SCHEDULE'))
-			return include('view/404.php');
-
 		include('view/program-json.php');
 	}
 
