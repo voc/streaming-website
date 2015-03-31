@@ -30,7 +30,7 @@ class PhpTemplate
 		unset($___data);
 
 		ob_start();
-		include($this->file);
+		require($this->file);
 		return ob_get_clean();
 	}
 	

@@ -36,46 +36,46 @@ ob_start();
 try {
 	if($route == '')
 	{
-		include('view/overview.php');
+		require('view/overview.php');
 	}
 
 	else if(preg_match('@^about$@', $route, $m))
 	{
-		include('view/about.php');
+		require('view/about.php');
 	}
 
 	else if(preg_match('@^schedule.json$@', $route, $m))
 	{
-		include('view/schedule-json.php');
+		require('view/schedule-json.php');
 	}
 
 	else if(preg_match('@^feedback$@', $route, $m))
 	{
-		include('view/feedback.php');
+		require('view/feedback.php');
 	}
 
 	else if(preg_match('@^feedback/read$@', $route, $m))
 	{
-		include('view/feedback-read.php');
+		require('view/feedback-read.php');
 	}
 
 	else if(preg_match('@^relive/([0-9]+)$@', $route, $m))
 	{
 		if(!has('OVERVIEW.RELIVE_JSON'))
-			return include('view/404.php');
+			return require('view/404.php');
 
 		$_GET = array(
 			'id' => $m[1],
 		);
-		include('view/relive-player.php');
+		require('view/relive-player.php');
 	}
 
 	else if(preg_match('@^relive$@', $route, $m))
 	{
 		if(!has('OVERVIEW.RELIVE_JSON'))
-			return include('view/404.php');
+			return require('view/404.php');
 
-		include('view/relive.php');
+		require('view/relive.php');
 	}
 
 	else if(preg_match('@^([^/]+)$@', $route, $m))
@@ -85,7 +85,7 @@ try {
 			'selection' => '',
 			'language' => 'native',
 		);
-		include('view/room.php');
+		require('view/room.php');
 	}
 
 	else if(preg_match('@^([^/]+)/translated$@', $route, $m))
@@ -95,7 +95,7 @@ try {
 			'selection' => '',
 			'language' => 'translated',
 		);
-		include('view/room.php');
+		require('view/room.php');
 	}
 
 	else if(preg_match('@^([^/]+)/(sd|audio|slides)$@', $route, $m))
@@ -105,7 +105,7 @@ try {
 			'selection' => $m[2],
 			'language' => 'native',
 		);
-		include('view/room.php');
+		require('view/room.php');
 	}
 
 	else if(preg_match('@^([^/]+)/(sd|audio|slides)/translated$@', $route, $m))
@@ -115,7 +115,7 @@ try {
 			'selection' => $m[2],
 			'language' => 'translated',
 		);
-		include('view/room.php');
+		require('view/room.php');
 	}
 
 	else
@@ -127,10 +127,10 @@ try {
 catch(NotFoundException $e)
 {
 	ob_clean();
-	include('view/404.php');
+	require('view/404.php');
 }
 catch(Exception $e)
 {
 	ob_clean();
-	include('view/500.php');
+	require('view/500.php');
 }
