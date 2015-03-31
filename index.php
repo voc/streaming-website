@@ -15,6 +15,7 @@ require_once('model/Room.php');
 require_once('model/RoomTab.php');
 require_once('model/RoomSelection.php');
 require_once('model/Stream.php');
+require_once('model/Relive.php');
 
 $route = @$_GET['route'];
 $route = rtrim($route, '/');
@@ -61,9 +62,6 @@ try {
 
 	else if(preg_match('@^relive/([0-9]+)$@', $route, $m))
 	{
-		if(!has('OVERVIEW.RELIVE_JSON'))
-			return require('view/404.php');
-
 		$_GET = array(
 			'id' => $m[1],
 		);
@@ -72,9 +70,6 @@ try {
 
 	else if(preg_match('@^relive$@', $route, $m))
 	{
-		if(!has('OVERVIEW.RELIVE_JSON'))
-			return require('view/404.php');
-
 		require('view/relive.php');
 	}
 

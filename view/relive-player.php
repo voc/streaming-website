@@ -1,10 +1,10 @@
 <?php
 
-$talks_by_id = relive_talks();
-$talk = @$talks_by_id[intval($_GET['id'])];
+$relive = new Relive();
+if(!$relive->isEnabled())
+	throw new NotFoundException('Internal Relive is disabled');
 
-if(!$talk)
-	return require('page/404.php');
+$talk = $relive->getTalk(intval($_GET['id']));
 
 echo $tpl->render(array(
 	'page' => 'relive-player',

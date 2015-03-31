@@ -82,6 +82,13 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
 	'RELIVE_JSON' => 'http://vod.c3voc.de/index.json',
+
+	/**
+	 * APCU-Cache-Zeit in Sekunden
+	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
+	 * das Relive-Json bei jedem Request von der Quelle geladen und geparst
+	 */
+	'RELIVE_JSON_CACHE' => 30*60,
 );
 
 /**

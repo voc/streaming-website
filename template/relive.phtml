@@ -21,20 +21,19 @@
 			</div>
 		<? else: ?>
 			<? foreach ($talks as $talk): ?>
-				<? $url = ($talk['status'] == 'released') ? $talk['release_url'] : link_vod($talk['id']) ?>
 				<div class="col-xs-12 recording">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 
 							<h3 class="panel-title">
-								<a href="<?=h($url)?>">
+								<a href="<?=h($talk['url'])?>">
 									<?=h($talk['title'])?>
 								</a>
 							</h3>
 
 						</div>
 						<div class="panel-body">
-							<a href="<?=h($url)?>">
+							<a href="<?=h($talk['url'])?>">
 								<img class="preview" alt="<?=h($talk['title'])?>" class="video-thumbnail" src="<?=h($talk['thumbnail'])?>" width="213" height="120" />
 							</a>
 
