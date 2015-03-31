@@ -52,12 +52,21 @@
 			<label for="stream">Stream</label>
 			<select class="form-control" name="stream" id="stream">
 				<option></option>
-				<? foreach(get('ROOMS') as $roomSlug => $roomInfo): ?>
-					<? if(!has("ROOMS.$roomSlug.FEEDBACK")) continue ?>
-					<? foreach(room_get_possible_selections($roomSlug) as $selectionIter): ?>
+				<? foreach(Room::rooms() as $roomiter): ?>
+					<? if(!$room->hasFeedback()) continue ?>
+					<? foreach($roomiter->getSelections() as $selection): ?>
 						<option
-							<? if($roomSlug == $room && $selectionIter == @$selection): ?>selected<? endif ?>
-						value="<?=h("$roomSlug-$selectionIter")?>"><?=h(get("ROOMS.$roomSlug.DISPLAY", $roomSlug))?> – <?=h($selectionIter)?></option>
+							<? if(
+								$roomiter->getSlug() == $room->getSlug() &&
+								(
+									!isset($stream) ||
+									($selection->getSelection() == $stream->getSelection())
+								)
+							): ?>selected<? endif ?>
+							value="<?=h($roomiter->getSlug().'-'.$selection->getSelection())?>"
+						>
+							<?=h($roomiter->getDisplay())?> – <?=h($selection->getDisplay())?>
+						</option>
 					<? endforeach ?>
 				<? endforeach ?>
 			</select>
