@@ -183,7 +183,8 @@ class Schedule extends ModelBase
 	public function getDurationSum()
 	{
 		$sum = 0;
-		foreach(reset($this->getSchedule()) as $event)
+		$schedule = $this->getSchedule();
+		foreach(reset($schedule) as $event)
 			$sum += $event['duration'];
 
 		return $sum;
