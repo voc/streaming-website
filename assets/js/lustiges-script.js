@@ -380,9 +380,23 @@ $(function() {
 
 // feedback form
 $(function() {
-	$('.feedback-form').on('submit', function() {
+	$('.feedback-form').on('submit', function(e) {
+		e.preventDefault();
+		var $form = $(this);
+
 		$('.feedback-form').hide();
-		$('.feedback-thankyou').show();
+		$.ajax({
+			url: $form.prop('action'),
+			method: $form.prop('method'),
+			data: $form.serialize(),
+			success: function() {
+				$('.feedback-thankyou').show();
+			},
+			error: function() {
+				$('.feedback-error').show();
+			}
+		});
+
 	});
 });
 
