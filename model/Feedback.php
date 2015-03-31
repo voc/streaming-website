@@ -45,4 +45,40 @@ class Feedback extends ModelBase
 			'issuetext' => $info['issuetext'],
 		));
 	}
+
+	public function isLoggedIn()
+	{
+		return
+			isset($_SERVER['PHP_AUTH_USER']) &&
+			$_SERVER['PHP_AUTH_USER'] == $this->get('FEEDBACK.USERNAME') &&
+			$_SERVER['PHP_AUTH_PW'] == $this->get('FEEDBACK.PASSWORD');
+	}
+
+	public function requestLogin()
+	{
+		header('WWW-Authenticate: Basic realm="Kadse?"');
+		header('HTTP/1.0 401 Unauthorized');
+		echo 'You are no real Winkekatzenoperator!!!1!';
+		exit;
+	}
+
+	public function read($from, $to)
+	{
+		$db = new PDO($this->get('FEEDBACK.DSN'));
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$stm = $db->prepare('
+			SELECT *
+			  FROM feedback
+			 WHERE reported BETWEEN :from AND :to
+		');
+		$stm->setFetchMode(PDO::FETCH_ASSOC);
+
+		$stm->execute(array(
+			'from' => $from,
+			'to' => $to,
+		));
+
+		return $stm;
+	}
 }
