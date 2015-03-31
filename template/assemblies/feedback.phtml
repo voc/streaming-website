@@ -53,15 +53,13 @@
 			<select class="form-control" name="stream" id="stream">
 				<option></option>
 				<? foreach(Room::rooms() as $roomiter): ?>
-					<? if(!$room->hasFeedback()) continue ?>
+					<? if(!$roomiter->hasFeedback()) continue ?>
 					<? foreach($roomiter->getSelections() as $selection): ?>
 						<option
 							<? if(
+								$room && $stream &&
 								$roomiter->getSlug() == $room->getSlug() &&
-								(
-									!isset($stream) ||
-									($selection->getSelection() == $stream->getSelection())
-								)
+								$selection->getSelection() == $stream->getSelection()
 							): ?>selected<? endif ?>
 							value="<?=h($roomiter->getSlug().'-'.$selection->getSelection())?>"
 						>
