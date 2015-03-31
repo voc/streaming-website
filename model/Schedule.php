@@ -37,7 +37,13 @@ class Schedule extends ModelBase
 			return $schedule;
 
 		// download schedule-xml
-		$schedule = $this->fetchSchedule();
+		try {
+			$schedule = $this->fetchSchedule();
+		}
+		catch(ErrorException $e)
+		{
+			return array();
+		}
 
 		$mapping = $this->getScheduleToRoomSlugMapping();
 		$program = array();
