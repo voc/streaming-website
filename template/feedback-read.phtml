@@ -10,7 +10,17 @@
 						<label class="sr-only" for="from">From Date</label>
 						<div class="input-group">
 							<div class="input-group-addon">From:</div>
-							<input type="date" class="form-control" name="from" id="from" value="<?=h(date('Y-m-d', $from))?>">
+							<input
+								type="text"
+								data-provide="datepicker"
+								data-date-format="yyyy-mm-dd"
+								data-date-week-start="1"
+								data-date-today-btn="linked"
+								data-date-today-highlight="true"
+								class="form-control"
+								name="from"
+								id="from"
+								value="<?=h(date('Y-m-d', $from))?>">
 						</div>
 					</div>
 
@@ -18,7 +28,17 @@
 						<label class="sr-only" for="to">To Date</label>
 						<div class="input-group">
 							<div class="input-group-addon">To:</div>
-							<input type="date" class="form-control" name="to" id="to" value="<?=h(date('Y-m-d', $to))?>">
+							<input
+								type="text"
+								data-provide="datepicker"
+								data-date-format="yyyy-mm-dd"
+								data-date-week-start="1"
+								data-date-today-btn="linked"
+								data-date-today-highlight="true"
+								class="form-control"
+								name="to"
+								id="to"
+								value="<?=h(date('Y-m-d', $to))?>">
 						</div>
 					</div>
 
