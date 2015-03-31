@@ -25,6 +25,15 @@ class Room extends ModelBase
 		return null;
 	}
 
+	public static function rooms()
+	{
+		$rooms = array();
+		foreach(ModelBase::get('ROOMS') as $slug => $room)
+			$rooms[] = new Room($slug);
+
+		return $rooms;
+	}
+
 
 	public function getSlug() {
 		return $this->slug;
