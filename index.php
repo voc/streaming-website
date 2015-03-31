@@ -44,9 +44,9 @@ try {
 		include('view/about.php');
 	}
 
-	else if(preg_match('@^program.json$@', $route, $m))
+	else if(preg_match('@^schedule.json$@', $route, $m))
 	{
-		include('view/program-json.php');
+		include('view/schedule-json.php');
 	}
 
 	else if(preg_match('@^feedback$@', $route, $m))
