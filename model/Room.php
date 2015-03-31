@@ -28,7 +28,7 @@ class Room extends ModelBase
 	public static function rooms()
 	{
 		$rooms = array();
-		foreach(ModelBase::get('ROOMS') as $slug => $room)
+		foreach(ModelBase::staticGet('ROOMS') as $slug => $room)
 			$rooms[] = new Room($slug);
 
 		return $rooms;
