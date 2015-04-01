@@ -210,7 +210,7 @@ class Schedule extends ModelBase
 
 	private function getScheduleUrl()
 	{
-		return get('SCHEDULE.URL');
+		return $this->get('SCHEDULE.URL');
 	}
 
 	private function isCacheEnabled()
