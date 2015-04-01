@@ -9,9 +9,11 @@
 
 	<? foreach($overview->getGroups() as $group => $rooms): ?>
 		<div class="row room-group">
-			<div class="col-xs-12">
-				<h2><?=h($group)?></h2>
-			</div>
+			<? if($group): ?>
+				<div class="col-xs-12">
+					<h2><?=h($group)?></h2>
+				</div>
+			<? endif ?>
 
 			<? $count = count($rooms); ?>
 			<? foreach($rooms as $idx => $room): ?>
