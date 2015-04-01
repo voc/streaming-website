@@ -232,7 +232,7 @@ class Schedule extends ModelBase
 		if(!$this->isCacheEnabled())
 			return null;
 
-		return apc_fetch('SCHEDULE.CACHE');
+		return apc_fetch($this->getCacheKey());
 	}
 
 	private function doCache($value)
@@ -242,8 +242,13 @@ class Schedule extends ModelBase
 		if(!$this->isCacheEnabled())
 			return $value;
 
-		apc_store('SCHEDULE.CACHE', $value, $this->getCacheDuration());
+		apc_store($this->getCacheKey(), $value, $this->getCacheDuration());
 		return $value;
+	}
+
+	private function getCacheKey()
+	{
+		return 'SCHEDULE.'.$this->getScheduleUrl();
 	}
 
 	private function getScheduleToRoomSlugMapping()

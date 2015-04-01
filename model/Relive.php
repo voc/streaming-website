@@ -8,12 +8,17 @@ class Relive extends ModelBase
 		return $this->has('CONFERENCE.RELIVE_JSON');
 	}
 
+	public function getJsonUrl()
+	{
+		return $this->get('CONFERENCE.RELIVE_JSON');
+	}
+
 	public function getTalks()
 	{
 		if($talks_by_id = $this->getCached())
 			return $talks_by_id;
 
-		$talks = file_get_contents($this->get('CONFERENCE.RELIVE_JSON'));
+		$talks = file_get_contents($this->getJsonUrl());
 		$talks = utf8_decode($talks);
 		$talks = (array)json_decode($talks, true);
 
@@ -64,7 +69,7 @@ class Relive extends ModelBase
 		if(!$this->isCacheEnabled())
 			return null;
 
-		return apc_fetch('RELIVE.CACHE');
+		return apc_fetch($this->getCacheKey());
 	}
 
 	private function doCache($value)
@@ -74,7 +79,12 @@ class Relive extends ModelBase
 		if(!$this->isCacheEnabled())
 			return $value;
 
-		apc_store('RELIVE.CACHE', $value, $this->getCacheDuration());
+		apc_store($this->getCacheKey(), $value, $this->getCacheDuration());
 		return $value;
+	}
+
+	private function getCacheKey()
+	{
+		return 'RELIVE.'.$this->getJsonUrl();
 	}
 }
