@@ -6,6 +6,15 @@ class Schedule extends ModelBase
 		return $this->has('SCHEDULE');
 	}
 
+	private function isRoomFiltered($room)
+	{
+		if(!$this->has('SCHEDULE.ROOMFILTER'))
+			return false;
+
+		$rooms = $this->get('SCHEDULE.ROOMFILTER');
+		return !in_array($room, $rooms);
+	}
+
 	public function getSimulationOffset() {
 		return $this->get('SCHEDULE.SIMULATE_OFFSET', 0);
 	}
@@ -53,6 +62,10 @@ class Schedule extends ModelBase
 
 			foreach($day->room as $room)
 			{
+				$name = (string)$room['name'];
+				if($this->isRoomFiltered($name))
+					continue;
+
 				foreach($room->event as $event)
 				{
 					$start = strtotime((string)$event->date);
@@ -82,6 +95,9 @@ class Schedule extends ModelBase
 				$lastend = false;
 
 				$name = (string)$room['name'];
+				if($this->isRoomFiltered($name))
+					continue;
+
 				if(isset($mapping[$name]))
 					$name = $mapping[$name];
 

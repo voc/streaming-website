@@ -455,6 +455,13 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	'URL' => 'http://events.ccc.de/congress/2014/Fahrplan/schedule.xml',
 
 	/**
+	 * Nur die angegebenen Räume aus dem Fahrplan beachten
+	 *
+	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 */
+	'ROOMFILTER' => array('SAAL', 'Tagungsraum 1'),
+
+	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
 	 * der Fahrplan bei jedem Request von der Quelle geladen und geparst
