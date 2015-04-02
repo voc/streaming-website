@@ -57,7 +57,7 @@
 					<? foreach($roomiter->getSelections() as $selection): ?>
 						<option
 							<? if(
-								$room && $stream &&
+								isset($room) && isset($stream) &&
 								$roomiter->getSlug() == $room->getSlug() &&
 								$selection->getSelection() == $stream->getSelection()
 							): ?>selected<? endif ?>
