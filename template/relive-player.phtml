@@ -16,8 +16,13 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-8 col-md-offset-2">
 			<div class="well">
-				<? include("$assemblies/desktop-player.phtml") ?>
-
+				<div class="desktop-player-hint">
+					<h3>Sorry about the Flash</h3>
+					<p>
+						As there is no desktop player which supports time-shifting, we chose embed a Flash player here which does.
+						If you still want to watch with a desktop player, use this URL: <a href="<?=h($talk['playlist'])?>"><?=h($talk['playlist'])?></a>
+					</p>
+				</div>
 				<? if($talk['status'] == 'released'): ?>
 					<h3>Released</h3>
 					<p>This talk is already released! Take a look at <a href="<?=h($talk['release_url'])?>">media.ccc.de</a>.</p>
