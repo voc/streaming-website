@@ -353,22 +353,23 @@ $(function() {
 			});
 
 			var s = nextTalk ? new Date(nextTalk.start*1000) : new Date();
-			$lecture.filter('.room-'+room)
-				.find('.current-talk')
-					.removeClass('hidden')
-					.find('.t')
-						.text(currentTalk.special ? 'none' : currentTalk.title)
-					.end()
-				.end()
-				.find('.next-talk')
-					.toggleClass('hidden', !nextTalk || nextTalk.special || (nextTalk.start - now > 60*60))
-					.find('strong')
-						.text(s.getHours()+':'+(s.getMinutes() < 10 ? '0' : '')+s.getMinutes())
-					.end()
-					.find('.t')
-						.text(nextTalk ? nextTalk.title : '')
-					.end()
-				.end();
+			if(currentTalk)
+				$lecture.filter('.room-'+room)
+					.find('.current-talk')
+						.removeClass('hidden')
+						.find('.t')
+							.text(currentTalk.special ? 'none' : currentTalk.title)
+
+			if(nextTalk)
+				$lecture.filter('.room-'+room)
+					.find('.next-talk')
+						.toggleClass('hidden', !nextTalk || nextTalk.special || (nextTalk.start - now > 60*60))
+						.find('strong')
+							.text(s.getHours()+':'+(s.getMinutes() < 10 ? '0' : '')+s.getMinutes())
+						.end()
+						.find('.t')
+							.text(nextTalk ? nextTalk.title : '')
+						.end()
 		});
 
 		setTimeout(updateProgtamTeaser, updateTimer);
