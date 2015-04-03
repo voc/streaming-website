@@ -162,7 +162,6 @@ $(function() {
 
 	$('body.relive-player video').mediaelementplayer({
 		mode: 'auto_plugin',
-		enablePluginDebug: true,
 		plugins: ['flash'],
 		flashName: 'flashmediaelement.swf',
 		pluginPath: 'assets/mejs/',
