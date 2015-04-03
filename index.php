@@ -50,6 +50,11 @@ try {
 		require('view/schedule-json.php');
 	}
 
+	else if(preg_match('@^multiview$@', $route, $m))
+	{
+		require('view/multiview.php');
+	}
+
 	else if(preg_match('@^feedback$@', $route, $m))
 	{
 		require('view/feedback.php');

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+	<div class="row headline">
+		<div class="col-xs-12">
+			<h1><?=h($title)?></h1>
+		</div>
+	</div>
+
+	<div class="row room-group">
+		<? foreach($rooms as $room): ?>
+				<? foreach($room->getStreams() as $stream): ?>
+				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+					<div class="cell">
+						<h2><?=h($stream->getDisplay())?></h2>
+						<? require("$assemblies/player/".$stream->getPlayerType().".phtml") ?>
+						<div class="meter"></div>
+						<div class="timer"></div>
+					</div>
+				</div>
+			<? endforeach ?>
+		<? endforeach ?>
+	</div>
+
+</div>

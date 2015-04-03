@@ -247,6 +247,21 @@ class Room extends ModelBase
 		return $res;
 	}
 
+	public function getStreams()
+	{
+		$selections = $this->getSelectionNames();
+		$streams = array();
+
+		foreach ($selections as $selection) {
+			$streams[] = $this->createStreamObject($selection, 'native');
+
+			if($this->hasTranslation())
+				$streams[] = $this->createStreamObject($selection, 'translated');
+		}
+
+		return $streams;
+	}
+
 	public function selectStream($selection, $language = 'native')
 	{
 		$selections = $this->getSelectionNames();

@@ -429,3 +429,88 @@ $(function() {
 		});
 	}, 1000*60);
 });
+
+
+// multiviewer
+$(function() {
+	$('body.multiview')
+		.find('audio, video')
+			//.prop('muted', true)
+			.each(function(idx, player) {
+
+				var
+					$player = $(player),
+					$meter = $player.closest('.cell').find('.meter'),
+					$timer = $player.closest('.cell').find('.timer'),
+					ctx = new AudioContext(),
+					audioSrc = ctx.createMediaElementSource(player),
+					analyser = ctx.createAnalyser();
+
+				$player.on("timeupdate", function(e)
+				{
+					var
+						s = Math.floor(this.currentTime % 60),
+						m = Math.floor(this.currentTime / 60) % 60,
+						h = Math.floor(this.currentTime / 60 / 60) % 24,
+						d = Math.floor(this.currentTime / 60 / 60 / 24),
+						f = Math.floor((this.currentTime - Math.floor(this.currentTime)) * 1000),
+						txt = '';
+
+					txt += d+'d ';
+
+					if(h < 10) txt += '0';
+					txt += h+'h ';
+
+					if(m < 10) txt += '0';
+					txt += m+'m ';
+
+					if(s < 10) txt += '0';
+					txt += s+'s ';
+
+					if(f < 10) txt += '00';
+					else if(f < 100) txt += '0';
+					txt += f+'ms';
+
+					$timer.text(txt);
+				});
+
+				// we have to connect the MediaElementSource with the analyser 
+				audioSrc.connect(analyser);
+
+				// we could configure the analyser: e.g. analyser.fftSize (for further infos read the spec)
+				analyser.fftSize = 64;
+
+				var w = 100 / analyser.frequencyBinCount;
+				for (var i = 0; i < analyser.frequencyBinCount; i++) {
+					var c = Math.floor( i * 255 / analyser.frequencyBinCount );
+					console.log(c);
+					$('<div class="bar">')
+						.css({
+							'width': w+'%',
+							'left': (i*w)+'%',
+							'background-color': 'rgb('+c+', '+(192 - c)+', 0)'
+						})
+						.appendTo($meter);
+				}
+
+				var $bars = $meter.find('.bar');
+
+				// frequencyBinCount tells you how many values you'll receive from the analyser
+				var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+				// we're ready to receive some data!
+				// loop
+				function renderFrame() {
+					// update data in frequencyData
+					analyser.getByteFrequencyData(frequencyData);
+					// render frame based on values in frequencyData
+
+					for (var i = 0; i < frequencyData.length; i++) {
+						$($bars[i]).css('height', frequencyData[i] / 255 * 40);
+					}
+
+					requestAnimationFrame(renderFrame);
+				}
+				renderFrame();
+			});
+});
