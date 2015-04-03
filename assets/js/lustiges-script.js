@@ -151,14 +151,22 @@ $(function() {
 		}
 	})(mejs.i18n.locale.strings);
 
-	$('video').mediaelementplayer({
-		enableAutosize: true,
-
-		pluginPath: 'assets/js/lib/',
-		features: ['playpause', 'volume', 'fullscreen', $('video').hasClass('subs') ? 'subs' : '']
+	$('body.room video').mediaelementplayer({
+		pluginPath: 'assets/mejs/',
+		features: ['playpause', 'volume', 'fullscreen'],
+		enableAutosize: true
 	});
-	$('audio').mediaelementplayer({
+	$('body.room audio').mediaelementplayer({
 		features: ['playpause', 'volume', 'current']
+	});
+
+	$('body.relive-player video').mediaelementplayer({
+		mode: 'auto_plugin',
+		enablePluginDebug: true,
+		plugins: ['flash'],
+		flashName: 'flashmediaelement.swf',
+		pluginPath: 'assets/mejs/',
+		enableAutosize: true,
 	});
 
 	$(window).on('load', function() {
