@@ -19,7 +19,6 @@ class Relive extends ModelBase
 			return $talks_by_id;
 
 		$talks = file_get_contents($this->getJsonUrl());
-		$talks = utf8_decode($talks);
 		$talks = (array)json_decode($talks, true);
 
 		usort($talks, function($a, $b) {
