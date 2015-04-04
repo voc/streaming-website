@@ -1,0 +1,25 @@
+body.e404,
+body.e500 {
+	> .container {
+		text-align: center;
+		h1 {
+			font-size: @jumbo-font-size;
+			margin: 50px 0 50px 0;
+		}
+
+		img {
+			background-color: @brand-primary;
+			max-width: 80%;
+		}
+	}
+}
+
+body.e500 {
+	pre {
+		text-align: left;
+	}
+
+	img {
+		.rotate(180deg);
+	}
+}

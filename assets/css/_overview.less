@@ -1,80 +1,82 @@
-.room {
-	text-align: center;
-
-	.panel-heading {
-		display: none;
-	}
-
-	&.has-preview {
-		.title {
-			text-align: left;
-			line-height: 120px;
-		}
-	}
-
-	&.has-schedule.has-preview {
-		text-align: left;
+body.overview {
+	.room {
+		text-align: center;
 
 		.panel-heading {
-			display: block;
-		}
-		.title {
 			display: none;
-			line-height: inherit;
 		}
-	}
 
-	.preview {
-		float: left;
-		margin-right: @padding-base-horizontal;
-
-		@media (max-width: @screen-xs-min) {
-			margin-bottom: @padding-base-vertical;
+		&.has-preview {
+			.title {
+				text-align: left;
+				line-height: 120px;
+			}
 		}
-	}
 
-	a.title {
-		font-size: 2.5em;
-		display: block;
-	}
+		&.has-schedule.has-preview {
+			text-align: left;
 
+			.panel-heading {
+				display: block;
+			}
+			.title {
+				display: none;
+				line-height: inherit;
+			}
+		}
 
-	.program-schedule .talk {
-		display: inline;
-		margin-right: @padding-base-horizontal;
-	}
+		.preview {
+			float: left;
+			margin-right: @padding-base-horizontal;
 
-	&.has-schedule.has-preview {
-		.program-schedule .talk {
+			@media (max-width: @screen-xs-min) {
+				margin-bottom: @padding-base-vertical;
+			}
+		}
+
+		a.title {
+			font-size: 2.5em;
 			display: block;
 		}
 
-		@media (max-width: @screen-xs-min) {
-			.program-schedule {
-				clear: both;
+
+		.program-schedule .talk {
+			display: inline;
+			margin-right: @padding-base-horizontal;
+		}
+
+		&.has-schedule.has-preview {
+			.program-schedule .talk {
+				display: block;
+			}
+
+			@media (max-width: @screen-xs-min) {
+				.program-schedule {
+					clear: both;
+				}
+			}
+		}
+
+		&.has-preview {
+			.program-schedule .next-talk {
+				margin-top: @padding-base-vertical;
 			}
 		}
 	}
 
-	&.has-preview {
-		.program-schedule .next-talk {
-			margin-top: @padding-base-vertical;
+	.recordings a {
+		font-size: @jumbo-font-size;
+		line-height: @jumbo-line-height;
+
+		@media (max-width: @screen-xs-min) {
+			font-size: @jumbo-font-size-xs;
 		}
-	}
-}
 
-.recordings a {
-	font-size: @jumbo-font-size;
-	line-height: @jumbo-line-height;
+		display: block;
+		text-align: center;
 
-	@media (max-width: @screen-xs-min) {
-		font-size: @jumbo-font-size-xs;
-	}
-
-	display: block;
-	text-align: center;
-
-	&:hover {
-		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
