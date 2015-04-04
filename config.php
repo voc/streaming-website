@@ -88,7 +88,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
 	 * das Relive-Json bei jedem Request von der Quelle geladen und geparst
 	 */
-	'RELIVE_JSON_CACHE' => 30*60,
+	//'RELIVE_JSON_CACHE' => 30*60,
 );
 
 /**
@@ -466,7 +466,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
 	 * der Fahrplan bei jedem Request von der Quelle geladen und geparst
 	 */
-	'CACHE' => 30*60,
+	//'CACHE' => 30*60,
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
