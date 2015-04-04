@@ -258,7 +258,7 @@ class Schedule extends ModelBase
 		return 'SCHEDULE.'.$this->getScheduleUrl();
 	}
 
-	private function getScheduleToRoomSlugMapping()
+	public function getScheduleToRoomSlugMapping()
 	{
 		$mapping = array();
 		foreach($this->get('ROOMS') as $slug => $room)

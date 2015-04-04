@@ -21,6 +21,8 @@ class Relive extends ModelBase
 		$talks = file_get_contents($this->getJsonUrl());
 		$talks = (array)json_decode($talks, true);
 
+		$mapping = $this->getScheduleToRoomMapping();
+
 		usort($talks, function($a, $b) {
 			$sort = array('live', 'recorded', 'released');
 			return array_search($a['status'], $sort) > array_search($b['status'], $sort);
@@ -33,6 +35,13 @@ class Relive extends ModelBase
 				$talk['url'] = $talk['release_url'];
 			else
 				$talk['url'] = 'relive/'.rawurlencode($talk['id']).'/';
+
+			if(isset($mapping[$talk['room']]))
+			{
+				$room = $mapping[$talk['room']];
+				$talk['room'] = $room->getDisplay();
+				$talk['roomlink'] = $room->getLink();
+			}
 
 			$talks_by_id[$talk['id']] = $talk;
 		}
@@ -86,4 +95,24 @@ class Relive extends ModelBase
 	{
 		return 'RELIVE.'.$this->getJsonUrl();
 	}
+
+	private function getScheduleToRoomMapping()
+	{
+		$schedule = new Schedule();
+		$mapping = array();
+
+		foreach($schedule->getScheduleToRoomSlugMapping() as $schedule => $slug)
+		{
+			try {
+				$mapping[$schedule] = new Room($slug);
+			}
+			catch(NotFoundException $e)
+			{
+				//
+			}
+		}
+
+		return $mapping;
+	}
+
 }

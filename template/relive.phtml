@@ -54,7 +54,11 @@
 								</li>
 								<li>
 									<span class="fa fa-sign-in"></span>
-									<?=h($talk['room'])?>
+									<? if(isset($talk['roomlink'])): ?>
+										<a href="<?=h($talk['roomlink'])?>"><?=h($talk['room'])?></a>
+									<? else: ?>
+										<?=h($talk['room'])?>
+									<? endif ?>
 								</li>
 							</ul>
 
