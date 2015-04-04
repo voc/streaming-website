@@ -6,6 +6,10 @@ class Conference extends ModelBase
 		return $this->get('CONFERENCE.TITLE', 'C3Voc Streaming');
 	}
 
+	public function isClosed() {
+		return $this->get('CONFERENCE.CLOSED');
+	}
+
 	public function hasAuthor() {
 		return $this->has('CONFERENCE.AUTHOR');
 	}

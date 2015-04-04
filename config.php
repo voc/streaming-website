@@ -11,6 +11,13 @@ if($_SERVER['HTTP_HOST'] != 'localhost')
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	/**
+	 * Am Ende der Konferenz wird durch das Umlegen dieses Schalters auf True eine Danke-Und-Kommen-Sie-
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. Während einer
+	 * Konferenz kann dieser Schalter auskommentiert oder auf false gesetzt werden.
+	 */
+	'CLOSED' => false,
+
+	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt

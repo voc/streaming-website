@@ -16,10 +16,12 @@ require_once('model/RoomTab.php');
 require_once('model/RoomSelection.php');
 require_once('model/Stream.php');
 require_once('model/Relive.php');
+require_once('model/Upcoming.php');
 
 $route = @$_GET['route'];
 $route = rtrim($route, '/');
 
+$conference = new Conference();
 
 $tpl = new PhpTemplate('template/page.phtml');
 $tpl->set(array(
@@ -27,7 +29,7 @@ $tpl->set(array(
 	'route' => $route,
 	'assemblies' => './template/assemblies/',
 
-	'conference' => new Conference(),
+	'conference' => $conference,
 	'feedback' => new Feedback(),
 	'schedule' => new Schedule(),
 ));
@@ -35,34 +37,41 @@ $tpl->set(array(
 
 ob_start();
 try {
-	if($route == '')
+
+
+	if($route == 'feedback/read')
+	{
+		require('view/feedback-read.php');
+	}
+
+	else if($conference->isClosed())
+	{
+		require('view/closed.php');
+	}
+
+	else if($route == '')
 	{
 		require('view/overview.php');
 	}
 
-	else if(preg_match('@^about$@', $route, $m))
+	else if($route == 'about')
 	{
 		require('view/about.php');
 	}
 
-	else if(preg_match('@^schedule.json$@', $route, $m))
+	else if($route == 'schedule.json')
 	{
 		require('view/schedule-json.php');
 	}
 
-	else if(preg_match('@^multiview$@', $route, $m))
+	else if($route == 'multiview')
 	{
 		require('view/multiview.php');
 	}
 
-	else if(preg_match('@^feedback$@', $route, $m))
+	else if($route == 'feedback')
 	{
 		require('view/feedback.php');
-	}
-
-	else if(preg_match('@^feedback/read$@', $route, $m))
-	{
-		require('view/feedback-read.php');
 	}
 
 	else if(preg_match('@^relive/([0-9]+)$@', $route, $m))
@@ -73,7 +82,7 @@ try {
 		require('view/relive-player.php');
 	}
 
-	else if(preg_match('@^relive$@', $route, $m))
+	else if($route == 'relive')
 	{
 		require('view/relive.php');
 	}
