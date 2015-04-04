@@ -433,18 +433,15 @@ $(function() {
 
 // multiviewer
 $(function() {
+	var audioMeter = !!window.chrome;
 	$('body.multiview')
 		.find('audio, video')
-			//.prop('muted', true)
 			.each(function(idx, player) {
 
 				var
 					$player = $(player),
 					$meter = $player.closest('.cell').find('.meter'),
-					$timer = $player.closest('.cell').find('.timer'),
-					ctx = new AudioContext(),
-					audioSrc = ctx.createMediaElementSource(player),
-					analyser = ctx.createAnalyser();
+					$timer = $player.closest('.cell').find('.timer');
 
 				$player.on("timeupdate", function(e)
 				{
@@ -474,6 +471,18 @@ $(function() {
 					$timer.text(txt);
 				});
 
+				if(!audioMeter)
+				{
+					$player.prop('muted', true);
+					$meter.hide();
+					return;
+				}
+
+				var
+					ctx = new AudioContext(),
+					audioSrc = ctx.createMediaElementSource(player),
+					analyser = ctx.createAnalyser();
+
 				// we have to connect the MediaElementSource with the analyser 
 				audioSrc.connect(analyser);
 
@@ -483,7 +492,6 @@ $(function() {
 				var w = 100 / analyser.frequencyBinCount;
 				for (var i = 0; i < analyser.frequencyBinCount; i++) {
 					var c = Math.floor( i * 255 / analyser.frequencyBinCount );
-					console.log(c);
 					$('<div class="bar">')
 						.css({
 							'width': w+'%',
@@ -499,7 +507,6 @@ $(function() {
 				var frequencyData = new Uint8Array(analyser.frequencyBinCount);
 
 				// we're ready to receive some data!
-				// loop
 				function renderFrame() {
 					// update data in frequencyData
 					analyser.getByteFrequencyData(frequencyData);
@@ -509,6 +516,7 @@ $(function() {
 						$($bars[i]).css('height', frequencyData[i] / 255 * 40);
 					}
 
+					// loop
 					requestAnimationFrame(renderFrame);
 				}
 				renderFrame();
