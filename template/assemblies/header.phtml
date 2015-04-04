@@ -8,7 +8,7 @@
 		</div>
 
 		<div class="nav navbar-form navbar-right button-wrapper">
-			<? if($feedback->isEnabled()): ?>
+			<? if(!$conference->isClosed() && $feedback->isEnabled()): ?>
 				<a class="form-control btn btn-default" href="<?=h($feedback->getUrl())?>">
 					<span class="fa fa-bullhorn"></span>
 				</a>
@@ -18,9 +18,11 @@
 					<span class="fa fa-video-camera"></span>
 				</a>
 			<? endif ?>
-			<a class="form-control btn btn-default" href="about/">
-				<span class="fa fa-info"></span>
-			</a>
+			<? if(!$conference->isClosed()): ?>
+				<a class="form-control btn btn-default" href="about/">
+					<span class="fa fa-info"></span>
+				</a>
+			<? endif ?>
 		</div>
 	</div>
 </nav>
