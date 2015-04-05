@@ -31,6 +31,9 @@ class Relive extends ModelBase
 		$talks_by_id = array();
 		foreach ($talks as $talk)
 		{
+			if($talk['status'] == 'not_running')
+				continue;
+
 			if($talk['status'] == 'released')
 				$talk['url'] = $talk['release_url'];
 			else
