@@ -3,12 +3,12 @@
 	<div class="directlinks">
 		<div class="row">
 			<? foreach(Stream::getMusicProtos() as $proto => $display): ?>
-				<? $stream = $room->createStreamObject('music') ?>
+				<? $switcherstream = $room->createStreamObject('music') ?>
 				<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-					<div class="btn-group" role="group" title="<?=h($stream->getMusicTech($proto))?>">
+					<div class="btn-group" role="group" title="<?=h($switcherstream->getMusicTech($proto))?>">
 						<div class="btn btn-primary" disabled><?=h($display)?></div>
 
-						<a href="<?=h($stream->getMusicUrl($proto))?>" class="btn btn-default">
+						<a href="<?=h($switcherstream->getMusicUrl($proto))?>" class="btn btn-default">
 							<span class="fa fa-music"></span>
 							live music
 						</a>

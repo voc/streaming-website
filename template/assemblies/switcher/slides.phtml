@@ -30,9 +30,9 @@
 		<? foreach(Stream::getSlidesProtos() as $proto => $display): ?>
 			<h3>Directlinks (<?=h($display)?>)</h3>
 			<div class="row">
-				<? $stream = $room->createStreamObject('slides') ?>
+				<? $switcherstream = $room->createStreamObject('slides') ?>
 				<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-					<div class="btn-group" role="group" title="<?=h($stream->getSlidesTech($proto))?>">
+					<div class="btn-group" role="group" title="<?=h($switcherstream->getSlidesTech($proto))?>">
 						<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
 						<? if($room->hasTranslation()): ?>
 
@@ -47,7 +47,7 @@
 
 						<? else: ?>
 
-							<a href="<?=h($stream->getSlidesUrl($proto))?>" class="btn btn-default">
+							<a href="<?=h($switcherstream->getSlidesUrl($proto))?>" class="btn btn-default">
 								<span class="fa fa-picture-o"></span>
 								slides
 							</a>
