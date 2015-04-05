@@ -44,6 +44,11 @@ try {
 		require('view/feedback-read.php');
 	}
 
+	else if($route == 'schedule.json')
+	{
+		require('view/schedule-json.php');
+	}
+
 	else if($conference->isClosed())
 	{
 		require('view/closed.php');
@@ -57,11 +62,6 @@ try {
 	else if($route == 'about')
 	{
 		require('view/about.php');
-	}
-
-	else if($route == 'schedule.json')
-	{
-		require('view/schedule-json.php');
 	}
 
 	else if($route == 'multiview')
