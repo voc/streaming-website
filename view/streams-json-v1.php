@@ -13,6 +13,7 @@ $overview = new Overview();
 $struct = array();
 foreach($overview->getGroups() as $group => $rooms)
 {
+	$roomstruct = array();
 	foreach($rooms as $room)
 	{
 		$streams = array();
@@ -68,7 +69,8 @@ foreach($overview->getGroups() as $group => $rooms)
 					break;
 			}
 
-			$streams[$key] = array(
+			$streams[] = array(
+				'slug' => $key,
 				'display' => $stream->getDisplay(),
 				'type' => $stream->getPlayerType(),
 				'isTranslated' => $stream->isTranslated(),
@@ -77,11 +79,17 @@ foreach($overview->getGroups() as $group => $rooms)
 			);
 		}
 
-		$struct[$group][$room->getSlug()] = array(
+		$roomstruct[] = array(
+			'slug' => $room->getSlug(),
 			'display' => $room->getDisplay(),
 			'streams' => $streams,
 		);
 	}
+
+	$struct[] = array(
+		'group' => $group,
+		'rooms' => $roomstruct,
+	);
 }
 
 echo json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
