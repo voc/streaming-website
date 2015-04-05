@@ -43,8 +43,9 @@
 			<div class="row">
 				<? foreach($room->getVideoResolutions() as $res): ?>
 					<? $selection = $room->createSelectionObject($res) ?>
+					<? $stream = $room->createStreamObject($res) ?>
 					<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-						<div class="btn-group" role="group">
+						<div class="btn-group" role="group" title="<?=h($stream->getVideoTech($proto))?>">
 							<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
 							<? if($room->hasTranslation()): ?>
 
@@ -59,7 +60,7 @@
 
 							<? else: ?>
 
-								<a href="<?=h($room->createStreamObject($res)->getVideoUrl($proto))?>" class="btn btn-default">
+								<a href="<?=h($stream->getVideoUrl($proto))?>" class="btn btn-default">
 									<span class="fa fa-video-camera"></span>
 									video
 								</a>
