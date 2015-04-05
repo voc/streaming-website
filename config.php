@@ -350,7 +350,6 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
-		//'STEREO' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
@@ -380,7 +379,6 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
-		//'STEREO' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
@@ -410,7 +408,6 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
-		//'STEREO' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
