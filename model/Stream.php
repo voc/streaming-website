@@ -99,6 +99,16 @@ class Stream
 		return $display;
 	}
 
+	public function getEmbedUrl()
+	{
+		return
+			forceslash(baseurl()).
+			'embed/'.
+			rawurlencode($this->getRoom()->getSlug()).'/'.
+			rawurlencode($this->getSelection()).'/'.
+			rawurlencode($this->getLanguage()).'/';
+	}
+
 	public function getVideoUrl($proto)
 	{
 		switch($proto)

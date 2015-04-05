@@ -128,6 +128,11 @@ class Room extends ModelBase
 	}
 
 
+	public function hasEmbed() {
+		return $this->get('ROOMS.'.$this->getSlug().'.EMBED') && $this->get('EMBED');
+	}
+
+
 	public function hasSdVideo() {
 		return $this->get('ROOMS.'.$this->getSlug().'.SD_VIDEO');
 	}

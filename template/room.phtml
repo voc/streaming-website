@@ -42,6 +42,11 @@
 				<a href="#feedback" role="tab" data-toggle="tab">Feedback</a>
 			</li>
 		<? endif ?>
+		<? if($room->hasEmbed()): ?>
+			<li>
+				<a href="#embed" role="tab" data-toggle="tab">Embed</a>
+			</li>
+		<? endif ?>
 	</ul>
 
 	<div class="functions-wrap tab-content">
@@ -61,6 +66,11 @@
 		<? if($room->hasFeedback()): ?>
 			<div role="tabpanel" class="tab-pane" id="feedback">
 				<? require("$assemblies/feedback.phtml") ?>
+			</div>
+		<? endif ?>
+		<? if($room->hasEmbed()): ?>
+			<div role="tabpanel" class="tab-pane" id="embed">
+				<? require("$assemblies/embed-form.phtml") ?>
 			</div>
 		<? endif ?>
 	</div>

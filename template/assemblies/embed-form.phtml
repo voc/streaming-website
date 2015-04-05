@@ -1,0 +1,37 @@
+<div class="embed-form">
+	<div class="col-xs-12">
+		<h3>Embedding <?=h($stream->getDisplay())?></h3>
+	</div>
+
+	<div class="col-sm-3 embed-form">
+
+		<div class="form-group">
+			<label for="size">Select Size</label>
+			<select id="size" class="form-control">
+				<option value="512,288">512×288</option>
+				<option value="800,450">800×450</option>
+				<option <? if($stream->getSelection() == 'sd'): ?>selected<? endif ?> value="1024,576">1024×576</option>
+
+				<? if($stream->getSelection() == 'hd'): ?>
+					<option value="1280,720">1280×720</option>
+					<option selected value="1920,1080">1920×1080</option>
+				<? endif ?>
+			</select>
+		</div>
+
+	</div>
+	<div class="col-sm-9 embed-form">
+
+		<div class="form-group">
+			<label for="embed-code">Embed Code</label>
+			<input type="text" id="embed-code" class="form-control" readonly value="<?=h(trim('
+				<iframe src="'.h($stream->getEmbedUrl()).'" width="1024" height="576" frameborder="none" allowfullscreen="allowfullscreen" seamless="seamless" scrolling="no"></iframe>
+			'))?>">
+		</div>
+
+		<div class="form-group">
+			<label for="url">Embed URL:</label>
+			<input type="text" id="url" class="form-control" readonly value="<?=h($stream->getEmbedUrl())?>">
+		</div>
+	</div>
+</div>

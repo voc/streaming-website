@@ -132,6 +132,16 @@ try {
 		require('view/room.php');
 	}
 
+	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides)/(native|translated|stereo)$@', $route, $m))
+	{
+		$_GET = array(
+			'room' => $m[1],
+			'selection' => $m[2],
+			'language' => $m[3],
+		);
+		require('view/embed.php');
+	}
+
 	else
 	{
 		throw new NotFoundException();

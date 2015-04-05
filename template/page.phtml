@@ -44,9 +44,15 @@
 		<script type="text/javascript" src="assets/js/lustiges-script.js"></script>
 	</head>
 	<body class="<?=h(is_numeric($page[0]) ? 'e'.$page : $page)?>">
-		<? include("$assemblies/header.phtml") ?>
+		<? if(!@$naked): ?>
+			<? include("$assemblies/header.phtml") ?>
+		<? endif ?>
+
 		<? include("$page.phtml") ?>
-		<? include("$assemblies/footer.phtml") ?>
+
+		<? if(!@$naked): ?>
+			<? include("$assemblies/footer.phtml") ?>
+		<? endif ?>
 
 		<span class="js-settings"
 			data-scheduleoffset="<?=h($schedule->getSimulationOffset())?>"

@@ -273,6 +273,20 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SUBTITLES' => true,
 
 		/**
+		 * Embed-Form aktivieren (boolean)
+		 *
+		 * Ist dieses Feld auf true gesetzt, wird ein Embed-Tab unter dem Video
+		 * angezeigt. Darüber kann der Player als iframe eingebunden werden.
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
+		 * wird kein Embed-Tab angeboten und die URL zum Einbetten existiert nicht.
+		 *
+		 * Ebenso können alle Embedding-Funktionialitäten durch auskommentieren
+		 * des globalen $GLOBALS['CONFIG']['EMBED']-Blocks deaktiviert werden
+		 */
+		'EMBED' => true,
+
+		/**
 		 * IRC-Link aktivieren (boolean)
 		 *
 		 * Solange Twitter oder IRC aktiviert ist, wird ein "Chat"-Tab mit den
@@ -347,6 +361,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SCHEDULE_NAME' => 'Saal 2',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
+		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#31C3-hall-2 @ hackint',
@@ -376,6 +391,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SCHEDULE_NAME' => 'Saal G',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
+		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#31C3-hall-g @ hackint',
@@ -405,6 +421,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SCHEDULE_NAME' => 'Saal 6',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
+		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#31C3-hall-6 @ hackint',
@@ -421,10 +438,12 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	'lounge' => array(
 		'DISPLAY' => 'Lounge',
 		'MUSIC' => true,
+		'EMBED' => true,
 	),
 	'ambient' => array(
 		'DISPLAY' => 'Ambient',
 		'MUSIC' => true,
+		'EMBED' => true,
 	),
 
 
@@ -440,6 +459,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SCHEDULE' => true,
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
+		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
 	),
@@ -520,6 +540,14 @@ $GLOBALS['CONFIG']['FEEDBACK'] = array(
 	'USERNAME' => 'winke',
 	'PASSWORD' => 'katze',
 );
+
+/**
+ * Globaler Schalter für die Embedding-Funktionalitäten
+ *
+ * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
+ * Embedding-Funktionen deaktiviert.
+ */
+$GLOBALS['CONFIG']['EMBED'] = true;
 
 /**
  * Konfiguration des L2S2-Systems

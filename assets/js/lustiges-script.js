@@ -151,12 +151,12 @@ $(function() {
 		}
 	})(mejs.i18n.locale.strings);
 
-	$('body.room video').mediaelementplayer({
+	$('body.room video, body.embed video').mediaelementplayer({
 		pluginPath: 'assets/mejs/',
 		features: ['playpause', 'volume', 'fullscreen'],
 		enableAutosize: true
 	});
-	$('body.room audio').mediaelementplayer({
+	$('body.room audio, body.embed audio').mediaelementplayer({
 		features: ['playpause', 'volume', 'current']
 	});
 
@@ -521,4 +521,22 @@ $(function() {
 				}
 				renderFrame();
 			});
+});
+
+// embed-form
+$(function() {
+	$('.embed-form #size').on('click', function() {
+		var
+			$size = $(this),
+			selected = $size.val().split(','),
+			$codefield = $('#embed-code')
+			$iframe = $( $codefield.val() ),
+			$iframe.attr({width: selected[0], height: selected[1]});
+
+		$codefield.val( $iframe.prop('outerHTML') );
+	}).trigger('click');
+
+	$('.embed-form').on('click', 'input[type=text]', function() {
+		$(this).select();
+	});
 });
