@@ -10,4 +10,4 @@ if($conference->isClosed())
 	echo '{}';
 
 else
-	echo json_encode($schedule->getSchedule());
+	echo json_encode($schedule->getSchedule(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
