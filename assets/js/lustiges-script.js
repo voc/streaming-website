@@ -152,7 +152,6 @@ $(function() {
 	})(mejs.i18n.locale.strings);
 
 	$('body.room video, body.embed video').mediaelementplayer({
-		pluginPath: 'assets/mejs/',
 		features: ['playpause', 'volume', 'fullscreen'],
 		enableAutosize: true
 	});
