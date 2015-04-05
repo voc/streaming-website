@@ -49,6 +49,11 @@ try {
 		require('view/schedule-json.php');
 	}
 
+	else if($route == 'streams/v1.json')
+	{
+		require('view/streams-json-v1.php');
+	}
+
 	else if($conference->isClosed())
 	{
 		require('view/closed.php');

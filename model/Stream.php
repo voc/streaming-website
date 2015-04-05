@@ -108,10 +108,30 @@ class Stream
 
 			case 'hls':
 				return 'http://cdn.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.m3u8';
-
-			default:
-				return null;
 		}
+
+		return null;
+	}
+	public function getVideoTech($proto)
+	{
+		switch($proto)
+		{
+			case 'webm':
+				if($this->getSelection() == 'hd')
+					return '1920x1080, VP8+Vorbis in WebM, 2.8 MBit/s';
+
+				else if($this->getSelection() == 'sd')
+					return '1024x576, VP8+Vorbis in WebM, 800 kBit/s';
+
+			case 'hls':
+				if($this->getSelection() == 'hd')
+					return '1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s';
+
+				else if($this->getSelection() == 'sd')
+					return '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s';
+		}
+
+		return null;
 	}
 	public static function getVideoProtos()
 	{
@@ -124,6 +144,19 @@ class Stream
 	public function getSlidesUrl($proto)
 	{
 		return $this->getVideoUrl($proto);
+	}
+	public function getSlidesTech($proto)
+	{
+		switch($proto)
+		{
+			case 'webm':
+				return '1024x576, VP8+Vorbis in WebM, XXX kBit/s';
+
+			case 'hls':
+				return '1024x576, h264+AAC im MPEG-TS-Container via HTTP, XXX kBit/s';
+		}
+
+		return null;
 	}
 	public static function getSlidesProtos()
 	{
@@ -140,10 +173,22 @@ class Stream
 
 			case 'opus':
 				return 'http://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.opus';
-
-			default:
-				return null;
 		}
+
+		return null;
+	}
+	public function getAudioTech($proto)
+	{
+		switch($proto)
+		{
+			case 'mp3':
+				return 'MP3-Audio, 96 kBit/s';
+
+			case 'opus':
+				return 'Opus-Audio, 64 kBit/s';
+		}
+
+		return null;
 	}
 	public static function getAudioProtos()
 	{
@@ -166,6 +211,19 @@ class Stream
 			default:
 				return null;
 		}
+	}
+	public function getMusicTech($proto)
+	{
+		switch($proto)
+		{
+			case 'mp3':
+				return 'MP3-Audio, 192 kBit/s';
+
+			case 'opus':
+				return 'Opus-Audio, 96 kBit/s';
+		}
+
+		return null;
 	}
 	public static function getMusicProtos()
 	{
