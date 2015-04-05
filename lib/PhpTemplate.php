@@ -16,7 +16,7 @@ class PhpTemplate
 
 	public function __construct($file)
 	{
-		$this -> file = $file;
+		$this->file = $file;
 	}
 
 	public function set($___data = array())
