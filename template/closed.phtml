@@ -1,25 +1,35 @@
 <div class="container about">
 	<h1><?=h($conference->getTitle())?> is over!</h1>
 
-	<? if($upcoming): ?>
-		<h2>See you soon at <?=h($upcoming['name'])?></h2>
+	<? if($next): ?>
+		<h2>See you soon at <?=h($next['name'])?></h2>
 	<? endif ?>
 
 	<p>
-		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> was organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>. The next Event we'll attend will be
+		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> was organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>. The next Events we'll attend will be
 	</p>
 
 	<br><br><br>
 
-	<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+	<? foreach($events as $event): ?>
+		<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><?=h($upcoming['name'])?></div>
-			<div class="panel-body">
-				<?=h($upcoming['location'])?><br />
-				<?=h($upcoming['start_date'])?> – <?=h($upcoming['end_date'])?>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<? if($event['description']): ?>
+						<a href="<?=h($event['description'])?>">
+							<?=h($event['name'])?>
+						</a>
+					<? else: ?>
+						<?=h($event['name'])?>
+					<? endif ?>
+				</div>
+				<div class="panel-body">
+					<?=h($event['location'])?><br />
+					<?=h($event['start_date'])?> – <?=h($event['end_date'])?>
+				</div>
 			</div>
-		</div>
 
-	</div>
+		</div>
+	<? endforeach ?>
 </div>
