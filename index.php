@@ -1,5 +1,8 @@
 <?php
 
+if(!ini_get('short_open_tag'))
+	die('`short_open_tag = On` is required');
+
 require_once('config.php');
 
 require_once('lib/PhpTemplate.php');
