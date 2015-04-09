@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 if($conference->isClosed())
 {
-	echo '{}';
+	echo '[]';
 	return;
 }
 
