@@ -25,6 +25,6 @@ Die CSS-Styles sind in [less-css](http://lesscss.org/) geschrieben und es wird e
 
 Die Gesamte Seite wird von der zentralen [config.php](config.php)-Datei gesteuert. Diese ist ausführlich dokumentiert und sollte sich selbst erklären.
 
-Für die Konferenztypische Gestaltung kann in der [main.less](assets/css/main.less) nach Wunsch ausgestaltet werden. Als Beispiel sei hier die Gestaltung für das [Easterhegg 2015](https://eh15.easterhegg.eu/site/) verlinkt: d3c0e74f459121c3e624c9b3b92d6ec6b39a3dbe
+Für die Konferenztypische Gestaltung kann in der [main.less](assets/css/main.less) nach Wunsch ausgestaltet werden. Als Beispiel sei hier die Gestaltung für das [Easterhegg 2015](https://eh15.easterhegg.eu/site/) verlinkt: [d3c0e74](https://github.com/voc/streaming-website/commit/d3c0e74f459121c3e624c9b3b92d6ec6b39a3dbe)
 
 Üblicherweise machen wir für jede Veranstaltung einen `events/XXXX` branch auf, wobei XXXX das Acronym der Konferenz ist.
