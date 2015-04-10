@@ -91,7 +91,7 @@ class Room extends ModelBase
 
 	public function getTwitterUrl() {
 		return sprintf(
-			'https://twitter.com/intent/tweet?text=%s',
+			'https://twitter.com/search?q=%s',
 			rawurlencode($this->getTwitterText())
 		);
 	}
