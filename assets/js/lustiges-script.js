@@ -550,7 +550,7 @@ $(function() {
 	function update() {
 		setTimeout(update, 5000);
 
-		var now = moment('2015-03-31');
+		var now = moment();
 
 		if(dt.dayOfYear() == now.dayOfYear() && dt.year() == now.year())
 			$el.text('today');
