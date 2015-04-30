@@ -11,6 +11,18 @@ body.overview {
 				text-align: left;
 				line-height: 120px;
 			}
+
+			@media (max-width: @screen-xs-min) {
+				text-align: center !important;
+
+				.title {
+					text-align: center;
+					line-height: inherit;
+				}
+				.preview {
+					float: none;
+				}
+			}
 		}
 
 		&.has-schedule.has-preview {
