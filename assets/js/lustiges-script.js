@@ -539,3 +539,23 @@ $(function() {
 		$(this).select();
 	});
 });
+
+// closed-countdown
+$(function() {
+	var
+		$el = $('.closed .countdown'),
+		dt = moment($el.data('dt'));
+
+	$el.attr('title', 'on '+dt.format('dddd, MMM Do YYYY'))
+	function update() {
+		setTimeout(update, 5000);
+
+		var now = moment('2015-03-31');
+
+		if(dt.dayOfYear() == now.dayOfYear() && dt.year() == now.year())
+			$el.text('today');
+		else
+			$el.text( dt.from(now) );
+	}
+	update();
+});

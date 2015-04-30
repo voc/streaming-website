@@ -5,4 +5,17 @@ body.closed {
 	h1, h2, p {
 		text-align: center;
 	}
+
+	.countdown {
+		display: block;
+		text-align: center;
+
+		color: @gray-light;
+		font-size: @font-size-h3;
+
+		&::before,
+		&::after {
+			content: ' – ';
+		}
+	}
 }
