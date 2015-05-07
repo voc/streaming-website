@@ -2,7 +2,7 @@
 	<div class="scroll-element">
 		<div class="now"><span>now</span></div>
 		<? foreach($schedule->getSchedule() as $roomname => $events): ?>
-			<div class="room <? if($roomname == $room->getSlug()): ?>highlight<? endif ?>" style="width: <?=ceil($schedule->getDurationSum() / $schedule->getScale())?>px">
+			<div class="room <? if($roomname == $room->getSlug()): ?>highlight<? endif ?>" style="width: <?=round($schedule->getDurationSum() / $schedule->getScale()) + 50?>px">
 				<? foreach($events as $event): ?>
 					<div
 						class="block <?=h(@$event['special'] ?: 'event')?>"
