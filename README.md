@@ -30,6 +30,25 @@ Für die Konferenztypische Gestaltung kann in der [main.less](assets/css/main.le
 Üblicherweise machen wir für jede Veranstaltung einen `events/XXXX` branch auf, wobei XXXX das Acronym der Konferenz ist.
 
 
+
+## Deployment (auf der VOC Infrastruktur)
+````
+	ssh voc@live.ber
+	cd /srv/nginx/streaming-website
+	git fetch origin
+	git checkout <branch>
+
+	cd assets/css
+	make
+	sudo sh -c 'rm -rf  /srv/nginx/cache/streaming_fcgi/*'
+	exit
+
+	ssh voc@live.dus
+	sudo sh -c 'rm /srv/nginx/cache/streaming_website/static/* /srv/nginx/cache/streaming_website/pages/*'
+	exit
+````
+
+
 ## JSON-API
 
 Unter der URL http://streaming.media.ccc.de/streams/v1.json bietet die Steaming-Webseite eine Übersicht über alle konfigurierten Räume und Streams in einem Maschienenlesbaren Format an. Dieses kann z.B. genutzt werden, um in den diversen Anwendungen die sich rund um das Konferenzgeschehen entwickelt haben Player und Links zu Liveübertragungen anzubieten.
