@@ -17,7 +17,7 @@ Zum vorbereiten einer Konferenz oder weiterentwickeln der Seite ist es hilfreich
 
 Abweichend von der Default-Config muss in PHP das Flag `short_open_tag = On` gesetzt werden.
 
-Die CSS-Styles sind in [less-css](http://lesscss.org/) geschrieben und es wird ein less-Compiler benötigt, um diese in CSS-Dateien umzuwandeln. Der Einfachste Weg ist [node.js](https://nodejs.org/) über das [Debian-Repo](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions) installieren und dann mit `npm install -g less` den `lessc`-Compiler installieren.
+Die CSS-Styles sind in [less-css](http://lesscss.org/) geschrieben und es wird ein less-Compiler benötigt, um diese in CSS-Dateien umzuwandeln. Der Einfachste Weg ist [node.js](https://nodejs.org/) über das [Debian-Repo](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions) installieren und dann mit `npm install -g less` den `lessc`-Compiler installieren. Zum korrekten bauen der Less-Datei kann das makefile in [assets/css](assets/css/) verwendet werden.
 
 
 
