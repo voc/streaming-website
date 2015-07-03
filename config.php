@@ -11,8 +11,6 @@ date_default_timezone_set('Europe/Berlin');
 if($_SERVER['HTTP_HOST'] != 'localhost')
 	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.media.ccc.de/';
 
-$GLOBALS['CONFIG']['BASEURL'] = '//localhost/streaming-website/';
-
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	/**
