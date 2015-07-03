@@ -6,8 +6,12 @@ date_default_timezone_set('Europe/Berlin');
  * In Produktionssituationen sollte manuell eine konfiguriert werden um Überraschungen zu vermeiden
  */
 if($_SERVER['HTTP_HOST'] != 'localhost')
-	$GLOBALS['CONFIG']['BASEURL'] = 'http://streaming.media.ccc.de/';
+	$GLOBALS['CONFIG']['BASEURL'] = proto().'://streaming.media.ccc.de/';
 
+/**
+ * Beispielkonfiguration für Produktionssituationen
+ */
+//$GLOBALS['CONFIG']['BASEURL'] = proto().'://streaming.media.ccc.de/';
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	/**

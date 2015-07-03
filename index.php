@@ -3,11 +3,11 @@
 if(!ini_get('short_open_tag'))
 	die('`short_open_tag = On` is required');
 
+require_once('lib/helper.php');
 require_once('config.php');
 
 require_once('lib/PhpTemplate.php');
 require_once('lib/Exceptions.php');
-require_once('lib/helper.php');
 
 require_once('model/ModelBase.php');
 require_once('model/Conference.php');

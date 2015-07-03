@@ -1,11 +1,21 @@
 <?php
 
+function ssl()
+{
+	return isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'];
+}
+
+function proto()
+{
+	return ssl() ? 'https' : 'http';
+}
+
 function baseurl()
 {
 	if(isset($GLOBALS['CONFIG']['BASEURL']))
 		return $GLOBALS['CONFIG']['BASEURL'];
 
-	$base  = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']) ? 'https://' : 'http://';
+	$base  = ssl() ? 'https://' : 'http://';
 	$base .= $_SERVER['HTTP_HOST'];
 	$base .=  forceslash(dirname($_SERVER['SCRIPT_NAME']));
 

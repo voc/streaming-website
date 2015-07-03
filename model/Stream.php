@@ -114,10 +114,10 @@ class Stream
 		switch($proto)
 		{
 			case 'webm':
-				return 'http://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.webm';
+				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.webm';
 
 			case 'hls':
-				return 'http://cdn.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.m3u8';
+				return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.m3u8';
 		}
 
 		return null;
@@ -179,10 +179,10 @@ class Stream
 		switch($proto)
 		{
 			case 'mp3':
-				return 'http://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.mp3';
+				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.mp3';
 
 			case 'opus':
-				return 'http://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.opus';
+				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.opus';
 		}
 
 		return null;
@@ -213,10 +213,10 @@ class Stream
 		switch($proto)
 		{
 			case 'mp3':
-				return 'http://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'.mp3';
+				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'.mp3';
 
 			case 'opus':
-				return 'http://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'.opus';
+				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'.opus';
 
 			default:
 				return null;
