@@ -8,6 +8,13 @@
 		</div>
 
 		<div class="nav navbar-form navbar-right button-wrapper">
+			<? if(startswith('//', @$GLOBALS['CONFIG']['BASEURL'])): ?>
+				<a class="form-control btn btn-ssl btn-<?= ssl() ? 'success' : 'warning' ?>" href="<?=h( (ssl() ? 'http:' : 'https:').$GLOBALS['CONFIG']['BASEURL'])?>">
+					<span class="fa fa-<?= ssl() ? 'lock' : 'unlock-alt' ?>"></span>
+					TLS
+				</a>
+			<? endif ?>
+
 			<? if(!$conference->isClosed() && $feedback->isEnabled()): ?>
 				<a class="form-control btn btn-default" href="<?=h($feedback->getUrl())?>">
 					<span class="fa fa-bullhorn"></span>
