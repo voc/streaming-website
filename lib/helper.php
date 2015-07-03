@@ -13,7 +13,13 @@ function proto()
 function baseurl()
 {
 	if(isset($GLOBALS['CONFIG']['BASEURL']))
-		return $GLOBALS['CONFIG']['BASEURL'];
+	{
+		$base = $GLOBALS['CONFIG']['BASEURL'];
+		if(startswith('//', $base))
+			$base = proto().':'.$base;
+
+		return $base;
+	}
 
 	$base  = ssl() ? 'https://' : 'http://';
 	$base .= $_SERVER['HTTP_HOST'];
