@@ -10,7 +10,7 @@
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<div class="alert alert-success">
 					<h3>Released</h3>
-					<p>This talk is already released! Take a look at <a href="<?=h($talk['release_url'])?>">media.ccc.de</a>.</p>
+					<p>This talk is already released! Take a look at <a href="<?=h($talk['release_url'])?>"><?=h(parse_url($talk['release_url'], PHP_URL_HOST))?></a>.</p>
 				</div>
 			</div>
 		</div>
