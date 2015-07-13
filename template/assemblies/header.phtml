@@ -9,7 +9,7 @@
 
 		<div class="nav navbar-form navbar-right button-wrapper">
 			<? if(startswith('//', @$GLOBALS['CONFIG']['BASEURL'])): ?>
-				<a class="form-control btn btn-ssl btn-<?= ssl() ? 'success' : 'warning' ?>" href="<?=h( (ssl() ? 'http:' : 'https:').$GLOBALS['CONFIG']['BASEURL'])?>">
+				<a class="form-control btn btn-ssl btn-<?= ssl() ? 'success' : 'warning' ?>" href="<?=h(ssl() ? $httpurl : $httpsurl)?>">
 					<span class="fa fa-<?= ssl() ? 'lock' : 'unlock-alt' ?>"></span>
 					TLS
 				</a>

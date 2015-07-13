@@ -28,8 +28,9 @@ $conference = new Conference();
 
 $tpl = new PhpTemplate('template/page.phtml');
 $tpl->set(array(
-	'baseurl' => baseurl(),
+	'baseurl' => forceslash(baseurl()),
 	'route' => $route,
+	'canonicalurl' => forceslash(baseurl()).forceslash($route),
 	'assemblies' => './template/assemblies/',
 
 	'conference' => $conference,
@@ -37,6 +38,13 @@ $tpl->set(array(
 	'schedule' => new Schedule(),
 ));
 
+if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
+{
+	$tpl->set(array(
+		'httpsurl' => forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).forceslash($route),
+		'httpurl' =>  forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).forceslash($route),
+	));
+}
 
 ob_start();
 try {
