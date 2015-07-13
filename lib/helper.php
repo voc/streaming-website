@@ -2,7 +2,7 @@
 
 function ssl()
 {
-	return isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'];
+	return isset($_SERVER['HTTPS']) && strcmp($_SERVER['HTTPS'], 'on') == 0;
 }
 
 function proto()
