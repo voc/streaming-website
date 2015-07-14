@@ -7,8 +7,8 @@
 		</div>
 	</div>
 
-	<? foreach($overview->getGroups() as $group => $rooms): ?>
-		<div class="row room-group">
+	<? $i = 0; foreach($overview->getGroups() as $group => $rooms): ?>
+		<div class="row room-group room-group-n<?=h($i++)?>">
 			<? if($group): ?>
 				<div class="col-xs-12">
 					<h2><?=h($group)?></h2>
