@@ -12,7 +12,7 @@ class Overview extends ModelBase
 				try {
 					$groups[$group][] = new Room($room);
 				}
-				catch(NotFountException $e)
+				catch(NotFoundException $e)
 				{
 					// just ignore unknown rooms
 					continue;
