@@ -537,8 +537,8 @@ $GLOBALS['CONFIG']['FEEDBACK'] = array(
 	 * es kann dann nur noch durch manuelle Inspektion der .sqlite3-Datei auf das Feedback
 	 * zugegriffen werden.
 	 */
-	'USERNAME' => 'winke',
-	'PASSWORD' => 'katze',
+	'USERNAME' => 'katze',
+	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
 );
 
 /**
