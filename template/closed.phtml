@@ -1,5 +1,7 @@
 <div class="container about">
-	<h1><?=h($conference->getTitle())?> is over!</h1>
+	<? if($conference->getTitle() != $next['name']): ?>
+		<h1><?=h($conference->getTitle())?> is over!</h1>
+	<? endif ?>
 
 	<? if($next): ?>
 		<h2>See you soon at <?=h($next['name'])?></h2>
