@@ -81,6 +81,7 @@ foreach($overview->getGroups() as $group => $rooms)
 
 		$roomstruct[] = array(
 			'slug' => $room->getSlug(),
+			'schedulename' => $room->getScheduleName(),
 			'thumb' => forceslash(baseurl()).$room->getThumb(),
 			'link' => forceslash(baseurl()).$room->getLink(),
 			'display' => $room->getDisplay(),
