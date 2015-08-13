@@ -14,4 +14,6 @@ echo $tpl->render(array(
 	'title' => $stream->getDisplay(),
 	'room' => $room,
 	'stream' => $stream,
+
+	'autoplay' => @$_GET['autoplay'],
 ));

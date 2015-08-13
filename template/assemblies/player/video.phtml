@@ -1,6 +1,8 @@
 <div style="max-width: <?=h($stream->getVideoWidth())?>px; max-height: <?=h($stream->getVideoHeight())?>px;" class="video-wrap">
 	<video
-		autoplay="autoplay"
+		<? if(!isset($autoplay) || $autoplay == true): ?>
+			autoplay="autoplay"
+		<? endif ?>
 		preload="auto"
 		width="<?=h($stream->getVideoWidth())?>"
 		height="<?=h($stream->getVideoHeight())?>"

@@ -524,16 +524,28 @@ $(function() {
 
 // embed-form
 $(function() {
-	$('.embed-form #size').on('click', function() {
+	var originalsrc;
+	$('.embed-form #size, .embed-form #autoplay').on('click', function() {
 		var
-			$size = $(this),
+			$size = $('.embed-form #size'),
 			selected = $size.val().split(','),
-			$codefield = $('#embed-code')
+			$size = $('.embed-form #size'),
+			$codefield = $('#embed-code'),
+			$urlfield = $('#embed-url'),
 			$iframe = $( $codefield.val() ),
-			$iframe.attr({width: selected[0], height: selected[1]});
+			autoplay = $('.embed-form #autoplay').prop('checked');
+
+		if(!originalsrc)
+			originalsrc = $iframe.attr('src');
+
+		var src = originalsrc + (autoplay ? '' : 'no-autoplay/');
+
+		$iframe.attr({width: selected[0], height: selected[1]});
+		$iframe.attr({src: src});
 
 		$codefield.val( $iframe.prop('outerHTML') );
-	}).trigger('click');
+		$urlfield.val( src );
+	})
 
 	$('.embed-form').on('click', 'input[type=text]', function() {
 		$(this).select();

@@ -143,12 +143,13 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides)/(native|translated|stereo)$@', $route, $m))
+	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides)/(native|translated|stereo)(/no-autoplay)?$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
 			'selection' => $m[2],
 			'language' => $m[3],
+			'autoplay' => !isset($m[4]),
 		);
 		require('view/embed.php');
 	}

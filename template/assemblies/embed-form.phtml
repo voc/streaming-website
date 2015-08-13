@@ -17,6 +17,12 @@
 					<option selected value="1920,1080">1920×1080</option>
 				<? endif ?>
 			</select>
+
+			<div class="checkbox">
+				<label>
+					<input checked="checked" type="checkbox" id="autoplay"> Autoplay
+				</label>
+			</div>
 		</div>
 
 	</div>
@@ -30,8 +36,8 @@
 		</div>
 
 		<div class="form-group">
-			<label for="url">Embed URL:</label>
-			<input type="text" id="url" class="form-control" readonly value="<?=h($stream->getEmbedUrl())?>">
+			<label for="embed-url">Embed URL:</label>
+			<input type="text" id="embed-url" class="form-control" readonly value="<?=h($stream->getEmbedUrl())?>">
 		</div>
 	</div>
 </div>
