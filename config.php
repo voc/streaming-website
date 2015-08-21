@@ -91,7 +91,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://cdn.c3voc.de/releases/relive/index.json',
+	'RELIVE_JSON' => 'configs/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -479,7 +479,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'http://events.ccc.de/congress/2014/Fahrplan/schedule.xml',
+	'URL' => 'configs/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
