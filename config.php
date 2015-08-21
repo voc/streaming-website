@@ -86,7 +86,9 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 
 	/**
 	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne
-	 * ReLive-Ansicht zu aktivieren.
+	 * ReLive-Ansicht zu aktivieren. Üblicherweise wird diese Datei über
+	 * das Script configs/download.sh heruntergeladen, welches von einem
+	 * Cronjob regelmäßig getriggert wird.
 	 *
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
@@ -476,8 +478,9 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * URL zum Fahrplan-XML
 	 *
 	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
-	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
-	 * externer HTTP-Cache vorgeschaltet werden.
+	 * aufhören zu funktionieren. Üblicherweise wird diese daher Datei über
+	 * das Script configs/download.sh heruntergeladen, welches von einem
+	 * Cronjob regelmäßig getriggert wird.
 	 */
 	'URL' => 'configs/schedule.xml',
 
