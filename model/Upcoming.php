@@ -5,14 +5,14 @@ class Upcoming
 	public function getNextEvents()
 	{
 		try {
-			$events = file_get_contents('https://c3voc.de/eventkalender/events.json?filter=upcoming');
+			$events = file_get_contents('configs/upcoming.json');
 			$events = json_decode($events, true);
 
 			return array_values($events['voc_events']);
 		}
 		catch(ErrorException $e)
 		{
-			return null;
+			return array();
 		}
 	}
 }
