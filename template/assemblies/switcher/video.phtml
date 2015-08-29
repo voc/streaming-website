@@ -39,7 +39,7 @@
 
 	<div class="directlinks">
 		<? foreach(Stream::getVideoProtos() as $proto => $display): ?>
-			<h3>Directlinks (<?=h($display)?>)</h3>
+			<h3>Direct links (<?=h($display)?>)</h3>
 			<div class="row">
 				<? foreach($room->getVideoResolutions() as $res): ?>
 					<? $selection = $room->createSelectionObject($res) ?>
