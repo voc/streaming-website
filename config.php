@@ -9,7 +9,7 @@ date_default_timezone_set('Europe/Berlin');
  * In diesem Fall wird auch ein SSL-Umschalt-Button im Header angezeigt
  */
 if($_SERVER['HTTP_HOST'] != 'localhost')
-	$GLOBALS['CONFIG']['BASEURL'] = '//localhost:8888/';
+	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.media.ccc.de/';
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
