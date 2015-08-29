@@ -25,28 +25,28 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => '31C3',
+	'TITLE' => 'MRMCD2015',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'CCC',
+	'AUTHOR' => 'MRMCD',
 
 	/**
 	 * Beschreibungstext
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Video Live-Streaming vom 31C3',
+	'DESCRIPTION' => 'Video Live-Streaming von den MRMCD',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => '31C3, Hacking, Chaos Computer Club, Video, Media, Streaming, Hacker',
+	'KEYWORDS' => 'MRMCD, Hacking, Chaos Computer Club, Video, Media, Streaming, Hacker',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -54,10 +54,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://ccc.de">Chaos Computer Club e.V</a>,
-		<a href="http://fem.tu-ilmenau.de/">FeM</a>,
-		<a href="http://www.ags.tu-bs.de/">ags</a> &amp;
-		<a href="https://c3voc.de">c3voc</a>
+		by <a href="https://c3voc.de">c3voc</a>
 	',
 
 	/**
@@ -76,15 +73,22 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'http://media.ccc.de/browse/congress/2014/index.html',
+	'RELEASES' => 'https://media.ccc.de/browse/conferences/mrmcd/mrmcd15/',
 
 	/**
-	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
-	 * konfiguriert werden. Üblicherweise wird diese Datei über das Script
-	 * configs/download.sh heruntergeladen, welches von einem Cronjob
-	 * regelmäßig getriggert wird.
-	 *
+	 * Link zu einer (externen) ReLive-Übersichts-Seite
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
+	 */
+//	'RELIVE' => 'http://vod.c3voc.de/',
+
+	/**
+	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne
+	 * ReLive-Ansicht zu aktivieren. Üblicherweise wird diese Datei über
+	 * das Script configs/download.sh heruntergeladen, welches von einem
+	 * Cronjob regelmäßig getriggert wird.
+	 *
+	 * Wird beides aktiviert, hat der externe Link Vorrang!
+	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
 	'RELIVE_JSON' => 'configs/index.json',
 
@@ -111,16 +115,6 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 		'Lecture Rooms' => array(
 			'saal1',
 			'saal2',
-			'saalg',
-			'saal6',
-		),
-
-		'Live DJ Sets'  => array(
-			'lounge',
-			'ambient',
-		),
-		'Live Podcasts' => array(
-			'sendezentrum',
 		),
 	),
 );
@@ -139,7 +133,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Saal 1',
+		'DISPLAY' => 'Schneller.',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -162,7 +156,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * die native-Streams verwendet, andernfalls wird native und translated
 		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
 		 */
-		'TRANSLATION' => true,
+		'TRANSLATION' => false,
 
 		/**
 		 * stereo-Tonspur statt native-Tonspur benutzen
@@ -196,7 +190,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
 		 * als Default-Stream angenommen.
 		 */
-		'HD_VIDEO' => true,
+		'HD_VIDEO' => false,
 
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
@@ -207,7 +201,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
 		 * Default-Stream angenommen.
 		 */
-		'SLIDES' => true,
+		'SLIDES' => false,
 
 		/**
 		 * Audio-Only-Stream verfügbar
@@ -246,7 +240,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Saal 1',
+		'SCHEDULE_NAME' => 'Schneller.',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -257,7 +251,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Ebenso können alle Feedback-Funktionialitäten durch auskommentieren
 		 * des globalen $GLOBALS['CONFIG']['FEEDBACK']-Blocks deaktiviert werden
 		 */
-		'FEEDBACK' => true,
+		'FEEDBACK' => false,
 
 		/**
 		 * Subtitles-Player aktivieren (boolean)
@@ -268,7 +262,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Ebenso können alle Subtitles-Funktionialitäten durch auskommentieren
 		 * des globalen $GLOBALS['CONFIG']['SUBTITLES']-Blocks deaktiviert werden
 		 */
-		'SUBTITLES' => true,
+		'SUBTITLES' => false,
 
 		/**
 		 * Embed-Form aktivieren (boolean)
@@ -299,7 +293,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Ebenso können alle IRC-Links durch auskommentieren
 		 * des globalen $GLOBALS['CONFIG']['IRC']-Blocks deaktiviert werden
 		 */
-		'IRC' => true,
+		'IRC' => false,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -327,7 +321,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Ebenso können alle Twitter-Links durch auskommentieren
 		 * des globalen $GLOBALS['CONFIG']['TWITTER']-Blocks deaktiviert werden
 		 **/
-		'TWITTER' => true,
+		'TWITTER' => false,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -343,120 +337,21 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	),
 
 	'saal2' => array(
-		'DISPLAY' => 'Saal 2',
-		'STREAM' => 's2',
-		'PREVIEW' => true,
-
-		'TRANSLATION' => true,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'AUDIO' => true,
-		'SLIDES' => true,
-		'MUSIC' => false,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 2',
-		'FEEDBACK' => true,
-		'SUBTITLES' => true,
-		'EMBED' => true,
-		'IRC' => true,
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#31C3-hall-2 @ hackint',
-			'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-2',
-		),
-		'TWITTER' => true,
-		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#hall2 @ twitter',
-			'TEXT'    => '#31C3 #hall2',
-		),
-	),
-
-	'saalg' => array(
-		'DISPLAY' => 'Saal G',
-		'STREAM' => 's3',
-		'PREVIEW' => true,
-
-		'TRANSLATION' => true,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'AUDIO' => true,
-		'SLIDES' => true,
-		'MUSIC' => false,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal G',
-		'FEEDBACK' => true,
-		'SUBTITLES' => true,
-		'EMBED' => true,
-		'IRC' => true,
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#31C3-hall-g @ hackint',
-			'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-g',
-		),
-		'TWITTER' => true,
-		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#hallg @ twitter',
-			'TEXT'    => '#31C3 #hallg',
-		),
-	),
-
-	'saal6' => array(
-		'DISPLAY' => 'Saal 6',
+		'DISPLAY' => 'Höher.',
 		'STREAM' => 's4',
 		'PREVIEW' => true,
 
-		'TRANSLATION' => true,
+		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
+		'HD_VIDEO' => false,
 		'AUDIO' => true,
-		'SLIDES' => true,
+		'SLIDES' => false,
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 6',
-		'FEEDBACK' => true,
-		'SUBTITLES' => true,
-		'EMBED' => true,
-		'IRC' => true,
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#31C3-hall-6 @ hackint',
-			'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-6',
-		),
-		'TWITTER' => true,
-		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#hall6 @ twitter',
-			'TEXT'    => '#31C3 #hall6',
-		),
-	),
-
-
-	'lounge' => array(
-		'DISPLAY' => 'Lounge',
-		'MUSIC' => true,
-		'EMBED' => true,
-	),
-	'ambient' => array(
-		'DISPLAY' => 'Ambient',
-		'MUSIC' => true,
-		'EMBED' => true,
-	),
-
-
-	'sendezentrum' => array(
-		'DISPLAY' => 'Sendezentrum',
-		'STREAM' => 's5',
-
-		'STEREO' => true,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'AUDIO' => true,
-
-		'SCHEDULE' => true,
-		'FEEDBACK' => true,
+		'SCHEDULE_NAME' => 'Höher.',
 		'SUBTITLES' => false,
 		'EMBED' => true,
-		'IRC' => false,
-		'TWITTER' => false,
 	),
 );
 
@@ -509,35 +404,6 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 
 
 /**
- * Konfiguration des Feedback-Formulars
- *
- * Wird dieser Block auskommentiert, wird das gesamte Feedback-System deaktiviert
- */
-$GLOBALS['CONFIG']['FEEDBACK'] = array(
-	/**
-	 * DSN zum abspeichern der eingegebenen Daten
-	 * die Datenbank muss eine Tabelle enthaltem, die dem in `lib/schema.sql` angegebenen
-	 * Schema entspricht.
-	 *
-	 * Achtung vor Dateirechten: Bei SQLite reicht es nicht, wenn wer Webseiten-Benutzer
-	 * die .sqlite3-Datei schreiben darf, er muss auch im übergeordneten Order neue
-	 * (Lock-)Dateien anlegen dürfen
-	 */
-	'DSN' => 'sqlite:/opt/31c3-streaming-feedback/feedback.sqlite3',
-
-	/**
-	 * Login-Daten für die /feedback/read/-Seite, auf der eingegangenes
-	 * Feedback gelesen werden kann.
-	 *
-	 * Durch auskommentieren der beiden Optionen wird diese Seite komplett deaktiviert,
-	 * es kann dann nur noch durch manuelle Inspektion der .sqlite3-Datei auf das Feedback
-	 * zugegriffen werden.
-	 */
-	'USERNAME' => 'katze',
-	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
-);
-
-/**
  * Globaler Schalter für die Embedding-Funktionalitäten
  *
  * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
@@ -545,74 +411,5 @@ $GLOBALS['CONFIG']['FEEDBACK'] = array(
  */
 $GLOBALS['CONFIG']['EMBED'] = true;
 
-/**
- * Konfiguration des L2S2-Systems
- * https://github.com/c3subtitles/L2S2
- *
- * Wird dieser Block auskommentiert, wird das gesamte Subtitle-System deaktiviert
- */
-$GLOBALS['CONFIG']['SUBTITLES'] = array(
-	/**
-	 * URL des L2S2-Servers
-	 */
-	'URL' => 'http://subtitles.c3voc.de/',
-);
 
-/**
- * Globale Konfiguration der IRC-Links.
- *
- * Wird dieser Block auskommentiert, werden keine IRC-Links mehr erzeugt. Sollen die
- * IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
- * existieren sein. ggf. einfach auf true setzen:
- *
- *   $GLOBALS['CONFIG']['IRC'] = true
- */
-$GLOBALS['CONFIG']['IRC'] = array(
-	/**
-	 * Anzeigetext für die IRC-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
-	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
-	 */
-	'DISPLAY' => '#31C3-%s @ hackint',
 
-	/**
-	 * URL für die IRC-Links.
-	 * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
-	 * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#31C3-%s'
-	 * verwendet werden.
-	 *
-	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
-	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
-	 */
-	'URL' => 'irc://irc.hackint.eu:6667/31C3-%s',
-);
-
-/**
- * Globale Konfiguration der Twitter-Links.
- *
- * Wird dieser Block auskommentiert, werden keine Twitter-Links mehr erzeugt. Sollen die
- * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
- * existieren sein. ggf. einfach auf true setzen:
- *
- *   $GLOBALS['CONFIG']['TWITTER'] = true
- */
-$GLOBALS['CONFIG']['TWITTER'] = array(
-	/**
-	 * Anzeigetext für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
-	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
-	 */
-	'DISPLAY' => '#%s @ twitter',
-
-	/**
-	 * Vorgabe-Tweet-Text für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
-	 */
-	'TEXT' => '#31C3 #%s',
-);
