@@ -4,21 +4,109 @@
 
 // often configured values (and their defaults):
 //
-//  @brand-primary:         #337ab7;
-//  @text-color:            @gray-dark;
-//
-//  @link-color:            @brand-primary;
-//  @link-hover-color:      darken(@link-color, 15%);
-//
-//  @navbar-default-color:  #777777;
-//  @navbar-default-bg:     #f8f8f8;
-//
-//  @navbar-default-link-color:       #777;
-//  @navbar-default-link-hover-color: #333;
+  @brand-primary:         white;
+  @text-color:            white;
+
+  @link-color:            @brand-primary;
+
+  @navbar-default-color:  white;
+  @navbar-default-bg:     #2CA13B;
+
+  @navbar-default-link-color:       white;
+  @navbar-default-link-hover-color: black;
+
+  @mrmcd-green:           #2CA13B;
+  @mrmcd-red:             #D7002A;
+  @mrmcd-blue:            #2783C7;
+  @mrmcd-yellow:          #EEC30B;
+
+  @panel-bg:              darken(@mrmcd-blue, 20%);
 
 
+.overview {
+	.headline {
+		display: none;
+	}
 
+	p a {
+		text-decoration: underline;
+	}
 
+	.room-group-n0 {
+		&, a {
+			color: white;
+		}
+
+		.panel {
+			border-color: white;
+
+			.panel-heading,
+			.panel-heading a{
+				background-color: @mrmcd-blue;
+				border-color: white;
+				color: white;
+			}
+		}
+	}
+
+	.recordings {
+		&, a {
+			color: white;
+		}
+		a:hover {
+			color: @mrmcd-blue;
+		}
+
+		.panel {
+			border-color: white;
+		}
+	}
+}
+
+body {
+    background-color: #231F20;
+}
+
+.navbar-brand {
+	text-indent: -9999em;
+	background: url(../img/logo.png) no-repeat;
+	background-size: auto 43px;
+	background-position: 0 5px;
+	width: 180px;
+}
+
+.tab-content {
+	background-color: @panel-bg;
+}
+
+.btn-primary {
+    color: black;
+}
+
+.nav-tabs {
+  > li {
+      
+    > a {
+      &:hover {
+        background-color: @mrmcd-blue;
+        color: white;
+      }
+    }
+      
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: white;
+        background-color: @mrmcd-blue;
+      }
+    }
+  }
+}
+
+.notes.well {
+    background-color: @mrmcd-blue;
+}
 
 // colors of the schedule ("Fahrplan") widget below the video-player
 //
