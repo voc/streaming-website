@@ -41,13 +41,10 @@ class Conference extends ModelBase
 	}
 
 	public function hasRelive() {
-		return $this->has('CONFERENCE.RELIVE') || $this->has('CONFERENCE.RELIVE_JSON');
+		return $this->has('CONFERENCE.RELIVE_JSON');
 	}
 	public function getReliveUrl() {
-		if($this->has('CONFERENCE.RELIVE'))
-			return $this->get('CONFERENCE.RELIVE');
-
-		elseif($this->has('CONFERENCE.RELIVE_JSON'))
+		if($this->has('CONFERENCE.RELIVE_JSON'))
 			return 'relive/';
 
 		else

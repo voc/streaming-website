@@ -79,19 +79,12 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	'RELEASES' => 'http://media.ccc.de/browse/congress/2014/index.html',
 
 	/**
-	 * Link zu einer (externen) ReLive-Übersichts-Seite
-	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
-	 */
-	//'RELIVE' => 'http://vod.c3voc.de/',
-
-	/**
-	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne
-	 * ReLive-Ansicht zu aktivieren. Üblicherweise wird diese Datei über
-	 * das Script configs/download.sh heruntergeladen, welches von einem
-	 * Cronjob regelmäßig getriggert wird.
+	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
+	 * konfiguriert werden. Üblicherweise wird diese Datei über das Script
+	 * configs/download.sh heruntergeladen, welches von einem Cronjob
+	 * regelmäßig getriggert wird.
 	 *
-	 * Wird beides aktiviert, hat der externe Link Vorrang!
-	 * Wird beides auskommentiert, wird der Link nicht angezeigt
+	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
 	'RELIVE_JSON' => 'configs/index.json',
 
