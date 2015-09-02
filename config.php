@@ -102,13 +102,6 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
 	'RELIVE_JSON' => 'configs/index.json',
-
-	/**
-	 * APCU-Cache-Zeit in Sekunden
-	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
-	 * das Relive-Json bei jedem Request von der Quelle geladen und geparst
-	 */
-	//'RELIVE_JSON_CACHE' => 30*60,
 );
 
 /**
@@ -498,13 +491,6 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
 	//'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6'),
-
-	/**
-	 * APCU-Cache-Zeit in Sekunden
-	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
-	 * der Fahrplan bei jedem Request von der Quelle geladen und geparst
-	 */
-	//'CACHE' => 30*60,
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel

@@ -42,9 +42,6 @@ class Schedule extends ModelBase
 
 	public function getSchedule()
 	{
-		if($schedule = $this->getCached())
-			return $schedule;
-
 		// download schedule-xml
 		try
 		{
@@ -193,7 +190,7 @@ class Schedule extends ModelBase
 			}
 		}
 
-		return $this->doCache($program);
+		return $program;
 	}
 
 
@@ -218,44 +215,6 @@ class Schedule extends ModelBase
 	private function getScheduleUrl()
 	{
 		return $this->get('SCHEDULE.URL');
-	}
-
-	private function isCacheEnabled()
-	{
-		return $this->has('SCHEDULE.CACHE') && function_exists('apc_fetch') && function_exists('apc_store');
-	}
-
-	private function getCacheDuration()
-	{
-		return $this->get('SCHEDULE.CACHE', 60*10 /* 10 minutes */);
-	}
-
-	private $localCache = null;
-	private function getCached()
-	{
-		if($this->localCache)
-			return $this->localCache;
-
-		if(!$this->isCacheEnabled())
-			return null;
-
-		return apc_fetch($this->getCacheKey());
-	}
-
-	private function doCache($value)
-	{
-		$this->localCache = $value;
-
-		if(!$this->isCacheEnabled())
-			return $value;
-
-		apc_store($this->getCacheKey(), $value, $this->getCacheDuration());
-		return $value;
-	}
-
-	private function getCacheKey()
-	{
-		return 'SCHEDULE.'.$this->getScheduleUrl();
 	}
 
 	public function getScheduleToRoomSlugMapping()

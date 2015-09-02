@@ -15,9 +15,6 @@ class Relive extends ModelBase
 
 	public function getTalks()
 	{
-		if($talks_by_id = $this->getCached())
-			return $talks_by_id;
-
 		$talks = file_get_contents($this->getJsonUrl());
 		$talks = (array)json_decode($talks, true);
 
@@ -49,7 +46,7 @@ class Relive extends ModelBase
 			$talks_by_id[$talk['id']] = $talk;
 		}
 
-		return $this->doCache($talks_by_id);
+		return $talks_by_id;
 	}
 
 	public function getTalk($id)
@@ -59,44 +56,6 @@ class Relive extends ModelBase
 			throw new NotFoundException('Relive-Talk id '.$id);
 
 		return $talks[$id];
-	}
-
-	private function isCacheEnabled()
-	{
-		return $this->has('CONFERENCE.RELIVE_JSON_CACHE') && function_exists('apc_fetch') && function_exists('apc_store');
-	}
-
-	private function getCacheDuration()
-	{
-		return $this->get('CONFERENCE.RELIVE_JSON_CACHE', 60*10 /* 10 minutes */);
-	}
-
-	private $localCache = null;
-	private function getCached()
-	{
-		if($this->localCache)
-			return $this->localCache;
-
-		if(!$this->isCacheEnabled())
-			return null;
-
-		return apc_fetch($this->getCacheKey());
-	}
-
-	private function doCache($value)
-	{
-		$this->localCache = $value;
-
-		if(!$this->isCacheEnabled())
-			return $value;
-
-		apc_store($this->getCacheKey(), $value, $this->getCacheDuration());
-		return $value;
-	}
-
-	private function getCacheKey()
-	{
-		return 'RELIVE.'.$this->getJsonUrl();
 	}
 
 	private function getScheduleToRoomMapping()
