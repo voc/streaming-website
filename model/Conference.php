@@ -23,7 +23,7 @@ class Conference extends ModelBase
 
 			if($closed == "before")
 				return false;
-			else if($closed == "running")
+			else if($closed == "running" || $closed == "after")
 				return true;
 		}
 
@@ -36,7 +36,8 @@ class Conference extends ModelBase
 
 			if($closed == "after" || $closed === true)
 				return true;
-			else if($closed == "running" || $closed === false)
+			else if($closed == "running" || $closed == "before" ||
+				$closed === false)
 				return false;
 		}
 
