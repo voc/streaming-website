@@ -67,7 +67,7 @@ try {
 
 	else if(!$conference->hasBegun())
 	{
-		require('view/not_started.php');
+		require('view/not-started.php');
 	}
 
 	else if($conference->hasEnded())

@@ -1,5 +1,5 @@
 <?php
 echo $tpl->render(array(
-	'page' => 'not_started',
+	'page' => 'not-started',
 	'title' => 'See you soon!',
 ));
