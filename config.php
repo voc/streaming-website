@@ -101,7 +101,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/index.json',
+	'RELIVE_JSON' => 'configs/vod.json',
 );
 
 /**
