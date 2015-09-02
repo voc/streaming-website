@@ -65,7 +65,12 @@ try {
 		require('view/streams-json-v1.php');
 	}
 
-	else if($conference->isClosed())
+	else if($conference->hasBegun())
+	{
+		require('view/not_started.php');
+	}
+
+	else if($conference->hasEnded())
 	{
 		require('view/closed.php');
 	}

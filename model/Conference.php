@@ -7,7 +7,40 @@ class Conference extends ModelBase
 	}
 
 	public function isClosed() {
-		return $this->get('CONFERENCE.CLOSED');
+		return !$this->hasBegun() || $this->hasEnded();
+	}
+
+	public function hasBegun() {
+		if($this->has('CONFERENCE.CLOSED')) {
+			$closed = $this->get('CONFERENCE.CLOSED');
+
+			/* when CLOSED is a boolean, we're reading an old config where
+			 * conferences didn't have a pre-beginning phase, thus we always
+			 * return true.
+			 */
+			if(gettype($closed) == "boolean")
+				return true;
+
+			if($closed == "before")
+				return false;
+			else if($closed == "running")
+				return true;
+		}
+
+		return time() >= $this->get('CONFERENCE.STARTS_AT');
+	}
+
+	public function hasEnded() {
+		if($this->has('CONFERENCE.CLOSED')) {
+			$closed = $this->get('CONFERENCE.CLOSED');
+
+			if($closed == "after" || $closed === true)
+				return true;
+			else if($closed == "running" || $closed === false)
+				return false;
+		}
+
+		return time() >= $this->get('CONFERENCE.ENDS_AT');
 	}
 
 	public function hasAuthor() {

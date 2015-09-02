@@ -1,0 +1,41 @@
+<? if($conference->hasReleases() || $conference->hasRelive()): ?>
+	<?
+		$class = ($conference->hasReleases() && $conference->hasRelive()) ?
+			// both enabled
+			'col-sm-6 col-xs-12' :
+
+			// only one of both enabled
+			'col-xs-12';
+	?>
+	<div class="row recordings">
+
+		<div class="col-xs-12">
+			<h2>Recordings</h2>
+		</div>
+
+		<? if($conference->hasReleases()): ?>
+			<div class="<?=h($class)?>">
+				<div class="panel panel-primary">
+					<div class="panel-body">
+						<a href="<?=h($conference->getReleasesUrl())?>">
+							<span class="fa fa-video-camera"></span> Releases
+						</a>
+					</div>
+				</div>
+			</div>
+		<? endif ?>
+
+		<? if($conference->hasRelive()): ?>
+			<div class="<?=h($class)?>">
+				<div class="panel panel-primary">
+					<div class="panel-body">
+						<a href="<?=h($conference->getReliveUrl())?>">
+							<span class="fa fa-play-circle"></span> ReLive
+						</a>
+					</div>
+				</div>
+			</div>
+		<? endif ?>
+
+	</div>
+<? endif ?>
