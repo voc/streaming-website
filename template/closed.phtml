@@ -9,6 +9,21 @@
 	<? endif ?>
 
 	<p>
+		<? if($conference->hasReleases()): ?>
+			Recordings will be released at <a href="<?=h($conference->getReleasesUrl())?>"><?=h($conference->getReleasesUrl())?></a>.
+		<? endif ?>
+
+		<? if($conference->hasRelive()): ?>
+			<? if($conference->hasReleases()): ?>
+				Until all recordings are released, <a href="<?=h($conference->getReliveUrl())?>">ReLive</a> remains available.
+			<? else: ?>
+				You can still watch stream dumps <a href="<?=h($conference->getReliveUrl())?>">here</a>.
+			<? endif ?>
+		<? endif ?>
+
+	</p>
+
+	<p>
 		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> was organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>. The next events we'll attend will be
 	</p>
 
