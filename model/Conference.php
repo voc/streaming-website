@@ -27,7 +27,11 @@ class Conference extends ModelBase
 				return true;
 		}
 
-		return time() >= $this->get('CONFERENCE.STARTS_AT');
+		if($this->has('CONFERENCE.STARTS_AT')) {
+			return time() >= $this->get('CONFERENCE.STARTS_AT');
+		} else {
+			return true;
+		}
 	}
 
 	public function hasEnded() {
@@ -41,7 +45,11 @@ class Conference extends ModelBase
 				return false;
 		}
 
-		return time() >= $this->get('CONFERENCE.ENDS_AT');
+		if($this->has('CONFERENCE.ENDS_AT')) {
+			return time() >= $this->get('CONFERENCE.ENDS_AT');
+		} else {
+			return false;
+		}
 	}
 
 	public function hasAuthor() {

@@ -16,12 +16,17 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
 	 * mit einem Text der Art "hat noch nicht angefangen" angezeigt.
+	 *
+	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
+	 * und CLOSED weiter unten)
 	 */
 	'STARTS_AT' => strtotime("2014-12-27 06:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
 	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 *
+	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
 	'ENDS_AT' => strtotime("2014-12-30 21:00"),
 
