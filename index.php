@@ -68,13 +68,19 @@ try {
 
 	else if($route == 'assets/css/main.css')
 	{
-		$parser = new Less_Parser([
+		$dir = forceslash(sys_get_temp_dir());
+
+		$css_file = Less_Cache::Get([
+			'assets/css/main.less' => forceslash(baseurl()).'assets/css/',
+		], [
 			'sourceMap' => true,
 			'compress' => true,
 			'relativeUrls' => true,
+
+			'cache_dir' => $dir,
 		]);
-		$parser->parseFile('assets/css/main.less', forceslash(baseurl()).'assets/css/');
-		$css = $parser->getCss();
+
+		$css = file_get_contents($dir.$css_file);
 		header('Content-Type: text/css');
 		header('Content-Length: '.strlen($css));
 		print($css);
