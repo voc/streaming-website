@@ -102,7 +102,9 @@ class Schedule extends ModelBase
 				if($this->isRoomFiltered($name))
 					continue;
 
-				if(isset($mapping[$name]))
+				$room_known = isset($mapping[$name]);
+
+				if($room_known)
 					$name = $mapping[$name];
 
 				foreach($room->event as $event)
@@ -125,6 +127,7 @@ class Schedule extends ModelBase
 							'start' => $lastend,
 							'end' => $start,
 							'duration' => $pauseduration,
+							'room_known' => $room_known,
 						);
 					}
 					else if(!$lastend && $daystart < $start)
@@ -138,6 +141,7 @@ class Schedule extends ModelBase
 							'start' => $daystart,
 							'end' => $start,
 							'duration' => $start - $daystart,
+							'room_known' => $room_known,
 						);
 					}
 
@@ -155,6 +159,7 @@ class Schedule extends ModelBase
 						'start' => $start,
 						'end' => $end,
 						'duration' => $duration,
+						'room_known' => $room_known,
 					);
 
 					$lastend = $end;
