@@ -1,9 +1,5 @@
 RewriteEngine On
 
-# Never rewrite CSS-File-Path
-#  - development hack
-RewriteRule ^assets/css/main.css$ - [L]
-
 # Deliver literal files as-is
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

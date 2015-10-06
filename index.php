@@ -8,6 +8,7 @@ require_once('config.php');
 
 require_once('lib/PhpTemplate.php');
 require_once('lib/Exceptions.php');
+require_once('lib/less.php/Less.php');
 
 require_once('model/ModelBase.php');
 require_once('model/Conference.php');
@@ -63,6 +64,26 @@ try {
 	else if($route == 'streams/v1.json')
 	{
 		require('view/streams-json-v1.php');
+	}
+
+	else if($route == 'assets/css/main.css')
+	{
+		$dir = forceslash(sys_get_temp_dir());
+
+		$css_file = Less_Cache::Get([
+			'assets/css/main.less' => forceslash(baseurl()).'assets/css/',
+		], [
+			'sourceMap' => true,
+			'compress' => true,
+			'relativeUrls' => true,
+
+			'cache_dir' => $dir,
+		]);
+
+		$css = file_get_contents($dir.$css_file);
+		header('Content-Type: text/css');
+		header('Content-Length: '.strlen($css));
+		print($css);
 	}
 
 	else if(!$conference->hasBegun())
