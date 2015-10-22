@@ -66,7 +66,7 @@ try {
 		require('view/streams-json-v1.php');
 	}
 
-	else if($route == 'assets/css/main.css')
+	else if($route == 'gen/main.css')
 	{
 		$dir = forceslash(sys_get_temp_dir());
 
