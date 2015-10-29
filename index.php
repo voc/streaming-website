@@ -71,7 +71,7 @@ try {
 		$dir = forceslash(sys_get_temp_dir());
 
 		$css_file = Less_Cache::Get([
-			'assets/css/main.less' => '/assets/css/',
+			'assets/css/main.less' => '../assets/css/',
 		], [
 			'sourceMap' => true,
 			'compress' => true,
