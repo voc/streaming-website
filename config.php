@@ -147,6 +147,9 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	/**
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
+	 *
+	 * Der Raum-Slug sollte ausschliesslich aus "unkritischen" Zeichen ([A-Za-z0-9])
+	 * bestehen und insbesondere keine Leerzeichen enthalten.
 	 */
 	'saal1' => array(
 		/**
