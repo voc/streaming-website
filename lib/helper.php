@@ -18,14 +18,14 @@ function baseurl()
 		if(startswith('//', $base))
 			$base = proto().':'.$base;
 
-		return $base;
+		return forceslash($base.'/'.$GLOBALS['CLIENT']);
 	}
 
 	$base  = ssl() ? 'https://' : 'http://';
 	$base .= $_SERVER['HTTP_HOST'];
 	$base .=  forceslash(dirname($_SERVER['SCRIPT_NAME']));
 
-	return $base;
+	return forceslash($base.$GLOBALS['CLIENT']);
 }
 
 function forceslash($url)

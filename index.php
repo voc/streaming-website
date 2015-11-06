@@ -4,7 +4,56 @@ if(!ini_get('short_open_tag'))
 	die('`short_open_tag = On` is required');
 
 require_once('lib/helper.php');
-require_once('config.php');
+
+$route = @$_GET['route'];
+$route = rtrim($route, '/');
+
+if($route == '')
+{
+	// list of clients
+	$clients = array_values(array_filter(array_map(function($file)
+	{
+		$info = pathinfo($file);
+
+		if($info['extension'] == 'php')
+			return $info['filename'];
+
+	}, scandir('configs/clients/'))));
+
+
+	if(count($clients) == 0)
+	{
+		// no clients
+		//   error
+
+		die('no clients');
+	}
+	else if(count($clients) == 1)
+	{
+		// one client
+		//   redirect
+
+		header('Location: '.baseurl().$clients[0].'/');
+		exit;
+	}
+	else
+	{
+		// multiple clients
+		//   show overview
+
+		// TODO Template
+		print_r($clients);
+		exit;
+	}
+}
+else
+{
+	list($client, $route) = explode('/', $route, 2);
+
+	$GLOBALS['CLIENT'] = $client;
+	require_once('configs/clients/'.$client.'.php');
+}
+
 
 require_once('lib/PhpTemplate.php');
 require_once('lib/Exceptions.php');
@@ -21,9 +70,6 @@ require_once('model/RoomSelection.php');
 require_once('model/Stream.php');
 require_once('model/Relive.php');
 require_once('model/Upcoming.php');
-
-$route = @$_GET['route'];
-$route = rtrim($route, '/');
 
 $conference = new Conference();
 
@@ -71,7 +117,7 @@ try {
 		$dir = forceslash(sys_get_temp_dir());
 
 		$css_file = Less_Cache::Get([
-			'assets/css/main.less' => '../assets/css/',
+			'assets/css/main.less' => '../../assets/css/',
 		], [
 			'sourceMap' => true,
 			'compress' => true,
