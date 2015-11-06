@@ -6,6 +6,9 @@ class Room extends ModelBase
 
 	public function __construct($slug)
 	{
+		if(preg_match('/[^a-z0-9_\-]/i', $slug))
+			throw new Exception('Room Slug contains invalid Characters: "'.$slug.'"');
+
 		if(! $this->has('ROOMS.'.$slug))
 			throw new NotFoundException('Room '.$slug);
 
