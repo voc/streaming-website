@@ -34,21 +34,22 @@ if($route == 'gen/main.css')
 	exit;
 }
 
+// generic template
+$tpl = new PhpTemplate('template/page.phtml');
+$tpl->set(array(
+	'baseurl' => forceslash(baseurl()),
+	'route' => $route,
+	'canonicalurl' => forceslash(baseurl()).forceslash($route),
+	'assemblies' => './template/assemblies/',
+	'assets' => 'assets/',
+
+	'conference' => new GenericConference(),
+));
+
 @list($mandator, $route) = explode('/', $route, 2);
 if(!$mandator)
 {
 	// root requested
-
-	$tpl = new PhpTemplate('template/page.phtml');
-	$tpl->set(array(
-		'baseurl' => forceslash(baseurl()),
-		'route' => $route,
-		'canonicalurl' => forceslash(baseurl()).forceslash($route),
-		'assemblies' => './template/assemblies/',
-		'assets' => 'assets/',
-
-		'conference' => new GenericConference(),
-	));
 
 	if(Conferences::getActiveConferencesCount() == 0)
 	{
@@ -72,10 +73,7 @@ if(!$mandator)
 		// multiple clients
 		//   show overview
 
-		// TODO Template
-		$clients = Conferences::getActiveConferences();
-		var_dump('multiple clients');
-		var_dump($clients);
+		require('view/allconferences.php');
 		exit;
 	}
 }
@@ -83,7 +81,8 @@ else if(!Conferences::exists($mandator))
 {
 	// old url OR wrong client OR
 	// -> error
-	die('unknown conference '.$mandator);
+	require('view/404.php');
+	exit;
 }
 
 Conferences::load($mandator);

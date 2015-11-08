@@ -5,9 +5,16 @@ class Conferences extends ModelBase
 	const MANDATOR_DIR = 'configs/conferences/';
 
 	public static function getConferences() {
-		return array_values(array_filter(scandir(forceslash(Conferences::MANDATOR_DIR)), function($el) {
-			return $el[0] != '.';
-		}));
+		$conferences = [];
+		foreach(scandir(forceslash(Conferences::MANDATOR_DIR)) as $el)
+		{
+			if($el[0] == '.')
+				continue;
+
+			$conferences[$el] = Conferences::getConferenceInformation($el);
+		}
+
+		return $conferences;
 	}
 	public static function getConferencesCount() {
 		return count(Conferences::getConferences());
@@ -15,7 +22,10 @@ class Conferences extends ModelBase
 
 	public static function getActiveConferences() {
 		return array_values(array_filter(
-			Conferences::getConferences(), ['Conferences', 'isActive']
+			Conferences::getConferences(),
+			function($info) {
+				return $info['active'];
+			}
 		));
 	}
 
@@ -24,22 +34,28 @@ class Conferences extends ModelBase
 	}
 
 	public static function exists($mandator) {
-		return in_array($mandator, Conferences::getConferences());
+		return array_key_exists($mandator, Conferences::getConferences());
 	}
 
-	public static function isActive($mandator) {
+	public static function getConferenceInformation($mandator) {
 		if(isset($GLOBALS['CONFIG']))
 			$saved_config = $GLOBALS['CONFIG'];
 
 		Conferences::load($mandator);
 		$conf = new Conference();
-		$active = !$conf->isClosed();
+		$info = [
+			'slug' => $mandator,
+			'link' => forceslash($mandator),
+			'active' => !$conf->isClosed(),
+			'title' => $conf->getTitle(),
+			'description' => $conf->getDescription(),
+		];
 		unset($GLOBALS['CONFIG']);
 
 		if(isset($saved_config))
 			$GLOBALS['CONFIG'] = $saved_config;
 
-		return $active;
+		return $info;
 	}
 
 	public static function hasCustomStyles($mandator) {
