@@ -49,6 +49,8 @@ class Conferences extends ModelBase
 			'active' => !$conf->isClosed(),
 			'title' => $conf->getTitle(),
 			'description' => $conf->getDescription(),
+
+			'CONFIG' => $GLOBALS['CONFIG'],
 		];
 		unset($GLOBALS['CONFIG']);
 

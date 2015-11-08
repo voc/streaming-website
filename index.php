@@ -29,12 +29,20 @@ try {
 	$route = @$_GET['route'];
 	$route = rtrim($route, '/');
 
-	// GLOBAL CSS (for conferences overview)
+	// GLOBAL ROUTES
 	if($route == 'gen/main.css')
 	{
+		// global css (for conferences overview)
 		handle_lesscss_request('assets/css/main.less', '../assets/css/');
 		exit;
 	}
+
+	else if($route == 'streams/v1.json')
+	{
+		require('view/streams-json-v1.php');
+		exit;
+	}
+
 
 	// generic template
 	$tpl = new PhpTemplate('template/page.phtml');
@@ -134,11 +142,6 @@ try {
 	else if($route == 'schedule.json')
 	{
 		require('view/schedule-json.php');
-	}
-
-	else if($route == 'streams/v1.json')
-	{
-		require('view/streams-json-v1.php');
 	}
 
 	else if($route == 'gen/main.css')
