@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # fahrplan
-wget --no-check-certificate -q "https://frab.sendegate.de/en/ppw15b/public/schedule.xml" -O /tmp/schedule.xml && mv /tmp/schedule.xml schedule.xml
+wget --no-check-certificate -q "http://n621.de/fud/nixcon.xml" -O /tmp/schedule.xml && mv /tmp/schedule.xml schedule.xml

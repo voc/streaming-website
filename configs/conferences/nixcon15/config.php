@@ -258,7 +258,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'room',
+		'SCHEDULE_NAME' => 'NixCon',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -395,7 +395,7 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-$GLOBALS['CONFIG']['SCHEDULE_DISABLED'] = array(
+$GLOBALS['CONFIG']['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -403,7 +403,7 @@ $GLOBALS['CONFIG']['SCHEDULE_DISABLED'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/ppw15b/schedule.xml',
+	'URL' => 'configs/conferences/nixcon15/schedule.xml',
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
