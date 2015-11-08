@@ -43,7 +43,7 @@ class Room extends ModelBase
 	}
 
 	public function getThumb() {
-		return 'thumbs/'.$this->getStream().'.png';
+		return '../thumbs/'.$this->getStream().'.png';
 	}
 
 	public function getLink() {
