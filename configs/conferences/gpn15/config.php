@@ -15,7 +15,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. Während einer
 	 * Konferenz kann dieser Schalter auskommentiert oder auf false gesetzt werden.
 	 */
-	'CLOSED' => false,
+	'CLOSED' => true,
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
