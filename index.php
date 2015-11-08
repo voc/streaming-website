@@ -24,71 +24,81 @@ require_once('model/Relive.php');
 require_once('model/Upcoming.php');
 
 
-$route = @$_GET['route'];
-$route = rtrim($route, '/');
+ob_start();
+try {
+	$route = @$_GET['route'];
+	$route = rtrim($route, '/');
 
-// GLOBAL CSS (for conferences overview)
-if($route == 'gen/main.css')
-{
-	handle_lesscss_request('assets/css/main.less', '../assets/css/');
-	exit;
-}
-
-// generic template
-$tpl = new PhpTemplate('template/page.phtml');
-$tpl->set(array(
-	'baseurl' => forceslash(baseurl()),
-	'route' => $route,
-	'canonicalurl' => forceslash(baseurl()).forceslash($route),
-	'assemblies' => './template/assemblies/',
-	'assets' => 'assets/',
-
-	'conference' => new GenericConference(),
-));
-
-@list($mandator, $route) = explode('/', $route, 2);
-if(!$mandator)
-{
-	// root requested
-
-	if(Conferences::getActiveConferencesCount() == 0)
+	// GLOBAL CSS (for conferences overview)
+	if($route == 'gen/main.css')
 	{
-		// no clients
-		//   error
-
-		require('view/allclosed.php');
+		handle_lesscss_request('assets/css/main.less', '../assets/css/');
 		exit;
 	}
-	else if(Conferences::getActiveConferencesCount() == 1)
-	{
-		// one client
-		//   redirect
 
-		$clients = Conferences::getActiveConferences();
-		header('Location: '.forceslash( baseurl() . $clients[0] ));
+	// generic template
+	$tpl = new PhpTemplate('template/page.phtml');
+	$tpl->set(array(
+		'baseurl' => forceslash(baseurl()),
+		'route' => $route,
+		'canonicalurl' => forceslash(baseurl()).forceslash($route),
+		'assemblies' => './template/assemblies/',
+		'assets' => 'assets/',
+
+		'conference' => new GenericConference(),
+	));
+
+	@list($mandator, $route) = explode('/', $route, 2);
+	if(!$mandator)
+	{
+		// root requested
+
+		if(Conferences::getActiveConferencesCount() == 0)
+		{
+			// no clients
+			//   error
+
+			require('view/allclosed.php');
+			exit;
+		}
+		else if(Conferences::getActiveConferencesCount() == 1)
+		{
+			// one client
+			//   redirect
+
+			$clients = Conferences::getActiveConferences();
+			header('Location: '.forceslash( baseurl() . $clients[0]['link'] ));
+			exit;
+		}
+		else
+		{
+			// multiple clients
+			//   show overview
+
+			require('view/allconferences.php');
+			exit;
+		}
+	}
+	else if(!Conferences::exists($mandator))
+	{
+		// old url OR wrong client OR
+		// -> error
+		require('view/404.php');
 		exit;
 	}
-	else
-	{
-		// multiple clients
-		//   show overview
 
-		require('view/allconferences.php');
-		exit;
-	}
+	Conferences::load($mandator);
 }
-else if(!Conferences::exists($mandator))
+catch(Exception $e)
 {
-	// old url OR wrong client OR
-	// -> error
-	require('view/404.php');
-	exit;
+	ob_clean();
+	require('view/500.php');
 }
 
-Conferences::load($mandator);
 
 
 // PER-CONFERENCE CODE
+$GLOBALS['MANDATOR'] = $mandator;
 $conference = new Conference();
 
 $tpl = new PhpTemplate('template/page.phtml');
