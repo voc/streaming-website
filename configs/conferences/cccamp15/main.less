@@ -1,0 +1,186 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+
+@grey_light: #d3d2d2;
+@grey_dark: #918f90;
+@grey_darker: #4f4c4d;
+
+@brown_light: #94694d;
+@brown_dark: #7a563f;
+
+@green_light: #6c9e30;
+@green_dark: #598227;
+
+@purple_light: #77438d;
+@purple_dark: #623672;
+
+@blueish_light: #707f9a;
+@blueish_dark: #5c687e;
+
+
+
+@tents_light: @blueish_light;
+@tents_dark: @blueish_dark;
+
+@radio_light: @purple_light;
+@radio_dark: @purple_dark;
+
+@recordings_light: @grey_dark;
+@recordings_dark: @grey_darker;
+
+@multicast_light: @brown_light;
+@multicast_dark: @brown_dark;
+
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @green_light;
+@text-color:            @green_dark;
+
+@link-color:            @green_light;
+@link-hover-color:      @green_dark;
+
+@navbar-default-color:  white;
+@navbar-default-bg:     @brown_dark;
+
+@navbar-default-link-color:           white;
+@navbar-default-link-hover-color:     darken(white, 20%);
+
+@panel-default-border:  @green_light;
+
+
+
+.overview {
+	.headline {
+		display: none;
+	}
+
+	p a {
+		text-decoration: underline;
+	}
+
+	.room-group-n0 {
+		&, a {
+			color: @tents_dark;
+		}
+
+		.panel {
+			border-color: @tents_dark;
+
+			.panel-heading,
+			.panel-heading a{
+				background-color: @tents_light;
+				border-color: @tents_dark;
+				color: white;
+			}
+		}
+	}
+
+	.room-group-n2 {
+		&, a {
+			color: @radio_dark;
+		}
+
+		.panel {
+			border-color: @radio_dark;
+
+			.panel-heading {
+				background-color: @radio_light;
+				border-color: @radio_dark;
+				color: white;
+			}
+		}
+	}
+
+	.recordings {
+		&, a {
+			color: @recordings_light;
+		}
+		a:hover {
+			color: @recordings_dark;
+		}
+
+		.panel {
+			border-color: @recordings_dark;
+		}
+	}
+
+
+
+
+	.room-group-multicast {
+		&, a {
+			color: @multicast_dark;
+		}
+
+		.panel {
+			border-color: @multicast_dark;
+
+			.panel-heading {
+				background-color: @multicast_light;
+				border-color: @multicast_dark;
+				color: white;
+			}
+		}
+
+		.room a {
+			font-size: @jumbo-font-size;
+			line-height: @jumbo-line-height;
+			color: @multicast_dark;
+
+			@media (max-width: @screen-xs-min) {
+				font-size: @jumbo-font-size-xs;
+			}
+
+			display: block;
+			text-align: center;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+body {
+	background: url(../img/bg.png) no-repeat top left;
+	background-attachment: fixed;
+	background-position: 0px 50px;
+}
+
+.tab-content {
+	background-color: white;
+}
+
+
+.navbar-brand {
+	text-indent: -9999em;
+	background: url(../img/logo.png) no-repeat;
+	background-size: auto 43px;
+	background-position: 0 5px;
+	width: 180px;
+}
+
+
+
+
+// colors of the schedule ("Fahrplan") widget below the video-player
+//
+//  @schedule-now:       @brand-danger;
+//  @schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+//  @schedule-border:    lighten(@brand-primary, 50%);
+//
+//  @schedule-room:      darken(@brand-primary, 15%);
+//  @schedule-author:    #444;
+//
+//  @schedule-selected-room: lighten(@brand-success, 10%);
+//
+//  @schedule-daychange:    darken(@brand-primary, 20%);
+//  @schedule-daychange-bg: fade(white, 30%);
+//
+//  @schedule-gap:          darken(@brand-primary, 20%);
+//  @schedule-gap-bg:       fade(white, 30%);
+//
+//  @schedule-pause:        white;
+//  @schedule-pause-bg:     lighten(black, 85%);
