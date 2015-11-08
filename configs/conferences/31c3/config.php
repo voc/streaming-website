@@ -106,7 +106,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/vod.json',
+	'RELIVE_JSON' => 'configs/conferences/31c3/vod.json',
 );
 
 /**
@@ -486,12 +486,12 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
-	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
+	 * Diese URL muss immer verfügbar sein, sonst könnte die Programm-Ansicht
 	 * aufhören zu funktionieren. Üblicherweise wird diese daher Datei über
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'configs/schedule.xml',
+	'URL' => 'configs/conferences/31c3/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten

@@ -54,6 +54,6 @@ class Conferences extends ModelBase
 
 	public static function load($mandator) {
 		$GLOBALS['MANDATOR'] = $mandator;
-		include(forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php');
+		require(forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php');
 	}
 }

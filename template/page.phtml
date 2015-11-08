@@ -29,20 +29,20 @@
 		<base href="<?=h($baseurl)?>" />
 		<link href="<?=h($canonicalurl)?>" rel="canonical" />
 
-		<link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-		<link href="../assets/img/favicon.png" rel="icon" type="image/png" />
+		<link href="<?=h($assets)?>img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="<?=h($assets)?>img/favicon.png" rel="icon" type="image/png" />
 
-		<link type="text/css" rel="stylesheet" href="../assets/mejs/mediaelementplayer.min.css" />
+		<link type="text/css" rel="stylesheet" href="<?=h($assets)?>mejs/mediaelementplayer.min.css" />
 		<link type="text/css" rel="stylesheet" href="gen/main.css" />
 
-		<script type="text/javascript" src="../assets/js/lib/jquery.min.js"></script>
-		<script type="text/javascript" src="../assets/js/lib/jquery.scrollTo.min.js"></script>
-		<script type="text/javascript" src="../assets/js/lib/bootstrap.min.js"></script>
-		<script type="text/javascript" src="../assets/js/lib/bootstrap-datepicker.min.js"></script>
-		<script type="text/javascript" src="../assets/js/lib/moment.min.js"></script>
+		<script type="text/javascript" src="<?=h($assets)?>js/lib/jquery.min.js"></script>
+		<script type="text/javascript" src="<?=h($assets)?>js/lib/jquery.scrollTo.min.js"></script>
+		<script type="text/javascript" src="<?=h($assets)?>js/lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?=h($assets)?>js/lib/bootstrap-datepicker.min.js"></script>
+		<script type="text/javascript" src="<?=h($assets)?>js/lib/moment.min.js"></script>
 
-		<script type="text/javascript" src="../assets/mejs/mediaelement-and-player.min.js"></script>
-		<script type="text/javascript" src="../assets/js/lustiges-script.js"></script>
+		<script type="text/javascript" src="<?=h($assets)?>mejs/mediaelement-and-player.min.js"></script>
+		<script type="text/javascript" src="<?=h($assets)?>js/lustiges-script.js"></script>
 	</head>
 	<body class="<?=h(is_numeric($page[0]) ? 'e'.$page : $page)?>">
 		<? if(!@$naked): ?>
@@ -55,8 +55,10 @@
 			<? include("$assemblies/footer.phtml") ?>
 		<? endif ?>
 
-		<span class="js-settings"
-			data-scheduleoffset="<?=h($schedule->getSimulationOffset())?>"
-		></span>
+		<? if(isset($schedule)): ?>
+			<span class="js-settings"
+				data-scheduleoffset="<?=h($schedule->getSimulationOffset())?>"
+			></span>
+		<? endif ?>
 	</body>
 </html>

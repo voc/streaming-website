@@ -12,6 +12,7 @@ require_once('lib/less.php/Less.php');
 require_once('model/ModelBase.php');
 require_once('model/Conferences.php');
 require_once('model/Conference.php');
+require_once('model/GenericConference.php');
 require_once('model/Feedback.php');
 require_once('model/Schedule.php');
 require_once('model/Overview.php');
@@ -26,17 +27,35 @@ require_once('model/Upcoming.php');
 $route = @$_GET['route'];
 $route = rtrim($route, '/');
 
+// GLOBAL CSS (for conferences overview)
+if($route == 'gen/main.css')
+{
+	handle_lesscss_request('assets/css/main.less', '../assets/css/');
+	exit;
+}
+
 @list($mandator, $route) = explode('/', $route, 2);
 if(!$mandator)
 {
 	// root requested
+
+	$tpl = new PhpTemplate('template/page.phtml');
+	$tpl->set(array(
+		'baseurl' => forceslash(baseurl()),
+		'route' => $route,
+		'canonicalurl' => forceslash(baseurl()).forceslash($route),
+		'assemblies' => './template/assemblies/',
+		'assets' => 'assets/',
+
+		'conference' => new GenericConference(),
+	));
 
 	if(Conferences::getActiveConferencesCount() == 0)
 	{
 		// no clients
 		//   error
 
-		var_dump('no clients');
+		require('view/allclosed.php');
 		exit;
 	}
 	else if(Conferences::getActiveConferencesCount() == 1)
@@ -79,6 +98,7 @@ $tpl->set(array(
 	'route' => $route,
 	'canonicalurl' => forceslash(baseurl()).forceslash($route),
 	'assemblies' => './template/assemblies/',
+	'assets' => '../assets/',
 
 	'conference' => $conference,
 	'feedback' => new Feedback(),
