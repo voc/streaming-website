@@ -125,8 +125,8 @@ $tpl->set(array(
 if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
 {
 	$tpl->set(array(
-		'httpsurl' => forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).forceslash($route),
-		'httpurl' =>  forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).forceslash($route),
+		'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
+		'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
 	));
 }
 
