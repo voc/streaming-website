@@ -12,9 +12,9 @@ if($_SERVER['HTTP_HOST'] != 'localhost')
 	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.media.ccc.de/';
 
 
-$EPISODE = 57;
-$DATE = '28. September 2015';
-$TITLE = 'Eveline Lubbers - From Secret Manoeuvres to Undercover Research';
+$EPISODE = 59;
+$DATE = '10. November 2015';
+$TITLE = 'lynxis - Coreboot';
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
@@ -25,7 +25,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2015-09-28 19:30"),
+	'STARTS_AT' => strtotime("2015-11-10 18:30"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -33,7 +33,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2015-09-28 23:30"),
+	'ENDS_AT' => strtotime("2015-11-10 23:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -43,7 +43,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	//'CLOSED' => false,
+	'CLOSED' => true,
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -154,7 +154,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'q1',
+		'STREAM' => 's5',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
