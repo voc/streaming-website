@@ -163,7 +163,7 @@ $(function() {
 		mode: 'auto_plugin',
 		plugins: ['flash'],
 		flashName: 'flashmediaelement.swf',
-		pluginPath: 'assets/mejs/',
+		pluginPath: '../assets/mejs/',
 		enableAutosize: true,
 	});
 
