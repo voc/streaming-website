@@ -42,7 +42,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'NixCon 2015 Berlin',
+	'TITLE' => 'NixCon 2015',
 
 	/**
 	 * Veranstalter
@@ -56,7 +56,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'A NixOS Conference.',
+	'DESCRIPTION' => 'The NixOS Conference.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -71,7 +71,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://c3voc.de">c3voc</a>
+		by <a href="http://nixos.org">NixOS</a> & <a href="https://c3voc.de">c3voc</a>
 	',
 
 	/**
@@ -109,7 +109,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'http://vod.c3voc.de/index.json',
+	'RELIVE_JSON' => 'configs/conferences/nixcon2015/relive.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -151,7 +151,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'The Room.',
+		'DISPLAY' => 'Main room',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
