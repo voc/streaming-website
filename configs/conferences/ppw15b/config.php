@@ -6,7 +6,7 @@ date_default_timezone_set('Europe/Berlin');
  * In Produktionssituationen sollte manuell eine konfiguriert werden um Überraschungen zu vermeiden
  */
 if($_SERVER['HTTP_HOST'] != 'localhost')
-	$GLOBALS['CONFIG']['BASEURL'] = 'http://streaming.media.ccc.de/';
+	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.media.ccc.de/';
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
@@ -87,7 +87,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 */
 	'BANNER_HTML' => '
 		<div class="container">
-			<h2>Berlin 13.-15. November 2015 #ppw15a</h2>
+			<h2>Berlin 13.-15. November 2015 #ppw15b</h2>
 		</div>
 	',
 
@@ -110,7 +110,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'http://vod.c3voc.de/index.json',
+	'RELIVE_JSON' => 'configs/conferences/ppw15b/relive.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -416,7 +416,7 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-$GLOBALS['CONFIG']['SCHEDULE_DISABLED'] = array(
+$GLOBALS['CONFIG']['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -425,16 +425,19 @@ $GLOBALS['CONFIG']['SCHEDULE_DISABLED'] = array(
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
 	'URL' => 'configs/conferences/ppw15b/schedule.xml',
-	/**
-	 * APCU-Cache-Zeit in Sekunden
-	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
-	 * der Fahrplan bei jedem Request von der Quelle geladen und geparst
-	 */
-	//'CACHE' => 30*60,
+
+        /**
+         * Nur die angegebenen Räume aus dem Fahrplan beachten
+         *
+         * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+         */
+        'ROOMFILTER' => array('MOSAIK', 'ALPHABET'),
+
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
 	'SCALE' => 7,
+
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
 	 *
