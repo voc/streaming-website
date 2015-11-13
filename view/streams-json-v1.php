@@ -2,97 +2,111 @@
 
 header('Content-Type: application/json');
 
-if($conference->isClosed())
-{
-	echo '[]';
-	return;
-}
-
-$overview = new Overview();
+$conferences = Conferences::getActiveConferences();
 
 $struct = array();
-foreach($overview->getGroups() as $group => $rooms)
+if(isset($GLOBALS['CONFIG']))
+	$saved_config = $GLOBALS['CONFIG'];
+
+foreach ($conferences as $conference)
 {
-	$roomstruct = array();
-	foreach($rooms as $room)
+	/*
+	  ok. das ist so hacky. EIGENTLICH müsste man aus ModelBase
+	  das $GLOBALS tilgen und von der api ne v2 releasen, welche
+	  conferences als eigenes Objekt betrachtet
+	*/
+	$GLOBALS['CONFIG'] = $conference['CONFIG'];
+	$GLOBALS['MANDATOR'] = $conference['slug'];
+
+	$overview = new Overview();
+
+	foreach($overview->getGroups() as $group => $rooms)
 	{
-		$streams = array();
-		foreach($room->getStreams() as $stream)
+		$roomstruct = array();
+		foreach($rooms as $room)
 		{
-			$key = $stream->getSelection().'-'.$stream->getLanguage();
-
-			$urls = array();
-			switch($stream->getPlayerType())
+			$streams = array();
+			foreach($room->getStreams() as $stream)
 			{
-				case 'video':
-					foreach ($stream->getVideoProtos() as $proto => $display)
-					{
-						$urls[$proto] = array(
-							'display' => $display,
-							'tech' => $stream->getVideoTech($proto),
-							'url' => $stream->getVideoUrl($proto),
-						);
-					}
-					break;
+				$key = $stream->getSelection().'-'.$stream->getLanguage();
 
-				case 'slides':
-					foreach ($stream->getSlidesProtos() as $proto => $display)
-					{
-						$urls[$proto] = array(
-							'display' => $display,
-							'tech' => $stream->getSlidesTech($proto),
-							'url' => $stream->getSlidesUrl($proto),
-						);
-					}
-					break;
+				$urls = array();
+				switch($stream->getPlayerType())
+				{
+					case 'video':
+						foreach ($stream->getVideoProtos() as $proto => $display)
+						{
+							$urls[$proto] = array(
+								'display' => $display,
+								'tech' => $stream->getVideoTech($proto),
+								'url' => $stream->getVideoUrl($proto),
+							);
+						}
+						break;
 
-				case 'audio':
-					foreach ($stream->getAudioProtos() as $proto => $display)
-					{
-						$urls[$proto] = array(
-							'display' => $display,
-							'tech' => $stream->getAudioTech($proto),
-							'url' => $stream->getAudioUrl($proto),
-						);
-					}
-					break;
+					case 'slides':
+						foreach ($stream->getSlidesProtos() as $proto => $display)
+						{
+							$urls[$proto] = array(
+								'display' => $display,
+								'tech' => $stream->getSlidesTech($proto),
+								'url' => $stream->getSlidesUrl($proto),
+							);
+						}
+						break;
 
-				case 'music':
-					foreach ($stream->getMusicProtos() as $proto => $display)
-					{
-						$urls[$proto] = array(
-							'display' => $display,
-							'tech' => $stream->getMusicTech($proto),
-							'url' => $stream->getMusicUrl($proto),
-						);
-					}
-					break;
+					case 'audio':
+						foreach ($stream->getAudioProtos() as $proto => $display)
+						{
+							$urls[$proto] = array(
+								'display' => $display,
+								'tech' => $stream->getAudioTech($proto),
+								'url' => $stream->getAudioUrl($proto),
+							);
+						}
+						break;
+
+					case 'music':
+						foreach ($stream->getMusicProtos() as $proto => $display)
+						{
+							$urls[$proto] = array(
+								'display' => $display,
+								'tech' => $stream->getMusicTech($proto),
+								'url' => $stream->getMusicUrl($proto),
+							);
+						}
+						break;
+				}
+
+				$streams[] = array(
+					'slug' => $key,
+					'display' => $stream->getDisplay(),
+					'type' => $stream->getPlayerType(),
+					'isTranslated' => $stream->isTranslated(),
+					'videoSize' => $stream->getVideoSize(),
+					'urls' => $urls,
+				);
 			}
 
-			$streams[] = array(
-				'slug' => $key,
-				'display' => $stream->getDisplay(),
-				'type' => $stream->getPlayerType(),
-				'isTranslated' => $stream->isTranslated(),
-				'videoSize' => $stream->getVideoSize(),
-				'urls' => $urls,
+			$roomstruct[] = array(
+				'slug' => $room->getSlug(),
+				'schedulename' => $room->getScheduleName(),
+				'thumb' => forceslash(baseurl()).$room->getThumb(),
+				'link' => forceslash(baseurl()).$room->getLink(),
+				'display' => $room->getDisplay(),
+				'streams' => $streams,
 			);
 		}
 
-		$roomstruct[] = array(
-			'slug' => $room->getSlug(),
-			'schedulename' => $room->getScheduleName(),
-			'thumb' => forceslash(baseurl()).$room->getThumb(),
-			'link' => forceslash(baseurl()).$room->getLink(),
-			'display' => $room->getDisplay(),
-			'streams' => $streams,
+		$struct[] = array(
+			'conference' => $conference['title'],
+			'group' => $group,
+			'rooms' => $roomstruct,
 		);
 	}
-
-	$struct[] = array(
-		'group' => $group,
-		'rooms' => $roomstruct,
-	);
 }
+
+if(isset($saved_config))
+	$GLOBALS['CONFIG'] = $saved_config;
 
 echo json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);

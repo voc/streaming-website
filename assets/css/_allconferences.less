@@ -1,0 +1,25 @@
+body.allconferences {
+	text-align: center;
+
+	.conference {
+		a {
+			font-size: @jumbo-font-size;
+			line-height: @jumbo-line-height;
+
+			@media (max-width: @screen-xs-min) {
+				font-size: @jumbo-font-size-xs;
+			}
+
+			display: block;
+			text-align: center;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		p {
+			margin-top: @line-height-computed;
+		}
+	}
+}

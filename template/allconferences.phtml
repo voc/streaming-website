@@ -1,0 +1,33 @@
+<div class="container">
+	<h1><?=h($title)?></h1>
+	<p>We are currently active on multiple Conferences. Please choose which one you want access.</p>
+
+	<br><br>
+
+	<div class="row clearfix">
+		<? $count = count($conferences) ?>
+		<? foreach($conferences as $idx => $info): ?>
+			<?
+				// when we have more then 3 conferences, all but the last 3 will be displayed with 1/3 width
+				if($count - $idx <= ($count % 3))
+					$w = 12/($count%3);
+				else
+					$w = 12/3;
+			?>
+
+			<div class="
+				clearfix
+				conference
+				col-xs-12
+				col-md-<?=h($w)?>
+			">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<a href="<?=h($info['link'])?>"><?=h($info['title'])?></a>
+						<p><?=h($info['description'])?></p>
+					</div>
+				</div>
+			</div>
+		<? endforeach ?>
+	</div>
+</div>

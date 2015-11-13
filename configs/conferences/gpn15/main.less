@@ -1,0 +1,92 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+
+// often configured values (and their defaults):
+//
+//  @brand-primary:         #337ab7;
+//  @text-color:            @gray-dark;
+//
+//  @link-color:            @brand-primary;
+//  @link-hover-color:      darken(@link-color, 15%);
+//
+//  @navbar-default-color:  #777777;
+//  @navbar-default-bg:     #f8f8f8;
+//
+//  @navbar-default-link-color:       #777;
+//  @navbar-default-link-hover-color: #333;
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("wolkenbar.png");
+  background-repeat: repeat-x;
+  background-position: bottom left;
+}
+
+.navbar-fixed-top {
+  background: @body-bg url("wolkenbar.png") repeat-x left -46px;
+  border-color: #000;
+}
+
+footer {
+  background-color: rgba(255,255,255,0.35);
+  a {
+    color: #777;
+    text-decoration: underline;
+  }
+}
+
+
+/*
+@gray-darker:            #369; // #222
+@gray:                   #445; // #555
+@gray-light:             #030333;   // #999
+@gray-lighter:           #0D0FAE; // #eee
+*/
+
+@body-bg:               rgba(0, 122, 186, 1);
+@text-color: white;
+
+@panel-bg: lighten(@body-bg, 5%);
+
+@link-color:            #ccc;
+@well-bg:               @panel-bg;
+@panel-primary-border:  #FFFFFF;
+@panel-default-heading-bg: darken(@body-bg, 2%);
+@panel-default-text:    #FFFFFF;
+
+@navbar-default-link-color:                #fff;
+@navbar-default-link-hover-color:          #fff;
+@navbar-default-link-active-color:         #fff;
+
+@nav-tabs-active-link-hover-color:         #fff;
+@nav-link-hover-bg: lighten(@body-bg, 1%);
+
+// colors of the schedule ("Fahrplan") widget below the video-player
+//
+//  @schedule-now:       @brand-danger;
+//  @schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+//  @schedule-border:    lighten(@brand-primary, 50%);
+//
+//  @schedule-room:      darken(@brand-primary, 15%);
+//  @schedule-author:    #444;
+//
+//  @schedule-selected-room: lighten(@brand-success, 10%);
+@schedule-selected-room: #72b3d2;
+.schedule a {
+  color: #333;
+}
+
+//
+//  @schedule-daychange:    darken(@brand-primary, 20%);
+//  @schedule-daychange-bg: fade(white, 30%);
+//
+//  @schedule-gap:          darken(@brand-primary, 20%);
+//  @schedule-gap-bg:       fade(white, 30%);
+//
+//  @schedule-pause:        white;
+@schedule-pause: #333;
+//  @schedule-pause-bg:     lighten(black, 85%);

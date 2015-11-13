@@ -350,7 +350,7 @@ $(function() {
 
 			$.each(talks, function(room, talk) {
 
-				if(!talk.known)
+				if(!talk.room_known)
 					return;
 
 				if(talk.start < now)
@@ -558,7 +558,7 @@ $(function() {
 // closed-countdown
 $(function() {
 	var
-		$el = $('.closed .countdown'),
+		$el = $('.countdown'),
 		dt = moment($el.data('dt'));
 
 	$el.attr('title', 'on '+dt.format('dddd, MMM Do YYYY'))

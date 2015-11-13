@@ -4,14 +4,15 @@ if(!ini_get('short_open_tag'))
 	die('`short_open_tag = On` is required');
 
 require_once('lib/helper.php');
-require_once('config.php');
 
 require_once('lib/PhpTemplate.php');
 require_once('lib/Exceptions.php');
 require_once('lib/less.php/Less.php');
 
 require_once('model/ModelBase.php');
+require_once('model/Conferences.php');
 require_once('model/Conference.php');
+require_once('model/GenericConference.php');
 require_once('model/Feedback.php');
 require_once('model/Schedule.php');
 require_once('model/Overview.php');
@@ -22,9 +23,90 @@ require_once('model/Stream.php');
 require_once('model/Relive.php');
 require_once('model/Upcoming.php');
 
-$route = @$_GET['route'];
-$route = rtrim($route, '/');
 
+ob_start();
+try {
+	$route = @$_GET['route'];
+	$route = rtrim($route, '/');
+
+	// GLOBAL ROUTES
+	if($route == 'gen/main.css')
+	{
+		// global css (for conferences overview)
+		handle_lesscss_request('assets/css/main.less', '../assets/css/');
+		exit;
+	}
+
+	else if($route == 'streams/v1.json')
+	{
+		require('view/streams-json-v1.php');
+		exit;
+	}
+
+
+	// generic template
+	$tpl = new PhpTemplate('template/page.phtml');
+	$tpl->set(array(
+		'baseurl' => forceslash(baseurl()),
+		'route' => $route,
+		'canonicalurl' => forceslash(baseurl()).forceslash($route),
+		'assemblies' => './template/assemblies/',
+		'assets' => 'assets/',
+
+		'conference' => new GenericConference(),
+	));
+
+	@list($mandator, $route) = explode('/', $route, 2);
+	if(!$mandator)
+	{
+		// root requested
+
+		if(Conferences::getActiveConferencesCount() == 0)
+		{
+			// no clients
+			//   error
+
+			require('view/allclosed.php');
+			exit;
+		}
+		else if(Conferences::getActiveConferencesCount() == 1)
+		{
+			// one client
+			//   redirect
+
+			$clients = Conferences::getActiveConferences();
+			header('Location: '.forceslash( baseurl() . $clients[0]['link'] ));
+			exit;
+		}
+		else
+		{
+			// multiple clients
+			//   show overview
+
+			require('view/allconferences.php');
+			exit;
+		}
+	}
+	else if(!Conferences::exists($mandator))
+	{
+		// old url OR wrong client OR
+		// -> error
+		require('view/404.php');
+		exit;
+	}
+
+	Conferences::load($mandator);
+}
+catch(Exception $e)
+{
+	ob_clean();
+	require('view/500.php');
+}
+
+
+
+// PER-CONFERENCE CODE
+$GLOBALS['MANDATOR'] = $mandator;
 $conference = new Conference();
 
 $tpl = new PhpTemplate('template/page.phtml');
@@ -33,6 +115,7 @@ $tpl->set(array(
 	'route' => $route,
 	'canonicalurl' => forceslash(baseurl()).forceslash($route),
 	'assemblies' => './template/assemblies/',
+	'assets' => '../assets/',
 
 	'conference' => $conference,
 	'feedback' => new Feedback(),
@@ -42,15 +125,15 @@ $tpl->set(array(
 if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
 {
 	$tpl->set(array(
-		'httpsurl' => forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).forceslash($route),
-		'httpurl' =>  forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).forceslash($route),
+		'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
+		'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
 	));
 }
 
 ob_start();
 try {
 
-
+	// ALWAYS AVAILABLE ROUTES
 	if($route == 'feedback/read')
 	{
 		require('view/feedback-read.php');
@@ -61,36 +144,27 @@ try {
 		require('view/schedule-json.php');
 	}
 
-	else if($route == 'streams/v1.json')
-	{
-		require('view/streams-json-v1.php');
-	}
-
 	else if($route == 'gen/main.css')
 	{
-		$dir = forceslash(sys_get_temp_dir());
-
-		$css_file = Less_Cache::Get([
-			'assets/css/main.less' => '../assets/css/',
-		], [
-			'sourceMap' => true,
-			'compress' => true,
-			'relativeUrls' => true,
-
-			'cache_dir' => $dir,
-		]);
-
-		$css = file_get_contents($dir.$css_file);
-		header('Content-Type: text/css');
-		header('Content-Length: '.strlen($css));
-		print($css);
+		if(Conferences::hasCustomStyles($mandator))
+		{
+			handle_lesscss_request(
+				Conferences::getCustomStyles($mandator),
+				'../../'.Conferences::getCustomStylesDir($mandator)
+			);
+		}
+		else {
+			handle_lesscss_request('assets/css/main.less', '../../assets/css/');
+		}
 	}
 
+	// HAS-NOT-BEGUN VIEW
 	else if(!$conference->hasBegun())
 	{
 		require('view/not-started.php');
 	}
 
+	// ROUTES AVAILABLE AFTER BUT NOT BEFORE THE CONFERENCE
 	else if(preg_match('@^relive/([0-9]+)$@', $route, $m))
 	{
 		$_GET = array(
@@ -104,11 +178,14 @@ try {
 		require('view/relive.php');
 	}
 
+
+	// HAS-ENDED VIEW
 	else if($conference->hasEnded())
 	{
 		require('view/closed.php');
 	}
 
+	// ROUTES AVAILABLE ONLY DURING THE CONFERENCE
 	else if($route == '')
 	{
 		require('view/overview.php');
@@ -180,6 +257,7 @@ try {
 		require('view/embed.php');
 	}
 
+	// UNKNOWN ROUTE
 	else
 	{
 		throw new NotFoundException();
