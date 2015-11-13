@@ -350,7 +350,7 @@ $(function() {
 
 			$.each(talks, function(room, talk) {
 
-				if(!talk.known)
+				if(!talk.room_known)
 					return;
 
 				if(talk.start < now)
