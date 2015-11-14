@@ -2,11 +2,31 @@
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	/**
-	 * Am Ende der Konferenz wird durch das Umlegen dieses Schalters auf True eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. Während einer
-	 * Konferenz kann dieser Schalter auskommentiert oder auf false gesetzt werden.
+	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
+	 * mit einem Text der Art "hat noch nicht angefangen" angezeigt.
+	 *
+	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
+	 * und CLOSED weiter unten)
 	 */
-	'CLOSED' => true,
+	'STARTS_AT' => strtotime("2015-06-04 17:00"),
+
+	/**
+	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 *
+	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
+	 */
+	'ENDS_AT' => strtotime("2015-06-07 16:00"),
+
+	/**
+	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
+	 * simuliert, dass die Konferenz noch nicht begonnen hat. Der Wert 'after' simuliert, dass die Konferenz
+	 * bereits beendet ist. 'running' simuliert eine laufende Konferenz.
+	 *
+	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
+	 * zu 'running'.
+	 */
+	//'CLOSED' => false,
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
