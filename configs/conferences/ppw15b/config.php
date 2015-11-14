@@ -365,6 +365,25 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'EMBED' => true,
 		'TWITTER' => true,
 	),
+	'floating' => array(
+		'DISPLAY' => 'Floating',
+
+		'STREAM' => 's5',
+		'PREVIEW' => true,
+
+		'TRANSLATION' => false,
+		'STEREO' => false,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => false,
+		'AUDIO' => true,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'ABAKUS',
+
+		'FEEDBACK' => true,
+		'EMBED' => true,
+		'TWITTER' => true,
+	),
 );
 
 /**
@@ -422,7 +441,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('MOSAIK', 'ALPHABET'),
+        //'ROOMFILTER' => array('MOSAIK', 'ALPHABET'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
