@@ -116,7 +116,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'' => array(
-			'chaosradio',
+			'cccb',
 		),
 	),
 );
@@ -131,7 +131,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'chaosradio' => array(
+	'cccb' => array(
 		/**
 		 * Angezeige-Name
 		 */
