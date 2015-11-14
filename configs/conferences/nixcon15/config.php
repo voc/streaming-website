@@ -109,7 +109,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/nixcon2015/relive.json',
+	'RELIVE_JSON' => 'configs/conferences/nixcon15/relive.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
