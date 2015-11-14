@@ -1,7 +1,7 @@
 <?php
 
 $EPISODE = 59;
-$DATE = '10. November 2015';
+$DATE = strtotime("2015-11-10 20:00");
 $TITLE = 'lynxis - Coreboot';
 
 
@@ -13,7 +13,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2015-11-10 18:30"),
+	'STARTS_AT' => $DATE - 60*30, // -30 Minuten,
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -21,7 +21,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2015-11-10 23:30"),
+	'ENDS_AT' => $DATE + 60*150, // +2½ Stunden,
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -82,7 +82,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	'BANNER_HTML' => "
-		<h2>Datengarten #$EPISODE – $DATE</h2>
+		<h2>Datengarten #$EPISODE – ".strftime('%d. %B %Y', $DATE)."</h2>
 		<h3>$TITLE</h3>
 	",
 

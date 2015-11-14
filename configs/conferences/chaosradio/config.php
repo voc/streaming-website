@@ -1,7 +1,7 @@
 <?php
 
 $EPISODE = 217;
-$DATE = '29. September 2015';
+$DATE = strtotime("2015-11-29 22:00");
 $TITLE = "Chaosradio $EPISODE - Ein Einblick in die Security-Industrie";
 
 
@@ -13,7 +13,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2015-10-29 21:30"),
+	'STARTS_AT' => $DATE - 60*30, // -30 Minuten,
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -21,7 +21,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2015-10-29 23:59"),
+	'ENDS_AT' => $DATE + 60*120, // +2 Stunden,
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -82,7 +82,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	'BANNER_HTML' => "
-		<h2>Chaosradio #$EPISODE – $DATE</h2>
+		<h2>Chaosradio #$EPISODE – ".strftime('%d. %B %Y', $DATE)."</h2>
 		<h3>$TITLE</h3>
 	",
 
