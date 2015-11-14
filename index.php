@@ -3,6 +3,7 @@
 if(!ini_get('short_open_tag'))
 	die('`short_open_tag = On` is required');
 
+require_once('config.php');
 require_once('lib/helper.php');
 
 require_once('lib/PhpTemplate.php');
@@ -29,6 +30,27 @@ try {
 	$route = @$_GET['route'];
 	$route = rtrim($route, '/');
 
+	// generic template
+	$tpl = new PhpTemplate('template/page.phtml');
+	$tpl->set(array(
+		'baseurl' => forceslash(baseurl()),
+		'route' => $route,
+		'canonicalurl' => forceslash(baseurl()).forceslash($route),
+		'assemblies' => 'template/assemblies/',
+		'assets' => 'assets/',
+
+		'conference' => new GenericConference(),
+	));
+
+	if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
+	{
+		$tpl->set(array(
+			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
+			'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
+		));
+	}
+
+
 	// GLOBAL ROUTES
 	if($route == 'gen/main.css')
 	{
@@ -42,19 +64,6 @@ try {
 		require('view/streams-json-v1.php');
 		exit;
 	}
-
-
-	// generic template
-	$tpl = new PhpTemplate('template/page.phtml');
-	$tpl->set(array(
-		'baseurl' => forceslash(baseurl()),
-		'route' => $route,
-		'canonicalurl' => forceslash(baseurl()).forceslash($route),
-		'assemblies' => './template/assemblies/',
-		'assets' => 'assets/',
-
-		'conference' => new GenericConference(),
-	));
 
 	@list($mandator, $route) = explode('/', $route, 2);
 	if(!$mandator)
@@ -109,26 +118,17 @@ catch(Exception $e)
 $GLOBALS['MANDATOR'] = $mandator;
 $conference = new Conference();
 
-$tpl = new PhpTemplate('template/page.phtml');
+// update template information
 $tpl->set(array(
 	'baseurl' => forceslash(baseurl()),
 	'route' => $route,
 	'canonicalurl' => forceslash(baseurl()).forceslash($route),
-	'assemblies' => './template/assemblies/',
 	'assets' => '../assets/',
 
 	'conference' => $conference,
 	'feedback' => new Feedback(),
 	'schedule' => new Schedule(),
 ));
-
-if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
-{
-	$tpl->set(array(
-		'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
-		'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route),
-	));
-}
 
 ob_start();
 try {
