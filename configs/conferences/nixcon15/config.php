@@ -85,7 +85,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELEASES' => 'https://media.ccc.de/browse/events/datengarten/index.html',
+	'RELEASES' => 'https://media.ccc.de/c/nixcon2015',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
