@@ -86,7 +86,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELEASES' => 'https://media.ccc.de/browse/events/datengarten/index.html',
+	'RELEASES' => 'https://www.youtube.com/playlist?list=PLIoqMTM7qDWolqxEiNIX4rVLa8lAqT10_',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
