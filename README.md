@@ -37,17 +37,16 @@ gesetzt werden.
 
 ## Konfiguration
 
-Die gesamte Seite wird von der zentralen [config.php](config.php)-Datei
-gesteuert. Diese ist ausführlich dokumentiert und sollte sich selbst erklären.
+Die Seite kann für mehrere parallel laufende Konferenzen gleichzeitig verwendet
+werden. Jede Konferenz wird über einen Ordner unterhalb von
+[configs/conferences](configs/conferences) konfiguriert. In diesen Ordnern können
+jeweils folgende Dateien abgelegt werden, welche das Verhalten bzw. die Gestaltung
+der jeweiligen Konferenzseite bestimmen, im Folgendem am :
 
-Die konferenztypische Gestaltung kann in der
-[main.less](assets/css/main.less) nach Wunsch ausgestaltet werden. Als Beispiel
-sei hier die Gestaltung für das [Easterhegg
-2015](https://eh15.easterhegg.eu/site/) verlinkt:
-[d3c0e74](https://github.com/voc/streaming-website/commit/d3c0e74f459121c3e624c9b3b92d6ec6b39a3dbe)
-
-Üblicherweise machen wir für jede Veranstaltung einen `events/XXXX` branch auf,
-wobei `XXXX` das Acronym der Konferenz ist.
+  - [master/configs/conferences/nixcon15/config.php](config.php) – steuert das Verhalten der gesamten Konferenzseite. Diese ist ausführlich dokumentiert und sollte sich selbst erklären.
+  - [master/configs/conferences/nixcon15/download.sh](download.sh) – Wird von einem Cronjob in regelmäßigen Abständen zum Herunterladen von `schedule.xml`-Dateien und anderen Drittkonfiguration verwendet.
+  - [master/configs/conferences/nixcon15/main.less](main.less) – steuert die Gestaltung der Konferenzseite.
+  - weitere Assets wie `.png` oder `.svg`-Dateien, die aus der `main.less` heraus referenziert werden können.
 
 
 
@@ -58,8 +57,6 @@ cd /srv/nginx/streaming-website
 git fetch origin
 git checkout <branch>
 
-cd assets/css
-make
 sudo sh -c 'rm -rf  /srv/nginx/cache/streaming_fcgi/*'
 exit
 
@@ -82,14 +79,3 @@ der `v1.json` keine Felder *entfernt werden* oder ihre *Bedeutung ändern* – e
 können aber durchaus *neue Felder* hinzukommen. Eine formalere Spezifikation
 des JSON-Formats ist tbd. Ein Beispiel kann [hier
 betrachtet](https://gist.github.com/MaZderMind/d5737ab867ade7888cb4) werden.
-
-## Schedule
-
-Unter `configs/schedule.xml` wird das `schedule.xml` der Veranstaltung abgelegt.
-Regelmäßige Aktualisierungen können z. B. mit folgenden Cron-Job vorgenommen
-werden:
-
-```
-voc~$ crontab -l
-*/5 * * * * cd /srv/nginx/streaming-website/configs; ./download.sh
-```
