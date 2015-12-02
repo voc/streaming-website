@@ -1,0 +1,4 @@
+<? if($next): ?>
+	<h2>See you soon at <?=h($next['name'])?></h2>
+	<span class="countdown"><?=h(days_diff_readable($next['start_date']))?></span>
+<? endif ?>

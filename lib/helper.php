@@ -61,3 +61,34 @@ function handle_lesscss_request($lessfile, $relative_path)
 	header('Content-Length: '.strlen($css));
 	print($css);
 }
+
+function days_diff($date)
+{
+	$seconds = strtotime( $date ) - time();
+	$days = intval(ceil($seconds / 60 / 60 / 24));
+	return $days;
+}
+
+function days_diff_readable($date)
+{
+	$days = days_diff($date);
+	if($days == -1)
+		return 'yesterday';
+
+	if($days == 0)
+		return 'today';
+
+	if($days == 1)
+		return 'tomorrow';
+
+	if($days < -60)
+		return round(-$days / 30)." months ago";
+
+	if($days < 0)
+		return "$days days ago";
+
+	if($days > 60)
+		return 'in '.round($days / 30)." months";
+
+	return "in $days days";
+}

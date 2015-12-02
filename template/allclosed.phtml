@@ -1,8 +1,5 @@
 <div class="container about">
-	<? if($next): ?>
-		<h2>See you soon at <?=h($next['name'])?></h2>
-		<span class="countdown" data-dt="<?=h($next['start_date'])?>"></span>
-	<? endif ?>
+	<? include("$assemblies/countdown.phtml") ?>
 
 	<p>
 		You can watch most of our Recordings at <a href="<?=h($conference->getReleasesUrl())?>"><?=h($conference->getReleasesUrl())?></a>.

@@ -3,10 +3,7 @@
 		<h1><?=h($conference->getTitle())?> is over!</h1>
 	<? endif ?>
 
-	<? if($next): ?>
-		<h2>See you soon at <?=h($next['name'])?></h2>
-		<span class="countdown" data-dt="<?=h($next['start_date'])?>"></span>
-	<? endif ?>
+	<? include("$assemblies/countdown.phtml") ?>
 
 	<p>
 		<? if($conference->hasReleases()): ?>

@@ -554,23 +554,3 @@ $(function() {
 		$(this).select();
 	});
 });
-
-// closed-countdown
-$(function() {
-	var
-		$el = $('.countdown'),
-		dt = moment($el.data('dt'));
-
-	$el.attr('title', 'on '+dt.format('dddd, MMM Do YYYY'))
-	function update() {
-		setTimeout(update, 5000);
-
-		var now = moment();
-
-		if(dt.dayOfYear() == now.dayOfYear() && dt.year() == now.year())
-			$el.text('today');
-		else
-			$el.text( dt.from(now) );
-	}
-	update();
-});
