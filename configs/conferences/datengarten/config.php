@@ -1,8 +1,8 @@
 <?php
 
-$EPISODE = 59;
-$DATE = strtotime("2015-11-10 20:00");
-$TITLE = 'lynxis - Coreboot';
+$EPISODE = 61;
+$DATE = strtotime("2015-12-08 20:00");
+$TITLE = '@Carina - RocketScience und Software Engineering - Ein Rückblick';
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
