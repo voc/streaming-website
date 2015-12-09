@@ -123,6 +123,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 		'Live Podcasts' => array(
 			'sendezentrum',
 			'podcastertisch',
+			'congressradio',
 		),
 	),
 );
@@ -467,6 +468,17 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	'podcastertisch' => array(
 		'DISPLAY' => 'Sendezentrum - Podcastertisch',
 		'STREAM' => 'podcastertisch',
+		'MUSIC' => true,
+
+		'SCHEDULE' => true,
+		'FEEDBACK' => true,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+	),
+	'congressradio' => array(
+		'DISPLAY' => 'Congress-Radio',
+		'STREAM' => 'congressradio',
 		'MUSIC' => true,
 
 		'SCHEDULE' => true,
