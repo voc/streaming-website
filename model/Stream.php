@@ -88,6 +88,10 @@ class Stream
 				$display .= 'SD Video';
 				break;
 
+			case 'music':
+				$display .= 'Radio';
+				break;
+
 			default:
 				$display .= ucfirst($this->getSelection());
 				break;

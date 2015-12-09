@@ -40,6 +40,9 @@ class RoomSelection
 			case 'hd':
 				return strtoupper($this->getSelection());
 
+			case 'music':
+				return 'Radio';
+
 			default:
 				return ucfirst($this->getSelection());
 		}

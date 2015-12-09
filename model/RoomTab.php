@@ -29,6 +29,14 @@ class RoomTab
 
 	public function getDisplay()
 	{
-		return ucfirst($this->getTab());
+		$tab = $this->getTab();
+		switch($tab)
+		{
+			case 'music':
+				return 'Radio';
+
+			default:
+				return ucfirst($tab);
+		}
 	}
 }
