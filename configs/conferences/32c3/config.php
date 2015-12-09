@@ -462,7 +462,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
-		'TWITTER' => false,
+		'TWITTER' => true,
 	),
 	'podcastertisch' => array(
 		'DISPLAY' => 'Sendezentrum - Podcastertisch',
