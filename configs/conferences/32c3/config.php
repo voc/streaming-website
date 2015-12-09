@@ -47,14 +47,14 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Video Live-Streaming vom 32C3',
+	'DESCRIPTION' => 'Live-Streaming vom 32C3',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => '32C3, Hacking, Chaos Computer Club, Video, Media, Streaming, Hacker, Hamburg',
+	'KEYWORDS' => '32C3, Hacking, Chaos Computer Club, Video, Music, Podcast, Media, Streaming, Hacker, Hamburg',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
