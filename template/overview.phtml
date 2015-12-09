@@ -8,12 +8,14 @@
 	</div>
 
 	<? $i = 0; foreach($overview->getGroups() as $group => $rooms): ?>
-		<div class="row room-group room-group-n<?=h($i++)?>">
-			<? if($group): ?>
+		<? if($group): ?>
+			<div class="row">
 				<div class="col-xs-12">
 					<h2><?=h($group)?></h2>
 				</div>
-			<? endif ?>
+			</div>
+		<? endif ?>
+		<div class="row room-group room-group-n<?=h($i++)?>">
 
 			<? $count = count($rooms); ?>
 			<? foreach($rooms as $idx => $room): ?>
