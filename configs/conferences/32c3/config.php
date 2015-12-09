@@ -122,6 +122,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 		),
 		'Live Podcasts' => array(
 			'sendezentrum',
+			'podcastertisch',
 		),
 	),
 );
@@ -462,6 +463,17 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
+	),
+	'podcastertisch' => array(
+		'DISPLAY' => 'Sendezentrum - Podcastertisch',
+		'STREAM' => 'podcastertisch',
+		'MUSIC' => true,
+
+		'SCHEDULE' => true,
+		'FEEDBACK' => true,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
 	),
 );
 
