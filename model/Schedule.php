@@ -66,12 +66,12 @@ class Schedule extends ModelBase
 
 			foreach($day->room as $room)
 			{
-				$name = (string)$room['name'];
-				if($this->isRoomFiltered($name))
-					continue;
-
 				foreach($room->event as $event)
 				{
+					$name = (string)$event->room;
+					if($this->isRoomFiltered($name))
+						continue;
+
 					$start = strtotime((string)$event->date);
 					$duration = $this->strToDuration((string)$event->duration);
 					$end = $start + $duration;
@@ -98,7 +98,9 @@ class Schedule extends ModelBase
 				$roomidx++;
 				$lastend = false;
 
-				$name = (string)$room['name'];
+				foreach($room->event as $event)
+				{
+				$name = (string)$event->room;
 				if($this->isRoomFiltered($name))
 					continue;
 
@@ -107,8 +109,6 @@ class Schedule extends ModelBase
 				if($room_known)
 					$name = $mapping[$name];
 
-				foreach($room->event as $event)
-				{
 					$start = strtotime((string)$event->date);
 					$duration = $this->strToDuration((string)$event->duration);
 					$end = $start + $duration;
@@ -147,7 +147,12 @@ class Schedule extends ModelBase
 
 				$personnames = array();
 				foreach($event->persons->person as $person)
-					$personnames[] = (string)$person;
+				{
+					if($person->full_public_name)
+						$personnames[] = (string)$person->full_public_name;
+					else
+						$personnames[] = (string)$person;
+				}
 
 				$program[$name][] = array(
 						'title' => (string)$event->title,
