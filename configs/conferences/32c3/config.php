@@ -116,14 +116,14 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 			'saal6',
 		),
 
-		'Live DJ Sets'  => array(
+		'Live Music'  => array(
 			'lounge',
 			'ambient',
+			'chaos-west',
 		),
 		'Live Podcasts' => array(
 			'sendezentrum',
 			'podcastertisch',
-			'congressradio',
 		),
 	),
 );
@@ -476,16 +476,11 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => true,
 	),
-	'congressradio' => array(
-		'DISPLAY' => 'Congress-Radio',
-		'STREAM' => 'congressradio',
+	'chaos-west' => array(
+		'DISPLAY' => 'Chaos-West Musikprogramm',
+		'STREAM' => 'chaos-west',
 		'MUSIC' => true,
-
-		'SCHEDULE' => true,
-		'FEEDBACK' => true,
 		'EMBED' => true,
-		'IRC' => false,
-		'TWITTER' => true,
 	),
 );
 
