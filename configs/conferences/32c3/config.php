@@ -110,10 +110,10 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'saal1',
-			'saal2',
-			'saalg',
-			'saal6',
+			'hall1',
+			'hall2',
+			'hallg',
+			'hall6',
 		),
 
 		'Live Music'  => array(
@@ -142,11 +142,11 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * ([a-zA-Z0-9_\-]) bestehen und insbesondere keine Leerzeichen
 	 * enthalten.
 	 */
-	'saal1' => array(
+	'hall1' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Saal 1',
+		'DISPLAY' => 'Hall 1',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -253,7 +253,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Saal 1',
+		'SCHEDULE_NAME' => 'Hall 1',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -349,8 +349,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		),
 	),
 
-	'saal2' => array(
-		'DISPLAY' => 'Saal 2',
+	'hall2' => array(
+		'DISPLAY' => 'Hall 2',
 		'STREAM' => 's2',
 		'PREVIEW' => true,
 
@@ -362,7 +362,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 2',
+		'SCHEDULE_NAME' => 'Hall 2',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
 		'EMBED' => true,
@@ -378,8 +378,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		),
 	),
 
-	'saalg' => array(
-		'DISPLAY' => 'Saal G',
+	'hallg' => array(
+		'DISPLAY' => 'Hall G',
 		'STREAM' => 's3',
 		'PREVIEW' => true,
 
@@ -391,7 +391,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal G',
+		'SCHEDULE_NAME' => 'Hall G',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
 		'EMBED' => true,
@@ -407,8 +407,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		),
 	),
 
-	'saal6' => array(
-		'DISPLAY' => 'Saal 6',
+	'hall6' => array(
+		'DISPLAY' => 'Hall 6',
 		'STREAM' => 's4',
 		'PREVIEW' => true,
 
@@ -420,7 +420,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 6',
+		'SCHEDULE_NAME' => 'Hall 6',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
 		'EMBED' => true,
@@ -506,7 +506,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6'),
+	//'ROOMFILTER' => array('Hall 1', 'Hall 2', 'Hall G', 'Hall 6'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
