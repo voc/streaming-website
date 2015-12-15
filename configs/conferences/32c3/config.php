@@ -459,6 +459,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Bühne',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -471,6 +472,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => true,
 
 		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Podcaster-Tisch',
 		'FEEDBACK' => true,
 		'EMBED' => true,
 		'IRC' => false,
@@ -506,7 +508,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Hall 1', 'Hall 2', 'Hall G', 'Hall 6'),
+	'ROOMFILTER' => array('Hall 1', 'Hall 2', 'Hall G', 'Hall 6', 'Podcaster-Tisch', 'Bühne'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
