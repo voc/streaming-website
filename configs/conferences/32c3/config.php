@@ -440,11 +440,13 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 	'lounge' => array(
 		'DISPLAY' => 'Lounge',
+		'STREAM' => 'lounge',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
 	'ambient' => array(
 		'DISPLAY' => 'Ambient',
+		'STREAM' => 'ambient',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
