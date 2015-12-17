@@ -119,6 +119,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 		'Live Music'  => array(
 			'lounge',
 			'ambient',
+			'dome',
 			'chaos-west',
 		),
 		'Live Podcasts' => array(
@@ -444,6 +445,12 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	),
 	'ambient' => array(
 		'DISPLAY' => 'Ambient',
+		'MUSIC' => true,
+		'EMBED' => true,
+	),
+	'dome' => array(
+		'DISPLAY' => 'Dome',
+		'STREAM' => 'dome',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
