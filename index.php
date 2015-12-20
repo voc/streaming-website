@@ -66,6 +66,13 @@ try {
 		exit;
 	}
 
+	else if($route == 'about')
+	{
+		// global about-page
+		require('view/about-global.php');
+		exit;
+	}
+
 	@list($mandator, $route) = explode('/', $route, 2);
 	if(!$mandator)
 	{
