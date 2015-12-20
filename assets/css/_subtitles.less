@@ -1,0 +1,36 @@
+.mejs-container.mejs-video .mejs-controls .mejs-button.mejs-subtitles {
+	button {
+		background-image: url(../img/subtitles-controls.svg);
+		background-size: 240px 48px !important;
+	}
+
+	&.mejs-subtitles-button button {
+		background-position: -174px -24px;
+	}
+	&.mejs-subtitles-popup-button button {
+		background-position: -202px -24px;
+	}
+}
+
+.mejs-container.mejs-video {
+	.mejs-subtitles-lines {
+		position: absolute;
+		bottom: 40px;
+		height: 182px !important;
+		width: 100%;
+		background-color: fade(white, 85%);
+		color: black;
+		font-size: 42px;
+		text-align: center;
+		padding: 5px 0;
+		overflow: hidden;
+
+		display: none;
+
+		.mejs-subtitles-lines-inner {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}

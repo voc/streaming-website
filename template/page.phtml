@@ -42,6 +42,10 @@
 
 		<script type="text/javascript" src="<?=h($assets)?>mejs/mediaelement-and-player.min.js"></script>
 		<script type="text/javascript" src="<?=h($assets)?>js/lustiges-script.js"></script>
+
+		<? if(isset($subtitles) && $subtitles->isEnabled()): ?>
+		<script type="text/javascript" src="<?=h($assets)?>js/lustige-subtitles.js"></script>
+		<? endif ?>
 	</head>
 	<body class="<?=h(is_numeric($page[0]) ? 'e'.$page : $page)?>">
 		<? if(!@$naked): ?>
@@ -54,9 +58,15 @@
 			<? include("$assemblies/footer.phtml") ?>
 		<? endif ?>
 
-		<? if(isset($schedule)): ?>
-			<span class="js-settings"
+		<? if(isset($schedule) && $schedule->isEnabled()): ?>
+			<span class="js-schedule-settings"
 				data-scheduleoffset="<?=h($schedule->getSimulationOffset())?>"
+			></span>
+		<? endif ?>
+		<? if(isset($subtitles) && $subtitles->isEnabled()): ?>
+			<span class="js-subtitles-settings"
+				data-primus-url="<?=h($subtitles->getPrimusURL())?>"
+				data-frontend-url="<?=h($subtitles->getFrontendURL())?>"
 			></span>
 		<? endif ?>
 	</body>

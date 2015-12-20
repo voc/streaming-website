@@ -16,6 +16,7 @@ require_once('model/Conference.php');
 require_once('model/GenericConference.php');
 require_once('model/Feedback.php');
 require_once('model/Schedule.php');
+require_once('model/Subtitles.php');
 require_once('model/Overview.php');
 require_once('model/Room.php');
 require_once('model/RoomTab.php');
@@ -128,6 +129,7 @@ $tpl->set(array(
 	'conference' => $conference,
 	'feedback' => new Feedback(),
 	'schedule' => new Schedule(),
+	'subtitles' => new Subtitles(),
 ));
 
 ob_start();

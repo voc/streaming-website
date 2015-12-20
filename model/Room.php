@@ -76,6 +76,16 @@ class Room extends ModelBase
 		return $this->get('ROOMS.'.$this->getSlug().'.SCHEDULE') && $this->has('SCHEDULE');
 	}
 
+	public function hasSubtitles() {
+		return
+			$this->get('ROOMS.'.$this->getSlug().'.SUBTITLES') &&
+			$this->has('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID') &&
+			$this->has('SUBTITLES');
+	}
+	public function getSubtitlesRoomId() {
+		return $this->get('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID');
+	}
+
 	public function hasFeedback() {
 		return $this->get('ROOMS.'.$this->getSlug().'.FEEDBACK') && $this->has('FEEDBACK');
 	}

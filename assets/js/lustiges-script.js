@@ -1,148 +1,3 @@
-$.fn.pulseSubsLine = function(klass) {
-	var e = this;
-	e
-		.find('.text')
-			.hide()
-		.end()
-		.addClass(klass)
-		.css({display: 'block'})
-		.animate({opacity: 1, duration: .75}, function() {
-			setTimeout(function() {
-				e.animate({opacity: 0, duration: .5}, function() {
-					e.css({display: 'none'}).removeClass(klass);
-				})
-			}, 5000);
-		});
-}
-
-$.fn.autoScale = function() {
-	if(!this.data('autoScaleOriginal')) {
-		this.data('autoScaleOriginal', parseInt(this.css('font-size')));
-	}
-
-	var
-		maxSize = this.data('autoScaleOriginal');
-		maxH = this.parent().innerHeight(),
-		thisH = this.css('font-size', maxSize).outerHeight();
-
-	while(thisH > maxH && maxSize > 0) {
-		thisH = this.css('font-size', --maxSize).outerHeight();
-	}
-
-	return this;
-}
-
-// mediaelement subtitles button
-MediaElementPlayer.prototype.buildsubs = function(player, controls, layers, media) {
-	var
-		host = 'http://subtitles.c3voc.de/',
-		room = $('.room.video').data('room'),
-		isLoaded = false,
-		t = 200,
-		$btn = $([
-			'<div class="mejs-button mejs-subs-button">',
-				'<span class="fa fa-comments-o"></span>',
-			'</div>'
-		].join('')),
-		$line = $([
-			'<div class="mejs-subs-line">',
-				'<div class="text"></div>',
-				'<div class="silence">',
-					'<i>(silence)</i>',
-					'<br />',
-					'Maybe no-one is currently writing Live-Subtitles',
-				'</div>',
-				'<div class="error">',
-					'Sorry, an Error occured.',
-				'</div>',
-			'</div>'
-		].join('')),
-		$text = $line.find('.text'),
-		$silence = $line.find('.silence'),
-		$error = $line.find('.error');
-
-
-
-	$btn
-		.appendTo(controls)
-		.click(function() {
-			$.ajax({
-				url: host+'status/'+encodeURIComponent(room),
-				//dataType: $.support.cors ? 'json' : 'jsonp',
-				dataType: 'jsonp',
-				success: function(status) {
-					if(!status)
-						return $line.pulseSubsLine('silence');
-
-					if(!isLoaded) {
-						isLoaded = true;
-						return loadAndOpenSocket();
-					}
-
-					$line.fadeToggle(t);
-				},
-				error: function() {
-					$line.pulseSubsLine('error');
-				}
-			});
-		});
-
-	function loadAndOpenSocket() {
-		if(window.io)
-			return openSocket();
-
-		$.getScript(host+'socket.io/socket.io.js', openSocket);
-	}
-
-	function silence() {
-		$text.hide();
-		$silence.show().animate({opacity: 1, duration: .75});
-	}
-
-	function openSocket() {
-		var hideTimeout, silenceTimeout, silenceWait = 15*1000;
-		var socket = io(host);
-
-		socket.on('connect', function() {
-			$line.show().animate({opacity: 1}, t);
-			socket.emit('join', room);
-		});
-
-		silenceTimeout = setTimeout(silence, silenceWait);
-
-		socket.on('line', function(stamp, line, duration) {
-			if(hideTimeout)
-				clearTimeout(hideTimeout);
-
-			hideTimeout = setTimeout(function() {
-				$text.animate({opacity: 0}, t)
-				clearTimeout(hideTimeout);
-				hideTimeout = null;
-			}, duration*1000);
-
-
-			if(silenceTimeout)
-				clearTimeout(silenceTimeout);
-
-			silenceTimeout = setTimeout(silence, silenceWait);
-
-
-			$text.animate({
-				opacity: 0
-			}, {
-				duration: t,
-				complete: function() {
-					$text.show().text(line).autoScale().animate({
-						opacity: 1
-					});
-				}
-			});
-		});
-	}
-
-	$line.appendTo(layers);
-}
-
 // mediaelement-player
 $(function() {
 	(function(strings) {
@@ -151,10 +6,15 @@ $(function() {
 		}
 	})(mejs.i18n.locale.strings);
 
+	var feat = ['playpause', 'volume', 'fullscreen'];
+	if($('.video-wrap').hasClass('has-subtitles'))
+		feat.push('subtitles');
+
 	$('body.room video, body.embed video').mediaelementplayer({
-		features: ['playpause', 'volume', 'fullscreen'],
+		features: feat,
 		enableAutosize: true
 	});
+
 	$('body.room audio, body.embed audio').mediaelementplayer({
 		features: ['playpause', 'volume', 'current']
 	});
@@ -207,7 +67,7 @@ $(function() {
 		updateTimer = 500,
 
 		/* offset to the browsers realtime (for simulation) */
-		offset = $('.js-settings').data('scheduleoffset');
+		offset = $('.js-schedule-settings').data('scheduleoffset');
 
 	$schedule.on('mouseenter mouseleave touchstart touchend', function(e) {
 		if(e.type == 'mouseleave' || e.type == 'touchend') {
