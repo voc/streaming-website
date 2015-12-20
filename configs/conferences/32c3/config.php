@@ -488,7 +488,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'TWITTER' => true,
 	),
 	'chaos-west' => array(
-		'DISPLAY' => 'Chaos-West Musikprogramm',
+		'DISPLAY' => 'Chaos-West',
 		'STREAM' => 'chaos-west',
 		'MUSIC' => true,
 		'EMBED' => true,
