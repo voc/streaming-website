@@ -78,7 +78,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	//'BANNER_HTML' => '32C3 – a new dawn',
+	'BANNER_HTML' => '32C3 – gated communities',
 
 	/**
 	 * Link zu den Recordings

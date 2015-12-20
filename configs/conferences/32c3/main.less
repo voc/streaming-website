@@ -1,0 +1,52 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+@darker-grey: lighten(black, 15%); 
+@dark-grey: lighten(black, 20%); 
+@light-grey: lighten(black, 30%); 
+@lighter-grey: lighten(black, 40%); 
+
+// often configured values (and their defaults):
+//
+@brand-primary:         #f19224;
+@text-color:            white;
+
+@link-color:            white;
+@link-hover-color:      @lighter-grey;
+
+@navbar-default-color:  @text-color;
+@navbar-default-bg:     @dark-grey;
+
+//@navbar-default-link-color:       @link-color;
+//@navbar-default-link-hover-color: @link-hover-color;
+
+body {
+	background-color: black;
+}
+
+body.overview {
+	.panel-default {
+		color: @dark-grey;
+		a {
+			color: @dark-grey;
+		}
+	}
+	.panel-primary {
+		background-color: @light-grey;
+		border-color: @light-grey;
+		color: white;
+		a {
+			color: white;
+		}
+	}
+}
+
+.well {
+	color: @dark-grey;
+}
+
+.banner {
+	background: url(logo.gif) no-repeat center;
+	height: 150px;
+	text-indent: -9999em;
+}
