@@ -470,6 +470,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	'sendezentrum' => array(
 		'DISPLAY' => 'Sendezentrum',
 		'STREAM' => 's5',
+		'PREVIEW' => true,
+		'WIDE' => true,
 
 		'STEREO' => true,
 		'SD_VIDEO' => true,
