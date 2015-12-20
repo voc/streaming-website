@@ -279,6 +279,14 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SUBTITLES' => true,
 
 		/**
+		 * ID des Raumes im L2S2-System (int)
+		 *
+		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
+		 * für diesen Raum das Subtitles-System deaktiviert.
+		 */
+		'SUBTITLES_ROOM_ID' => 1,
+
+		/**
 		 * Embed-Form aktivieren (boolean)
 		 *
 		 * Ist dieses Feld auf true gesetzt, wird ein Embed-Tab unter dem Video
@@ -366,6 +374,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SCHEDULE_NAME' => 'Hall 2',
 		'FEEDBACK' => true,
 		'SUBTITLES' => true,
+		'SUBTITLES_ROOM_ID' => 2,
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
@@ -394,7 +403,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Hall G',
 		'FEEDBACK' => true,
-		'SUBTITLES' => true,
+		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
@@ -423,7 +432,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Hall 6',
 		'FEEDBACK' => true,
-		'SUBTITLES' => true,
+		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
@@ -581,9 +590,14 @@ $GLOBALS['CONFIG']['EMBED'] = true;
  */
 $GLOBALS['CONFIG']['SUBTITLES'] = array(
 	/**
-	 * URL des L2S2-Servers
+	 * URL des L2S2 Primus-Servers
 	 */
-	'URL' => 'http://subtitles.c3voc.de/',
+	'PRIMUS_URL' => 'http://fusrohda.marudor.de:63404/',
+
+	/**
+	 * URL des L2S2 Frontend-Servers
+	 */
+	'FRONTEND_URL' => 'http://l2s2.marudor.de/',
 );
 
 /**
