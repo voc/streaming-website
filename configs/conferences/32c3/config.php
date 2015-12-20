@@ -521,7 +521,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'configs/conferences/32c3/schedule.xml',
+	'URL' => 'configs/conferences/32c3/everything.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
