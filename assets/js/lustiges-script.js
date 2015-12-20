@@ -32,7 +32,6 @@ $(function() {
 	});
 });
 
-
 // tabs
 $(function() {
 	// activate tab via hash and default to video
@@ -247,7 +246,6 @@ $(function() {
 	fetchProgram();
 });
 
-
 // feedback form
 $(function() {
 	$('.feedback-form').on('submit', function(e) {
@@ -270,7 +268,6 @@ $(function() {
 	});
 });
 
-
 // update teaser images
 $(function() {
 	setInterval(function() {
@@ -291,7 +288,6 @@ $(function() {
 		});
 	}, 1000*60);
 });
-
 
 // multiviewer
 $(function() {
