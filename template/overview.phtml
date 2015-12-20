@@ -17,8 +17,8 @@
 		<? endif ?>
 		<div class="row room-group room-group-n<?=h($i++)?>">
 
-			<? $count = count($rooms); ?>
-			<? foreach($rooms as $idx => $room): ?>
+			<? $count = count($rooms); $idx = 0 ?>
+			<? foreach($rooms as $room): ?>
 				<div class="
 					room
 					room-<?=h($room->getSlug())?>
@@ -26,6 +26,10 @@
 
 					<? /* when the count is odd and this is the last item - make it full width */ ?>
 					<? if( ($count % 2 == 1) && ($idx == $count - 1) ): ?>
+						wide
+						col-xs-12
+					<? elseif($room->requestsWide()): ?>
+						<? $count++; $idx++ ?>
 						wide
 						col-xs-12
 					<? else: ?>
@@ -89,6 +93,7 @@
 						</div>
 					</div>
 				</div>
+				<? $idx++ ?>
 			<? endforeach ?>
 		</div>
 	<? endforeach ?>

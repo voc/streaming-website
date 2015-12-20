@@ -72,6 +72,10 @@ class Room extends ModelBase
 		return $this->get('ROOMS.'.$this->getSlug().'.PREVIEW');
 	}
 
+	public function requestsWide() {
+		return $this->get('ROOMS.'.$this->getSlug().'.WIDE');
+	}
+
 	public function hasSchedule() {
 		return $this->get('ROOMS.'.$this->getSlug().'.SCHEDULE') && $this->has('SCHEDULE');
 	}
