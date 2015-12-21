@@ -31,7 +31,15 @@ MediaElementPlayer.prototype.buildsubtitles = function(player, controls, layers,
 				frontend_url = $('.js-subtitles-settings').data('frontend-url'),
 				room = $('.video-wrap').data('subtitles-room-id');
 
-			window.open(frontend_url+''+room, 'subtitles-'+room, 'width=1000,height=560');
+			if(window.subtitles_window)
+			{
+				window.subtitles_window.close();
+				window.subtitles_window = null;
+			}
+			else
+			{
+				window.subtitles_window = window.open(frontend_url+''+room, 'subtitles-'+room, 'width=1000,height=560');
+			}
 		});
 
 
