@@ -13,7 +13,18 @@ MediaElementPlayer.prototype.buildsubtitles = function(player, controls, layers,
 	$btns
 		.appendTo(controls)
 		.on('click', '.mejs-subtitles-button', function() {
-			connectToL2S2()
+			var $lines = $('.mejs-subtitles-lines');
+			if($lines.is(':visible'))
+			{
+				//console.log('hiding lines');
+				$lines.css({
+					display: 'none'
+				});
+			}
+			else
+			{
+				connectToL2S2()
+			}
 		})
 		.on('click', '.mejs-subtitles-popup-button', function() {
 			var
@@ -36,28 +47,52 @@ MediaElementPlayer.prototype.buildsubtitles = function(player, controls, layers,
 function connectToL2S2()
 {
 	var
-		baseurl = $('.js-subtitles-settings').data('primus-url');
+		baseurl = $('.js-subtitles-settings').data('primus-url'),
+		$lines = $('.mejs-subtitles-lines');
 
-	if(window.io)
+	if(window.Primus)
 	{
-		return openSocket();
-	}
+		if(window.primus_connection)
+		{
+			//console.log('showing lines');
 
-	$.getScript(baseurl+'primus/primus.js', openSocket);
+			$lines.css({
+				display: 'block'
+			});
+		}
+		else
+		{
+			openSocket();
+		}
+	}
+	else
+	{
+		//console.log('loading primus.js');
+		$.getScript(baseurl+'primus/primus.js', openSocket);
+	}
 }
 
 function openSocket()
 {
+	if(window.primus_connection)
+	{
+		return;
+	}
+
 	var
 		baseurl = $('.js-subtitles-settings').data('primus-url'),
 		room = $('.video-wrap').data('subtitles-room-id'),
 		$lines = $('.mejs-subtitles-lines');
 
+	//console.log('connecting to primus server');
 	var primus = Primus.connect(baseurl);
+	window.primus_connection = primus;
 
 	primus.on('open', function()
 	{
 		primus.emit('join', room);
+
+		//console.log('showing lines');
 		$lines.css({
 			display: 'block'
 		});
@@ -71,7 +106,7 @@ function openSocket()
 	primus.on('line', function(roomId, text, userId, color)
 	{
 		if (text && text.trim().length > 0 && roomId == room) {
-			console.log('line', roomId, userId, text, color);
+			//console.log('line', roomId, userId, text, color);
 			appendLine(text);
 		}
 	});
@@ -107,9 +142,9 @@ $.fn.autoScale = function() {
 		maxH = this.closest('.mejs-subtitles-lines').innerHeight(),
 		thisH = this.css('font-size', maxSize).outerHeight();
 
-	console.log(thisH, maxH, maxSize);
+	//console.log(thisH, maxH, maxSize);
 	while(thisH > maxH && maxSize > 0) {
-		console.log(thisH, maxH, maxSize);
+		//console.log(thisH, maxH, maxSize);
 		thisH = this.css('font-size', --maxSize).outerHeight();
 	}
 
