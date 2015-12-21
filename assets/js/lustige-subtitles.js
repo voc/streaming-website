@@ -96,6 +96,8 @@ function openSocket()
 	var primus = Primus.connect(baseurl);
 	window.primus_connection = primus;
 
+	window.silence_warning = window.setTimeout(showSilenceWarning, 10*1000);
+
 	primus.on('open', function()
 	{
 		primus.emit('join', room);
@@ -116,8 +118,15 @@ function openSocket()
 		if (text && text.trim().length > 0 && roomId == room) {
 			//console.log('line', roomId, userId, text, color);
 			appendLine(text);
+			window.clearTimeout(window.silence_warning);
+			window.silence_warning = window.setTimeout(showSilenceWarning, 60*1000);
 		}
 	});
+}
+
+function showSilenceWarning()
+{
+	appendLine('*silence*');
 }
 
 function appendLine(line)
