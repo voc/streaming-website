@@ -35,6 +35,6 @@ if($_SERVER['SERVER_NAME'] == 'localhost')
 // }
 else
 {
-	// Save Default
+	// Set a safe Default
 	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.media.ccc.de/';
 }
