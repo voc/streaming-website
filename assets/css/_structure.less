@@ -63,23 +63,28 @@ nav {
 
 .preview-warning {
 	position: fixed;
-	top: 0;
+	z-index: 2000;
+	bottom: 0;
 	right: 0;
-	background: red;
+
 	width: 190px;
 	height: 100px;
-	z-index: 2000;
+	border-top-left-radius: 60px;
+
 	text-align: center;
-	border-bottom-left-radius: 60px;
 	line-height: 40px;
-	padding-left: 10px;
 	font-size: 30px;
+
+	padding-left: 10px;
 	padding-top: 9px;
-	color: white;
+
 	cursor: default;
 
+	background: red;
+	color: white;
+
 	&:hover {
-		opacity: 0.1;
+		opacity: 0.25;
 	}
 }
 
