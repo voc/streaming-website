@@ -23,11 +23,11 @@ $GLOBALS['CONFIG']['PREVIEW_DOMAIN'] = 'pre.stream.c3voc.de';
  * Protokollfreie URLs (welche, die mit // beginnen), werden automatisch mit dem korrekten Protokoll ergänzt.
  * In diesem Fall wird auch ein SSL-Umschalt-Button im Header angezeigt
  */
-if($_SERVER['HTTP_HOST'] == 'localhost')
+if($_SERVER['SERVER_NAME'] == 'localhost')
 {
 	// keine Konfiguration -> BASEURL wird automatisch erraten
 }
-// if($_SERVER['HTTP_HOST'] == 'pre.stream.c3voc.de')
+// if($_SERVER['SERVER_NAME'] == 'pre.stream.c3voc.de')
 // {
 // 	// Preview-Domain
 // 	$GLOBALS['CONFIG']['BASEURL'] = '//pre.stream.c3voc.de/';
