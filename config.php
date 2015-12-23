@@ -9,6 +9,10 @@ date_default_timezone_set('Europe/Berlin');
  *
  * Dies eignet sich gut zum testen der Streaming-Seite, während
  * die eigenliche Produktivseite noch nicht sichtbar ist.
+ *
+ * Für die Lokale entwicklung kann es hilfreich sein, diese auf
+ * 'localhost' zu setzen und so ebenfalls unabhängig von den OPEN/CLOSED
+ * Informationen der einzelnen Konferenzen testen zu können.
  */
 $GLOBALS['CONFIG']['PREVIEW_DOMAIN'] = 'pre.stream.c3voc.de';
 
