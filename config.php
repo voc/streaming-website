@@ -23,11 +23,11 @@ if($_SERVER['HTTP_HOST'] = 'localhost')
 {
 	// keine Konfiguration -> BASEURL wird automatisch erraten
 }
-if($_SERVER['HTTP_HOST'] = 'pre.stream.c3voc.de')
-{
-	// Preview-Domain
-	$GLOBALS['CONFIG']['BASEURL'] = '//pre.stream.c3voc.de/';
-}
+// if($_SERVER['HTTP_HOST'] = 'pre.stream.c3voc.de')
+// {
+// 	// Preview-Domain
+// 	$GLOBALS['CONFIG']['BASEURL'] = '//pre.stream.c3voc.de/';
+// }
 else
 {
 	// Save Default
