@@ -11,6 +11,12 @@ class Conference extends ModelBase
 	}
 
 	public function hasBegun() {
+		// on the preview-domain all conferences are always open
+		if($this->has('PREVIEW_DOMAIN') && $this->get('PREVIEW_DOMAIN') == $_SERVER['HTTP_HOST'])
+		{
+			return true;
+		}
+
 		if($this->has('CONFERENCE.CLOSED')) {
 			$closed = $this->get('CONFERENCE.CLOSED');
 
@@ -35,6 +41,12 @@ class Conference extends ModelBase
 	}
 
 	public function hasEnded() {
+		// on the preview-domain no conference ever ends
+		if($this->has('PREVIEW_DOMAIN') && $this->get('PREVIEW_DOMAIN') == $_SERVER['HTTP_HOST'])
+		{
+			return false;
+		}
+
 		if($this->has('CONFERENCE.CLOSED')) {
 			$closed = $this->get('CONFERENCE.CLOSED');
 
