@@ -6,16 +6,18 @@ class Conference extends ModelBase
 		return $this->get('CONFERENCE.TITLE', 'C3Voc Streaming');
 	}
 
+	public function isPreviewEnabled() {
+		return $this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['HTTP_HOST']);
+	}
+
 	public function isClosed() {
 		return !$this->hasBegun() || $this->hasEnded();
 	}
 
 	public function hasBegun() {
 		// on the preview-domain all conferences are always open
-		if($this->has('PREVIEW_DOMAIN') && $this->get('PREVIEW_DOMAIN') == $_SERVER['HTTP_HOST'])
-		{
+		if($this->isPreviewEnabled())
 			return true;
-		}
 
 		if($this->has('CONFERENCE.CLOSED')) {
 			$closed = $this->get('CONFERENCE.CLOSED');
@@ -42,10 +44,8 @@ class Conference extends ModelBase
 
 	public function hasEnded() {
 		// on the preview-domain no conference ever ends
-		if($this->has('PREVIEW_DOMAIN') && $this->get('PREVIEW_DOMAIN') == $_SERVER['HTTP_HOST'])
-		{
+		if($this->isPreviewEnabled())
 			return false;
-		}
 
 		if($this->has('CONFERENCE.CLOSED')) {
 			$closed = $this->get('CONFERENCE.CLOSED');

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 
+<? if($conference->isPreviewEnabled()): ?>
+<!--
+  RUNNING IN PREVIEW MODE
+  OPEN/CLOSED INFORMATION IS IGNORED!
+-->
+<? endif ?>
 
 <html>
 	<head>

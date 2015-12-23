@@ -31,3 +31,10 @@
 		</div>
 	</div>
 </nav>
+
+
+<? if($conference->isPreviewEnabled()): ?>
+<div class="preview-warning">
+	PREVIEW MODE
+</div>
+<? endif ?>
