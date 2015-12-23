@@ -1,6 +1,7 @@
 <?php
 
 date_default_timezone_set('Europe/Berlin');
+$GLOBALS['CONFIG'] = [];
 
 /**
  * Wenn die Webseite über diese Domain aufgerufen wird,
