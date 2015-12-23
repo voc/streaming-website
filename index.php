@@ -153,11 +153,6 @@ try {
 		require('view/schedule-json.php');
 	}
 
-	else if($route == 'not-started')
-	{
-		require('view/not-started.php');
-	}
-
 	else if($route == 'gen/main.css')
 	{
 		if(Conferences::hasCustomStyles($mandator))
