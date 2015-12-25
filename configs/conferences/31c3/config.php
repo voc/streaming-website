@@ -65,7 +65,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 		by <a href="https://ccc.de">Chaos Computer Club e.V</a>,
 		<a href="http://fem.tu-ilmenau.de/">FeM</a>,
 		<a href="http://www.ags.tu-bs.de/">ags</a> &amp;
-		<a href="https://c3voc.de">c3voc</a>
+		<a href="https://c3voc.de">C3VOC</a>
 	',
 
 	/**

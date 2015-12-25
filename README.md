@@ -1,8 +1,8 @@
-# c3voc Streaming-Webseite
+# C3VOC Streaming-Webseite
 
 Dies ist der Code für die Streaming-Webseite unter
 [streaming.media.ccc.de](http://streaming.media.ccc.de/), welche vom
-[c3voc](https://c3voc.de/) benutzt wird, um Live-Video- und -Audio-Streams von
+[C3VOC](https://c3voc.de/) benutzt wird, um Live-Video- und -Audio-Streams von
 [diversen Konferenzen](https://c3voc.de/eventkalender/) im Internet zu
 präsentieren. Die Idee hinter diesem Projekt ist es, eine generische Codebasis
 zu haben, die mit wenigen Konfigurationsoptionen und ein paar CSS-Rules an die

@@ -63,7 +63,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 */
 	'FOOTER_HTML' => '
 		by <a href="http://metaebene.me">metaebene</a> &amp;
-		<a href="https://c3voc.de">c3voc</a>
+		<a href="https://c3voc.de">C3VOC</a>
 	',
 
 	/**
