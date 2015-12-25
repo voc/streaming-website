@@ -2,10 +2,6 @@
 
 class GenericConference extends Conference
 {
-	public function getTitle() {
-		return 'C3VOC Streaming';
-	}
-
 	public function hasBegun() {
 		return true;
 	}
