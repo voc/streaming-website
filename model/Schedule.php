@@ -28,7 +28,7 @@ class Schedule extends ModelBase
 		$opts = array(
 			'http' => array(
 				'timeout' => 2,
-				'user_agent' => 'C3Voc Universal Streaming-Website Backend @ '.$_SERVER['HTTP_HOST'],
+				'user_agent' => 'C3VOC Universal Streaming-Website Backend @ '.$_SERVER['HTTP_HOST'],
 			)
 		);
 		$context  = stream_context_create($opts);

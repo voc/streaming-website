@@ -3,7 +3,7 @@
 class GenericConference extends Conference
 {
 	public function getTitle() {
-		return 'C3Voc Streaming';
+		return 'C3VOC Streaming';
 	}
 
 	public function hasBegun() {
@@ -18,7 +18,7 @@ class GenericConference extends Conference
 		return true;
 	}
 	public function getAuthor() {
-		return 'C3Voc';
+		return 'C3VOC';
 	}
 
 	public function hasDescription() {
@@ -32,7 +32,7 @@ class GenericConference extends Conference
 		return true;
 	}
 	public function getKeywords() {
-		return 'Video, Media, Streaming, VOC, C3Voc, CCC';
+		return 'Video, Media, Streaming, VOC, C3VOC, CCC';
 	}
 
 

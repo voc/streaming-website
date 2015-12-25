@@ -3,7 +3,7 @@
 class Conference extends ModelBase
 {
 	public function getTitle() {
-		return $this->get('CONFERENCE.TITLE', 'C3Voc Streaming');
+		return $this->get('CONFERENCE.TITLE', 'C3VOC Streaming');
 	}
 
 	public function isPreviewEnabled() {
