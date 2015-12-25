@@ -6,8 +6,8 @@ wget --no-check-certificate -q "https://events.ccc.de/congress/2015/Fahrplan/sch
 rm -f /tmp/schedule.xml /tmp/schedule.json
 
 # fahrplan
-wget --no-check-certificate -q "http://data.c3voc.de/32C3/everything.schedule.xml" -O /tmp/everything.schedule.xml && mv /tmp/everything.schedule.xml everything.schedule.xml
-wget --no-check-certificate -q "http://data.c3voc.de/32C3/everything.schedule.json" -O /tmp/everything.schedule.json && mv /tmp/everything.schedule.json everything.schedule.json
+wget --no-check-certificate -q "http://data.testi.ber.c3voc.de/32C3/everything.schedule.xml" -O /tmp/everything.schedule.xml && mv /tmp/everything.schedule.xml everything.schedule.xml
+wget --no-check-certificate -q "http://data.testi.ber.c3voc.de/32C3/everything.schedule.json" -O /tmp/everything.schedule.json && mv /tmp/everything.schedule.json everything.schedule.json
 rm -f /tmp/everything.schedule.xml /tmp/everything.schedule.json
 
 # vod json
