@@ -594,12 +594,12 @@ $GLOBALS['CONFIG']['SUBTITLES'] = array(
 	/**
 	 * URL des L2S2 Primus-Servers
 	 */
-	'PRIMUS_URL' => 'http://fusrohda.marudor.de:63404/',
+	'PRIMUS_URL' => 'https://subtitles.media.ccc.de/',
 
 	/**
 	 * URL des L2S2 Frontend-Servers
 	 */
-	'FRONTEND_URL' => 'http://l2s2.marudor.de/',
+	'FRONTEND_URL' => 'https://subtitles.media.ccc.de/',
 );
 
 /**
