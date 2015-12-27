@@ -59,9 +59,13 @@ body.overview {
 	}
 }
 
-h1, h2, body.overview .room a.title, body.overview .panel-primary a {
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
   font-family: 'Roboto Condensed';
   font-weight: 300;
+}
+
+.navbar-brand {
+  font-size: 20px;
 }
 
 .well {
@@ -75,6 +79,12 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a {
 	text-indent: -9999em;
 }
 
+@media (max-width: 480px) {
+  .banner {
+    margin-top: 60px;
+  }
+}
+
 .player-wrap {
 	background-color: @darker-grey;
 }
@@ -86,6 +96,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a {
 nav .navbar-form {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
 nav .button-wrapper > .btn {
