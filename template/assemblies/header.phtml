@@ -16,16 +16,16 @@
 			<? endif ?>
 
 			<? if(!$conference->hasEnded() && isset($feedback) && $feedback->isEnabled()): ?>
-				<a class="form-control btn btn-default" href="<?=h($feedback->getUrl())?>">
+				<a class="form-control btn btn-default feedback" href="<?=h($feedback->getUrl())?>">
 					<span class="fa fa-bullhorn"></span>
 				</a>
 			<? endif ?>
 			<? if($conference->hasReleases()): ?>
-				<a class="form-control btn btn-default" href="<?=h($conference->getReleasesUrl())?>">
+				<a class="form-control btn btn-default releases" href="<?=h($conference->getReleasesUrl())?>">
 					<span class="fa fa-video-camera"></span>
 				</a>
 			<? endif ?>
-			<a class="form-control btn btn-default" href="about/">
+			<a class="form-control btn btn-default about" href="about/">
 				<span class="fa fa-info"></span>
 			</a>
 		</div>

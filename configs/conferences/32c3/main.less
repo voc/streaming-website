@@ -1,10 +1,10 @@
 @import "../../../assets/css/_structure.less";
 
 // conference specific styles here
-@darker-grey: lighten(black, 15%); 
-@dark-grey: lighten(black, 20%); 
-@light-grey: lighten(black, 30%); 
-@lighter-grey: lighten(black, 40%); 
+@darker-grey:   lighten(black, 15%);
+@dark-grey:     lighten(black, 20%);
+@light-grey:    lighten(black, 30%);
+@lighter-grey:  lighten(black, 40%);
 
 // often configured values (and their defaults):
 //
@@ -14,14 +14,32 @@
 @link-color:            white;
 @link-hover-color:      @lighter-grey;
 
-@navbar-default-color:  @text-color;
-@navbar-default-bg:     @dark-grey;
+@navbar-height:         70px;
 
-//@navbar-default-link-color:       @link-color;
+@navbar-default-color:  white;
+@navbar-default-bg:     #000;
+
+@navbar-default-border: white;
+
+@navbar-default-link-color:       white;
 //@navbar-default-link-hover-color: @link-hover-color;
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url('roboto-condensed-v13-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'),
+       url('roboto-condensed-v13-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('roboto-condensed-v13-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('roboto-condensed-v13-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('roboto-condensed-v13-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('roboto-condensed-v13-latin-300.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
 
 body {
 	background-color: black;
+  padding: @navbar-height 0
 }
 
 body.overview {
@@ -41,13 +59,19 @@ body.overview {
 	}
 }
 
+h1, h2, body.overview .room a.title, body.overview .panel-primary a {
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+}
+
 .well {
 	color: @dark-grey;
 }
 
 .banner {
-	background: url(logo.gif) no-repeat center;
-	height: 150px;
+  margin-top: 40px;
+  background: url(logo.gif) no-repeat center;
+	height: 170px;
 	text-indent: -9999em;
 }
 
@@ -57,4 +81,43 @@ body.overview {
 
 .nav-tabs > li > a {
 	border-color: @dark-grey;
+}
+
+nav .navbar-form {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav .button-wrapper > .btn {
+ width: 70px;
+ height: 70px;
+ margin-left: -1px;
+ border-color: white;
+ border-top: 0;
+ border-bottom: 0;
+ border-radius: 0;
+ background: url(icons.png) no-repeat left top;
+ text-indent: -9999px;
+ display: block;
+ float: left;
+}
+
+nav .button-wrapper > .btn-ssl {
+  background-position: -72px top;
+}
+
+nav .button-wrapper > .btn-ssl.btn-success {
+  background-position: left top;
+}
+
+nav .button-wrapper > .feedback {
+  background-position: -216px top;
+}
+
+nav .button-wrapper > .releases {
+  background-position: -144px top;
+}
+
+nav .button-wrapper > .about {
+  background-position: -288px top;
 }
