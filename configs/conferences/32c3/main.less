@@ -42,20 +42,18 @@ body {
   padding: @navbar-height 0
 }
 
-body.overview {
-	.panel-default {
+.panel-default {
+	color: @dark-grey;
+	a {
 		color: @dark-grey;
-		a {
-			color: @dark-grey;
-		}
 	}
-	.panel-primary {
-		background-color: @light-grey;
-		border-color: @light-grey;
+}
+.panel-primary {
+	background-color: @light-grey;
+	border-color: @light-grey;
+	color: white;
+	a {
 		color: white;
-		a {
-			color: white;
-		}
 	}
 }
 
@@ -131,4 +129,22 @@ nav .button-wrapper > .releases {
 
 nav .button-wrapper > .about {
   background-position: -288px top;
+}
+
+.well a {
+  color: @dark-grey;
+}
+.alert {
+  &.alert-success a {
+    color: @state-success-text;
+  }
+  &.alert-info a {
+    color: @state-info-text;
+  }
+  &.alert-warning a {
+    color: @state-warning-text;
+  }
+  &.alert-danger a {
+    color: @state-danger-text;
+  }
 }
