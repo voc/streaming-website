@@ -473,7 +473,6 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'PREVIEW' => true,
 		'WIDE' => true,
 
-		'STEREO' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
