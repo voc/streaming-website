@@ -7,7 +7,8 @@
 
 	<div class="row room-group">
 		<? foreach($rooms as $room): ?>
-				<? foreach($room->getStreams() as $stream): ?>
+			<? foreach($room->getStreams() as $stream): ?>
+				<? if($selection && $stream->getSelection() != $selection) continue ?>
 				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
 					<div class="cell">
 						<h2><?=h($stream->getDisplay())?></h2>

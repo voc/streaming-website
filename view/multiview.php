@@ -5,4 +5,5 @@ echo $tpl->render(array(
 	'title' => 'Stream-Übersicht',
 
 	'rooms' => Room::rooms(),
+	'selection' => @$_GET['selection'],
 ));

@@ -210,6 +210,12 @@ try {
 		require('view/multiview.php');
 	}
 
+	else if($route == 'multiview/audio')
+	{
+		$_GET['selection'] = 'audio';
+		require('view/multiview.php');
+	}
+
 	else if($route == 'feedback')
 	{
 		require('view/feedback.php');
