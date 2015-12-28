@@ -37,6 +37,14 @@ function forceslash($url)
 	return $url;
 }
 
+function forceproto($url)
+{
+	if(startswith('//', $url))
+		$url = proto().':'.$url;
+
+	return $url;
+}
+
 function startswith($needle, $haystack)
 {
 	return substr($haystack, 0, strlen($needle)) == $needle;

@@ -40,8 +40,16 @@
 			height: 75px;
 		}
 
+		a:hover {
+			text-decoration: none;
+		}
 
-		padding: 10px;
+		.inner {
+			display: block;
+			padding: 10px;
+			height: 100%;
+		}
+
 		border: 1px solid @schedule-border;
 
 		h3 {
@@ -63,10 +71,6 @@
 
 			@media (max-width: @screen-xs-max) {
 				font-size: 15px;
-			}
-
-			a {
-				color: @schedule-room;
 			}
 		}
 
