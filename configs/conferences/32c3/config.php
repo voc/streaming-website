@@ -402,6 +402,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Hall G',
+		'SUBTITLES' => true,
+		'SUBTITLES_ROOM_ID' => 2,
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
