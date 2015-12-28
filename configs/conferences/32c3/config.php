@@ -406,7 +406,6 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'SUBTITLES' => true,
 		'SUBTITLES_ROOM_ID' => 2,
 		'FEEDBACK' => true,
-		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
