@@ -10,46 +10,49 @@
 						data-start="<?=intval($event['start'])?>"
 						data-end="<?=intval($event['end'])?>"
 					>
-						<? if(@$event['special'] == 'daychange'): ?>
-
-							<h3><?=h($event['title'])?></h3>
-
-						<? elseif(@$event['special'] == 'gap'): ?>
-
-							<!--h3>Gap</h3-->
-
-						<? elseif(@$event['special'] == 'pause'): ?>
-
-							<h3><?=h($event['title'])?></h3>
-
+						<? $scheduleRoom = Room::createIfExists($roomname) ?>
+						<? if($scheduleRoom): ?>
+							<a
+								class="inner"
+								href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>"
+								title="Switch to <?=h($scheduleRoom->getDisplay())?>"
+							>
 						<? else: ?>
+							<div class="inner">
+						<? endif ?>
 
-							<? $scheduleRoom = Room::createIfExists($roomname) ?>
-							<h4><?=h(strftime('%H:%M', $event['start']))?>
-								&ndash;
-								<?=h(strftime('%H:%M', $event['end']))?>
-								&nbsp;in&nbsp;
-								<? if($scheduleRoom): ?>
-									<a href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>">
-										<?=h($scheduleRoom->getDisplay())?>
-									</a>
-								<? else: ?>
+							<? if(@$event['special'] == 'daychange'): ?>
+
+								<h3><?=h($event['title'])?></h3>
+
+							<? elseif(@$event['special'] == 'gap'): ?>
+
+								<!--h3>Gap</h3-->
+
+							<? elseif(@$event['special'] == 'pause'): ?>
+
+								<h3><?=h($event['title'])?></h3>
+
+							<? else: ?>
+
+								<h4><?=h(strftime('%H:%M', $event['start']))?>
+									&ndash;
+									<?=h(strftime('%H:%M', $event['end']))?>
+									&nbsp;in&nbsp;
 									<?=h($roomname) ?>
-								<? endif ?>
-							</h4>
-							<h3>
-								<? if($scheduleRoom): ?>
-									<a
-										href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>"
-										title="Switch to <?=h($scheduleRoom->getDisplay())?>"
-									><?=h($event['title'])?></a>
-								<? else: ?>
+								</h4>
+								<h3>
 									<?=h($event['title'])?>
+								</h3>
+								<? if($event['speaker']): ?>
+									<h5>by&nbsp;<?=h($event['speaker'])?></h5>
 								<? endif ?>
-							</h3>
-							<? if($event['speaker']): ?>
-								<h5>by&nbsp;<?=h($event['speaker'])?></h5>
 							<? endif ?>
+
+						<? if($scheduleRoom): ?>
+							</a>
+						<? else: ?>
+							</div>
 						<? endif ?>
 					</div>
 
