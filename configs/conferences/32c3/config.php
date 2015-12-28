@@ -121,6 +121,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 			'ambient',
 			'dome',
 			'chaos-west',
+			'radio',
 		),
 		'Live Podcasts' => array(
 			'sendezentrum',
@@ -500,6 +501,12 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	'chaos-west' => array(
 		'DISPLAY' => 'Chaos-West',
 		'STREAM' => 'chaos-west',
+		'MUSIC' => true,
+		'EMBED' => true,
+	),
+	'radio' => array(
+		'DISPLAY' => 'Radio Fairydust',
+		'STREAM' => 'radio',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
