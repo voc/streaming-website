@@ -9,4 +9,5 @@ echo $tpl->render(array(
 
 	'next' => @$events[0],
 	'events' => $events,
+	'last' => Conferences::getLastConference(),
 ));

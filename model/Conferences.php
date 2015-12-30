@@ -33,6 +33,20 @@ class Conferences extends ModelBase
 		return count(Conferences::getActiveConferences());
 	}
 
+	public static function getConferencesSorted() {
+		$sorted = Conferences::getConferences();
+
+		usort($sorted, function($a, $b) {
+			return @$b['CONFIG']['CONFERENCE']['STARTS_AT'] - @$a['CONFIG']['CONFERENCE']['STARTS_AT'];
+		});
+
+		return $sorted;
+	}
+
+	public static function getLastConference() {
+		return Conferences::getConferencesSorted()[0];
+	}
+
 	public static function exists($mandator) {
 		return array_key_exists($mandator, Conferences::getConferences());
 	}
@@ -49,6 +63,9 @@ class Conferences extends ModelBase
 			'active' => !$conf->isClosed(),
 			'title' => $conf->getTitle(),
 			'description' => $conf->getDescription(),
+
+			'relive' => forceslash($mandator).$conf->getReliveUrl(),
+			'releases' => $conf->getReleasesUrl(),
 
 			'CONFIG' => $GLOBALS['CONFIG'],
 		];
