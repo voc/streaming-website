@@ -93,7 +93,7 @@ function days_diff_readable($date)
 		return round(-$days / 30)." months ago";
 
 	if($days < 0)
-		return "$days days ago";
+		return (-$days)." days ago";
 
 	if($days > 60)
 		return 'in '.round($days / 30)." months";
