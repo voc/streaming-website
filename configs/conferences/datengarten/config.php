@@ -1,8 +1,8 @@
 <?php
 
-$EPISODE = 61;
-$DATE = strtotime("2015-12-08 20:00");
-$TITLE = '@Carina - RocketScience und Software Engineering - Ein Rückblick';
+$EPISODE = 62;
+$DATE = strtotime("2016-01-12 20:00");
+$TITLE = '@fukami - Wie funktioniert die EU - und warum sollte uns das interessieren';
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
