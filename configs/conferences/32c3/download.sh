@@ -11,5 +11,5 @@ wget --no-check-certificate -q "http://data.testi.ber.c3voc.de/32C3/everything.s
 rm -f /tmp/everything.schedule.xml /tmp/everything.schedule.json
 
 # vod json
-wget -q "http://live.cch.c3voc.de/relive/32c3/index.json" -O /tmp/vod.json && mv /tmp/vod.json vod.json
+wget -q "http://live.dus.c3voc.de/relive/32c3/index.json" -O /tmp/vod.json && mv /tmp/vod.json vod.json
 rm -f /tmp/vod.json
