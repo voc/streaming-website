@@ -43,8 +43,18 @@ class Conferences extends ModelBase
 		return $sorted;
 	}
 
+	public static function getFinishedConferencesSorted() {
+		$sorted = Conferences::getConferencesSorted();
+
+		$finished = array_values(array_filter($sorted, function($c) {
+			return @$c['CONFIG']['CONFERENCE']['ENDS_AT'] < time();
+		}));
+
+		return $finished;
+	}
+
 	public static function getLastConference() {
-		return Conferences::getConferencesSorted()[0];
+		return Conferences::getFinishedConferencesSorted()[0];
 	}
 
 	public static function exists($mandator) {
@@ -64,8 +74,8 @@ class Conferences extends ModelBase
 			'title' => $conf->getTitle(),
 			'description' => $conf->getDescription(),
 
-			'relive' => forceslash($mandator).$conf->getReliveUrl(),
-			'releases' => $conf->getReleasesUrl(),
+			'relive' => $conf->hasRelive() ? forceslash($mandator).$conf->getReliveUrl() : null,
+			'releases' => $conf->hasReleases() ? $conf->getReleasesUrl() : null,
 
 			'CONFIG' => $GLOBALS['CONFIG'],
 		];
