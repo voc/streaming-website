@@ -175,7 +175,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
 		 * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
 		 */
-		'STEREO' => true,
+		'STEREO' => false,
 
 		/**
 		 * SD-Video-Stream (1024×576) verfügbar
@@ -199,7 +199,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
 		 * als Default-Stream angenommen.
 		 */
-		'HD_VIDEO' => false,
+		'HD_VIDEO' => true,
 
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
