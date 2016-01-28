@@ -47,7 +47,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	//'DESCRIPTION' => 'Lalala',
+	'DESCRIPTION' => 'Jazz ist nicht, was Du tust, sondern wie Du es tust. In diesem Geiste präsentiert das 2009 gegründete Festival an drei Abenden die Musik von Studierenden der Jazz/Pop-Abteilung der Hochschule für Musik und Tanz Köln.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
