@@ -1,9 +1,11 @@
 <?php
 
-$EPISODE = 218;
-$DATE = strtotime("2015-11-26 22:00");
-$TITLE = "Chaosradio $EPISODE - Die Cloud - jetzt auch in Deinem Toaster!";
+$EPISODE = 219;
+$DATE = strtotime("2016-01-28 22:00");
+$TITLE = "Chaosradio $EPISODE - Backstage im Netz";
+$IM_CCCB = false; // im CCCB=false oder im Fritz-Studio=true
 
+$STREAM = $IM_CCCB ? 's5' : 'q2';
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	/**
@@ -13,7 +15,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => $DATE - 60*5, // -10 Minuten,
+	'STARTS_AT' => $DATE - 60*30, // -30 Minuten,
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -141,7 +143,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's5',
+		'STREAM' => $STREAM,
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
