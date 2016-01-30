@@ -1,8 +1,8 @@
 <?php
 
-$EPISODE = 62;
-$DATE = strtotime("2016-01-12 20:00");
-$TITLE = '@fukami - Wie funktioniert die EU - und warum sollte uns das interessieren';
+$EPISODE = 63;
+$DATE = strtotime("2016-02-09 20:00");
+$TITLE = 'Anna-Lena Baecker - WLAN in Hochgeschwindigkeitszügen';
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
