@@ -100,7 +100,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'configs/conferences/lalala/relive.json',
+	'RELIVE_JSON' => 'configs/conferences/ffrl-routing-days-2016/vod.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -243,13 +243,13 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $GLOBALS['CONFIG']['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 
 		/**
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		//'SCHEDULE_NAME' => 'Lalala',
+		'SCHEDULE_NAME' => 'Main',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -394,17 +394,13 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/lalala/schedule.xml',
-	/**
-	 * APCU-Cache-Zeit in Sekunden
-	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
-	 * der Fahrplan bei jedem Request von der Quelle geladen und geparst
-	 */
-	//'CACHE' => 30*60,
+	'URL' => 'configs/conferences/ffrl-routing-days-2016/schedule.xml',
+
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
 	'SCALE' => 7,
+
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
 	 *
