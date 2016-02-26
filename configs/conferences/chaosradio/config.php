@@ -1,9 +1,18 @@
 <?php
 
-$EPISODE = 219;
-$DATE = strtotime("2016-01-28 22:00");
-$TITLE = "Chaosradio $EPISODE - Backstage im Netz";
-$IM_CCCB = false; // im CCCB=false oder im Fritz-Studio=true
+$upcoming = new Upcoming();
+$upcoming_events = $upcoming->getNextEvents();
+$upcoming_crs = array_values(array_filter($upcoming_events, function($event) {
+	return preg_match('/^cr[0-9]+$/i', $event['short_name']);
+}));
+$upcoming_cr = $upcoming_crs[0];
+
+preg_match('/^cr([0-9]+)$/i', $upcoming_cr['short_name'], $m);
+
+$EPISODE = intval($m[1]);
+$DATE = strtotime($upcoming_cr['start_date'].' 22:00');
+$TITLE = "Chaosradio $EPISODE";
+$IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
 
 $STREAM = $IM_CCCB ? 's5' : 'q2';
 
