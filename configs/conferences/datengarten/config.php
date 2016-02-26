@@ -1,8 +1,17 @@
 <?php
 
-$EPISODE = 63;
-$DATE = strtotime("2016-02-09 20:00");
-$TITLE = 'Anna-Lena Baecker - WLAN in Hochgeschwindigkeitszügen';
+$upcoming = new Upcoming();
+$upcoming_events = $upcoming->getNextEvents();
+$upcoming_dgs = array_values(array_filter($upcoming_events, function($event) {
+	return preg_match('/^dg[0-9]+$/i', $event['short_name']);
+}));
+$upcoming_dg = $upcoming_dgs[0];
+
+preg_match('/^dg([0-9]+)$/i', $upcoming_dg['short_name'], $m);
+
+$EPISODE = intval($m[1]);
+$DATE = strtotime($upcoming_dg['start_date'].' 22:00');
+$TITLE = "Datengarten $EPISODE";
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
