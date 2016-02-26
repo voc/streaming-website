@@ -49,7 +49,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => "Datengarten #$EPISODE",
+	'TITLE' => "Chaosradio #$EPISODE",
 
 	/**
 	 * Veranstalter
