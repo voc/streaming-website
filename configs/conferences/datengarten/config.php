@@ -11,7 +11,7 @@ preg_match('/^dg([0-9]+)$/i', $upcoming_dg['short_name'], $m);
 
 $EPISODE = intval($m[1]);
 $DATE = strtotime($upcoming_dg['start_date'].' 22:00');
-$TITLE = "Datengarten $EPISODE";
+$TITLE = $upcoming_dg['name'];
 
 
 $GLOBALS['CONFIG']['CONFERENCE'] = array(
@@ -47,7 +47,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => "Datengarten #$EPISODE",
+	'TITLE' => $TITLE,
 
 	/**
 	 * Veranstalter

@@ -11,7 +11,7 @@ preg_match('/^cr([0-9]+)$/i', $upcoming_cr['short_name'], $m);
 
 $EPISODE = intval($m[1]);
 $DATE = strtotime($upcoming_cr['start_date'].' 22:00');
-$TITLE = "Chaosradio $EPISODE";
+$TITLE = $upcoming_cr['name'];
 $IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
 
 $STREAM = $IM_CCCB ? 's5' : 'q2';
@@ -49,7 +49,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => "Chaosradio #$EPISODE",
+	'TITLE' => $TITLE,
 
 	/**
 	 * Veranstalter
