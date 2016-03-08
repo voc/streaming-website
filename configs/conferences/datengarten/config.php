@@ -6,11 +6,10 @@ $upcoming_dgs = array_values(array_filter($upcoming_events, function($event) {
 	return preg_match('/^dg[0-9]+$/i', $event['short_name']);
 }));
 $upcoming_dg = $upcoming_dgs[0];
-
 preg_match('/^dg([0-9]+)$/i', $upcoming_dg['short_name'], $m);
 
 $EPISODE = intval($m[1]);
-$DATE = strtotime($upcoming_dg['start_date'].' 22:00');
+$DATE = strtotime($upcoming_dg['start_date'].' 20:00');
 $TITLE = $upcoming_dg['name'];
 
 
