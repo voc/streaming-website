@@ -5,14 +5,24 @@ $upcoming_events = $upcoming->getNextEvents();
 $upcoming_crs = array_values(array_filter($upcoming_events, function($event) {
 	return preg_match('/^cr[0-9]+$/i', $event['short_name']);
 }));
-$upcoming_cr = $upcoming_crs[0];
 
-preg_match('/^cr([0-9]+)$/i', $upcoming_cr['short_name'], $m);
+if(count($upcoming_crs) < 1)
+{
+	$EPISODE = '???';
+	$DATE = strtotime('1970-01-01 22:00');
+	$TITLE = 'Unknown';
+	$IM_CCCB = true;
+}
+else
+{
+	$upcoming_cr = $upcoming_crs[0];
+	preg_match('/^cr([0-9]+)$/i', $upcoming_cr['short_name'], $m);
 
-$EPISODE = intval($m[1]);
-$DATE = strtotime($upcoming_cr['start_date'].' 22:00');
-$TITLE = $upcoming_cr['name'];
-$IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
+	$EPISODE = intval($m[1]);
+	$DATE = strtotime($upcoming_cr['start_date'].' 22:00');
+	$TITLE = $upcoming_cr['name'];
+	$IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
+}
 
 $STREAM = $IM_CCCB ? 's5' : 'q2';
 
