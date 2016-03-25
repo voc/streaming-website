@@ -12,8 +12,10 @@ for d in conferences/*; do
 		cd "$wd"
 	fi
 done
-cd "$owd"
+cd "$wd"
 
 # eventkalender upcoming
 echo "eventkalender"
 wget -q --no-check-certificate "https://c3voc.de/eventkalender/events.json?filter=upcoming&streaming=yes" -O /tmp/upcoming.json && mv /tmp/upcoming.json upcoming.json
+
+cd "$owd"
