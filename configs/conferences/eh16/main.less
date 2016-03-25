@@ -1,0 +1,40 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+@grey:  #a7a6a8;
+@green: #00ff0d;
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @green;
+@text-color:            black;
+
+@link-color:            @green;
+@link-hover-color:      darken(@green, 20%);
+
+@navbar-default-color:  black;
+@navbar-default-bg:     @green;
+
+@navbar-default-link-color:           black;
+@navbar-default-link-hover-color:     lighten(black, 20%);
+
+@panel-default-border:  @grey;
+
+
+.nav-tabs > li > a {
+	background-color: lighten(@grey, 33%);
+	color: darken(@green, 20%);
+}
+
+img.bunny {
+	width: 160px;
+	position: absolute;
+	bottom: 40px;
+	left: 10px;
+	opacity: 0.4;
+	z-index: -100;
+
+	&:hover {
+		opacity: 1;
+	}
+}
