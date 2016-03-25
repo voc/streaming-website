@@ -39,7 +39,7 @@
 									&ndash;
 									<?=h(strftime('%H:%M', $event['end']))?>
 									&nbsp;in&nbsp;
-									<?=h($scheduleRoom->getDisplay()) ?>
+									<?=h($scheduleRoom ? $scheduleRoom->getDisplay() : $roomname) ?>
 								</h4>
 								<h3>
 									<?=h($event['title'])?>
