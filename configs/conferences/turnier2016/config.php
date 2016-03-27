@@ -124,7 +124,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'' => array(
-			'Helios Arena',
+			'HeliosArena',
 		),
 	),
 );
