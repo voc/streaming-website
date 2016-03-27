@@ -139,7 +139,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'mosaik' => array(
+	'HeliosArena' => array(
 		/**
 		 * Angezeige-Name
 		 */
