@@ -212,7 +212,7 @@ $(function() {
 				if(!talk.room_known)
 					return;
 
-				if(talk.start < now)
+				if(talk.start < now && talk.end > now)
 					currentTalk = talk;
 
 				if(!nextTalk && !talk.special && talk.start > now)
