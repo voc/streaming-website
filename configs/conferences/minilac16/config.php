@@ -331,7 +331,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 	'seminar-room' => array(
 		'DISPLAY' => 'Seminar room',
-		'STREAM' => 's2',
+		'STREAM' => 's5',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
