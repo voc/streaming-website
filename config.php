@@ -15,7 +15,7 @@ $GLOBALS['CONFIG'] = [];
  * 'localhost' zu setzen und so ebenfalls unabhängig von den OPEN/CLOSED
  * Informationen der einzelnen Konferenzen testen zu können.
  */
-$GLOBALS['CONFIG']['PREVIEW_DOMAIN'] = 'pre.stream.c3voc.de';
+$GLOBALS['CONFIG']['PREVIEW_DOMAIN'] = 'xlocalhost';
 
 /**
  * Während der Entwicklung wird die BASEURL automatisch erraten
