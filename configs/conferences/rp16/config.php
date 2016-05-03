@@ -7,7 +7,7 @@
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2016-05-02 9:00")
+	'STARTS_AT' => strtotime("2016-05-02 9:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -15,7 +15,7 @@
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2016-05-04 21:00")
+	'ENDS_AT' => strtotime("2016-05-04 21:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -74,10 +74,7 @@
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => "
-		<h2>rpTEN</h2>
-		<h3>Stage 1</h3>
-	",
+//	'BANNER_HTML' => "",
 
 	/**
 	 * Link zu den Recordings
@@ -124,7 +121,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'cccb' => array(
+	'stage1' => array(
 		/**
 		 * Angezeige-Name
 		 */
