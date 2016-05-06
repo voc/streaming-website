@@ -5,7 +5,7 @@ $upcoming_events = $upcoming->getNextEvents();
 $upcoming_afus = array_values(array_filter($upcoming_events, function($event) {
 	return preg_match('/^events:afu[0-9]+$/i', $event['short_name']);
 }));
-var_dump($upcoming_afus);
+
 if(count($upcoming_afus) < 1)
 {
 	$EPISODE = '???';
