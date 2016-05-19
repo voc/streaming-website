@@ -124,7 +124,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'' => array(
-			'mosaik',
+			'sublab',
 		),
 	),
 );
@@ -150,7 +150,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's1',
+		'STREAM' => 'cryptocon16',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
