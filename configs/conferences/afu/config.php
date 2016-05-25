@@ -117,7 +117,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'configs/conferences/afu/vod.json',
+	'RELIVE_JSON' => 'configs/conferences/afu/relive.json',
 );
 
 /**

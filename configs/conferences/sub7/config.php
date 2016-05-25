@@ -101,7 +101,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/sub7/relive.json',
+	//'RELIVE_JSON' => 'configs/conferences/sub7/relive.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
