@@ -12,7 +12,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
@@ -76,7 +76,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<img src="../configs/conferences/minilac16/Banner_JH-Sued-2016.svg" class="jhsued">'
+	'BANNER_HTML' => '<img src="../configs/conferences/jh-sued-2016/Banner_JH-Sued-2016.svg" class="jhsued">',
 
 	/**
 	 * Link zu den Recordings
