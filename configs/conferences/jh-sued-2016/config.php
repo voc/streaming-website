@@ -33,14 +33,14 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'jh-sued-2016',
+	'TITLE' => 'Jugend hackt Süd 2016',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'Jugend hackt Süd 2016',
+	'AUTHOR' => 'Jugend hackt 2016',
 
 	/**
 	 * Beschreibungstext
