@@ -349,7 +349,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
  * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
  * Embedding-Funktionen deaktiviert.
  */
-$GLOBALS['CONFIG']['EMBED'] = false;
+$GLOBALS['CONFIG']['EMBED'] = true;
 
 /**
  * Konfigurationen zum Konferenz-Fahrplan
