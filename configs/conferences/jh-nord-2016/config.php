@@ -282,7 +282,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Ebenso können alle Embedding-Funktionialitäten durch auskommentieren
 		 * des globalen $GLOBALS['CONFIG']['EMBED']-Blocks deaktiviert werden
 		 */
-		'EMBED' => false,
+		'EMBED' => true,
 
 		/**
 		 * IRC-Link aktivieren (boolean)
