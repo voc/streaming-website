@@ -12,7 +12,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
@@ -33,7 +33,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Jugend hackt Süd 2016',
+	'TITLE' => 'Jugend hackt Nord 2016',
 
 	/**
 	 * Veranstalter
@@ -76,13 +76,13 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<img src="../configs/conferences/jh-sued-2016/Banner_JH-Sued-2016.svg" class="jhsued">',
+	'BANNER_HTML' => '<img src="../configs/conferences/minilac16/Banner_JH-Nord-2016.svg" class="jhnord">'
 
 	/**
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'http://media.ccc.de/browse/conferences/jh/jh-sued-2016/',
+	'RELEASES' => 'http://media.ccc.de/browse/conferences/jh/jh-nord-2016/',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -97,7 +97,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/jh-sued-2016/vod.json',
+	'RELIVE_JSON' => 'configs/conferences/jh-nord-2016/vod.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -120,7 +120,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'H22',
+			'S1',
 		),
 	),
 );
@@ -135,18 +135,18 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'H22' => array(
+	'S1' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Hörsaal 22',
+		'DISPLAY' => 'Saal 1',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's3',
+		'STREAM' => 's1',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -246,7 +246,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'H22',
+		'SCHEDULE_NAME' => 'S1',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -363,14 +363,14 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/jh-sued-2016/schedule.xml',
+	'URL' => 'configs/conferences/jh-nord-2016/schedule.xml',
 
         /**
          * Nur die angegebenen Räume aus dem Fahrplan beachten
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('H22'),
+        'ROOMFILTER' => array('S1'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
