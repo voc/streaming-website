@@ -76,7 +76,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<img src="../configs/conferences/jh-nord-2016/Banner_JH-West-2016.svg" class="jhnord">',
+	'BANNER_HTML' => '<img src="../configs/conferences/jh-west-2016/Banner_JH-West-2016.svg" class="jhnord">',
 
 	/**
 	 * Link zu den Recordings
