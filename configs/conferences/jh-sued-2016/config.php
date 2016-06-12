@@ -47,7 +47,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-//	'DESCRIPTION' => '',
+	'DESCRIPTION' => 'TEST1234',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
