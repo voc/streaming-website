@@ -82,7 +82,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'http://media.ccc.de/browse/conferences/jh/jh-nord-2016/',
+	'RELEASES' => 'https://media.ccc.de/b/events/jugendhackt/2016',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
