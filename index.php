@@ -28,7 +28,23 @@ require_once('model/Upcoming.php');
 
 ob_start();
 try {
-	$route = @$_GET['route'];
+	if(isset($_GET['htaccess']))
+	{
+		$route = @$_GET['route'];
+	}
+	elseif(isset($_SERVER["REQUEST_URI"]))
+	{
+		$route = ltrim(@$_SERVER["REQUEST_URI"], '/');
+
+		// serve static
+		if($route != '' && file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$route))
+		{
+			return false;
+		}
+
+	}
+	else $route = '';
+
 	$route = rtrim($route, '/');
 
 	// generic template

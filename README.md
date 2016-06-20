@@ -9,6 +9,21 @@ zu haben, die mit wenigen Konfigurationsoptionen und ein paar CSS-Rules an die
 Gegebenheiten und die Gestaltung der Konferenz angepasst werden können.
 
 
+## Development
+
+Während der Entwicklung kann der eingebaute PHP-Webserver verwendet werden:
+```
+$ ./serve.sh
+PHP 7.0.4-7ubuntu2.1 Development Server started at Mon Jun 20 22:40:17 2016
+Listening on http://localhost:8000
+Document root is /home/peter/VOC/streaming-website
+Press Ctrl-C to quit.
+…
+```
+
+Unterstützt wird PHP ab 5.4.
+
+
 
 ## Setup
 
