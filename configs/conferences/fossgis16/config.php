@@ -76,7 +76,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 'BANNER_HTML' => '<img src="../configs/conferences/fossgis16/fossgis16-logo.png" class="logo">',
+	 'BANNER_HTML' => '<div class="logo"></div>',
 
 	/**
 	 * Link zu den Recordings
