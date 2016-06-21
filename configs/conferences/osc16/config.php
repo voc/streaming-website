@@ -384,7 +384,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-05-21') - strtotime(/* Today */ '2016-05-19'),
-	'SIMULATE_OFFSET' => 0,
+	'SIMULATE_OFFSET' => 1,
 );
 
 /**
