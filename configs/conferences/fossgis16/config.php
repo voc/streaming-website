@@ -357,7 +357,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'GI Studio',
+		'SCHEDULE_NAME' => ' GI Studio',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -414,12 +414,12 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	*
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
-	//'ROOMFILTER' => array('Medientheater', 'ZKM-Vortragssaal', 'Studio'),
+	'ROOMFILTER' => ['Audimax', 'Grüner HS', ' GI Studio'],
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
-	'SCALE' => 7,
+	'SCALE' => 5,
 
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
