@@ -1,0 +1,43 @@
+@import "../../../assets/css/_structure.less";
+
+@green: #73ba25;
+
+@brand-primary:  darken(@green, 20%);
+
+@link-color:            #666;
+@panel-primary-border:  white;
+
+@text-color: #333;
+
+body {
+	background-color: @green;
+}
+
+footer {
+	background-color: #333;
+
+	color: white;
+	a {
+		color: white;
+		&:hover {
+			text-decoration: underline;
+			color: white;
+		}
+	}
+}
+
+body {
+	padding-bottom: 170px + 30px + 30px + 60px;
+	position: relative;
+}
+
+.logo {
+	background: url('logo.svg') no-repeat center;
+	height: 170px;
+	position: absolute;
+	bottom: 30px + 25px;
+	z-index: -100;
+
+	left: 0;
+	right: 0;
+}
