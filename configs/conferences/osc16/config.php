@@ -8,7 +8,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2016-06-22 09:00"),
+	'STARTS_AT' => strtotime("2016-06-21 09:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -384,7 +384,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-05-21') - strtotime(/* Today */ '2016-05-19'),
-	'SIMULATE_OFFSET' => 1,
+	'SIMULATE_OFFSET' => 0,
 );
 
 /**
