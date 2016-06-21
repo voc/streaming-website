@@ -1,0 +1,36 @@
+@import "../../../assets/css/_structure.less";
+
+@orange: #eb7f00;
+@light: rgba(123,145,153,0.1);
+@medium: #7b9199;
+@dark: #2d3841;
+
+@link-color:            @orange;
+@panel-primary-border:  @orange;
+
+@panel-default-heading-bg: @light;
+@panel-default-text:       @medium;
+
+@text-color: @dark;
+
+footer {
+	background-color: @orange;
+
+	color: white;
+	a {
+		color: white;
+		&:hover {
+			text-decoration: underline;
+			color: white;
+		}
+	}
+}
+
+h1 { color: @medium; }
+
+
+.logo {
+	position: absolute;
+	top: 51px + 25px;
+	left: 25px;
+}
