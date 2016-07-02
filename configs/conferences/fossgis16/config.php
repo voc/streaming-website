@@ -148,7 +148,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's1',
+		'STREAM' => 's2',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -346,7 +346,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 	'gi-studio' => array(
 		'DISPLAY' => 'GI Studio',
-		'STREAM' => 's2',
+		'STREAM' => 's4',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -357,14 +357,14 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => ' GI Studio',
+		'SCHEDULE_NAME' => 'GI Studio',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => true,
 	),
-
+/*
 	'audimax' => array(
 		'DISPLAY' => 'Audimax',
 		'STREAM' => 's3',
@@ -385,6 +385,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => true,
 	),
+*/
 );
 
 /**
