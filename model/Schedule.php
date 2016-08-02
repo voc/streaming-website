@@ -208,6 +208,31 @@ class Schedule extends ModelBase
 			}
 		}
 
+
+		if($this->has('SCHEDULE.ROOMFILTER'))
+		{
+			// sort by roomfilter
+			$roomfilter = $this->get('SCHEDULE.ROOMFILTER');
+
+			// map roomfilter-rooms to room-slugs
+			$roomfilter = array_map(function($e) use ($mapping) {
+				if(isset($mapping[$e]))
+					return $mapping[$e];
+
+				return $e;
+			}, $roomfilter);
+
+			// sort according to roomtilter ordering
+			uksort($program, function($a, $b) use ($roomfilter) {
+				return array_search($a, $roomfilter) - array_search($b, $roomfilter);
+			});
+		}
+		else
+		{
+			// sort by key
+			ksort($program);
+		}
+
 		return $program;
 	}
 
