@@ -1,0 +1,52 @@
+@import "../../../assets/css/_structure.less";
+
+@c_title: darken(white, 20%);
+@c_text: lighten(black, 20%);
+
+@panel-primary-border:  @c_title;
+
+@link-color:            @c_text;
+@text-color: @c_text;
+
+body {
+	background-image: url('bg.jpg');
+	background-position: top right;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.navbar-default, footer {
+		background-color: fade(white, 30%);
+		border-color: fade(white, 50%);
+
+		.navbar-brand {
+			color: @c_title;
+			&:hover {
+				color: darken(@c_title, 10%);
+			}
+		}
+	}
+
+	.panel {
+		background-color: fade(white, 60%);
+		border-color: fade(white, 50%);
+	}
+
+	.tab-pane {
+		background-color: fade(white, 60%);
+
+		h1, h2, h3, h4 {
+			color: lighten(@c_text, 20%);
+		}
+	}
+
+	h1, h2, h3, h4 {
+		color: @c_title;
+	}
+
+	.nav-tabs a {
+		color: @c_title;
+		&:hover {
+			color: @c_text;
+		}
+	}
+}
