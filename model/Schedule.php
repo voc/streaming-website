@@ -107,7 +107,20 @@ class Schedule extends ModelBase
 				if($room_known)
 					$name = $mapping[$name];
 
+				$eventsSorted = [];
 				foreach($room->event as $event)
+				{
+					$eventsSorted[] = $event;
+				}
+
+				usort($eventsSorted, function($a, $b) {
+					$a_start = (string)$a->date;
+					$b_start = (string)$b->date;
+
+					return strcmp($a_start, $b_start);
+				});
+
+				foreach($eventsSorted as $event)
 				{
 					$start = strtotime((string)$event->date);
 					$duration = $this->strToDuration((string)$event->duration);
