@@ -146,7 +146,7 @@ class Schedule extends ModelBase
 					}
 
 				$personnames = array();
-				foreach($event->persons->person as $person)
+				if(isset($event->persons) && is_array($event->persons)) foreach($event->persons->person as $person)
 					$personnames[] = (string)$person;
 
 				$program[$name][] = array(
