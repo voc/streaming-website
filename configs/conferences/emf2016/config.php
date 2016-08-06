@@ -81,7 +81,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELEASES' => '',
+	'RELEASES' => 'https://media.ccc.de/c/emf16',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
