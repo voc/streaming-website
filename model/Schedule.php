@@ -85,8 +85,19 @@ class Schedule extends ModelBase
 			$day['end'] = $dayend;
 		}
 
-		$dayidx = 0;
+
+		$daysSorted = [];
 		foreach($schedule->day as $day)
+		{
+			$daysSorted[] = $day;
+		}
+
+		usort($daysSorted, function($a, $b) {
+			return (int)$a['start'] - (int)$b['start'];
+		});
+
+		$dayidx = 0;
+		foreach($daysSorted as $day)
 		{
 			$dayidx++;
 			$daystart = (int)$day['start'];
