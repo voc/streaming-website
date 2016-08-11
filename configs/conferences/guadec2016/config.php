@@ -118,7 +118,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Stages' => array(
+		'Rooms' => array(
 			'room1',
 			'room2',
 		),
