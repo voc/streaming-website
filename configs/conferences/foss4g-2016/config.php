@@ -123,10 +123,10 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 			'plenary-chamber',
 			'room-bonn',
 			'room-berlin',
-			'kaminzimmer',
-			'rheinlobby',
+			'fireplace-room',
+			'rhine-lobby',
 			'tunnel',
-			'plenargeb-p27',
+			'plenary-office',
 		),
 	),
 );
@@ -362,7 +362,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => ' Room Bonn',
+		'SCHEDULE_NAME' => 'Room Bonn',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -383,7 +383,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => ' Room Berlin',
+		'SCHEDULE_NAME' => 'Room Berlin',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -391,8 +391,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'TWITTER' => true,
 	),
 
-	'kaminzimmer' => array(
-		'DISPLAY' => 'Kaminzimmer',
+	'fireplace-room' => array(
+		'DISPLAY' => 'Fireplace Room',
 		'STREAM' => 's4',
 		'PREVIEW' => true,
 
@@ -404,7 +404,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Kaminzimmer',
+		'SCHEDULE_NAME' => 'Fireplace Room',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -412,8 +412,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'TWITTER' => true,
 	),
 
-	'rheinlobby' => array(
-		'DISPLAY' => 'Rheinlobby',
+	'rhine-lobby' => array(
+		'DISPLAY' => 'Rhine Lobby',
 		'STREAM' => 's5',
 		'PREVIEW' => true,
 
@@ -425,7 +425,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Rheinlobby',
+		'SCHEDULE_NAME' => 'Rhine Lobby',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -454,8 +454,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'TWITTER' => true,
 	),
 
-	'plenargeb-p27' => array(
-		'DISPLAY' => 'Plenargeb. P2.7',
+	'plenary-office' => array(
+		'DISPLAY' => 'Plenary Office',
 		'STREAM' => 's6',
 		'PREVIEW' => true,
 
@@ -467,7 +467,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Plenargeb. P2.7',
+		'SCHEDULE_NAME' => 'Plenary Office',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -503,7 +503,15 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	*
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
-	'ROOMFILTER' => ['Plenary Chamber', ' Room Bonn', ' Room Berlin', 'Kaminzimmer', 'Rheinlobby', 'Tunnel', 'Plenargeb. P2.7'],
+	'ROOMFILTER' => [
+		'Plenary Chamber',
+		'Room Bonn',
+		'Room Berlin',
+		'Fireplace Room',
+		'Rhine Lobby',
+		'Tunnel',
+		'Plenary Office',
+	],
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
