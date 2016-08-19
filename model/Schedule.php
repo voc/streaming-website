@@ -109,7 +109,7 @@ class Schedule extends ModelBase
 				$roomidx++;
 				$lastend = false;
 
-				$name = (string)$room['name'];
+				$name = trim((string)$room['name']);
 				if($this->isRoomFiltered($name))
 					continue;
 
