@@ -6,8 +6,10 @@ body.overview {
 			display: none;
 		}
 
-		&.wide {
-			float: none;
+		@media (max-width: @screen-xs-max) {
+			&.wide {
+				float: none;
+			}
 		}
 
 		&.has-preview {
