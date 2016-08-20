@@ -173,7 +173,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 2',
+		'SCHEDULE_NAME' => 'Saal 3',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -196,7 +196,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 1',
+		'SCHEDULE_NAME' => 'Saal 4',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -318,7 +318,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://programm.froscon.de/2016/schedule.xml',
+	'URL' => 'configs/conferences/froscon2016/schedule.xml',
 
         /**
          * Nur die angegebenen Räume aus dem Fahrplan beachten
