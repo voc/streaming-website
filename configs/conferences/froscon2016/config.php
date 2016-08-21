@@ -320,12 +320,12 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 */
 	'URL' => 'configs/conferences/froscon2016/schedule.xml',
 
-        /**
-         * Nur die angegebenen Räume aus dem Fahrplan beachten
-         *
-         * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-         */
-        //'ROOMFILTER' => array('S1'),
+	/**
+	 * Nur die angegebenen Räume aus dem Fahrplan beachten
+	 *
+	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 */
+	'ROOMFILTER' => array('Saal 1', 'Saal 3', 'Saal 4', 'Saal 5', 'Saal 6', 'Saal 7', 'Saal 8'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
