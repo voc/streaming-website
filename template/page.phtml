@@ -18,6 +18,10 @@
 
 		<meta name="robots" content="index,follow" />
 
+		<? if(isset($refresh)): ?>
+			<meta http-equiv="refresh" content="<?=h($refresh)?>; URL=<?=h($canonicalurl)?>" />
+		<? endif ?>
+
 		<? if($conference->hasAuthor()): ?>
 			<meta name="author" content="<?=h($conference->getAuthor())?>" />
 		<? endif ?>
