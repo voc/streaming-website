@@ -51,7 +51,7 @@ $(function() {
 // schedule-timeline
 $(function() {
 	var
-		$schedule = $('.schedule'),
+		$schedule = $('body .schedule'),
 		$now = $schedule.find('.now'),
 		scrollLock = false,
 		rewindTimeout,
@@ -156,7 +156,7 @@ $(function() {
 		clearInterval(updateInterval);
 	}
 
-	if(window.location.hash == '#schedule')
+	if(window.location.hash == '#schedule' || window.location.href.indexOf('/schedule') != -1)
 		on();
 
 	// trigger when a tab was changed

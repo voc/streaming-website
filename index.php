@@ -226,6 +226,11 @@ try {
 		require('view/multiview.php');
 	}
 
+	else if($route == 'schedule')
+	{
+		require('view/schedule.php');
+	}
+
 	else if($route == 'multiview/audio')
 	{
 		$_GET['selection'] = 'audio';
