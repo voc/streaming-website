@@ -183,6 +183,22 @@ try {
 		}
 	}
 
+	else if($route == 'multiview')
+	{
+		require('view/multiview.php');
+	}
+
+	else if($route == 'schedule')
+	{
+		require('view/schedule.php');
+	}
+
+	else if($route == 'multiview/audio')
+	{
+		$_GET['selection'] = 'audio';
+		require('view/multiview.php');
+	}
+
 	// HAS-NOT-BEGUN VIEW
 	else if(!$conference->hasBegun())
 	{
@@ -219,22 +235,6 @@ try {
 	else if($route == 'about')
 	{
 		require('view/about.php');
-	}
-
-	else if($route == 'multiview')
-	{
-		require('view/multiview.php');
-	}
-
-	else if($route == 'schedule')
-	{
-		require('view/schedule.php');
-	}
-
-	else if($route == 'multiview/audio')
-	{
-		$_GET['selection'] = 'audio';
-		require('view/multiview.php');
 	}
 
 	else if($route == 'feedback')
