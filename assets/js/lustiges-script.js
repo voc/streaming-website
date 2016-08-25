@@ -25,6 +25,14 @@ $(function() {
 		flashName: 'flashmediaelement.swf',
 		pluginPath: '../assets/mejs/',
 		enableAutosize: true,
+		success: function (mediaElement) {
+			mediaElement.addEventListener('canplay', function () {
+				// skip forward to scheduled beginning of the talk at ~ 0:14:30  (30 sec offset, if speaker starts on time)
+				if ( mediaElement.currentTime == 0 ) {
+					mediaElement.setCurrentTime(870);
+				}
+			})
+		}
 	});
 
 	$(window).on('load', function() {
