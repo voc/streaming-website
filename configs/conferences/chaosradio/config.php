@@ -73,7 +73,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Chaosradio (CR) ist eine zweistündige Talk-Sendung, die seit 1995 jeden letzten Donnerstag im Monat im Rahmen gesendet wird ',
+	'DESCRIPTION' => 'Chaosradio (CR) ist eine zweistündige Talk-Sendung, die seit 1995 jeden letzten Donnerstag im Monat gesendet wird ',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
