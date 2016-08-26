@@ -82,7 +82,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELEASES' => '',
+	'RELEASES' => 'http://video.foss4g.org/foss4g2016/videos/',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
