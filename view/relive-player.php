@@ -8,7 +8,7 @@ $talk = $relive->getTalk(intval($_GET['id']));
 
 echo $tpl->render(array(
 	'page' => 'relive-player',
-	'title' => 'Relive!',
+	'title' => 'Relive: ' . $talk['title'],
 	'talk' => $talk,
 
 	'width' => 1024,
