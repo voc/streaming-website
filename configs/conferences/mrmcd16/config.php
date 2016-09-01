@@ -120,8 +120,8 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'saal1.04)',
-            'saal1.11)',
+			'saal1.04',
+            'saal1.11',
 		),
 	),
 );
