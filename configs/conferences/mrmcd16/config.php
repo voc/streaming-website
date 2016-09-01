@@ -120,8 +120,8 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'saal1.04',
-            'saal1.11',
+			'saal104',
+            'saal111',
 		),
 	),
 );
@@ -136,7 +136,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'saal1.04' => array(
+	'saal104' => array(
 		/**
 		 * Angezeige-Name
 		 */
@@ -342,7 +342,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 			'TEXT'    => '#31C3 #hall1',
 		),
 	),
-	'saal1.11' => array(
+	'saal111' => array(
 		/**
 		 * Angezeige-Name
 		 */
@@ -577,7 +577,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('saal1.04', 'saal1.11'),
+        'ROOMFILTER' => array('saal104', 'saal111'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
