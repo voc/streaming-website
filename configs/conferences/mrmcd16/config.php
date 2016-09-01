@@ -76,7 +76,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<img src="../configs/conferences/mrmcd16/ws_mrmcd16.svg.svg" class="MRMCD16">',
+	'BANNER_HTML' => '<img src="../configs/conferences/mrmcd16/ws_mrmcd16.svg" class="MRMCD16">',
 
 	/**
 	 * Link zu den Recordings
