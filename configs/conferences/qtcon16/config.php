@@ -123,7 +123,6 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 			'b05b06',
 			'b07b08',
 			'b09',
-			'a04',
 			'a08',
 		),
 	),
