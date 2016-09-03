@@ -45,6 +45,9 @@ try {
 	}
 	else $route = '';
 
+
+	$pieces = parse_url($route);
+	$route = $pieces['path'];
 	$route = rtrim($route, '/');
 
 	// generic template
