@@ -16,7 +16,11 @@
 
 		<title><?=h($title)?> – <?=h($conference->getTitle())?> Streaming</title>
 
-		<meta name="robots" content="index,follow" />
+		<? if($conference->isPreviewEnabled()): ?>
+			<meta name="robots" content="noindex,nofollow" />
+		<? else: ?>
+			<meta name="robots" content="index,follow" />
+		<? endif ?>
 
 		<? if(isset($refresh)): ?>
 			<meta http-equiv="refresh" content="<?=h($refresh)?>; URL=<?=h($canonicalurl)?>" />

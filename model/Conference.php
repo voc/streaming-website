@@ -7,7 +7,13 @@ class Conference extends ModelBase
 	}
 
 	public function isPreviewEnabled() {
-		return $this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['SERVER_NAME']);
+		if(isset($GLOBALS['forceopen']))
+			return true;
+
+		if($this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['SERVER_NAME']))
+			return true;
+
+		return false;
 	}
 
 	public function isClosed() {
@@ -94,12 +100,19 @@ class Conference extends ModelBase
 		return $this->get('CONFERENCE.RELEASES');
 	}
 
+	public function getLink() {
+		return url_params();
+	}
+	public function getAboutLink() {
+		return 'about/'.url_params();
+	}
+
 	public function hasRelive() {
 		return $this->has('CONFERENCE.RELIVE_JSON');
 	}
 	public function getReliveUrl() {
 		if($this->has('CONFERENCE.RELIVE_JSON'))
-			return 'relive/';
+			return 'relive/'.url_params();
 
 		else
 			return null;

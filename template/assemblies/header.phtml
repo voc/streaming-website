@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="">
+			<a class="navbar-brand" href="<?=$conference->getLink()?>">
 				<i class="icon"></i>
 				<?=h($conference->getTitle())?> Streaming
 			</a>
@@ -25,7 +25,7 @@
 					<span class="fa fa-video-camera"></span>
 				</a>
 			<? endif ?>
-			<a class="form-control btn btn-default about" title="About" href="about/">
+			<a class="form-control btn btn-default about" title="About" href="<?=$conference->getAboutLink()?>">
 				<span class="fa fa-info"></span>
 			</a>
 		</div>

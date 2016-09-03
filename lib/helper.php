@@ -100,3 +100,11 @@ function days_diff_readable($date)
 
 	return "in $days days";
 }
+
+function url_params()
+{
+	if($GLOBALS['forceopen'])
+		return '?forceopen=yess';
+
+	return '';
+}

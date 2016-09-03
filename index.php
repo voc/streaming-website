@@ -50,6 +50,8 @@ try {
 	$route = $pieces['path'];
 	$route = rtrim($route, '/');
 
+	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
+
 	// generic template
 	$tpl = new PhpTemplate('template/page.phtml');
 	$tpl->set(array(
