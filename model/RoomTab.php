@@ -22,9 +22,9 @@ class RoomTab
 	{
 		$tabs = $this->getRoom()->getTabNames();
 		if($tabs[0] == $this->getTab())
-			return rawurlencode($this->getRoom()->getSlug()).'/';
+			return rawurlencode($this->getRoom()->getSlug()).'/'.url_params();
 
-		return rawurlencode($this->getRoom()->getSlug()).'/'.rawurlencode($this->getTab()).'/';
+		return rawurlencode($this->getRoom()->getSlug()).'/'.rawurlencode($this->getTab()).'/'.url_params();
 	}
 
 	public function getDisplay()

@@ -47,7 +47,7 @@ class Room extends ModelBase
 	}
 
 	public function getLink() {
-		return rawurlencode($this->getSlug()).'/';
+		return rawurlencode($this->getSlug()).'/'.url_params();
 	}
 
 	public function getStream() {

@@ -45,7 +45,12 @@ try {
 	}
 	else $route = '';
 
+
+	$pieces = parse_url($route);
+	$route = $pieces['path'];
 	$route = rtrim($route, '/');
+
+	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
 
 	// generic template
 	$tpl = new PhpTemplate('template/page.phtml');
