@@ -138,7 +138,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'mainhall',
+		'DISPLAY' => 'Main stage',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -245,7 +245,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		//'SCHEDULE_NAME' => 'mainhall',
+		'SCHEDULE_NAME' => 'Main stage',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -370,7 +370,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
 	'ROOMFILTER' => [
-		'mainhall',
+		'Main stage',
 	],
 
 	/**
