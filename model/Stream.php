@@ -118,10 +118,10 @@ class Stream
 		switch($proto)
 		{
 			case 'webm':
-				return proto().'://live.ber.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.webm';
+				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.webm';
 
 			case 'hls':
-				return proto().'://live.ber.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.m3u8';
+				return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.m3u8';
 		}
 
 		return null;
