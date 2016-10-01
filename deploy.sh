@@ -4,5 +4,5 @@ cd /srv/nginx/streaming-website
 git fetch origin
 git reset --hard origin/master
 chown -R voc:staff .
-chown -R downloader configs/conferences
+chown -R downloader configs
 EOT
