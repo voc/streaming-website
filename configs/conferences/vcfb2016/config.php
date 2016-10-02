@@ -98,7 +98,7 @@ Das VCFB findet statt im Pergamon-Palais in den Räumen des Fachbereichs Medienw
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	#'RELIVE_JSON' => 'configs/conferences/qtcon16/vod.json',
+	'RELIVE_JSON' => 'configs/conferences/vcfb16/vod.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
