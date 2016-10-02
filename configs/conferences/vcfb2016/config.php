@@ -26,7 +26,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'running',
+	//'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -364,7 +364,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'geruempel.ddns.net/schedule_voc.xml',
+	'URL' => 'http://geruempel.ddns.net/schedule_voc.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
