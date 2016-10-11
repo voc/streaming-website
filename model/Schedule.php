@@ -241,7 +241,7 @@ class Schedule extends ModelBase
 		else
 		{
 			// sort by key
-			ksort($program);
+			//ksort($program);
 		}
 
 		return $program;
