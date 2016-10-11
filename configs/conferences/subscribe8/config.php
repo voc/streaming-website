@@ -124,10 +124,10 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Konferenz' => array(
+			'grosser_sitzungssaal'
 		),
 		'Workshops' => array(
-			'grosser_sitzungssaal',
-			'kleiner_sitzungssaal'
+			'kleiner_sitzungssaal',
 			'raum8',
 			'raum4',
 			'raum9',
@@ -150,7 +150,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Großer Sitzungssaal',
+		'DISPLAY' => 'Sitzungssaal',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
