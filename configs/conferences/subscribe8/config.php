@@ -123,15 +123,15 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Vortragssäle' => array(
+		'Konferenz' => array(
+		),
+		'Workshops' => array(
 			'grosser_sitzungssaal',
 			'kleiner_sitzungssaal'
-		),
-		'Sitzungszimmer (Workshops)' => array(
-			'zimmer8',
-			'zimmer4',
-			'zimmer9',
-			'zimmer3'
+			'raum8',
+			'raum4',
+			'raum9',
+			'raum3'
 		),
 	),
 );
@@ -257,7 +257,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'TBD',
+		'SCHEDULE_NAME' => 'Großer Sitzungssaal',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -339,7 +339,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * des globalen $GLOBALS['CONFIG']['TWITTER']-Blocks deaktiviert werden
 		 **/
 		'TWITTER' => true,
-	),
+	) /*,
 	'kleiner_sitzungssaal' => array(
 		'DISPLAY' => 'Kleiner Sitzungssaal',
 
@@ -353,13 +353,13 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'TBD',
+		'SCHEDULE_NAME' => 'Kleiner Sitzungssaal',
 
 		'FEEDBACK' => true,
 		'EMBED' => true,
 		'TWITTER' => true,
 	),
-	'zimmer8' => array(
+	'raum8' => array(
 		'DISPLAY' => 'Sitzungszimmer 8',
 
 		'STREAM' => 'q8',
@@ -372,13 +372,13 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'TBD',
+		'SCHEDULE_NAME' => 'Raum8',
 
 		'FEEDBACK' => true,
 		'EMBED' => true,
 		'TWITTER' => true,
 	),
-	'zimmer4' => array(
+	'raum4' => array(
 		'DISPLAY' => 'Sitzungszimmer 4',
 
 		'STREAM' => 'q',
@@ -396,7 +396,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'FEEDBACK' => true,
 		'EMBED' => true,
 		'TWITTER' => true,
-	)
+	) */
 );
 
 /**
