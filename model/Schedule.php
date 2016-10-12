@@ -238,11 +238,6 @@ class Schedule extends ModelBase
 				return array_search($a, $roomfilter) - array_search($b, $roomfilter);
 			});
 		}
-		else
-		{
-			// sort by key
-			//ksort($program);
-		}
 
 		return $program;
 	}
