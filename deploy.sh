@@ -5,4 +5,5 @@ git fetch origin
 git reset --hard origin/master
 chown -R voc:staff .
 chown -R downloader configs
+./clear_cache
 EOT
