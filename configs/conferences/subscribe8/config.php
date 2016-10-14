@@ -86,7 +86,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://www.youtube.com/playlist?list=TBD',
+	'RELEASES' => 'https://www.youtube.com/playlist?list=PLIoqMTM7qDWr4jEWJ0WMQAdCFDSuk-ZJo',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -101,7 +101,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'configs/conferences/sub7/relive.json',
+	'RELIVE_JSON' => 'configs/conferences/subscribe8/relive.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
