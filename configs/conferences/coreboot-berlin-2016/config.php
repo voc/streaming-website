@@ -8,15 +8,15 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2016-10-14 15:30"),
+	'STARTS_AT' => strtotime("2016-10-07 10:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2016-10-16 20:00"),
+	'ENDS_AT' => strtotime("2016-10-09 18:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -26,35 +26,35 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	//'CLOSED' => false,
+	'CLOSED' => true,
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'SUBSCRIBE 8',
+	'TITLE' => 'coreboot.berlin 2016',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'Das Sendezentrum',
+	'AUTHOR' => 'c3voc',
 
 	/**
 	 * Beschreibungstext
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Die SUBSCRIBE ist die deutschsprachige Konferenz für Podcaster/innen und alle Freunde des Sendens und Empfangens.',
+	'DESCRIPTION' => 'coreboot.berlin 2016 takes place on Friday-Sunday between LinuxCon and ELC-E; two industry events bringing many Linux and embedded experts to the city. We hope this to enable especially rewarding exchanges at the conference.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'Podlove, Podcaster, Workshop, München, Video, Media, Streaming',
+	'KEYWORDS' => 'coreboot, linux, berlin',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -62,8 +62,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="http://das-sendezentrum.de">Sendezentrum</a> &amp;
-		<a href="https://c3voc.de">C3VOC</a>
+		by <a href="https://c3voc.de">C3VOC</a>
 	',
 
 	/**
@@ -76,17 +75,13 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '
-		<div class="container">
-			<h2>München, 14. - 16. Oktober 2016 – #subscribe8</h2>
-		</div>
-	',
+//	 'BANNER_HTML' => '<div class="logo"></div>',
 
 	/**
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://www.youtube.com/playlist?list=PLIoqMTM7qDWr4jEWJ0WMQAdCFDSuk-ZJo',
+	//'RELEASES' => 'http://video.foss4g.org/foss4g2016/videos/',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -101,7 +96,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/subscribe8/relive.json',
+	//'RELIVE_JSON' => 'configs/conferences/coreboot-berlin-2016/vod.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -123,15 +118,8 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Konferenz' => array(
-			'grosser_sitzungssaal'
-		),
-		'Workshops' => array(
-			'kleiner_sitzungssaal',
-			'raum8',
-			'raum4',
-			'raum9',
-			'raum3'
+		'Rooms' => array(
+			'talks',
 		),
 	),
 );
@@ -146,18 +134,18 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'grosser_sitzungssaal' => array(
+	'talks' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Sitzungssaal',
+		'DISPLAY' => 'Talks',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's5',
+		'STREAM' => 'q2',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -257,7 +245,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Großer Sitzungssaal',
+		'SCHEDULE_NAME' => 'Medientheater',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -268,7 +256,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Ebenso können alle Feedback-Funktionialitäten durch auskommentieren
 		 * des globalen $GLOBALS['CONFIG']['FEEDBACK']-Blocks deaktiviert werden
 		 */
-		'FEEDBACK' => true,
+		'FEEDBACK' => false,
 
 		/**
 		 * Subtitles-Player aktivieren (boolean)
@@ -319,10 +307,10 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		* Der globale $GLOBALS['CONFIG']['IRC']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-		//'IRC_CONFIG' => array(
-		//	'DISPLAY' => '#31C3-hall-1 @ hackint',
-		//	'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-1',
-		//),
+		// 'IRC_CONFIG' => array(
+		// 	'DISPLAY' => '#31C3-hall-1 @ hackint',
+		// 	'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-1',
+		// ),
 
 		/**
 		 * Twitter-Link aktivieren (boolean)
@@ -339,64 +327,19 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * des globalen $GLOBALS['CONFIG']['TWITTER']-Blocks deaktiviert werden
 		 **/
 		'TWITTER' => true,
-	) /*,
-	'kleiner_sitzungssaal' => array(
-		'DISPLAY' => 'Kleiner Sitzungssaal',
 
-		'STREAM' => 's2',
-		'PREVIEW' => true,
-
-		'TRANSLATION' => false,
-		'STEREO' => false,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'AUDIO' => true,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Kleiner Sitzungssaal',
-
-		'FEEDBACK' => true,
-		'EMBED' => true,
-		'TWITTER' => true,
+		/**
+		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
+		* globalen $GLOBALS['CONFIG']['TWITTER'] Block überschrieben werden.
+		*
+		* Der globale $GLOBALS['CONFIG']['TWITTER']-Block muss trotzdem existieren,
+		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
+		*/
+		// 'TWITTER_CONFIG' => array(
+		// 	'DISPLAY' => '#fossgis2016 @ twitter',
+		// 	'TEXT'    => '#fossgis2016',
+		// ),
 	),
-	'raum8' => array(
-		'DISPLAY' => 'Sitzungszimmer 8',
-
-		'STREAM' => 'q8',
-		'PREVIEW' => true,
-
-		'TRANSLATION' => false,
-		'STEREO' => false,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'AUDIO' => true,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Raum8',
-
-		'FEEDBACK' => true,
-		'EMBED' => true,
-		'TWITTER' => true,
-	),
-	'raum4' => array(
-		'DISPLAY' => 'Sitzungszimmer 4',
-
-		'STREAM' => 'q',
-		'PREVIEW' => true,
-
-		'TRANSLATION' => false,
-		'STEREO' => false,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'AUDIO' => true,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'TBD',
-
-		'FEEDBACK' => true,
-		'EMBED' => true,
-		'TWITTER' => true,
-	) */
 );
 
 /**
@@ -407,6 +350,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
  */
 $GLOBALS['CONFIG']['EMBED'] = true;
 
+/*
 /**
  * Globale Konfiguration der Twitter-Links.
  *
@@ -424,7 +368,7 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#subscribe8 @ twitter',
+	'DISPLAY' => '#corebootberlin twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -432,41 +376,5 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#subscribe8',
-);
-
-/**
- * Konfigurationen zum Konferenz-Fahrplan
- * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
- */
-$GLOBALS['CONFIG']['SCHEDULE'] = array(
-	/**
-	 * URL zum Fahrplan-XML
-	 *
-	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
-	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
-	 * externer HTTP-Cache vorgeschaltet werden.
-	 */
-	'URL' => 'configs/conferences/subscribe8/schedule.xml',
-
-	/**
-	 * Nur die angegebenen Räume aus dem Fahrplan beachten
-	 *
-	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-	 */
-	//'ROOMFILTER' => array('MOSAIK', 'ALPHABET'),
-
-	/**
-	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-	 */
-	'SCALE' => 7,
-
-	/**
-	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-	 *
-	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
-	 */
-	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2015-03-11') - strtotime(/* Today */ '2015-03-03'),
-	'SIMULATE_OFFSET' => 0,
+	'TEXT' => '#corebootberlin',
 );

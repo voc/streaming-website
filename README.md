@@ -66,19 +66,8 @@ der jeweiligen Konferenzseite bestimmen, im Folgendem am :
 
 
 ## Deployment (auf der VOC Infrastruktur)
-``` bash
-ssh voc@live.ber
-cd /srv/nginx/streaming-website
-git fetch origin
-git checkout <branch>
 
-sudo sh -c 'rm -rf  /srv/nginx/cache/streaming_fcgi/*'
-exit
-
-ssh voc@live.dus
-sudo sh -c 'rm /srv/nginx/cache/streaming_website/static/* /srv/nginx/cache/streaming_website/pages/*'
-exit
-```
+see [deploy.sh](deploy.sh)
 
 
 ## JSON-API
