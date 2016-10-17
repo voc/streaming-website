@@ -47,7 +47,7 @@ try {
 
 
 	$pieces = parse_url($route);
-	$route = $pieces['path'];
+	$route = isset($pieces['path']) ? $pieces['path'] : '';
 	$route = rtrim($route, '/');
 
 	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
