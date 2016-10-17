@@ -69,7 +69,7 @@ class Conferences extends ModelBase
 		$conf = new Conference();
 		$info = [
 			'slug' => $mandator,
-			'link' => forceslash($mandator),
+			'link' => forceslash($mandator).url_params(),
 			'active' => !$conf->isClosed(),
 			'title' => $conf->getTitle(),
 			'description' => $conf->getDescription(),
