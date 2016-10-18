@@ -1,0 +1,64 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+@grey:  #fafafa;
+@white: #FFFFFF;
+@dsred: #ff4141;
+@dstext: #480202;
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @white;
+@text-color:            black;
+
+@link-color:            @dsred;
+@link-hover-color:      darken(@dsred, 20%);
+
+@navbar-default-color:  @dsred;
+@navbar-default-bg:     @grey;
+
+@navbar-default-link-color:           @dsred;
+@navbar-default-link-hover-color:     darken(@dsred, 20%);
+
+@panel-default-border:  @grey;
+
+
+.nav-tabs > li > a {
+	background-color: lighten(@dsred, 33%);
+	color: darken(@dsred, 20%);
+	
+}
+
+nav .navbar-brand .icon {
+    background-image: url("/assets/img/tv-inverse.png");
+}
+
+
+body {
+	color: @dstext;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+@font-face {
+	font-family: 'BigDots';
+	src: url(BigDots.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1,h2,h3, .panel-body a {
+  font-family: 'BigDots';
+}
+.panel-body a {
+  font-weight: bold;
+}
+
+img.DS2016 {
+    	position: fixed;
+    	top: -170px;
+    	left: -170px;
+	height: 712px;
+   	width: 796px;
+	z-index: -100;
+}
