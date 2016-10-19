@@ -62,7 +62,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://www.amnesty.de/">Amnesty International</a>, <a href="http://humanistische-union.de/">Humanistische Union</a> &amp <a href="https://ccc.de">Chaos Computer Club e.V</a> &amp;',
+		by <a href="https://www.amnesty.de/">Amnesty International</a>, <a href="http://humanistische-union.de/">Humanistische Union</a> &amp <a href="https://ccc.de">Chaos Computer Club e.V</a>',
 
 	/**
 	 * HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)
