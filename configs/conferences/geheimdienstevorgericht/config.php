@@ -134,7 +134,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's5',
+		'STREAM' => 's1',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
