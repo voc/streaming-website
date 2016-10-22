@@ -74,10 +74,8 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => "
-		<h2>Geheimdienste vor Gericht</h2>
-		<h3>eine Volksbeschwerde</h3>
-	",
+//	'BANNER_HTML' => "<div class='col-xs-12'><img src='../configs/conferences/geheimdienstevorgericht/logo.png'></img></div>",
+	'BANNER_HTML' => "<h1>G_H_IMDI_NST_ VOR G_RICHT</h1>",
 
 	/**
 	 * Link zu den Recordings
@@ -93,7 +91,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	// 'RELIVE_JSON' => 'configs/conferences/chaosradio/vod.json',
+	'RELIVE_JSON' => 'configs/conferences/geheimdienstevorgericht/vod.json',
 );
 
 /**
