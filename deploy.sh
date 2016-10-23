@@ -6,7 +6,7 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
-ssh voc@lb.dus.c3voc.de 'sudo sh' << EOT
+ssh -A voc@lb.dus.c3voc.de 'sudo sh' << EOT
 cd /srv/nginx/streaming-website
 git fetch origin
 git reset --hard origin/master
