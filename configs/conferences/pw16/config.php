@@ -33,14 +33,14 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Privacy Week',
+	'TITLE' => 'Privacy Week Vienna',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	//'AUTHOR' => 'Jugend hackt 2016',
+	'AUTHOR' => 'Privacy Week Vienna 2016',
 
 	/**
 	 * Beschreibungstext
@@ -84,7 +84,7 @@ Deshalb steht die letzte Oktoberwoche 2016 ganz im Zeichen der Privatsphäre. Vo
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	//'BANNER_HTML' => '<img src="../configs/conferences/jh16/Banner_JH-Nord-2016.svg" class="jhberlin">',
+	'BANNER_HTML' => '<img src="../configs/conferences/pw16/logo3.png" class="jhberlin">',
 
 	/**
 	 * Link zu den Recordings
