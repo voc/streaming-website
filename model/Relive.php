@@ -15,6 +15,9 @@ class Relive extends ModelBase
 
 	public function getTalks()
 	{
+		if(!file_exists($this->getJsonUrl()))
+			return array();
+
 		$talks = file_get_contents($this->getJsonUrl());
 		$talks = (array)json_decode($talks, true);
 
