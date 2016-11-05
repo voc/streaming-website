@@ -1,83 +1,17 @@
 @import "../../../assets/css/_structure.less";
 
 // conference specific styles here
-@grey:  #fafafa;
-@white: #FFFFFF;
-@dsred: black;
-@dstext: #480202;
 
-// often configured values (and their defaults):
-//
-@brand-primary:         @white;
-@text-color:            #333;
+@brand-primary:         #aaa;
 
-@link-color:            #E6007F;
-@link-hover-color:      darken(#E6007F, 20%);
-
-@navbar-default-color:  @dsred;
-@navbar-default-bg:     @grey;
-
-@navbar-default-link-color:           @dsred;
-@navbar-default-link-hover-color:     darken(@dsred, 20%);
-
-@panel-default-border:  #000;
-
-
-.nav-tabs > li > a {
-	background-color: lighten(@dsred, 33%);
-	color: darken(@dsred, 20%);
-	
+img.jhnord {
+	width: 400px;
+	position: absolute;
+	bottom: 30px;
+	left: 10px;
+	z-index: -100;
 }
 
-nav .navbar-brand .icon {
-    background-image: url("/assets/img/tv-inverse.png");
+img.iconjh {
+	margin-top: 10px;
 }
-
-
-body {
-	color: @dstext;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-
-.panel-body {
-  border: none;
-  padding-left: 0;
-}
-
-.panel-default {
-  border: none;
-  padding-left: 0;
-}
-
-.banner {
-  background-color: #E6007F;
-  color: #000;
-  text-align: center;
-  padding: 5px;
-  font-weight: bold;
-}
-
-.panel-body .recordings a {
-  background-color: #E6007F;
-  color: #000;
-}
-
-.banner h1 {
-  font-weight: bold;
-}
-
-.recordings {
-  text-align: left;
-}
-
-body.overview .recordings a {
-  text-align: left;
-}
-
-
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
-}
-
