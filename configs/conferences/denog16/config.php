@@ -343,7 +343,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'configs/schedule.xml',
+	'URL' => 'http://data.testi.ber.c3voc.de/schedule/denog16/schedule-darmstadtium.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
