@@ -74,7 +74,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 //	'BANNER_HTML' => "<div class='col-xs-12'><img src='../configs/conferences/geheimdienstevorgericht/logo.png'></img></div>",
-	'BANNER_HTML' => "<h1>DENOG8 23./24.11.2016</h1>",
+	'BANNER_HTML' => "<h1 style=\"text-align: center;\">DENOG8 23./24.11.2016</h1>",
 
 	/**
 	 * Link zu den Recordings
