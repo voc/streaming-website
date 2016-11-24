@@ -26,5 +26,7 @@ git fetch origin
 git reset --hard origin/master
 chown -R voc:staff .
 chown -R downloader configs
+chmod +x configs/download.sh
+chmod +x configs/conferences/*/download.sh
 ./clear_cache
 EOT
