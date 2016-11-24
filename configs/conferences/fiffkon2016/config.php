@@ -75,7 +75,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<img src="../configs/conferences/fiffkon/logo.png" class="FIfFKon">',
+	'BANNER_HTML' => '<img src="../configs/conferences/fiffkon16/logo.png" class="FIfFKon">',
 
 	/**
 	 * Link zu den Recordings
@@ -362,14 +362,14 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/DS2016/schedule.xml',
+	'URL' => 'configs/conferences/fiffkon16/schedule.xml',
 
         /**
          * Nur die angegebenen Räume aus dem Fahrplan beachten
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('Experimentierfeld', 'Kino'),
+        'ROOMFILTER' => array('Hoersaal'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
