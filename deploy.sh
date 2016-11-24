@@ -1,5 +1,15 @@
 #!/bin/sh
 
+if [ `git rev-parse --verify origin/master` != `git rev-parse --verify master` ]; then
+	echo "You have commits on the master branch not pushed to origin yet. They would not be deployed. aborting"
+	exit 2
+fi
+
+if git diff --exit-code >/dev/null || git diff --cached --exit-code >/dev/null; then
+	echo "You have uncomitted changes. They would not be deployed. aborting"
+	exit 2
+fi
+
 command -v find >/dev/null 2>&1 || { echo >&2 "I require find but it's not installed.  Aborting."; exit 1; }
 command -v xargs >/dev/null 2>&1 || { echo >&2 "I require xargs but it's not installed.  Aborting."; exit 1; }
 command -v php >/dev/null 2>&1 || { echo >&2 "I require php but it's not installed.  Aborting."; exit 1; }
