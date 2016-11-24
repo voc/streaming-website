@@ -75,7 +75,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	/** 'BANNER_HTML' => '<img src="../configs/conferences/fiffkon2016/logo.png" class="FIfFKon">', **/
+	/** 'BANNER_HTML' => '<img src="../configs/conferences/fiffkon16/logo.png" class="FIfFKon">', **/
 
 	/**
 	 * Link zu den Recordings
