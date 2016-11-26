@@ -1,10 +1,43 @@
 @import "../../../assets/css/_structure.less";
 
+@font-face {
+    font-family: SourceSansPro;
+    src: url('fonts/SourceSansPro-Regular.otf');
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url('fonts/SourceSansPro-Bold.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url('fonts/SourceSansPro-Italic.otf');
+    font-style: italic;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url('fonts/SourceSansPro-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url('fonts/SourceSansPro-Light.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url('fonts/SourceSansPro-LightItalic.otf');
+    font-style: italic;
+    font-weight: 300;
+}
+
 // conference specific styles here
 @grey:  #fafafa;
 @white: #FFFFFF;
 @dsred: #ff4141;
 @dstext: #480202;
+@black: #000000;
 
 // often configured values (and their defaults):
 //
@@ -15,17 +48,23 @@
 @link-hover-color:      darken(@dsred, 20%);
 
 @navbar-default-color:  @dsred;
-@navbar-default-bg:     @grey;
+@navbar-default-bg:     @black;
 
 @navbar-default-link-color:           @dsred;
 @navbar-default-link-hover-color:     darken(@dsred, 20%);
 
 @panel-default-border:  @grey;
 
+.tab-pane { background-color: @black; }
+
+.tab-pane h3 { color: @dsred; };
+h1,h2,h3 { color: @white; };
+
+.desktop-player-hint h3 {}
 
 .nav-tabs > li > a {
-	background-color: lighten(@dsred, 33%);
-	color: darken(@dsred, 20%);
+	background-color: darken(@dsred, 33%);
+	color: @white
 	
 }
 
@@ -37,7 +76,8 @@ nav .navbar-brand .icon {
 body {
 	color: @dstext;
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	background-image: url("/configs/conferences/fiffkon16/logo.png")
+	background-image: url("/configs/conferences/fiffkon16/logo.png");
+	background-size: cover;
 }
 
 
@@ -46,10 +86,7 @@ body {
 	font-style: normal;
 }
 
-h1,h2,h3, .panel-body a {
-  font-family: 'BigDots';
-}
 .panel-body a {
-  font-weight: bold;
+  font-weight: lighter;
 }
 
