@@ -174,6 +174,10 @@ class Room extends ModelBase
 		return $this->get('ROOMS.'.$this->getSlug().'.MUSIC');
 	}
 
+	public function hasDash() {
+		return $this->get('ROOMS.'.$this->getSlug().'.DASH');
+	}
+
 	public function hasTranslation() {
 		return $this->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
 	}
@@ -196,6 +200,9 @@ class Room extends ModelBase
 		if($this->hasMusic())
 			$selections[] = 'music';
 
+		if($this->hasDash())
+			$selections[] = 'dash';
+
 		return $selections;
 	}
 
@@ -213,6 +220,9 @@ class Room extends ModelBase
 
 		if($this->hasMusic())
 			$tabs[] = 'music';
+
+		if($this->hasDash())
+			$tabs[] = 'dash';
 
 		return $tabs;
 	}

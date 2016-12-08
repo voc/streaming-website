@@ -200,6 +200,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * als Default-Stream angenommen.
 		 */
 		'HD_VIDEO' => true,
+		'DASH' => true,
 
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
@@ -361,6 +362,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
+		'DASH' => true,
 		'AUDIO' => true,
 		'SLIDES' => true,
 		'MUSIC' => false,
@@ -391,6 +393,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
+		'DASH' => true,
 		'AUDIO' => true,
 		'SLIDES' => true,
 		'MUSIC' => false,
@@ -420,6 +423,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
+		'DASH' => true,
 		'AUDIO' => true,
 		'SLIDES' => true,
 		'MUSIC' => false,
@@ -464,6 +468,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
+		'DASH' => true,
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,

@@ -35,6 +35,9 @@ class RoomTab
 			case 'music':
 				return 'Radio';
 
+			case 'dash':
+				return 'DASH (beta)';
+
 			default:
 				return ucfirst($tab);
 		}

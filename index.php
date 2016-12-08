@@ -267,7 +267,7 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^([^/]+)/(sd|audio|slides)$@', $route, $m))
+	else if(preg_match('@^([^/]+)/(sd|audio|slides|dash)$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
@@ -277,7 +277,7 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^([^/]+)/(sd|audio|slides)/translated$@', $route, $m))
+	else if(preg_match('@^([^/]+)/(sd|audio|slides|dash)/translated$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
