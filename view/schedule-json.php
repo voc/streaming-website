@@ -1,6 +1,6 @@
 <?php
 
-$schedule = new Schedule();
+$schedule = $conference->getSchedule();
 if(!$schedule->isEnabled())
 	throw new NotFoundException('Schedule is disabled');
 

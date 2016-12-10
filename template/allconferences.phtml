@@ -6,7 +6,7 @@
 
 	<div class="row clearfix">
 		<? $count = count($conferences) ?>
-		<? foreach($conferences as $idx => $info): ?>
+		<? foreach($conferences as $idx => $conference): ?>
 			<?
 				// when we have more then 3 conferences, all but the last 3 will be displayed with 1/3 width
 				if($count - $idx <= ($count % 3))
@@ -24,8 +24,8 @@
 			">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<a href="<?=h($info['link'])?>"><?=h($info['title'])?></a>
-						<p><?=h($info['description'])?></p>
+						<a href="<?=h($conference->getLink())?>"><?=h($conference->getTitle())?></a>
+						<p><?=h($conference->getDescription())?></p>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 <? include("$assemblies/banner.phtml") ?>
 
-<div class="container">
+<div class="container" data-schedule-url="<?=h($conference->getScheduleJsonUrl())?>">
 	<div class="row headline">
 		<div class="col-xs-12">
 			<h1><?=h($title)?></h1>

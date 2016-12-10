@@ -15,8 +15,8 @@
 				</a>
 			<? endif ?>
 
-			<? if(!$conference->hasEnded() && isset($feedback) && $feedback->isEnabled()): ?>
-				<a class="form-control btn btn-default feedback" title="Feedback" href="<?=h($feedback->getUrl())?>">
+			<? if(!$conference->hasEnded() && $conference->hasFeedback()): ?>
+				<a class="form-control btn btn-default feedback" title="Feedback" href="<?=h($conference->getFeedbackUrl())?>">
 					<span class="fa fa-bullhorn"></span>
 				</a>
 			<? endif ?>

@@ -59,7 +59,8 @@ try {
 		'route' => $route,
 		'canonicalurl' => forceslash(baseurl()).forceslash($route),
 		'assemblies' => 'template/assemblies/',
-		'assets' => 'assets/',
+		'assets' => forceslash('assets'),
+		'conference_assets' => '/',
 
 		'conference' => new GenericConference(),
 	));
@@ -113,7 +114,7 @@ try {
 			//   redirect
 
 			$clients = Conferences::getActiveConferences();
-			header('Location: '.forceslash( baseurl() . $clients[0]['link'] ));
+			header('Location: '.joinpath([baseurl(), $clients[0]->getSlug()]));
 			exit;
 		}
 		else
@@ -132,8 +133,9 @@ try {
 		require('view/404.php');
 		exit;
 	}
-
-	Conferences::load($mandator);
+	else {
+		// fallthrough through to the main mandator-based routes
+	}
 }
 catch(Exception $e)
 {
@@ -144,20 +146,19 @@ catch(Exception $e)
 
 
 // PER-CONFERENCE CODE
-$GLOBALS['MANDATOR'] = $mandator;
-$conference = new Conference();
+$conference = Conferences::getConference($mandator);
 
 // update template information
 $tpl->set(array(
 	'baseurl' => forceslash(baseurl()),
 	'route' => $route,
-	'canonicalurl' => forceslash(baseurl()).forceslash($route),
-	'assets' => '../assets/',
+	'canonicalurl' => joinpath([baseurl(), $mandator, $route]),
+	'conference_assets' => forceslash($mandator),
 
 	'conference' => $conference,
-	'feedback' => new Feedback(),
-	'schedule' => new Schedule(),
-	'subtitles' => new Subtitles(),
+	'feedback' => $conference->getFeedback(),
+	'schedule' => $conference->getSchedule(),
+	'subtitles' => $conference->getSubtitles(),
 ));
 
 ob_start();
