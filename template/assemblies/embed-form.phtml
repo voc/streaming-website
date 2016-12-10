@@ -10,11 +10,11 @@
 			<select id="size" class="form-control">
 				<option value="512,288">512×288</option>
 				<option value="800,450">800×450</option>
-				<option <? if($stream->getSelection() == 'sd'): ?>selected<? endif ?> value="1024,576">1024×576</option>
+				<option selected value="1024,576">1024×576</option>
 
 				<? if($stream->getSelection() == 'hd'): ?>
 					<option value="1280,720">1280×720</option>
-					<option selected value="1920,1080">1920×1080</option>
+					<option value="1920,1080">1920×1080</option>
 				<? endif ?>
 			</select>
 
