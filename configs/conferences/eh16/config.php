@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['CONFIG']['CONFERENCE'] = array(
+$CONFIG['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
 	 * mit einem Text der Art "hat noch nicht angefangen" angezeigt.
@@ -96,12 +96,12 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 /**
  * Konfiguration der Stream-Übersicht auf der Startseite
  */
-$GLOBALS['CONFIG']['OVERVIEW'] = array(
+$CONFIG['OVERVIEW'] = array(
 	/**
 	 * Abschnitte aud der Startseite und darunter aufgeführte Räume
 	 * Es können beliebig neue Gruppen und Räume hinzugefügt werden
 	 *
-	 * Die Räume müssen in $GLOBALS['CONFIG']['ROOMS'] konfiguriert werden,
+	 * Die Räume müssen in $CONFIG['ROOMS'] konfiguriert werden,
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
@@ -117,10 +117,10 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 /**
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
-$GLOBALS['CONFIG']['ROOMS'] = array(
+$CONFIG['ROOMS'] = array(
 	/**
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
-	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
+	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'vortrag' => array(
 		/**
@@ -225,7 +225,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * findet keine Darstellung statt.
 		 *
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
-		 * des globalen $GLOBALS['CONFIG']['SCHEDULE']-Blocks deaktiviert werden
+		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
 		'SCHEDULE' => true,
 
@@ -242,7 +242,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * taucht der Raum auch im globalen Feedback-Formular nicht auf.
 		 *
 		 * Ebenso können alle Feedback-Funktionialitäten durch auskommentieren
-		 * des globalen $GLOBALS['CONFIG']['FEEDBACK']-Blocks deaktiviert werden
+		 * des globalen $CONFIG['FEEDBACK']-Blocks deaktiviert werden
 		 */
 		'FEEDBACK' => true,
 
@@ -253,7 +253,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * wird der Subtitles-Button und die damit verbundenen Funktionen deaktiviert.
 		 *
 		 * Ebenso können alle Subtitles-Funktionialitäten durch auskommentieren
-		 * des globalen $GLOBALS['CONFIG']['SUBTITLES']-Blocks deaktiviert werden
+		 * des globalen $CONFIG['SUBTITLES']-Blocks deaktiviert werden
 		 */
 		'SUBTITLES' => false,
 
@@ -267,7 +267,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * wird kein Embed-Tab angeboten und die URL zum Einbetten existiert nicht.
 		 *
 		 * Ebenso können alle Embedding-Funktionialitäten durch auskommentieren
-		 * des globalen $GLOBALS['CONFIG']['EMBED']-Blocks deaktiviert werden
+		 * des globalen $CONFIG['EMBED']-Blocks deaktiviert werden
 		 */
 		'EMBED' => true,
 
@@ -284,15 +284,15 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * wird kein IRC-Link angezeigt
 		 *
 		 * Ebenso können alle IRC-Links durch auskommentieren
-		 * des globalen $GLOBALS['CONFIG']['IRC']-Blocks deaktiviert werden
+		 * des globalen $CONFIG['IRC']-Blocks deaktiviert werden
 		 */
 		'IRC' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
-		* globalen $GLOBALS['CONFIG']['IRC'] Block überschrieben werden.
+		* globalen $CONFIG['IRC'] Block überschrieben werden.
 		*
-		* Der globale $GLOBALS['CONFIG']['IRC']-Block muss trotzdem existieren,
+		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
 		//'IRC_CONFIG' => array(
@@ -312,15 +312,15 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * wird kein Twitter-Link angezeigt
 		 *
 		 * Ebenso können alle Twitter-Links durch auskommentieren
-		 * des globalen $GLOBALS['CONFIG']['TWITTER']-Blocks deaktiviert werden
+		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
 		 **/
 		'TWITTER' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
-		* globalen $GLOBALS['CONFIG']['TWITTER'] Block überschrieben werden.
+		* globalen $CONFIG['TWITTER'] Block überschrieben werden.
 		*
-		* Der globale $GLOBALS['CONFIG']['TWITTER']-Block muss trotzdem existieren,
+		* Der globale $CONFIG['TWITTER']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
 		//'TWITTER_CONFIG' => array(
@@ -357,7 +357,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-$GLOBALS['CONFIG']['SCHEDULE'] = array(
+$CONFIG['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -395,7 +395,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
  *
  * Wird dieser Block auskommentiert, wird das gesamte Feedback-System deaktiviert
  */
-$GLOBALS['CONFIG']['FEEDBACK'] = array(
+$CONFIG['FEEDBACK'] = array(
 	/**
 	 * DSN zum abspeichern der eingegebenen Daten
 	 * die Datenbank muss eine Tabelle enthaltem, die dem in `lib/schema.sql` angegebenen
@@ -425,7 +425,7 @@ $GLOBALS['CONFIG']['FEEDBACK'] = array(
  * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
  * Embedding-Funktionen deaktiviert.
  */
-$GLOBALS['CONFIG']['EMBED'] = true;
+$CONFIG['EMBED'] = true;
 
 /**
  * Konfiguration des L2S2-Systems
@@ -433,7 +433,7 @@ $GLOBALS['CONFIG']['EMBED'] = true;
  *
  * Wird dieser Block auskommentiert, wird das gesamte Subtitle-System deaktiviert
  */
-//$GLOBALS['CONFIG']['SUBTITLES'] = array(
+//$CONFIG['SUBTITLES'] = array(
 //	/**
 //	 * URL des L2S2-Servers
 //	 */
@@ -447,9 +447,9 @@ $GLOBALS['CONFIG']['EMBED'] = true;
  * IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
  * existieren sein. ggf. einfach auf true setzen:
  *
- *   $GLOBALS['CONFIG']['IRC'] = true
+ *   $CONFIG['IRC'] = true
  */
-$GLOBALS['CONFIG']['IRC'] = array(
+$CONFIG['IRC'] = array(
 	/**
 	 * Anzeigetext für die IRC-Links.
 	 *
@@ -478,9 +478,9 @@ $GLOBALS['CONFIG']['IRC'] = array(
  * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
  * existieren sein. ggf. einfach auf true setzen:
  *
- *   $GLOBALS['CONFIG']['TWITTER'] = true
+ *   $CONFIG['TWITTER'] = true
  */
-$GLOBALS['CONFIG']['TWITTER'] = array(
+$CONFIG['TWITTER'] = array(
 	/**
 	 * Anzeigetext für die Twitter-Links.
 	 *
@@ -498,3 +498,6 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
 	 */
 	'TEXT' => '#eh16 #%s',
 );
+
+
+return $CONFIG;
