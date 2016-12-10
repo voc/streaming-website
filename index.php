@@ -214,6 +214,11 @@ try {
 		require('view/multiview.php');
 	}
 
+	else if($route == 'about')
+	{
+		require('view/about.php');
+	}
+
 	// HAS-NOT-BEGUN VIEW
 	else if(!$conference->hasBegun())
 	{
@@ -245,11 +250,6 @@ try {
 	else if($route == '')
 	{
 		require('view/overview.php');
-	}
-
-	else if($route == 'about')
-	{
-		require('view/about.php');
 	}
 
 	else if($route == 'feedback')
