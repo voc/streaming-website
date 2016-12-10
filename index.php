@@ -140,7 +140,16 @@ try {
 catch(Exception $e)
 {
 	ob_clean();
-	require('view/500.php');
+	try {
+		require('view/500.php');
+		exit;
+	}
+	catch(Exception $e) {
+		header("HTTP/1.1 500 Internal Server Error");
+		header("Content-Type: text/plain");
+		print_r($e);
+		exit;
+	}
 }
 
 
@@ -205,6 +214,11 @@ try {
 		require('view/multiview.php');
 	}
 
+	else if($route == 'about')
+	{
+		require('view/about.php');
+	}
+
 	// HAS-NOT-BEGUN VIEW
 	else if(!$conference->hasBegun())
 	{
@@ -236,11 +250,6 @@ try {
 	else if($route == '')
 	{
 		require('view/overview.php');
-	}
-
-	else if($route == 'about')
-	{
-		require('view/about.php');
 	}
 
 	else if($route == 'feedback')

@@ -34,22 +34,22 @@ class Relive
 
 		$mapping = $this->getScheduleToRoomMapping();
 
-                usort($talks, function($a, $b) {
-                        // first, make sure that live talks are always on top
-                        if($a['status'] == 'live' && $b['status'] != 'live') {
-                                return -1;
-                        } else if($a['status'] != 'live' && $b['status'] == 'live') {
-                                return 1;
-                        } else if($a['status'] == 'live' && $b['status'] == 'live') {
-                                // sort live talks by room
+		usort($talks, function($a, $b) {
+			// first, make sure that live talks are always on top
+			if($a['status'] == 'live' && $b['status'] != 'live') {
+				return -1;
+			}
+			else if($a['status'] != 'live' && $b['status'] == 'live') {
+				return 1;
+			}
+			else if($a['status'] == 'live' && $b['status'] == 'live') {
+				// sort live talks by room
+				return strcmp($a['room'], $b['room']);
+			}
 
-                                return strcmp($a['room'], $b['room']);
-                        }
-
-                        // all other talks get sorted by their name
-
-                        return strcmp($a['title'], $b['title']);
-                });
+			// all other talks get sorted by their name
+			return strcmp($a['title'], $b['title']);
+		});
 
 		$talks_by_id = array();
 		foreach ($talks as $talk)
