@@ -1,34 +1,11 @@
-<div class="container about">
-	<? include("$assemblies/countdown.phtml") ?>
+<? if($last): ?>
 
-	<? if($last): ?>
+	<? $conference = $last; include('closed.phtml'); ?>
 
-		<div class="well">
-			<? // FIXME when $last would be a Conference object, this code could be shared with clodes.phtml ?>
-			<h1><?=h($last['title'])?> is over!</h1>
+<? else: ?>
 
-			<? if($last['releases']): ?>
-				Recordings will be released at <a href="<?=h($last['releases'])?>"><?=h($last['releases'])?></a>.
-			<? endif ?>
+	<p>
+		You can watch most of our Recordings at <a href="https://media.ccc.de/">media.ccc.de</a>.
+	</p>
 
-			<? if($last['relive']): ?>
-				<? if($last['releases']): ?>
-					Until all recordings are released, <a href="<?=h($last['relive'])?>">ReLive</a> remains available.
-				<? else: ?>
-					You can still watch stream dumps <a href="<?=h($last['relive'])?>">here</a>.
-				<? endif ?>
-			<? endif ?>
-		</div>
-
-	<? else: ?>
-
-		<p>
-			You can watch most of our Recordings at <a href="<?=h($conference->getReleasesUrl())?>"><?=h($conference->getReleasesUrl())?></a>.
-		</p>
-
-	<? endif ?>
-
-	<br><br><br>
-
-	<? include("$assemblies/upcoming.phtml") ?>
-</div>
+<? endif ?>
