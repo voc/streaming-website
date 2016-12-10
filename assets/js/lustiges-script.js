@@ -193,7 +193,7 @@ $(function() {
 
 	function fetchProgram() {
 		$.ajax({
-			url: 'schedule.json',
+			url: $('div[data-schedule-url]').data('schedule-url'),
 			dataType: 'json',
 			success: function(data) {
 				scheduleData = data;

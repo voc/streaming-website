@@ -1,14 +1,25 @@
 <?php
 
-class Subtitles extends ModelBase
+class Subtitles
 {
+	private $conference;
+
+	public function __construct(Conference $conference)
+	{
+		$this->conference = $conference;
+	}
+
+	public function getConference() {
+		return $this->conference;
+	}
+
 	public function isEnabled() {
-		return $this->has('SUBTITLES');
+		return $this->getConference()->has('SUBTITLES');
 	}
 
 	public function getEnabledRooms($slug) {
 		$rooms = [];
-		foreach(Room::rooms() as $room)
+		foreach($this->getConference()->getOverview()->getRooms() as $room)
 		{
 			if($room->hasSubtitles())
 				$rooms[] = $room;
@@ -18,9 +29,9 @@ class Subtitles extends ModelBase
 	}
 
 	public function getPrimusURL() {
-		return $this->get('SUBTITLES.PRIMUS_URL');
+		return $this->getConference()->get('SUBTITLES.PRIMUS_URL');
 	}
 	public function getFrontendURL() {
-		return $this->get('SUBTITLES.FRONTEND_URL');
+		return $this->getConference()->get('SUBTITLES.FRONTEND_URL');
 	}
 }

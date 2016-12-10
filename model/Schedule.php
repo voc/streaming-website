@@ -1,26 +1,37 @@
 <?php
 
-class Schedule extends ModelBase
+class Schedule
 {
+	private $conference;
+
+	public function __construct($conference)
+	{
+		$this->conference = $conference;
+	}
+
+	public function getConference() {
+		return $this->conference;
+	}
+
 	public function isEnabled() {
-		return $this->has('SCHEDULE');
+		return $this->getConference()->has('SCHEDULE');
 	}
 
 	private function isRoomFiltered($room)
 	{
-		if(!$this->has('SCHEDULE.ROOMFILTER'))
+		if(!$this->getConference()->has('SCHEDULE.ROOMFILTER'))
 			return false;
 
-		$rooms = $this->get('SCHEDULE.ROOMFILTER');
+		$rooms = $this->getConference()->get('SCHEDULE.ROOMFILTER');
 		return !in_array($room, $rooms);
 	}
 
 	public function getSimulationOffset() {
-		return $this->get('SCHEDULE.SIMULATE_OFFSET', 0);
+		return $this->getConference()->get('SCHEDULE.SIMULATE_OFFSET', 0);
 	}
 
 	public function getScale() {
-		return floatval($this->get('SCHEDULE.SCALE', 7));
+		return floatval($this->getConference()->get('SCHEDULE.SCALE', 7));
 	}
 
 	private function fetchSchedule()
@@ -35,7 +46,7 @@ class Schedule extends ModelBase
 		$schedule = file_get_contents($this->getScheduleUrl(), false, $context);
 
 		if(!$schedule)
-			throw new ScheduleException("Error Downloading Schedule from ".$this->getScheduleUrl());
+			throw new ScheduleException("Error Downloading Schedule from ".$this->getConference()->getScheduleUrl());
 
 		return simplexml_load_string($schedule);
 	}
@@ -49,10 +60,10 @@ class Schedule extends ModelBase
 		}
 		catch(Exception $e)
 		{
-			return array();
+			return array('_error' => (string)$e);
 		}
 
-		$mapping = $this->getScheduleToRoomSlugMapping();
+		$mapping = $this->getConference()->getScheduleToRoomSlugMapping();
 		$program = array();
 
 		// re-calculate day-ends
@@ -220,10 +231,10 @@ class Schedule extends ModelBase
 		}
 
 
-		if($this->has('SCHEDULE.ROOMFILTER'))
+		if($this->getConference()->has('SCHEDULE.ROOMFILTER'))
 		{
 			// sort by roomfilter
-			$roomfilter = $this->get('SCHEDULE.ROOMFILTER');
+			$roomfilter = $this->getConference()->get('SCHEDULE.ROOMFILTER');
 
 			// map roomfilter-rooms to room-slugs
 			$roomfilter = array_map(function($e) use ($mapping) {
@@ -246,7 +257,7 @@ class Schedule extends ModelBase
 	public function getDurationSum()
 	{
 		$sum = 0;
-		$schedule = $this->getSchedule();
+		$schedule = $this->getConference()->getSchedule();
 		foreach(reset($schedule) as $event)
 			$sum += $event['duration'];
 
@@ -263,13 +274,13 @@ class Schedule extends ModelBase
 
 	private function getScheduleUrl()
 	{
-		return $this->get('SCHEDULE.URL');
+		return $this->getConference()->get('SCHEDULE.URL');
 	}
 
 	public function getScheduleToRoomSlugMapping()
 	{
 		$mapping = array();
-		foreach($this->get('ROOMS') as $slug => $room)
+		foreach($this->getConference()->get('ROOMS') as $slug => $room)
 		{
 			if(isset($room['SCHEDULE_NAME']))
 				$mapping[ $room['SCHEDULE_NAME'] ] = $slug;

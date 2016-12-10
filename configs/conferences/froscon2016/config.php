@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['CONFIG']['CONFERENCE'] = array(
+$CONFIG['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
 	 * mit einem Text der Art "hat noch nicht angefangen" angezeigt.
@@ -110,12 +110,12 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 /**
  * Konfiguration der Stream-Übersicht auf der Startseite
  */
-$GLOBALS['CONFIG']['OVERVIEW'] = array(
+$CONFIG['OVERVIEW'] = array(
 	/**
 	 * Abschnitte aud der Startseite und darunter aufgeführte Räume
 	 * Es können beliebig neue Gruppen und Räume hinzugefügt werden
 	 *
-	 * Die Räume müssen in $GLOBALS['CONFIG']['ROOMS'] konfiguriert werden,
+	 * Die Räume müssen in $CONFIG['ROOMS'] konfiguriert werden,
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
@@ -130,10 +130,10 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 /**
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
-$GLOBALS['CONFIG']['ROOMS'] = array(
+$CONFIG['ROOMS'] = array(
 	/**
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
-	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
+	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'S1' => array(
 		'DISPLAY' => 'Saal 1',
@@ -304,13 +304,13 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
  * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
  * Embedding-Funktionen deaktiviert.
  */
-$GLOBALS['CONFIG']['EMBED'] = true;
+$CONFIG['EMBED'] = true;
 
 /**
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-$GLOBALS['CONFIG']['SCHEDULE'] = array(
+$CONFIG['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -341,3 +341,6 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-05-21') - strtotime(/* Today */ '2016-05-19'),
 	'SIMULATE_OFFSET' => 0,
 );
+
+
+return $CONFIG;

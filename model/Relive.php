@@ -1,16 +1,27 @@
 <?php
 
-class Relive extends ModelBase
+class Relive
 {
+	private $conference;
+
+	public function __construct($conference)
+	{
+		$this->conference = $conference;
+	}
+
+	public function getConference() {
+		return $this->conference;
+	}
+
 	public function isEnabled()
 	{
 		// having CONFERENCE.RELIVE is not enough!
-		return $this->has('CONFERENCE.RELIVE_JSON');
+		return $this->getConference()->has('CONFERENCE.RELIVE_JSON');
 	}
 
 	public function getJsonUrl()
 	{
-		return $this->get('CONFERENCE.RELIVE_JSON');
+		return $this->getConference()->get('CONFERENCE.RELIVE_JSON');
 	}
 
 	public function getTalks()

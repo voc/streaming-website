@@ -1,6 +1,6 @@
 <div class="container">
 	<h1><?=h($title)?></h1>
-	<form action="feedback/read/" method="POST">
+	<form action="<?=h($conference->getFeedbackReadUrl())?>" method="POST">
 
 		<div class="row">
 			<div class="col-xs-12">

@@ -1,4 +1,4 @@
-<form action="feedback/" target="feedback-target" method="post" role="form" class="feedback-form">
+<form action="<?=h($conference->getFeedbackURl())?>" target="feedback-target" method="post" role="form" class="feedback-form">
 	<div class="col-sm-4 col">
 		<div class="form-group">
 			<label for="net">Network Connection</label>
@@ -52,7 +52,7 @@
 			<label for="stream">Stream</label>
 			<select class="form-control" name="stream" id="stream">
 				<option></option>
-				<? foreach(Room::rooms() as $roomiter): ?>
+				<? foreach($conference->getRooms() as $roomiter): ?>
 					<? if(!$roomiter->hasFeedback()) continue ?>
 					<? foreach($roomiter->getSelections() as $selection): ?>
 						<option
