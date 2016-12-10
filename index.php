@@ -140,7 +140,16 @@ try {
 catch(Exception $e)
 {
 	ob_clean();
-	require('view/500.php');
+	try {
+		require('view/500.php');
+		exit;
+	}
+	catch(Exception $e) {
+		header("HTTP/1.1 500 Internal Server Error");
+		header("Content-Type: text/plain");
+		print_r($e);
+		exit;
+	}
 }
 
 
