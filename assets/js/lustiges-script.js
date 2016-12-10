@@ -182,11 +182,7 @@ $(function() {
 		updateTimer = 5*1000, /* update display every 5 seconds */
 		refetchTimer = 10*60*1000, /* re-request current / upcoming schedule every 10 minutes */
 		scheduleData = {},
-		$lecture = $('.room.has-schedule'),
-
-		/* offset to the browsers realtime (for simulation) */
-		offset = $('.js-settings').data('scheduleoffset');;
-
+		$lecture = $('.room.has-schedule');
 
 	if($lecture.length == 0)
 		return;
@@ -210,7 +206,7 @@ $(function() {
 	function updateProgtamTeaser() {
 		var
 			// corrected "now" timestamp in unix-counting (seconds, not microseconds)
-			now = (Date.now() / 1000) + offset;
+			now = (Date.now() / 1000);
 
 		$.each(scheduleData, function(room, talks) {
 			var currentTalk, nextTalk;
