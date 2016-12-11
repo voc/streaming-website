@@ -33,11 +33,17 @@ class Conference extends ModelBase
 	}
 
 	public function startsAt() {
-		return $this->get('CONFERENCE.STARTS_AT');
+		if(!$this->has('CONFERENCE.STARTS_AT'))
+			return null;
+
+		return DateTime::createFromFormat('U', $this->get('CONFERENCE.STARTS_AT'));
 	}
 
 	public function endsAt() {
-		return $this->get('CONFERENCE.ENDS_AT');
+		if(!$this->has('CONFERENCE.ENDS_AT'))
+			return null;
+
+		return DateTime::createFromFormat('U', $this->get('CONFERENCE.ENDS_AT'));
 	}
 
 	public function hasBegun() {
@@ -62,7 +68,8 @@ class Conference extends ModelBase
 		}
 
 		if($this->has('CONFERENCE.STARTS_AT')) {
-			return time() >= $this->get('CONFERENCE.STARTS_AT');
+			$now = new DateTime('now');
+			return $now >= $this->startsAt();
 		} else {
 			return true;
 		}
@@ -84,7 +91,8 @@ class Conference extends ModelBase
 		}
 
 		if($this->has('CONFERENCE.ENDS_AT')) {
-			return time() >= $this->get('CONFERENCE.ENDS_AT');
+			$now = new DateTime('now');
+			return $now >= $this->endsAt();
 		} else {
 			return false;
 		}

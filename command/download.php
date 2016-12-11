@@ -15,14 +15,32 @@ if(isset($conf['REQUIRE_USER']))
 	}
 }
 
-foreach (Conferences::getConferences() as $conference)
+$conferences = Conferences::getConferences();
+
+if(isset($conf['MAX_CONFERENCE_AGE']))
+{
+	$months = intval($conf['MAX_CONFERENCE_AGE']);
+	$conferencesAfter = new DateTime();
+	$conferencesAfter->sub(new DateInterval('P'.$months.'D'));
+
+	stdout('Filtering before %s', $conferencesAfter->format('Y-m-d'));
+	$conferences = array_filter($conferences, function($conference) use ($conferencesAfter) {
+		$isBefore = $conference->endsAt() < $conferencesAfter;
+
+		if($isBefore) {
+			stdout(
+				'  %s: %s',
+				$conference->endsAt()->format('Y-m-d'),
+				$conference->getSlug()
+			);
+		}
+
+		return !$isBefore;
+	});
+}
+
+stdout('');
+foreach ($conferences as $conference)
 {
 	stdout('== %s ==', $conference->getSlug());
-
-	if(isset($conf['MAX_CONFERENCE_AGE']))
-	{
-		date_diff()
-		return time() >= $this->endsAt();
-	}
-
 }

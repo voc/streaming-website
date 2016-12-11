@@ -48,7 +48,7 @@ class Conferences
 		$sorted = Conferences::getConferences();
 
 		usort($sorted, function($a, $b) {
-			return $b->startsAt() - $a->endsAt();
+			return $b->startsAt() > $a->endsAt() ? 1 : -1;
 		});
 
 		return $sorted;

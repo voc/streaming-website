@@ -61,5 +61,5 @@ $GLOBALS['CONFIG']['DOWNLOAD'] = [
 	 *
 	 * Auskommentieren, um alle Konferenzen zu beachten
 	 */
-	'MAX_CONFERENCE_AGE' => 30 /* Tage */,
+	'MAX_CONFERENCE_AGE' => 14 /* Tage */,
 ];
