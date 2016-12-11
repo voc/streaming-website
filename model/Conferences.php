@@ -33,7 +33,7 @@ class Conferences
 
 	public static function getActiveConferences() {
 		return array_values(array_filter(
-			Conferences::getConferences(),
+			Conferences::getConferencesSorted(),
 			function($conference) {
 				return !$conference->isClosed();
 			}
