@@ -265,9 +265,14 @@ class Schedule
 		return ((int)$parts[0] * 60 + (int)$parts[1]) * 60;
 	}
 
-	private function getScheduleUrl()
+	public function getScheduleUrl()
 	{
 		return $this->getConference()->get('SCHEDULE.URL');
+	}
+
+	public function getScheduleCache()
+	{
+		return sprintf('/tmp/schedule-cache-%s', $this->getConference()->getSlug());
 	}
 
 	public function getScheduleToRoomSlugMapping()

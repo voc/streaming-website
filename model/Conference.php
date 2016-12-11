@@ -221,4 +221,8 @@ class Conference extends ModelBase
 	public function getRelive() {
 		return new Relive($this);
 	}
+
+	public function getExtraFiles() {
+		return $this->get('EXTRA_FILES', []);
+	}
 }
