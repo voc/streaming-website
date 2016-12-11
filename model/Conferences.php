@@ -1,6 +1,6 @@
 <?php
 
-class Conferences extends ModelBase
+class Conferences
 {
 	const MANDATOR_DIR = 'configs/conferences/';
 
