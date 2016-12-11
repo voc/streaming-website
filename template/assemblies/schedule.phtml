@@ -13,7 +13,7 @@
 						data-end="<?=intval($event['end'])?>"
 					>
 						<? $fromstart += $event['duration'] ?>
-						<? $scheduleRoom = Room::createIfExists($roomname) ?>
+						<? $scheduleRoom = $conference->getRoomIfExists($roomname) ?>
 						<? if($scheduleRoom): ?>
 							<a
 								class="inner"

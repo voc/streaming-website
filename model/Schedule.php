@@ -54,16 +54,9 @@ class Schedule
 	public function getSchedule()
 	{
 		// download schedule-xml
-		try
-		{
-			$schedule = $this->fetchSchedule();
-		}
-		catch(Exception $e)
-		{
-			return array('_error' => (string)$e);
-		}
+		$schedule = $this->fetchSchedule();
 
-		$mapping = $this->getConference()->getScheduleToRoomSlugMapping();
+		$mapping = $this->getScheduleToRoomSlugMapping();
 		$program = array();
 
 		// re-calculate day-ends
@@ -257,7 +250,7 @@ class Schedule
 	public function getDurationSum()
 	{
 		$sum = 0;
-		$schedule = $this->getConference()->getSchedule();
+		$schedule = $this->getSchedule();
 		foreach(reset($schedule) as $event)
 			$sum += $event['duration'];
 
