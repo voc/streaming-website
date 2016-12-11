@@ -19,7 +19,7 @@ class Conference extends ModelBase
 	}
 
 	public function isPreviewEnabled() {
-		if($GLOBALS['forceopen'])
+		if(@$GLOBALS['forceopen'])
 			return true;
 
 		if($this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['SERVER_NAME']))
@@ -30,6 +30,10 @@ class Conference extends ModelBase
 
 	public function isClosed() {
 		return !$this->hasBegun() || $this->hasEnded();
+	}
+
+	public function isOpen() {
+		return !$this->isClosed();
 	}
 
 	public function startsAt() {

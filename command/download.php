@@ -23,8 +23,19 @@ if(isset($conf['MAX_CONFERENCE_AGE']))
 	$conferencesAfter = new DateTime();
 	$conferencesAfter->sub(new DateInterval('P'.$months.'D'));
 
-	stdout('Filtering before %s', $conferencesAfter->format('Y-m-d'));
+	stdout('Skipping Conferences before %s', $conferencesAfter->format('Y-m-d'));
 	$conferences = array_filter($conferences, function($conference) use ($conferencesAfter) {
+		if($conference->isOpen())
+		{
+			stdout(
+				'  %s: %s',
+				'---open---',
+				$conference->getSlug()
+			);
+
+			return true;
+		}
+
 		$isBefore = $conference->endsAt() < $conferencesAfter;
 
 		if($isBefore) {
