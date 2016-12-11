@@ -73,8 +73,14 @@ class Conferences
 	}
 
 	public static function loadConferenceConfig($mandator) {
-		$config = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
-		return include($config);
+		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
+		$config = include($configfile);
+
+		if(!is_array($config)) {
+			throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
+		}
+
+		return $config;
 	}
 
 	public static function getConference($mandator) {

@@ -153,25 +153,23 @@ catch(Exception $e)
 }
 
 
-
 // PER-CONFERENCE CODE
-$conference = Conferences::getConference($mandator);
-
-// update template information
-$tpl->set(array(
-	'baseurl' => forceslash(baseurl()),
-	'route' => $route,
-	'canonicalurl' => joinpath([baseurl(), $mandator, $route]),
-	'conference_assets' => forceslash($mandator),
-
-	'conference' => $conference,
-	'feedback' => $conference->getFeedback(),
-	'schedule' => $conference->getSchedule(),
-	'subtitles' => $conference->getSubtitles(),
-));
-
 ob_start();
 try {
+	$conference = Conferences::getConference($mandator);
+
+	// update template information
+	$tpl->set(array(
+		'baseurl' => forceslash(baseurl()),
+		'route' => $route,
+		'canonicalurl' => joinpath([baseurl(), $mandator, $route]),
+		'conference_assets' => forceslash($mandator),
+
+		'conference' => $conference,
+		'feedback' => $conference->getFeedback(),
+		'schedule' => $conference->getSchedule(),
+		'subtitles' => $conference->getSubtitles(),
+	));
 
 	// ALWAYS AVAILABLE ROUTES
 	if($route == 'feedback/read')
