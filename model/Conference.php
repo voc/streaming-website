@@ -140,10 +140,10 @@ class Conference extends ModelBase
 	}
 
 	public function hasRelive() {
-		return $this->has('CONFERENCE.RELIVE_JSON');
+		return $this->getRelive()->isEnabled();
 	}
 	public function getReliveUrl() {
-		if($this->has('CONFERENCE.RELIVE_JSON'))
+		if($this->getRelive()->isEnabled())
 			return joinpath([$this->getSlug(), 'relive']).url_params();
 
 		else
