@@ -131,5 +131,33 @@ function download($what, $conference, $url, $cache)
 
 function do_download($url, $cache)
 {
+	$handle = curl_init($url);
+	curl_setopt_array($handle, [
+		CURLOPT_FOLLOWLOCATION  => true,
+		CURLOPT_MAXREDIRS       => 10,
+		CURLOPT_RETURNTRANSFER  => true,
+		CURLOPT_SSL_VERIFYPEER  => false, /* accept all certificates, even self-signed */
+		CURLOPT_SSL_VERIFYHOST  => 2,     /* verify hostname is in cert */
+		CURLOPT_CONNECTTIMEOUT  => 3,     /* connect-timeout in seconds */
+		CURLOPT_TIMEOUT         => 5,     /* transfer timeout im seconds */
+		CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+		CURLOPT_REFERER         => 'https://streaming.media.ccc.de/',
+		CURLOPT_USERAGENT       => '@c3voc Streaming-Website Downloader-Cronjob, Contact voc AT c3voc DOT de in case of problems. Might the Winkekatze be with you',
+	]);
+
+	$return = curl_exec($handle);
+	$info = curl_getinfo($handle);
+	curl_close($handle);
+
+	if($info['http_code'] != 200)
+		return false;
+
+	$tempfile = tempnam(dirname($cache), 'dl-');
+	if(false === file_put_contents($tempfile, $return))
+		return false;
+
+	chmod($tempfile, 0644);
+	rename($tempfile, $cache);
+
 	return true;
 }
