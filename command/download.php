@@ -98,6 +98,18 @@ function get_file_cache($conference, $filename)
 
 function download($what, $conference, $url, $cache)
 {
+	$info = parse_url($url);
+	if(!isset($info['scheme']) || !isset($info['host']))
+	{
+		stderr(
+			'  !! %s url for conference %s does look like an old-style path: "%s". please update to a full http/https url',
+			$what,
+			$conference->getSlug(),
+			$url
+		);
+		return false;
+	}
+
 	stdout(
 		'  downloading %s from %s to %s',
 		$what,
