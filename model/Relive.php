@@ -26,7 +26,7 @@ class Relive
 
 	public function getJsonCache()
 	{
-		return sprintf('/tmp/relive-cache-%s', $this->getConference()->getSlug());
+		return sprintf('/tmp/relive-cache-%s.json', $this->getConference()->getSlug());
 	}
 
 	public function getTalks()

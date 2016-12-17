@@ -272,7 +272,7 @@ class Schedule
 
 	public function getScheduleCache()
 	{
-		return sprintf('/tmp/schedule-cache-%s', $this->getConference()->getSlug());
+		return sprintf('/tmp/schedule-cache-%s.xml', $this->getConference()->getSlug());
 	}
 
 	public function getScheduleToRoomSlugMapping()

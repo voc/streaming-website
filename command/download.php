@@ -77,13 +77,13 @@ foreach ($conferences as $conference)
 		);
 	}
 
-	foreach($conference->getExtraFiles() as $file)
+	foreach($conference->getExtraFiles() as $filename => $url)
 	{
 		download(
 			'extra-file',
 			$conference,
-			$file,
-			get_file_cache($conference, $file)
+			$url,
+			get_file_cache($conference, $filename)
 		);
 	}
 }
@@ -91,12 +91,9 @@ foreach ($conferences as $conference)
 
 
 
-function get_file_cache($conference, $url)
+function get_file_cache($conference, $filename)
 {
-	$info = parse_url($url);
-	$host = trim(preg_replace('/[^a-z0-9]/i', '_', $info['host']), '_');
-	$path = trim(preg_replace('/[^a-z0-9]/i', '_', $info['path']), '_');
-	return sprintf('/tmp/file-cache-%s_%s_%s-%s', $conference->getSlug(), $host, $path, md5($url));
+	return joinpath([$GLOBALS['BASEDIR'], 'configs/conferences', $conference->getSlug(), $filename]);
 }
 
 function download($what, $conference, $url, $cache)
