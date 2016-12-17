@@ -119,13 +119,14 @@ function download($what, $conference, $url, $cache)
 	if(!do_download($url, $cache))
 	{
 		stderr(
-			'!! download %s for conference %s from %s to %s failed miserably !!',
+			'  !! download %s for conference %s from %s to %s failed miserably !!',
 			$what,
 			$conference->getSlug(),
 			$url,
 			$cache
 		);
 	}
+	return true;
 }
 
 function do_download($url, $cache)
