@@ -196,11 +196,6 @@ try {
 		require('view/feedback-read.php');
 	}
 
-	else if($route == 'schedule.json')
-	{
-		require('view/schedule-json.php');
-	}
-
 	else if($route == 'gen/main.css')
 	{
 		if(Conferences::hasCustomStyles($mandator))
