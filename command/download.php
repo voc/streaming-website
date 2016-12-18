@@ -58,7 +58,7 @@ foreach ($conferences as $conference)
 	$relive = $conference->getRelive();
 	if($relive->isEnabled())
 	{
-		download(
+		download_for_conference(
 			'relive-json',
 			$conference,
 			$relive->getJsonUrl(),
@@ -69,7 +69,7 @@ foreach ($conferences as $conference)
 	$schedule = $conference->getSchedule();
 	if($schedule->isEnabled())
 	{
-		download(
+		download_for_conference(
 			'schedule-xml',
 			$conference,
 			$schedule->getScheduleUrl(),
@@ -79,7 +79,7 @@ foreach ($conferences as $conference)
 
 	foreach($conference->getExtraFiles() as $filename => $url)
 	{
-		download(
+		download_for_conference(
 			'extra-file',
 			$conference,
 			$url,
@@ -87,6 +87,15 @@ foreach ($conferences as $conference)
 		);
 	}
 }
+
+stdout('');
+stdout('== eventkalender ==');
+download(
+	'eventkalender',
+	'https://c3voc.de/eventkalender/events.json?filter=upcoming&streaming=yes',
+	joinpath([$GLOBALS['BASEDIR'], 'configs/upcoming.json'])
+);
+
 
 
 
@@ -96,7 +105,7 @@ function get_file_cache($conference, $filename)
 	return joinpath([$GLOBALS['BASEDIR'], 'configs/conferences', $conference->getSlug(), $filename]);
 }
 
-function download($what, $conference, $url, $cache)
+function download_for_conference($what, $conference, $url, $cache)
 {
 	$info = parse_url($url);
 	if(!isset($info['scheme']) || !isset($info['host']))
@@ -129,6 +138,28 @@ function download($what, $conference, $url, $cache)
 	return true;
 }
 
+function download($what, $url, $cache)
+{
+	stdout(
+		'  downloading %s from %s to %s',
+		$what,
+		$url,
+		$cache
+	);
+	$resp = do_download($url, $cache);
+	if($resp !== true)
+	{
+		stderr(
+			'  !! download %s from %s to %s failed miserably: %s !!',
+			$what,
+			$url,
+			$cache,
+			$resp
+		);
+	}
+	return true;
+}
+
 function do_download($url, $cache)
 {
 	$handle = curl_init($url);
@@ -141,7 +172,6 @@ function do_download($url, $cache)
 		CURLOPT_CONNECTTIMEOUT  => 3,     /* connect-timeout in seconds */
 		CURLOPT_TIMEOUT         => 5,     /* transfer timeout im seconds */
 		CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
-		CURLOPT_REFERER         => 'https://streaming.media.ccc.de/',
 		CURLOPT_USERAGENT       => '@c3voc Streaming-Website Downloader-Cronjob, Contact voc AT c3voc DOT de in case of problems. Might the Winkekatze be with you',
 	]);
 
@@ -150,11 +180,14 @@ function do_download($url, $cache)
 	curl_close($handle);
 
 	if($info['http_code'] != 200)
-		return false;
+		return 'http-code = '.$info['http_code'];
 
 	$tempfile = tempnam(dirname($cache), 'dl-');
+	if(!$tempfile)
+		return 'could not create tempfile in '.dirname($cache);
+
 	if(false === file_put_contents($tempfile, $return))
-		return false;
+		return 'could write data into tempfile '.$tempfile;
 
 	chmod($tempfile, 0644);
 	rename($tempfile, $cache);
