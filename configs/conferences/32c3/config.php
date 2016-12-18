@@ -667,5 +667,11 @@ $CONFIG['TWITTER'] = array(
 	'TEXT' => '#32C3 #%s',
 );
 
+$CONFIG['EXTRA_FILES'] = array(
+	'schedule.xml' => 'https://events.ccc.de/congress/2015/Fahrplan/schedule.xml',
+	'schedule.json' => 'https://events.ccc.de/congress/2015/Fahrplan/schedule.json',
+	'everything.schedule.xml' => 'http://data.testi.ber.c3voc.de/32C3/everything.schedule.xml',
+	'everything.schedule.json' => 'http://data.testi.ber.c3voc.de/32C3/everything.schedule.json',
+);
 
 return $CONFIG;

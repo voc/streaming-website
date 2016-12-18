@@ -36,17 +36,10 @@ class Schedule
 
 	private function fetchSchedule()
 	{
-		$opts = array(
-			'http' => array(
-				'timeout' => 2,
-				'user_agent' => 'C3VOC Universal Streaming-Website Backend @ '.$_SERVER['HTTP_HOST'],
-			)
-		);
-		$context  = stream_context_create($opts);
-		$schedule = file_get_contents($this->getScheduleUrl(), false, $context);
+		$schedule = file_get_contents($this->getScheduleCache());
 
 		if(!$schedule)
-			throw new ScheduleException("Error Downloading Schedule from ".$this->getConference()->getScheduleUrl());
+			throw new ScheduleException("Error Loading Schedule from ".$this->getScheduleCache());
 
 		return simplexml_load_string($schedule);
 	}
@@ -265,9 +258,14 @@ class Schedule
 		return ((int)$parts[0] * 60 + (int)$parts[1]) * 60;
 	}
 
-	private function getScheduleUrl()
+	public function getScheduleUrl()
 	{
 		return $this->getConference()->get('SCHEDULE.URL');
+	}
+
+	public function getScheduleCache()
+	{
+		return sprintf('/tmp/schedule-cache-%s.xml', $this->getConference()->getSlug());
 	}
 
 	public function getScheduleToRoomSlugMapping()

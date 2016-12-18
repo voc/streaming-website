@@ -1,7 +1,10 @@
 <?php
 
 if(!ini_get('short_open_tag'))
-	die('`short_open_tag = On` is required');
+	die("`short_open_tag = On` is required\n");
+
+$GLOBALS['BASEDIR'] = dirname(__FILE__);
+chdir($GLOBALS['BASEDIR']);
 
 require_once('config.php');
 require_once('lib/helper.php');
@@ -27,6 +30,22 @@ require_once('model/Upcoming.php');
 
 
 ob_start();
+if(isset($argv) && isset($argv[1]))
+{
+	require('lib/command-helper.php');
+
+	switch($argv[1])
+	{
+		case 'download':
+			require('command/download.php');
+			exit(0);
+	}
+
+	stderr("Unknown Command: %s", $argv[1]);
+	exit(1);
+}
+
+
 try {
 	if(isset($_GET['htaccess']))
 	{

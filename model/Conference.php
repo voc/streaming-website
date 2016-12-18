@@ -19,7 +19,7 @@ class Conference extends ModelBase
 	}
 
 	public function isPreviewEnabled() {
-		if($GLOBALS['forceopen'])
+		if(@$GLOBALS['forceopen'])
 			return true;
 
 		if($this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['SERVER_NAME']))
@@ -32,12 +32,22 @@ class Conference extends ModelBase
 		return !$this->hasBegun() || $this->hasEnded();
 	}
 
+	public function isOpen() {
+		return !$this->isClosed();
+	}
+
 	public function startsAt() {
-		return $this->get('CONFERENCE.STARTS_AT');
+		if(!$this->has('CONFERENCE.STARTS_AT'))
+			return null;
+
+		return DateTime::createFromFormat('U', $this->get('CONFERENCE.STARTS_AT'));
 	}
 
 	public function endsAt() {
-		return $this->get('CONFERENCE.ENDS_AT');
+		if(!$this->has('CONFERENCE.ENDS_AT'))
+			return null;
+
+		return DateTime::createFromFormat('U', $this->get('CONFERENCE.ENDS_AT'));
 	}
 
 	public function hasBegun() {
@@ -62,7 +72,8 @@ class Conference extends ModelBase
 		}
 
 		if($this->has('CONFERENCE.STARTS_AT')) {
-			return time() >= $this->get('CONFERENCE.STARTS_AT');
+			$now = new DateTime('now');
+			return $now >= $this->startsAt();
 		} else {
 			return true;
 		}
@@ -84,7 +95,8 @@ class Conference extends ModelBase
 		}
 
 		if($this->has('CONFERENCE.ENDS_AT')) {
-			return time() >= $this->get('CONFERENCE.ENDS_AT');
+			$now = new DateTime('now');
+			return $now >= $this->endsAt();
 		} else {
 			return false;
 		}
@@ -128,10 +140,10 @@ class Conference extends ModelBase
 	}
 
 	public function hasRelive() {
-		return $this->has('CONFERENCE.RELIVE_JSON');
+		return $this->getRelive()->isEnabled();
 	}
 	public function getReliveUrl() {
-		if($this->has('CONFERENCE.RELIVE_JSON'))
+		if($this->getRelive()->isEnabled())
 			return joinpath([$this->getSlug(), 'relive']).url_params();
 
 		else
@@ -208,5 +220,9 @@ class Conference extends ModelBase
 	}
 	public function getRelive() {
 		return new Relive($this);
+	}
+
+	public function getExtraFiles() {
+		return $this->get('EXTRA_FILES', []);
 	}
 }
