@@ -31,7 +31,7 @@ class Relive
 
 	public function getTalks()
 	{
-		if(!file_exists($this->getJsonUrl()))
+		if(!file_exists($this->getJsonCache()))
 			return array();
 
 		$talks = file_get_contents($this->getJsonUrl());
