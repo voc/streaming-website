@@ -1,21 +1,37 @@
 <?php
 
-class Relive extends ModelBase
+class Relive
 {
+	private $conference;
+
+	public function __construct($conference)
+	{
+		$this->conference = $conference;
+	}
+
+	public function getConference() {
+		return $this->conference;
+	}
+
 	public function isEnabled()
 	{
 		// having CONFERENCE.RELIVE is not enough!
-		return $this->has('CONFERENCE.RELIVE_JSON');
+		return $this->getConference()->has('CONFERENCE.RELIVE_JSON');
 	}
 
 	public function getJsonUrl()
 	{
-		return $this->get('CONFERENCE.RELIVE_JSON');
+		return $this->getConference()->get('CONFERENCE.RELIVE_JSON');
+	}
+
+	public function getJsonCache()
+	{
+		return sprintf('/tmp/relive-cache-%s.json', $this->getConference()->getSlug());
 	}
 
 	public function getTalks()
 	{
-		if(!file_exists($this->getJsonUrl()))
+		if(!file_exists($this->getJsonCache()))
 			return array();
 
 		$talks = file_get_contents($this->getJsonUrl());
@@ -23,22 +39,22 @@ class Relive extends ModelBase
 
 		$mapping = $this->getScheduleToRoomMapping();
 
-                usort($talks, function($a, $b) {
-                        // first, make sure that live talks are always on top
-                        if($a['status'] == 'live' && $b['status'] != 'live') {
-                                return -1;
-                        } else if($a['status'] != 'live' && $b['status'] == 'live') {
-                                return 1;
-                        } else if($a['status'] == 'live' && $b['status'] == 'live') {
-                                // sort live talks by room
+		usort($talks, function($a, $b) {
+			// first, make sure that live talks are always on top
+			if($a['status'] == 'live' && $b['status'] != 'live') {
+				return -1;
+			}
+			else if($a['status'] != 'live' && $b['status'] == 'live') {
+				return 1;
+			}
+			else if($a['status'] == 'live' && $b['status'] == 'live') {
+				// sort live talks by room
+				return strcmp($a['room'], $b['room']);
+			}
 
-                                return strcmp($a['room'], $b['room']);
-                        }
-
-                        // all other talks get sorted by their name
-
-                        return strcmp($a['title'], $b['title']);
-                });
+			// all other talks get sorted by their name
+			return strcmp($a['title'], $b['title']);
+		});
 
 		$talks_by_id = array();
 		foreach ($talks as $talk)

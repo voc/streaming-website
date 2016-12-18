@@ -2,14 +2,17 @@
 
 class ModelBase
 {
-	protected function has($keychain)
+	protected $config;
+	public function __construct($config)
 	{
-		return ModelBase::_has($GLOBALS['CONFIG'], $keychain);
+		$this->config = $config;
 	}
-	protected static function staticHas($keychain)
+
+	public function has($keychain)
 	{
-		return ModelBase::_has($GLOBALS['CONFIG'], $keychain);
+		return ModelBase::_has($this->config, $keychain);
 	}
+
 	private static function _has($array, $keychain)
 	{
 		if(!is_array($keychain))
@@ -25,14 +28,11 @@ class ModelBase
 		return ModelBase::_has($array[$key], array_slice($keychain, 1));
 	}
 
-	protected function get($keychain, $default = null)
+	public function get($keychain, $default = null)
 	{
-		return ModelBase::_get($GLOBALS['CONFIG'], $keychain, $default);
+		return ModelBase::_get($this->config, $keychain, $default);
 	}
-	protected static function staticGet($keychain, $default = null)
-	{
-		return ModelBase::_get($GLOBALS['CONFIG'], $keychain, $default);
-	}
+
 	private static function _get($array, $keychain, $default)
 	{
 		if(!is_array($keychain))

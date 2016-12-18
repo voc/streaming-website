@@ -5,5 +5,5 @@ echo $tpl->render(array(
 	'title' => 'Schedule-Übersicht',
 
 	'refresh' => 15*60,
-	'schedule' => new Schedule(),
+	'schedule' => $conference->getSchedule(),
 ));

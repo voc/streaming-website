@@ -1,30 +1,41 @@
 <?php
 
-class Conferences extends ModelBase
+class Conferences
 {
 	const MANDATOR_DIR = 'configs/conferences/';
 
+	public static function listConferences() {
+		$directories = scandir(forceslash(Conferences::MANDATOR_DIR));
+		$conferences = array_filter($directories, function($dirname) {
+			return $dirname[0] != '.';
+		});
+
+		return $conferences;
+	}
+
 	public static function getConferences() {
 		$conferences = [];
-		foreach(scandir(forceslash(Conferences::MANDATOR_DIR)) as $el)
+		foreach(Conferences::listConferences() as $conference)
 		{
-			if($el[0] == '.')
-				continue;
-
-			$conferences[$el] = Conferences::getConferenceInformation($el);
+			try {
+				$conferences[$conference] = Conferences::getConference($conference);
+			}
+			catch(Exception $e) {
+				// ignore unloadable conferences
+			}
 		}
 
 		return $conferences;
 	}
 	public static function getConferencesCount() {
-		return count(Conferences::getConferences());
+		return count(Conferences::listConferences());
 	}
 
 	public static function getActiveConferences() {
 		return array_values(array_filter(
-			Conferences::getConferences(),
-			function($info) {
-				return $info['active'];
+			Conferences::getConferencesSorted(),
+			function($conference) {
+				return !$conference->isClosed();
 			}
 		));
 	}
@@ -37,7 +48,7 @@ class Conferences extends ModelBase
 		$sorted = Conferences::getConferences();
 
 		usort($sorted, function($a, $b) {
-			return @$b['CONFIG']['CONFERENCE']['STARTS_AT'] - @$a['CONFIG']['CONFERENCE']['STARTS_AT'];
+			return $b->startsAt() > $a->endsAt() ? 1 : -1;
 		});
 
 		return $sorted;
@@ -47,7 +58,7 @@ class Conferences extends ModelBase
 		$sorted = Conferences::getConferencesSorted();
 
 		$finished = array_values(array_filter($sorted, function($c) {
-			return @$c['CONFIG']['CONFERENCE']['ENDS_AT'] < time();
+			return $c->hasEnded();
 		}));
 
 		return $finished;
@@ -58,33 +69,22 @@ class Conferences extends ModelBase
 	}
 
 	public static function exists($mandator) {
-		return array_key_exists($mandator, Conferences::getConferences());
+		return in_array($mandator, Conferences::listConferences());
 	}
 
-	public static function getConferenceInformation($mandator) {
-		if(isset($GLOBALS['CONFIG']))
-			$saved_config = $GLOBALS['CONFIG'];
+	public static function loadConferenceConfig($mandator) {
+		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
+		$config = include($configfile);
 
-		Conferences::load($mandator);
-		$conf = new Conference();
-		$info = [
-			'slug' => $mandator,
-			'link' => forceslash($mandator).url_params(),
-			'active' => !$conf->isClosed(),
-			'title' => $conf->getTitle(),
-			'description' => $conf->getDescription(),
+		if(!is_array($config)) {
+			throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
+		}
 
-			'relive' => $conf->hasRelive() ? forceslash($mandator).$conf->getReliveUrl() : null,
-			'releases' => $conf->hasReleases() ? $conf->getReleasesUrl() : null,
+		return $config;
+	}
 
-			'CONFIG' => $GLOBALS['CONFIG'],
-		];
-		unset($GLOBALS['CONFIG']);
-
-		if(isset($saved_config))
-			$GLOBALS['CONFIG'] = $saved_config;
-
-		return $info;
+	public static function getConference($mandator) {
+		return new Conference(Conferences::loadConferenceConfig($mandator), $mandator);
 	}
 
 	public static function hasCustomStyles($mandator) {
@@ -95,10 +95,5 @@ class Conferences extends ModelBase
 	}
 	public static function getCustomStylesDir($mandator) {
 		return forceslash(Conferences::MANDATOR_DIR).forceslash($mandator);
-	}
-
-	public static function load($mandator) {
-		include(forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php');
-		return isset($GLOBALS['CONFIG']);
 	}
 }

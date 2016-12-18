@@ -1,9 +1,6 @@
 <?php
 
-$feedback = new Feedback();
-if(!$feedback->isEnabled())
-	throw new NotFoundException('Feedback is disabled');
-
+$feedback = $conference->getFeedback();
 if(!$feedback->isLoggedIn())
 {
 	$feedback->requestLogin();

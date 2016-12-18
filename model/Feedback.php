@@ -1,12 +1,16 @@
 <?php
 
-class Feedback extends ModelBase
+class Feedback
 {
-	public function isEnabled() {
-		return $this->has('FEEDBACK');
+	private $conference;
+
+	public function __construct(Conference $conference)
+	{
+		$this->conference = $conference;
 	}
-	public function getUrl() {
-		return 'feedback/';
+
+	public function getConference() {
+		return $this->conference;
 	}
 
 	public function validate($info)
@@ -23,7 +27,7 @@ class Feedback extends ModelBase
 
 	public function store($info)
 	{
-		$db = new PDO($this->get('FEEDBACK.DSN'));
+		$db = new PDO($this->getConference()->get('FEEDBACK.DSN'));
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$stm = $db->prepare('
@@ -50,8 +54,8 @@ class Feedback extends ModelBase
 	{
 		return
 			isset($_SERVER['PHP_AUTH_USER']) &&
-			$_SERVER['PHP_AUTH_USER'] == $this->get('FEEDBACK.USERNAME') &&
-			$_SERVER['PHP_AUTH_PW'] == $this->get('FEEDBACK.PASSWORD');
+			$_SERVER['PHP_AUTH_USER'] == $this->getConference()->get('FEEDBACK.USERNAME') &&
+			$_SERVER['PHP_AUTH_PW'] == $this->getConference()->get('FEEDBACK.PASSWORD');
 	}
 
 	public function requestLogin()
@@ -64,7 +68,7 @@ class Feedback extends ModelBase
 
 	public function read($from, $to)
 	{
-		$db = new PDO($this->get('FEEDBACK.DSN'));
+		$db = new PDO($this->getConference()->get('FEEDBACK.DSN'));
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$stm = $db->prepare('

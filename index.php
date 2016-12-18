@@ -1,7 +1,10 @@
 <?php
 
 if(!ini_get('short_open_tag'))
-	die('`short_open_tag = On` is required');
+	die("`short_open_tag = On` is required\n");
+
+$GLOBALS['BASEDIR'] = dirname(__FILE__);
+chdir($GLOBALS['BASEDIR']);
 
 require_once('config.php');
 require_once('lib/helper.php');
@@ -27,6 +30,22 @@ require_once('model/Upcoming.php');
 
 
 ob_start();
+if(isset($argv) && isset($argv[1]))
+{
+	require('lib/command-helper.php');
+
+	switch($argv[1])
+	{
+		case 'download':
+			require('command/download.php');
+			exit(0);
+	}
+
+	stderr("Unknown Command: %s", $argv[1]);
+	exit(1);
+}
+
+
 try {
 	if(isset($_GET['htaccess']))
 	{
@@ -59,7 +78,8 @@ try {
 		'route' => $route,
 		'canonicalurl' => forceslash(baseurl()).forceslash($route),
 		'assemblies' => 'template/assemblies/',
-		'assets' => 'assets/',
+		'assets' => forceslash('assets'),
+		'conference_assets' => '/',
 
 		'conference' => new GenericConference(),
 	));
@@ -113,7 +133,7 @@ try {
 			//   redirect
 
 			$clients = Conferences::getActiveConferences();
-			header('Location: '.forceslash( baseurl() . $clients[0]['link'] ));
+			header('Location: '.joinpath([baseurl(), $clients[0]->getSlug()]));
 			exit;
 		}
 		else
@@ -132,46 +152,48 @@ try {
 		require('view/404.php');
 		exit;
 	}
-
-	Conferences::load($mandator);
+	else {
+		// fallthrough through to the main mandator-based routes
+	}
 }
 catch(Exception $e)
 {
 	ob_clean();
-	require('view/500.php');
+	try {
+		require('view/500.php');
+		exit;
+	}
+	catch(Exception $e) {
+		header("HTTP/1.1 500 Internal Server Error");
+		header("Content-Type: text/plain");
+		print_r($e);
+		exit;
+	}
 }
 
 
-
 // PER-CONFERENCE CODE
-$GLOBALS['MANDATOR'] = $mandator;
-$conference = new Conference();
-
-// update template information
-$tpl->set(array(
-	'baseurl' => forceslash(baseurl()),
-	'route' => $route,
-	'canonicalurl' => forceslash(baseurl()).forceslash($route),
-	'assets' => '../assets/',
-
-	'conference' => $conference,
-	'feedback' => new Feedback(),
-	'schedule' => new Schedule(),
-	'subtitles' => new Subtitles(),
-));
-
 ob_start();
 try {
+	$conference = Conferences::getConference($mandator);
+
+	// update template information
+	$tpl->set(array(
+		'baseurl' => forceslash(baseurl()),
+		'route' => $route,
+		'canonicalurl' => joinpath([baseurl(), $mandator, $route]),
+		'conference_assets' => forceslash($mandator),
+
+		'conference' => $conference,
+		'feedback' => $conference->getFeedback(),
+		'schedule' => $conference->getSchedule(),
+		'subtitles' => $conference->getSubtitles(),
+	));
 
 	// ALWAYS AVAILABLE ROUTES
 	if($route == 'feedback/read')
 	{
 		require('view/feedback-read.php');
-	}
-
-	else if($route == 'schedule.json')
-	{
-		require('view/schedule-json.php');
 	}
 
 	else if($route == 'gen/main.css')
@@ -202,6 +224,11 @@ try {
 	{
 		$_GET['selection'] = 'audio';
 		require('view/multiview.php');
+	}
+
+	else if($route == 'about')
+	{
+		require('view/about.php');
 	}
 
 	// HAS-NOT-BEGUN VIEW
@@ -235,11 +262,6 @@ try {
 	else if($route == '')
 	{
 		require('view/overview.php');
-	}
-
-	else if($route == 'about')
-	{
-		require('view/about.php');
 	}
 
 	else if($route == 'feedback')

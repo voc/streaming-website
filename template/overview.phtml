@@ -78,15 +78,16 @@
 							</a>
 
 							<? if($room->hasSchedule()): ?>
+								<? $upcoming = @$upcomingTalksPerRoom[ $room->getScheduleName() ] ?: [] ?>
 								<div class="program-schedule">
 									<div class="talk current-talk">
 										<strong>Now:</strong>
-										<span class="t">none</span>
+										<span class="t"><?=h(@$upcoming['current']['title'] ?: 'none') ?></span>
 									</div>
 
 									<div class="talk next-talk">
 										<strong>Next Talk:</strong>
-										<span class="t">none</span>
+										<span class="t"><?=h(@$upcoming['next']['title'] ?: 'none') ?></span>
 									</div>
 								</div>
 							<? endif ?>

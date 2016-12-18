@@ -10,3 +10,4 @@ set_error_handler("exception_error_handler");
 
 class NotFoundException extends Exception {}
 class ScheduleException extends Exception {}
+class ConfigException extends Exception {}

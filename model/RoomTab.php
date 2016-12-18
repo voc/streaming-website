@@ -20,11 +20,13 @@ class RoomTab
 
 	public function getLink()
 	{
-		$tabs = $this->getRoom()->getTabNames();
-		if($tabs[0] == $this->getTab())
-			return rawurlencode($this->getRoom()->getSlug()).'/'.url_params();
+		$path = [$this->getRoom()->getConference()->getSlug(), $this->getRoom()->getSlug()];
 
-		return rawurlencode($this->getRoom()->getSlug()).'/'.rawurlencode($this->getTab()).'/'.url_params();
+		$tabs = $this->getRoom()->getTabNames();
+		if($tabs[0] != $this->getTab())
+			$path[] = $this->getTab();
+
+		return joinpath($path).url_params();
 	}
 
 	public function getDisplay()

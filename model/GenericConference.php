@@ -2,6 +2,11 @@
 
 class GenericConference extends Conference
 {
+	public function __construct()
+	{
+		$this->config = null;
+	}
+
 	public function hasBegun() {
 		return true;
 	}

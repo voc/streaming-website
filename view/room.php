@@ -1,6 +1,6 @@
 <?php
 
-$room = new Room($_GET['room']);
+$room = $conference->getRoom($_GET['room']);
 $stream = $room->selectStream(
 	$_GET['selection'], $_GET['language']);
 
@@ -11,5 +11,5 @@ echo $tpl->render(array(
 	'room' => $room,
 	'stream' => $stream,
 
-	'schedule' => new Schedule(),
+	'schedule' => $conference->getSchedule(),
 ));

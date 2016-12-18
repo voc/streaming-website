@@ -1,16 +1,25 @@
 <?php
 
-class Overview extends ModelBase
+class Overview
 {
+	public function __construct(Conference $conference)
+	{
+		$this->conference = $conference;
+	}
+
+	public function getConference() {
+		return $this->conference;
+	}
+
 	public function getGroups() {
 		$groups = array();
 
-		foreach($this->get('OVERVIEW.GROUPS') as $group => $rooms)
+		foreach($this->getConference()->get('OVERVIEW.GROUPS') as $group => $rooms)
 		{
 			foreach($rooms as $room)
 			{
 				try {
-					$groups[$group][] = new Room($room);
+					$groups[$group][] = $this->getConference()->getRoom($room);
 				}
 				catch(NotFoundException $e)
 				{

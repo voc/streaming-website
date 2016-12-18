@@ -1,11 +1,11 @@
 <?php
 
-$feedback = new Feedback();
-if(!$feedback->isEnabled())
+if(!$conference->hasFeedback())
 	throw new NotFoundException('Feedback is disabled');
 
 $info = $_POST;
 
+$feedback = $conference->getFeedback();
 if($feedback->validate($info))
 {
 	$feedback->store($info);

@@ -18,14 +18,20 @@ function baseurl()
 		if(startswith('//', $base))
 			$base = proto().':'.$base;
 
-		return forceslash(forceslash($base).@$GLOBALS['MANDATOR']);
+		return forceslash($base);
 	}
 
 	$base  = ssl() ? 'https://' : 'http://';
 	$base .= $_SERVER['HTTP_HOST'];
 	$base .=  forceslash(dirname($_SERVER['SCRIPT_NAME']));
 
-	return forceslash(forceslash($base).@$GLOBALS['MANDATOR']);
+	return forceslash($base);
+}
+
+function joinpath($parts)
+{
+	$parts = array_map('forceslash', $parts);
+	return rtrim(implode('', $parts), '/');
 }
 
 function forceslash($url)
@@ -107,4 +113,35 @@ function url_params()
 		return '?forceopen=yess';
 
 	return '';
+}
+
+/**
+ * returns the fielst element matching $predicate or null, if none matched.
+ * $predicate is a callable that receives one array value at a time and can
+ * return a bool'ish value
+ */
+function array_filter_first($array, $predicate)
+{
+	foreach ($array as $value) {
+		if( $predicate($value) ) {
+			return $value;
+		}
+	}
+
+	return null;
+}
+/**
+ * returns the fielst element matching $predicate or null, if none matched.
+ * $predicate is a callable that receives one array value at a time and can
+ * return a bool'ish value
+ */
+function array_filter_last($array, $predicate)
+{
+	foreach (array_reverse($array) as $value) {
+		if( $predicate($value) ) {
+			return $value;
+		}
+	}
+
+	return null;
 }

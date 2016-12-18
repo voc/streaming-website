@@ -1,107 +1,92 @@
 <?php
 
-class Room extends ModelBase
+class Room
 {
 	private $slug;
+	private $conference;
 
-	public function __construct($slug)
+	public function __construct(Conference $conference, $slug)
 	{
+		$this->conference = $conference;
+
 		if(preg_match('/[^a-z0-9_\-]/i', $slug))
 			throw new Exception('Room Slug contains invalid Characters: "'.$slug.'"');
 
-		if(! $this->has('ROOMS.'.$slug))
+		if(!$this->getConference()->hasRoom($slug))
 			throw new NotFoundException('Room '.$slug);
 
 		$this->slug = $slug;
 	}
 
-	public static function exists($slug)
-	{
-		return ModelBase::staticHas('ROOMS.'.$slug);
+
+	public function getConference() {
+		return $this->conference;
 	}
-
-	public static function createIfExists($room)
-	{
-		if(Room::exists($room))
-			return new Room($room);
-
-		return null;
-	}
-
-	public static function rooms()
-	{
-		$rooms = array();
-		foreach(ModelBase::staticGet('ROOMS') as $slug => $room)
-			$rooms[] = new Room($slug);
-
-		return $rooms;
-	}
-
 
 	public function getSlug() {
 		return $this->slug;
 	}
 
 	public function getThumb() {
-		return '../thumbs/'.$this->getStream().'.png';
+		return joinpath(['/', 'thumbs', $this->getStream().'.png']);
 	}
 
 	public function getLink() {
-		return rawurlencode($this->getSlug()).'/'.url_params();
+		return joinpath([$this->getConference()->getSlug(), $this->getSlug()]).url_params();
 	}
 
 	public function getStream() {
-		return $this->get('ROOMS.'.$this->getSlug().'.STREAM', $this->getSlug());
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.STREAM', $this->getSlug());
 	}
 
 	public function getScheduleName() {
-		return $this->get('ROOMS.'.$this->getSlug().'.SCHEDULE_NAME', $this->getSlug());
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SCHEDULE_NAME', $this->getDisplay());
 	}
 
 	public function getDisplay() {
-		return $this->get('ROOMS.'.$this->getSlug().'.DISPLAY', $this->getSlug());
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.DISPLAY', $this->getSlug());
 	}
 
 
 
 	public function hasStereo() {
-		return $this->get('ROOMS.'.$this->getSlug().'.STEREO');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.STEREO');
 	}
 
 	public function hasPreview() {
-		return $this->get('ROOMS.'.$this->getSlug().'.PREVIEW');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.PREVIEW');
 	}
 
 	public function requestsWide() {
-		return $this->get('ROOMS.'.$this->getSlug().'.WIDE');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.WIDE');
 	}
 
 	public function hasSchedule() {
-		return $this->get('ROOMS.'.$this->getSlug().'.SCHEDULE') && $this->has('SCHEDULE');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SCHEDULE') && $this->getConference()->has('SCHEDULE');
 	}
 
 	public function hasSubtitles() {
 		return
-			$this->get('ROOMS.'.$this->getSlug().'.SUBTITLES') &&
-			$this->has('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID') &&
-			$this->has('SUBTITLES');
+			$this->getConference()->get('ROOMS.'.$this->getSlug().'.SUBTITLES') &&
+			$this->getConference()->has('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID') &&
+			$this->getConference()->has('SUBTITLES');
 	}
 	public function getSubtitlesRoomId() {
-		return $this->get('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID');
 	}
 
 	public function hasFeedback() {
-		return $this->get('ROOMS.'.$this->getSlug().'.FEEDBACK') && $this->has('FEEDBACK');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.FEEDBACK') && $this->getConference()->has('FEEDBACK');
 	}
 
 
 	public function hasTwitter() {
-		return $this->get('ROOMS.'.$this->getSlug().'.TWITTER') && $this->has('TWITTER');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TWITTER') && $this->getConference()->has('TWITTER');
 	}
 
 	public function getTwitterDisplay() {
 		return sprintf(
-			$this->get('ROOMS.'.$this->getSlug().'.TWITTER_CONFIG.DISPLAY', $this->get('TWITTER.DISPLAY')),
+			$this->getConference()->get('ROOMS.'.$this->getSlug().'.TWITTER_CONFIG.DISPLAY', $this->getConference()->get('TWITTER.DISPLAY')),
 			$this->getSlug()
 		);
 	}
@@ -115,26 +100,26 @@ class Room extends ModelBase
 
 	public function getTwitterText() {
 		return sprintf(
-			$this->get('ROOMS.'.$this->getSlug().'.TWITTER_CONFIG.TEXT', $this->get('TWITTER.TEXT')),
+			$this->getConference()->get('ROOMS.'.$this->getSlug().'.TWITTER_CONFIG.TEXT', $this->getConference()->get('TWITTER.TEXT')),
 			$this->getSlug()
 		);
 	}
 
 
 	public function hasIrc() {
-		return $this->get('ROOMS.'.$this->getSlug().'.IRC') && $this->has('IRC');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.IRC') && $this->getConference()->has('IRC');
 	}
 
 	public function getIrcDisplay() {
 		return sprintf(
-			$this->get('ROOMS.'.$this->getSlug().'.IRC_CONFIG.DISPLAY', $this->get('IRC.DISPLAY')),
+			$this->getConference()->get('ROOMS.'.$this->getSlug().'.IRC_CONFIG.DISPLAY', $this->getConference()->get('IRC.DISPLAY')),
 			$this->getSlug()
 		);
 	}
 
 	public function getIrcUrl() {
 		return sprintf(
-			$this->get('ROOMS.'.$this->getSlug().'.IRC_CONFIG.URL', $this->get('IRC.URL')),
+			$this->getConference()->get('ROOMS.'.$this->getSlug().'.IRC_CONFIG.URL', $this->getConference()->get('IRC.URL')),
 			rawurlencode($this->getSlug())
 		);
 	}
@@ -146,16 +131,16 @@ class Room extends ModelBase
 
 
 	public function hasEmbed() {
-		return $this->get('ROOMS.'.$this->getSlug().'.EMBED') && $this->get('EMBED');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.EMBED') && $this->getConference()->get('EMBED');
 	}
 
 
 	public function hasSdVideo() {
-		return $this->get('ROOMS.'.$this->getSlug().'.SD_VIDEO');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SD_VIDEO');
 	}
 
 	public function hasHdVideo() {
-		return $this->get('ROOMS.'.$this->getSlug().'.HD_VIDEO');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.HD_VIDEO');
 	}
 
 	public function hasVideo() {
@@ -163,15 +148,15 @@ class Room extends ModelBase
 	}
 
 	public function hasAudio() {
-		return $this->get('ROOMS.'.$this->getSlug().'.AUDIO');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.AUDIO');
 	}
 
 	public function hasSlides() {
-		return $this->get('ROOMS.'.$this->getSlug().'.SLIDES');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SLIDES');
 	}
 
 	public function hasMusic() {
-		return $this->get('ROOMS.'.$this->getSlug().'.MUSIC');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.MUSIC');
 	}
 
 	public function hasDash() {
@@ -179,7 +164,7 @@ class Room extends ModelBase
 	}
 
 	public function hasTranslation() {
-		return $this->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
 	}
 
 	public function getSelectionNames()

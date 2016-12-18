@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['CONFIG']['CONFERENCE'] = array(
+$CONFIG['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
 	 * mit einem Text der Art "hat noch nicht angefangen" angezeigt.
@@ -97,12 +97,12 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 /**
  * Konfiguration der Stream-Übersicht auf der Startseite
  */
-$GLOBALS['CONFIG']['OVERVIEW'] = array(
+$CONFIG['OVERVIEW'] = array(
 	/**
 	 * Abschnitte aud der Startseite und darunter aufgeführte Räume
 	 * Es können beliebig neue Gruppen und Räume hinzugefügt werden
 	 *
-	 * Die Räume müssen in $GLOBALS['CONFIG']['ROOMS'] konfiguriert werden,
+	 * Die Räume müssen in $CONFIG['ROOMS'] konfiguriert werden,
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
@@ -117,7 +117,7 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 /**
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
-$GLOBALS['CONFIG']['ROOMS'] = array(
+$CONFIG['ROOMS'] = array(
 	
 	'lounge' => array(
 		'DISPLAY' => 'Lounge',
@@ -140,9 +140,9 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
  * IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
  * existieren sein. ggf. einfach auf true setzen:
  *
- *   $GLOBALS['CONFIG']['IRC'] = true
+ *   $CONFIG['IRC'] = true
  */
-$GLOBALS['CONFIG']['IRC'] = array(
+$CONFIG['IRC'] = array(
 	/**
 	 * Anzeigetext für die IRC-Links.
 	 *
@@ -171,9 +171,9 @@ $GLOBALS['CONFIG']['IRC'] = array(
  * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
  * existieren sein. ggf. einfach auf true setzen:
  *
- *   $GLOBALS['CONFIG']['TWITTER'] = true
+ *   $CONFIG['TWITTER'] = true
  */
-$GLOBALS['CONFIG']['TWITTER'] = array(
+$CONFIG['TWITTER'] = array(
 	/**
 	 * Anzeigetext für die Twitter-Links.
 	 *
@@ -191,3 +191,6 @@ $GLOBALS['CONFIG']['TWITTER'] = array(
 	 */
 	'TEXT' => '#zaunei2016',
 );
+
+
+return $CONFIG;
