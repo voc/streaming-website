@@ -40,7 +40,7 @@ class Room
 	}
 
 	public function getScheduleName() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SCHEDULE_NAME', $this->getSlug());
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SCHEDULE_NAME', $this->getDisplay());
 	}
 
 	public function getDisplay() {
