@@ -160,7 +160,7 @@ class Room
 	}
 
 	public function hasDash() {
-		return $this->get('ROOMS.'.$this->getSlug().'.DASH');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.DASH');
 	}
 
 	public function hasTranslation() {
