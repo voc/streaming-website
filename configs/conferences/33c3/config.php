@@ -110,7 +110,7 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Lecture Rooms' => array(
+		'Live' => array(
 			'hall1',
 			'hall2',
 			'hallg',
