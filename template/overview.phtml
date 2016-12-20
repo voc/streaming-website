@@ -1,17 +1,11 @@
 <? include("$assemblies/banner.phtml") ?>
 
 <div class="container">
-	<div class="row headline">
-		<div class="col-xs-12">
-			<h1><?=h($title)?></h1>
-		</div>
-	</div>
-
 	<? $i = 0; foreach($overview->getGroups() as $group => $rooms): ?>
 		<? if($group): ?>
 			<div class="row">
 				<div class="col-xs-12">
-					<h2><?=h($group)?></h2>
+					<h2><span><?=h($group)?></span></h2>
 				</div>
 			</div>
 		<? endif ?>
@@ -111,7 +105,7 @@
 		<div class="row recordings">
 
 			<div class="col-xs-12">
-				<h2>Recordings</h2>
+				<h2><span>Recordings</span></h2>
 			</div>
 
 			<? if($conference->hasReleases()): ?>

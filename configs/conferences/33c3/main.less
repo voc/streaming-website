@@ -1,10 +1,14 @@
 @import "../../../assets/css/_structure.less";
 
+
 // conference specific styles here
-@darker-grey:   lighten(black, 15%);
-@dark-grey:     lighten(black, 20%);
-@light-grey:    lighten(black, 30%);
-@lighter-grey:  lighten(black, 40%);
+@turquoise: #009c8b;
+@darker-grey:   #262626;
+@dark-grey:     lighten(@darker-grey, 20%);
+@light-grey:    lighten(@darker-grey, 30%);
+@lighter-grey:  lighten(@darker-grey, 40%);
+
+@turquoise-dot: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAMAAABFaP0WAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURQCciwDkomQAAAALSURBVAjXY2AAAQAABgABZvTJbAAAAABJRU5ErkJggg==";
 
 // often configured values (and their defaults):
 //
@@ -23,19 +27,6 @@
 
 @navbar-default-link-color:       white;
 //@navbar-default-link-hover-color: @link-hover-color;
-
-@font-face {
-	font-family: 'Roboto Condensed';
-	font-style: normal;
-	font-weight: 300;
-	src: url('roboto-condensed-v13-latin-300.eot'); /* IE9 Compat Modes */
-	src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'),
-			 url('roboto-condensed-v13-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			 url('roboto-condensed-v13-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-			 url('roboto-condensed-v13-latin-300.woff') format('woff'), /* Modern Browsers */
-			 url('roboto-condensed-v13-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-			 url('roboto-condensed-v13-latin-300.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
-}
 
 body {
 	background-color: black;
@@ -58,8 +49,26 @@ body {
 }
 
 h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
-	font-family: 'Roboto Condensed';
-	font-weight: 300;
+	font-family: sans-serif;
+}
+
+.overview {
+	h2 {
+		text-align: center;
+		background-image: url(@turquoise-dot);
+		background-repeat: repeat-x;
+		background-position: 0 50%;
+
+		text-transform: uppercase;
+		font-weight: bold;
+
+		margin: 60px 0 30px 0;
+
+		span {
+			background-color: black;
+			padding: 0 15px;
+		}
+	}
 }
 
 .navbar-brand {
