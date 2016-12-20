@@ -2,23 +2,9 @@
 
 header('Content-Type: application/json');
 
-$conferences = Conferences::getActiveConferences();
-
-$struct = array();
-if(isset($GLOBALS['CONFIG']))
-	$saved_config = $GLOBALS['CONFIG'];
-
-foreach ($conferences as $conference)
+foreach (Conferences::getActiveConferences() as $conference)
 {
-	/*
-	  ok. das ist so hacky. EIGENTLICH müsste man aus ModelBase
-	  das $GLOBALS tilgen und von der api ne v2 releasen, welche
-	  conferences als eigenes Objekt betrachtet
-	*/
-	$GLOBALS['CONFIG'] = $conference['CONFIG'];
-	$GLOBALS['MANDATOR'] = $conference['slug'];
-
-	$overview = new Overview();
+	$overview = $conference->getOverview();
 
 	foreach($overview->getGroups() as $group => $rooms)
 	{
@@ -99,14 +85,11 @@ foreach ($conferences as $conference)
 		}
 
 		$struct[] = array(
-			'conference' => $conference['title'],
+			'conference' => $conference->getTitle(),
 			'group' => $group,
 			'rooms' => $roomstruct,
 		);
 	}
 }
-
-if(isset($saved_config))
-	$GLOBALS['CONFIG'] = $saved_config;
 
 echo json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
