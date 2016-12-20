@@ -6,6 +6,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 {
 	$overview = $conference->getOverview();
 
+	$groupstruct = array();
 	foreach($overview->getGroups() as $group => $rooms)
 	{
 		$roomstruct = array();
@@ -84,12 +85,21 @@ foreach (Conferences::getActiveConferences() as $conference)
 			);
 		}
 
-		$struct[] = array(
-			'conference' => $conference->getTitle(),
+		$groupstruct[] = array(
 			'group' => $group,
 			'rooms' => $roomstruct,
 		);
 	}
+	$struct[] = array(
+		'conference' => $conference->getTitle(),
+		'slug' => $conference->getSlug(),
+		'author' => $conference->getAuthor(),
+		'description' => $conference->getDescription(),
+		'keywords' => $conference->getKeywords(),
+		'startsAt' => $conference->startsAt() ? $conference->startsAt()->format(DateTime::ISO8601) : null,
+		'endsAt' => $conference->endsAt() ? $conference->endsAt()->format(DateTime::ISO8601) : null,
+		'groups' => $groupstruct,
+	);
 }
 
 echo json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);

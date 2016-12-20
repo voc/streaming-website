@@ -72,14 +72,14 @@ see [deploy.sh](deploy.sh)
 
 ## JSON-API
 
-Unter der URL http://streaming.media.ccc.de/streams/v1.json bietet die
+Unter der URL http://streaming.media.ccc.de/streams/v2.json bietet die
 Steaming-Webseite eine Übersicht über alle konfigurierten Räume und Streams in
 einem maschinenlesbaren Format an. Dieses kann z.B. genutzt werden, um in den
 diversen Anwendungen, die sich rund um das Konferenzgeschehen entwickelt haben,
 Player und Links zu Liveübertragungen anzubieten.
 
 Wie die URL vermuten lässt, ist die API versioniert. Dies bedeutet, dass in
-der `v1.json` keine Felder *entfernt werden* oder ihre *Bedeutung ändern* – es
+der `v2.json` keine Felder *entfernt werden* oder ihre *Bedeutung ändern* – es
 können aber durchaus *neue Felder* hinzukommen. Eine formalere Spezifikation
 des JSON-Formats ist tbd. Ein Beispiel kann [hier
-betrachtet](https://gist.github.com/MaZderMind/d5737ab867ade7888cb4) werden.
+betrachtet](https://gist.github.com/MaZderMind/a91f242efb2f446a2237d4596896efd6) werden.
