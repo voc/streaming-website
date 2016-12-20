@@ -11,6 +11,17 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
+echo ""
+DEPLOY_BRANCH=`git rev-parse --abbrev-ref HEAD`
+if [ "x$DEPLOY_BRANCH" != "xmaster" ]; then
+	echo "You're currently on branch $DEPLOY_BRANCH."
+	echo "Are you sure you want to deoloy that branch (and not master)? then type yes"
+	read -p "" input
+	if [ "x$input" != "xyes" ]; then
+		exit 2
+	fi
+fi
+
 if [ `git rev-parse --verify origin/$DEPLOY_BRANCH` != `git rev-parse --verify $DEPLOY_BRANCH` ]; then
 	echo "You have commits on the master branch not pushed to origin yet. They would not be deployed."
 	echo "do you still which to deploy what's already in the repo? then type yes"
@@ -32,7 +43,9 @@ fi
 ssh -A voc@lb.dus.c3voc.de 'sudo sh' << EOT
 cd /srv/nginx/streaming-website
 git fetch origin
-git reset --hard origin/master
+git reset --hard HEAD
+git checkout $DEPLOY_BRANCH
+git reset --hard origin/$DEPLOY_BRANCH
 chown -R voc:staff .
 chown -R downloader configs
 ./clear_cache
