@@ -652,7 +652,7 @@ $CONFIG['EXTRA_FILES'] = array(
 	'everything.schedule.json' => 'http://data.c3voc.de/33C3/everything.schedule.json',
 
 	'workshops.schedule.xml' => 'http://data.c3voc.de/33C3/workshops.schedule.xml',
-	'workshops.schedule.xml' => 'http://data.c3voc.de/33C3/workshops.schedule.json',
+	'workshops.schedule.json' => 'http://data.c3voc.de/33C3/workshops.schedule.json',
 );
 
 return $CONFIG;
