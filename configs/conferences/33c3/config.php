@@ -569,12 +569,12 @@ $CONFIG['SUBTITLES'] = array(
 	/**
 	 * URL des L2S2 Primus-Servers
 	 */
-	'PRIMUS_URL' => 'https://subtitles.media.ccc.de/',
+	'PRIMUS_URL' => 'https://live.c3subtitles.de/',
 
 	/**
 	 * URL des L2S2 Frontend-Servers
 	 */
-	'FRONTEND_URL' => 'https://subtitles.media.ccc.de/',
+	'FRONTEND_URL' => 'https://live.c3subtitles.de/',
 );
 
 /**
