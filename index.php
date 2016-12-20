@@ -107,6 +107,12 @@ try {
 		exit;
 	}
 
+	else if($route == 'streams/v2.json')
+	{
+		require('view/streams-json-v2.php');
+		exit;
+	}
+
 	else if($route == 'about')
 	{
 		// global about-page
