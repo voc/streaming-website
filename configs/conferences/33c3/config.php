@@ -647,6 +647,12 @@ $CONFIG['EXTRA_FILES'] = array(
 	'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.json',
 	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.ics',
 	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.xcal',
+
+	'everything.schedule.xml' => 'http://data.c3voc.de/33C3/everything.schedule.xml',
+	'everything.schedule.json' => 'http://data.c3voc.de/33C3/everything.schedule.json',
+
+	'workshops.schedule.xml' => 'http://data.c3voc.de/33C3/workshops.schedule.xml',
+	'workshops.schedule.xml' => 'http://data.c3voc.de/33C3/workshops.schedule.json',
 );
 
 return $CONFIG;
