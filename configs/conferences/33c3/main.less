@@ -162,6 +162,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 	}
 }
 
+
 .navbar-brand {
 	font-size: 20px;
 }
@@ -195,40 +196,6 @@ nav .navbar-form {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0;
-}
-
-nav .button-wrapper > .btn {
-	width: 70px;
-	height: 70px;
-	margin-left: -1px;
-	border-color: white;
-	border-top: 0;
-	border-bottom: 0;
-	border-radius: 0;
-	background: url(icons.png) no-repeat left top;
-	text-indent: -9999px;
-	display: block;
-	float: left;
-}
-
-nav .button-wrapper > .btn-ssl {
-	background-position: -72px top;
-}
-
-nav .button-wrapper > .btn-ssl.btn-success {
-	background-position: left top;
-}
-
-nav .button-wrapper > .feedback {
-	background-position: -216px top;
-}
-
-nav .button-wrapper > .releases {
-	background-position: -144px top;
-}
-
-nav .button-wrapper > .about {
-	background-position: -288px top;
 }
 
 .well a {
@@ -265,3 +232,74 @@ body.multiview .cell {
 .schedule .block.pause {
 	color: black !important;
 }
+
+
+
+.svg-replace(@file) {
+	background-image: url(@file);
+	background-repeat: no-repeat;
+	color: transparent;
+	background-position: center;
+
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
+}
+
+.overview {
+	.group-live h2 > span {
+		.svg-replace("svgs/f-live.svg");
+	}
+	.group-live-music h2 > span {
+		.svg-replace("svgs/f-live-music.svg");
+	}
+	.recordings h2 > span {
+		.svg-replace("svgs/f-recordings.svg");
+	}
+
+	.navbar-brand {
+
+	}
+}
+
+
+
+nav .button-wrapper > .btn {
+	height: 70px;
+
+	border-color: black;
+	&:hover {
+		border-color: white;
+	} 
+
+	border-top: 0;
+	border-bottom: 0;
+	border-radius: 0;
+
+	background-color: black;
+
+	&.btn-ssl {
+		.svg-replace("svgs/tls-enabled.svg");
+		&.btn-warning {
+			.svg-replace("svgs/tls-disabled.svg");
+		}
+		width: 90px;
+	}
+	&.feedback {
+		.svg-replace("svgs/f-feedback.svg");
+		width: 150px;
+	}
+	&.releases {
+		.svg-replace("svgs/f-releases.svg");
+		width: 150px;
+	}
+	&.about {
+		.svg-replace("svgs/f-info.svg");
+		width: 150px;
+	}
+
+	display: block;
+	float: left;
+}
+
