@@ -253,7 +253,7 @@ body.multiview .cell {
 .svg-replace(@file) {
 	background-image: url(@file);
 	background-repeat: no-repeat;
-	color: transparent;
+	color: transparent !important;
 	background-position: center;
 
 	-webkit-user-select: none;  /* Chrome all / Safari all */
@@ -274,7 +274,9 @@ body.multiview .cell {
 	}
 
 	.navbar-brand {
-
+		.svg-replace("assets/f-33c3-streaming.svg");
+		width: 290px;
+		height: 75px
 	}
 }
 
@@ -311,7 +313,7 @@ nav .button-wrapper > .btn {
 	}
 	&.about {
 		.svg-replace("assets/f-info.svg");
-		width: 150px;
+		width: 80px;
 	}
 
 	display: block;

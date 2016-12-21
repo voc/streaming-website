@@ -1,1 +1,63 @@
-<svg width="93" height="15" viewBox="0 0 93 15" xmlns="http://www.w3.org/2000/svg"><title>Releases</title><path d="M.93 14.278h2.96V8.9h1.47l2.81 5.374h3.55L8.3 8.6a3.312 3.312 0 0 0 2.16-1.263 3.912 3.912 0 0 0 .75-2.421 4.272 4.272 0 0 0-.41-1.965 3.4 3.4 0 0 0-1.1-1.253 4.666 4.666 0 0 0-1.62-.665 9.119 9.119 0 0 0-1.94-.2H.93v13.445zM3.89 3.34h1.94c.274 0 .548.02.82.057.257.032.507.106.74.218.213.108.395.268.53.465.152.245.225.53.21.817.019.304-.066.605-.24.855-.156.2-.364.354-.6.446a2.645 2.645 0 0 1-.8.171c-.3.019-.58.029-.85.029H3.89V3.34zm9.46 10.938h9.48v-2.735h-6.52V8.809h5.83V6.074h-5.83V3.568h6.18V.833h-9.14v13.445zm11.96 0h8.45v-2.735h-5.48V.833h-2.97v13.445zm10.2 0h9.48v-2.735h-6.52V8.809h5.83V6.074h-5.83V3.568h6.18V.833h-9.14v13.445zm10.46 0h3.27l1.12-2.848h5.22l1.16 2.848h3.34L54.23.833h-2.44l-5.82 13.445zm8.61-5.355h-3.29l1.63-4.178 1.66 4.178zm15.53-7.026A5.088 5.088 0 0 0 68.19.815a7.529 7.529 0 0 0-2.2-.323 6.737 6.737 0 0 0-1.92.275 4.9 4.9 0 0 0-1.64.826 3.983 3.983 0 0 0-1.57 3.266 3.152 3.152 0 0 0 .47 1.8c.303.449.703.825 1.17 1.1.474.283.981.507 1.51.665.55.165 1.05.329 1.52.494.419.139.813.34 1.17.6.306.222.482.581.47.959.005.222-.057.441-.18.627-.124.181-.288.33-.48.437a2.483 2.483 0 0 1-.66.256c-.73.17-1.497.084-2.17-.247a3.142 3.142 0 0 1-1.15-.94l-2.1 2.317a6.065 6.065 0 0 0 2.08 1.291 7.221 7.221 0 0 0 2.43.4 7.3 7.3 0 0 0 1.99-.266 4.722 4.722 0 0 0 1.65-.816 3.925 3.925 0 0 0 1.13-1.386 4.3 4.3 0 0 0 .42-1.956 3.363 3.363 0 0 0-.46-1.88 3.424 3.424 0 0 0-1.15-1.12 5.971 5.971 0 0 0-1.49-.646c-.53-.152-1.03-.3-1.49-.456a4.445 4.445 0 0 1-1.15-.551 1.075 1.075 0 0 1-.45-.931c-.009-.23.058-.457.19-.646.126-.18.295-.326.49-.427.205-.108.423-.188.65-.237.217-.049.438-.074.66-.076.4.005.795.08 1.17.218.384.127.724.36.98.674l2.03-2.219zm2.34 12.381h9.47v-2.735h-6.51V8.809h5.83V6.074h-5.83V3.568h6.17V.833h-9.13v13.445zM92.97 1.9A5.088 5.088 0 0 0 91.05.818a7.48 7.48 0 0 0-2.2-.323 6.737 6.737 0 0 0-1.92.275 5 5 0 0 0-1.64.826c-.472.37-.86.836-1.14 1.367a4.1 4.1 0 0 0-.43 1.9 3.152 3.152 0 0 0 .47 1.8c.303.449.703.825 1.17 1.1.477.283.988.507 1.52.665.54.165 1.05.329 1.52.494.415.14.806.343 1.16.6.306.222.482.581.47.959.005.222-.057.441-.18.627-.124.181-.288.33-.48.437-.205.12-.428.206-.66.256a3.262 3.262 0 0 1-2.17-.247 3.031 3.031 0 0 1-1.14-.94l-2.11 2.317c.6.57 1.312 1.01 2.09 1.291.78.273 1.603.408 2.43.4a7.226 7.226 0 0 0 1.98-.266 4.722 4.722 0 0 0 1.65-.816 3.821 3.821 0 0 0 1.13-1.386 4.3 4.3 0 0 0 .42-1.956 3.45 3.45 0 0 0-.45-1.88 3.617 3.617 0 0 0-1.15-1.12 6.308 6.308 0 0 0-1.49-.646c-.54-.152-1.03-.3-1.49-.456a4.148 4.148 0 0 1-1.15-.551 1.179 1.179 0 0 1-.27-1.576 1.45 1.45 0 0 1 .49-.427 2.67 2.67 0 0 1 .65-.237 3.1 3.1 0 0 1 .67-.076 3.5 3.5 0 0 1 1.16.218c.384.127.724.36.98.674L92.97 1.9z" fill="#FFF" fill-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="92.464142"
+   height="14.1825"
+   viewBox="0 0 92.464141 14.1825"
+   id="svg4152"
+   version="1.1">
+  <metadata
+     id="metadata4160">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4158" />
+  <g
+     id="text4162"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:559.99999046%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+    <path
+       id="path4136"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="m 5.7220459e-8,13.839375 2.973750042779541,0 0,-5.394688 1.4678125,0 2.82125,5.394688 3.5646874,0 -3.4312499,-5.699688 c 1.90625,-0.343125 2.9165629,-1.8109375 2.9165629,-3.698125 0,-3.1453125 -2.3256254,-4.09843746 -5.0896879,-4.09843746 l -5.223125042779542,0 0,13.49625046 z M 2.9737501,2.8593745 l 1.944375,0 c 1.0865625,0 2.3065625,0.2096875 2.3065625,1.563125 0,1.4678125 -1.410625,1.5059375 -2.4971875,1.5059375 l -1.75375,0 0,-3.0690625 z" />
+    <path
+       id="path4138"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="m 21.987402,13.839375 -9.512187,0 0,-2.745 6.538437,0 0,-2.7450005 -5.852187,0 0,-2.745 5.852187,0 0,-2.51625 -6.195312,0 0,-2.74499996 9.169062,0 0,13.49625046 z" />
+    <path
+       id="path4140"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="m 24.500972,13.839375 8.482812,0 0,-2.745 -5.509062,0 0,-10.75125046 -2.97375,0 0,13.49625046 z" />
+    <path
+       id="path4142"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="m 34.739619,13.839375 9.512188,0 0,-2.745 -6.538438,0 0,-2.7450005 5.852188,0 0,-2.745 -5.852188,0 0,-2.51625 6.195313,0 0,-2.74499996 -9.169063,0 0,13.49625046 z" />
+    <path
+       id="path4144"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="m 45.259439,13.839375 3.27875,0 1.124687,-2.859375 5.242188,0 1.162812,2.859375 3.355,0 -5.87125,-13.49625046 -2.459062,0 -5.833125,13.49625046 z m 8.635312,-5.3756255 -3.297812,0 1.639375,-4.19375 1.658437,4.19375 z" />
+    <path
+       id="path4146"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="M 69.473281,1.4106245 C 68.329531,0.40031204 66.861719,-4.5776367e-7 65.336719,-4.5776367e-7 62.687031,-4.5776367e-7 60.189844,1.505937 60.189844,4.3843745 c 0,4.49875 6.32875,3.164375 6.32875,5.6425005 0,0.953125 -1.086563,1.410625 -2.05875,1.410625 -0.99125,0 -1.9825,-0.476563 -2.5925,-1.277188 l -2.115938,2.325625 c 1.277188,1.181875 2.802188,1.696563 4.536875,1.696563 2.783125,0 5.204063,-1.429688 5.204063,-4.441563 0,-4.7275 -6.214375,-3.1453125 -6.214375,-5.604375 0,-1.0103125 1.162812,-1.3915625 2.001562,-1.3915625 0.724375,0 1.6775,0.2859375 2.154063,0.8959375 l 2.039687,-2.2303125 z" />
+    <path
+       id="path4148"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="m 81.334326,13.839375 -9.512187,0 0,-2.745 6.538437,0 0,-2.7450005 -5.852187,0 0,-2.745 5.852187,0 0,-2.51625 -6.195312,0 0,-2.74499996 9.169062,0 0,13.49625046 z" />
+    <path
+       id="path4150"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.0625px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';letter-spacing:0px;fill:#ffffff"
+       d="M 92.445083,1.4106245 C 91.301333,0.40031204 89.833521,-4.5776367e-7 88.308521,-4.5776367e-7 85.658833,-4.5776367e-7 83.161646,1.505937 83.161646,4.3843745 c 0,4.49875 6.32875,3.164375 6.32875,5.6425005 0,0.953125 -1.086563,1.410625 -2.05875,1.410625 -0.99125,0 -1.9825,-0.476563 -2.5925,-1.277188 l -2.115938,2.325625 c 1.277188,1.181875 2.802188,1.696563 4.536875,1.696563 2.783125,0 5.204063,-1.429688 5.204063,-4.441563 0,-4.7275 -6.214375,-3.1453125 -6.214375,-5.604375 0,-1.0103125 1.162812,-1.3915625 2.001562,-1.3915625 0.724375,0 1.6775,0.2859375 2.154063,0.8959375 l 2.039687,-2.2303125 z" />
+  </g>
+</svg>

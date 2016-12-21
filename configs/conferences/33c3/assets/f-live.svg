@@ -1,1 +1,50 @@
-<svg width="63" height="22" viewBox="0 0 63 22" xmlns="http://www.w3.org/2000/svg"><title>Live</title><path d="M.941 21.379h13.35v-4.32h-8.67V.139H.941v21.24zm15.869 0h4.68V.139h-4.68v21.24zm15.33 0h3.75L44.65.139h-5.01l-5.34 13.92h-.06L28.99.139h-5.34l8.49 21.24zm14.91 0h14.97v-4.32H51.73v-4.32h9.21v-4.32h-9.21v-3.96h9.75V.139H47.05v21.24z" fill="#FFF" fill-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 61.083281 21.24"
+   height="21.24"
+   width="61.083282">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Live_Music</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <title
+     id="title4">Live_Music</title>
+  <g
+     transform="translate(-8.5830687e-8,-0.54000069)"
+     id="text3340"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:559.99999046%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+    <path
+       id="path3376"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:30px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';fill:#ffffff"
+       d="M 8.5830688e-8,21.780001 13.35,21.780001 l 0,-4.32 -8.6699999,0 0,-16.92000031 -4.680000014169317,0 0,21.24000031 z" />
+    <path
+       id="path3378"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:30px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';fill:#ffffff"
+       d="m 15.873281,21.780001 4.68,0 0,-21.24000031 -4.68,0 0,21.24000031 z" />
+    <path
+       id="path3380"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:30px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';fill:#ffffff"
+       d="m 31.229531,21.780001 3.75,0 8.76,-21.24000031 -5.01,0 -5.34,13.92000031 -0.06,0 -5.25,-13.92000031 -5.34,0 8.49,21.24000031 z" />
+    <path
+       id="path3382"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:30px;font-family:'Avenir LT Std';-inkscape-font-specification:'Avenir LT Std Ultra-Bold';fill:#ffffff"
+       d="m 61.083281,21.780001 -14.97,0 0,-4.32 10.29,0 0,-4.32 -9.21,0 0,-4.3200003 9.21,0 0,-3.96 -9.75,0 0,-4.32000001 14.43,0 0,21.24000031 z" />
+  </g>
+</svg>
