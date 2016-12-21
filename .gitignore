@@ -1,8 +1,9 @@
-.sass-cache
-build
-assets/css/main.css
-assets/css/main.dep
-assets/css/main.map
+/build
+/assets/css/main.css
+/assets/css/main.dep
+/assets/css/main.map
 *.swp
 *.save
-thumbs
+/thumbs
+/configs/conferences/**/*schedule*
+/configs/upcoming.json*
