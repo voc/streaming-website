@@ -79,7 +79,10 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	//'BANNER_HTML' => '33C3 – works for me',
+	'BANNER_HTML' => '
+		<h1>33C3 – works for me</h1>
+		<video src="configs/conferences/33c3/assets/logo.mp4" autoplay="autoplay" />
+	',
 
 	/**
 	 * Link zu den Recordings
