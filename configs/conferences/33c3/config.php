@@ -81,7 +81,10 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'BANNER_HTML' => '
 		<h1>33C3 – works for me</h1>
-		<video src="configs/conferences/33c3/assets/logo.mp4" autoplay="autoplay" />
+		<video width="810" height="388" autoplay="autoplay">
+			<source src="configs/conferences/33c3/assets/logo.webm" type="video/webm">
+			<source src="configs/conferences/33c3/assets/logo.mp4" type="video/mp4">
+		</video>
 	',
 
 	/**
