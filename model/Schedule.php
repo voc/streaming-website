@@ -36,10 +36,10 @@ class Schedule
 
 	private function fetchSchedule()
 	{
-		$schedule = file_get_contents($this->getScheduleCache());
+		$schedule = @file_get_contents($this->getScheduleCache());
 
 		if(!$schedule)
-			throw new ScheduleException("Error Loading Schedule from ".$this->getScheduleCache());
+			return null;
 
 		return simplexml_load_string($schedule);
 	}
@@ -48,6 +48,11 @@ class Schedule
 	{
 		// download schedule-xml
 		$schedule = $this->fetchSchedule();
+
+		// not failing gracefully here will result in a broken page in case
+		// no schedule is present
+		if(!$schedule)
+			return [];
 
 		$mapping = $this->getScheduleToRoomSlugMapping();
 		$program = array();
