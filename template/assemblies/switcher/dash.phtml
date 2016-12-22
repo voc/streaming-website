@@ -1,1 +1,29 @@
-<h2 style="text-align: center; margin: 40px 0;">DASH-Format-Selector coming soon</h1>
+<div class="container-fluid">
+
+	<div class="notes well">
+		<h3 class="beta">WARNING! BETA!</h3>
+		<p><a href="https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP">DASH</a> is an adaptive-bitrate HTTP-based streaming solution, that is (unlike existing proprietary solutions such as HLS) internationally standardized.</p>
+		<p>Support for DASH in open source software such as ffmpeg is still pretty rough, so consider this a technology-preview, it's not yet a stable solution.</p>
+		<p>Please report your experience to <a href="https://twitter.com/c3streaming">@c3streaming</a>, but please don't expect full support.</p>
+	</div>
+
+
+	<div class="directlinks">
+		<h3>Direct links</h3>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
+
+				<div class="btn-group" role="group">
+					<div class="btn btn-primary" disabled>DASH</div>
+					<a href="<?=h($room->getDashManifestUrl())?>" target="_blank" class="btn btn-default">
+						<span class="fa fa-flask"></span>
+						Manifest
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
