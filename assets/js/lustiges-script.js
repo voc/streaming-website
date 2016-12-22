@@ -10,16 +10,16 @@ $(function() {
 	if($('.video-wrap').hasClass('has-subtitles'))
 		feat.push('subtitles');
 
-	$('body.room video, body.embed video').mediaelementplayer({
+	$('body.room video.mejs, body.embed video.mejs').mediaelementplayer({
 		features: feat,
 		enableAutosize: true
 	});
 
-	$('body.room audio, body.embed audio').mediaelementplayer({
+	$('body.room audio.mejs, body.embed audio.mejs').mediaelementplayer({
 		features: ['playpause', 'volume', 'current']
 	});
 
-	$('body.relive-player video').mediaelementplayer({
+	$('body.relive-player video.mejs').mediaelementplayer({
 		mode: 'auto_plugin',
 		plugins: ['flash'],
 		flashName: 'flashmediaelement.swf',
