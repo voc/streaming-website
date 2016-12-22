@@ -2,7 +2,7 @@
 
 
 // conference specific styles here
-@turquoise: #009c8b;
+@turquoise:     #009c8b;
 @darker-grey:   #262626;
 @dark-grey:     lighten(@darker-grey, 20%);
 @light-grey:    lighten(@darker-grey, 30%);
@@ -12,7 +12,7 @@
 
 // often configured values (and their defaults):
 //
-@brand-primary:         #f19224;
+@brand-primary:         @turquoise;
 @text-color:            white;
 
 @link-color:            white;
@@ -172,22 +172,22 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 }
 
 .banner {
-	background: url(assets/drops.svg) no-repeat center;
+	background: url("assets/min/drops.svg") no-repeat center;
 	height: 320px;
 	text-indent: -9999em;
 	display: block;
 	position: relative;
 
-	video,
-	h1 {
+	h1 { display: none; }
+
+	video {
 		display: block;
-		background: url(assets/logo.svg) no-repeat center;
-		height: 200px;
-		width: 500px;
+		width: 810px/1.5;
+		height: 388px/1.5;
 		margin: 0;
 
 		left: 50%;
-		margin-left: -250px;
+		margin-left: -810px/1.5/2;
 		position: absolute;
 		bottom: 0;
 	}
@@ -253,7 +253,7 @@ body.multiview .cell {
 .svg-replace(@file) {
 	background-image: url(@file);
 	background-repeat: no-repeat;
-	color: transparent;
+	color: transparent !important;
 	background-position: center;
 
 	-webkit-user-select: none;  /* Chrome all / Safari all */
@@ -264,24 +264,26 @@ body.multiview .cell {
 
 .overview {
 	.group-live h2 > span {
-		.svg-replace("assets/f-live.svg");
+		.svg-replace("assets/min/f-live.svg");
 	}
 	.group-live-music h2 > span {
-		.svg-replace("assets/f-live-music.svg");
+		.svg-replace("assets/min/f-live-music.svg");
 	}
 	.recordings h2 > span {
-		.svg-replace("assets/f-recordings.svg");
+		.svg-replace("assets/min/f-recordings.svg");
 	}
 
 	.navbar-brand {
-
+		.svg-replace("assets/min/f-33c3-streaming.svg");
+		width: 290px;
+		height: 75px
 	}
 }
 
 
 
 nav .button-wrapper > .btn {
-	height: 70px;
+	height: 75px;
 
 	border-color: black;
 	&:hover {
@@ -295,29 +297,28 @@ nav .button-wrapper > .btn {
 	background-color: black;
 
 	&.btn-ssl {
-		.svg-replace("assets/tls-enabled.svg");
+		.svg-replace("assets/min/tls-enabled.svg");
 		&.btn-warning {
-			.svg-replace("assets/tls-disabled.svg");
+			.svg-replace("assets/min/tls-disabled.svg");
 		}
 		width: 90px;
 	}
 	&.feedback {
-		.svg-replace("assets/f-feedback.svg");
+		.svg-replace("assets/min/f-feedback.svg");
 		width: 150px;
 	}
 	&.releases {
-		.svg-replace("assets/f-releases.svg");
+		.svg-replace("assets/min/f-releases.svg");
 		width: 150px;
 	}
 	&.about {
-		.svg-replace("assets/f-info.svg");
-		width: 150px;
+		.svg-replace("assets/min/f-info.svg");
+		width: 80px;
 	}
 
 	display: block;
 	float: left;
 }
-
 
 footer {
 	position: static;
@@ -334,4 +335,8 @@ footer {
 			text-decoration: underline;
 		}
 	}
+}
+
+.nav-tabs > li > a {
+	border-radius: 0 !important;
 }
