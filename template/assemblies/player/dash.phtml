@@ -1,1 +1,10 @@
-<h2 style="text-align: center; margin: 40px 0;">DASH-Player coming soon</h1>
+<script type="text/javascript" src="<?=h($assets)?>dashjs/dash.all.debug.js"></script>
+
+<!-- working example: src="http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd" -->
+<video
+	data-dashjs-player
+	autoplay
+	src="<?=h($room->getDashManifestUrl())?>"
+	controls="true"
+	style="width: 100%"
+/>

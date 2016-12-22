@@ -163,6 +163,10 @@ class Room
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.DASH');
 	}
 
+	public function getDashManifestUrl() {
+		return proto().'://cdn.c3voc.de/dash/'.rawurlencode($this->getStream()).'/manifest.mpd';
+	}
+
 	public function hasTranslation() {
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
 	}
