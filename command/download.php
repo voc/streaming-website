@@ -125,14 +125,16 @@ function download_for_conference($what, $conference, $url, $cache)
 		$url,
 		$cache
 	);
-	if(!do_download($url, $cache))
+	$resp = do_download($url, $cache);
+	if($resp !== true)
 	{
 		stderr(
-			'  !! download %s for conference %s from %s to %s failed miserably !!',
+			'  !! download %s for conference %s from %s to %s failed miserably: %s !!',
 			$what,
 			$conference->getSlug(),
 			$url,
-			$cache
+			$cache,
+			$resp
 		);
 	}
 	return true;
