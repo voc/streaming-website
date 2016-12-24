@@ -40,7 +40,9 @@ if ! (git diff --exit-code >/dev/null || git diff --cached --exit-code >/dev/nul
 	fi
 fi
 
-ssh -A voc@lb.dus.c3voc.de 'sudo sh' << EOT
+for host in lb.dus.c3voc.de lb.alb.c3voc.de; do
+echo "deploying to $host"
+ssh -A voc@$host 'sudo sh' << EOT
 cd /srv/nginx/streaming-website
 git fetch origin
 git reset --hard HEAD
@@ -50,3 +52,5 @@ chown -R voc:staff .
 chown -R downloader configs
 ./clear_cache
 EOT
+echo "deploying to $host done"
+done
