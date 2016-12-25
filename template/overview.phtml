@@ -9,7 +9,7 @@
 				</div>
 			</div>
 		<? endif ?>
-		<div class="row room-group room-group-n<?=h($i++)?>">
+		<div class="row room-group room-group-n<?=h($i++)?> room-group-<?=h(slugify($group))?>">
 
 			<? $count = count($rooms); $idx = 0 ?>
 			<? foreach($rooms as $room): ?>
