@@ -181,15 +181,26 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 	h1 { display: none; }
 
 	video {
+		@width: 810px;
+		@height: 388px;
+
 		display: block;
-		width: 810px/2;
-		height: 388px/2;
+		width: @width/2;
+		height: @height/2;
 		margin: 0;
 
 		left: 50%;
-		margin-left: -810px/2/2;
+		margin-left: -@width/2/2;
 		position: absolute;
 		bottom: -25px;
+
+		@media (max-width: @screen-xs-max) {
+			width: @width/3;
+			height: @height/3;
+			margin: 0;
+
+			margin-left: -@width/3/2;
+		}
 	}
 }
 
