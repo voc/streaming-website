@@ -222,6 +222,10 @@ nav .navbar-form {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0;
+
+	@media (max-width: @screen-xs-max) {
+		padding: 0 40px;
+	}
 }
 
 .well a {
@@ -328,11 +332,11 @@ nav .button-wrapper > .btn {
 	}
 	&.feedback {
 		.svg-replace("assets/min/f-feedback.svg");
-		width: 150px;
+		width: 132px;
 	}
 	&.releases {
 		.svg-replace("assets/min/f-releases.svg");
-		width: 150px;
+		width: 122px;
 	}
 	&.about {
 		.svg-replace("assets/min/f-info.svg");
