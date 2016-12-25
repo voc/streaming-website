@@ -5,4 +5,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 
-RewriteRule (.*) index.php?route=$1&htaccess=1 [L]
+RewriteRule (.*) index.php?route=$1&htaccess=1 [L,QSA]
+RewriteRule ^/?$ index.php?route=$1&htaccess=1 [L,QSA]
+
+#DirectoryIndex index.php?htaccess=1
+DirectoryIndex disabled
