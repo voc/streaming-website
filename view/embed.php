@@ -1,6 +1,6 @@
 <?php
 
-$room = new Room($_GET['room']);
+$room = $conference->getRoom($_GET['room']);
 if(!$room->hasEmbed())
 	throw new NotFoundException('Embedding is not enabled in this room');
 

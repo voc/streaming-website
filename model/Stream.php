@@ -105,12 +105,14 @@ class Stream
 
 	public function getEmbedUrl()
 	{
-		return
-			forceslash(baseurl()).
-			'embed/'.
-			rawurlencode($this->getRoom()->getSlug()).'/'.
-			rawurlencode($this->getSelection()).'/'.
-			rawurlencode($this->getLanguage()).'/';
+		return joinpath([
+			baseurl(),
+			$this->getRoom()->getConference()->getSlug(),
+			'embed',
+			rawurlencode($this->getRoom()->getSlug()),
+			rawurlencode($this->getSelection()),
+			rawurlencode($this->getLanguage()),
+		]);
 	}
 
 	public function getVideoUrl($proto)
