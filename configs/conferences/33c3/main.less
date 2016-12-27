@@ -20,10 +20,8 @@
 
 @navbar-height:         70px;
 
-@navbar-default-color:  white;
-@navbar-default-bg:     #000;
-
-@navbar-default-border: white;
+@navbar-default-bg:		transparent;
+@navbar-default-border: transparent;
 
 @navbar-default-link-color:       white;
 //@navbar-default-link-hover-color: @link-hover-color;
@@ -37,6 +35,10 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 	font-family: sans-serif;
 }
 
+.group-live {
+	margin-top: 60px;
+}
+
 .overview {
 	h2 {
 		text-align: center;
@@ -47,7 +49,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 		text-transform: uppercase;
 		font-weight: bold;
 
-		margin: 100px 0 30px 0;
+		margin: 40px 0 20px 0;
 
 		span {
 			background-color: black;
@@ -80,6 +82,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 
 			.panel-title {
 				color: white;
+				font-size: 18px;
 			}
 
 			.panel-primary {
@@ -129,16 +132,18 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 
 						overflow: hidden;
 
-						bottom: -48px;
+						bottom: -44px;
 						left: 0;
 						right: 0;
-						height: 48px;
+						height: 44px;
 						margin: 0;
 
-						line-height: 48px;
+						line-height: 44px;
 						padding-left: 16px;
 
 						border-bottom: 1px solid @darker-grey;
+						
+						font-size: 15px;
 					}
 				}
 			}
@@ -166,6 +171,14 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 	}
 }
 
+.overview .room.room-party .panel .panel-body,
+.overview .room.room-lounge .panel .panel-body {
+	margin-bottom: 0;
+}
+
+.navbar-header {
+	background-color: #000;
+}
 
 .navbar-brand {
 	font-size: 20px;
@@ -313,19 +326,24 @@ body.multiview .cell {
 	}
 }
 
+.navbar-default .navbar-form.button-wrapper {
+	border-bottom: 1px solid @dark-grey;
+	background-color: #000;
+}
+
 nav .button-wrapper > .btn {
-	height: 75px;
-
-	border-color: black;
-	&:hover {
-		border-color: white;
-	} 
-
-	border-top: 0;
-	border-bottom: 0;
+	height: 60px;
+	margin-top: 15px;
+	margin-bottom: -1px;
+	
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid transparent;
 	border-radius: 0;
-
-	background-color: black;
+	
+	&:hover {
+		border-bottom: 1px solid @turquoise;
+	}
 
 	&.btn-ssl {
 		.svg-replace("assets/min/tls-enabled.svg");
