@@ -79,7 +79,7 @@ try {
 		'canonicalurl' => forceslash(baseurl()).forceslash($route),
 		'assemblies' => 'template/assemblies/',
 		'assets' => forceslash('assets'),
-		'conference_assets' => '/',
+		'conference_assets' => '',
 
 		'conference' => new GenericConference(),
 	));
