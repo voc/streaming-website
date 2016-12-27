@@ -1,6 +1,6 @@
 <?php
 
-$relive = new Relive();
+$relive = $conference->getRelive();
 if(!$relive->isEnabled())
 	throw new NotFoundException('Internal Relive is disabled');
 
