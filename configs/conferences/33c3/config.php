@@ -220,7 +220,7 @@ $CONFIG['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
 		 * Default-Stream angenommen.
 		 */
-		'SLIDES' => false,
+		'SLIDES' => true,
 
 		/**
 		 * Audio-Only-Stream verfügbar
@@ -373,7 +373,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => false,
 		'AUDIO' => true,
-		'SLIDES' => false,
+		'SLIDES' => true,
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
@@ -404,7 +404,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => false,
 		'AUDIO' => true,
-		'SLIDES' => false,
+		'SLIDES' => true,
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
@@ -434,7 +434,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => false,
 		'AUDIO' => true,
-		'SLIDES' => false,
+		'SLIDES' => true,
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
