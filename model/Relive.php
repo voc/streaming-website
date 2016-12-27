@@ -34,7 +34,7 @@ class Relive
 		if(!file_exists($this->getJsonCache()))
 			return array();
 
-		$talks = file_get_contents($this->getJsonUrl());
+		$talks = file_get_contents($this->getJsonCache());
 		$talks = (array)json_decode($talks, true);
 
 		$mapping = $this->getScheduleToRoomMapping();
