@@ -91,13 +91,13 @@ class Relive
 
 	private function getScheduleToRoomMapping()
 	{
-		$schedule = new Schedule();
+		$schedule = $this->getConference()->getSchedule();
 		$mapping = array();
 
 		foreach($schedule->getScheduleToRoomSlugMapping() as $schedule => $slug)
 		{
 			try {
-				$mapping[$schedule] = new Room($slug);
+				$mapping[$schedule] = $this->getConference()->getRoom($slug);
 			}
 			catch(NotFoundException $e)
 			{
