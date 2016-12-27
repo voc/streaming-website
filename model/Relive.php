@@ -62,10 +62,16 @@ class Relive
 			if($talk['status'] == 'not_running')
 				continue;
 
-			if($talk['status'] == 'released')
+			if($talk['status'] == 'released') {
 				$talk['url'] = $talk['release_url'];
-			else
-				$talk['url'] = 'relive/'.rawurlencode($talk['id']).'/';
+			}
+			else {
+				$talk['url'] = joinpath([
+					$this->getConference()->getSlug(),
+					'relive',
+					rawurlencode($talk['id']),
+				]);
+			}
 
 			if(isset($mapping[$talk['room']]))
 			{
