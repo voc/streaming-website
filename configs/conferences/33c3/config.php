@@ -125,8 +125,10 @@ $CONFIG['OVERVIEW'] = array(
 		),
 
 		'Live Music'  => array(
-			'party',
-			'lounge',
+			'section-9',
+			'disko',
+			'schneekugel',
+			'chaoswest',
 		),
 	),
 );
@@ -453,15 +455,27 @@ $CONFIG['ROOMS'] = array(
 	),
 
 
-	'party' => array(
-		'DISPLAY' => 'Party',
-		'STREAM' => 'party',
+	'section-9' => array(
+		'DISPLAY' => 'Section 9',
+		'STREAM' => 'ambient',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
-	'lounge' => array(
-		'DISPLAY' => 'Lounge',
+	'disko' => array(
+		'DISPLAY' => 'DisKo',
 		'STREAM' => 'lounge',
+		'MUSIC' => true,
+		'EMBED' => true,
+	),
+	'schneekugel' => array(
+		'DISPLAY' => 'Schneekugel',
+		'STREAM' => 'dome',
+		'MUSIC' => true,
+		'EMBED' => true,
+	),
+	'chaoswest' => array(
+		'DISPLAY' => 'Chaoswest',
+		'STREAM' => 'chaoswest_lounge',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
