@@ -493,7 +493,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Sendezentrumsbühne',
+		'SCHEDULE_NAME' => 'Sendezentrum',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
