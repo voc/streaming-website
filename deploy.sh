@@ -44,12 +44,21 @@ for host in lb.dus.c3voc.de lb.alb.c3voc.de; do
 echo "deploying to $host"
 ssh -A voc@$host 'sudo sh' << EOT
 cd /srv/nginx/streaming-website
+
+echo "updating code"
 git fetch origin
 git reset --hard HEAD
 git checkout $DEPLOY_BRANCH
 git reset --hard origin/$DEPLOY_BRANCH
+
+echo "fixing permissions"
 chown -R voc:staff .
 chown -R downloader configs
+
+echo "re-downloading schedules"
+sudo -udownloader php index.php download
+
+echo "clearing cache"
 ./clear_cache
 EOT
 echo "deploying to $host done"
