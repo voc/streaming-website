@@ -493,7 +493,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Sendezentrum',
+		'SCHEDULE_NAME' => 'Sendezentrumsbühne',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -517,14 +517,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.xml',
+	'URL' => 'http://data.c3voc.de/33C3/everything.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6', 'Sendezentrum'),
+	'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6', 'Sendezentrumsbühne'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
