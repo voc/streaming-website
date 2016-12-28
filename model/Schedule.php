@@ -117,9 +117,6 @@ class Schedule
 
 				$room_known = isset($mapping[$name]);
 
-				if($room_known)
-					$name = $mapping[$name];
-
 				$eventsSorted = [];
 				foreach($room->event as $event)
 				{
