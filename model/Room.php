@@ -164,7 +164,7 @@ class Room
 	}
 
 	public function getDashManifestUrl() {
-		return proto().'://cdn.c3voc.de/dash/'.rawurlencode($this->getStream()).'/manifest.mpd';
+		return proto().'://dekan.cch.c3voc.de/dash/'.rawurlencode($this->getStream()).'/manifest.mpd';
 	}
 
 	public function hasTranslation() {
