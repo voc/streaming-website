@@ -29,7 +29,6 @@ $(function() {
 			autoPlay: true,
 			events: {
 				onReady: function() {
-					window.player = player;
 					var playback = player.getPlugin('hls');
 					playback.once(Clappr.Events.PLAYBACK_PLAY, function() {
 						if(player.getPlugin('hls').getPlaybackType() == 'vod') {
