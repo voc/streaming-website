@@ -63,6 +63,14 @@ foreach (Conferences::getActiveConferences() as $conference)
 							);
 						}
 						break;
+
+					case 'dash':
+						$urls['dash'] = array(
+							'display' => $display,
+							'tech' => $room->getDashTech(),
+							'url' => $room->getDashManifestUrl(),
+						);
+						break;
 				}
 
 				$streams[] = array(
