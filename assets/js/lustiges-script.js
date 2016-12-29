@@ -26,9 +26,19 @@ $(function() {
 			source: $relivePlayer.data('m3u8'),
 			height: $relivePlayer.data('height'),
 			width: $relivePlayer.data('width'),
-			/*vents: {
-
-			}*/
+			autoPlay: true,
+			events: {
+				onReady: function() {
+					window.player = player;
+					var playback = player.getPlugin('hls');
+					playback.once(Clappr.Events.PLAYBACK_PLAY, function() {
+						if(player.getPlugin('hls').getPlaybackType() == 'vod') {
+							// skip forward to scheduled beginning of the talk at ~ 0:14:30  (30 sec offset, if speaker starts on time)
+							player.seek(14 * 60 + 30);
+						}
+					});
+				}
+			}
 		});
 
 		player.attachTo($relivePlayer.get(0));
