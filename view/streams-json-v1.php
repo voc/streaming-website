@@ -78,7 +78,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 					'type' => $stream->getPlayerType(),
 					'isTranslated' => $stream->isTranslated(),
 					'videoSize' => $stream->getVideoSize(),
-					'urls' => $urls,
+					'urls' => (object)$urls,
 				);
 			}
 
@@ -100,4 +100,4 @@ foreach (Conferences::getActiveConferences() as $conference)
 	}
 }
 
-echo json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_FORCE_OBJECT);
+echo json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
