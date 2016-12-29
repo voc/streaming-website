@@ -28,13 +28,20 @@ body.relive {
 
 body.relive-player {
 	.player-wrap {
-		padding: 50px 0;
+		padding: 0;
 		border: 1px solid #ddd;
-		border-radius: @border-radius-large;
-		margin-bottom: 25px;
 
 		.video-wrap {
 			margin: 0 auto;
+
+			> [data-player] {
+				// force 16:9 aspect ratio
+				// https://gordonlesti.com/bootstrap-responsive-embed-aspect-ratio/
+				padding-bottom: 56.25%;
+
+				width: auto !important;
+				height: auto !important;
+			}
 		}
 	}
 
