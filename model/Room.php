@@ -167,6 +167,10 @@ class Room
 		return proto().'://dekan.cch.c3voc.de/dash/'.rawurlencode($this->getStream()).'/manifest.mpd';
 	}
 
+	public function getDashTech() {
+		return 'Adaptive multi-format-multi-bitrate-Stream to rule the World!!1elf';
+	}
+
 	public function hasTranslation() {
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
 	}
