@@ -19,21 +19,29 @@ $(function() {
 		features: ['playpause', 'volume', 'current']
 	});
 
-	$('body.relive-player video.mejs').mediaelementplayer({
-		mode: 'auto_plugin',
-		plugins: ['flash'],
-		flashName: 'flashmediaelement.swf',
-		pluginPath: '../assets/mejs/',
-		enableAutosize: true,
-		success: function (mediaElement) {
-			mediaElement.addEventListener('canplay', function () {
-				// skip forward to scheduled beginning of the talk at ~ 0:14:30  (30 sec offset, if speaker starts on time)
-				if ( mediaElement.currentTime == 0 ) {
-					mediaElement.setCurrentTime(870);
+	var $relivePlayer = $('body.relive-player .video-wrap');
+	if($relivePlayer.length > 0) {
+		var player = new Clappr.Player({
+			baseUrl: 'assets/clapprio/',
+			source: $relivePlayer.data('m3u8'),
+			height: $relivePlayer.data('height'),
+			width: $relivePlayer.data('width'),
+			autoPlay: true,
+			events: {
+				onReady: function() {
+					var playback = player.getPlugin('hls');
+					playback.once(Clappr.Events.PLAYBACK_PLAY, function() {
+						if(player.getPlugin('hls').getPlaybackType() == 'vod') {
+							// skip forward to scheduled beginning of the talk at ~ 0:14:30  (30 sec offset, if speaker starts on time)
+							player.seek(14 * 60 + 30);
+						}
+					});
 				}
-			})
-		}
-	});
+			}
+		});
+
+		player.attachTo($relivePlayer.get(0));
+	}
 
 	$(window).on('load', function() {
 		$(window).trigger('resize');

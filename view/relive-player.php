@@ -11,6 +11,6 @@ echo $tpl->render(array(
 	'title' => 'Relive: ' . $talk['title'],
 	'talk' => $talk,
 
-	'width' => 1024,
-	'height' => 576,
+	'width' => 1920,
+	'height' => 1080,
 ));
