@@ -20,24 +20,27 @@ if [ "x$DEPLOY_BRANCH" != "xmaster" ]; then
 	if [ "x$input" != "xyes" ]; then
 		exit 2
 	fi
+	echo ""
 fi
 
 if [ `git rev-parse --verify origin/$DEPLOY_BRANCH` != `git rev-parse --verify $DEPLOY_BRANCH` ]; then
-	echo "You have commits on the master branch not pushed to origin yet. They would not be deployed."
+	echo "You have commits on the $DEPLOY_BRANCH branch not pushed to origin yet. They would not be deployed."
 	echo "do you still which to deploy what's already in the repo? then type yes"
 	read -p "" input
 	if [ "x$input" != "xyes" ]; then
 		exit 2
 	fi
+	echo ""
 fi
 
-if ! (git diff --exit-code >/dev/null || git diff --cached --exit-code >/dev/null); then
+if ! (git diff --exit-code >/dev/null && git diff --cached --exit-code >/dev/null); then
 	echo "You have uncomitted changes. They would not be deployed."
 	echo "do you still which to deploy what's already in the repo? then type yes"
 	read -p "" input
 	if [ "x$input" != "xyes" ]; then
 		exit 2
 	fi
+	echo ""
 fi
 
 for host in lb.dus.c3voc.de lb.alb.c3voc.de; do
