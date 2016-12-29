@@ -407,9 +407,11 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => true,
 		'MUSIC' => false,
 
+		'SUBTITLES' => true,
+		'SUBTITLES_ROOM_ID' => 1,
+
 		'SCHEDULE' => true,
 		//'SCHEDULE_NAME' => 'Saal G',
-		'SUBTITLES' => false,
 		'FEEDBACK' => true,
 		'EMBED' => true,
 		'IRC' => true,
