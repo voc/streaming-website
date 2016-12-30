@@ -27,7 +27,7 @@
 		<? else: ?>
 			<? foreach ($talks as $talk): ?>
 				<div class="col-xs-12 recording">
-					<div class="panel panel-default">
+					<div class="panel <? if($talk['status'] == 'live'): ?>panel-warning<? else: ?>panel-default<? endif ?>">
 						<div class="panel-heading">
 
 							<h3 class="panel-title">
