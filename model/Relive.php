@@ -52,8 +52,15 @@ class Relive
 				return strcmp($a['room'], $b['room']);
 			}
 
-			// all other talks get sorted by their name
-			return strcmp($a['title'], $b['title']);
+			// all other talks get sorted by their start time
+			// sorting the most recent talks to the top
+			$delta = $b['start'] - $a['start'];
+
+			// sort by room in case of a collision
+			if($delta == 0)
+				return strcmp($a['room'], $b['room']);
+			else
+				return $delta;
 		});
 
 		$talks_by_id = array();
