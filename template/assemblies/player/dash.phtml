@@ -1,75 +1,46 @@
-<script type="text/javascript" src="<?=h($assets)?>dashjs/dash.all.debug.js"></script>
-<script type="text/javascript" src="<?=h($assets)?>dashjs/ControlBar.js"></script>
-<link type="text/css" rel="stylesheet" href="<?=h($assets)?>dashjs/controlbar.css" />
+<script type="text/javascript" src="<?=h($assets)?>clapprio/clappr.min.js"></script>
+<!-- <script type="text/javascript" src="<?=h($assets)?>clapprio/dash-shaka-playback.js"></script> -->
+<script type="text/javascript" src="http://localhost/dash-shaka-playback/dash-shaka-playback.js"></script>
+<script type="text/javascript" src="<?=h($assets)?>clapprio/level-selector.min.js"></script>
+<script type="text/javascript" src="<?=h($assets)?>clapprio/audio-selector.min.js"></script>
 
 <div class="dashContainer">
-	<!-- working example: src="http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd" -->
-	<video
-		preload="auto" autoplay="true"
-		src="<?=h($room->getDashManifestUrl())?>"
-		style="width: 100%"
-	>
-		<div class="well">DASH does not seem to work for you. Sorry :/</div>
-	</video>
-
-	<div id="videoController" class="video-controller unselectable">
-		<div id="playPauseBtn" class="btn-play-pause" title="Play/Pause">
-			<span id="iconPlayPause" class="icon-play"></span>
-		</div>
-		<span id="videoTime" class="time-display">00:00:00</span>
-		<div id="fullscreenBtn" class="btn-fullscreen control-icon-layout" title="Fullscreen">
-			<span class="icon-fullscreen-enter"></span>
-		</div>
-		<div id="bitrateListBtn" class="control-icon-layout" title="Bitrate List">
-			<span class="icon-bitrate"></span>
-		</div>
-		<input type="range" id="volumebar" class="volumebar" value="1" min="0" max="1" step=".01"/>
-		<div id="muteBtn" class="btn-mute control-icon-layout" title="Mute">
-			<span id="iconMute" class="icon-mute-off"></span>
-		</div>
-		<div id="trackSwitchBtn" class="control-icon-layout" title="A/V Tracks">
-			<span class="icon-tracks"></span>
-		</div>
-		<div id="captionBtn" class="btn-caption control-icon-layout" title="Closed Caption">
-			<span class="icon-caption"></span>
-		</div>
-		<span id="videoDuration" class="duration-display">00:00:00</span>
-		<div class="seekContainer">
-			<input type="range" id="seekbar" value="0" class="seekbar" min="0" step="0.01"/>
-		</div>
-	</div>
+	<div id="player"></div>
 </div>
-
 
 <!--
  this is an experimental hack, trying to protect the remaining page from
  interference with the new dash-player.
 -->
 <script type="text/javascript">
-$(function() {
-	var $videoElement = $(".dashContainer video");
-	var player = dashjs.MediaPlayer().create();
-	player.initialize(
-		$videoElement.get(0),
-		$videoElement.prop('src'),
-		true
-	);
-
-	var controlbar = new ControlBar(player);
-	controlbar.initialize();
-});
+	var player = new Clappr.Player({
+			// source: "http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd",
+			source: '<?=h($room->getDashManifestUrl())?>',
+			width: "100%",
+			plugins: [DashShakaPlayback, LevelSelector, AudioSelector],
+			shakaConfiguration: {
+				preferredAudioLanguage: 'de-DE',
+				streaming: {
+					rebufferingGoal: 15
+				}
+			},
+			autoPlay: true,
+			parentId: '#player'
+		});
 </script>
 <style type="text/css">
-.dashContainer video {
-	display: block;
-}
-.dashContainer {
-	line-height: 1;
-}
-.dashContainer .volumebar {
-	width: 70px;
+#player > [data-player] {
+	padding-bottom: 56.25%;
+	height: auto !important;
 }
 body.room .player-wrap.tab-content {
 	padding: 0;
+}
+.level_selector[data-level-selector] {
+	margin-top: 7px;
+}
+.level_selector[data-level-selector] button,
+.level_selector[data-level-selector] li {
+	font-size: 12px;
 }
 </style>
