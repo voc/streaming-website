@@ -2,6 +2,7 @@
 
 header('Content-Type: application/json');
 
+$struct = [];
 foreach (Conferences::getActiveConferences() as $conference)
 {
 	$overview = $conference->getOverview();
