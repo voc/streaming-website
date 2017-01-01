@@ -34,6 +34,16 @@ class Schedule
 		return floatval($this->getConference()->get('SCHEDULE.SCALE', 7));
 	}
 
+	public function isRoomMapped($scheduleRoom) {
+		$mapping = $this->getScheduleToRoomSlugMapping();
+		return isset( $mapping[$scheduleRoom] );
+	}
+
+	public function getMappedRoom($scheduleRoom) {
+		$mapping = $this->getScheduleToRoomSlugMapping();
+		return $this->getConference()->getRoomIfExists( $mapping[$scheduleRoom] );
+	}
+
 	private function fetchSchedule()
 	{
 		$schedule = @file_get_contents($this->getScheduleCache());
@@ -54,7 +64,6 @@ class Schedule
 		if(!$schedule)
 			return [];
 
-		$mapping = $this->getScheduleToRoomSlugMapping();
 		$program = array();
 
 		// re-calculate day-ends
@@ -115,8 +124,6 @@ class Schedule
 				if($this->isRoomFiltered($name))
 					continue;
 
-				$room_known = isset($mapping[$name]);
-
 				$eventsSorted = [];
 				foreach($room->event as $event)
 				{
@@ -150,7 +157,7 @@ class Schedule
 							'start' => $lastend,
 							'end' => $start,
 							'duration' => $pauseduration,
-							'room_known' => $room_known,
+							'room_known' => $this->isRoomMapped($name),
 						);
 					}
 					else if(!$lastend && $daystart < $start)
@@ -164,7 +171,7 @@ class Schedule
 							'start' => $daystart,
 							'end' => $start,
 							'duration' => $start - $daystart,
-							'room_known' => $room_known,
+							'room_known' => $this->isRoomMapped($name),
 						);
 					}
 
@@ -182,7 +189,7 @@ class Schedule
 						'start' => $start,
 						'end' => $end,
 						'duration' => $duration,
-						'room_known' => $room_known,
+						'room_known' => $this->isRoomMapped($name),
 					);
 
 					$lastend = $end;
@@ -219,6 +226,7 @@ class Schedule
 		}
 
 
+		$mapping = $this->getScheduleToRoomSlugMapping();
 		if($this->getConference()->has('SCHEDULE.ROOMFILTER'))
 		{
 			// sort by roomfilter
@@ -277,6 +285,10 @@ class Schedule
 		{
 			if(isset($room['SCHEDULE_NAME']))
 				$mapping[ $room['SCHEDULE_NAME'] ] = $slug;
+			else if(isset($room['DISPLAY']))
+				$mapping[ $room['DISPLAY'] ] = $slug;
+			else
+				$mapping[ $slug ] = $slug;
 		}
 
 		return $mapping;

@@ -3,6 +3,7 @@
 		<div class="now"><span>now</span></div>
 		<? $rooms = $schedule->getSchedule() ?>
 		<? foreach($rooms as $roomname => $events): ?>
+			<? $scheduleRoom = $schedule->getMappedRoom($roomname) ?>
 			<div class="room <? if(isset($room) && $roomname == $room->getScheduleName()): ?>highlight<? endif ?>" style="width: <?=round($schedule->getDurationSum() / $schedule->getScale())?>px">
 				<? $fromstart = 0; ?>
 				<? foreach($events as $event): ?>
@@ -13,7 +14,6 @@
 						data-end="<?=intval($event['end'])?>"
 					>
 						<? $fromstart += $event['duration'] ?>
-						<? $scheduleRoom = $conference->getRoomIfExists($roomname) ?>
 						<? if($scheduleRoom): ?>
 							<a
 								class="inner"
