@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 require_once('ViewTest.php');
 require_once('Factory.php');
 
-class OverviewTest extends TestCase
+class RoomTest extends TestCase
 {
 	use ViewTest;
 
@@ -14,10 +14,15 @@ class OverviewTest extends TestCase
 		$conference = Factory::createConference();
 
 		$this->setConference($conference);
-		$html = $this->executeView('overview.php');
+		$this->setGetParams([
+			'room' => 'hall1',
+			'selection' => '',
+			'language' => 'native',
+		]);
+		$html = $this->executeView('room.php');
 
 		$this->assertInternalType('string', $html);
 		$this->assertContains('Saal 1', $html);
-		$this->assertContains('Saal 2', $html);
+		$this->assertNotContains('Saal 2', $html);
 	}
 }

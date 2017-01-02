@@ -109,7 +109,7 @@ function days_diff_readable($date)
 
 function url_params()
 {
-	if($GLOBALS['forceopen'])
+	if(@$GLOBALS['forceopen'])
 		return '?forceopen=yess';
 
 	return '';
