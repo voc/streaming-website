@@ -23,10 +23,25 @@ $(function() {
 	if($relivePlayer.length > 0) {
 		var player = new Clappr.Player({
 			baseUrl: 'assets/clapprio/',
+			plugins: {
+				core: [ClapprThumbnailsPlugin]
+			},
+
 			source: $relivePlayer.data('m3u8'),
 			height: $relivePlayer.data('height'),
 			width: $relivePlayer.data('width'),
 			autoPlay: true,
+			scrubThumbnails: {
+				backdropHeight: 64,
+				spotlightHeight: 84,
+				thumbs: ClapprThumbnailsPlugin.buildSpriteConfig(
+					$relivePlayer.data("sprites"),
+					$relivePlayer.data("sprites-n"),
+					160, 90,
+					$relivePlayer.data("sprites-cols"),
+					$relivePlayer.data("sprites-interval")
+				),
+			},
 			events: {
 				onReady: function() {
 					var playback = player.getPlugin('hls');
