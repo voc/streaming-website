@@ -19,5 +19,6 @@ class OverviewTest extends TestCase
 		$this->assertInternalType('string', $html);
 		$this->assertContains('Saal 1', $html);
 		$this->assertContains('Saal 2', $html);
+		$this->assertContains('<body class="overview">', $html);
 	}
 }
