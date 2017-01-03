@@ -4,5 +4,11 @@
 	data-width="<?=h($width)?>"
 	data-height="<?=h($height)?>"
 	data-m3u8="<?=h(forceproto($talk['playlist']))?>"
+	<? if(array_key_exists('sprites', $talk)): ?>
+	data-sprites="<?= h($talk['sprites']['url']) ?>"
+	data-sprites-n="<?= h($talk['sprites']['n']) ?>"
+	data-sprites-cols="<?= h($talk['sprites']['cols']) ?>"
+	data-sprites-interval="<?= h($talk['sprites']['interval']) ?>"
+	<? endif ?>
 >
 </div>
