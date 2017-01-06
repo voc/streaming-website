@@ -191,7 +191,7 @@ $CONFIG['ROOMS'] = array(
 		 * als Default-Stream angenommen.
 		 */
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		//'DASH' => true,
 
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
