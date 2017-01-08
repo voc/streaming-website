@@ -27,3 +27,6 @@ require_once('model/RoomSelection.php');
 require_once('model/Stream.php');
 require_once('model/Relive.php');
 require_once('model/Upcoming.php');
+
+require_once('command/AbstractCommand.php');
+require_once('command/DownloadCommand.php');

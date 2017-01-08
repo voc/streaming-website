@@ -4,22 +4,30 @@ use C3VOC\StreamingWebsite\Lib\PhpTemplate;
 use C3VOC\StreamingWebsite\Model\GenericConference;
 use C3VOC\StreamingWebsite\Model\Conferences;
 
+use C3VOC\StreamingWebsite\Command;
+
+use C3VOC\StreamingWebsite;
+
 require_once('bootstrap.php');
 
 ob_start();
 if(isset($argv) && isset($argv[1]))
 {
-	require('lib/command-helper.php');
-
+	$cmd = null;
 	switch($argv[1])
 	{
 		case 'download':
-			require('command/download.php');
-			exit(0);
+			$cmd = new Command\DownloadCommand;
 	}
 
-	stderr("Unknown Command: %s", $argv[1]);
-	exit(1);
+	if(is_null($cmd))
+	{
+		stderr("Unknown Command: %s", $argv[1]);
+		exit(1);
+	}
+	else {
+		exit( $cmd->run($argv) );
+	}
 }
 
 
