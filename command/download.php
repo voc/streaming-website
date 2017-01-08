@@ -1,5 +1,7 @@
 <?php
 
+use C3VOC\StreamingWebsite\Model\Conferences;
+
 $conf = $GLOBALS['CONFIG']['DOWNLOAD'];
 
 if(isset($conf['REQUIRE_USER']))

@@ -2,7 +2,7 @@
 	<h3>Direct links</h3>
 	<div class="directlinks">
 		<div class="row">
-			<? foreach(Stream::getMusicProtos() as $proto => $display): ?>
+			<? foreach(C3VOC\StreamingWebsite\Model\Stream::getMusicProtos() as $proto => $display): ?>
 				<? $switcherstream = $room->createStreamObject('music') ?>
 				<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
 					<div class="btn-group" role="group" title="<?=h($switcherstream->getMusicTech($proto))?>">

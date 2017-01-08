@@ -1,5 +1,7 @@
 <?php
 
+namespace C3VOC\StreamingWebsite\Model;
+
 class Schedule
 {
 	private $conference;

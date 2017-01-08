@@ -1,14 +1,6 @@
 <?php
 
-// Version 1.2
-
-if(!function_exists('h'))
-{
-	function h($s)
-	{
-		return htmlspecialchars($s);
-	}
-}
+namespace C3VOC\StreamingWebsite\Lib;
 
 class PhpTemplate
 {

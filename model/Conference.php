@@ -1,5 +1,10 @@
 <?php
 
+namespace C3VOC\StreamingWebsite\Model;
+
+use C3VOC\StreamingWebsite\Lib;
+use DateTime;
+
 class Conference extends ModelBase
 {
 	private $slug;

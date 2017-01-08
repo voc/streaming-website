@@ -1,5 +1,7 @@
 <?php
 
+use \C3VOC\StreamingWebsite\Model\Upcoming;
+
 $upcoming = new Upcoming();
 $upcoming_events = $upcoming->getNextEvents();
 $upcoming_dgs = array_values(array_filter($upcoming_events, function($event) {

@@ -28,7 +28,7 @@
 
 	<div class="directlinks">
 
-		<? foreach(Stream::getAudioProtos() as $proto => $display): ?>
+		<? foreach(C3VOC\StreamingWebsite\Model\Stream::getAudioProtos() as $proto => $display): ?>
 			<h3>Direct links (<?=h($display)?>)</h3>
 			<div class="row">
 				<? $switcherstream = $room->createStreamObject('music') ?>

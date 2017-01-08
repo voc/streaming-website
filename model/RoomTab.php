@@ -1,5 +1,7 @@
 <?php
 
+namespace C3VOC\StreamingWebsite\Model;
+
 class RoomTab
 {
 	public function __construct(Room $room, $tab)

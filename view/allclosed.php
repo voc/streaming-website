@@ -1,5 +1,8 @@
 <?php
 
+use C3VOC\StreamingWebsite\Model\Upcoming;
+use C3VOC\StreamingWebsite\Model\Conferences;
+
 $upcoming = new Upcoming();
 $events = $upcoming->getNextEvents();
 

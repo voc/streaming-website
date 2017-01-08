@@ -1,5 +1,7 @@
 <?php
 
+namespace C3VOC\StreamingWebsite\Model;
+
 class GenericConference extends Conference
 {
 	public function __construct()

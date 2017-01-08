@@ -1,5 +1,9 @@
 <?php
 
+use C3VOC\StreamingWebsite\Lib\PhpTemplate;
+use C3VOC\StreamingWebsite\Model\GenericConference;
+use C3VOC\StreamingWebsite\Model\Conferences;
+
 require_once('bootstrap.php');
 
 ob_start();

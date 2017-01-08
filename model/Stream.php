@@ -1,5 +1,7 @@
 <?php
 
+namespace C3VOC\StreamingWebsite\Model;
+
 class Stream
 {
 	public function __construct(Room $room, $selection, $language)

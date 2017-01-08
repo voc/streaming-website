@@ -1,5 +1,10 @@
 <?php
 
+function h($s)
+{
+	return htmlspecialchars($s);
+}
+
 function ssl()
 {
 	return isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on');
