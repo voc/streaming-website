@@ -6,7 +6,7 @@ use DateTime;
 use DateInterval;
 use C3VOC\StreamingWebsite\Model\Conferences;
 
-class DownloadCommand extends AbstractCommand
+class Download extends AbstractCommand
 {
 	public function run($argv)
 	{

@@ -29,4 +29,9 @@ require_once('model/Relive.php');
 require_once('model/Upcoming.php');
 
 require_once('command/AbstractCommand.php');
-require_once('command/DownloadCommand.php');
+require_once('command/Download.php');
+
+require_once('view/AbstractView.php');
+require_once('view/GlobalView.php');
+require_once('view/StreamsJsonV1.php');
+require_once('view/StreamsJsonV2.php');

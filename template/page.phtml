@@ -22,7 +22,7 @@
 			<meta name="robots" content="index,follow" />
 		<? endif ?>
 
-		<? if(isset($refresh)): ?>
+		<? if(isset($refresh) && isset($canonicalurl)): ?>
 			<meta http-equiv="refresh" content="<?=h($refresh)?>; URL=<?=h($canonicalurl)?>" />
 		<? endif ?>
 
@@ -41,7 +41,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<base href="<?=h($baseurl)?>" />
-		<link href="<?=h($canonicalurl)?>" rel="canonical" />
+		<? if(isset($canonicalurl)): ?>
+			<link href="<?=h($canonicalurl)?>" rel="canonical" />
+		<? endif ?>
 
 		<link href="<?=h($assets)?>img/apple-touch-icon.png" rel="apple-touch-icon" />
 		<link href="<?=h($assets)?>img/favicon.png" rel="icon" type="image/png" />

@@ -5,6 +5,7 @@ use C3VOC\StreamingWebsite\Model\GenericConference;
 use C3VOC\StreamingWebsite\Model\Conferences;
 
 use C3VOC\StreamingWebsite\Command;
+use C3VOC\StreamingWebsite\View;
 
 use C3VOC\StreamingWebsite;
 
@@ -17,7 +18,7 @@ if(isset($argv) && isset($argv[1]))
 	switch($argv[1])
 	{
 		case 'download':
-			$cmd = new Command\DownloadCommand;
+			$cmd = new Command\Download;
 	}
 
 	if(is_null($cmd))
@@ -55,6 +56,7 @@ try {
 	$route = rtrim($route, '/');
 
 	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
+	$GLOBALS['ROUTE'] = $route;
 
 	// generic template
 	$tpl = new PhpTemplate('template/page.phtml');
@@ -88,13 +90,21 @@ try {
 
 	else if($route == 'streams/v1.json')
 	{
-		require('view/streams-json-v1.php');
+		$view = new View\StreamsJsonV1();
+		$view
+			->outputHeaders()
+			->outputBody();
+
 		exit;
 	}
 
 	else if($route == 'streams/v2.json')
 	{
-		require('view/streams-json-v2.php');
+		$view = new View\StreamsJsonV2();
+		$view
+			->outputHeaders()
+			->outputBody();
+
 		exit;
 	}
 

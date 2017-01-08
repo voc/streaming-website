@@ -1,5 +1,7 @@
 <?php
 
+use C3VOC\StreamingWebsite\Model\Upcoming;
+
 $upcoming = new Upcoming();
 $events = $upcoming->getNextEvents();
 
