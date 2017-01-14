@@ -5,7 +5,7 @@ namespace C3VOC\StreamingWebsite\View;
 use DateTime;
 use C3VOC\StreamingWebsite\Model\Conferences;
 
-class StreamsJsonV2 extends GlobalView
+class StreamsJsonV2 extends View
 {
 	public function __construct()
 	{

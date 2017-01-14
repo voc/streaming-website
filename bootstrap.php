@@ -11,6 +11,7 @@ require_once('lib/helper.php');
 
 require_once('lib/PhpTemplate.php');
 require_once('lib/Exceptions.php');
+require_once('lib/Router.php');
 require_once('lib/less.php/Less.php');
 
 require_once('model/ModelBase.php');
@@ -31,7 +32,8 @@ require_once('model/Upcoming.php');
 require_once('command/AbstractCommand.php');
 require_once('command/Download.php');
 
-require_once('view/AbstractView.php');
-require_once('view/GlobalView.php');
+require_once('view/View.php');
+require_once('view/ConferenceView.php');
+require_once('view/NotFoundView.php');
 require_once('view/StreamsJsonV1.php');
 require_once('view/StreamsJsonV2.php');

@@ -2,13 +2,15 @@
 
 namespace C3VOC\StreamingWebsite\View;
 
-use C3VOC\StreamingWebsite\Model\Conference;
+use C3VOC\StreamingWebsite\Lib\Router;
 
-abstract class AbstractView
+abstract class View
 {
-	public function __construct(Conference $conference)
+	private $router;
+
+	public function __construct(Router $router)
 	{
-		$this->conference = $conference;
+		$this->router = $router;
 	}
 
 	protected function createPageTemplate()
@@ -24,32 +26,19 @@ abstract class AbstractView
 	protected function configureTemplate(PhpTemplate $tpl)
 	{
 		$tpl->set([
-			'baseurl' => forceslash(baseurl()),
+			'baseurl' => $this->router->getBaseUrl(),
 			'assemblies' => 'template/assemblies/',
 			'assets' => forceslash('assets'),
 			'conference_assets' => '',
 
-			'canonicalurl' => joinpath([
-				baseurl(),
-				$GLOBALS['ROUTE'],
-			]),
-
-			'conference' => $this->conference,
+			'canonicalurl' => $this->router->getCanonicalUrl(),
 		]);
 
-		if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
+		if($this->router->isTlsSwitcherEnabled())
 		{
 			$tpl->set([
-				'httpsurl' => joinpath([
-					'https:'.$GLOBALS['CONFIG']['BASEURL'],
-					$GLOBALS['MANDATOR'],
-					$GLOBALS['ROUTE']
-				]).url_params(),
-				'httpurl' => joinpath([
-					'http:'. $GLOBALS['CONFIG']['BASEURL'],
-					$GLOBALS['MANDATOR'],
-					$GLOBALS['ROUTE']
-				]).url_params(),
+				'httpsurl' => $this->router->getHttpsUrl(),
+				'httpurl' => $this->router->getHttpUrl(),
 			]);
 		}
 
