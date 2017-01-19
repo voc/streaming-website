@@ -6,13 +6,28 @@ use C3VOC\StreamingWebsite\Lib\Router;
 
 abstract class View
 {
+	/**
+	 * @var Router
+	 */
 	private $router;
 
+	/**
+	 * @var array
+	 */
+	private $headers = [];
+
+	/**
+	 * View constructor.
+	 * @param Router $router
+	 */
 	public function __construct(Router $router)
 	{
 		$this->router = $router;
 	}
 
+	/**
+	 * @return PhpTemplate
+	 */
 	protected function createPageTemplate()
 	{
 		$filename = $this->getPageTemplateFilename();
@@ -23,6 +38,10 @@ abstract class View
 		return $tpl;
 	}
 
+	/**
+	 * @param PhpTemplate $tpl
+	 * @return PhpTemplate
+	 */
 	protected function configureTemplate(PhpTemplate $tpl)
 	{
 		$tpl->set([
@@ -45,13 +64,20 @@ abstract class View
 		return $tpl;
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function getPageTemplateFilename()
 	{
 		return 'template/page.phtml';
 	}
 
 
-
+	/**
+	 * @param $k string
+	 * @param $v string
+	 * @return $this
+	 */
 	protected function setHeader($k, $v)
 	{
 		$this->headers[$k] = $v;
@@ -59,16 +85,26 @@ abstract class View
 		return $this;
 	}
 
+	/**
+	 * @param $k string
+	 * @return string
+	 */
 	public function getHeader($k)
 	{
 		return @$this->headers[$k];
 	}
 
+	/**
+	 * @return array
+	 */
 	public function getHeaders()
 	{
 		return $this->headers;
 	}
 
+	/**
+	 * @return $this
+	 */
 	public function outputHeaders()
 	{
 		foreach($this->getHeaders() as $k => $v)
@@ -80,9 +116,14 @@ abstract class View
 	}
 
 
-
+	/**
+	 * @return string
+	 */
 	public abstract function render();
 
+	/**
+	 * @return $this
+	 */
 	public function outputBody()
 	{
 		echo $this->render();

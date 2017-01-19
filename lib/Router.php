@@ -39,7 +39,7 @@ class Router
 		$routes = Router::ROUTES;
 		if(!isset($routes[$this->route]))
 		{
-			return new View\NotFoundView($this);
+			throw new NotFoundException();
 		}
 
 		$viewClass = $routes[$this->route];
@@ -52,7 +52,7 @@ class Router
 			return new $viewClass($this);
 		}
 
-		else return new View\NotFoundView($this);
+		else throw new NotFoundException();
 	}
 
 	/**

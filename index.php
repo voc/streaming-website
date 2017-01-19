@@ -1,10 +1,7 @@
 <?php
 
-use C3VOC\StreamingWebsite\Lib\PhpTemplate;
 use C3VOC\StreamingWebsite\Lib\Router;
-
-use C3VOC\StreamingWebsite\Model\GenericConference;
-use C3VOC\StreamingWebsite\Model\Conferences;
+use C3VOC\StreamingWebsite\Lib\NotFoundException;
 
 use C3VOC\StreamingWebsite\Command;
 use C3VOC\StreamingWebsite\View;
@@ -53,19 +50,31 @@ try {
 	else $route = '';
 
 
-	$router = new Router($route);
-	$view = $router->createView();
-	$view
-		->outputHeaders()
-		->outputBody();
-}
-catch(NotFoundException $e)
-{
-	ob_clean();
-	require('view/404.php');
+	try {
+		$router = new Router($route);
+		$view = $router->createView();
+		$view
+			->outputHeaders()
+			->outputBody();
+	}
+	catch(NotFoundException $e) {
+		$view = new View\NotFoundView($router, $e);
+		$view
+			->outputHeaders()
+			->outputBody();
+	}
+	catch(Exception $e)
+	{
+		$view = new View\ErrorView($router, $e);
+		$view
+			->outputHeaders()
+			->outputBody();
+	}
+
 }
 catch(Exception $e)
 {
 	ob_clean();
-	require('view/500.php');
+	header('Content-Type: text/plain');
+	print_r($e);
 }

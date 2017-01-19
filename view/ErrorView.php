@@ -3,13 +3,12 @@
 namespace C3VOC\StreamingWebsite\View;
 
 use C3VOC\StreamingWebsite\Lib\Router;
-use C3VOC\StreamingWebsite\Lib\NotFoundException;
 
-class NotFoundView extends View
+class ErrorView extends View
 {
 	private $exception;
 
-	public function __construct(Router $router, NotFoundException $e)
+	public function __construct(Router $router, \Exception $e)
 	{
 		parent::__construct($router);
 		$this->exception = $e;
@@ -17,6 +16,6 @@ class NotFoundView extends View
 
 	public function render()
 	{
-		return 'NotFoundView';
+		return 'ErrorView';
 	}
 }
