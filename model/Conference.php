@@ -23,16 +23,6 @@ class Conference extends ModelBase
 		return $this->get('CONFERENCE.TITLE', 'C3VOC');
 	}
 
-	public function isPreviewEnabled() {
-		if(@$GLOBALS['forceopen'])
-			return true;
-
-		if($this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['SERVER_NAME']))
-			return true;
-
-		return false;
-	}
-
 	public function isClosed() {
 		return !$this->hasBegun() || $this->hasEnded();
 	}

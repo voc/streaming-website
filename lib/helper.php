@@ -56,16 +56,31 @@ function forceproto($url)
 	return $url;
 }
 
-function startswith($needle, $haystack)
+function startswith($prefix, $string)
 {
-	return substr($haystack, 0, strlen($needle)) == $needle;
+	return substr($string, 0, strlen($prefix)) == $prefix;
 }
 
-function handle_lesscss_request($lessfile, $relative_path)
+function endswith($suffix, $string)
+{
+	return substr($string, -strlen($suffix)) == $suffix;
+}
+
+function suffix($prefix, $string)
+{
+	return substr($string, strlen($prefix));
+}
+
+function prefix($suffix, $string)
+{
+	return substr($string, 0, -strlen($suffix));
+}
+
+function compile_lesscss($lessfile, $relative_path)
 {
 	$dir = forceslash(sys_get_temp_dir());
 
-	$css_file = Less_Cache::Get([
+	$css_file = \Less_Cache::Get([
 		$lessfile => $relative_path,
 	], [
 		'sourceMap' => true,
@@ -75,10 +90,7 @@ function handle_lesscss_request($lessfile, $relative_path)
 		'cache_dir' => $dir,
 	]);
 
-	$css = file_get_contents($dir.$css_file);
-	header('Content-Type: text/css');
-	header('Content-Length: '.strlen($css));
-	print($css);
+	return file_get_contents($dir.$css_file);
 }
 
 function days_diff($date)

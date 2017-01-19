@@ -63,8 +63,7 @@ try {
 			->outputHeaders()
 			->outputBody();
 	}
-	catch(Exception $e)
-	{
+	catch(Exception $e) {
 		$view = new View\ErrorView($router, $e);
 		$view
 			->outputHeaders()

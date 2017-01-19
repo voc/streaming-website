@@ -43,16 +43,20 @@ class Router
 		}
 
 		$viewClass = $routes[$this->route];
+		if(!class_exists($viewClass)) {
+			throw new \Exception('Unknown View-Class in Router-Configuration: '.$viewClass);
+		}
+
 		if(is_subclass_of($viewClass, View\ConferenceView::class))
 		{
-			//
+			return new $viewClass($this, null);
 		}
 		elseif(is_subclass_of($viewClass, View\View::class))
 		{
 			return new $viewClass($this);
 		}
 
-		else throw new NotFoundException();
+		else throw new \Exception('Class is no View-Class: '.$viewClass);
 	}
 
 	/**
@@ -132,5 +136,15 @@ class Router
 			$GLOBALS['MANDATOR'],
 			$GLOBALS['ROUTE']
 		]).url_params();
+	}
+
+	public function isPreviewEnabled() {
+		if($this->isForceopen())
+			return true;
+
+		if(isset($GLOBALS['CONFIG']['PREVIEW_DOMAIN']) && $GLOBALS['CONFIG']['PREVIEW_DOMAIN'] == $_SERVER['SERVER_NAME'])
+			return true;
+
+		return false;
 	}
 }

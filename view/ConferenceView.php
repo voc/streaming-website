@@ -3,10 +3,12 @@
 namespace C3VOC\StreamingWebsite\View;
 
 use C3VOC\StreamingWebsite\Model\Conference;
-use C3VOC\StreamingWebsite\Model\GenericConference;
+use C3VOC\StreamingWebsite\Lib\PhpTemplate;
 
 abstract class ConferenceView extends View
 {
+	private $conference;
+
 	public function __construct(Router $router, Conference $conference)
 	{
 		parent::__construct($router);

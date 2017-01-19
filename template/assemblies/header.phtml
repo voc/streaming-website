@@ -1,10 +1,16 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<?=$conference->getLink()?>">
-				<i class="icon"></i>
-				<?=h($conference->getTitle())?> Streaming
-			</a>
+			<? if(isset($conference)): ?>
+				<a class="navbar-brand" href="<?=$conference->getLink()?>">
+					<i class="icon"></i>
+					<?=h($conference->getTitle())?> Streaming
+				</a>
+			<? else: ?>
+				<a class="navbar-brand" href="">
+					C3VOC Streaming
+				</a>
+			<? endif ?>
 		</div>
 
 		<div class="nav navbar-form navbar-right button-wrapper">
@@ -15,17 +21,17 @@
 				</a>
 			<? endif ?>
 
-			<? if(!$conference->hasEnded() && $conference->hasFeedback()): ?>
+			<? if(isset($conference) && $conference->hasFeedback()): ?>
 				<a class="form-control btn btn-default feedback" title="Feedback" href="<?=h($conference->getFeedbackUrl())?>">
 					<span class="fa fa-bullhorn"></span>
 				</a>
 			<? endif ?>
-			<? if($conference->hasReleases()): ?>
+			<? if(isset($conference) && $conference->hasReleases()): ?>
 				<a class="form-control btn btn-default releases" title="Releases" href="<?=h($conference->getReleasesUrl())?>">
 					<span class="fa fa-video-camera"></span>
 				</a>
 			<? endif ?>
-			<a class="form-control btn btn-default about" title="About" href="<?=$conference->getAboutLink()?>">
+			<a class="form-control btn btn-default about" title="About" href="<?= isset($conference) ? $conference->getAboutLink() : '/about' ?>">
 				<span class="fa fa-info"></span>
 			</a>
 		</div>
@@ -33,7 +39,7 @@
 </nav>
 
 
-<? if($conference->isPreviewEnabled()): ?>
+<? if($isPreviewEnabled): ?>
 <div class="preview-warning">
 	PREVIEW MODE
 </div>

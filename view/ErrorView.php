@@ -12,10 +12,19 @@ class ErrorView extends View
 	{
 		parent::__construct($router);
 		$this->exception = $e;
+
+		$this->setHttpResponse("HTTP/1.1 500 Internal Server Error");
 	}
 
 	public function render()
 	{
-		return 'ErrorView';
+		$tpl = $this->createPageTemplate();
+		return $tpl->render([
+			'page' => '500',
+			'title' => '500 Internal Server Error',
+
+			'e' => $this->exception,
+			'msg' => $this->exception->getMessage(),
+		]);
 	}
 }

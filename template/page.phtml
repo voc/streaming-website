@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<? if($conference->isPreviewEnabled()): ?>
+<? if($isPreviewEnabled): ?>
 <!--
   RUNNING IN PREVIEW MODE
   OPEN/CLOSED INFORMATION IS IGNORED!
@@ -14,9 +14,13 @@
 
 <? include("$assemblies/motd.phtml") ?>
 
-		<title><?=h($title)?> – <?=h($conference->getTitle())?> Streaming</title>
+		<? if(isset($conference)): ?>
+			<title><?=h($title)?> – <?=h($conference->getTitle())?> Streaming</title>
+		<? else: ?>
+			<title><?=h($title)?> – C3VOC Streaming</title>
+		<? endif ?>
 
-		<? if($conference->isPreviewEnabled()): ?>
+		<? if(isset($conference) && $conference->isPreviewEnabled()): ?>
 			<meta name="robots" content="noindex,nofollow" />
 		<? else: ?>
 			<meta name="robots" content="index,follow" />
@@ -26,16 +30,22 @@
 			<meta http-equiv="refresh" content="<?=h($refresh)?>; URL=<?=h($canonicalurl)?>" />
 		<? endif ?>
 
-		<? if($conference->hasAuthor()): ?>
-			<meta name="author" content="<?=h($conference->getAuthor())?>" />
-		<? endif ?>
+		<? if(isset($conference)): ?>
+			<? if($conference->hasAuthor()): ?>
+				<meta name="author" content="<?=h($conference->getAuthor())?>" />
+			<? endif ?>
 
-		<? if($conference->hasDescription()): ?>
-			<meta name="description" content="<?=h($conference->getDescription())?>" />
-		<? endif ?>
+			<? if($conference->hasDescription()): ?>
+				<meta name="description" content="<?=h($conference->getDescription())?>" />
+			<? endif ?>
 
-		<? if($conference->hasKeywords()): ?>
-			<meta name="keywords" content="<?=h($conference->getKeywords())?>" />
+			<? if($conference->hasKeywords()): ?>
+				<meta name="keywords" content="<?=h($conference->getKeywords())?>" />
+			<? endif ?>
+		<? else: ?>
+			<meta name="author" content="C3VOC" />
+			<meta name="description" content="Video Live-Streaming of the CCC" />
+			<meta name="keywords" content="Video, Media, Streaming, VOC, C3VOC, CCC" />
 		<? endif ?>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />

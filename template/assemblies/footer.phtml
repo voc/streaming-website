@@ -1,5 +1,5 @@
 <footer>
-	<? if($conference->hasFooterHtml()): ?>
+	<? if(isset($conference) && $conference->hasFooterHtml()): ?>
 		<?= $conference->getFooterHtml() ?>
 	<? else: ?>
 		by <a href="https://c3voc.de">C3VOC</a>

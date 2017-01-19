@@ -3,6 +3,7 @@
 namespace C3VOC\StreamingWebsite\View;
 
 use C3VOC\StreamingWebsite\Lib\Router;
+use C3VOC\StreamingWebsite\Lib\PhpTemplate;
 
 abstract class View
 {
@@ -15,6 +16,11 @@ abstract class View
 	 * @var array
 	 */
 	private $headers = [];
+
+	/**
+	 * @var string
+	 */
+	private $httpResponse = null;
 
 	/**
 	 * View constructor.
@@ -49,6 +55,7 @@ abstract class View
 			'assemblies' => 'template/assemblies/',
 			'assets' => forceslash('assets'),
 			'conference_assets' => '',
+			'isPreviewEnabled' => $this->router->isPreviewEnabled(),
 
 			'canonicalurl' => $this->router->getCanonicalUrl(),
 		]);
@@ -86,6 +93,14 @@ abstract class View
 	}
 
 	/**
+	 * @param $httpResponse string
+	 */
+	public function setHttpResponse($httpResponse)
+	{
+		$this->httpResponse = $httpResponse;
+	}
+
+	/**
 	 * @param $k string
 	 * @return string
 	 */
@@ -107,6 +122,11 @@ abstract class View
 	 */
 	public function outputHeaders()
 	{
+		if($this->httpResponse)
+		{
+			header($this->httpResponse);
+		}
+
 		foreach($this->getHeaders() as $k => $v)
 		{
 			header("$k: $v");

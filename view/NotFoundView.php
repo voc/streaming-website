@@ -17,6 +17,13 @@ class NotFoundView extends View
 
 	public function render()
 	{
-		return 'NotFoundView';
+		$tpl = $this->createPageTemplate();
+		return $tpl->render([
+			'page' => '404',
+			'title' => '404 Not Found',
+
+			'e' => $this->exception,
+			'msg' => $this->exception->getMessage(),
+		]);
 	}
 }
