@@ -32,6 +32,14 @@ abstract class View
 	}
 
 	/**
+	 * @param $route
+	 */
+	public function setRedirectHeader($route)
+	{
+		$this->setHeader('Location', joinpath([baseurl(), $route]));
+	}
+
+	/**
 	 * @return PhpTemplate
 	 */
 	protected function createPageTemplate()
@@ -120,7 +128,7 @@ abstract class View
 	/**
 	 * @return $this
 	 */
-	public function outputHeaders()
+	private function outputHeaders()
 	{
 		if($this->httpResponse)
 		{
@@ -141,12 +149,16 @@ abstract class View
 	 */
 	public abstract function render();
 
+
 	/**
 	 * @return $this
 	 */
-	public function outputBody()
+	public function output()
 	{
-		echo $this->render();
+		$body = $this->render();
+		$this->outputHeaders();
+
+		echo $body;
 
 		return $this;
 	}

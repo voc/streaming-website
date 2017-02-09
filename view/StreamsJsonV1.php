@@ -3,14 +3,10 @@
 namespace C3VOC\StreamingWebsite\View;
 
 use C3VOC\StreamingWebsite\Model\Conferences;
+use C3VOC\StreamingWebsite\Model\Room;
 
 class StreamsJsonV1 extends View
 {
-	public function __construct()
-	{
-		$this->setHeader('Content-Type', 'application/json');
-	}
-
 	public function render()
 	{
 		$struct = [];
@@ -114,6 +110,7 @@ class StreamsJsonV1 extends View
 			}
 		}
 
+		$this->setHeader('Content-Type', 'application/json');
 		return json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 	}
 }

@@ -53,21 +53,15 @@ try {
 	try {
 		$router = new Router($route);
 		$view = $router->createView();
-		$view
-			->outputHeaders()
-			->outputBody();
+		$view->output();
 	}
 	catch(NotFoundException $e) {
 		$view = new View\NotFoundView($router, $e);
-		$view
-			->outputHeaders()
-			->outputBody();
+		$view->output();
 	}
 	catch(Exception $e) {
 		$view = new View\ErrorView($router, $e);
-		$view
-			->outputHeaders()
-			->outputBody();
+		$view->output();
 	}
 
 }
