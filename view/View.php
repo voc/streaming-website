@@ -87,6 +87,13 @@ abstract class View
 		return 'template/page.phtml';
 	}
 
+	/**
+	 * @return Router
+	 */
+	public function getRouter()
+	{
+		return $this->router;
+	}
 
 	/**
 	 * @param $k string

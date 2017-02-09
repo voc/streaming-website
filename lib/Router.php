@@ -7,6 +7,7 @@ use C3VOC\StreamingWebsite\View;
 class Router
 {
 	const ROUTES = [
+		''                      => View\Frontpage::class,
 		'gen/main.css'          => View\GlobalCssView::class,
 		'streams/v1.json'       => View\StreamsJsonV1::class,
 		'streams/v2.json'       => View\StreamsJsonV2::class,
