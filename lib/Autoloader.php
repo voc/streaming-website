@@ -23,6 +23,7 @@ class Autoloader
 				]);
 				/** @noinspection PhpIncludeInspection */
 				require_once($path);
+				return;
 			}
 		}
 	}
