@@ -200,6 +200,10 @@ class Conference extends ModelBase
 		return $this->has('ROOMS.'.$slug);
 	}
 
+	/**
+	 * @param $room name
+	 * @return Room
+	 */
 	public function getRoom($room) {
 		return new Room($this, $room);
 	}

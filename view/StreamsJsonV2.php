@@ -24,6 +24,7 @@ class StreamsJsonV2 extends View
 			foreach($overview->getGroups() as $group => $rooms)
 			{
 				$roomstruct = array();
+				/** @var Room[] $rooms */
 				foreach($rooms as $room)
 				{
 					$streams = array();

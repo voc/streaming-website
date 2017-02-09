@@ -274,6 +274,9 @@ class Room
 		return $res;
 	}
 
+	/**
+	 * @return Stream[]
+	 */
 	public function getStreams()
 	{
 		$selections = $this->getSelectionNames();

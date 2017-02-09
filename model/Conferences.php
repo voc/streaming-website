@@ -33,6 +33,9 @@ class Conferences
 		return count(Conferences::listConferences());
 	}
 
+	/**
+	 * @return Conference[]
+	 */
 	public static function getActiveConferences() {
 		return array_values(array_filter(
 			Conferences::getConferencesSorted(),
