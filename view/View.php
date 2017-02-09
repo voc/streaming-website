@@ -23,12 +23,19 @@ abstract class View
 	private $httpResponse = null;
 
 	/**
+	 * @var array
+	 */
+	private $params;
+
+	/**
 	 * View constructor.
 	 * @param Router $router
+	 * @param array $params
 	 */
-	public function __construct(Router $router)
+	public function __construct(Router $router, $params = [])
 	{
 		$this->router = $router;
+		$this->params = $params;
 	}
 
 	/**
@@ -37,6 +44,14 @@ abstract class View
 	public function setRedirectHeader($route)
 	{
 		$this->setHeader('Location', joinpath([baseurl(), $route]));
+	}
+
+	/**
+	 * @return array
+	 */
+	protected function getParams()
+	{
+		return $this->params;
 	}
 
 	/**

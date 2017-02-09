@@ -1,6 +1,6 @@
 <?php
 
-use C3VOC\StreamingWebsite\View\ConferenceView;
+namespace C3VOC\StreamingWebsite\View;
 
 class Overview extends ConferenceView
 {
