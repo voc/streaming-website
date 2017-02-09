@@ -2,6 +2,8 @@
 
 namespace C3VOC\StreamingWebsite\Model;
 
+use C3VOC\StreamingWebsite\Lib\NotFoundException;
+
 class Overview
 {
 	public function __construct(Conference $conference)
