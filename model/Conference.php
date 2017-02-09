@@ -8,6 +8,10 @@ use DateTime;
 class Conference extends ModelBase
 {
 	private $slug;
+	/**
+	 * @var bool
+	 */
+	private $forcedOpen;
 
 	public function __construct($config, $slug)
 	{
@@ -47,7 +51,7 @@ class Conference extends ModelBase
 
 	public function hasBegun() {
 		// on the preview-domain all conferences are always open
-		if($this->isPreviewEnabled())
+		if($this->isForcedOpen())
 			return true;
 
 		if($this->has('CONFERENCE.CLOSED')) {
@@ -76,7 +80,7 @@ class Conference extends ModelBase
 
 	public function hasEnded() {
 		// on the preview-domain no conference ever ends
-		if($this->isPreviewEnabled())
+		if($this->isForcedOpen())
 			return false;
 
 		if($this->has('CONFERENCE.CLOSED')) {
@@ -219,5 +223,21 @@ class Conference extends ModelBase
 
 	public function getExtraFiles() {
 		return $this->get('EXTRA_FILES', []);
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function isForcedOpen()
+	{
+		return $this->forcedOpen;
+	}
+
+	/**
+	 * @param bool $forcedOpen
+	 */
+	public function setForcedOpen($forcedOpen)
+	{
+		$this->forcedOpen = $forcedOpen;
 	}
 }

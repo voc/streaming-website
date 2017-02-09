@@ -20,7 +20,7 @@
 			<title><?=h($title)?> – C3VOC Streaming</title>
 		<? endif ?>
 
-		<? if(isset($conference) && $conference->isPreviewEnabled()): ?>
+		<? if($isPreviewEnabled): ?>
 			<meta name="robots" content="noindex,nofollow" />
 		<? else: ?>
 			<meta name="robots" content="index,follow" />

@@ -49,6 +49,8 @@ class Router
 
 		if(is_subclass_of($viewClass, View\ConferenceView::class))
 		{
+			// FIXME select Conference
+			// FIXME set Conference open if Router says so
 			return new $viewClass($this, null);
 		}
 		elseif(is_subclass_of($viewClass, View\View::class))
