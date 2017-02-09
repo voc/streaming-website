@@ -22,7 +22,7 @@ if(isset($argv) && isset($argv[1]))
 
 	if(is_null($cmd))
 	{
-		stderr("Unknown Command: %s", $argv[1]);
+		fprintf(STDERR, "Unknown Command: %s", $argv[1]);
 		exit(1);
 	}
 	else {
