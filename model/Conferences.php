@@ -2,8 +2,6 @@
 
 namespace C3VOC\StreamingWebsite\Model;
 
-use C3VOC\StreamingWebsite\Lib;
-
 class Conferences
 {
 	const MANDATOR_DIR = 'configs/conferences/';
