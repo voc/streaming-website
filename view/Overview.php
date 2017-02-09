@@ -1,26 +1,43 @@
 <?php
 
-$schedule = $conference->getSchedule();
+use C3VOC\StreamingWebsite\View\ConferenceView;
 
-$talksPerRoom = $schedule->getSchedule();
-$now = time() + $schedule->getSimulationOffset();
+class Overview extends ConferenceView
+{
+	public function render()
+	{
+		$tpl = $this->createPageTemplate();
+		return $tpl->render([
+			'page' => 'overview',
+			'title' => 'Live-Streams',
 
-$upcomingTalksPerRoom = array_map(function($talks) use($now) {
-	return [
-		'current' => array_filter_last($talks, function($talk) use ($now) {
-			return $talk['start'] < $now && $talk['end'] > $now;
-		}),
-		'next' => array_filter_first($talks, function($talk) use ($now) {
-			return !isset($talk['special']) && $talk['start'] > $now;
-		}),
-	];
-}, $talksPerRoom);
+			'overview' => $this->getConference()->getOverview(),
 
-echo $tpl->render(array(
-	'page' => 'overview',
-	'title' => 'Live-Streams',
+			'upcomingTalksPerRoom' => $this->getUpcomingTalks(),
+		]);
+	}
 
-	'overview' => $conference->getOverview(),
+	/**
+	 * @return array
+	 */
+	private function getUpcomingTalks()
+	{
+		$schedule = $this->getConference()->getSchedule();
 
-	'upcomingTalksPerRoom' => $upcomingTalksPerRoom,
-));
+		$talksPerRoom = $schedule->getSchedule();
+		$now = time() + $schedule->getSimulationOffset();
+
+		$upcomingTalksPerRoom = array_map(function ($talks) use ($now) {
+			return [
+				'current' => array_filter_last($talks, function ($talk) use ($now) {
+					return $talk['start'] < $now && $talk['end'] > $now;
+				}),
+				'next' => array_filter_first($talks, function ($talk) use ($now) {
+					return !isset($talk['special']) && $talk['start'] > $now;
+				}),
+			];
+		}, $talksPerRoom);
+
+		return $upcomingTalksPerRoom;
+	}
+}
