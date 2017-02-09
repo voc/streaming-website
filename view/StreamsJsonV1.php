@@ -79,7 +79,7 @@ class StreamsJsonV1 extends View
 
 							case 'dash':
 								$urls['dash'] = array(
-									'display' => $display,
+									'display' => 'DASH',
 									'tech' => $room->getDashTech(),
 									'url' => $room->getDashManifestUrl(),
 								);
