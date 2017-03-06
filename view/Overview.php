@@ -2,28 +2,25 @@
 
 namespace C3VOC\StreamingWebsite\View;
 
-class Overview extends ConferenceView
+use C3VOC\StreamingWebsite\Lib\Router;
+use C3VOC\StreamingWebsite\Model\Conference;
+
+use Silex\Application;
+use Symfony\Component\HttpFoundation\Request;
+
+class Overview
 {
-	public function render()
-	{
-		$tpl = $this->createPageTemplate();
-		return $tpl->render([
-			'page' => 'overview',
-			'title' => 'Live-Streams',
-
-			'overview' => $this->getConference()->getOverview(),
-
-			'upcomingTalksPerRoom' => $this->getUpcomingTalks(),
-		]);
+	public function action($conference) {
+		return 'Lala: '.$conference;
 	}
 
 	/**
+	 * @param Conference $conference
 	 * @return array
 	 */
-	private function getUpcomingTalks()
+	private function getUpcomingTalks(Conference $conference)
 	{
-		$schedule = $this->getConference()->getSchedule();
-
+		$schedule = $conference->getSchedule();
 		$talksPerRoom = $schedule->getSchedule();
 		$now = time() + $schedule->getSimulationOffset();
 

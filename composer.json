@@ -1,0 +1,20 @@
+{
+	"name": "voc/streaming-website",
+	"description": "Home of streaming.media.ccc.de",
+	"type": "project",
+	"require": {
+		"silex/silex": "^2.0"
+	},
+	"authors": [
+		{
+			"name": "VOC",
+			"email": "voc@c3voc.de"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"C3VOC\\StreamingWebsite\\Model\\": "model",
+			"C3VOC\\StreamingWebsite\\View\\": "view"
+		}
+	}
+}

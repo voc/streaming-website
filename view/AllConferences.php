@@ -4,8 +4,12 @@ namespace C3VOC\StreamingWebsite\View;
 
 use C3VOC\StreamingWebsite\Model\Conferences;
 
-class AllConferences extends View
+class AllConferences
 {
+	public function action() {
+		return 'Lala';
+	}
+
 	/**
 	 * @return string
 	 */

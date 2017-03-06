@@ -8,3 +8,5 @@
 /thumbs
 /configs/conferences/**/*schedule*
 /configs/upcoming.json*
+
+/vendor/
