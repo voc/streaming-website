@@ -62,6 +62,10 @@
 										width="213" height="120"
 									/>
 
+								<? else: ?>
+
+									<h2><?=h($room->getDisplay())?></h2>
+
 								<? endif ?>
 
 								<? if($room->hasSchedule()): ?>
