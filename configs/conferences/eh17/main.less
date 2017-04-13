@@ -1,0 +1,48 @@
+@import "../../../assets/css/_structure.less";
+
+@orange: #D28A0D;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+
+
+@brand-primary: @orange;
+
+
+@well-bg: @grey-lighter;
+
+@navbar-default-bg: @grey-darker;
+
+@btn-default-bg: @grey-light;
+
+
+@panel-default-heading-bg: @grey-darker;
+@panel-default-text: @orange;
+
+@panel-bg: @grey-lighter;
+
+
+body {
+	background-color: @grey-darker;
+	color: @grey-light;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+
+.bunny {
+	background-image: url(bunny.svg);
+
+	position: absolute;
+	right: 30px;
+	bottom: 0;
+
+	width: 218px;
+	height: 400px;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
