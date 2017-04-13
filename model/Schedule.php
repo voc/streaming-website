@@ -41,7 +41,7 @@ class Schedule
 
 	public function getMappedRoom($scheduleRoom) {
 		$mapping = $this->getScheduleToRoomSlugMapping();
-		return $this->getConference()->getRoomIfExists( $mapping[$scheduleRoom] );
+		return $this->getConference()->getRoomIfExists( @$mapping[$scheduleRoom] );
 	}
 
 	private function fetchSchedule()
