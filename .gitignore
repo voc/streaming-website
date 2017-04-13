@@ -7,3 +7,6 @@
 /thumbs
 /configs/conferences/**/*schedule*
 /configs/upcoming.json*
+/.idea
+/*.iml
+
