@@ -340,7 +340,7 @@ $CONFIG['ROOMS'] = array(
 
 	'grosses-kolleg' => array(
 		'DISPLAY' => 'Großes Kolleg',
-		'STREAM' => 's5',
+		'STREAM' => 's4',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
