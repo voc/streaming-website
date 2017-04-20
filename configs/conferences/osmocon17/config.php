@@ -75,7 +75,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => "<h1 style=\"text-align: center;\"><img src=\"../configs/conferences/osmocon17/OsmoCon.png\"></h1>",
+	'BANNER_HTML' => "<h1 style=\"text-align: center;\"><img height=\"70\" src=\"../configs/conferences/osmocon17/OsmoCon.png\"></h1>",
 
 	/**
 	 * Link zu den Recordings
@@ -106,7 +106,7 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Live' => array(
+		'' => array(
 			'stream',
 		),
 	),
