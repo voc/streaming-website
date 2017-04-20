@@ -209,7 +209,7 @@ $CONFIG['ROOMS'] = array(
 		 *
 		 * In diesem Fall wird, sofern aktiviert, Musik als Default-Stream angenommen.
 		 */
-		'AUDIO' => false,
+		'AUDIO' => true,
 
 		/**
 		 * Musik-Stream verfügbar
