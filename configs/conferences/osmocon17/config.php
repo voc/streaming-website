@@ -349,38 +349,38 @@ $CONFIG['ROOMS'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-//$CONFIG['SCHEDULE'] = array(
-//	/**
-//	 * URL zum Fahrplan-XML
-//	 *
-//	 * Diese URL muss immer verfügbar sein, sonst könnte die Programm-Ansicht
-//	 * aufhören zu funktionieren. Üblicherweise wird diese daher Datei über
-//	 * das Script configs/download.sh heruntergeladen, welches von einem
-//	 * Cronjob regelmäßig getriggert wird.
-//	 */
-//	'URL' => 'http://data.c3voc.de/33C3/everything.schedule.xml',
-//
-//	/**
-//	 * Nur die angegebenen Räume aus dem Fahrplan beachten
-//	 *
-//	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-//	 */
-//	'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6', 'Sendezentrumsbühne'),
-//
-//	/**
-//	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-//	 */
-//	'SCALE' => 7,
-//
-//	/**
-//	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-//	 *
-//	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-//	 * Konferenz-Datum 2016-12-29 auf den heutigen Tag 2016-02-24 verschoben ist.
-//	 */
-//	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-12-27') - strtotime(/* Today */ date('Y-m-d')),
-//	//'SIMULATE_OFFSET' => 0,
-//);
+$CONFIG['SCHEDULE'] = array(
+	/**
+	 * URL zum Fahrplan-XML
+	 *
+	 * Diese URL muss immer verfügbar sein, sonst könnte die Programm-Ansicht
+	 * aufhören zu funktionieren. Üblicherweise wird diese daher Datei über
+	 * das Script configs/download.sh heruntergeladen, welches von einem
+	 * Cronjob regelmäßig getriggert wird.
+	 */
+	'URL' => 'http://data.testi.ber.c3voc.de/schedule/osmocon17/schedule.xml',
+
+	/**
+	 * Nur die angegebenen Räume aus dem Fahrplan beachten
+	 *
+	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 */
+	// 'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6', 'Sendezentrumsbühne'),
+
+	/**
+	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
+	 */
+	'SCALE' => 7,
+
+	/**
+	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
+	 *
+	 * Diese folgende Beispiel-Zeile Simuliert, dass das
+	 * Konferenz-Datum 2016-12-29 auf den heutigen Tag 2016-02-24 verschoben ist.
+	 */
+	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-12-27') - strtotime(/* Today */ date('Y-m-d')),
+	//'SIMULATE_OFFSET' => 0,
+);
 
 
 
