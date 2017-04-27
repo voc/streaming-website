@@ -54,7 +54,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'Datensummit, 2017, Berlin',
+	'KEYWORDS' => 'Datensummit, 2017, Berlin, OKFN, OKF DE',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://c3voc.de">C3VOC</a>
+		by <a href="https://okfn.de/">OKF DE</a> & <a href="https://c3voc.de">C3VOC</a>
 	',
 
 	/**
