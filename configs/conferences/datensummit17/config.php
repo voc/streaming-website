@@ -130,7 +130,7 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'BMWI',
+		'DISPLAY' => 'BMVI',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -238,7 +238,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Display-Name verwendet
 		 */
-		'SCHEDULE_NAME' => 'BMWI',
+		'SCHEDULE_NAME' => 'BMVI',
 
 		/**
 		 * Feedback anzeigen (boolean)
