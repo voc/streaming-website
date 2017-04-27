@@ -24,7 +24,8 @@ else
 	$IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
 }
 
-$STREAM = $IM_CCCB ? 's5' : 'q2';
+//$STREAM = $IM_CCCB ? 's5' : 'q2';
+$STREAM = 'q2';
 
 $CONFIG['CONFERENCE'] = array(
 	/**
