@@ -140,9 +140,9 @@ $CONFIG['ROOMS'] = array(
  * IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
  * existieren sein. ggf. einfach auf true setzen:
  */
- $CONFIG['IRC'] = false
+# $CONFIG['IRC'] = false
  
-$CONFIG['IRC'] = array(
+#$CONFIG['IRC'] = array(
 	/**
 	 * Anzeigetext für die IRC-Links.
 	 *
@@ -150,7 +150,7 @@ $CONFIG['IRC'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#zaunei2016 @ hackint',
+#	'DISPLAY' => '#zaunei2016 @ hackint',
 
 	/**
 	 * URL für die IRC-Links.
@@ -161,8 +161,8 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'irc://irc.hackint.eu:6667/zaunei2016',
-);
+#	'URL' => 'irc://irc.hackint.eu:6667/zaunei2016',
+#);
 
 /**
  * Globale Konfiguration der Twitter-Links.
