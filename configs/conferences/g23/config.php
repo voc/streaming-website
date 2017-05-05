@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://g23.eu"</a>
+		by <a href="https://g23.eu">Die Rundesbegierung</a>
 	',
 
 	/**
