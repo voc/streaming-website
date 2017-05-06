@@ -128,7 +128,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'disse' => array(
 		'DISPLY' => 'Disse',
-		'STREAM' => 'disse',
+		'STREAM' => 'lounge2',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
