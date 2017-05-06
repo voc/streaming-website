@@ -108,6 +108,7 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Live Music'  => array(
 			'lounge',
+			'disse',
 		),
 	),
 );
@@ -122,6 +123,12 @@ $CONFIG['ROOMS'] = array(
 	'lounge' => array(
 		'DISPLAY' => 'Lounge',
 		'STREAM' => 'lounge',
+		'MUSIC' => true,
+		'EMBED' => true,
+	),
+	'disse' => array(
+		'DISPLY' => 'Disse',
+		'STREAM' => 'disse',
 		'MUSIC' => true,
 		'EMBED' => true,
 	),
