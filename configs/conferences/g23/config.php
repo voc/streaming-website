@@ -108,7 +108,7 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Live Music'  => array(
 			'lounge',
-			'disse',
+//			'disse',
 		),
 	),
 );
