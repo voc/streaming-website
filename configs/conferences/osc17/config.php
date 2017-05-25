@@ -119,7 +119,7 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'' => array(
+		'Lecture rooms' => array(
 			'saal',
 			'galerie',
 		),
@@ -241,7 +241,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 
 		/**
 		 * Name des Raums im Fahrplan
