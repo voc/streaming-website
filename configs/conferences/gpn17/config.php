@@ -78,6 +78,11 @@ $CONFIG['CONFERENCE'] = array(
 	//'BANNER_HTML' => '',
 
 	/**
+	 * Zusätzlich einzubindendendes HTML
+	 */
+	'ADDITIONAL_HTML' => file_get_contents(dirname(__FILE__).'/gema-nach-hause.html'),
+
+	/**
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
@@ -383,7 +388,7 @@ $CONFIG['ROOMS'] = array(
 
 	'lounge' => array(
 		'DISPLAY' => 'Lounge',
-		'STREAM' => 'lounge',
+		'STREAM' => 'nope',
 		'PREVIEW' => false,
 
 		'TRANSLATION' => false,

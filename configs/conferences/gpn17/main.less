@@ -1,4 +1,6 @@
 @import "../../../assets/css/_structure.less";
+@import "../../../assets/css/bootstrap-3.3.2/modals.less";
+@import "../../../assets/css/bootstrap-3.3.2/close.less";
 
 body {
 	background-image: url('background.png');
@@ -23,3 +25,15 @@ body {
 }
 
 .tab-pane { background-color: @gpn-shade; }
+
+.modal-backdrop {
+	bottom: 0;
+	position: fixed;
+}
+
+#gemaModal {
+	.btn {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
