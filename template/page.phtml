@@ -87,7 +87,7 @@
 		<? endif ?>
 
 
-		<? if($conference->hasAdditionalHtml()): ?>
+		<? if($page != 'allconferences' && $conference->hasAdditionalHtml()): ?>
 			<?= $conference->getAdditionalHtml() ?>
 		<? endif ?>
 	</body>
