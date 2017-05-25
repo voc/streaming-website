@@ -29,7 +29,7 @@ function handleLoungeStreamWhichActuallyDoesNotExist()
 
 	$('.room-lounge a').on('click', function(e) {
 		e.preventDefault();
-		gema1();
+		location.href = "https://broadcast.fem.tu-ilmenau.de/events/gpn17/";
 	});
 }
 
