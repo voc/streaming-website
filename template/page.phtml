@@ -85,5 +85,10 @@
 				data-frontend-url="<?=h($subtitles->getFrontendURL())?>"
 			></span>
 		<? endif ?>
+
+
+		<? if($conference->hasAdditionalHtml()): ?>
+			<?= $conference->getAdditionalHtml() ?>
+		<? endif ?>
 	</body>
 </html>

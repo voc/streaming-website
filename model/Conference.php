@@ -225,4 +225,11 @@ class Conference extends ModelBase
 	public function getExtraFiles() {
 		return $this->get('EXTRA_FILES', []);
 	}
+
+	public function hasAdditionalHtml() {
+		return $this->has('CONFERENCE.ADDITIONAL_HTML');
+	}
+	public function getAdditionalHtml() {
+		return $this->get('CONFERENCE.ADDITIONAL_HTML');
+	}
 }
