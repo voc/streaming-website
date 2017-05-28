@@ -121,9 +121,9 @@ $CONFIG['OVERVIEW'] = array(
 			'grosses-studio',
 			'vortragssaal'
 		],
-		'Live music' => [
-			'lounge',
-		],
+		// 'Live music' => [
+		// 	'lounge',
+		// ],
 	),
 );
 
