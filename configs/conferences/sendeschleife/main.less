@@ -1,0 +1,39 @@
+@import "../../../assets/css/_structure.less";
+@import "../../../assets/css/bootstrap-3.3.2/modals.less";
+@import "../../../assets/css/bootstrap-3.3.2/close.less";
+
+body {
+	// background-image: url('background.png');
+	// background-repeat: repeat;
+}
+
+@gpn-red: #e4292a;
+@gpn-shade: hsla(0, 0%, 100%, 0.81);
+
+@panel-bg: @gpn-shade;
+@navbar-default-bg: @gpn-shade;
+@btn-default-bg: @gpn-shade;
+
+@brand-primary: @gpn-red;
+
+@well-bg: @gpn-shade;
+@panel-default-heading-bg: @gpn-shade;
+@panel-default-text: @gpn-red;
+
+.nav-tabs > li > a {
+	background-color: darken(@gpn-shade, 33%);
+}
+
+.tab-pane { background-color: @gpn-shade; }
+
+.modal-backdrop {
+	bottom: 0;
+	position: fixed;
+}
+
+#gemaModal {
+	.btn {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
