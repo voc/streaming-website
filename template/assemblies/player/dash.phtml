@@ -1,4 +1,3 @@
-<script type="text/javascript" src="<?=h($assets)?>clapprio/clappr.min.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/dash-shaka-playback.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/level-selector.min.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/audio-selector.min.js"></script>
@@ -12,21 +11,22 @@
  interference with the new dash-player.
 -->
 <script type="text/javascript">
+	var nativeHLS = document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "";
 	var player = new Clappr.Player({
-			// source: "http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd",
-			source: '<?=h($room->getDashManifestUrl())?>',
+			source: nativeHLS ? '<?=h($room->getHLSPlaylistUrl())?>' : '<?=h($room->getDashManifestUrl())?>',
 			width: "100%",
 			plugins: [DashShakaPlayback, LevelSelector, AudioSelector],
 			shakaConfiguration: {
-				preferredAudioLanguage: 'de-DE',
-				streaming: {
-					rebufferingGoal: 15
-				}
+		        abr: {
+		          defaultBandwidthEstimate: 600000
+		        },
 			},
 			autoPlay: true,
 			parentId: '#player'
 		});
 </script>
+
+
 <style type="text/css">
 #player > [data-player] {
 	padding-bottom: 56.25%;
