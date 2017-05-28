@@ -67,7 +67,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 
 					case 'dash':
 						$urls['dash'] = array(
-							'display' => $display,
+							'display' => 'DASH, baby',
 							'tech' => $room->getDashTech(),
 							'url' => $room->getDashManifestUrl(),
 						);
