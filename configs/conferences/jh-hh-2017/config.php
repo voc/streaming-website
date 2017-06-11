@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'S1',
+			'S3',
 		),
 	),
 );
@@ -135,18 +135,18 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'S1' => array(
+	'S3' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Saal 1',
+		'DISPLAY' => 'Betahaus Hamburg',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's1',
+		'STREAM' => 's3',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -327,7 +327,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Twitter-Links durch auskommentieren
 		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
 		 **/
-		'TWITTER' => false,
+		'TWITTER' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -337,8 +337,8 @@ $CONFIG['ROOMS'] = array(
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#hall1 @ twitter',
-			'TEXT'    => '#31C3 #hall1',
+			'DISPLAY' => '#jhhh @ twitter',
+			'TEXT'    => '#jhhh #jugendhackt',
 		),
 	),
 );
