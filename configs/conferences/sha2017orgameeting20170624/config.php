@@ -130,7 +130,7 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => ‘Revspace, Den Haag’,
+		'DISPLAY' => 'Revspace, Den Haag',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
