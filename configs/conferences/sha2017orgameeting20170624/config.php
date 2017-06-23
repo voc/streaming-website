@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-  'DESCRIPTION' => 'SHA2017 orga meeting 20170624’,
+  'DESCRIPTION' => 'SHA2017 orga meeting 20170624',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
