@@ -174,9 +174,9 @@ $CONFIG['ROOMS'] = array(
  * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
  * existieren sein. ggf. einfach auf true setzen:
  */
-$CONFIG['TWITTER'] = true
+$CONFIG['TWITTER'] = true,
 # 
-#$CONFIG['TWITTER'] = array(
+$CONFIG['TWITTER'] = array(
 	/**
 	 * Anzeigetext für die Twitter-Links.
 	 *
@@ -184,7 +184,7 @@ $CONFIG['TWITTER'] = true
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-#	'DISPLAY' => '#zaunei2016 @ twitter',
+	'DISPLAY' => 'https://twitter.com/fcmc_tv',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -192,8 +192,8 @@ $CONFIG['TWITTER'] = true
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-#	'TEXT' => '#zaunei2016',
-#);
+	'TEXT' => '#NoG20',
+);
 
 
 return $CONFIG;
