@@ -116,7 +116,7 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
 	
-	'lounge' => array(
+	'live' => array(
 		'DISPLAY' => 'Live',
 		'STREAM' => 'fcmc',
 		'MUSIC' => false,
