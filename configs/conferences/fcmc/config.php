@@ -174,7 +174,7 @@ $CONFIG['ROOMS'] = array(
  * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
  * existieren sein. ggf. einfach auf true setzen:
  */
-$CONFIG['TWITTER'] = true,
+#$CONFIG['TWITTER'] = true,
 # 
 $CONFIG['TWITTER'] = array(
 	/**
