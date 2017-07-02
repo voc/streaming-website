@@ -36,7 +36,7 @@ fi
 
 if [ "x$DEPLOY_BRANCH" != "xmaster" ]; then
 	echo "You're currently on branch $DEPLOY_BRANCH."
-	echo "Are you sure you want to deoloy that branch (and not master)? then type yes"
+	echo "Are you sure you want to deploy that branch (and not master)? then type yes"
 	read -p "" input
 	if [ "x$input" != "xyes" ]; then
 		exit 2
