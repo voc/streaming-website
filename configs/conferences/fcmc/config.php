@@ -126,7 +126,8 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
 		'FEEDBACK' => true,
-                'PREVIEW' => true,
+		'PREVIEW' => true,
+		'TWITTER' => true,
 	),
 );
 
