@@ -48,7 +48,6 @@ $CONFIG['CONFERENCE'] = array(
 	 * <meta>-Tag generiert.
 	 */
 	'DESCRIPTION' => 'The FC⚡MC is the media center for critical minds and committed hearts during the G20 summit in Hamburg. From July 4th to 9th you find all information about the FC⚡MC here. This site will provide access to live streams, press conferences, information about the protests and an archive of produced audio and/or video magazines, interviews and essays.',
-
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
@@ -61,9 +60,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Sollte üblicherweise nur Inline-Elemente enthalten
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
-	'FOOTER_HTML' => '
-		by <a href="https://fcmc.tv">fc⚡mc</a>
-	',
+	'FOOTER_HTML' => 'by <a href="https://fcmc.tv">fc⚡mc</a>',
 
 	/**
 	 * HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)
