@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Weltbild (Host-TV): Die öffentlich-rechtlichen Rundfunkanstalten und privaten TV-Sender Deutschlands haben sie darauf geeinigt, im Zuge des sog. Berliner Modells gemeinsam ein Weltbild (Host-TV) zu erstellen. Es wird Entsprechend den u.g. Bedingungen des Berliner Modells über Satellit abgeben. Das Berliner Modell stellt das Weltbild kosten- und rechtefrei, auch für Onlinenutzung und zur Archivierung zur Verfügung. Mögliche Übertragungen vom Global Citizen Concert oder anderen Konzerten unterliegen allerdings rechtlichen Einschränkungen vonseiten der Künstler, die zur gegebenen Zeit mitgeteilt werden. Das C3VOC verbreitet den Weltbild-Feed via IP. Technischer Ansprechpartner: voc@c3voc.de',
+	'DESCRIPTION' => 'Weltbild (Host-TV): Die öffentlich-rechtlichen Rundfunkanstalten und privaten TV-Sender Deutschlands haben sie darauf geeinigt, im Zuge des sog. Berliner Modells gemeinsam ein Weltbild (Host-TV) zu erstellen. Es wird Entsprechend den u.g. Bedingungen des Berliner Modells über Satellit abgeben. Das Berliner Modell stellt das Weltbild kosten- und rechtefrei, auch für Onlinenutzung und zur Archivierung zur Verfügung. Mögliche Übertragungen vom Global Citizen Concert oder anderen Konzerten unterliegen allerdings rechtlichen Einschränkungen vonseiten der Künstler, die zur gegebenen Zeit mitgeteilt werden.',
          /**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
