@@ -1,7 +1,17 @@
 @import "../../../assets/css/_structure.less";
 
+@yellow:		#c8b41e;
+@light-yellow:		rgba(200, 180, 30, 0.7);
+
 @navbar-default-color:  #6f6f6f;
 @navbar-default-bg:     #000;
+
+@brand-primary:         @yellow;
+@text-color:            white;
+
+
+@link-color:            white;
+@link-hover-color:      white;
 
 body {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
@@ -16,3 +26,29 @@ body {
 html {
 	min-height: 100%;
 }
+
+.nav-tabs > li.active > a {
+	background-color: @yellow;
+	border-bottom: 2px solid black;
+	color: black; 
+}
+
+.nav-tabs > li.active > a:hover {
+	background-color: #c8b41e;
+	border-bottom: 2px solid black;
+	color: black; 
+}
+
+.nav-tabs > li > a:hover {
+	background-color: #c8b41e;
+	border-bottom: 2px solid black;
+	color: black; 
+}
+
+.nav-tabs > li > a {
+	background-color: @light-yellow;
+	padding: 2px 5px;
+	text-decoration: none;
+	border-bottom: 2px solid #666;
+}
+
