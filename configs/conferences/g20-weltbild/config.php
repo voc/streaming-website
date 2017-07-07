@@ -26,21 +26,21 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => true,
+	//'CLOSED' => true,
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'G20 Weltbild',
+	'TITLE' => 'G20 Weltbild / World Feed',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'NDR, Misc. Broadcasters',
+	'AUTHOR' => 'Berliner Modell',
 
 	/**
 	 * Beschreibungstext
@@ -61,7 +61,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		G20 Weltbild feeds provided by <a href="http://ndr.de/">NDR (Host Broadcaster) via Eutelsat</a>,
+		G20 Weltbild feeds provided by Berliner Modell,
                 IP relay by <a href="https://c3voc.de">C3VOC</a>.
 	',
 
@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'G20 Weltbild Channels' => array(
 			'weltbild1',
-			'weltbild2',
+//			'weltbild2',
 		),
 	),
 );
@@ -139,11 +139,11 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'G20 Weltbild 1',
+		'DISPLAY' => 'G20 Weltbild / World Feed',
 		'STREAM' => 'weltbild1',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
-		'STEREO' => true,
+		'STEREO' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'SLIDES' => false,
