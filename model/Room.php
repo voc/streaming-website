@@ -164,11 +164,11 @@ class Room
 	}
 
 	public function getHLSPlaylistUrl() {
-		return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getSlug().'_'.$this->getStream()).'/master.m3u8';
+		return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getSlug().'_'.$this->getStream()).'.m3u8';
 	}
 
 	public function getDashManifestUrl() {
-		return proto().'://cdn.c3voc.de/dash/'.rawurlencode($this->getSlug().'_'.$this->getStream()).'/manifest.mpd';
+		return proto().'://cdn.c3voc.de/dash/'.rawurlencode($this->getSlug().'_'.$this->getStream()).'.mpd';
 	}
 
 	public function getDashTech() {
