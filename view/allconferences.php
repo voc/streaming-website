@@ -2,7 +2,7 @@
 
 echo $tpl->render(array(
 	'page' => 'allconferences',
-	'title' => 'Multiple Conferences',
+	'title' => 'Multiple Events',
 
 	'conferences' => Conferences::getActiveConferences(),
 ));
