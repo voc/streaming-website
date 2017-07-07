@@ -89,6 +89,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
 	// 'RELIVE_JSON' => 'configs/conferences/32c3/vod.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/fcmc/index.json',
 );
 
 /**

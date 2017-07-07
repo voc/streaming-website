@@ -97,6 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
 	//'RELIVE_JSON' => 'configs/conferences/jh-hh-2017/vod.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/weltbild1/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
