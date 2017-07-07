@@ -1,5 +1,18 @@
 // mediaelement-player
 $(function() {
+	function deserialize(string) {
+	  var result = {};
+	  if (string) {
+	    var parts = string.split(/&|\?/);
+	    for (var i = 0; i < parts.length; i++) {
+	      var part = parts[i].split("=");
+	      if (part.length === 2)
+	        result[decodeURIComponent(part[0])] = decodeURIComponent(part[1]);
+	    }
+	  }
+	  return result;
+	}
+
 	(function(strings) {
 		strings['en-US'] = {
 			'Download File': 'Open Stream in Desktop-Player'
@@ -45,8 +58,13 @@ $(function() {
 			events: {
 				onReady: function() {
 					var playback = player.getPlugin('hls');
+					var params = deserialize(location.href)
+
 					playback.once(Clappr.Events.PLAYBACK_PLAY, function() {
-						if(player.getPlugin('hls').getPlaybackType() == 'vod') {
+						var seek = parseFloat(params.t);
+						if (!isNaN(seek)) {
+							player.seek(seek);
+						} else if (player.getPlugin('hls').getPlaybackType() == 'vod') {
 							// skip forward to scheduled beginning of the talk at ~ 0:14:30  (30 sec offset, if speaker starts on time)
 							player.seek(14 * 60 + 30);
 						}
