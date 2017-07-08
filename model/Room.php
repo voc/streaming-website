@@ -168,7 +168,7 @@ class Room
 	}
 
 	public function getDashManifestUrl() {
-		return proto().'://cdn.c3voc.de/dash/'.rawurlencode($this->getSlug().'_'.$this->getStream()).'.mpd';
+		return proto().'://live.dus.c3voc.de/dash/'.rawurlencode($this->getSlug().'_'.$this->getStream()).'.mpd';
 	}
 
 	public function getDashTech() {
