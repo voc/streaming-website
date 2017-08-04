@@ -1001,9 +1001,9 @@ $CONFIG['ROOMS'] = array(
       'MUSIC' => true,
       'EMBED' => true,
     ),
-    'radio' => array(
-      'DISPLAY' => 'Radio',
-      'STREAM' => 'radio',
+    'binaryvoice' => array(
+      'DISPLAY' => 'BinaryVoice',
+      'STREAM' => 'binaryvoice',
       'MUSIC' => true,
       'EMBED' => true,
     ),
