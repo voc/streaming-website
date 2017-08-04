@@ -115,7 +115,7 @@ $CONFIG['OVERVIEW'] = array(
 
     'Live Music'  => array(
       'lounge',
-      'radio',
+      'binaryvoice',
     ),
   ),
 );
