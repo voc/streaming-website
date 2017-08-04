@@ -75,13 +75,13 @@ $CONFIG['CONFERENCE'] = array(
      *
      * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
      */
-    'BANNER_HTML' => "<h1 style=\"text-align: center;\"><img height=\"120\" src=\"../configs/conferences/sha2017orgameeting20170429/logo.png\"></h1>",
+    'BANNER_HTML' => "<h1 style=\"text-align: center;\"><img height=\"120\" src=\"../configs/conferences/SHA2017/logo.png\"></h1>",
 
     /**
      * Link zu den Recordings
      * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
      */
-    //'RELEASES' => 'https://media.ccc.de/c/datensummit17',
+    'RELEASES' => 'https://media.ccc.de/b/conferences/sha2017',
 
     /**
      * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
@@ -91,7 +91,7 @@ $CONFIG['CONFERENCE'] = array(
      *
      * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
      */
-     //'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/datensummit17/index.json',
+     'RELIVE_JSON' => 'configs/conferences/SHA2017/vod.json',
 );
 
 /**
