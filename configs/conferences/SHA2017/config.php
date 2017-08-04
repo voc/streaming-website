@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
      * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
      * und CLOSED weiter unten)
      */
-    'STARTS_AT' => strtotime("2017-08-04 17:00"),
+    'STARTS_AT' => strtotime("2017-08-04 16:45"),
 
     /**
      * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -105,12 +105,21 @@ $CONFIG['OVERVIEW'] = array(
      * Die Räume müssen in $CONFIG['ROOMS'] konfiguriert werden,
      * sonst werden sie nicht angezeigt.
      */
-    'GROUPS' => array(
-        '' => array(
-            'stream',
-        ),
+  'GROUPS' => array(
+    'Live' => array(
+      'no',
+      'pa',
+      're',
+      'explody',
     ),
+
+    'Live Music'  => array(
+      'lounge',
+      'radio',
+    ),
+  ),
 );
+
 
 
 
@@ -126,7 +135,7 @@ $CONFIG['ROOMS'] = array(
      * ([a-zA-Z0-9_\-]) bestehen und insbesondere keine Leerzeichen
      * enthalten.
      */
-    'stream' => array(
+    'no' => array(
         /**
          * Angezeige-Name
          */
@@ -341,7 +350,7 @@ $CONFIG['ROOMS'] = array(
         //    'TEXT'    => '#33C3 #hall1',
         //),
     ),
-    'stream' => array(
+    'pa' => array(
         /**
          * Angezeige-Name
          */
@@ -556,7 +565,7 @@ $CONFIG['ROOMS'] = array(
         //    'TEXT'    => '#33C3 #hall1',
         //),
     ),
-    'stream' => array(
+    're' => array(
         /**
          * Angezeige-Name
          */
@@ -771,7 +780,7 @@ $CONFIG['ROOMS'] = array(
         //    'TEXT'    => '#33C3 #hall1',
         //),
     ),
-    'stream' => array(
+    'explody' => array(
         /**
          * Angezeige-Name
          */
@@ -985,6 +994,18 @@ $CONFIG['ROOMS'] = array(
         //    'DISPLAY' => '#hall1 @ twitter',
         //    'TEXT'    => '#33C3 #hall1',
         //),
+    ),
+    'lounge' => array(
+      'DISPLAY' => 'Lounge',
+      'STREAM' => 'lounge',
+      'MUSIC' => true,
+      'EMBED' => true,
+    ),
+    'radio' => array(
+      'DISPLAY' => 'Radio',
+      'STREAM' => 'radio',
+      'MUSIC' => true,
+      'EMBED' => true,
     ),
 );
 
