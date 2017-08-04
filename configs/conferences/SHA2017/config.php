@@ -997,7 +997,7 @@ $CONFIG['ROOMS'] = array(
     ),
     'lounge' => array(
       'DISPLAY' => 'Lounge',
-      'STREAM' => 'lounge',
+      'STREAM' => 'a1',
       'MUSIC' => true,
       'EMBED' => true,
     ),
