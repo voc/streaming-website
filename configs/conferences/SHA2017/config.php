@@ -241,13 +241,13 @@ $CONFIG['ROOMS'] = array(
          * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
          * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
          */
-        'SCHEDULE' => false,
+        'SCHEDULE' => true,
 
         /**
          * Name des Raums im Fahrplan
          * Wenn diese Zeile auskommentiert ist wird der Raum-Display-Name verwendet
          */
-        'SCHEDULE_NAME' => 'BMVI',
+        'SCHEDULE_NAME' => 'No',
 
         /**
          * Feedback anzeigen (boolean)
@@ -456,13 +456,13 @@ $CONFIG['ROOMS'] = array(
          * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
          * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
          */
-        'SCHEDULE' => false,
+        'SCHEDULE' => true,
 
         /**
          * Name des Raums im Fahrplan
          * Wenn diese Zeile auskommentiert ist wird der Raum-Display-Name verwendet
          */
-        'SCHEDULE_NAME' => 'BMVI',
+        'SCHEDULE_NAME' => 'Pa',
 
         /**
          * Feedback anzeigen (boolean)
@@ -671,13 +671,13 @@ $CONFIG['ROOMS'] = array(
          * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
          * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
          */
-        'SCHEDULE' => false,
+        'SCHEDULE' => true,
 
         /**
          * Name des Raums im Fahrplan
          * Wenn diese Zeile auskommentiert ist wird der Raum-Display-Name verwendet
          */
-        'SCHEDULE_NAME' => 'BMVI',
+        'SCHEDULE_NAME' => 'Re',
 
         /**
          * Feedback anzeigen (boolean)
@@ -886,13 +886,13 @@ $CONFIG['ROOMS'] = array(
          * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
          * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
          */
-        'SCHEDULE' => false,
+        'SCHEDULE' => true,
 
         /**
          * Name des Raums im Fahrplan
          * Wenn diese Zeile auskommentiert ist wird der Raum-Display-Name verwendet
          */
-        'SCHEDULE_NAME' => 'BMVI',
+        'SCHEDULE_NAME' => 'Explody',
 
         /**
          * Feedback anzeigen (boolean)
