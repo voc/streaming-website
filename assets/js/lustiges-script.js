@@ -57,14 +57,14 @@ $(function() {
 			},
 			events: {
 				onReady: function() {
-					var playback = player.getPlugin('hls');
+					var playback = player.core.getCurrentContainer().playback;
 					var params = deserialize(location.href)
 
 					playback.once(Clappr.Events.PLAYBACK_PLAY, function() {
 						var seek = parseFloat(params.t);
 						if (!isNaN(seek)) {
 							player.seek(seek);
-						} else if (player.getPlugin('hls').getPlaybackType() == 'vod') {
+						} else if (playback.getPlaybackType() == 'vod') {
 							// skip forward to scheduled beginning of the talk at ~ 0:14:30  (30 sec offset, if speaker starts on time)
 							player.seek(14 * 60 + 30);
 						}
