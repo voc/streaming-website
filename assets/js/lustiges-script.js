@@ -37,7 +37,7 @@ $(function() {
 		var player = new Clappr.Player({
 			baseUrl: 'assets/clapprio/',
 			plugins: {
-				core: [ClapprThumbnailsPlugin]
+				core: [ClapprThumbnailsPlugin, PlaybackRatePlugin]
 			},
 
 			source: $relivePlayer.data('m3u8'),
