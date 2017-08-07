@@ -24,17 +24,17 @@
 	</div>
 
 	<ul class="nav nav-functions nav-tabs nav-justified" role="tablist">
-		<li class="active">
+		<? if($room->hasSchedule()): ?>
+			<li class="active">
+				<a href="#schedule" role="tab" data-toggle="tab">Fahrplan</a>
+			</li>
+		<? endif ?>
+    <li>
 			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
 		</li>
 		<? if($room->hasChat()): ?>
 			<li>
 				<a href="#chat" role="tab" data-toggle="tab">Chat</a>
-			</li>
-		<? endif ?>
-		<? if($room->hasSchedule()): ?>
-			<li>
-				<a href="#schedule" role="tab" data-toggle="tab">Fahrplan</a>
 			</li>
 		<? endif ?>
 		<? if($room->hasFeedback()): ?>
@@ -50,17 +50,17 @@
 	</ul>
 
 	<div class="functions-wrap tab-content">
-		<div role="tabpanel" class="tab-pane active" id="switcher">
+		<? if($room->hasSchedule()): ?>
+			<div role="tabpanel" class="tab-pane active" id="schedule">
+				<? require("$assemblies/schedule.phtml") ?>
+			</div>
+		<? endif ?>
+    <div role="tabpanel" class="tab-pane" id="switcher">
 			<? require("$assemblies/switcher/".$stream->getPlayerType().".phtml") ?>
 		</div>
 		<? if($room->hasChat()): ?>
 			<div role="tabpanel" class="tab-pane" id="chat">
 				<? require("$assemblies/chat.phtml") ?>
-			</div>
-		<? endif ?>
-		<? if($room->hasSchedule()): ?>
-			<div role="tabpanel" class="tab-pane" id="schedule">
-				<? require("$assemblies/schedule.phtml") ?>
 			</div>
 		<? endif ?>
 		<? if($room->hasFeedback()): ?>
