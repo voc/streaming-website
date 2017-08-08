@@ -110,7 +110,7 @@ $CONFIG['OVERVIEW'] = array(
       'no',
       'pa',
       're',
-      'explody',
+     # 'explody',
     ),
 
     'Live Music'  => array(
