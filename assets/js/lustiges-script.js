@@ -34,6 +34,18 @@ $(function() {
 
 	var $relivePlayer = $('body.relive-player .video-wrap');
 	if($relivePlayer.length > 0) {
+		var sprites = [];
+
+		if($relivePlayer.data("sprites")) {
+			sprites = ClapprThumbnailsPlugin.buildSpriteConfig(
+				$relivePlayer.data("sprites"),
+				$relivePlayer.data("sprites-n"),
+				160, 90,
+				$relivePlayer.data("sprites-cols"),
+				$relivePlayer.data("sprites-interval")
+			);
+		}
+
 		var player = new Clappr.Player({
 			baseUrl: 'assets/clapprio/',
 			plugins: {
@@ -47,13 +59,7 @@ $(function() {
 			scrubThumbnails: {
 				backdropHeight: 64,
 				spotlightHeight: 84,
-				thumbs: ClapprThumbnailsPlugin.buildSpriteConfig(
-					$relivePlayer.data("sprites"),
-					$relivePlayer.data("sprites-n"),
-					160, 90,
-					$relivePlayer.data("sprites-cols"),
-					$relivePlayer.data("sprites-interval")
-				),
+				thumbs: sprites
 			},
 			events: {
 				onReady: function() {
