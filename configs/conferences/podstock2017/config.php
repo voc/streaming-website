@@ -101,14 +101,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'configs/conferences/podstock2017/relive.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/podstock2017/relive.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
 	 * das Relive-Json bei jedem Request von der Quelle geladen und geparst
 	 */
-	//'RELIVE_JSON_CACHE' => 30*60,
+	'RELIVE_JSON_CACHE' => 30*60,
 );
 
 /**
@@ -412,7 +412,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('MOSAIK', 'ALPHABET'),
+	'ROOMFILTER' => array('Bühnenshows', 'Workshopraum', 'Podcasttisch', 'Workshops Outdoor'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
