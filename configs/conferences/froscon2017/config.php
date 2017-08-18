@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'S1', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8',
+			'S1', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'C116'
 		),
 	),
 );
@@ -136,7 +136,7 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'S1' => array(
-		'DISPLAY' => 'Saal 1',
+		'DISPLAY' => 'HS 1',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -150,7 +150,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 1',
+		'SCHEDULE_NAME' => 'HS 1',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -159,30 +159,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 	),
 	'S3' => array(
-		'DISPLAY' => 'Saal 3',
-		'STREAM' => 's2',
-		'PREVIEW' => true,
-		'TRANSLATION' => false,
-		'STEREO' => false,
-
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'SLIDES' => false,
-
-		'AUDIO' => true,
-		'MUSIC' => false,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 3',
-
-		'FEEDBACK' => false,
-		'SUBTITLES' => false,
-
-		'EMBED' => true,
-		'IRC' => false,
-	),
-	'S4' => array(
-		'DISPLAY' => 'Saal 4',
+		'DISPLAY' => 'HS 3',
 		'STREAM' => 's3',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -196,7 +173,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 4',
+		'SCHEDULE_NAME' => 'HS 3',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -204,8 +181,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
-	'S5' => array(
-		'DISPLAY' => 'Saal 5',
+	'S4' => array(
+		'DISPLAY' => 'HS 4',
 		'STREAM' => 's4',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -219,7 +196,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 5',
+		'SCHEDULE_NAME' => 'HS 4',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -227,8 +204,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
-	'S6' => array(
-		'DISPLAY' => 'Saal 6',
+	'S5' => array(
+		'DISPLAY' => 'HS 5',
 		'STREAM' => 's5',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -242,7 +219,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 6',
+		'SCHEDULE_NAME' => 'HS 5',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -250,8 +227,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
-	'S7' => array(
-		'DISPLAY' => 'Saal 7',
+	'S6' => array(
+		'DISPLAY' => 'HS 6',
 		'STREAM' => 's6',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -265,7 +242,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 7',
+		'SCHEDULE_NAME' => 'HS 6',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -273,8 +250,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
-	'S8' => array(
-		'DISPLAY' => 'Saal 8',
+	'S7' => array(
+		'DISPLAY' => 'HS 7',
 		'STREAM' => 's7',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -288,7 +265,30 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 8',
+		'SCHEDULE_NAME' => 'HS 7',
+
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+
+		'EMBED' => true,
+		'IRC' => false,
+	),
+	'S8' => array(
+		'DISPLAY' => 'HS 8',
+		'STREAM' => 's8',
+		'PREVIEW' => true,
+		'TRANSLATION' => false,
+		'STEREO' => false,
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'SLIDES' => false,
+
+		'AUDIO' => true,
+		'MUSIC' => false,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'HS 8',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -325,7 +325,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Saal 1', 'Saal 3', 'Saal 4', 'Saal 5', 'Saal 6', 'Saal 7', 'Saal 8'),
+	'ROOMFILTER' => array('HS 1', 'HS 3', 'HS 4', 'HS 5', 'HS 6', 'HS 7', 'HS 8', 'C116'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
