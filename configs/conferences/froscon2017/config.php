@@ -296,6 +296,29 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
+	'C116' => array(
+		'DISPLAY' => 'C116',
+		'STREAM' => 's2',
+		'PREVIEW' => true,
+		'TRANSLATION' => false,
+		'STEREO' => false,
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'SLIDES' => false,
+
+		'AUDIO' => true,
+		'MUSIC' => false,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'C116 (OSGeo)',
+
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+
+		'EMBED' => true,
+		'IRC' => false,
+	),
 );
 
 /**
