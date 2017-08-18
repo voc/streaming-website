@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'S1', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'C116'
+			'S1', 'S3', 'S4', 'S5', 'S6', 'S41', 'S42', 'C116'
 		),
 	),
 );
@@ -250,9 +250,9 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
-	'S7' => array(
+	'S41' => array(
 		'DISPLAY' => 'HS 7',
-		'STREAM' => 's7',
+		'STREAM' => 's41',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'STEREO' => false,
@@ -273,9 +273,9 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
-	'S8' => array(
+	'S42' => array(
 		'DISPLAY' => 'HS 8',
-		'STREAM' => 's8',
+		'STREAM' => 's42',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'STEREO' => false,
