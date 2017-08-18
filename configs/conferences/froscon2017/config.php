@@ -341,7 +341,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/froscon2017/schedule.xml',
+	'URL' => 'https://programm.froscon.de/2017/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
