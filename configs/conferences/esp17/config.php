@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-08-28 19:00"),
+	'ENDS_AT' => strtotime("2017-09-01 19:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -233,7 +233,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 
 		/**
 		 * Name des Raums im Fahrplan
@@ -448,7 +448,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 
 		/**
 		 * Name des Raums im Fahrplan
@@ -574,7 +574,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'https://live.ber.c3voc.de/releases/schedules/schedule_esp17_170827.xml',
+	'URL' => 'https://live.ber.c3voc.de/releases/schedules/schedule_esp17_170828.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
