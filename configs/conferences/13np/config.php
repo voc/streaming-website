@@ -173,7 +173,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HS 3',
+		'SCHEDULE_NAME' => 'Saal2',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
