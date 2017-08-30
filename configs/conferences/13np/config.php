@@ -203,7 +203,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'TBD',
+	'URL' => 'https://live.ber.c3voc.de/releases/public/13np.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
