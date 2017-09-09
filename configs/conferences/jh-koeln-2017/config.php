@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2017-09-10 12:30"), // TODO
+	'STARTS_AT' => strtotime("2017-09-10 13:30"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-09-10 16:00"),
+	'ENDS_AT' => strtotime("2017-09-10 17:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's97', // TODO
+		'STREAM' => 's97',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -246,7 +246,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'S1', // TODO
+		'SCHEDULE_NAME' => 'S1',
 
 		/**
 		 * Feedback anzeigen (boolean)
