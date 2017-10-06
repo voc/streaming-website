@@ -36,6 +36,9 @@ if(isset($conf['MAX_CONFERENCE_AGE']))
 			return true;
 		}
 
+		if($conference->endsAt() == null)
+			return false;
+
 		$isBefore = $conference->endsAt() < $conferencesAfter;
 
 		if($isBefore) {
