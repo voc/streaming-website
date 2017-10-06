@@ -136,7 +136,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Medientheater' => array(
+	'Bildungsraum' => array(
 		/**
 		 * Angezeige-Name
 		 */
