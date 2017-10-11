@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-09-11 12:45"),
+	'ENDS_AT' => strtotime("2017-10-12 12:45"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
