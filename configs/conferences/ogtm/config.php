@@ -327,7 +327,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Twitter-Links durch auskommentieren
 		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
 		 **/
-		$'TWITTER' => true,
+		'TWITTER' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
