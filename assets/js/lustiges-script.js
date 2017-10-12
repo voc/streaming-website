@@ -211,7 +211,7 @@ $(function() {
 		clearInterval(updateInterval);
 	}
 
-	if(window.location.hash == '#schedule' || window.location.href.indexOf('/schedule') != -1)
+	if(window.location.hash == '' || window.location.hash == '#schedule' || window.location.href.indexOf('/schedule') != -1)
 		on();
 
 	// trigger when a tab was changed
