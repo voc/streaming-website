@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2017-10-21 09:30"),
+	'STARTS_AT' => strtotime("2017-10-21 9:30"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-10-22 18:00"),
+	'ENDS_AT' => strtotime("2017-10-22 19:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -26,28 +26,28 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-//	'CLOSED' => 'true',
+	//'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'All Systems Go!',
+	'TITLE' => 'All Systems Go! 2017',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'VOC',
+	'AUTHOR' => 'c3voc & asg17 team',
 
 	/**
 	 * Beschreibungstext
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-//	'DESCRIPTION' => '',
+	'DESCRIPTION' => 'All Systems Go! is an open source community conference focused on the projects and technologies at the foundation of all modern Linux systems, specifically, low-level user-space technologies. Its goal is to provide a friendly and collaborative gathering place for individuals and communities working to push these technologies forward.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -75,7 +75,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 'BANNER_HTML' => '<div class="logo"></div>',
+//	 'BANNER_HTML' => '<div class="logo"></div>',
 
 	/**
 	 * Link zu den Recordings
@@ -96,7 +96,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/asg2017/vod.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/asg2017/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -429,6 +429,7 @@ $CONFIG['TWITTER'] = array(
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
 	'DISPLAY' => '#allsystemsgo @ twitter',
+	'DISPLAY' => '@ASGConf on twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -436,7 +437,7 @@ $CONFIG['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#allsystemsgo',
+	'TEXT' => '#asg2017',
 );
 
 
