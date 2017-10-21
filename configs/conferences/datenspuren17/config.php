@@ -147,7 +147,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's51',
+		'STREAM' => 's61',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -344,7 +344,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'Museumskino' => array(
 		'DISPLAY' => 'Museumskino',
-		'STREAM' => 's62',
+		'STREAM' => 's51',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'STEREO' => false,
