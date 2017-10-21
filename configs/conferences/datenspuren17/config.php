@@ -390,7 +390,7 @@ $CONFIG['SCHEDULE'] = array(
 	*
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
-	'ROOMFILTER' => ['Goldberg Saal', ' Museumskino'],
+	//'ROOMFILTER' => ['Goldberg Saal', 'Museumskino'],
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
