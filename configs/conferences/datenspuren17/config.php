@@ -40,7 +40,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'openSUSE',
+	'AUTHOR' => '',
 
 	/**
 	 * Beschreibungstext
@@ -120,8 +120,8 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture rooms' => array(
-			'Goldberg Saal',
-			'Museumskino',
+			'goldberg-saal',
+			'museumskino',
 		),
 	),
 );
@@ -136,7 +136,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Goldberg Saal' => array(
+	'goldberg-saal' => array(
 		/**
 		 * Angezeige-Name
 		 */
@@ -147,7 +147,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's61',
+		'STREAM' => 's6',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -342,9 +342,9 @@ $CONFIG['ROOMS'] = array(
 		// 	'TEXT'    => '#fossgis2016',
 		// ),
 	),
-	'Museumskino' => array(
+	'museumskino' => array(
 		'DISPLAY' => 'Museumskino',
-		'STREAM' => 's51',
+		'STREAM' => 's5',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'STEREO' => false,
