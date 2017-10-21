@@ -26,7 +26,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'running',
+	//'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -86,7 +86,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-//	'RELEASES' => 'https://media.ccc.de/c/pw17',
+	'RELEASES' => 'https://media.ccc.de/c/pw17',
 
 	/**
 	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
@@ -96,7 +96,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://live.dus.c3voc.de/relive/pw17/index.json',
+	'RELIVE_JSON' => 'https://live.ber.c3voc.de/relive/pw17/index.json',
 );
 
 /**
@@ -126,13 +126,13 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'saal1' => array(
 		'DISPLAY' => 'Saal 1',
-		'STREAM' => 'pw17s1',
+		'STREAM' => 'pw1',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		'DASH' => false,
 		'AUDIO' => true,
 		'SLIDES' => false,
 		'MUSIC' => false,
@@ -158,7 +158,7 @@ $CONFIG['ROOMS'] = array(
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		'DASH' => false,
 		'AUDIO' => true,
 		'SLIDES' => false,
 		'MUSIC' => false,
@@ -192,14 +192,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'configs/conferences/pw17/schedule.xml',
+	'URL' => 'https://fahrplan.privacyweek.at/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Volkskundemuseum Saal 1', 'Volkskundemuseum Saal 2'),
+	//'ROOMFILTER' => array('Volkskundemuseum Saal 1', 'Volkskundemuseum Saal 2'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
