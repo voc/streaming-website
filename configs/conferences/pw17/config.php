@@ -12,7 +12,7 @@ $CONFIG['CONFERENCE'] = array(
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
@@ -152,7 +152,7 @@ $CONFIG['ROOMS'] = array(
 
 	'saal2' => array(
 		'DISPLAY' => 'Saal 2',
-		'STREAM' => 's4',
+		'STREAM' => 'pw2',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
