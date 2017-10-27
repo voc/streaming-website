@@ -122,10 +122,6 @@ $CONFIG['OVERVIEW'] = array(
 			'a1',
 			'a3',
 			'a2',
-#			'b05b06',
-#			'b07b08',
-#			'b09',
-#			'a08',
 		),
 	),
 );
@@ -251,7 +247,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'a1',
+		'SCHEDULE_NAME' => 'A1',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -360,7 +356,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'a2',
+		'SCHEDULE_NAME' => 'A2',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -381,7 +377,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'a3',
+		'SCHEDULE_NAME' => 'A3',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -410,7 +406,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/wikidatacon2017/schedule.xml',
+	'URL' => 'http://live.ber.c3voc.de/releases/public/wikidatacon2017.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
