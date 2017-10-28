@@ -119,8 +119,8 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'a1',
-			'a3',
+#			'a1',
+#			'a3',
 			'a2',
 		),
 	),
@@ -344,7 +344,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'a2' => array(
-		'DISPLAY' => 'A2/A',
+		'DISPLAY' => 'Room A',
 		'STREAM' => 's2',
 		'PREVIEW' => true,
 
