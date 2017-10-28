@@ -414,9 +414,9 @@ $CONFIG['SCHEDULE'] = array(
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
 	'ROOMFILTER' => [
-		'A1',
+#		'A1',
 		'A2',
-		'A3',
+#		'A3',
 	],
 
 	/**
