@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'S1',
+			'betahaus',
 		),
 	),
 );
@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'S1' => array(
+	'betahaus' => array(
 		/**
 		 * Angezeige-Name
 		 */
@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's97',
+		'STREAM' => 'q2',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
