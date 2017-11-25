@@ -90,6 +90,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 				'thumb' => forceslash(baseurl()).$room->getThumb(),
 				'link' => forceslash(baseurl()).$room->getLink(),
 				'display' => $room->getDisplay(),
+				'stream' => $room->getStream(),
 				'streams' => $streams,
 			);
 		}
@@ -105,6 +106,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 		'author' => $conference->getAuthor(),
 		'description' => $conference->getDescription(),
 		'keywords' => $conference->getKeywords(),
+		'schedule' => $conference->getSchedule()->getScheduleUrl(),
 		'startsAt' => $conference->startsAt() ? $conference->startsAt()->format(DateTime::ISO8601) : null,
 		'endsAt' => $conference->endsAt() ? $conference->endsAt()->format(DateTime::ISO8601) : null,
 		'groups' => $groupstruct,
