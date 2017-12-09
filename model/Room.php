@@ -175,9 +175,39 @@ class Room
 		return 'Adaptive multi-format-multi-bitrate-Stream to rule the World!!1elf';
 	}
 
-	public function hasTranslation() {
+	public function getTranslations() {
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
 	}
+
+  private function getTranslationEndpoints() {
+    return array_map(
+      function ($translation) {
+        return $translation['endpoint'];
+      },
+      $this->getTranslations()
+    );
+  }
+
+  private function isTranslationEndpoint($endpoint) {
+    return in_array($endpoint, $this->getTranslationEndpoints());
+  }
+
+  private function findTranslationLabel($language) {
+    foreach($this->getTranslations() as $translation) {
+      if ($translation['endpoint'] === $language) {
+        return $translation['label'];
+      }
+    }
+    return null;
+  }
+
+	public function hasTranslation() {
+		return count($this->getTranslations()) > 0;
+	}
+
+  public function  isValidLanguage($language) {
+    return ($language === 'native' || $this->isTranslationEndpoint($language));
+  }
 
 	public function getSelectionNames()
 	{
@@ -284,8 +314,9 @@ class Room
 		foreach ($selections as $selection) {
 			$streams[] = $this->createStreamObject($selection, 'native');
 
-			if($this->hasTranslation())
-				$streams[] = $this->createStreamObject($selection, 'translated');
+		  foreach ($this->getTranslations() as $translation) {
+				$streams[] = $this->createStreamObject($selection, $translation['endpoint'], $translation['label']);
+      }
 		}
 
 		return $streams;
@@ -305,17 +336,23 @@ class Room
 		if(!in_array($selection, $selections))
 			throw new NotFoundException('Selection '.$selection.' in Room '.$this->getSlug());
 
-		if($language == 'translated' && !$this->hasTranslation())
-			throw new NotFoundException('Translated Streams of Room '.$this->getSlug());
+    $translation_label = null;
+    if (substr($language, 0, strlen('native')) !== 'native') {
+      if (!$this->hasTranslation()) {
+        throw new NotFoundException('Translated Streams of Room '.$this->getSlug());
+      }
+      
+      $translation_label = $this->findTranslationLabel($language);
+    }
 
-		return $this->createStreamObject($selection, $language);
+		return $this->createStreamObject($selection, $language, $translation_label);
 	}
 
-	public function createStreamObject($selection, $language = 'native')
+	public function createStreamObject($selection, $language = 'native', $languageLabel = null)
 	{
 		if($language == 'native' && $this->hasStereo())
 			$language = 'stereo';
 
-		return new Stream($this, $selection, $language);
+		return new Stream($this, $selection, $language, $languageLabel);
 	}
 }

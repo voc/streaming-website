@@ -18,20 +18,24 @@ class RoomSelection
 		return $this->selection;
 	}
 
-	public function getLink()
-	{
+  private function getSelectionPath() {
 		$path = [$this->getRoom()->getConference()->getSlug(), $this->getRoom()->getSlug()];
 
 		$selection = $this->getRoom()->getSelectionNames();
-		if($selection[0] != $this->getSelection())
+		if ($selection[0] != $this->getSelection())
 			$path[] = $this->getSelection();
 
-		return joinpath($path).url_params();
+    return joinpath($path);
+  }
+
+	public function getLink()
+	{
+		return $this->getSelectionPath() . url_params();
 	}
 
-	public function getTranslatedLink()
+	public function getTranslatedLink($translation_endpoint)
 	{
-		return joinpath([$this->getLink(), 'translated']);
+		return joinpath([$this->getSelectionPath(), 'i18n', $translation_endpoint]) . url_params();
 	}
 
 	public function getDisplay()

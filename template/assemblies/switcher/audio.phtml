@@ -10,12 +10,14 @@
 
 					<a href="<?=h($selection->getLink())?>" class="btn btn-primary">
 						<span class="fa fa-flag-o"></span>
-						native
+						Native
 					</a>
-					<a href="<?=h($selection->getTranslatedLink())?>" class="btn btn-primary">
+          <? foreach($room->getTranslations() as $translation): ?>
+					<a href="<?=h($selection->getTranslatedLink($translation['endpoint']))?>" class="btn btn-primary">
 						<span class="fa fa-flag"></span>
-						translated
+            <?=h(ucfirst($translation['label']))?>
 					</a>
+		      <? endforeach ?>
 
 				</div>
 			</div>
@@ -39,12 +41,14 @@
 
 							<a href="<?=h($room->createStreamObject('audio', 'native')->getAudioUrl($proto))?>" class="btn btn-default">
 								<span class="fa fa-flag-o"></span>
-								native
+								Native
 							</a>
-							<a href="<?=h($room->createStreamObject('audio', 'translated')->getAudioUrl($proto))?>" class="btn btn-default">
-								<span class="fa fa-flag"></span>
-								translated
-							</a>
+              <? foreach($room->getTranslations() as $translation): ?>
+							  <a href="<?=h($room->createStreamObject('audio', $translation['endpoint'])->getAudioUrl($proto))?>" class="btn btn-default">
+							  	<span class="fa fa-flag"></span>
+                  <?=h(ucfirst($translation['label']))?>
+							  </a>
+		          <? endforeach ?>
 
 						<? else: ?>
 

@@ -285,12 +285,12 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^([^/]+)/translated$@', $route, $m))
+	else if(preg_match('@^([^/]+)/i18n/([^/]+)$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
 			'selection' => '',
-			'language' => 'translated',
+			'language' => $m[2],
 		);
 		require('view/room.php');
 	}
@@ -305,17 +305,19 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^([^/]+)/(sd|audio|slides|dash)/translated$@', $route, $m))
+	else if(preg_match('@^([^/]+)/(sd|audio|slides|dash)/i18n/([^/]+)$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
 			'selection' => $m[2],
-			'language' => 'translated',
+			'language' => $m[3],
 		);
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides)/(native|translated|stereo)(/no-autoplay)?$@', $route, $m))
+  // TODO use dynamic i18n parameter
+  // TODO change to no-autoplay query parameter?
+	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides)/(native|translated|translated2|stereo)(/no-autoplay)?$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],

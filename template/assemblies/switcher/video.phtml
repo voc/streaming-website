@@ -12,18 +12,20 @@
 
 						<a href="<?=h($selection->getLink())?>" class="btn btn-primary">
 							<span class="fa fa-flag-o"></span>
-							native
+							Native
 						</a>
-						<a href="<?=h($selection->getTranslatedLink())?>" class="btn btn-primary">
-							<span class="fa fa-flag"></span>
-							translated
-						</a>
+            <? foreach($room->getTranslations() as $translation): ?>
+						  <a href="<?=h($selection->getTranslatedLink($translation['endpoint']))?>" class="btn btn-primary">
+						  	<span class="fa fa-flag"></span>
+                <?=h(ucfirst($translation['label']))?>
+						  </a>
+		        <? endforeach ?>
 
 					<? else: ?>
 
 						<a href="<?=h($selection->getLink())?>" class="btn btn-primary">
 							<span class="fa fa-video-camera"></span>
-							video
+							Video
 						</a>
 
 					<? endif ?>
@@ -51,18 +53,20 @@
 
 								<a href="<?=h($room->createStreamObject($res, 'native')->getVideoUrl($proto))?>" class="btn btn-default">
 									<span class="fa fa-flag-o"></span>
-									native
+									Native
 								</a>
-								<a href="<?=h($room->createStreamObject($res, 'translated')->getVideoUrl($proto))?>" class="btn btn-default">
-									<span class="fa fa-flag"></span>
-									translated
-								</a>
+				        <? foreach($room->getTranslations() as $translation): ?>
+								  <a href="<?=h($room->createStreamObject($res, $translation['endpoint'])->getVideoUrl($proto))?>" class="btn btn-default">
+								  	<span class="fa fa-flag"></span>
+                    <?=h(ucfirst($translation['label']))?>
+								  </a>
+        				<? endforeach ?>
 
 							<? else: ?>
 
 								<a href="<?=h($switcherstream->getVideoUrl($proto))?>" class="btn btn-default">
 									<span class="fa fa-video-camera"></span>
-									video
+									Video
 								</a>
 
 							<? endif ?>
