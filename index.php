@@ -315,9 +315,7 @@ try {
 		require('view/room.php');
 	}
 
-  // TODO use dynamic i18n parameter
-  // TODO change to no-autoplay query parameter?
-	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides)/(native|translated|translated2|stereo)(/no-autoplay)?$@', $route, $m))
+	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides)/(native|stereo|[^/]+)(/no-autoplay)?$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],

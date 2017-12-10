@@ -337,9 +337,12 @@ class Room
 			throw new NotFoundException('Selection '.$selection.' in Room '.$this->getSlug());
 
     $translation_label = null;
-    if (substr($language, 0, strlen('native')) !== 'native') {
-      if (!$this->hasTranslation()) {
-        throw new NotFoundException('Translated Streams of Room '.$this->getSlug());
+    if ($language !== 'native' && $language !== 'stereo') {
+      if (! $this->hasTranslation()) {
+        throw new NotFoundException('Translated Streams of Room '. $this->getSlug());
+      }
+      if (! $this->isValidLanguage($language)) {
+        throw new NotFoundException('Selected translation');
       }
       
       $translation_label = $this->findTranslationLabel($language);
