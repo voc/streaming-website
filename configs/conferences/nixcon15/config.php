@@ -164,6 +164,26 @@ $CONFIG['ROOMS'] = array(
 		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden nur
 		 * die native-Streams verwendet, andernfalls wird native und translated
 		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
+		 *
+		 * Betrifft video sd / hd, slides, audio
+		 *
+		 * Ein Label für die Übersetzung oder mehrere Übersetzungsspuren können
+		 * wie folgt konfiguriert werden:
+		 *
+		 * 'TRANSLATION' => [
+		 *    ['endpoint' => 'translated',  'label' => 'Translated1'],
+		 *    ['endpoint' => 'translated2', 'label' => 'Translated2']
+		 * ],
+		 *
+		 * Ein einfaches true entsprich dabei folgendem:
+		 *
+		 * 'TRANSLATION' => [
+		 *   ['endpoint' => 'translated', 'label' => 'Translated']
+		 * ],
+		 *
+		 * Sollte die Sprache während der Veranstaltung Konstant sein, kann eine
+		 * Sprache fest konfiguriert werden z.B. 'label' => 'English'.
+		 */
 		 */
 		'TRANSLATION' => false,
 
