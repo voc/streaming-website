@@ -233,6 +233,11 @@ class Room
 		return $selections;
 	}
 
+	public function isSelectionTranslated($selection) {
+		# dash is special, has langs included
+		return $selection !== 'dash' && $selection !== 'music';
+	}
+
 	public function getTabNames()
 	{
 		$tabs = array();
@@ -314,9 +319,11 @@ class Room
 		foreach ($selections as $selection) {
 			$streams[] = $this->createStreamObject($selection, 'native');
 
-		  foreach ($this->getTranslations() as $translation) {
-				$streams[] = $this->createStreamObject($selection, $translation['endpoint'], $translation['label']);
-      }
+			if ($this->isSelectionTranslated($selection)) {
+				foreach ($this->getTranslations() as $translation) {
+					$streams[] = $this->createStreamObject($selection, $translation['endpoint'], $translation['label']);
+				}
+			}
 		}
 
 		return $streams;
