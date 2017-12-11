@@ -72,34 +72,45 @@ class Conferences
 		return in_array($mandator, Conferences::listConferences());
 	}
 
-  public static function loadConferenceConfig($mandator) {
-    $configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
-    $config = include($configfile);
+	private static function migrateTranslationConfiguration($config) {
+		// Allow setting TRANSLATION simply to true and fill in default values for uniformity
+		$rooms = $config['ROOMS'];
+		foreach ($rooms as $slug => $room) {
+			// Translation is commented out, equaivalent of false
+			if (!isset($room['TRANSLATION'])) {
+				$config['ROOMS'][$slug]['TRANSLATION'] = [];
+			}
+			// Translation is present but not an array
+			elseif (! is_array($room['TRANSLATION'])) {
+				// Translation is true, set default values
+				if ($room['TRANSLATION'] === true) {
+					$config['ROOMS'][$slug]['TRANSLATION'] = [[
+						'endpoint' => 'translated',
+						'label'    => 'Translated'
+					]];
+				}
+				// Translation is false or garbage
+				else {
+					$config['ROOMS'][$slug]['TRANSLATION'] = [];
+				}
+			}
+		}
 
-    if(!is_array($config)) {
-      throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
-    }
+		return $config;
+	}
 
-    // Allow setting TRANSLATION simply to true and fill in default values for uniformity
-    $rooms = $config['ROOMS'];
-    foreach ($rooms as $slug => $room) {
-      if (!isset($room['TRANSLATION'])) {
-        $config['ROOMS'][$slug]['TRANSLATION'] = [];
-      }
-      elseif (! is_array($room['TRANSLATION'])) {
-        if ($room['TRANSLATION'] === true) {
-          $config['ROOMS'][$slug]['TRANSLATION'] = [[
-            'endpoint' => 'translated',
-            'label'    => 'Translated'
-          ]];
-        }
-        else {
-          $config['ROOMS'][$slug]['TRANSLATION'] = [];
-        }
-      }
-    }
-    return $config;
-  }
+	public static function loadConferenceConfig($mandator) {
+		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
+		$config = include($configfile);
+
+		if(!is_array($config)) {
+			throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
+		}
+
+		$config = Conferences::migrateTranslationConfiguration($config);
+
+		return $config;
+	}
 
 	public static function getConference($mandator) {
 		return new Conference(Conferences::loadConferenceConfig($mandator), $mandator);
