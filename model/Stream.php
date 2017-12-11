@@ -32,9 +32,9 @@ class Stream
 
 	public function isTranslated()
 	{
-    return !empty($this->getLanguage()) &&
-      $this->getLanguage() !== 'native' &&
-      $this->getLanguage() !== 'stereo';
+		return !empty($this->getLanguage()) &&
+			$this->getLanguage() !== 'native' &&
+			$this->getLanguage() !== 'stereo';
 	}
 
 	public function getVideoSize()

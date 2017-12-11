@@ -9,13 +9,13 @@ $selection = $_GET['selection'];
 $language = $_GET['language'];
 
 if ($language !== 'native' && $language !== 'stereo') {
-  if (! $room->hasTranslation()) {
-    throw new NotFoundException('Not translated');
-  }
+	if (! $room->hasTranslation()) {
+		throw new NotFoundException('Not translated');
+	}
 
-  if (! $room->isValidLanguage($language)) {
-    throw new NotFoundException('Language not found');
-  }
+	if (! $room->isValidLanguage($language)) {
+		throw new NotFoundException('Language not found');
+	}
 }
 
 $stream = $room->selectStream($selection, $language);

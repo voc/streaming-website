@@ -5,7 +5,7 @@ $selection = $_GET['selection'];
 $language = $_GET['language'];
 
 if (! $room->isValidLanguage($language)) {
-  throw new NotFoundException('Language not found');
+	throw new NotFoundException('Language not found');
 }
 
 $stream = $room->selectStream($selection, $language);

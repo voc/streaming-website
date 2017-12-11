@@ -179,35 +179,35 @@ class Room
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
 	}
 
-  private function getTranslationEndpoints() {
-    return array_map(
-      function ($translation) {
-        return $translation['endpoint'];
-      },
-      $this->getTranslations()
-    );
-  }
+	private function getTranslationEndpoints() {
+		return array_map(
+			function ($translation) {
+				return $translation['endpoint'];
+			},
+			$this->getTranslations()
+		);
+	}
 
-  private function isTranslationEndpoint($endpoint) {
-    return in_array($endpoint, $this->getTranslationEndpoints());
-  }
+	private function isTranslationEndpoint($endpoint) {
+		return in_array($endpoint, $this->getTranslationEndpoints());
+	}
 
-  private function findTranslationLabel($language) {
-    foreach($this->getTranslations() as $translation) {
-      if ($translation['endpoint'] === $language) {
-        return $translation['label'];
-      }
-    }
-    return null;
-  }
+	private function findTranslationLabel($language) {
+		foreach($this->getTranslations() as $translation) {
+			if ($translation['endpoint'] === $language) {
+				return $translation['label'];
+			}
+		}
+		return null;
+	}
 
 	public function hasTranslation() {
 		return count($this->getTranslations()) > 0;
 	}
 
-  public function  isValidLanguage($language) {
-    return ($language === 'native' || $this->isTranslationEndpoint($language));
-  }
+	public function  isValidLanguage($language) {
+		return ($language === 'native' || $this->isTranslationEndpoint($language));
+	}
 
 	public function getSelectionNames()
 	{
@@ -343,17 +343,17 @@ class Room
 		if(!in_array($selection, $selections))
 			throw new NotFoundException('Selection '.$selection.' in Room '.$this->getSlug());
 
-    $translation_label = null;
-    if ($language !== 'native' && $language !== 'stereo') {
-      if (! $this->hasTranslation()) {
-        throw new NotFoundException('Translated Streams of Room '. $this->getSlug());
-      }
-      if (! $this->isValidLanguage($language)) {
-        throw new NotFoundException('Selected translation');
-      }
-      
-      $translation_label = $this->findTranslationLabel($language);
-    }
+		$translation_label = null;
+		if ($language !== 'native' && $language !== 'stereo') {
+			if (! $this->hasTranslation()) {
+				throw new NotFoundException('Translated Streams of Room '. $this->getSlug());
+			}
+			if (! $this->isValidLanguage($language)) {
+				throw new NotFoundException('Selected translation');
+			}
+
+			$translation_label = $this->findTranslationLabel($language);
+		}
 
 		return $this->createStreamObject($selection, $language, $translation_label);
 	}

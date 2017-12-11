@@ -18,15 +18,15 @@ class RoomSelection
 		return $this->selection;
 	}
 
-  private function getSelectionPath() {
+	private function getSelectionPath() {
 		$path = [$this->getRoom()->getConference()->getSlug(), $this->getRoom()->getSlug()];
 
 		$selection = $this->getRoom()->getSelectionNames();
 		if ($selection[0] != $this->getSelection())
 			$path[] = $this->getSelection();
 
-    return joinpath($path);
-  }
+		return joinpath($path);
+	}
 
 	public function getLink()
 	{
