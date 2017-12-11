@@ -180,18 +180,18 @@ $CONFIG['ROOMS'] = array(
 		 * wie folgt konfiguriert werden:
 		 *
 		 * 'TRANSLATION' => [
-		 *    ['endpoint' => 'translated',  'label' => 'Translated1'],
-		 *    ['endpoint' => 'translated2', 'label' => 'Translated2']
+		 *    ['endpoint' => 'translated',   'label' => 'Translated1'],
+		 *    ['endpoint' => 'translated-2', 'label' => 'Translated2']
 		 * ],
 		 *
-		 * Ein einfaches true entsprich dabei folgendem:
+		 * Ein einfaches true entspricht dabei folgendem:
 		 *
 		 * 'TRANSLATION' => [
 		 *   ['endpoint' => 'translated', 'label' => 'Translated']
 		 * ],
 		 *
-		 * Sollte die Sprache während der Veranstaltung Konstant sein, kann eine
-		 * Sprache fest konfiguriert werden z.B. 'label' => 'English'.
+		 * Sollte die Sprache während der Veranstaltung Konstant sein, kann ein
+		 * Label auch spezifisch konfiguriert werden z.B. 'label' => 'English'.
 		 */
 		'TRANSLATION' => true,
 
