@@ -374,7 +374,13 @@ $(function() {
 		if(!originalsrc)
 			originalsrc = $iframe.attr('src');
 
-		var src = originalsrc + (autoplay ? '' : 'no-autoplay/');
+		var src = originalsrc;
+		if (! autoplay) {
+			if (src.slice(-1) !== '/') {
+			src += '/';
+			}
+			src += 'no-autoplay'
+		}
 
 		$iframe.attr({width: selected[0], height: selected[1]});
 		$iframe.attr({src: src});

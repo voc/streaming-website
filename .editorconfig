@@ -1,0 +1,12 @@
+root = true
+
+[*]
+end_of_line = lf
+
+[*.{html,phtml,sh}]
+indent_style = tab
+
+[*.{php,js}]
+indent_style = tab
+trim_trailing_whitespace = true
+

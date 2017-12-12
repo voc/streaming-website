@@ -2,11 +2,12 @@
 
 class Stream
 {
-	public function __construct(Room $room, $selection, $language)
+	public function __construct(Room $room, $selection, $language, $translation_label = null)
 	{
 		$this->room = $room;
 		$this->selection = $selection;
 		$this->language = $language;
+	 	$this->translation_label = (empty($translation_label)) ? $language : $translation_label;
 	}
 
 	public function getRoom()
@@ -24,9 +25,16 @@ class Stream
 		return $this->language;
 	}
 
+	public function getTranslationLabel()
+	{
+	  return $this->translation_label;
+	}
+
 	public function isTranslated()
 	{
-		return $this->getLanguage() == 'translated';
+		return !empty($this->getLanguage()) &&
+			$this->getLanguage() !== 'native' &&
+			$this->getLanguage() !== 'stereo';
 	}
 
 	public function getVideoSize()
@@ -98,7 +106,7 @@ class Stream
 		}
 
 		if($this->isTranslated())
-			$display .= ' (Translation)';
+			$display .= ' ('. $this->getTranslationLabel() .')';
 
 		return $display;
 	}
