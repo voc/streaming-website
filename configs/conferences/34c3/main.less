@@ -1,0 +1,364 @@
+@import "../../../assets/css/_structure.less";
+
+
+// conference specific styles here
+@tuwatred:      #a41c31;
+@darker-grey:   #262626;
+@dark-grey:     lighten(@darker-grey, 20%);
+@light-grey:    lighten(@darker-grey, 30%);
+@lighter-grey:  lighten(@darker-grey, 40%);
+
+@red-dot: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACAQMAAABIeJ9nAAAAA1BMVEWkHDHOopUBAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+EMDRYjEJ3j75wAAAAMSURBVAjXY2BgYAAAAAQAASc0JwoAAAAASUVORK5CYII=";
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @tuwatred;
+@text-color:            white;
+
+@link-color:            white;
+@link-hover-color:      @lighter-grey;
+
+@navbar-height:         70px;
+
+@navbar-default-bg:     transparent;
+@navbar-default-border: transparent;
+
+@navbar-default-link-color:       white;
+//@navbar-default-link-hover-color: @link-hover-color;
+
+body {
+	background-color: black;
+	padding: @navbar-height 0
+}
+
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: sans-serif;
+}
+
+.relive {
+	color: black;
+}
+
+.group-live {
+	margin-top: 60px;
+}
+
+.overview {
+	h2 {
+		text-align: center;
+		background-image: url(@red-dot);
+		background-repeat: repeat-x;
+		background-position: 0 50%;
+
+		text-transform: uppercase;
+		font-weight: bold;
+
+		margin: 40px 0 20px 0;
+
+		span {
+			background-color: black;
+			padding: 0 15px;
+		}
+	}
+
+	.room {
+		a, a:hover {
+			text-decoration: none;
+			color: white;
+		}
+
+		.panel {
+			background: none;
+			border: none;
+
+			&:hover {
+				text-decoration: none;
+
+				.panel-body {
+					border-top: 1px solid white;
+					border-bottom: 1px solid white;
+				}
+
+				.panel-body .program-schedule .next-talk {
+					border-bottom: 1px solid white;
+				}
+			}
+
+			.panel-title {
+				color: white;
+				font-size: 18px;
+			}
+
+			.panel-primary {
+				background-color: @light-grey;
+				border-color: @light-grey;
+				color: white;
+				a {
+					color: white;
+				}
+			}
+
+			.panel-heading {
+				background: none;
+				border: none;
+
+				display: block !important;
+
+				text-transform: uppercase;
+				font-weight: bold;
+
+				padding: 8px 15px;
+
+				a {
+					color: white;
+				}
+			}
+
+			.panel-body {
+				padding: 0;
+				border-top: 1px solid @darker-grey;
+				border-bottom: 1px solid @darker-grey;
+
+				position: relative;
+				margin-bottom: 100px;
+
+				.program-schedule {
+					padding: 15px 10px;
+					overflow: hidden;
+					font-size: 18px;
+
+					.current-talk strong {
+						display: none;
+					}
+					.next-talk {
+						display: block;
+						position: absolute;
+
+						overflow: hidden;
+
+						bottom: -44px;
+						left: 0;
+						right: 0;
+						height: 44px;
+						margin: 0;
+
+						line-height: 44px;
+						padding-left: 16px;
+
+						border-bottom: 1px solid @darker-grey;
+						
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.room-group-live-music .panel-body {
+		border-bottom-width: 0 !important;
+	}
+
+	.recordings {
+		.panel {
+			background: none;
+			border: 1px solid @dark-grey;
+			border-radius: 0;
+
+			&:hover {
+				border-color: white;
+			}
+
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
+.overview .room-group-live-music .room .panel .panel-body {
+	margin-bottom: 0;
+}
+
+.navbar-header {
+	background-color: #000;
+}
+
+.navbar-brand {
+	font-size: 20px;
+}
+
+.well {
+	color: @dark-grey;
+}
+
+.banner {
+	background: url("assets/min/drops.svg") no-repeat center;
+	height: 320px;
+	text-indent: -9999em;
+	display: block;
+	position: relative;
+
+	h1 { display: none; }
+
+	video, img {
+		@width: 810px;
+		@height: 388px;
+
+		display: block;
+		width: @width/2;
+		height: @height/2;
+		margin: 0;
+
+		left: 50%;
+		margin-left: -@width/2/2;
+		position: absolute;
+		bottom: -25px;
+
+		@media (max-width: @screen-xs-max) {
+			width: @width/3;
+			height: @height/3;
+			margin: 0;
+
+			margin-left: -@width/3/2;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.banner {
+		margin-top: 60px;
+	}
+}
+
+.player-wrap {
+	background-color: @darker-grey;
+}
+
+.nav-tabs > li > a {
+	border-color: @dark-grey;
+}
+
+nav .navbar-form {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+
+	@media (max-width: @screen-xs-max) {
+		padding: 0 40px;
+	}
+}
+
+.well a {
+	color: @dark-grey;
+	text-decoration: underline;
+}
+.alert {
+	a {
+		text-decoration: underline;
+	}
+	&.alert-success a {
+		color: @state-success-text;
+	}
+	&.alert-info a {
+		color: @state-info-text;
+	}
+	&.alert-warning a {
+		color: @state-warning-text;
+	}
+	&.alert-danger a {
+		color: @state-danger-text;
+	}
+}
+
+body.multiview .cell {
+	color: black;
+}
+
+.closed .about a {
+	text-decoration: underline;
+	color: @brand-primary;
+}
+
+.schedule .block.pause {
+	color: black !important;
+}
+
+.navbar-brand {
+	width: 290px;
+	height: 75px
+}
+
+.functions-wrap {
+	.beta {
+		margin-bottom: 30px;
+		height: 50px;
+	}
+
+	.notes {
+		font-size: 16px;
+		text-align: center;
+	}
+}
+
+.navbar-default .navbar-form.button-wrapper {
+	border-bottom: 1px solid @dark-grey;
+	background-color: #000;
+}
+
+nav .button-wrapper > .btn {
+	height: 60px;
+	margin-top: 15px;
+	margin-bottom: -1px;
+	
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid transparent;
+	border-radius: 0;
+	
+	&:hover {
+		border-bottom: 1px solid @tuwatred;
+	}
+
+	&.btn-ssl {
+		&.btn-warning {
+		}
+		width: 90px;
+	}
+
+	display: block;
+	float: left;
+}
+
+footer {
+	position: static;
+	color: @dark-grey;
+
+	margin-top: 64px;
+
+
+	a {
+		color: @lighter-grey;
+
+		&:hover {
+			color: @lighter-grey;
+			text-decoration: underline;
+		}
+	}
+}
+
+.nav-tabs > li > a {
+	border-radius: 0 !important;
+}
+
+body.room .tab-content {
+	border-left: 1px solid @light-grey;
+	border-bottom: 1px solid @light-grey;
+	border-right: 1px solid @light-grey;
+}
+
+@media (max-width: 768px)
+{
+	nav {
+		position: static !important;
+	}
+}
