@@ -532,7 +532,9 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'http://data.c3voc.de/34C3/everything.schedule.xml', # TODO check
+	'URL' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xml',
+	#'URL' => 'https://events.ccc.de/congress/2017/Fahrplan/schedule.xml',
+	#'URL' => 'http://data.c3voc.de/34C3/everything.schedule.xml', # TODO check
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
@@ -682,11 +684,12 @@ $CONFIG['TWITTER'] = array(
  */
 # TODO CHECK
 $CONFIG['EXTRA_FILES'] = array(
-	'schedule.xml' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xml',
+	'schedule.xml'  => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xml',
 	'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.json',
 	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.ics',
 	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xcal',
 
+  TODO CHECK
 	'everything.schedule.xml' => 'http://data.c3voc.de/34C3/everything.schedule.xml',
 	'everything.schedule.json' => 'http://data.c3voc.de/34C3/everything.schedule.json',
 
