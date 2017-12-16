@@ -485,7 +485,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'c3tv' => array(
-		'DISPLAY' => 'C3TV',
+		'DISPLAY' => 'c3tv.de',
 		# danimo, moe
 		'STREAM' => 's4', # TODO fix
 		'PREVIEW' => true, # TODO check / run downloader on transcorder
