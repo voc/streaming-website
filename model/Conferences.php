@@ -35,7 +35,7 @@ class Conferences
 		return array_values(array_filter(
 			Conferences::getConferencesSorted(),
 			function($conference) {
-				return !$conference->isClosed();
+				return !$conference->isClosed() && !$conference->isUnlisted();
 			}
 		));
 	}

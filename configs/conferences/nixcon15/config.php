@@ -29,6 +29,15 @@ $CONFIG['CONFERENCE'] = array(
 	//'CLOSED' => false,
 
 	/**
+	 * Mit diesem Schalter kann die Veranstaltung von der Startseite und der API
+	 * versteckt werden, ist aber dennoch über ihre URL verfügbar.
+	 *
+	 * Dies ist z.B. nützlich um eine kleinere Streamingseite für Übersetzer
+	 * bereit zu stellen. Werte: true|false Default: false
+	 */
+	 'UNLISTED' => false,
+
+	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt

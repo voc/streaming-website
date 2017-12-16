@@ -102,6 +102,16 @@ class Conference extends ModelBase
 		}
 	}
 
+	public function isUnlisted() {
+		if ($this->has('CONFERENCE.UNLISTED')) {
+			$unlisted = $this->get('CONFERENCE.UNLISTED');
+			return $unlisted === true;
+		}
+		else {
+			return false;
+		}
+	}
+
 	public function hasAuthor() {
 		return $this->has('CONFERENCE.AUTHOR');
 	}
