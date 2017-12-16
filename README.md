@@ -73,7 +73,7 @@ see [deploy.sh](deploy.sh)
 ## JSON-API
 
 Unter der URL [http://streaming.media.ccc.de/streams/v2.json](http://streaming.media.ccc.de/streams/v2.json) bietet die
-Steaming-Webseite eine Übersicht über alle konfigurierten Räume und Streams in
+Streaming-Webseite eine Übersicht über alle konfigurierten Räume und Streams in
 einem maschinenlesbaren Format an. Dieses kann z.B. genutzt werden, um in den
 diversen Anwendungen, die sich rund um das Konferenzgeschehen entwickelt haben,
 Player und Links zu Liveübertragungen anzubieten.
