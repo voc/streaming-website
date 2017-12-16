@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2017-12-27 08:00"), # TODO check
+	'STARTS_AT' => strtotime("2017-12-27 09:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-12-30 23:00"), # TODO check
+	'ENDS_AT' => strtotime("2017-12-30 20:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -114,10 +114,10 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'hallA',
-			'hallB',
-			'hallC',
-			'hallD',
+			'halla',
+			'hallb',
+			'hallc',
+			'halld',
 		),
 
 		'Live Music'  => array(
@@ -143,11 +143,12 @@ $CONFIG['ROOMS'] = array(
 	 * ([a-zA-Z0-9_\-]) bestehen und insbesondere keine Leerzeichen
 	 * enthalten.
 	 */
-	'hallA' => array(
+	'halla' => array(
 		/**
 		 * Angezeige-Name
 		 */
 		'DISPLAY' => 'Saal Adams',
+		// Douglas Adams
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -299,7 +300,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Subtitles-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SUBTITLES']-Blocks deaktiviert werden
 		 */
-		'SUBTITLES' => false, # TODO check
+		'SUBTITLES' => false,
 
 		/**
 		 * ID des Raumes im L2S2-System (int)
@@ -381,8 +382,9 @@ $CONFIG['ROOMS'] = array(
 		),
 	),
 
-	'hallB' => array(
+	'hallb' => array(
 		'DISPLAY' => 'Saal Borg',
+		# Anita Borg
 		'STREAM' => 's2',
 		'PREVIEW' => true,
 
@@ -400,23 +402,24 @@ $CONFIG['ROOMS'] = array(
 		'SCHEDULE' => true,
 		//'SCHEDULE_NAME' => 'Saal Borg', # TODO check
 		'FEEDBACK' => true,
-		'SUBTITLES' => false, # TODO check
+		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#34C3-hall-B @ hackint', # TODO check
-			'URL'     => 'irc://irc.hackint.eu:6667/34C3-hall-B',
+			'DISPLAY' => '#34C3-hall-b @ hackint', # TODO check
+			'URL'     => 'irc://irc.hackint.eu:6667/34C3-hall-c',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#hallB @ twitter',
-			'TEXT'    => '#34C3 #hallB',
+			'DISPLAY' => '#hallb @ twitter',
+			'TEXT'    => '#34C3 #hallb',
 		),
 	),
 
-	'hallC' => array(
+	'hallc' => array(
 		'DISPLAY' => 'Saal Clarke',
+		# Joan Clarke
 		'STREAM' => 's3',
 		'PREVIEW' => true,
 
@@ -434,23 +437,24 @@ $CONFIG['ROOMS'] = array(
 		'SCHEDULE' => true,
 		//'SCHEDULE_NAME' => 'Saal Clarke', # TODO check
 		'FEEDBACK' => true,
-		'SUBTITLES' => false, # TODO check
+		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#34C3-hall-C @ hackint', # TODO check
-			'URL'     => 'irc://irc.hackint.eu:6667/34C3-hall-C',
+			'DISPLAY' => '#34C3-hall-c @ hackint', # TODO check
+			'URL'     => 'irc://irc.hackint.eu:6667/34C3-hall-c',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#hallC @ twitter',
-			'TEXT'    => '#34C3 #hallC',
+			'DISPLAY' => '#hallc @ twitter',
+			'TEXT'    => '#34C3 #hallc',
 		),
 	),
 
-	'hallC' => array(
+	'halld' => array(
 		'DISPLAY' => 'Saal Dijkstra',
+		# Edsger Dijkstra
 		'STREAM' => 's4',
 		'PREVIEW' => true,
 
@@ -467,18 +471,18 @@ $CONFIG['ROOMS'] = array(
 		'SCHEDULE' => true,
 		//'SCHEDULE_NAME' => 'Saal Dijkstra', # TODO check
 		'FEEDBACK' => true,
-		'SUBTITLES' => false, # TODO check
+		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#34C3-hall-D @ hackint', # TODO check
-			'URL'     => 'irc://irc.hackint.eu:6667/34C3-hall-D',
+			'DISPLAY' => '#34C3-hall-d @ hackint', # TODO check
+			'URL'     => 'irc://irc.hackint.eu:6667/34C3-hall-d',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#hallD @ twitter',
-			'TEXT'    => '#34C3 #hallD',
+			'DISPLAY' => '#halld @ twitter',
+			'TEXT'    => '#34C3 #halld',
 		),
 	),
 
@@ -599,7 +603,6 @@ $CONFIG['EMBED'] = true;
  * Wird dieser Block auskommentiert, wird das gesamte Subtitle-System deaktiviert
  */
 
-// TODO CHECK
 // $CONFIG['SUBTITLES'] = array(
 // 	/**
 // 	 * URL des L2S2 Primus-Servers
