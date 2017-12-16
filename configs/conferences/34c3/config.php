@@ -81,7 +81,7 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'BANNER_HTML' => '
 		<h1>34C3: tuwat!</h1>
-		<img src="configs/conferences/34c3/assets/logo.svg" width="810px" height="388px" alt="34C3 tuwat logo"/>
+		<img src="configs/conferences/34c3/assets/min/logo_beta.svg" width="810px" height="388px" alt="34C3 tuwat logo"/>
 	',
 
 	/**
@@ -156,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's1',
+		'STREAM' => 'sX',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -386,7 +386,7 @@ $CONFIG['ROOMS'] = array(
 	'hallb' => array(
 		'DISPLAY' => 'Saal Borg',
 		# Anita Borg
-		'STREAM' => 's2',
+		'STREAM' => 'sX',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -420,7 +420,7 @@ $CONFIG['ROOMS'] = array(
 	'hallc' => array(
 		'DISPLAY' => 'Saal Clarke',
 		# Joan Clarke
-		'STREAM' => 's3',
+		'STREAM' => 'sX',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -454,7 +454,7 @@ $CONFIG['ROOMS'] = array(
 	'halld' => array(
 		'DISPLAY' => 'Saal Dijkstra',
 		# Edsger Dijkstra
-		'STREAM' => 's4',
+		'STREAM' => 'sX',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated'],
@@ -487,7 +487,7 @@ $CONFIG['ROOMS'] = array(
 	'c3tv' => array(
 		'DISPLAY' => 'c3tv.de',
 		# danimo, moe
-		'STREAM' => 's4', # TODO fix
+		'STREAM' => 'sX', # TODO fix
 		'PREVIEW' => true, # TODO check / run downloader on transcorder
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
