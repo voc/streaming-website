@@ -23,7 +23,19 @@ Press Ctrl-C to quit.
 
 Unterstützt wird PHP ab 5.4.
 
+### Abhängigkeiten
 
+```
+apt install php7.0-curl php7.0-xml
+# - or -
+apt install php-curl php-xml
+```
+
+#### Dateidownload testen
+
+```
+./download.sh
+```
 
 ## Setup
 
