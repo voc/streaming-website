@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Live-Streaming vom 34C3',
+	'DESCRIPTION' => 'Live streaming from the 34th Chaos Communication Congress',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -80,8 +80,8 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	'BANNER_HTML' => '
-		<h1>34C3 – works for me</h1>
-		<img src="configs/conferences/34c3/assets/logo.svg" width="810px" height="388px" alt="34C3 TUWAT Logo"/>
+		<h1>34C3: tuwat!</h1>
+		<img src="configs/conferences/34c3/assets/logo.svg" width="810px" height="388px" alt="34C3 tuwat logo"/>
 	',
 
 	/**
@@ -682,14 +682,13 @@ $CONFIG['TWITTER'] = array(
  * Dict mit dem Dateinamen im Key und einer URL im Value. Die Dateien werden
  * unter dem angegebenen Dateinamen in diesem Konfigurationsordner abgelegt.
  */
-# TODO CHECK
 $CONFIG['EXTRA_FILES'] = array(
 	'schedule.xml'  => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xml',
 	'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.json',
 	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.ics',
 	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xcal',
 
-  TODO CHECK
+# TODO CHECK
 	'everything.schedule.xml' => 'http://data.c3voc.de/34C3/everything.schedule.xml',
 	'everything.schedule.json' => 'http://data.c3voc.de/34C3/everything.schedule.json',
 
