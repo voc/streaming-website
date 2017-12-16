@@ -118,6 +118,7 @@ $CONFIG['OVERVIEW'] = array(
 			'hallb',
 			'hallc',
 			'halld',
+			'c3tv',
 		),
 
 		'Live Music'  => array(
@@ -483,6 +484,31 @@ $CONFIG['ROOMS'] = array(
 		),
 	),
 
+	'c3tv' => array(
+		'DISPLAY' => 'C3TV',
+		# danimo, moe
+		'STREAM' => 's4', # TODO fix
+		'PREVIEW' => true, # TODO check / run downloader on transcorder
+		'TRANSLATION' => false,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => false,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+
+		'SCHEDULE' => false,
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+		'SUBTITLES_ROOM_ID' => 2,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '@c3tv_de on twitter',
+			'TEXT'    => '@c3tv_de',
+		),
+	),
 
 
 # TODO check namen
@@ -511,9 +537,7 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => false,
 	),
 
-
 );
-
 
 
 /**
