@@ -190,10 +190,10 @@ $CONFIG['ROOMS'] = array(
 		 * Sollte die Sprache während der Veranstaltung Konstant sein, kann ein
 		 * Label auch spezifisch konfiguriert werden z.B. 'label' => 'English'.
 		 */
-		 'TRANSLATION' => [
-		    ['endpoint' => 'translated',   'label' => 'Translated1'],
-		    ['endpoint' => 'translated-2', 'label' => 'Translated2']
-		 ],
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated1'],
+			['endpoint' => 'translated-2', 'label' => 'Translated2']
+		],
 
 		/**
 		 * stereo-Tonspur statt native-Tonspur benutzen
@@ -278,7 +278,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Display-Name verwendet
 		 */
-		//'SCHEDULE_NAME' => 'Saal 1',
+		'SCHEDULE_NAME' => 'Saal Adams',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -387,11 +387,10 @@ $CONFIG['ROOMS'] = array(
 		# Anita Borg
 		'STREAM' => 's2',
 		'PREVIEW' => true,
-
-		 'TRANSLATION' => [
-		    ['endpoint' => 'translated',   'label' => 'Translated1'],
-		    ['endpoint' => 'translated-2', 'label' => 'Translated2']
-		 ],
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated1'],
+			['endpoint' => 'translated-2', 'label' => 'Translated2']
+		],
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'DASH' => true,
@@ -400,7 +399,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		//'SCHEDULE_NAME' => 'Saal Borg', # TODO check
+		'SCHEDULE_NAME' => 'Saal Borg',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
@@ -422,11 +421,10 @@ $CONFIG['ROOMS'] = array(
 		# Joan Clarke
 		'STREAM' => 's3',
 		'PREVIEW' => true,
-
-		 'TRANSLATION' => [
-		    ['endpoint' => 'translated',   'label' => 'Translated1'],
-		    ['endpoint' => 'translated-2', 'label' => 'Translated2']
-		 ],
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated1'],
+			['endpoint' => 'translated-2', 'label' => 'Translated2']
+		],
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'DASH' => true,
@@ -435,7 +433,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		//'SCHEDULE_NAME' => 'Saal Clarke', # TODO check
+		'SCHEDULE_NAME' => 'Saal Clarke',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
@@ -457,10 +455,9 @@ $CONFIG['ROOMS'] = array(
 		# Edsger Dijkstra
 		'STREAM' => 's4',
 		'PREVIEW' => true,
-
-		 'TRANSLATION' => [
-		    ['endpoint' => 'translated',   'label' => 'Translated'],
-		 ],
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated'],
+		],
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'DASH' => true,
@@ -469,7 +466,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		//'SCHEDULE_NAME' => 'Saal Dijkstra', # TODO check
+		'SCHEDULE_NAME' => 'Saal Dijkstra',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
