@@ -88,4 +88,4 @@ betrachtet](https://gist.github.com/MaZderMind/a91f242efb2f446a2237d4596896efd6)
 
   - [Kodi media.ccc.de Plugin](https://github.com/cccc/plugin.video.media-ccc-de)
     - v2
-    - [API Kompatiblitätstest](https://github.com/cccc/plugin.video.media-ccc-de/blob/master/resources/lib/test_stream.py)
+    - [API Kompatibilitätstest](https://github.com/cccc/plugin.video.media-ccc-de/blob/master/resources/lib/test_stream.py)
