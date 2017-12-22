@@ -17,23 +17,27 @@
 			width: "100%",
 			plugins: [DashShakaPlayback, LevelSelector, AudioSelector],
 			shakaConfiguration: {
-		        abr: {
-		          defaultBandwidthEstimate: 600000
-		        }
+				abr: {
+					defaultBandwidthEstimate: 600000
+				},
+				streaming: {
+					rebufferingGoal: 12,
+					jumpLargeGaps: true
+				}
 			},
-            levelSelectorConfig: {
-                labels: {
-                    7: 'HD',
-                    8: 'SD',
-                    9: 'Slides',
-                    10: 'HD',
-                    11: 'SD',
-                    12: 'Slides',
-                    13: 'HD',
-                    14: 'SD',
-                    15: 'Slides',
-                }
-            },
+			levelSelectorConfig: {
+				labels: {
+					7: 'HD',
+					8: 'SD',
+					9: 'Slides',
+					10: 'HD',
+					11: 'SD',
+					12: 'Slides',
+					13: 'HD',
+					14: 'SD',
+					15: 'Slides',
+				}
+			},
 			autoPlay: true,
 			parentId: '#player'
 		});
