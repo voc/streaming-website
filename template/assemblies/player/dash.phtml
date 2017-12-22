@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?=h($assets)?>clapprio/dash-shaka-playback.js"></script>
+<script type="text/javascript" src="<?=h($assets)?>clapprio/dash-shaka-playback.min.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/level-selector.min.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/audio-selector.min.js"></script>
 
@@ -19,8 +19,21 @@
 			shakaConfiguration: {
 		        abr: {
 		          defaultBandwidthEstimate: 600000
-		        },
+		        }
 			},
+            levelSelectorConfig: {
+                labels: {
+                    7: 'HD',
+                    8: 'SD',
+                    9: 'Slides',
+                    10: 'HD',
+                    11: 'SD',
+                    12: 'Slides',
+                    13: 'HD',
+                    14: 'SD',
+                    15: 'Slides',
+                }
+            },
 			autoPlay: true,
 			parentId: '#player'
 		});
@@ -34,12 +47,5 @@
 }
 body.room .player-wrap.tab-content {
 	padding: 0;
-}
-.level_selector[data-level-selector] {
-	margin-top: 7px;
-}
-.level_selector[data-level-selector] button,
-.level_selector[data-level-selector] li {
-	font-size: 12px;
 }
 </style>
