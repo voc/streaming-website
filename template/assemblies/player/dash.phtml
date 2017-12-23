@@ -11,9 +11,9 @@
  interference with the new dash-player.
 -->
 <script type="text/javascript">
-	var nativeHLS = document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "";
+	var hasWebM = document.createElement('video').canPlayType('video/webm') != "";
 	var player = new Clappr.Player({
-			source: nativeHLS ? '<?=h($room->getHLSPlaylistUrl())?>' : '<?=h($room->getDashManifestUrl())?>',
+			source: hasWebM ? '<?=h($room->getDashManifestUrl())?>' : '<?=h($room->getHLSPlaylistUrl())?>',
 			width: "100%",
 			plugins: [DashShakaPlayback, LevelSelector, AudioSelector],
 			shakaConfiguration: {
@@ -27,6 +27,12 @@
 			},
 			levelSelectorConfig: {
 				labels: {
+					// HLS
+					0: 'Slides',
+					1: 'SD',
+					2: 'HD',
+
+					// DASH
 					7: 'HD',
 					8: 'SD',
 					9: 'Slides',
