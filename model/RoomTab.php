@@ -38,7 +38,7 @@ class RoomTab
 				return 'Radio';
 
 			case 'dash':
-				return 'DASH (beta)';
+				return 'Adaptive Quality Video';
 
 			default:
 				return ucfirst($tab);
