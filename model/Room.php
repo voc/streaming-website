@@ -164,7 +164,7 @@ class Room
 	}
 
 	public function getHLSPlaylistUrl() {
-		return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getStream()).'_native.m3u8';
+		return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getStream()).'_native_hd.m3u8';
 	}
 
 	public function getDashManifestUrl() {
