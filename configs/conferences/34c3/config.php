@@ -467,6 +467,7 @@ $CONFIG['ROOMS'] = array(
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated'],
+			['endpoint' => 'translated-2', 'label' => 'Translated2']
 		],
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
