@@ -36,9 +36,9 @@
 		});
 	}
 
-	var createPlayer = function(url) {
-		var player = new Clappr.Player({
-			source: url,
+	var createPlayer = function(sources) {
+		return new Clappr.Player({
+			sources: sources,
 			width: "100%",
 			plugins: [DashShakaPlayback, LevelSelector, AudioSelector],
 			shakaConfiguration: {
@@ -74,12 +74,24 @@
 		});
 	}
 
-	// Detect WebM capability, Select relay, Create player
-	var hasWebM = document.createElement('video').canPlayType('video/webm') != "";
-	var cdnUrl = hasWebM ? '<?=h($room->getDashManifestUrl())?>' : '<?=h($room->getHLSPlaylistUrl())?>';
-	selectRelay(cdnUrl, function(relayUrl) {
-		createPlayer(relayUrl);
-	});
+	var hasMSE = 'MediaSource' in window,
+		hasWebM = document.createElement('video').canPlayType('video/webm') != "",
+		nativeHLS = document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "";
+
+	// Play Multiquality only if supported
+	if (hasMSE || nativeHLS) {
+		// Detect WebM capability, Select relay, Create player
+		var cdnUrl = hasWebM ? '<?=h($room->getDashManifestUrl())?>' : '<?=h($room->getHLSPlaylistUrl())?>';
+		selectRelay(cdnUrl, function(relayUrl) {
+			createPlayer([{source: relayUrl}]);
+		});
+	} else {
+		// Default to simple WebM playback
+		var player = createPlayer([{
+			source: "<?=h($stream->getVideoUrl('webm', 'hd'))?>",
+			mimeType: "video/webm"
+		}]);
+	}
 }());
 </script>
 

@@ -123,15 +123,19 @@ class Stream
 		]);
 	}
 
-	public function getVideoUrl($proto)
+	public function getVideoUrl($proto, $selection=null)
 	{
+		if (!$selection) {
+			$selection = $this->getSelection();
+		}
+
 		switch($proto)
 		{
 			case 'webm':
-				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.webm';
+				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.webm';
 
 			case 'hls':
-				return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($this->getSelection()).'.m3u8';
+				return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8';
 		}
 
 		return null;
