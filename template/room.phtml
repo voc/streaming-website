@@ -29,7 +29,7 @@
 				<a href="#schedule" role="tab" data-toggle="tab">Fahrplan</a>
 			</li>
 		<? endif ?>
-    <li>
+		<li <? if (! $room->hasSchedule()): ?>class="active"<? endif ?>>
 			<a href="#switcher" role="tab" data-toggle="tab">Formats</a>
 		</li>
 		<? if($room->hasChat()): ?>
@@ -55,7 +55,8 @@
 				<? require("$assemblies/schedule.phtml") ?>
 			</div>
 		<? endif ?>
-    <div role="tabpanel" class="tab-pane" id="switcher">
+		<div role="tabpanel" class="tab-pane<? if (! $room->hasSchedule()): ?> active<? endif ?>"
+			id="switcher">
 			<? require("$assemblies/switcher/".$stream->getPlayerType().".phtml") ?>
 		</div>
 		<? if($room->hasChat()): ?>
