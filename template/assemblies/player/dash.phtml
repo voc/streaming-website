@@ -25,15 +25,19 @@
 					setTimeout(selectRelay.bind(null, url, cb), 2000);
 
 				console.log("selected relay", relay);
-				var proto = url.match(/^https?:\/\//),
-					path = "/" + url.split("/").slice(3).join("/");
-				cb(proto + relay + path)
+				cb(relay);
 			},
 			error: function(err) {
 				console.error("Error while selecting relay: ", err.status, err.statusText)
 				setTimeout(selectRelay.bind(null, url, cb), 2000);
 			}
 		});
+	}
+
+	var getRelayUrl = function(relay, cdnUrl) {
+		var proto = cdnUrl.match(/^https?:\/\//),
+			path = "/" + cdnUrl.split("/").slice(3).join("/");
+		return proto + relay + path;
 	}
 
 	var createPlayer = function(sources) {
@@ -47,7 +51,12 @@
 				},
 				streaming: {
 					rebufferingGoal: 12,
-					jumpLargeGaps: true
+					jumpLargeGaps: true,
+
+					// Todo: handle streaming failure
+					// failureCallback: function() {
+					// 	console.log("streaming failure callback", arguments)
+					// }
 				}
 			},
 			levelSelectorConfig: {
@@ -74,24 +83,29 @@
 		});
 	}
 
-	var hasMSE = 'MediaSource' in window,
-		hasWebM = document.createElement('video').canPlayType('video/webm; codecs=vp9,vorbis') != "",
-		nativeHLS = document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "";
-
-	// Play Multiquality only if supported
-	if (hasMSE || nativeHLS) {
-		// Detect WebM capability, Select relay, Create player
-		var cdnUrl = hasWebM ? '<?=h($room->getDashManifestUrl())?>' : '<?=h($room->getHLSPlaylistUrl())?>';
-		selectRelay(cdnUrl, function(relayUrl) {
-			createPlayer([{source: relayUrl}]);
-		});
-	} else {
-		// Default to simple WebM playback
-		var player = createPlayer([{
+	selectRelay("<?=h($room->getDashManifestUrl())?>", function(relay) {
+		// WebM fallback
+		var sources = [{
 			source: "<?=h($stream->getVideoUrl('webm', 'hd'))?>",
-			mimeType: "video/webm"
-		}]);
-	}
+		}];
+
+		// HLS playlist
+		var hasMSE = "MediaSource" in window;
+		if (hasMSE || document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "") {
+			sources.unshift({
+				source: "<?=h($room->getHLSPlaylistUrl())?>"
+			});
+		}
+
+		// VP9 dash player
+		if (hasMSE && MediaSource.isTypeSupported('video/webm; codecs="vp9,vorbis"')) {
+			sources.unshift({
+				source: "<?=h($room->getDashManifestUrl())?>"
+			});
+		}
+
+		createPlayer(sources);
+	});
 }());
 </script>
 
