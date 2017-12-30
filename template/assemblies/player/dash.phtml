@@ -75,7 +75,7 @@
 	}
 
 	var hasMSE = 'MediaSource' in window,
-		hasWebM = document.createElement('video').canPlayType('video/webm') != "",
+		hasWebM = document.createElement('video').canPlayType('video/webm; codecs=vp9,vorbis') != "",
 		nativeHLS = document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "";
 
 	// Play Multiquality only if supported
