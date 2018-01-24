@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?=h($assets)?>clapprio/dash-shaka-playback.js"></script>
+<script type="text/javascript" src="<?=h($assets)?>clapprio/dash-shaka-playback.min.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/level-selector.min.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/audio-selector.min.js"></script>
 
@@ -11,19 +11,102 @@
  interference with the new dash-player.
 -->
 <script type="text/javascript">
-	var nativeHLS = document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "";
-	var player = new Clappr.Player({
-			source: nativeHLS ? '<?=h($room->getHLSPlaylistUrl())?>' : '<?=h($room->getDashManifestUrl())?>',
+(function(){
+	// Select relay from cdn url, retry indefinitely
+	var selectRelay = function(url, cb) {
+		$.ajax({
+			url: url,
+			cache: false,
+			dataType: "text",
+			timeout: 3000,
+			success: function(result, state, xhr) {
+				var relay = xhr.getResponseHeader("X-Host");
+				if (!relay)
+					setTimeout(selectRelay.bind(null, url, cb), 2000);
+
+				console.log("selected relay", relay);
+				cb(relay);
+			},
+			error: function(err) {
+				console.error("Error while selecting relay: ", err.status, err.statusText)
+				setTimeout(selectRelay.bind(null, url, cb), 2000);
+			}
+		});
+	}
+
+	var getRelayUrl = function(relay, cdnUrl) {
+		var proto = cdnUrl.match(/^https?:\/\//),
+			path = "/" + cdnUrl.split("/").slice(3).join("/");
+		return proto + relay + path;
+	}
+
+	var createPlayer = function(sources) {
+		return new Clappr.Player({
+			sources: sources,
 			width: "100%",
 			plugins: [DashShakaPlayback, LevelSelector, AudioSelector],
 			shakaConfiguration: {
-		        abr: {
-		          defaultBandwidthEstimate: 600000
-		        },
+				abr: {
+					defaultBandwidthEstimate: 1000000
+				},
+				streaming: {
+					rebufferingGoal: 12,
+					jumpLargeGaps: true,
+
+					// Todo: handle streaming failure
+					// failureCallback: function() {
+					// 	console.log("streaming failure callback", arguments)
+					// }
+				}
+			},
+			levelSelectorConfig: {
+				labels: {
+					// HLS
+					0: 'Slides',
+					1: 'SD',
+					2: 'HD',
+
+					// DASH
+					7: 'HD',
+					8: 'SD',
+					9: 'Slides',
+					10: 'HD',
+					11: 'SD',
+					12: 'Slides',
+					13: 'HD',
+					14: 'SD',
+					15: 'Slides',
+				}
 			},
 			autoPlay: true,
 			parentId: '#player'
 		});
+	}
+
+	selectRelay("<?=h($room->getDashManifestUrl())?>", function(relay) {
+		// WebM fallback
+		var sources = [{
+			source: "<?=h($stream->getVideoUrl('webm', 'hd'))?>",
+		}];
+
+		// HLS playlist
+		var hasMSE = "MediaSource" in window;
+		if (hasMSE || document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != "") {
+			sources.unshift({
+				source: "<?=h($room->getHLSPlaylistUrl())?>"
+			});
+		}
+
+		// VP9 dash player
+		if (hasMSE && MediaSource.isTypeSupported('video/webm; codecs="vp9,vorbis"')) {
+			sources.unshift({
+				source: "<?=h($room->getDashManifestUrl())?>"
+			});
+		}
+
+		createPlayer(sources);
+	});
+}());
 </script>
 
 
@@ -34,12 +117,5 @@
 }
 body.room .player-wrap.tab-content {
 	padding: 0;
-}
-.level_selector[data-level-selector] {
-	margin-top: 7px;
-}
-.level_selector[data-level-selector] button,
-.level_selector[data-level-selector] li {
-	font-size: 12px;
 }
 </style>
