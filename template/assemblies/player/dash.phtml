@@ -60,23 +60,18 @@
 				}
 			},
 			levelSelectorConfig: {
-				labels: {
-					// HLS
-					0: 'Slides',
-					1: 'SD',
-					2: 'HD',
-
-					// DASH
-					7: 'HD',
-					8: 'SD',
-					9: 'Slides',
-					10: 'HD',
-					11: 'SD',
-					12: 'Slides',
-					13: 'HD',
-					14: 'SD',
-					15: 'Slides',
-				}
+				labelCallback: function(playbackLevel, customLabel) {
+					var bw=playbackLevel.videoBandwidth;
+					if(bw <= 100000) {
+						return 'Slides';
+					}
+					else if(bw <= 800000) {
+						return 'SD';
+					}
+					else {
+						return 'HD'
+					}
+				},
 			},
 			autoPlay: true,
 			parentId: '#player'
