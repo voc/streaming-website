@@ -126,7 +126,7 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Blackbox',
+		'DISPLAY' => 'Plenarsaal',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -337,7 +337,7 @@ $CONFIG['ROOMS'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-$CONFIG['SCHEDULE'] = array(
+//$CONFIG['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -346,7 +346,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'https://live.ber.c3voc.de/releases/kolo/schedule.xml',
+//	'URL' => 'https://live.ber.c3voc.de/releases/kolo/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
@@ -368,7 +368,7 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2014-12-28') - strtotime(/* Today */ '2015-03-01'),
 //	'SIMULATE_OFFSET' => 0,
-);
+//);
 
 
 
