@@ -1,0 +1,48 @@
+@import "../../../assets/css/_structure.less";
+
+@hasengelb: #ffc800;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+
+@brand-primary: @hasengelb;
+@well-bg: @grey-lighter;
+@navbar-default-bg: @grey-darker;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: @grey-darker;
+@panel-default-text: @hasengelb;
+@panel-bg: @grey-lighter;
+
+body {
+	background-color: @grey-darker;
+	color: @grey-light;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(n2n_eh_RGB_WoT_S.png);
+	background-size: contain;
+}
+
+.bunny {
+	background-image: url(n2n_eh_RGB_WoT_S.png);
+	background-repeat: no-repeat;
+	background-size: 194px 240px;
+
+	position: fixed;
+	left: 10px;
+	bottom: 40px;
+
+	width: 194px;
+	height: 240px;
+
+	opacity: 0.4;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
