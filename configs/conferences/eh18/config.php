@@ -33,14 +33,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Easterhegg 2018',
+	'TITLE' => 'EasterHegg 2018',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'Easterhegg, you know!',
+	'AUTHOR' => 'EasterHegg, you know!',
 
 	/**
 	 * Beschreibungstext
@@ -121,7 +121,6 @@ $CONFIG['OVERVIEW'] = array(
 		'Vortragsraeume' => array(
 			'heisenberg-1',
 			'heisenberg-2',
-			'heisenberg-3',
 		),
     'Lounge' => array(
 			'lounge',
@@ -374,28 +373,6 @@ $CONFIG['ROOMS'] = array(
 		'TWITTER' => true,
 	),
 
-	'heisenberg-3' => array(
-		'WIDE' => false,
-		'DISPLAY' => 'Heisenberg 3',
-		'STREAM' => 's3',
-		'PREVIEW' => true,
-		'TRANSLATION' => false,
-		'STEREO' => false,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'SLIDES' => true,
-		'DASH' => true,
-		'AUDIO' => true,
-		'MUSIC' => false,
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Heisenberg 3',
-		'FEEDBACK' => false,
-		'SUBTITLES' => false,
-		'EMBED' => true,
-		'IRC' => true,
-		'TWITTER' => true,
-	),
-
 	'lounge' => array(
 		'WIDE' => true,
 		'DISPLAY' => 'Lounge',
@@ -442,7 +419,7 @@ $CONFIG['SCHEDULE'] = array(
 	*
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
-	'ROOMFILTER' => ['Heisenberg 1', 'Heisenberg 2', 'Heisenberg 3', 'Lounge'],
+	'ROOMFILTER' => ['Heisenberg 1', 'Heisenberg 2', 'Lounge'],
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
