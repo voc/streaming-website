@@ -400,7 +400,7 @@ $CONFIG['ROOMS'] = array(
 
 	'hoersaal-4' => array(
 		'DISPLAY' => 'Hörsaal IV - Geozentrum',
-		'STREAM' => 's2',
+		'STREAM' => 's3',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
