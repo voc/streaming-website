@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://www.youtube.com/user/fossgis/playlists',
+	'RELEASES' => 'https://media.ccc.de/c/fossgis2018',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
