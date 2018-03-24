@@ -122,8 +122,8 @@ $CONFIG['OVERVIEW'] = array(
 		'Lecture Rooms' => array(
 			// Hauptkonferenz
 			'alfred-philippson-hoersaal',
-			'hoersaal-2',
-			'hoersaal-4',
+//			'hoersaal-2',
+//			'hoersaal-4',
 
 			// OSM-Stamstag
 			//'roter-saal',
