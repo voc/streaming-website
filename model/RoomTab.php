@@ -37,8 +37,14 @@ class RoomTab
 			case 'music':
 				return 'Radio';
 
+			case 'video':
+				return 'Video (Legacy)';
+
+			case 'slides':
+				return 'Slides (Legacy)';
+
 			case 'dash':
-				return 'Adaptive Quality Video';
+				return 'Video';
 
 			default:
 				return ucfirst($tab);
