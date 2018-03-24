@@ -212,6 +212,15 @@ class Room
 	public function getSelectionNames()
 	{
 		$selections = array();
+		if($this->hasDash())
+			$selections[] = 'dash';
+
+		if($this->hasAudio())
+			$selections[] = 'audio';
+
+		if($this->hasMusic())
+			$selections[] = 'music';
+
 		if($this->hasHdVideo())
 			$selections[] = 'hd';
 
@@ -220,15 +229,6 @@ class Room
 
 		if($this->hasSlides())
 			$selections[] = 'slides';
-
-		if($this->hasAudio())
-			$selections[] = 'audio';
-
-		if($this->hasMusic())
-			$selections[] = 'music';
-
-		if($this->hasDash())
-			$selections[] = 'dash';
 
 		return $selections;
 	}
@@ -241,11 +241,8 @@ class Room
 	public function getTabNames()
 	{
 		$tabs = array();
-		if($this->hasVideo())
-			$tabs[] = 'video';
-
-		if($this->hasSlides())
-			$tabs[] = 'slides';
+		if($this->hasDash())
+			$tabs[] = 'dash';
 
 		if($this->hasAudio())
 			$tabs[] = 'audio';
@@ -253,8 +250,11 @@ class Room
 		if($this->hasMusic())
 			$tabs[] = 'music';
 
-		if($this->hasDash())
-			$tabs[] = 'dash';
+		if($this->hasVideo())
+			$tabs[] = 'video';
+
+		if($this->hasSlides())
+			$tabs[] = 'slides';
 
 		return $tabs;
 	}
@@ -331,6 +331,7 @@ class Room
 
 	public function selectStream($selection, $language = 'native')
 	{
+		if($selection == 'video') $selection = 'hd';
 		$selections = $this->getSelectionNames();
 
 		if(count($selections) == 0)
