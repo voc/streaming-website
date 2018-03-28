@@ -33,14 +33,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'EasterHegg 2018',
+	'TITLE' => 'Easterhegg 2018',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'EasterHegg, you know!',
+	'AUTHOR' => 'Easterhegg, you know!',
 
 	/**
 	 * Beschreibungstext
