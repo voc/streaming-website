@@ -123,7 +123,7 @@ $CONFIG['OVERVIEW'] = array(
 			'heisenberg-2',
 		),
     'Pixelflut' => array(
-			'pixelflu',
+			'pixelflut',
 		),
 	),
 );
@@ -374,7 +374,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
     'pixelflut' => array(
-        'WIDE' => false,
+        'WIDE' => true,
         'DISPLAY' => 'Pixelflut',
         'STREAM' => 'q1',
         'PREVIEW' => true,
