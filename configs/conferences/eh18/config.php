@@ -122,9 +122,6 @@ $CONFIG['OVERVIEW'] = array(
 			'heisenberg-1',
 			'heisenberg-2',
 		),
-    'Pixelflut' => array(
-			'pixelflut',
-		),
 	),
 );
 
@@ -373,28 +370,6 @@ $CONFIG['ROOMS'] = array(
 		'TWITTER' => true,
 	),
 
-    'pixelflut' => array(
-        'WIDE' => true,
-        'DISPLAY' => 'Pixelflut',
-        'STREAM' => 'q1',
-        'PREVIEW' => true,
-        'TRANSLATION' => false,
-        'STEREO' => false,
-        'SD_VIDEO' => true,
-        'HD_VIDEO' => true,
-        'SLIDES' => false,
-        'DASH' => true,
-        'AUDIO' => false,
-        'MUSIC' => false,
-        'SCHEDULE' => false,
-        'SCHEDULE_NAME' => 'Pixelflut',
-        'FEEDBACK' => false,
-        'SUBTITLES' => false,
-        'EMBED' => true,
-        'IRC' => true,
-        'TWITTER' => true,
-    ),
-
 );
 
 /**
@@ -420,7 +395,7 @@ $CONFIG['SCHEDULE'] = array(
 	*
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
-	'ROOMFILTER' => ['Heisenberg 1', 'Heisenberg 2', 'Pixelflut'],
+	'ROOMFILTER' => ['Heisenberg 1', 'Heisenberg 2'],
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
