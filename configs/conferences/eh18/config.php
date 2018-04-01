@@ -121,7 +121,6 @@ $CONFIG['OVERVIEW'] = array(
         'Vortragsraeume' => array(
             'heisenberg-1',
             'heisenberg-2',
-            'siebold'
         ),
     ),
 );
@@ -371,27 +370,6 @@ $CONFIG['ROOMS'] = array(
         'TWITTER' => true,
     ),
 
-    'siebold' => array(
-        'WIDE' => false,
-        'DISPLAY' => 'Siebold',
-        'STREAM' => 's3',
-        'PREVIEW' => true,
-        'TRANSLATION' => false,
-        'STEREO' => false,
-        'SD_VIDEO' => true,
-        'HD_VIDEO' => true,
-        'SLIDES' => true,
-        'DASH' => true,
-        'AUDIO' => true,
-        'MUSIC' => false,
-        'SCHEDULE' => true,
-        'SCHEDULE_NAME' => 'Siebold',
-        'FEEDBACK' => false,
-        'SUBTITLES' => false,
-        'EMBED' => true,
-        'IRC' => true,
-        'TWITTER' => true,
-    ),
 );
 
 /**
