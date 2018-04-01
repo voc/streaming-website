@@ -61,7 +61,10 @@
 			},
 			levelSelectorConfig: {
 				labelCallback: function(playbackLevel, customLabel) {
-					var bw = playbackLevel.videoBandwidth;
+					// playbackLevel.videoBandwidth is set for DASH
+					// playbackLevel.level.bitrate is set for HLS
+					var bw = playbackLevel.videoBandwidth || playbackLevel.level.bitrate;
+
 					if(bw <= 100000) {
 						return 'Slides';
 					}
