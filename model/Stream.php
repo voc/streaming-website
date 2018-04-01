@@ -100,6 +100,10 @@ class Stream
 				$display .= 'Radio';
 				break;
 
+			case 'dash':
+				$display .= 'Adaptive';
+				break;
+
 			default:
 				$display .= ucfirst($this->getSelection());
 				break;
