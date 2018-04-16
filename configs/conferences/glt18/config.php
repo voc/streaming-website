@@ -119,10 +119,10 @@ $CONFIG['OVERVIEW'] = array(
      */
     'GROUPS' => array(
         'Vortragsraeume' => array(
-            'G.AP149.112',
-            'G.AP147.004',
-            'G.AP147.005',
-            'G.AP147.006',
+            'GAP149112',
+            'GAP147004',
+            'GAP147005',
+            'GAP147006',
         ),
     ),
 );
@@ -137,7 +137,7 @@ $CONFIG['ROOMS'] = array(
      * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
      * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
      */
-    'G.AP149.112' => array(
+    'GAP149112' => array(
         /**
          * Breite Anzeige erzwingen
          */
@@ -350,7 +350,7 @@ $CONFIG['ROOMS'] = array(
         // ),
     ),
 
-    'G.AP147.004' => array(
+    'GAP147004' => array(
         'WIDE' => false,
         'DISPLAY' => 'G.AP147.004',
         'STREAM' => 's2',
@@ -372,7 +372,7 @@ $CONFIG['ROOMS'] = array(
         'TWITTER' => true,
     ),
 
-    'G.AP147.005' => array(
+    'GAP147005' => array(
          'WIDE' => false,
          'DISPLAY' => 'G.AP147.005',
          'STREAM' => 's3',
@@ -394,7 +394,7 @@ $CONFIG['ROOMS'] = array(
          'TWITTER' => true,
      ),
 
-     'G.AP147.006' => array(
+     'GAP147006' => array(
          'WIDE' => false,
          'DISPLAY' => 'G.AP147.006',
          'STREAM' => 's4',
