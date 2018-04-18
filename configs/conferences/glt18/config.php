@@ -119,10 +119,10 @@ $CONFIG['OVERVIEW'] = array(
      */
     'GROUPS' => array(
         'Vortragsraeume' => array(
-            'GAP149112',
+            'GAP147006',
             'GAP147004',
             'GAP147005',
-            'GAP147006',
+            'GAP149112',
         ),
     ),
 );
@@ -395,7 +395,7 @@ $CONFIG['ROOMS'] = array(
      ),
 
      'GAP147006' => array(
-         'WIDE' => false,
+         'WIDE' => true,
          'DISPLAY' => 'G.AP147.006',
          'STREAM' => 's4',
          'PREVIEW' => true,
