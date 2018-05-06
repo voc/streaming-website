@@ -253,7 +253,7 @@ $CONFIG['ROOMS'] = array(
          * Name des Raums im Fahrplan
          * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
          */
-        'SCHEDULE_NAME' => 'ZKM_Media Theater',
+        'SCHEDULE_NAME' => 'ZKM_Medientheater',
 
         /**
          * Feedback anzeigen (boolean)
