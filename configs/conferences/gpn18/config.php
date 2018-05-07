@@ -96,14 +96,14 @@ $CONFIG['CONFERENCE'] = array(
      * Wird beides aktiviert, hat der externe Link Vorrang!
      * Wird beides auskommentiert, wird der Link nicht angezeigt
      */
-    //'RELIVE_JSON' => 'configs/conferences/fossgis16/vod.json',
+    'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/gpn18/index.json',
 
     /**
      * APCU-Cache-Zeit in Sekunden
      * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
      * das Relive-Json bei jedem Request von der Quelle geladen und geparst
      */
-    //'RELIVE_JSON_CACHE' => 30*60,
+    'RELIVE_JSON_CACHE' => 30*60,
 );
 
 /**
