@@ -440,7 +440,7 @@ $CONFIG['SCHEDULE'] = array(
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    'ROOMFILTER' => ['ZKM_Medientheater', 'HfG_Studio', 'ZKM_Vortragssaal'],
+    'ROOMFILTER' => ['ZKM_Medientheater', 'HfG_Studio', 'ZKM_Vortragssaal', 'ZKM_OpenHUB'],
 
     /**
      * Skalierung der Programm-Vorschau in Sekunden pro Pixel
