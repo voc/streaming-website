@@ -121,7 +121,8 @@ $CONFIG['OVERVIEW'] = array(
         'Vortragsräume' => array(
             'medientheater',
             'grosses-studio',
-            'vortragssaal'
+            'vortragssaal',
+            'openhub'
         ),
     ),
 );
@@ -386,6 +387,27 @@ $CONFIG['ROOMS'] = array(
          'MUSIC' => false,
          'SCHEDULE' => true,
          'SCHEDULE_NAME' => 'ZKM_Vortragssaal',
+         'FEEDBACK' => false,
+         'SUBTITLES' => false,
+         'EMBED' => true,
+         'IRC' => true,
+         'TWITTER' => true,
+     ),
+     'openhub' => array(
+         'WIDE' => false,
+         'DISPLAY' => 'ZKM-OpenHUB',
+         'STREAM' => 's4',
+         'PREVIEW' => true,
+         'TRANSLATION' => false,
+         'STEREO' => false,
+         'SD_VIDEO' => true,
+         'HD_VIDEO' => true,
+         'SLIDES' => true,
+         'DASH' => true,
+         'AUDIO' => true,
+         'MUSIC' => false,
+         'SCHEDULE' => true,
+         'SCHEDULE_NAME' => 'ZKM_OpenHUB',
          'FEEDBACK' => false,
          'SUBTITLES' => false,
          'EMBED' => true,
