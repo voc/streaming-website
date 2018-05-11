@@ -65,7 +65,7 @@
 								<? endif ?>
 
 								<? if($room->hasSchedule()): ?>
-									<? $upcoming = @$upcomingTalksPerRoom[ $room->getScheduleName() ] ?: [] ?>
+									<? $upcoming = @$upcomingTalksPerRoom[ $room->getSlug() ] ?: [] ?>
 									<div class="program-schedule">
 										<div class="talk current-talk" title="<?=h(@$upcoming['current']['title'] ?: 'none') ?>">
                     <strong>Now (since <?=date('G:i', @$upcoming['current']['start']) ?>):</strong><br/>
