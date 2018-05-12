@@ -2,9 +2,11 @@
 
 header('Content-Type: application/json');
 
+$basetime = time();
 $struct = [];
 foreach (Conferences::getActiveConferences() as $conference)
 {
+	$now = $conference->getSchedule()->getScheduleDisplayTime($basetime);
 	$overview = $conference->getOverview();
 
 	$groupstruct = array();
@@ -91,6 +93,10 @@ foreach (Conferences::getActiveConferences() as $conference)
 				'link' => forceslash(baseurl()).$room->getLink(),
 				'display' => $room->getDisplay(),
 				'stream' => $room->getStream(),
+				'talks' => [
+					'current' => $room->getCurrentTalk($now),
+					'next' => $room->getNextTalk($now),
+				],
 				'streams' => $streams,
 			);
 		}

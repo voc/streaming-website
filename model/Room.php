@@ -4,6 +4,7 @@ class Room
 {
 	private $slug;
 	private $conference;
+	private $talks;
 
 	public function __construct(Conference $conference, $slug)
 	{
@@ -16,8 +17,27 @@ class Room
 			throw new NotFoundException('Room '.$slug);
 
 		$this->slug = $slug;
+
+		$schedule = $conference->getSchedule();
+		$talksPerRoom = $schedule->getSchedule();
+		$scheduleName = $this->getScheduleName();
+
+		$this->talks = isset($talksPerRoom[$scheduleName]) ? $talksPerRoom[$scheduleName] : [];
 	}
 
+	public function getCurrentTalk($now)
+	{
+		return array_filter_last($this->talks, function($talk) use ($now) {
+			return $talk['start'] < $now && $talk['end'] > $now;
+		});
+	}
+
+	public function getNextTalk($now)
+	{
+		return array_filter_first($this->talks, function($talk) use ($now) {
+			return !isset($talk['special']) && $talk['start'] > $now;
+		});
+	}
 
 	public function getConference() {
 		return $this->conference;
