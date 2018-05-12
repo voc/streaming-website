@@ -2,7 +2,7 @@
 
 $schedule = $conference->getSchedule();
 
-$now = time() + $schedule->getSimulationOffset();
+$now = $schedule->getScheduleDisplayTime();
 $upcomingTalksPerRoom = [];
 foreach ($conference->getRooms() as $room) {
 	$upcomingTalksPerRoom[$room->getSlug()] = [

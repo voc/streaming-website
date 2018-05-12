@@ -44,6 +44,15 @@ class Schedule
 		return $this->getConference()->getRoomIfExists( @$mapping[$scheduleRoom] );
 	}
 
+	public function getScheduleDisplayTime($basetime = null)
+	{
+		if(is_null($basetime)) {
+			$basetime = time();
+		}
+
+		return $basetime + $this->getSimulationOffset();
+	}
+
 	private function fetchSchedule()
 	{
 		$schedule = @file_get_contents($this->getScheduleCache());
