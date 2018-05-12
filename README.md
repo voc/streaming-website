@@ -101,3 +101,6 @@ betrachtet](https://gist.github.com/MaZderMind/a91f242efb2f446a2237d4596896efd6)
   - [Kodi media.ccc.de Plugin](https://github.com/cccc/plugin.video.media-ccc-de)
     - v2
     - [API Kompatibilitätstest](https://github.com/cccc/plugin.video.media-ccc-de/blob/master/resources/lib/test_stream.py)
+  - [re-data](https://github.com/ocdata/re-data/tree/feature/34c3)
+    - Scraping code: [https://github.com/ocdata/re-data/blob/feature/34c3/scraper/34C3/scraper.js](https://github.com/ocdata/re-data/blob/feature/34c3/scraper/34C3/scraper.js)
+    - During events data appears here: [http://api.conference.bits.io/](http://api.conference.bits.io/)
