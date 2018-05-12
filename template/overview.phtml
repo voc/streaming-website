@@ -13,17 +13,29 @@
 
 			<? $count = count($rooms); $idx = 0 ?>
 			<? foreach($rooms as $room): ?>
+				<? 
+					$is_wide = 0;
+					/* when the count is odd and this is the last item - make it full width */
+					if (($count % 2 == 1) && ($idx == $count - 1)) {
+						$is_wide = 1;
+					}
+					elseif ($room->requestsWide()) {
+						$is_wide = 1;
+						$count++;
+						/* Increase the index if we are using a whole line, this means when the room is
+						 * an even entry. Odd entries on the other hand steal one index from the
+						 * "previous" row which they originally belong to. */
+						if ($idx % 2 != 1) {
+							$idx++;
+						}
+					}
+				?>
+			
 				<div class="
 					room
 					room-<?=h($room->getSlug())?>
 					clearfix
-
-					<? /* when the count is odd and this is the last item - make it full width */ ?>
-					<? if( ($count % 2 == 1) && ($idx == $count - 1) ): ?>
-						wide
-						col-xs-12
-					<? elseif($room->requestsWide()): ?>
-						<? $count++; $idx++ ?>
+					<? if ($is_wide): ?>
 						wide
 						col-xs-12
 					<? else: ?>
@@ -83,6 +95,9 @@
 					</a>
 				</div>
 				<? $idx++ ?>
+				<? if ($is_wide): ?>
+					<div class="clearfix"></div>
+				<? endif ?>
 			<? endforeach ?>
 		</div>
 	<? endforeach ?>
