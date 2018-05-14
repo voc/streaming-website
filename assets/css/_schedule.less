@@ -21,6 +21,7 @@ body .schedule {
 		height: 100%;
 		background-color: @schedule-now-bg;
 		font-size: 14px;
+		pointer-events: none;
 
 		z-index: 5;
 
@@ -96,7 +97,7 @@ body .schedule {
 			text-shadow: 0 0 3px @schedule-gap;
 		}
 
-		&.daychange { 
+		&.daychange {
 			background-image: url("@{img}/stripes/gap.png");
 			background-color: @schedule-daychange-bg;
 			color: @schedule-daychange;
