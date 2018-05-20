@@ -143,7 +143,7 @@ $CONFIG['ROOMS'] = array(
         /**
          * Angezeige-Name
          */
-        'DISPLAY' => 'Main',
+        'DISPLAY' => 'Mainhall',
 
         /**
          * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
