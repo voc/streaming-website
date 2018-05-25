@@ -1,4 +1,4 @@
-	<?php
+<?php
 
 $CONFIG['CONFERENCE'] = array(
 	/**
@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture rooms' => array(
-			'babylon',,
+			'babylon',
 		),
 	),
 );
