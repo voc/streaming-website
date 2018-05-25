@@ -1,6 +1,8 @@
 @import "../../../assets/css/_structure.less";
 
-@brand-primary:  #5252c9;
+@bg: #5252c9;
+
+@brand-primary:  darken(@bg, 20%);
 
 @link-color:            #1b5fbf;
 @panel-primary-border:  white;
@@ -21,7 +23,7 @@
 }
 
 body {
-	//background-color: @green;
+	background-color: @bg;
 }
 
 footer {
