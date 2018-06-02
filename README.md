@@ -6,7 +6,7 @@ Dies ist der Code für die Streaming-Webseite unter
 [diversen Konferenzen](https://c3voc.de/eventkalender/) im Internet zu
 präsentieren. Die Idee hinter diesem Projekt ist es, eine generische Codebasis
 zu haben, die mit wenigen Konfigurationsoptionen und ein paar CSS-Rules an die
-Gegebenheiten und die Gestaltung der Konferenz angepasst werden können.
+Gegebenheiten und die Gestaltung der Konferenz angepasst werden können. 
 
 
 ## Development
@@ -37,6 +37,20 @@ apt install php-curl php-xml
 ./download.sh
 ```
 
+## Konfiguration der einzelnen Konferenzen
+
+Die Seite kann für mehrere parallel laufende Konferenzen gleichzeitig verwendet
+werden. Jede Konferenz wird über einen Ordner unterhalb von
+[configs/conferences](configs/conferences) konfiguriert. In diesen Ordnern können
+jeweils folgende Dateien abgelegt werden, welche das Verhalten bzw. die Gestaltung
+der jeweiligen Konferenzseite bestimmen, im Folgendem am :
+
+  - [config.php](configs/conferences/nixcon15/config.php) – steuert das Verhalten der gesamten Konferenzseite. Diese ist ausführlich dokumentiert und sollte sich selbst erklären.
+  - [main.less](configs/conferences/nixcon15/main.less) – steuert die Gestaltung der Konferenzseite.
+  - weitere Assets wie `.png` oder `.svg`-Dateien, die aus der `main.less` heraus referenziert werden können.
+
+Siehe auch https://c3voc.de/wiki/software:streamingwebsite#add_a_new_conference
+
 ## Setup
 
 Das Setup beim VOC besteht aus einem Hidden-Master-Server, welcher den PHP-Code
@@ -62,24 +76,9 @@ gesetzt werden.
 
 
 
-## Konfiguration
-
-Die Seite kann für mehrere parallel laufende Konferenzen gleichzeitig verwendet
-werden. Jede Konferenz wird über einen Ordner unterhalb von
-[configs/conferences](configs/conferences) konfiguriert. In diesen Ordnern können
-jeweils folgende Dateien abgelegt werden, welche das Verhalten bzw. die Gestaltung
-der jeweiligen Konferenzseite bestimmen, im Folgendem am :
-
-  - [config.php](configs/conferences/nixcon15/config.php) – steuert das Verhalten der gesamten Konferenzseite. Diese ist ausführlich dokumentiert und sollte sich selbst erklären.
-  - [download.sh](configs/conferences/nixcon15/download.sh) – Wird von einem Cronjob in regelmäßigen Abständen zum Herunterladen von `schedule.xml`-Dateien und anderen Drittkonfiguration verwendet.
-  - [main.less](configs/conferences/nixcon15/main.less) – steuert die Gestaltung der Konferenzseite.
-  - weitere Assets wie `.png` oder `.svg`-Dateien, die aus der `main.less` heraus referenziert werden können.
-
-
-
 ## Deployment (auf der VOC Infrastruktur)
 
-see [deploy.sh](deploy.sh)
+see [deploy.sh](deploy.sh) bzw. https://c3voc.de/wiki/software:streamingwebsite
 
 
 ## JSON-API
