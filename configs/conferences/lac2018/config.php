@@ -350,7 +350,6 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => true,
 	),
-);
 
 	'nativespace' => array(
 		'DISPLAY' => 'Native Space',
