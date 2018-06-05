@@ -186,6 +186,8 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'HD_VIDEO' => true,
 
+		'DASH'=> true,
+
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
 		 *
@@ -234,7 +236,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Mainhall',
+		'SCHEDULE_NAME' => 'mainhall',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -378,36 +380,36 @@ $CONFIG['ROOMS'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-//$CONFIG['SCHEDULE'] = array(
-//	/**
-//	 * URL zum Fahrplan-XML
-//	 *
-//	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
-//	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
-//	 * externer HTTP-Cache vorgeschaltet werden.
-//	 */
-//	'URL' => 'configs/conferences/minilac16/schedule.xml',
-//
-//	/**
-//	 * Nur die angegebenen Räume aus dem Fahrplan beachten
-//	 *
-//	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-//	 */
-//	//'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6'),
-//
-//	/**
-//	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-//	 */
-//	'SCALE' => 7,
-//
-//	/**
-//	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-//	 *
-//	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-//	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
-//	 */
-//	'SIMULATE_OFFSET' => 0,
-//);
+$CONFIG['SCHEDULE'] = array(
+	/**
+	 * URL zum Fahrplan-XML
+	 *
+	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
+	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
+	 * externer HTTP-Cache vorgeschaltet werden.
+	 */
+	'URL' => 'https://lac.linuxaudio.org/2018/lac2018.xml',
+
+	/**
+	 * Nur die angegebenen Räume aus dem Fahrplan beachten
+	 *
+	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 */
+	//'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6'),
+
+	/**
+	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
+	 */
+	'SCALE' => 7,
+
+	/**
+	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
+	 *
+	 * Diese folgende Beispiel-Zeile Simuliert, dass das
+	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
+	 */
+	//'SIMULATE_OFFSET' => 0,
+);
 
 
 
