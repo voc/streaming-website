@@ -312,19 +312,7 @@ $CONFIG['ROOMS'] = array(
          * Ebenso können alle Twitter-Links durch auskommentieren
          * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
          **/
-        'TWITTER' => false,
-
-        /**
-        * Mit dem Angaben in diesem Block können die Vorgaben aus dem
-        * globalen $CONFIG['TWITTER'] Block überschrieben werden.
-        *
-        * Der globale $CONFIG['TWITTER']-Block muss trotzdem existieren,
-        * da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
-        */
-        'TWITTER_CONFIG' => array(
-            'DISPLAY' => '#dcgtw @ twitter',
-            'TEXT'    => '#dcgtw',
-        ),
+        'TWITTER' => true,
     ),
 );
 
@@ -371,6 +359,35 @@ $CONFIG['SCHEDULE'] = array(
     //'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-05-21') - strtotime(/* Today */ '2016-05-19'),
     'SIMULATE_OFFSET' => 0,
 );
+
+/**
+ * Globale Konfiguration der Twitter-Links.
+ *
+ * Wird dieser Block auskommentiert, werden keine Twitter-Links mehr erzeugt. Sollen die
+ * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
+ * existieren sein. ggf. einfach auf true setzen:
+ *
+ *   $CONFIG['TWITTER'] = true
+ */
+$CONFIG['TWITTER'] = array(
+    /**
+     * Anzeigetext für die Twitter-Links.
+     *
+     * %s wird durch den Raum-Slug ersetzt.
+     * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
+     * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
+     */
+    'DISPLAY' => '#apbdigital @ twitter',
+
+    /**
+     * Vorgabe-Tweet-Text für die Twitter-Links.
+     *
+     * %s wird durch den Raum-Slug ersetzt.
+     * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
+     */
+    'TEXT' => '#apbdigital',
+);
+
 
 
 return $CONFIG;
