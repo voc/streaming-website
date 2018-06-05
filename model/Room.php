@@ -113,7 +113,7 @@ class Room
 
 	public function getTwitterUrl() {
 		return sprintf(
-			'https://twitter.com/search?q=%s',
+			'https://twitter.com/search?f=tweets&q=%s',
 			rawurlencode($this->getTwitterText())
 		);
 	}
