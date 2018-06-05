@@ -332,7 +332,7 @@ $CONFIG['ROOMS'] = array(
 
 	'ceminar' => array(
 		'DISPLAY' => 'ceminar',
-		'STREAM' => 's5',
+		'STREAM' => 's2',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -353,7 +353,7 @@ $CONFIG['ROOMS'] = array(
 
 	'nativespace' => array(
 		'DISPLAY' => 'Native Space',
-		'STREAM' => 's5',
+		'STREAM' => 'q1',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
