@@ -90,7 +90,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/lac2018/vod.json',
+	'RELIVE_JSON' => 'http://live.dus.c3voc.de/relive/lac18/index.json',
 );
 
 /**
