@@ -336,7 +336,7 @@ $CONFIG['SCHEDULE'] = array(
      * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
      * externer HTTP-Cache vorgeschaltet werden.
      */
-    'URL' => 'https://data.c3voc.de/dcgtw/schedule-dcgtw.xml',
+    'URL' => 'http://data.c3voc.de/dcgtw/schedule-dcgtw.xml',
 
     /**
      * Nur die angegebenen Räume aus dem Fahrplan beachten
