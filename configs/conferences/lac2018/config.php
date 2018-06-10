@@ -108,7 +108,7 @@ $CONFIG['OVERVIEW'] = array(
 		'Lecture Rooms' => array(
 			'mainhall',
 			'ceminar',
-			'nativespace',
+#			'nativespace',
 		),
 	),
 );
