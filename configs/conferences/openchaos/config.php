@@ -46,7 +46,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	//'CLOSED' => false,
+	'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -117,6 +117,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
 	//'RELIVE_JSON' => 'http://live.dus.c3voc.de/relive/datengarten/index.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/openchaos/index.json',
 );
 
 /**
