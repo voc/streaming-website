@@ -8,15 +8,15 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2017-08-10 21:00"),
+	'STARTS_AT' => strtotime("2018-08-17 18:30"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-08-13 13:00"),
+	'ENDS_AT' => strtotime("2017-08-19 15:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -54,7 +54,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'Podstock, Sohrschied, Podcasts',
+	'KEYWORDS' => 'Podstock 2018, Westfeld, Podcasts',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -78,7 +78,7 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'BANNER_HTML' => '
 		<div class="container">
-			<h2>Sohrschied, 10./11. - 13. August 2017 – #podstockDE</h2>
+			<h2>#podstockDE</h2>
 		</div>
 	',
 
@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/podstock2017/relive.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/podstock2018/relive.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -124,10 +124,10 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Bühnenshows' => array(
-			'hauptbuehne'
+			'aussenbuehne'
 		),
 		'Workshopraum' => array(
-			'workshopraum',
+			'innenbuehne',
 		),
 	),
 );
@@ -142,18 +142,18 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'hauptbuehne' => array(
+	'aussenbuehne' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Bühnenshows',
+		'DISPLAY' => 'Außenbühne',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's6',
+		'STREAM' => 's1',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -205,6 +205,8 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'HD_VIDEO' => true,
 
+		'DASH' => true,
+
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
 		 *
@@ -214,7 +216,7 @@ $CONFIG['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
 		 * Default-Stream angenommen.
 		 */
-		'SLIDES' => false,
+		'SLIDES' => true,
 
 		/**
 		 * Audio-Only-Stream verfügbar
@@ -253,7 +255,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Bühnenshows',
+		'SCHEDULE_NAME' => 'Außenbühne',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -336,25 +338,27 @@ $CONFIG['ROOMS'] = array(
 		 **/
 		'TWITTER' => true,
 	),
-	'workshopraum' => array(
-		'DISPLAY' => 'Workshopraum',
+	'innenbuehne' => array(
+		'DISPLAY' => 'Innenbühne',
 
-		'STREAM' => 's3',
+		'STREAM' => 's2',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
 		'STEREO' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
+		'DASH' => true,
+		'SLIDES' => true,
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Workshopraum',
+		'SCHEDULE_NAME' => 'Innenbühne',
 
 		'FEEDBACK' => true,
 		'EMBED' => true,
 		'TWITTER' => true,
-	) 
+	)
 );
 
 /**
@@ -405,14 +409,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://frab.podstock.de/de/podstock2017/public/schedule.xml',
+	'URL' => 'https://fahrplan.podstock.de/podstock2018/schedule/export?exporter=core-frab-xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Bühnenshows', 'Workshopraum', 'Podcasttisch', 'Workshops Outdoor'),
+	//'ROOMFILTER' => array('Bühnenshows', 'Workshopraum', 'Podcasttisch', 'Workshops Outdoor'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
