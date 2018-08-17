@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-08-19 15:00"),
+	'ENDS_AT' => strtotime("2018-08-19 15:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/podstock2018/relive.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/podstock2018/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -416,7 +416,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Bühnenshows', 'Workshopraum', 'Podcasttisch', 'Workshops Outdoor'),
+	//'ROOMFILTER' => array('Außenbühne', 'Innenbühne', 'Podcasttisch', 'Werkstatt', 'Outdoor'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
