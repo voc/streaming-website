@@ -136,7 +136,7 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'S1' => array(
-		'DISPLAY' => 'Tent A',
+		'DISPLAY' => 'Stage A',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -151,7 +151,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Tent A',
+		'SCHEDULE_NAME' => 'Stage A',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -160,7 +160,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 	),
 	'S2' => array(
-		'DISPLAY' => 'Tent B',
+		'DISPLAY' => 'Stage B',
 		'STREAM' => 's2',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -175,7 +175,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HS3',
+		'SCHEDULE_NAME' => 'Stage B',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -184,7 +184,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 	),
 	'S3' => array(
-		'DISPLAY' => 'Tent C',
+		'DISPLAY' => 'Stage C',
 		'STREAM' => 's3',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -199,7 +199,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HS4',
+		'SCHEDULE_NAME' => 'Stage C',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
