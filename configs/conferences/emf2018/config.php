@@ -229,14 +229,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://programm.froscon.de/2018/schedule.xml',
+	'URL' => 'http://emfcamp.org/schedule.frab',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('HS1', 'HS3', 'HS4', 'HS5', 'HS6', 'HS7', 'HS8', 'C116'),
+	'ROOMFILTER' => array('Tent A', 'Tent B', 'Tent C'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
