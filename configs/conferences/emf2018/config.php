@@ -1,5 +1,6 @@
 <?php
 
+date_default_timezone_set('Europe/London');
 $CONFIG['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
