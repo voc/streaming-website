@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'SUSE Labs Conmference 2018',
+	'TITLE' => 'SUSE Labs Conference 2018',
 
 	/**
 	 * Veranstalter
