@@ -81,8 +81,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/suselabs18',
-	//'RELEASES' => 'https://www.youtube.com/playlist?list=PL_AMhvchzBaeIQntCDiVNUUgmRaAzam1V',
+	'RELEASES' => 'https://www.youtube.com/playlist?list=PL4ibkKyj5eYSZEz0la9WRZxGkROzTnzZP',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
