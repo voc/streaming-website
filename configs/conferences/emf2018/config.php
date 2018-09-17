@@ -1,5 +1,6 @@
 <?php
 
+$prev_tz = date_default_timezone_get();
 date_default_timezone_set('Europe/London');
 $CONFIG['CONFERENCE'] = array(
 	/**
@@ -254,5 +255,5 @@ $CONFIG['SCHEDULE'] = array(
 	'SIMULATE_OFFSET' => 0,
 );
 
-
+date_default_timezone_set($prev_tz);
 return $CONFIG;
