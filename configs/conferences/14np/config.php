@@ -144,7 +144,7 @@ $CONFIG['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'SLIDES' => true,
+		'SLIDES' => false,
                 'DASH' => true,
 
 		'AUDIO' => true,
@@ -168,7 +168,7 @@ $CONFIG['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'SLIDES' => true,
+		'SLIDES' => false,
                 'DASH' => true,
 
 		'AUDIO' => true,
