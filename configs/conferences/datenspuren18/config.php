@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
   'GROUPS' => array(
     'Lecture rooms' => array(
       'grosser-saal',
-      'kabinett',
+      'workshopraum',
     ),
   ),
 );
@@ -342,8 +342,8 @@ $CONFIG['ROOMS'] = array(
     //  'TEXT'    => '#fossgis2016',
     // ),
   ),
-  'kabinett' => array(
-    'DISPLAY' => 'Kabinett',
+  'workshopraum' => array(
+    'DISPLAY' => 'Workshopraum',
     'STREAM' => 's4',
     'PREVIEW' => true,
     'TRANSLATION' => false,
@@ -354,7 +354,7 @@ $CONFIG['ROOMS'] = array(
     'AUDIO' => true,
     'MUSIC' => false,
     'SCHEDULE' => true,
-    'SCHEDULE_NAME' => 'Kabinett',
+    'SCHEDULE_NAME' => 'Workshopraum',
     'FEEDBACK' => false,
     'SUBTITLES' => false,
     'EMBED' => true,
