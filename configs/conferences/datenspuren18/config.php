@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
    *
    * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
    */
-  'ENDS_AT' => strtotime("2017-10-23 18:30"),
+  'ENDS_AT' => strtotime("2018-09-23 18:30"),
 
   /**
    * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -174,7 +174,7 @@ $CONFIG['ROOMS'] = array(
      * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
      */
     'STEREO' => false,
-
+	'DASH' => true,
     /**
      * SD-Video-Stream (1024×576) verfügbar
      *
@@ -208,7 +208,7 @@ $CONFIG['ROOMS'] = array(
      * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
      * Default-Stream angenommen.
      */
-    'SLIDES' => false,
+    'SLIDES' => true,
 
     /**
      * Audio-Only-Stream verfügbar
@@ -349,8 +349,9 @@ $CONFIG['ROOMS'] = array(
     'TRANSLATION' => false,
     'STEREO' => false,
     'SD_VIDEO' => true,
-    'HD_VIDEO' => true,
-    'SLIDES' => false,
+	'HD_VIDEO' => true,
+	'DASH' => true,
+    'SLIDES' => true,
     'AUDIO' => true,
     'MUSIC' => false,
     'SCHEDULE' => true,
