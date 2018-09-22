@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
   'GROUPS' => array(
     'Lecture rooms' => array(
       'grosser-saal',
-      'workshopraum',
+#      'workshopraum',
     ),
   ),
 );
@@ -342,26 +342,26 @@ $CONFIG['ROOMS'] = array(
     //  'TEXT'    => '#fossgis2016',
     // ),
   ),
-  'workshopraum' => array(
-    'DISPLAY' => 'Workshopraum',
-    'STREAM' => 's4',
-    'PREVIEW' => true,
-    'TRANSLATION' => false,
-    'STEREO' => false,
-    'SD_VIDEO' => true,
-	'HD_VIDEO' => true,
-	'DASH' => true,
-    'SLIDES' => true,
-    'AUDIO' => true,
-    'MUSIC' => false,
-    'SCHEDULE' => true,
-    'SCHEDULE_NAME' => 'Workshopraum',
-    'FEEDBACK' => false,
-    'SUBTITLES' => false,
-    'EMBED' => true,
-    'IRC' => false,
-    'TWITTER' => true,
-  ),
+//  'workshopraum' => array(
+//    'DISPLAY' => 'Workshopraum',
+//    'STREAM' => 's4',
+//    'PREVIEW' => true,
+//    'TRANSLATION' => false,
+//    'STEREO' => false,
+//    'SD_VIDEO' => true,
+//	'HD_VIDEO' => true,
+//	'DASH' => true,
+//    'SLIDES' => true,
+//    'AUDIO' => true,
+//    'MUSIC' => false,
+//    'SCHEDULE' => true,
+//    'SCHEDULE_NAME' => 'Workshopraum',
+//    'FEEDBACK' => false,
+//    'SUBTITLES' => false,
+//    'EMBED' => true,
+//    'IRC' => false,
+//    'TWITTER' => true,
+//  ),
 );
 
 /**
@@ -391,7 +391,7 @@ $CONFIG['SCHEDULE'] = array(
   *
   * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
   */
-  'ROOMFILTER' => ['Großer Saal', 'Workshopraum'],
+  'ROOMFILTER' => ['Großer Saal'],
 
   /**
    * Skalierung der Programm-Vorschau in Sekunden pro Pixel
