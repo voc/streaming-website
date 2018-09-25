@@ -178,8 +178,8 @@ $CONFIG['ROOMS'] = array(
                 'SCHEDULE_NAME' => 'HE 101',
 
                 'FEEDBACK' => false,
-                'SUBTITLES' => false,
-,
+		'SUBTITLES' => false,
+	)
 );
 
 /**
