@@ -245,7 +245,7 @@ $CONFIG['ROOMS'] = array(
      * Name des Raums im Fahrplan
      * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
      */
-    'SCHEDULE_NAME' => 'Forum Factory Berlin',
+    'SCHEDULE_NAME' => 'FactoryForum',
 
     /**
      * Feedback anzeigen (boolean)
@@ -382,14 +382,14 @@ $CONFIG['SCHEDULE'] = array(
    * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
    * externer HTTP-Cache vorgeschaltet werden.
    */
-  //'URL' => '',
+  'URL' => 'https://datenschutzgrundversorgung.at/pwb18/schedule.xml',
 
   /**
   * Nur die angegebenen Räume aus dem Fahrplan beachten
   *
   * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
   */
-  'ROOMFILTER' => ['Forum Factory Berlin'],
+  'ROOMFILTER' => ['FactoryForum'],
 
   /**
    * Skalierung der Programm-Vorschau in Sekunden pro Pixel
