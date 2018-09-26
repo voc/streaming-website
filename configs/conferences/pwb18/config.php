@@ -206,7 +206,7 @@ $CONFIG['ROOMS'] = array(
      * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
      * Default-Stream angenommen.
      */
-    'SLIDES' => true,
+    'SLIDES' => false,
 
     /**
      * Audio-Only-Stream verfügbar
