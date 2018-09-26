@@ -208,7 +208,7 @@ $CONFIG['SCHEDULE'] = array(
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('HE 101', 'MA 101'),
+        'ROOMFILTER' => array('HE 101', 'MA 001'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
