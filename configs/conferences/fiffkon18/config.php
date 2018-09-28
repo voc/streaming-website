@@ -136,7 +136,7 @@ $CONFIG['ROOMS'] = array(
 	 */
 	'Saal4' => array(
                 'DISPLAY' => 'MA 001',
-                'STREAM' => 's5',
+                'STREAM' => 's4',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
                 'STEREO' => false,
@@ -160,7 +160,7 @@ $CONFIG['ROOMS'] = array(
         ),
         'Saal5' => array(
                 'DISPLAY' => 'HE 101',
-                'STREAM' => 's4',
+                'STREAM' => 's5',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
                 'STEREO' => false,
