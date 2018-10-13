@@ -148,7 +148,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'q1',
+		'STREAM' => 's23',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -398,7 +398,7 @@ $CONFIG['EMBED'] = true;
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-//$CONFIG['SCHEDULE'] = array(
+$CONFIG['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
