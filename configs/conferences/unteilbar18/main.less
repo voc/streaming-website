@@ -1,14 +1,5 @@
 @import "../../../assets/css/_structure.less";
 
-@green: #2f5361;
-
-@brand-primary:  darken(@green, 20%);
-
-@link-color:            #02a892;
-@panel-primary-border:  white;
-
-@text-color: white;
-
 @font-face {
   font-family: 'Source Sans Pro Light';
   font-style: normal;
@@ -22,35 +13,20 @@
        url('SourceSansPro-Light.svg#SourceSansPro-Light') format('svg'); /* Legacy iOS */
 }
 
-body {
-	background-color: @green;
-}
-
-footer {
-	background-color: white;
-
-	color: @link-color;
-	a {
-		color: @link-color;
-		&:hover {
-			text-decoration: underline;
-			color: @link-color;
-		}
-	}
-}
 
 body {
 	padding-bottom: 170px + 30px + 30px + 60px;
 	position: relative;
 }
 
-.logo {
-	background: url('logo.svg') no-repeat center;
-	height: 170px;
-	position: absolute;
-	bottom: 30px + 25px;
-	z-index: -100;
+//.logo {
+//	background: url('logo.svg') no-repeat center;
+//	height: 170px;
+//	position: absolute;
+//	bottom: 30px + 25px;
+//	z-index: -100;
+//
+//	left: 0;
+//	right: 0;
+//}
 
-	left: 0;
-	right: 0;
-}
