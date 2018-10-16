@@ -1,4 +1,4 @@
-	<?php
+<?php
 
 	$CONFIG['CONFERENCE'] = array(
 		/**
@@ -241,13 +241,12 @@
 			 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 			 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 			 */
-			'SCHEDULE' => "https://live.ber.c3voc.de/releases/schedules/schedule-jh18-berlin.xml",
-
+			'SCHEDULE' => true,
 			/**
 			 * Name des Raums im Fahrplan
 			 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 			 */
-			'SCHEDULE_NAME' => 'room1',
+			'SCHEDULE_NAME' => 'buehne1',
 
 			/**
 			 * Feedback anzeigen (boolean)
@@ -356,37 +355,37 @@
 	// * Konfigurationen zum Konferenz-Fahrplan
 	// * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
 	// */
-	//$CONFIG['SCHEDULE'] = array(
-//	/**
-//	 * URL zum Fahrplan-XML
-//	 *
-//	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
-//	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
-//	 * externer HTTP-Cache vorgeschaltet werden.
-//	 */
-//	'URL' => 'configs/conferences/jh-koeln-2018/schedule.xml',
-//
-//        /**
-//         * Nur die angegebenen Räume aus dem Fahrplan beachten
-//         *
-//         * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-//         */
-//        'ROOMFILTER' => array('S1'),
-//
-//	/**
-//	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-//	 */
-//	'SCALE' => 7,
-//
-//	/**
-//	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-//	 *
-//	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-//	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
-//	 */
-//	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-05-21') - strtotime(/* Today */ '2018-05-19'),
-//	'SIMULATE_OFFSET' => 0,
-//);
+	$CONFIG['SCHEDULE'] = array(
+	/**
+	 * URL zum Fahrplan-XML
+	 *
+	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
+	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
+	 * externer HTTP-Cache vorgeschaltet werden.
+	 */
+	'URL' => 'https://live.ber.c3voc.de/releases/schedules/schedule-jh18-berlin.xml', 
+
+        /**
+         * Nur die angegebenen Räume aus dem Fahrplan beachten
+         *
+         * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+         */
+        //'ROOMFILTER' => array('buehne1'),
+
+	/**
+	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
+	 */
+	'SCALE' => 7,
+
+	/**
+	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
+	 *
+	 * Diese folgende Beispiel-Zeile Simuliert, dass das
+	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
+	 */
+	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-05-21') - strtotime(/* Today */ '2018-05-19'),
+	//'SIMULATE_OFFSET' => 0,
+);
 
 
 return $CONFIG;
