@@ -119,7 +119,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Conference Venue',
+			'ConferenceVenue',
 		),
 	),
 );
@@ -134,7 +134,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Conference Venue' => array(
+	'ConferenceVenue' => array(
 		/**
 		 * Angezeige-Name
 		 */
