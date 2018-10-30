@@ -10,5 +10,9 @@
 	data-sprites-cols="<?= h($talk['sprites']['cols']) ?>"
 	data-sprites-interval="<?= h($talk['sprites']['interval']) ?>"
 	<? endif ?>
+	<? if(array_key_exists('timelens', $talk)): ?>
+	data-timelens-timeline="<?= h($talk['timelens']['timeline']) ?>"
+	data-timelens-thumbs="<?= h($talk['timelens']['thumbs']) ?>"
+	<? endif ?>
 >
 </div>

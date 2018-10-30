@@ -34,9 +34,17 @@ $(function() {
 
 	var $relivePlayer = $('body.relive-player .video-wrap');
 	if($relivePlayer.length > 0) {
+		var plugins = [PlaybackRatePlugin];
 		var sprites = [];
 
-		if($relivePlayer.data("sprites")) {
+		if ($relivePlayer.data("timelens-timeline")) {
+			plugins.push(TimelensPlugin);
+
+			// the timelens CSS always causes an extra bar to be drawn even if we're not using it. Hotfix:
+			$('head').append('<link type="text/css" rel="stylesheet" href="assets/clapprio/timelens.css" />');
+		} else if($relivePlayer.data("sprites")) {
+			plugins.push(ClapprThumbnailsPlugin);
+
 			sprites = ClapprThumbnailsPlugin.buildSpriteConfig(
 				$relivePlayer.data("sprites"),
 				$relivePlayer.data("sprites-n"),
@@ -49,7 +57,7 @@ $(function() {
 		var player = new Clappr.Player({
 			baseUrl: 'assets/clapprio/',
 			plugins: {
-				core: [ClapprThumbnailsPlugin, PlaybackRatePlugin]
+				core: plugins
 			},
 
 			source: $relivePlayer.data('m3u8'),
@@ -60,6 +68,10 @@ $(function() {
 				backdropHeight: 64,
 				spotlightHeight: 84,
 				thumbs: sprites
+			},
+			timelens: {
+				timeline: $relivePlayer.data("timelens-timeline"),
+				thumbnails: $relivePlayer.data("timelens-thumbs")
 			},
 			events: {
 				onReady: function() {
