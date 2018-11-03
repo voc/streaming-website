@@ -10,7 +10,7 @@ if(count($upcoming_crs) < 1)
 {
 	$EPISODE = '???';
 	$DATE = strtotime('1970-01-01 22:00');
-	$TITLE = 'Unknown';
+	$TITLE = 'Chaosradio';
 	$IM_CCCB = true;
 }
 else
