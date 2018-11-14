@@ -283,7 +283,7 @@ $CONFIG['SCHEDULE'] = array(
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('ADA', 'BASH', 'CLOSURE', 'DELPHIE', 'EMACS'),
+        'ROOMFILTER' => array('ADA', 'BASH', 'CLOJURE', 'DELPHI', 'EMACS'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
