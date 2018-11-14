@@ -118,11 +118,11 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Saal1',
-			'Saal2',
-			'Saal3',
-			'Saal4',
-			'Saal5'
+			'ADA',
+			'BASH',
+			'DELPHIE',
+			'CLOJURE',
+			'EMACS'
 		),
 	),
 );
@@ -137,11 +137,11 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Saal1' => array(
-                'DISPLAY' => 'MA 001',
+	'ADA' => array(
+                'DISPLAY' => 'ADA',
                 'STREAM' => 's1',
                 'PREVIEW' => true,
-                'TRANSLATION' => false,
+                'TRANSLATION' => true,
                 'STEREO' => false,
 
                 'SD_VIDEO' => true,
@@ -153,7 +153,7 @@ $CONFIG['ROOMS'] = array(
                 'MUSIC' => false,
 
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'MA 001',
+                'SCHEDULE_NAME' => 'ADA',
 
                 'FEEDBACK' => false,
                 'SUBTITLES' => false,
@@ -161,8 +161,8 @@ $CONFIG['ROOMS'] = array(
                 'EMBED' => true,
                 'IRC' => false,
 	),
-        'Saal2' => array(
-		'DISPLAY' => 'MA 001',
+        'BASH' => array(
+		'DISPLAY' => 'BASH',
                 'STREAM' => 's2',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
@@ -177,7 +177,7 @@ $CONFIG['ROOMS'] = array(
                 'MUSIC' => false,
 
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'MA 001',
+                'SCHEDULE_NAME' => 'BASH',
 
                 'FEEDBACK' => false,
                 'SUBTITLES' => false,
@@ -185,8 +185,8 @@ $CONFIG['ROOMS'] = array(
                 'EMBED' => true,
                 'IRC' => false,
         ),
-        'Saal3' => array(
-                'DISPLAY' => 'MA 001',
+        'CLOJURE' => array(
+                'DISPLAY' => 'CLOJURE',
                 'STREAM' => 's3',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
@@ -201,7 +201,7 @@ $CONFIG['ROOMS'] = array(
                 'MUSIC' => false,
 
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'MA 001',
+                'SCHEDULE_NAME' => 'CLOJURE',
 
                 'FEEDBACK' => false,
                 'SUBTITLES' => false,
@@ -209,8 +209,8 @@ $CONFIG['ROOMS'] = array(
                 'EMBED' => true,
                 'IRC' => false,
         ),
-        'Saal4' => array(
-                'DISPLAY' => 'MA 001',
+        'DELPHIE' => array(
+                'DISPLAY' => 'DELPHIE',
                 'STREAM' => 's4',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
@@ -225,7 +225,7 @@ $CONFIG['ROOMS'] = array(
                 'MUSIC' => false,
 
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'MA 001',
+                'SCHEDULE_NAME' => 'DELPHIE',
 
                 'FEEDBACK' => false,
                 'SUBTITLES' => false,
@@ -233,8 +233,8 @@ $CONFIG['ROOMS'] = array(
                 'EMBED' => true,
                 'IRC' => false,
         ),
-        'Saal5' => array(
-                'DISPLAY' => 'HE 101',
+        'EMACS' => array(
+                'DISPLAY' => 'EMACS',
                 'STREAM' => 's5',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
@@ -249,7 +249,7 @@ $CONFIG['ROOMS'] = array(
                 'MUSIC' => false,
 
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'HE 101',
+                'SCHEDULE_NAME' => 'EMACS',
 
                 'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -283,7 +283,7 @@ $CONFIG['SCHEDULE'] = array(
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('HE 101', 'MA 001'),
+        'ROOMFILTER' => array('ADA', 'BASH', 'CLOSURE', 'DELPHIE', 'EMACS'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
