@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 		'Lecture Rooms' => array(
 			'ADA',
 			'BASH',
-			'DELPHIE',
+			'DELPHI',
 			'CLOJURE',
 			'EMACS'
 		),
@@ -209,8 +209,8 @@ $CONFIG['ROOMS'] = array(
                 'EMBED' => true,
                 'IRC' => false,
         ),
-        'DELPHIE' => array(
-                'DISPLAY' => 'DELPHIE',
+        'DELPHI' => array(
+                'DISPLAY' => 'DELPHI',
                 'STREAM' => 's4',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
@@ -225,7 +225,7 @@ $CONFIG['ROOMS'] = array(
                 'MUSIC' => false,
 
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'DELPHIE',
+                'SCHEDULE_NAME' => 'DELPHI',
 
                 'FEEDBACK' => false,
                 'SUBTITLES' => false,
