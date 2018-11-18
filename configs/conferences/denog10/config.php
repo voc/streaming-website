@@ -76,7 +76,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	/** 'BANNER_HTML' => '<img src="../configs/conferences/fiffkon16/logo.png" class="FIfFKon">', **/
-	    'BANNER_HTML' => '<div class="denog10"></div>',
+	    'BANNER_HTML' => '<div class="outer-div"><div class="denog10"></div></div>',
 
 	/**
 	 * Link zu den Recordings

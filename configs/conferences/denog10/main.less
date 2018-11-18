@@ -1,9 +1,10 @@
 @import "../../../assets/css/_structure.less";
 
-@hgelb: #ffc800;
+@gelb: #f9cd00;
 @grey-lighter: #333333;
 @grey-darker: #2a2a2a;
 @grey-light: #c1c1c1;
+@dark: #292a2d;
 
 @brand-primary: @gelb;
 @well-bg: @grey-lighter;
@@ -14,7 +15,7 @@
 @panel-bg: @grey-lighter;
 
 body {
-	background-color: @grey-darker;
+	background-color: @dark;
 	color: @grey-light;
 }
 
@@ -27,19 +28,23 @@ nav .navbar-brand .icon {
 	background-size: contain;
 }
 
+.outer-div {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+}
+
 .denog10 {
 	background-image: url(denog-logo-konferenz-10_v001_yellow_white.png);
 	background-repeat: no-repeat;
-	background-size: 300px 212px;
+	background-size: 500px 354px;
 
-	position: fixed;
-	left: 10px;
-	bottom: 40px;
+	margin: 0 auto;
 
-	width: 300px;
-	height: 212	px;
+	width: 500px;
+	height: 354px;
 
-	opacity: 0.4;
+	opacity: 1;
 	z-index: -100;
 
 	@media (max-width: @screen-sm-min) {
