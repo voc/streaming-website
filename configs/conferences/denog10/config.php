@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://www.denog.de/de/meetings/denog10/denog10.html">DENOG 10</a>
+		by <a href="https://www.denog.de">DENOG e.V</a>
 	',
 
 	/**
