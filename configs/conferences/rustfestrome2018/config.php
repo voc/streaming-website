@@ -146,14 +146,14 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's3',
+		'STREAM' => 's6',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
 		 * Damit das funktioniert muss der entsprechende runit-Task auf dem
 		 * CDN-Quell-Host (live.ber) laufen.
 		 */
-		'PREVIEW' => false,
+		'PREVIEW' => true,
 
 		/**
 		 * Übersetzungstonspur aktivieren
