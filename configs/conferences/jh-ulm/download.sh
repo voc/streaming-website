@@ -1,8 +1,9 @@
 #!/bin/sh
 
 # fahrplan
-wget --no-check-certificate -q "http://data.c3voc.de/jh17/schedule-jh17-ulm.xml" -O /tmp/jh17-ulm-schedule.xml && mv /tmp/jh17-ulm-schedule.xml schedule.xml
+wget --no-check-certificate -q "https://jh.kohl.okfn.de/schedule-jh.xml" -O /tmp/jh18-ulm-schedule.xml && mv /tmp/jh18-ulm-schedule.xml schedule.xml
 
 # relive
-wget -q "http://live.dus.c3voc.de/relive/jh-ulm-2017/index.json" -O /tmp/vod.json && mv /tmp/vod.json vod.json
+wget -q "//live.ber.c3voc.de/relive/jh/index.json" -O /tmp/vod.json && mv /tmp/vod.json vod.json
 rm -f /tmp/vod.json
+rm -f /tmp/jh18-ulm-schedule.xml

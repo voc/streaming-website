@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2017-09-31 15:00"),
+	'ENDS_AT' => strtotime("2018-11-25 15:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,14 +33,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Jugend hackt Ulm 2017',
+	'TITLE' => 'Jugend hackt Ulm 2018',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'Jugend hackt 2017',
+	'AUTHOR' => 'Jugend hackt 2018',
 
 	/**
 	 * Beschreibungstext
@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="http://jugendhackt.de/">Jugend hackt 2017</a> &amp;
+		by <a href="http://jugendhackt.de/">Jugend hackt 2018</a> &amp;
 		<a href="https://c3voc.de">C3VOC</a>
 	',
 
@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/b/events/jugendhackt/2017',
+	'RELEASES' => 'https://media.ccc.de/b/events/jugendhackt/2018',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/jh-ulm-2017/vod.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/jh/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'HdG',
+			'Salon',
 		),
 	),
 );
@@ -135,18 +135,18 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'HdG' => array(
+	'Salon' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Haus der Gewerkschaften',
+		'DISPLAY' => 'Salon',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's7',
+		'STREAM' => 's80',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -198,6 +198,8 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'HD_VIDEO' => true,
 
+        'DASH' => true,
+
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
 		 *
@@ -246,7 +248,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'HdG',
+		'SCHEDULE_NAME' => 'Salon',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -363,14 +365,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/jh-ulm-2017/schedule.xml',
+	'URL' => 'https://jh.kohl.okfn.de/schedule-jh.xml',
 
         /**
          * Nur die angegebenen Räume aus dem Fahrplan beachten
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('HdG'),
+        'ROOMFILTER' => array('Salon'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
