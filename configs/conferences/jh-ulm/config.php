@@ -365,7 +365,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://jh.kohl.okfn.de/schedule-jh.xml',
+	'URL' => 'https://jh.kohl.okfn.de/schedule-jh-recording.xml',
 
         /**
          * Nur die angegebenen Räume aus dem Fahrplan beachten
