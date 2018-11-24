@@ -81,7 +81,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELEASES' => 'https://media.ccc.de/c/osc18',
+	'RELEASES' => 'https://media.ccc.de/c/rustfest18rome',
 	//'RELEASES' => 'https://www.youtube.com/playlist?list=PL_AMhvchzBaeIQntCDiVNUUgmRaAzam1V',
 
 	/**
