@@ -92,7 +92,6 @@ try {
 		));
 	}
 
-
 	// GLOBAL ROUTES
 	if($route == 'gen/main.css')
 	{
