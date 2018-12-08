@@ -1,0 +1,36 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+@color-blue:		#0084B0;	// fresh
+@color-green:   #00A356;  // hope
+@color-grey:		#4D4D4C;	// reboot
+
+@color-dark-grey:     darken(@color-grey, 20%);
+@color-light-grey:    lighten(@color-grey, 30%);
+@color-lighter-grey:  lighten(@color-grey, 40%);
+
+// often configured values (and their defaults):
+@brand-primary:         @color-blue;
+@text-color:            @color-grey;
+
+@link-color:            @color-blue;
+@link-hover-color:      @color-green;
+
+@navbar-height:         70px;
+
+// TODO darf nicht angegeben sein sonst wird style ignoriert, wtf
+//@navbar-default-bg:     transparent;
+//@navbar-default-border: transparent;
+
+@navbar-default-link-color:       white;
+@navbar-default-link-hover-color: @link-hover-color;
+
+body {
+	background-color: black;
+	padding: @navbar-height 0
+}
+
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: sans-serif;
+}
+
