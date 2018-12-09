@@ -151,7 +151,7 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Saal A',
+		'DISPLAY' => 'Adams',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -281,7 +281,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Display-Name verwendet
 		 */
-		'SCHEDULE_NAME' => 'Saal A',
+		'SCHEDULE_NAME' => 'Adams',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -386,7 +386,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'hallb' => array(
-		'DISPLAY' => 'Saal B',
+		'DISPLAY' => 'Borg',
 		'STREAM' => 'sX',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -401,7 +401,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal B',
+		'SCHEDULE_NAME' => 'Borg',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
@@ -419,7 +419,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'hallc' => array(
-		'DISPLAY' => 'Saal C',
+		'DISPLAY' => 'Clarke',
 		# Joan Clarke
 		'STREAM' => 'sX',
 		'PREVIEW' => true,
@@ -435,7 +435,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal C',
+		'SCHEDULE_NAME' => 'Clarke',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
@@ -453,7 +453,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'halld' => array(
-		'DISPLAY' => 'Saal D',
+		'DISPLAY' => 'Dijkstra',
 		'STREAM' => 'sX',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -468,7 +468,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal E',
+		'SCHEDULE_NAME' => 'Dijkstra',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
@@ -486,7 +486,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'halle' => array(
-		'DISPLAY' => 'Saal E',
+		'DISPLAY' => 'Eliza',
 		'STREAM' => 'sX',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -501,7 +501,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal E',
+		'SCHEDULE_NAME' => 'Eliza',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
@@ -535,16 +535,15 @@ $CONFIG['SCHEDULE'] = array(
 	 * Cronjob regelmäßig getriggert wird.
 	 */
 	'URL' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xml',
-	#'URL' => 'https://events.ccc.de/congress/2017/Fahrplan/schedule.xml',
-	#'URL' => 'http://data.c3voc.de/35C3/everything.schedule.xml', # TODO check
+	#'URL' => 'https://events.ccc.de/congress/2018/Fahrplan/schedule.xml',
+	#'URL' => 'http://data.c3voc.de/35C3/everything.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-# TODO check, Namen ermitteln
-#	'ROOMFILTER' => array('Saal A', 'Saal B', 'Saal C', 'Saal D', 'Saal E'),
+	#	'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
@@ -686,10 +685,10 @@ $CONFIG['TWITTER'] = array(
  * unter dem angegebenen Dateinamen in diesem Konfigurationsordner abgelegt.
  */
 $CONFIG['EXTRA_FILES'] = array(
-	'schedule.xml'  => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xml',
-	'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.json',
-	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.ics',
-	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.xcal',
+	'schedule.xml'  => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xml',
+	'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.json',
+	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.ics',
+	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xcal',
 
 # TODO CHECK
 	'everything.schedule.xml' => 'http://data.c3voc.de/35C3/everything.schedule.xml',
