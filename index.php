@@ -341,4 +341,5 @@ catch(Exception $e)
 {
 	ob_clean();
 	require('view/500.php');
+	error_log("Caught: $e");
 }
