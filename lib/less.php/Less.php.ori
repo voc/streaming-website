@@ -2,23 +2,6 @@
 
 require_once( dirname(__FILE__).'/Cache.php');
 
-/* Added by dedeibel for php compatiblity.
- * TODO open PR for the project – but is seems pretty dead
- * https://github.com/oyejorge/less.php
- */
-function count_if_countable($subject) {
-		if( !$subject ) {
-			return 0;
-		}
-		else if( is_array($subject) || ($subject instanceof \Countable) ) {
-			return count($subject);
-		}
-		else {
-			# newer php version compatibility
-			return 1;
-		}
-}
-
 /**
  * Class for parsing and compiling less files into css
  *
@@ -104,7 +87,7 @@ class Less_Parser{
 		// mbstring.func_overload > 1 bugfix
 		// The encoding value must be set for each source file,
 		// therefore, to conserve resources and improve the speed of this design is taken here
-		if (ini_get('mbstring.func_overload')) {
+		if (ini_get('mbstring.func_overload')) {			
 			$this->mb_internal_encoding = ini_get('mbstring.internal_encoding');
 			@ini_set('mbstring.internal_encoding', 'ascii');
 		}
@@ -237,7 +220,7 @@ class Less_Parser{
 		@ini_set('precision',$precision);
 		setlocale(LC_NUMERIC, $locale);
 
-		// If you previously defined $this->mb_internal_encoding
+		// If you previously defined $this->mb_internal_encoding 
 		// is required to return the encoding as it was before
 		if ($this->mb_internal_encoding != '') {
 			@ini_set("mbstring.internal_encoding", $this->mb_internal_encoding);
@@ -299,7 +282,7 @@ class Less_Parser{
 		}
 
 
-		for($i = 0; $i < count_if_countable($visitors); $i++ ){
+		for($i = 0; $i < count($visitors); $i++ ){
 			$visitors[$i]->run($evaldRoot);
 		}
 
@@ -705,7 +688,7 @@ class Less_Parser{
 				$match = $this->MatchReg($tok);
 
 				if( $match ){
-					return count_if_countable($match) === 1 ? $match[0] : $match;
+					return count($match) === 1 ? $match[0] : $match;
 				}
 
 			}elseif( $char === '#' ){
@@ -1409,7 +1392,7 @@ class Less_Parser{
 
 			if( $isCall ){
 				// Variable
-				if( property_exists($arg,'value') && count_if_countable($arg->value) == 1 ){
+				if( property_exists($arg,'value') && count($arg->value) == 1 ){
 					$val = $arg->value[0];
 				}
 			} else {
@@ -1484,7 +1467,7 @@ class Less_Parser{
 
 				$isSemiColonSeperated = true;
 
-				if( count_if_countable($expressions) > 1 ){
+				if( count($expressions) > 1 ){
 					$value = $this->NewObj1('Less_Tree_Value', $expressions);
 				}
 				$argsSemiColon[] = array('name'=>$name, 'value'=>$value );
@@ -1811,7 +1794,7 @@ class Less_Parser{
 			$selectors[] = $s;
 			$this->parseComments();
 
-			if( $s->condition && count_if_countable($selectors) > 1 ){
+			if( $s->condition && count($selectors) > 1 ){
 				$this->Error('Guards are only currently allowed on a single selector.');
 			}
 
@@ -2449,7 +2432,7 @@ class Less_Parser{
 		$this->rulePropertyMatch('/\\G(\*?)/', $offset, $length, $index, $name );
 		while( $this->rulePropertyMatch('/\\G((?:[\w-]+)|(?:@\{[\w-]+\}))/', $offset, $length, $index, $name )); // !
 
-		if( (count_if_countable($name) > 1) && $this->rulePropertyMatch('/\\G\s*((?:\+_|\+)?)\s*:/', $offset, $length, $index, $name) ){
+		if( (count($name) > 1) && $this->rulePropertyMatch('/\\G\s*((?:\+_|\+)?)\s*:/', $offset, $length, $index, $name) ){
 			// at last, we have the complete match now. move forward,
 			// convert name particles to tree objects and return:
 			$this->skipWhitespace($length);
@@ -2642,7 +2625,7 @@ class Less_Parser{
 }
 
 
-
+ 
 
 /**
  * Utility for css colors
@@ -2812,7 +2795,7 @@ class Less_Colors {
 	}
 
 }
-
+ 
 
 
 /**
@@ -2978,7 +2961,7 @@ class Less_Environment{
 	}
 
 }
-
+ 
 
 /**
  * Builtin functions
@@ -3621,7 +3604,7 @@ class Less_Functions{
 	 */
 	private function _minmax( $isMin, $args ){
 
-		$arg_count = count_if_countable($args);
+		$arg_count = count($args);
 
 		if( $arg_count < 1 ){
 			throw new Less_Exception_Compiler( 'one or more arguments required');
@@ -3676,7 +3659,7 @@ class Less_Functions{
 				if( $unitStatic && $unit !== $unitStatic ){
 					throw new Less_Exception_Compiler( 'incompatible types');
 				}
-				$values[$unit] = count_if_countable($order);
+				$values[$unit] = count($order);
 				$order[] = $current;
 				continue;
 			}
@@ -3693,7 +3676,7 @@ class Less_Functions{
 			}
 		}
 
-		if( count_if_countable($order) == 1 ){
+		if( count($order) == 1 ){
 			return $order[0];
 		}
 		$args = array();
@@ -3819,7 +3802,7 @@ class Less_Functions{
 	}
 
 	public function length($values){
-		$n = (property_exists($values,'value') && is_array($values->value)) ? count_if_countable($values->value) : 1;
+		$n = (property_exists($values,'value') && is_array($values->value)) ? count($values->value) : 1;
 		return new Less_Tree_Dimension($n);
 	}
 
@@ -3904,7 +3887,7 @@ class Less_Functions{
 		$throw_message = 'svg-gradient expects direction, start_color [start_position], [color position,]..., end_color [end_position]';
 		$arguments = func_get_args();
 
-		if( count_if_countable($arguments) < 3 ){
+		if( count($arguments) < 3 ){
 			throw new Less_Exception_Compiler( $throw_message );
 		}
 
@@ -3942,7 +3925,7 @@ class Less_Functions{
 			'<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">' .
 			'<' . $gradientType . 'Gradient id="gradient" gradientUnits="userSpaceOnUse" ' . $gradientDirectionSvg . '>';
 
-		for( $i = 0; $i < count_if_countable($stops); $i++ ){
+		for( $i = 0; $i < count($stops); $i++ ){
 			if( is_object($stops[$i]) && property_exists($stops[$i],'value') ){
 				$color = $stops[$i]->value[0];
 				$position = $stops[$i]->value[1];
@@ -3951,7 +3934,7 @@ class Less_Functions{
 				$position = null;
 			}
 
-			if( !($color instanceof Less_Tree_Color) || (!(($i === 0 || $i+1 === count_if_countable($stops)) && $position === null) && !($position instanceof Less_Tree_Dimension)) ){
+			if( !($color instanceof Less_Tree_Color) || (!(($i === 0 || $i+1 === count($stops)) && $position === null) && !($position instanceof Less_Tree_Dimension)) ){
 				throw new Less_Exception_Compiler( $throw_message );
 			}
 			if( $position ){
@@ -4161,7 +4144,7 @@ class Less_Functions{
 	// ~ End of Color Blending
 
 }
-
+ 
 
 /**
  * Mime lookup
@@ -4202,7 +4185,7 @@ class Less_Mime{
 		return $type && preg_match('/^text\//',$type) ? 'UTF-8' : '';
 	}
 }
-
+ 
 
 /**
  * Tree
@@ -4235,7 +4218,7 @@ class Less_Tree{
 	 */
 	public static function outputRuleset( $output, $rules ){
 
-		$ruleCnt = count_if_countable($rules);
+		$ruleCnt = count($rules);
 		Less_Environment::$tabLevel++;
 
 
@@ -4291,7 +4274,7 @@ class Less_Tree{
 		return $obj;
 	}
 
-}
+} 
 
 /**
  * Parser output
@@ -4326,7 +4309,7 @@ class Less_Output{
 	 * @return boolean
 	 */
 	public function isEmpty(){
-		return count_if_countable($this->strs) === 0;
+		return count($this->strs) === 0;
 	}
 
 
@@ -4339,7 +4322,7 @@ class Less_Output{
 		return implode('',$this->strs);
 	}
 
-}
+} 
 
 /**
  * Visitor
@@ -4388,7 +4371,7 @@ class Less_Visitor{
 	}
 }
 
-
+ 
 
 /**
  * Replacing Visitor
@@ -4531,7 +4514,7 @@ abstract class Less_Configurable {
 		$this->options[$name] = $value;
 	}
 
-}
+} 
 
 /**
  * Alpha
@@ -4581,7 +4564,7 @@ class Less_Tree_Alpha extends Less_Tree{
 	}
 
 
-}
+} 
 
 /**
  * Anonymous
@@ -4639,7 +4622,7 @@ class Less_Tree_Anonymous extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Assignment
@@ -4678,7 +4661,7 @@ class Less_Tree_Assignment extends Less_Tree{
 		return $this->key . '=' . $this->value->toCSS();
 	}
 }
-
+ 
 
 /**
  * Attribute
@@ -4731,7 +4714,7 @@ class Less_Tree_Attribute extends Less_Tree{
 
 		return '[' . $value . ']';
 	}
-}
+} 
 
 
 /**
@@ -4835,7 +4818,7 @@ class Less_Tree_Call extends Less_Tree{
 	public function genCSS( $output ){
 
 		$output->add( $this->name . '(', $this->currentFileInfo, $this->index );
-		$args_len = count_if_countable($this->args);
+		$args_len = count($this->args);
 		for($i = 0; $i < $args_len; $i++ ){
 			$this->args[$i]->genCSS( $output );
 			if( $i + 1 < $args_len ){
@@ -4852,7 +4835,7 @@ class Less_Tree_Call extends Less_Tree{
     //}
 
 }
-
+ 
 
 /**
  * Color
@@ -5082,7 +5065,7 @@ class Less_Tree_Color extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Comment
@@ -5133,7 +5116,7 @@ class Less_Tree_Comment extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Condition
@@ -5205,7 +5188,7 @@ class Less_Tree_Condition extends Less_Tree{
     }
 
 }
-
+ 
 
 /**
  * DefaultFunc
@@ -5238,7 +5221,7 @@ class Less_Tree_DefaultFunc{
     public static function reset(){
 		self::$value_ = self::$error_ = null;
 	}
-}
+} 
 
 /**
  * DetachedRuleset
@@ -5278,7 +5261,7 @@ class Less_Tree_DetachedRuleset extends Less_Tree{
 	}
 }
 
-
+ 
 
 /**
  * Dimension
@@ -5479,7 +5462,7 @@ class Less_Tree_Dimension extends Less_Tree{
 		return new Less_Tree_Dimension( $value, $unit);
     }
 }
-
+ 
 
 /**
  * Directive
@@ -5579,7 +5562,7 @@ class Less_Tree_Directive extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Element
@@ -5654,7 +5637,7 @@ class Less_Tree_Element extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Expression
@@ -5689,7 +5672,7 @@ class Less_Tree_Expression extends Less_Tree{
 		$returnValue = null;
 		if( $this->value ){
 
-			$count = count_if_countable($this->value);
+			$count = count($this->value);
 
 			if( $count > 1 ){
 
@@ -5728,7 +5711,7 @@ class Less_Tree_Expression extends Less_Tree{
      * @see Less_Tree::genCSS
      */
     public function genCSS( $output ){
-		$val_len = count_if_countable($this->value);
+		$val_len = count($this->value);
 		for( $i = 0; $i < $val_len; $i++ ){
 			$this->value[$i]->genCSS( $output );
 			if( $i + 1 < $val_len ){
@@ -5751,7 +5734,7 @@ class Less_Tree_Expression extends Less_Tree{
 		}
 	}
 }
-
+ 
 
 /**
  * Extend
@@ -5814,7 +5797,7 @@ class Less_Tree_Extend extends Less_Tree{
 		$selfElements = array();
 
 
-		for( $i = 0, $selectors_len = count_if_countable($selectors); $i < $selectors_len; $i++ ){
+		for( $i = 0, $selectors_len = count($selectors); $i < $selectors_len; $i++ ){
 			$selectorElements = $selectors[$i]->elements;
 			// duplicate the logic in genCSS function inside the selector node.
 			// future TODO - move both logics into the selector joiner visitor
@@ -5827,7 +5810,7 @@ class Less_Tree_Extend extends Less_Tree{
 		$this->selfSelectors = array(new Less_Tree_Selector($selfElements));
 	}
 
-}
+} 
 
 /**
  * CSS @import node
@@ -6134,7 +6117,7 @@ class Less_Tree_Import extends Less_Tree{
 	}
 }
 
-
+ 
 
 /**
  * Javascript
@@ -6164,7 +6147,7 @@ class Less_Tree_Javascript extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Keyword
@@ -6208,7 +6191,7 @@ class Less_Tree_Keyword extends Less_Tree{
 		}
 	}
 }
-
+ 
 
 /**
  * Media
@@ -6307,7 +6290,7 @@ class Less_Tree_Media extends Less_Tree{
 	public function compileTop($env) {
 		$result = $this;
 
-		if (count_if_countable($env->mediaBlocks) > 1) {
+		if (count($env->mediaBlocks) > 1) {
 			$selectors = $this->emptySelectors();
 			$result = new Less_Tree_Ruleset($selectors, $env->mediaBlocks);
 			$result->multiMedia = true;
@@ -6340,11 +6323,11 @@ class Less_Tree_Media extends Less_Tree{
 		$expressions = array();
 		foreach($permuted as $path){
 
-			for( $i=0, $len=count_if_countable($path); $i < $len; $i++){
+			for( $i=0, $len=count($path); $i < $len; $i++){
 				$path[$i] = Less_Parser::is_method($path[$i], 'toCSS') ? $path[$i] : new Less_Tree_Anonymous($path[$i]);
 			}
 
-			for( $i = count_if_countable($path) - 1; $i > 0; $i-- ){
+			for( $i = count($path) - 1; $i > 0; $i-- ){
 				array_splice($path, $i, 0, array(new Less_Tree_Anonymous('and')));
 			}
 
@@ -6362,7 +6345,7 @@ class Less_Tree_Media extends Less_Tree{
 		if (!$arr)
 			return array();
 
-		if (count_if_countable($arr) == 1)
+		if (count($arr) == 1)
 			return $arr[0];
 
 		$result = array();
@@ -6387,7 +6370,7 @@ class Less_Tree_Media extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * A simple css name-value pair
@@ -6428,7 +6411,7 @@ class Less_Tree_NameValue extends Less_Tree{
 		return $this;
 	}
 }
-
+ 
 
 /**
  * Negative
@@ -6464,7 +6447,7 @@ class Less_Tree_Negative extends Less_Tree{
 		}
 		return new Less_Tree_Negative( $this->value->compile($env) );
 	}
-}
+} 
 
 /**
  * Operation
@@ -6534,7 +6517,7 @@ class Less_Tree_Operation extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Paren
@@ -6569,7 +6552,7 @@ class Less_Tree_Paren extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Quoted
@@ -6650,7 +6633,7 @@ class Less_Tree_Quoted extends Less_Tree{
 		return $left < $right ? -1 : 1;
 	}
 }
-
+ 
 
 /**
  * Rule
@@ -6711,7 +6694,7 @@ class Less_Tree_Rule extends Less_Tree{
 		if( is_array($name) ){
 			// expand 'primitive' name directly to get
 			// things faster (~10% for benchmark.less):
-			if( count_if_countable($name) === 1 && $name[0] instanceof Less_Tree_Keyword ){
+			if( count($name) === 1 && $name[0] instanceof Less_Tree_Keyword ){
 				$name = $name[0]->value;
 			}else{
 				$name = $this->CompileName($env,$name);
@@ -6765,7 +6748,7 @@ class Less_Tree_Rule extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Ruleset
@@ -6819,7 +6802,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 
 	public function accept( $visitor ){
 		if( $this->paths ){
-			$paths_len = count_if_countable($this->paths);
+			$paths_len = count($this->paths);
 			for($i = 0,$paths_len; $i < $paths_len; $i++ ){
 				$this->paths[$i] = $visitor->visitArray($this->paths[$i]);
 			}
@@ -6839,7 +6822,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 
 		// Store the frames around mixin definitions,
 		// so they can be evaluated like closures when the time comes.
-		$rsRuleCnt = count_if_countable($ruleset->rules);
+		$rsRuleCnt = count($ruleset->rules);
 		for( $i = 0; $i < $rsRuleCnt; $i++ ){
 			if( $ruleset->rules[$i] instanceof Less_Tree_Mixin_Definition || $ruleset->rules[$i] instanceof Less_Tree_DetachedRuleset ){
 				$ruleset->rules[$i] = $ruleset->rules[$i]->compile($env);
@@ -6848,7 +6831,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 
 		$mediaBlockCount = 0;
 		if( $env instanceof Less_Environment ){
-			$mediaBlockCount = count_if_countable($env->mediaBlocks);
+			$mediaBlockCount = count($env->mediaBlocks);
 		}
 
 		// Evaluate mixin calls.
@@ -6867,14 +6850,14 @@ class Less_Tree_Ruleset extends Less_Tree{
 			$rule = $ruleset->rules[$i];
 
             // for rulesets, check if it is a css guard and can be removed
-			if( $rule instanceof Less_Tree_Ruleset && $rule->selectors && count_if_countable($rule->selectors) === 1 ){
+			if( $rule instanceof Less_Tree_Ruleset && $rule->selectors && count($rule->selectors) === 1 ){
 
                 // check if it can be folded in (e.g. & where)
 				if( $rule->selectors[0]->isJustParentSelector() ){
 					array_splice($ruleset->rules,$i--,1);
 					$rsRuleCnt--;
 
-					for($j = 0; $j < count_if_countable($rule->rules); $j++ ){
+					for($j = 0; $j < count($rule->rules); $j++ ){
 						$subRule = $rule->rules[$j];
 						if( !($subRule instanceof Less_Tree_Rule) || !$subRule->variable ){
 							array_splice($ruleset->rules, ++$i, 0, array($subRule));
@@ -6891,7 +6874,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 		$env->shiftFrame();
 
 		if ($mediaBlockCount) {
-			$len = count_if_countable($env->mediaBlocks);
+			$len = count($env->mediaBlocks);
 			for($i = $mediaBlockCount; $i < $len; $i++ ){
 				$env->mediaBlocks[$i]->bubbleSelectors($ruleset->selectors);
 			}
@@ -6926,7 +6909,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 						$temp[] = $r;
 					}
 				}
-				$temp_count = count_if_countable($temp)-1;
+				$temp_count = count($temp)-1;
 				array_splice($ruleset->rules, $i, 1, $temp);
 				$rsRuleCnt += $temp_count;
 				$i += $temp_count;
@@ -6944,7 +6927,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 				}
 
 				array_splice($ruleset->rules, $i, 1, $rules);
-				$temp_count = count_if_countable($rules);
+				$temp_count = count($rules);
 				$rsRuleCnt += $temp_count - 1;
 				$i += $temp_count-1;
 				$ruleset->resetCache();
@@ -7007,7 +6990,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 
 	function evalImports($env) {
 
-		$rules_len = count_if_countable($this->rules);
+		$rules_len = count($this->rules);
 		for($i=0; $i < $rules_len; $i++){
 			$rule = $this->rules[$i];
 
@@ -7015,7 +6998,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 				$rules = $rule->compile($env);
 				if( is_array($rules) ){
 					array_splice($this->rules, $i, 1, $rules);
-					$temp_count = count_if_countable($rules)-1;
+					$temp_count = count($rules)-1;
 					$i += $temp_count;
 					$rules_len += $temp_count;
 				}else{
@@ -7165,7 +7148,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 			}
 			*/
 
-			$paths_len = count_if_countable($this->paths);
+			$paths_len = count($this->paths);
 			for( $i = 0; $i < $paths_len; $i++ ){
 				$path = $this->paths[$i];
 				$firstSelector = true;
@@ -7184,8 +7167,8 @@ class Less_Tree_Ruleset extends Less_Tree{
 		}
 
 		// Compile rules and rulesets
-		$ruleNodes_len = count_if_countable($ruleNodes);
-		$rulesetNodes_len = count_if_countable($rulesetNodes);
+		$ruleNodes_len = count($ruleNodes);
+		$rulesetNodes_len = count($rulesetNodes);
 		for( $i = 0; $i < $ruleNodes_len; $i++ ){
 			$rule = $ruleNodes[$i];
 
@@ -7343,7 +7326,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 							}
 
 							//put together the parent selectors after the join
-							if ( count_if_countable($parentSel) > 1) {
+							if ( count($parentSel) > 1) {
 								$afterParentJoin = array_merge($afterParentJoin, array_slice($parentSel,1) );
 							}
 
@@ -7400,7 +7383,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 
 			// if the previous thing in sel is a parent this needs to join on to it
 			if( $sel ){
-				$last = count_if_countable($sel)-1;
+				$last = count($sel)-1;
 				$sel[$last] = $sel[$last]->createDerived( array_merge($sel[$last]->elements, $elements) );
 			}else{
 				$sel[] = new Less_Tree_Selector( $elements );
@@ -7408,7 +7391,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 		}
 	}
 }
-
+ 
 
 /**
  * RulesetCall
@@ -7434,7 +7417,7 @@ class Less_Tree_RulesetCall extends Less_Tree{
 	}
 }
 
-
+ 
 
 /**
  * Selector
@@ -7467,7 +7450,7 @@ class Less_Tree_Selector extends Less_Tree{
 	public function __construct( $elements, $extendList = array() , $condition = null, $index=null, $currentFileInfo=null, $isReferenced=null ){
 
 		$this->elements = $elements;
-		$this->elements_len = count_if_countable($elements);
+		$this->elements_len = count($elements);
 		$this->extendList = $extendList;
 		$this->condition = $condition;
 		if( $currentFileInfo ){
@@ -7549,7 +7532,7 @@ class Less_Tree_Selector extends Less_Tree{
 
 	public function isJustParentSelector(){
 		return !$this->mediaEmpty &&
-			count_if_countable($this->elements) === 1 &&
+			count($this->elements) === 1 &&
 			$this->elements[0]->value === '&' &&
 			($this->elements[0]->combinator === ' ' || $this->elements[0]->combinator === '');
 	}
@@ -7602,7 +7585,7 @@ class Less_Tree_Selector extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * UnicodeDescriptor
@@ -7631,7 +7614,7 @@ class Less_Tree_UnicodeDescriptor extends Less_Tree{
 	}
 }
 
-
+ 
 
 /**
  * Unit
@@ -7708,7 +7691,7 @@ class Less_Tree_Unit extends Less_Tree{
 	}
 
     public function isSingular() {
-		return count_if_countable($this->numerator) <= 1 && !$this->denominator;
+		return count($this->numerator) <= 1 && !$this->denominator;
 	}
 
 
@@ -7778,7 +7761,7 @@ class Less_Tree_Unit extends Less_Tree{
 
 }
 
-
+ 
 
 /**
  * UnitConversions
@@ -7812,7 +7795,7 @@ class Less_Tree_UnitConversions{
 		'turn'=> 1
 		);
 
-}
+} 
 
 /**
  * Url
@@ -7888,7 +7871,7 @@ class Less_Tree_Url extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Value
@@ -7926,7 +7909,7 @@ class Less_Tree_Value extends Less_Tree{
      * @see Less_Tree::genCSS
      */
 	function genCSS( $output ){
-		$len = count_if_countable($this->value);
+		$len = count($this->value);
 		for($i = 0; $i < $len; $i++ ){
 			$this->value[$i]->genCSS( $output );
 			if( $i+1 < $len ){
@@ -7936,7 +7919,7 @@ class Less_Tree_Value extends Less_Tree{
 	}
 
 }
-
+ 
 
 /**
  * Variable
@@ -7988,7 +7971,7 @@ class Less_Tree_Variable extends Less_Tree{
 	}
 
 }
-
+ 
 
 
 class Less_Tree_Mixin_Call extends Less_Tree{
@@ -8051,7 +8034,7 @@ class Less_Tree_Mixin_Call extends Less_Tree{
 			// and build candidate list with corresponding flags. Then, when we know all possible matches,
 			// we make a final decision.
 
-			$mixins_len = count_if_countable($mixins);
+			$mixins_len = count($mixins);
 			for( $m = 0; $m < $mixins_len; $m++ ){
 				$mixin = $mixins[$m];
 
@@ -8088,7 +8071,7 @@ class Less_Tree_Mixin_Call extends Less_Tree{
 
 
 			$count = array(0, 0, 0);
-			for( $m = 0; $m < count_if_countable($candidates); $m++ ){
+			for( $m = 0; $m < count($candidates); $m++ ){
 				$count[ $candidates[$m]['group'] ]++;
 			}
 
@@ -8102,7 +8085,7 @@ class Less_Tree_Mixin_Call extends Less_Tree{
 			}
 
 
-			$candidates_length = count_if_countable($candidates);
+			$candidates_length = count($candidates);
 			$length_1 = ($candidates_length == 1);
 
 			for( $m = 0; $m < $candidates_length; $m++){
@@ -8190,7 +8173,7 @@ class Less_Tree_Mixin_Call extends Less_Tree{
 }
 
 
-
+ 
 
 class Less_Tree_Mixin_Definition extends Less_Tree_Ruleset{
 	public $name;
@@ -8217,7 +8200,7 @@ class Less_Tree_Mixin_Definition extends Less_Tree_Ruleset{
 		$this->rules = $rules;
 
 		if( $params ){
-			$this->arity = count_if_countable($params);
+			$this->arity = count($params);
 			foreach( $params as $p ){
 				if (! isset($p['name']) || ($p['name'] && !isset($p['value']))) {
 					$this->required++;
@@ -8250,7 +8233,7 @@ class Less_Tree_Mixin_Definition extends Less_Tree_Ruleset{
 		$argsLength = 0;
 
 		if( $args ){
-			$argsLength = count_if_countable($args);
+			$argsLength = count($args);
 			for($i = 0; $i < $argsLength; $i++ ){
 				$arg = $args[$i];
 
@@ -8402,13 +8385,13 @@ class Less_Tree_Mixin_Definition extends Less_Tree_Ruleset{
 	}
 
 	public function matchArgs($args, $env = NULL){
-		$argsLength = count_if_countable($args);
+		$argsLength = count($args);
 
 		if( !$this->variadic ){
 			if( $argsLength < $this->required ){
 				return false;
 			}
-			if( $argsLength > count_if_countable($this->params) ){
+			if( $argsLength > count($this->params) ){
 				return false;
 			}
 		}else{
@@ -8431,7 +8414,7 @@ class Less_Tree_Mixin_Definition extends Less_Tree_Ruleset{
 	}
 
 }
-
+ 
 
 /**
  * Extend Finder Visitor
@@ -8513,7 +8496,7 @@ class Less_Visitor_extendFinder extends Less_Visitor{
 			$extend->firstExtendOnThisSelectorPath = true;
 		}
 
-		$end_key = count_if_countable($this->allExtendsStack)-1;
+		$end_key = count($this->allExtendsStack)-1;
 		$this->allExtendsStack[$end_key][] = $extend;
 		$j++;
 	}
@@ -8545,7 +8528,7 @@ class Less_Visitor_extendFinder extends Less_Visitor{
 }
 
 
-
+ 
 
 /*
 class Less_Visitor_import extends Less_VisitorReplacing{
@@ -8684,7 +8667,7 @@ class Less_Visitor_import extends Less_VisitorReplacing{
 */
 
 
-
+ 
 
 /**
  * Join Selector Visitor
@@ -8747,14 +8730,14 @@ class Less_Visitor_joinSelector extends Less_Visitor{
     public function visitMedia($mediaNode) {
 		$context = end($this->contexts); //$context = $this->contexts[ count($this->contexts) - 1];
 
-		if( !count_if_countable($context) || (is_object($context[0]) && $context[0]->multiMedia) ){
+		if( !count($context) || (is_object($context[0]) && $context[0]->multiMedia) ){
 			$mediaNode->rules[0]->root = true;
 		}
 	}
 
 }
 
-
+ 
 
 /**
  * Process Extends Visitor
@@ -8803,8 +8786,8 @@ class Less_Visitor_processExtends extends Less_Visitor{
 		// and the second is the target.
 		// the seperation into two lists allows us to process a subset of chains with a bigger set, as is the
 		// case when processing media queries
-		for( $extendIndex = 0, $extendsList_len = count_if_countable($extendsList); $extendIndex < $extendsList_len; $extendIndex++ ){
-			for( $targetExtendIndex = 0; $targetExtendIndex < count_if_countable($extendsListTarget); $targetExtendIndex++ ){
+		for( $extendIndex = 0, $extendsList_len = count($extendsList); $extendIndex < $extendsList_len; $extendIndex++ ){
+			for( $targetExtendIndex = 0; $targetExtendIndex < count($extendsListTarget); $targetExtendIndex++ ){
 
 				$extend = $extendsList[$extendIndex];
 				$targetExtend = $extendsListTarget[$targetExtendIndex];
@@ -8899,7 +8882,7 @@ class Less_Visitor_processExtends extends Less_Visitor{
 		}
 
 		$allExtends	= end($this->allExtendsStack);
-		$paths_len = count_if_countable($rulesetNode->paths);
+		$paths_len = count($rulesetNode->paths);
 
 		// look at each selector path in the ruleset, find any extend matches and then copy, find and replace
 		foreach($allExtends as $allExtend){
@@ -8956,11 +8939,11 @@ class Less_Visitor_processExtends extends Less_Visitor{
 
 
 		// loop through the haystack elements
-		$haystack_path_len = count_if_countable($haystackSelectorPath);
+		$haystack_path_len = count($haystackSelectorPath);
 		for($haystackSelectorIndex = 0; $haystackSelectorIndex < $haystack_path_len; $haystackSelectorIndex++ ){
 			$hackstackSelector = $haystackSelectorPath[$haystackSelectorIndex];
 
-			$haystack_elements_len = count_if_countable($hackstackSelector->elements);
+			$haystack_elements_len = count($hackstackSelector->elements);
 			for($hackstackElementIndex = 0; $hackstackElementIndex < $haystack_elements_len; $hackstackElementIndex++ ){
 
 				$haystackElement = $hackstackSelector->elements[$hackstackElementIndex];
@@ -9147,9 +9130,9 @@ class Less_Visitor_processExtends extends Less_Visitor{
 		$currentSelectorPathIndex = 0;
 		$currentSelectorPathElementIndex = 0;
 		$path = array();
-		$selectorPath_len = count_if_countable($selectorPath);
+		$selectorPath_len = count($selectorPath);
 
-		for($matchIndex = 0, $matches_len = count_if_countable($matches); $matchIndex < $matches_len; $matchIndex++ ){
+		for($matchIndex = 0, $matches_len = count($matches); $matchIndex < $matches_len; $matchIndex++ ){
 
 
 			$match = $matches[$matchIndex];
@@ -9176,7 +9159,7 @@ class Less_Visitor_processExtends extends Less_Visitor{
 				);
 
 			if( $currentSelectorPathIndex === $match['pathIndex'] && $matchIndex > 0 ){
-				$last_key = count_if_countable($path)-1;
+				$last_key = count($path)-1;
 				$path[$last_key]->elements = array_merge($path[$last_key]->elements,$newElements);
 			}else{
 				$path = array_merge( $path, array_slice( $selectorPath, $currentSelectorPathIndex, $match['pathIndex'] ));
@@ -9185,7 +9168,7 @@ class Less_Visitor_processExtends extends Less_Visitor{
 
 			$currentSelectorPathIndex = $match['endPathIndex'];
 			$currentSelectorPathElementIndex = $match['endPathElementIndex'];
-			if( $currentSelectorPathElementIndex >= count_if_countable($selectorPath[$currentSelectorPathIndex]->elements) ){
+			if( $currentSelectorPathElementIndex >= count($selectorPath[$currentSelectorPathIndex]->elements) ){
 				$currentSelectorPathElementIndex = 0;
 				$currentSelectorPathIndex++;
 			}
@@ -9222,7 +9205,7 @@ class Less_Visitor_processExtends extends Less_Visitor{
 		array_pop($this->allExtendsStack);
 	}
 
-}
+} 
 
 /**
  * toCSS Visitor
@@ -9334,7 +9317,7 @@ class Less_Visitor_toCSS extends Less_VisitorReplacing{
 
 
 		// Compile rules and rulesets
-		$nodeRuleCnt = count_if_countable($rulesetNode->rules);
+		$nodeRuleCnt = count($rulesetNode->rules);
 		for( $i = 0; $i < $nodeRuleCnt; ){
 			$rule = $rulesetNode->rules[$i];
 
@@ -9356,7 +9339,7 @@ class Less_Visitor_toCSS extends Less_VisitorReplacing{
 
 			if( $rulesetNode->rules ){
 
-				if( count_if_countable($rulesetNode->rules) >  1 ){
+				if( count($rulesetNode->rules) >  1 ){
 					$this->_mergeRules( $rulesetNode->rules );
 					$this->_removeDuplicateRules( $rulesetNode->rules );
 				}
@@ -9371,7 +9354,7 @@ class Less_Visitor_toCSS extends Less_VisitorReplacing{
 		}
 
 
-		if( count_if_countable($rulesets) === 1 ){
+		if( count($rulesets) === 1 ){
 			return $rulesets[0];
 		}
 		return $rulesets;
@@ -9419,7 +9402,7 @@ class Less_Visitor_toCSS extends Less_VisitorReplacing{
 	protected function _removeDuplicateRules( &$rules ){
 		// remove duplicates
 		$ruleCache = array();
-		for( $i = count_if_countable($rules)-1; $i >= 0 ; $i-- ){
+		for( $i = count($rules)-1; $i >= 0 ; $i-- ){
 			$rule = $rules[$i];
 			if( $rule instanceof Less_Tree_Rule || $rule instanceof Less_Tree_NameValue ){
 
@@ -9448,7 +9431,7 @@ class Less_Visitor_toCSS extends Less_VisitorReplacing{
 
 		//obj($rules);
 
-		$rules_len = count_if_countable($rules);
+		$rules_len = count($rules);
 		for( $i = 0; $i < $rules_len; $i++ ){
 			$rule = $rules[$i];
 
@@ -9473,7 +9456,7 @@ class Less_Visitor_toCSS extends Less_VisitorReplacing{
 
 		foreach($groups as $parts){
 
-			if( count_if_countable($parts) > 1 ){
+			if( count($parts) > 1 ){
 				$rule = $parts[0];
 				$spacedGroups = array();
 				$lastSpacedGroup = array();
@@ -9596,7 +9579,7 @@ class Less_Exception_Parser extends Exception{
 
 				$lines = explode("\n",$this->input);
 
-				$count = count_if_countable($lines);
+				$count = count($lines);
 				$start_line = max(0, $line-3);
 				$last_line = min($count, $start_line+6);
 				$num_len = strlen($last_line);
@@ -9945,16 +9928,16 @@ class Less_Output_Mapped extends Less_Output {
 				$this->generator->addMapping(
 						$this->lineNumber + 1,					// generated_line
 						$this->column,							// generated_column
-						count_if_countable($sourceLines),					// original_line
+						count($sourceLines),					// original_line
 						strlen($sourceColumns),					// original_column
 						$fileInfo
 				);
 			}else{
-				for($i = 0, $count = count_if_countable($lines); $i < $count; $i++){
+				for($i = 0, $count = count($lines); $i < $count; $i++){
 					$this->generator->addMapping(
 						$this->lineNumber + $i + 1,				// generated_line
 						$i === 0 ? $this->column : 0,			// generated_column
-						count_if_countable($sourceLines) + $i,				// original_line
+						count($sourceLines) + $i,				// original_line
 						$i === 0 ? strlen($sourceColumns) : 0, 	// original_column
 						$fileInfo
 					);
@@ -9962,10 +9945,10 @@ class Less_Output_Mapped extends Less_Output {
 			}
 		}
 
-		if(count_if_countable($lines) === 1){
+		if(count($lines) === 1){
 			$this->column += strlen($columns);
 		}else{
-			$this->lineNumber += count_if_countable($lines) - 1;
+			$this->lineNumber += count($lines) - 1;
 			$this->column = strlen($columns);
 		}
 
@@ -9973,7 +9956,7 @@ class Less_Output_Mapped extends Less_Output {
 		parent::add($chunk);
 	}
 
-}
+} 
 
 /**
  * Encode / Decode Base64 VLQ.
@@ -10416,7 +10399,7 @@ class Less_SourceMap_Generator extends Less_Configurable {
 		}
 
 		// less.js compat fixes
-		if( count_if_countable($sourceMap['sources']) && empty($sourceMap['sourceRoot']) ){
+		if( count($sourceMap['sources']) && empty($sourceMap['sourceRoot']) ){
 			unset($sourceMap['sourceRoot']);
 		}
 
@@ -10446,7 +10429,7 @@ class Less_SourceMap_Generator extends Less_Configurable {
 	 */
 	public function generateMappings(){
 
-		if( !count_if_countable($this->mappings) ){
+		if( !count($this->mappings) ){
 			return '';
 		}
 
@@ -10524,4 +10507,4 @@ class Less_SourceMap_Generator extends Less_Configurable {
 		return $path;
 	}
 
-}
+} 
