@@ -1,36 +1,317 @@
 @import "../../../assets/css/_structure.less";
 
-// conference specific styles here
-@color-blue:		#0084B0;	// fresh
-@color-green:   #00A356;  // hope
-@color-grey:		#4D4D4C;	// reboot
+/*
+ * color
+ */
+@color-blue:		rgb(0, 132, 176);	// fresh
+@color-green:   rgb(0, 163, 86);  // hope
+@color-grey:		rgb(77, 77, 76);	// reboot
 
-@color-dark-grey:     darken(@color-grey, 20%);
-@color-light-grey:    lighten(@color-grey, 30%);
-@color-lighter-grey:  lighten(@color-grey, 40%);
+@color-grey-darkest:     darken(@color-grey, 20%);
+@color-grey-darker:      darken(@color-grey, 10%);
+@color-grey-lighter:    lighten(@color-grey, 30%);
+@color-grey-lightest:   lighten(@color-grey, 40%); // highlight
+@color-grey-readable:   lighten(@color-grey, 50%);
+@color-grey-readable-focused:    lighten(@color-grey, 75%);
 
 // often configured values (and their defaults):
 @brand-primary:         @color-blue;
-@text-color:            @color-grey;
+@text-color:            @color-grey-readable;
 
 @link-color:            @color-blue;
 @link-hover-color:      @color-green;
 
-@navbar-height:         70px;
+@color-nav-icons: mix(@color-green, @color-blue, 75%);
 
-// TODO darf nicht angegeben sein sonst wird style ignoriert, wtf
-//@navbar-default-bg:     transparent;
-//@navbar-default-border: transparent;
+/*
+ * navbar
+ *
+ * reminder, do not mess so much with the navbar because boostrap nav
+ * is hard and will kick your butt on mobile
+ */
+@navbar-height:         70px;
+@navbar-default-bg:     black;
+@navbar-default-border: black;
 
 @navbar-default-link-color:       white;
 @navbar-default-link-hover-color: @link-hover-color;
 
-body {
-	background-color: black;
-	padding: @navbar-height 0
+/*
+ * buttons
+ */
+@btn-font-weight:                600;
+a.btn, input.btn {
+	text-transform: uppercase;
+	color: @color-grey;
+}
+a.btn:hover, input.btn:hover {
+	color: @color-grey-readable-focused;
 }
 
-h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
-	font-family: sans-serif;
+@btn-default-color:              @color-grey;
+@btn-default-bg:                 @color-blue;
+@btn-default-border:             @color-grey-darker;
+
+@btn-primary-color:              @color-grey;
+@btn-primary-bg:                 @color-green;
+@btn-primary-border:             @color-grey-darker;
+
+/*
+ * font
+ */
+@import url("/configs/conferences/35c3/assets/montserrat/Montserrat.css");
+
+.font-headline {
+	color: @color-grey;
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* black*/
+	text-transform: uppercase;
 }
+
+.font-sub-line {
+	color: @color-grey;
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* black*/
+	text-transform: uppercase;
+}
+
+.font-running-text {
+	color: @color-grey-readable;
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* black*/
+}
+
+/*
+ * style
+ */
+
+body {
+	background-color: black;
+	padding: @navbar-height 0;
+
+	.font-running-text();
+	font-size: 13pt;
+}
+
+nav.navbar {
+	.navbar-brand {
+		font-size: 16pt;
+		letter-spacing: 0.2px;
+		color: white;
+	}
+
+	a.feedback, a.releases, a.about {
+		color: @color-nav-icons;
+		background-color: transparent;
+		border-color: @color-nav-icons;
+
+		&:hover {
+			color: black;
+			background-color: @color-nav-icons;
+			border-color: @color-nav-icons;
+		}
+	}
+
+	&:after {
+		display: block;
+		height: 2px;
+		padding-bottom: 2px;
+		background-image: linear-gradient(@color-blue 10%, @color-green 90%);
+	}
+}
+
+h1,
+h2,
+h3,
+body.overview .room a.title,
+body.overview .panel-primary a,
+.navbar-brand,
+.panel-heading,
+.panel-default > .panel-heading,
+.nav.nav-tabs {
+	.font-headline()
+}
+
+h4 {
+	.font-sub-line()
+}
+
+.banner {
+	h1 {
+		display: none;
+	}
+
+	img { /* TODO make responsive */
+		width: 15%;
+		margin: 20px;
+		position: fixed;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		height: 30px;
+	}
+}
+
+.well {
+	h1, h2, h3, h4 {
+		color: @color-grey-lighter;
+	}
+
+	background-color: @color-grey-darker;
+}
+
+/*
+ * Panel gradient configuration
+ *
+ */
+.panel {
+	border: none;
+	background-color: black;
+	background-image: linear-gradient(120deg, @color-blue, @color-green);
+	padding: 2px;
+
+	.panel-heading {
+		border: none;
+		background-color: black;
+		// to test gradient use:
+		//background-color: transparent;
+	}
+
+	.panel-body {
+		background-color: black;
+		// test gradient:
+		//background-color: transparent;
+	}
+}
+
+/* let the gratient go over two panels horizontally, child 1 and 2, 3 and 4, and so on */
+.room-group .room:nth-child(1) .panel {
+	background-image: linear-gradient(80deg, @color-blue, @color-green 200%);
+}
+
+.room-group .room:nth-child(2) .panel {
+	background-image: linear-gradient(80deg, @color-blue -60%, @color-green);
+}
+
+.room-group .room:nth-child(3) .panel {
+	background-image: linear-gradient(80deg, @color-blue, @color-green 200%);
+}
+
+.room-group .room:nth-child(4) .panel {
+	background-image: linear-gradient(80deg, @color-blue -60%, @color-green);
+}
+
+.room-group .room:nth-child(5) .panel {
+	background-image: linear-gradient(80deg, @color-blue, @color-green);
+}
+
+div.row.recordings div:nth-child(2) .panel {
+	background-image: linear-gradient(80deg, @color-blue, @color-green 200%);
+}
+
+/*
+ * NO RELIVE THEN:
+ *div.row.recordings div:nth-child(2) .panel {
+ *	background-image: linear-gradient(80deg, @color-blue, @color-green);
+ *}
+ */
+
+div.row.recordings div:nth-child(3) .panel {
+	background-image: linear-gradient(80deg, @color-blue -60%, @color-green);
+}
+
+/*
+ * main page
+ */
+
+.overview {
+	a {
+		color: @color-grey-readable;
+	}
+
+	.room {
+		.panel-body {
+			height: 190px;
+		}
+
+		&:hover {
+			.panel-title {
+				color: @color-grey-readable-focused;
+			}
+
+			.panel-body {
+				.program-schedule .current-talk {
+					&, span.t {
+						color: @color-grey-readable-focused;
+					}
+				}
+				.program-schedule .next-talk {
+					&, span.t {
+						color: @color-grey-darker;
+					}
+				}
+			}
+		}
+	}
+
+	.recordings {
+		h2 {
+			span {
+				display: none;
+			}
+
+			&:after {
+				content: 'Recorded memories';
+			}
+		}
+
+		.panel {
+			&:hover {
+				.panel-body a {
+					color: @color-grey-lightest;
+				}
+			}
+		}
+	}
+}
+
+nav {
+	.nav-tabs {
+		border: none;
+		background-color: black;
+		background-image: linear-gradient(120deg, @color-blue, @color-green);
+		padding: 2px;
+
+		& > {
+			background-color: black;
+		}
+
+		a {
+			color: @color-grey;
+		}
+	}
+}
+
+body .schedule {
+	.block h3 {
+		font-size: 16px;
+	}
+
+	.now span  {
+		right: -33px;
+		top: -2px;
+		font-weight: bold;
+	}
+}
+
+.feedback-form, .embed-form {
+	label {
+		.font-sub-line();
+		font-size: 16px;
+		color: @color-grey-readable;
+	}
+}
+
 

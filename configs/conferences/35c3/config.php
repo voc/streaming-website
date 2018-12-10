@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2018-12-27 09:00"),
+	'STARTS_AT' => strtotime("2018-12-27 06:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -91,7 +91,7 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'BANNER_HTML' => '
 		<h1>35C3 REFRESHING MEMORIES</h1>
-		<img src="configs/conferences/35c3/assets/min/logo.svg" width="810px" height="388px" alt="35C3 refreshing memories logo"/>
+		<img src="configs/conferences/35c3/assets/min/35C3_Logo-mit-Verlauf.svg" alt="35C3 refreshing memories logo"/>
 	',
 
 	/**
@@ -108,7 +108,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://live.dus.c3voc.de/relive/35c3/index.json', # TODO check
+	'RELIVE_JSON' => 'https://live.dus.c3voc.de/relive/35c3/index.json', # TODO setup, configure correct value
 );
 
 /**
@@ -129,6 +129,8 @@ $CONFIG['OVERVIEW'] = array(
 			'hallc',
 			'halld',
 			'halle',
+			# TODO chaoswest
+			# TODO freifunk
 		),
 	),
 );
@@ -158,7 +160,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'sX',
+		'STREAM' => 's1',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -352,7 +354,7 @@ $CONFIG['ROOMS'] = array(
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#35C3-hall-a @ hackint', # TODO check
+			'DISPLAY' => '#35C3-hall-a @ hackint', # TODO same value as last year, but maybe check with signal angel
 			'URL'     => 'irc://irc.hackint.eu:6667/35C3-hall-a',
 		),
 
@@ -387,7 +389,7 @@ $CONFIG['ROOMS'] = array(
 
 	'hallb' => array(
 		'DISPLAY' => 'Borg',
-		'STREAM' => 'sX',
+		'STREAM' => 's2',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -421,7 +423,7 @@ $CONFIG['ROOMS'] = array(
 	'hallc' => array(
 		'DISPLAY' => 'Clarke',
 		# Joan Clarke
-		'STREAM' => 'sX',
+		'STREAM' => 's3',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -454,7 +456,7 @@ $CONFIG['ROOMS'] = array(
 
 	'halld' => array(
 		'DISPLAY' => 'Dijkstra',
-		'STREAM' => 'sX',
+		'STREAM' => 's3',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated'],
@@ -487,7 +489,7 @@ $CONFIG['ROOMS'] = array(
 
 	'halle' => array(
 		'DISPLAY' => 'Eliza',
-		'STREAM' => 'sX',
+		'STREAM' => 's4',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated'],
@@ -690,7 +692,6 @@ $CONFIG['EXTRA_FILES'] = array(
 	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.ics',
 	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xcal',
 
-# TODO CHECK
 	'everything.schedule.xml' => 'http://data.c3voc.de/35C3/everything.schedule.xml',
 	'everything.schedule.json' => 'http://data.c3voc.de/35C3/everything.schedule.json',
 
