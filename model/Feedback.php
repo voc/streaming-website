@@ -35,6 +35,8 @@ class Feedback
 				VALUES (:reported, :datetime, :net, :os, :player, :stream, :ipproto_v4, :ipproto_v6, :provider, :issues, :issuetext)
 		');
 
+		$issuetext = preg_replace('/\r?\n/', ' ', $info['issuetext']);
+
 		$stm->execute(array(
 			'reported' => time(),
 			'datetime' => strtotime($info['datetime']),
@@ -46,7 +48,7 @@ class Feedback
 			'ipproto_v6' => isset($info['ipproto']) && is_array($info['ipproto']) && in_array('v6', $info['ipproto']),
 			'provider' => $info['provider'],
 			'issues' => isset($info['issues']) && is_array($info['issues']) ? implode(',', $info['issues']) : '',
-			'issuetext' => $info['issuetext'],
+			'issuetext' => $issuetext,
 		));
 	}
 

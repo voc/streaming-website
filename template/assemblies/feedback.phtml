@@ -6,7 +6,8 @@
 		<div class="col-sm-6 col">
 			<div class="form-group">
 				<label for="issuetext">Message / Symptoms*</label>
-				<input type="text" value="" name="issuetext" id="issuetext" class="form-control" />
+				<textarea rows="2"  value="" name="issuetext" id="issuetext" class="form-control" style="resize: vertical;"
+				></textarea>
 			</div>
 		</div>
 
@@ -141,6 +142,11 @@
 			<div class="checkbox">
 				<label>
 					<input type="checkbox" name="issues[]" value="Artifacts" /> Artifacts
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="issues[]" value="AV Async" /> Audio/Video async
 				</label>
 			</div>
 		</div>
