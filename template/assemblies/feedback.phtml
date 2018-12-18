@@ -1,5 +1,38 @@
 <form action="<?=h($conference->getFeedbackURl())?>" target="feedback-target" method="post" role="form" class="feedback-form">
+
+		<div class="col-sm-6 col mb-1">
+			<div class="form-group">
+				<label for="issuetext">Message / Symptoms*</label>
+				<input type="text" value="" name="issuetext" id="issuetext" class="form-control" />
+			</div>
+		</div>
+
+		<div class="col-sm-6 col mb-2">
+			<div class="form-group">
+				<label for="stream">Stream</label>
+				<select class="form-control" name="stream" id="stream">
+					<option></option>
+					<? foreach($conference->getRooms() as $roomiter): ?>
+						<? if(!$roomiter->hasFeedback()) continue ?>
+						<? foreach($roomiter->getSelections() as $selection): ?>
+							<option
+								<? if(
+									isset($room) && isset($stream) &&
+									$roomiter->getSlug() == $room->getSlug() &&
+									$selection->getSelection() == $stream->getSelection()
+								): ?>selected<? endif ?>
+								value="<?=h($roomiter->getSlug().'-'.$selection->getSelection())?>"
+							>
+								<?=h($roomiter->getDisplay())?> – <?=h($selection->getDisplay())?>
+							</option>
+						<? endforeach ?>
+					<? endforeach ?>
+				</select>
+			</div>
+		</div>
+
 	<div class="col-sm-4 col">
+		<label>&nbsp;</label>
 		<div class="form-group">
 			<label for="net">Network Connection</label>
 			<select class="form-control" name="net" id="net">
@@ -45,28 +78,6 @@
 				<option>iOS</option>
 				<option>Android</option>
 				<option>Something else</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label for="stream">Stream</label>
-			<select class="form-control" name="stream" id="stream">
-				<option></option>
-				<? foreach($conference->getRooms() as $roomiter): ?>
-					<? if(!$roomiter->hasFeedback()) continue ?>
-					<? foreach($roomiter->getSelections() as $selection): ?>
-						<option
-							<? if(
-								isset($room) && isset($stream) &&
-								$roomiter->getSlug() == $room->getSlug() &&
-								$selection->getSelection() == $stream->getSelection()
-							): ?>selected<? endif ?>
-							value="<?=h($roomiter->getSlug().'-'.$selection->getSelection())?>"
-						>
-							<?=h($roomiter->getDisplay())?> – <?=h($selection->getDisplay())?>
-						</option>
-					<? endforeach ?>
-				<? endforeach ?>
 			</select>
 		</div>
 	</div>
@@ -130,11 +141,6 @@
 					<input type="checkbox" name="issues[]" value="Artifacts" /> Artifacts
 				</label>
 			</div>
-		</div>
-
-		<div class="form-group">
-		<label for="issuetext">Something else was good/bad</label>
-			<input type="text" value="" name="issuetext" id="issuetext" class="form-control" />
 		</div>
 
 		<div class="form-group">
