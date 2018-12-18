@@ -1,13 +1,16 @@
 <form action="<?=h($conference->getFeedbackURl())?>" target="feedback-target" method="post" role="form" class="feedback-form">
 
-		<div class="col-sm-6 col mb-1">
+	<div class="container-fluid">
+	<div class="row">
+
+		<div class="col-sm-6 col">
 			<div class="form-group">
 				<label for="issuetext">Message / Symptoms*</label>
 				<input type="text" value="" name="issuetext" id="issuetext" class="form-control" />
 			</div>
 		</div>
 
-		<div class="col-sm-6 col mb-2">
+		<div class="col-sm-6 col">
 			<div class="form-group">
 				<label for="stream">Stream</label>
 				<select class="form-control" name="stream" id="stream">
@@ -31,9 +34,12 @@
 			</div>
 		</div>
 
+	</div>
+	<div class="row">
+
 	<div class="col-sm-4 col">
 		<label>&nbsp;</label>
-		<div class="form-group">
+		<div class="form-group mt-1">
 			<label for="net">Network Connection</label>
 			<select class="form-control" name="net" id="net">
 				<option></option>
@@ -139,9 +145,19 @@
 			</div>
 		</div>
 
-		<div class="form-group">
-			<input class="btn btn-primary" type="submit" value="Submit" />
+	</div>
+</div>
+	<div class="row">
+
+		<div class="col col-sm-8">
+</div>
+		<div class="col col-sm-4">
+			<div class="form-group">
+				<input class="btn btn-primary" type="submit" value="Submit" />
+			</div>
 		</div>
+
+	</div>
 	</div>
 </form>
 
