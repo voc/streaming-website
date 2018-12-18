@@ -75,7 +75,8 @@ $CONFIG['CONFERENCE'] = array(
 		by <a href="https://ccc.de">Chaos Computer Club e.V</a>,
 		<a href="https://www.isystems.at/">iSystems</a>,
 		<a href="https://fem.tu-ilmenau.de/">FeM</a>,
-		<a href="http://www.ags.tu-bs.de/">ags</a> &amp;
+		<a href="https://www.ags.tu-bs.de/">ags</a>,
+		<a href="https://www.opensuse.org/">openSUSE</a> &amp;
 		<a href="https://c3voc.de">C3VOC</a>
 	',
 
