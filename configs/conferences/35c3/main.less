@@ -9,7 +9,7 @@
 
 @color-grey-darkest:     darken(@color-grey, 20%);
 @color-grey-darker:      darken(@color-grey, 10%);
-@color-grey-lighter:    lighten(@color-grey, 30%);
+@color-grey-lighter:    lighten(@color-grey, 20%);
 @color-grey-lightest:   lighten(@color-grey, 40%); // highlight
 @color-grey-readable:   lighten(@color-grey, 50%);
 @color-grey-readable-focused:    lighten(@color-grey, 75%);
@@ -295,8 +295,16 @@ nav {
 }
 
 body .schedule {
-	.block h3 {
-		font-size: 16px;
+	.block {
+		h3 {
+			font-size: 16px;
+			color: @color-grey-lighter;
+		}
+
+		h4 {
+			.font-sub-line();
+			color: @color-blue;
+		}
 	}
 
 	.now span  {
