@@ -9,14 +9,17 @@ foreach (Conferences::getActiveConferences() as $conference)
 	$now = $conference->getSchedule()->getScheduleDisplayTime($basetime);
 	$overview = $conference->getOverview();
 
-	$isInDayChange = false;
+	$isCurrentlyStreaming = false;
 
 	foreach($conference->getRooms() as $room) {
 		$currentTalk = $room->getCurrentTalk($now);
 
-		if($currentTalk && isset($currentTalk['special']) && $currentTalk['special'] == 'daychange') {
-			$isInDayChange = true;
-			break;
+		if ($currentTalk) {
+			$isCurrentlyStreaming = true;
+			if (isset($currentTalk['special']) && $currentTalk['special'] == 'daychange') {
+				$isCurrentlyStreaming = true;
+				break;
+			}
 		}
 	}
 
@@ -126,7 +129,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 		'schedule' => $conference->getSchedule()->getScheduleUrl(),
 		'startsAt' => $conference->startsAt() ? $conference->startsAt()->format(DateTime::ISO8601) : null,
 		'endsAt' => $conference->endsAt() ? $conference->endsAt()->format(DateTime::ISO8601) : null,
-		'isCurrentlyStreaming' => !$isInDayChange,
+		'isCurrentlyStreaming' => $isCurrentlyStreaming,
 		'groups' => $groupstruct,
 	);
 }
