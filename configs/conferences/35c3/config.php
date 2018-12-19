@@ -536,16 +536,16 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xml',
+	#'URL' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xml',
 	#'URL' => 'https://events.ccc.de/congress/2018/Fahrplan/schedule.xml',
-	#'URL' => 'http://data.c3voc.de/35C3/everything.schedule.xml',
+	'URL' => 'http://data.c3voc.de/35C3/everything.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	#	'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza'),
+	'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
@@ -691,7 +691,6 @@ $CONFIG['EXTRA_FILES'] = array(
 	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.ics',
 	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xcal',
 
-	# TODO check
 	'everything.schedule.xml' => 'http://data.c3voc.de/35C3/everything.schedule.xml',
 	'everything.schedule.json' => 'http://data.c3voc.de/35C3/everything.schedule.json',
 
