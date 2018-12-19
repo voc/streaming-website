@@ -1,0 +1,1480 @@
+					[
+    {
+        "conference": "35C3",
+        "slug": "35c3",
+        "author": "CCC",
+        "description": "Live streaming from the 35th Chaos Communication Congress",
+        "keywords": "35C3, Hacking, Chaos Computer Club, Video, Music, Podcast, Media, Streaming, Hacker, Leipzig, Refreshing Memories",
+        "schedule": "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xml",
+        "startsAt": "2018-12-27T05:00:00+0000",
+        "endsAt": "2018-12-30T19:00:00+0000",
+        "isCurrentlyStreaming": false,
+        "groups": [
+            {
+                "group": "Live",
+                "rooms": [
+                    {
+                        "slug": "halla",
+                        "schedulename": "Adams",
+                        "thumb": "http://localhost:8000/streams/thumbs/s1.png",
+                        "link": "http://localhost:8000/streams/35c3/halla",
+                        "display": "Adams",
+                        "stream": "s1",
+                        "talks": {
+                            "current": null,
+                            "next": {
+                                "title": "Opening Ceremony",
+                                "speaker": "rufus, rixx",
+                                "fstart": "2018-12-27T11:00:00+01:00",
+                                "fend": "2018-12-27T11:30:00+01:00",
+                                "start": 1545904800,
+                                "end": 1545906600,
+                                "duration": 1800,
+                                "room_known": true
+                            }
+                        },
+                        "streams": [
+                            {
+                                "slug": "dash-native",
+                                "display": "Adams Adaptive",
+                                "type": "dash",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "dash": {
+                                        "display": "DASH, baby",
+                                        "tech": "Adaptive multi-format-multi-bitrate-Stream to rule the World!!1elf",
+                                        "url": "http://cdn.c3voc.de/dash/s1/manifest.mpd"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-native",
+                                "display": "Adams Audio",
+                                "type": "audio",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_native.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_native.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated",
+                                "display": "Adams Audio (Translated1)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated-2",
+                                "display": "Adams Audio (Translated2)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated-2.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated-2.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-native",
+                                "display": "Adams FullHD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_native_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_native_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated",
+                                "display": "Adams FullHD Video (Translated1)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_translated_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated-2",
+                                "display": "Adams FullHD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated-2_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_translated-2_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-native",
+                                "display": "Adams SD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_native_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_native_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated",
+                                "display": "Adams SD Video (Translated1)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_translated_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated-2",
+                                "display": "Adams SD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated-2_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_translated-2_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-native",
+                                "display": "Adams Slides",
+                                "type": "slides",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_native_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_native_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated",
+                                "display": "Adams Slides (Translated1)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_translated_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated-2",
+                                "display": "Adams Slides (Translated2)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s1_translated-2_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s1_translated-2_slides.m3u8"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "slug": "hallb",
+                        "schedulename": "Borg",
+                        "thumb": "http://localhost:8000/streams/thumbs/s2.png",
+                        "link": "http://localhost:8000/streams/35c3/hallb",
+                        "display": "Borg",
+                        "stream": "s2",
+                        "talks": {
+                            "current": null,
+                            "next": {
+                                "title": "The Rocky Road to TLS 1.3 and better Internet Encryption",
+                                "speaker": "hanno",
+                                "fstart": "2018-12-27T11:30:00+01:00",
+                                "fend": "2018-12-27T12:30:00+01:00",
+                                "start": 1545906600,
+                                "end": 1545910200,
+                                "duration": 3600,
+                                "room_known": true
+                            }
+                        },
+                        "streams": [
+                            {
+                                "slug": "dash-native",
+                                "display": "Borg Adaptive",
+                                "type": "dash",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "dash": {
+                                        "display": "DASH, baby",
+                                        "tech": "Adaptive multi-format-multi-bitrate-Stream to rule the World!!1elf",
+                                        "url": "http://cdn.c3voc.de/dash/s2/manifest.mpd"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-native",
+                                "display": "Borg Audio",
+                                "type": "audio",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_native.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_native.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated",
+                                "display": "Borg Audio (Translated1)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated-2",
+                                "display": "Borg Audio (Translated2)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated-2.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated-2.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-native",
+                                "display": "Borg FullHD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_native_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_native_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated",
+                                "display": "Borg FullHD Video (Translated1)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_translated_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated-2",
+                                "display": "Borg FullHD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated-2_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_translated-2_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-native",
+                                "display": "Borg SD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_native_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_native_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated",
+                                "display": "Borg SD Video (Translated1)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_translated_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated-2",
+                                "display": "Borg SD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated-2_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_translated-2_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-native",
+                                "display": "Borg Slides",
+                                "type": "slides",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_native_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_native_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated",
+                                "display": "Borg Slides (Translated1)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_translated_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated-2",
+                                "display": "Borg Slides (Translated2)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s2_translated-2_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s2_translated-2_slides.m3u8"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "slug": "hallc",
+                        "schedulename": "Clarke",
+                        "thumb": "http://localhost:8000/streams/thumbs/s3.png",
+                        "link": "http://localhost:8000/streams/35c3/hallc",
+                        "display": "Clarke",
+                        "stream": "s3",
+                        "talks": {
+                            "current": null,
+                            "next": {
+                                "title": "Locked up science",
+                                "speaker": "Claudia Frick - @FuzzyLeapfrog",
+                                "fstart": "2018-12-27T11:30:00+01:00",
+                                "fend": "2018-12-27T12:10:00+01:00",
+                                "start": 1545906600,
+                                "end": 1545909000,
+                                "duration": 2400,
+                                "room_known": true
+                            }
+                        },
+                        "streams": [
+                            {
+                                "slug": "dash-native",
+                                "display": "Clarke Adaptive",
+                                "type": "dash",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "dash": {
+                                        "display": "DASH, baby",
+                                        "tech": "Adaptive multi-format-multi-bitrate-Stream to rule the World!!1elf",
+                                        "url": "http://cdn.c3voc.de/dash/s3/manifest.mpd"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-native",
+                                "display": "Clarke Audio",
+                                "type": "audio",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated",
+                                "display": "Clarke Audio (Translated1)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated-2",
+                                "display": "Clarke Audio (Translated2)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-native",
+                                "display": "Clarke FullHD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_native_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated",
+                                "display": "Clarke FullHD Video (Translated1)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated-2",
+                                "display": "Clarke FullHD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated-2_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-native",
+                                "display": "Clarke SD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_native_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated",
+                                "display": "Clarke SD Video (Translated1)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated-2",
+                                "display": "Clarke SD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated-2_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-native",
+                                "display": "Clarke Slides",
+                                "type": "slides",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_native_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated",
+                                "display": "Clarke Slides (Translated1)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated-2",
+                                "display": "Clarke Slides (Translated2)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated-2_slides.m3u8"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "slug": "halld",
+                        "schedulename": "Dijkstra",
+                        "thumb": "http://localhost:8000/streams/thumbs/s3.png",
+                        "link": "http://localhost:8000/streams/35c3/halld",
+                        "display": "Dijkstra",
+                        "stream": "s3",
+                        "talks": {
+                            "current": null,
+                            "next": {
+                                "title": "Artistic PCB Design and Fabrication",
+                                "speaker": "hammes hacks",
+                                "fstart": "2018-12-27T11:30:00+01:00",
+                                "fend": "2018-12-27T12:10:00+01:00",
+                                "start": 1545906600,
+                                "end": 1545909000,
+                                "duration": 2400,
+                                "room_known": true
+                            }
+                        },
+                        "streams": [
+                            {
+                                "slug": "dash-native",
+                                "display": "Dijkstra Adaptive",
+                                "type": "dash",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "dash": {
+                                        "display": "DASH, baby",
+                                        "tech": "Adaptive multi-format-multi-bitrate-Stream to rule the World!!1elf",
+                                        "url": "http://cdn.c3voc.de/dash/s3/manifest.mpd"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-native",
+                                "display": "Dijkstra Audio",
+                                "type": "audio",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated",
+                                "display": "Dijkstra Audio (Translated)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated-2",
+                                "display": "Dijkstra Audio (Translated2)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-native",
+                                "display": "Dijkstra FullHD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_native_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated",
+                                "display": "Dijkstra FullHD Video (Translated)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated-2",
+                                "display": "Dijkstra FullHD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated-2_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-native",
+                                "display": "Dijkstra SD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_native_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated",
+                                "display": "Dijkstra SD Video (Translated)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated-2",
+                                "display": "Dijkstra SD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated-2_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-native",
+                                "display": "Dijkstra Slides",
+                                "type": "slides",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_native_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_native_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated",
+                                "display": "Dijkstra Slides (Translated)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated-2",
+                                "display": "Dijkstra Slides (Translated2)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s3_translated-2_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s3_translated-2_slides.m3u8"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "slug": "halle",
+                        "schedulename": "Eliza",
+                        "thumb": "http://localhost:8000/streams/thumbs/s4.png",
+                        "link": "http://localhost:8000/streams/35c3/halle",
+                        "display": "Eliza",
+                        "stream": "s4",
+                        "talks": {
+                            "current": null,
+                            "next": {
+                                "title": "Going Deep Underground to Watch the Stars",
+                                "speaker": "Jost Migenda",
+                                "fstart": "2018-12-27T11:30:00+01:00",
+                                "fend": "2018-12-27T12:30:00+01:00",
+                                "start": 1545906600,
+                                "end": 1545910200,
+                                "duration": 3600,
+                                "room_known": true
+                            }
+                        },
+                        "streams": [
+                            {
+                                "slug": "dash-native",
+                                "display": "Eliza Adaptive",
+                                "type": "dash",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "dash": {
+                                        "display": "DASH, baby",
+                                        "tech": "Adaptive multi-format-multi-bitrate-Stream to rule the World!!1elf",
+                                        "url": "http://cdn.c3voc.de/dash/s4/manifest.mpd"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-native",
+                                "display": "Eliza Audio",
+                                "type": "audio",
+                                "isTranslated": false,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_native.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_native.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated",
+                                "display": "Eliza Audio (Translated)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "audio-translated-2",
+                                "display": "Eliza Audio (Translated2)",
+                                "type": "audio",
+                                "isTranslated": true,
+                                "videoSize": null,
+                                "urls": {
+                                    "mp3": {
+                                        "display": "MP3",
+                                        "tech": "MP3-Audio, 96 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated-2.mp3"
+                                    },
+                                    "opus": {
+                                        "display": "Opus",
+                                        "tech": "Opus-Audio, 64 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated-2.opus"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-native",
+                                "display": "Eliza FullHD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_native_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_native_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated",
+                                "display": "Eliza FullHD Video (Translated)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_translated_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "hd-translated-2",
+                                "display": "Eliza FullHD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1920,
+                                    1080
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated-2_hd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_translated-2_hd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-native",
+                                "display": "Eliza SD Video",
+                                "type": "video",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_native_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_native_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated",
+                                "display": "Eliza SD Video (Translated)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_translated_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "sd-translated-2",
+                                "display": "Eliza SD Video (Translated2)",
+                                "type": "video",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 1 MBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated-2_sd.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_translated-2_sd.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-native",
+                                "display": "Eliza Slides",
+                                "type": "slides",
+                                "isTranslated": false,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_native_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_native_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated",
+                                "display": "Eliza Slides (Translated)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_translated_slides.m3u8"
+                                    }
+                                }
+                            },
+                            {
+                                "slug": "slides-translated-2",
+                                "display": "Eliza Slides (Translated2)",
+                                "type": "slides",
+                                "isTranslated": true,
+                                "videoSize": [
+                                    1024,
+                                    576
+                                ],
+                                "urls": {
+                                    "webm": {
+                                        "display": "WebM",
+                                        "tech": "1024x576, VP8+Vorbis in WebM, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/s4_translated-2_slides.webm"
+                                    },
+                                    "hls": {
+                                        "display": "HLS",
+                                        "tech": "1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s",
+                                        "url": "http://cdn.c3voc.de/hls/s4_translated-2_slides.m3u8"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
