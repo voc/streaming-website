@@ -26,8 +26,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	 #'CLOSED' => true,
-	 'CLOSED' => false, # TODO remove
+	 // 'CLOSED' => false,
 
 	/**
 	 * Mit diesem Schalter kann die Veranstaltung von der Startseite und der API
@@ -561,7 +560,6 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-12-27') - strtotime(/* Today */ date('Y-m-d')),
 	//'SIMULATE_OFFSET' => 0,
-	'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-12-27') - strtotime(/* Today */ date('Y-m-d')),
 );
 
 
@@ -693,6 +691,7 @@ $CONFIG['EXTRA_FILES'] = array(
 	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.ics',
 	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.xcal',
 
+	# TODO check
 	'everything.schedule.xml' => 'http://data.c3voc.de/35C3/everything.schedule.xml',
 	'everything.schedule.json' => 'http://data.c3voc.de/35C3/everything.schedule.json',
 
