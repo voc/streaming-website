@@ -274,6 +274,18 @@ div.row.recordings div:nth-child(3) .panel {
 		}
 	}
 
+	.room:not(.has-preview) {
+		.panel-body {
+			.program-schedule {
+				span.t {
+					// make text in non-preview panels fullwidth or otherwise
+					// they stick together like rice
+					display: block;
+				}
+			}
+		}
+	}
+
 	.recordings {
 		h2 {
 			span {

@@ -556,7 +556,7 @@ $CONFIG['ROOMS'] = array(
 	'wikipakawg' => array(
 		'DISPLAY' => 'WikiPakaWG Esszimmer',
 		'STREAM' => 'swikipakawg', # TODO check with streaming config
-		'PREVIEW' => false,
+		'PREVIEW' => true,
 		'TRANSLATION' => [
 		],
 		'SD_VIDEO' => true,
