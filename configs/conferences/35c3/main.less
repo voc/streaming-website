@@ -91,6 +91,10 @@ body {
 
 	.font-running-text();
 	font-size: 13pt;
+
+	@media (max-width: 498px) { /* when the navbar breaks */
+		padding: 165px 0;
+	}
 }
 
 nav.navbar {
@@ -100,15 +104,25 @@ nav.navbar {
 		color: white;
 	}
 
-	a.feedback, a.releases, a.about {
-		color: @color-nav-icons;
-		background-color: transparent;
-		border-color: @color-nav-icons;
+	.navbar-right {
+		text-align: right;
 
-		&:hover {
-			color: black;
-			background-color: @color-nav-icons;
+		.btn-ssl, a.feedback, a.releases, a.about {
+			color: @color-nav-icons;
+			background-color: transparent;
 			border-color: @color-nav-icons;
+
+			&:hover {
+				color: black;
+				background-color: @color-nav-icons;
+				border-color: @color-nav-icons;
+			}
+		}
+
+		.btn-ssl.btn-warning {
+			color: grey;
+			background: transparent;
+			border-color: grey;
 		}
 	}
 
@@ -141,16 +155,45 @@ h4 {
 		display: none;
 	}
 
-	img { /* TODO make responsive */
-		width: 15%;
-		margin: 20px;
-		position: fixed;
+	img {
+		display: none;
 	}
 
-	&:after {
-		content: '';
-		display: block;
-		height: 30px;
+	@media (min-width: 1730px) {
+		img.block {
+			width: 15%;
+			margin: 20px;
+			position: fixed;
+			display: block;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			height: 30px;
+		}
+	}
+
+	@media (max-width: 1729px) {
+		img.inline {
+			display: inline-block;
+			width: 55%;
+			padding: 30px 0 15px 0;
+		}
+
+		text-align: center;
+	}
+
+	@media (max-width:@screen-sm-max) {
+		img.inline {
+			width: 75%;
+		}
+	}
+
+	@media (max-width:@screen-xs-max) {
+		img.inline {
+			width: 90%;
+		}
 	}
 }
 
@@ -251,7 +294,7 @@ div.row.recordings div:nth-child(3) .panel {
 
 	.room {
 		.panel-body {
-			height: 190px;
+			min-height: 190px;
 		}
 
 		&:hover {

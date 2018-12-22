@@ -90,7 +90,8 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'BANNER_HTML' => '
 		<h1>35C3 REFRESHING MEMORIES</h1>
-		<img src="configs/conferences/35c3/assets/min/35C3_Logo-mit-Verlauf.svg" alt="35C3 refreshing memories logo"/>
+		<img class="block" src="configs/conferences/35c3/assets/min/35C3_Logo-mit-Verlauf.svg" alt="35C3 refreshing memories logo block"/>
+		<img class="inline" src="configs/conferences/35c3/assets/logo-inline.svg" alt="35C3 refreshing memories logo inline"/>
 	',
 
 	/**
