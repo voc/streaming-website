@@ -101,7 +101,7 @@ class Stream
 				break;
 
 			case 'dash':
-				$display .= 'Adaptive';
+				# no special attribution, this is the "normal" stream
 				break;
 
 			default:
