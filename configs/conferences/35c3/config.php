@@ -129,8 +129,11 @@ $CONFIG['OVERVIEW'] = array(
 			'hallc',
 			'halld',
 			'halle',
-			# TODO chaoswest
-			# TODO freifunk
+		),
+		'Assemblies Live' => array(
+			'chaoswest',
+			'wikipakawg'
+			# freifunk / Open Infrastructure Orbit mit eigener infrastruktur, falls mögl verlinken
 		),
 	),
 );
@@ -154,6 +157,8 @@ $CONFIG['ROOMS'] = array(
 		 * Angezeige-Name
 		 */
 		'DISPLAY' => 'Adams',
+
+		'WIDE' => true,
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -489,6 +494,7 @@ $CONFIG['ROOMS'] = array(
 
 	'halle' => array(
 		'DISPLAY' => 'Eliza',
+#		'WIDE' => true,
 		'STREAM' => 's4',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -520,8 +526,60 @@ $CONFIG['ROOMS'] = array(
 		),
 	),
 
-);
+	'chaoswest' => array(
+		'DISPLAY' => 'Chaos West Bühne',
+		'STREAM' => 'schaoswest', # TODO check with streaming config
+		'PREVIEW' => true,
+		'TRANSLATION' => [
+		],
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
 
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Chaos West Bühne',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'SUBTITLES_ROOM_ID' => 2,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '@ChaosWildWest @ twitter',
+			'TEXT'    => '@ChaosWildWest',
+		),
+	),
+
+	'wikipakawg' => array(
+		'DISPLAY' => 'WikiPakaWG Esszimmer',
+		'STREAM' => 'swikipakawg', # TODO check with streaming config
+		'PREVIEW' => false,
+		'TRANSLATION' => [
+		],
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'WikiPakaWG Esszimmer',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'SUBTITLES_ROOM_ID' => 2,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#wikipakaWG @ twitter',
+			'TEXT'    => '#wikipakaWG',
+		),
+	),
+);
 
 /**
  * Konfigurationen zum Konferenz-Fahrplan
@@ -545,7 +603,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza'),
+	'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza', 'WikiPakaWG Esszimmer', 'Chaos West Bühne'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
