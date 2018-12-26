@@ -528,7 +528,7 @@ $CONFIG['ROOMS'] = array(
 
 	'chaoswest' => array(
 		'DISPLAY' => 'Chaos West Bühne',
-		'STREAM' => 'schaoswest', # TODO check with streaming config
+		'STREAM' => 's150',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 		],
@@ -555,7 +555,7 @@ $CONFIG['ROOMS'] = array(
 
 	'wikipakawg' => array(
 		'DISPLAY' => 'WikiPakaWG Esszimmer',
-		'STREAM' => 'swikipakawg', # TODO check with streaming config
+		'STREAM' => 's151',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 		],
@@ -582,7 +582,7 @@ $CONFIG['ROOMS'] = array(
 
 	'oio' => array(
 		'DISPLAY' => 'Open Infrastructure Orbit Vortrags-Arena',
-		'STREAM' => 'soio', # TODO check with streaming config
+		'STREAM' => 'soio',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 		],
