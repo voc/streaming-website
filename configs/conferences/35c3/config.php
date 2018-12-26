@@ -132,8 +132,8 @@ $CONFIG['OVERVIEW'] = array(
 		),
 		'Assemblies Live' => array(
 			'chaoswest',
-			'wikipakawg'
-			# freifunk / Open Infrastructure Orbit mit eigener infrastruktur, falls mögl verlinken
+			'wikipakawg',
+			'oio'
 		),
 	),
 );
@@ -579,6 +579,33 @@ $CONFIG['ROOMS'] = array(
 			'TEXT'    => '#wikipakaWG',
 		),
 	),
+
+	'oio' => array(
+		'DISPLAY' => 'Open Infrastructure Orbit Vortrags-Arena',
+		'STREAM' => 'soio', # TODO check with streaming config
+		'PREVIEW' => true,
+		'TRANSLATION' => [
+		],
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'OIO Vortrags-Arena',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'SUBTITLES_ROOM_ID' => 2,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => 'freifunk @ twitter',
+			'TEXT'    => '@freifunk',
+		),
+	),
 );
 
 /**
@@ -603,7 +630,8 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza', 'WikiPakaWG Esszimmer', 'Chaos West Bühne'),
+	'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
+		'WikiPakaWG Esszimmer', 'Chaos West Bühne', 'OIO Vortrags-Arena'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
