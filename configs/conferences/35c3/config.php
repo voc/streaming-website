@@ -551,6 +551,11 @@ $CONFIG['ROOMS'] = array(
 			'DISPLAY' => '@ChaosWildWest @ twitter',
 			'TEXT'    => '@ChaosWildWest',
 		),
+		'IRC' => true,
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '#chaoswest-stage @ hackint',
+			'URL'     => 'ircs://irc.hackint.org:6697/chaoswest-stage',
+		),
 	),
 
 	'wikipakawg' => array(
