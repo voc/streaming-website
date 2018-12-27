@@ -54,7 +54,6 @@ class Feedback
 
 	public function isLoggedIn()
 	{
-		return true;
 		return
 			isset($_SERVER['PHP_AUTH_USER']) &&
 			$_SERVER['PHP_AUTH_USER'] == $this->getConference()->get('FEEDBACK.USERNAME') &&
