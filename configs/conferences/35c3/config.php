@@ -461,7 +461,7 @@ $CONFIG['ROOMS'] = array(
 
 	'halld' => array(
 		'DISPLAY' => 'Dijkstra',
-		'STREAM' => 's3',
+		'STREAM' => 's4',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated'],
@@ -495,7 +495,7 @@ $CONFIG['ROOMS'] = array(
 	'halle' => array(
 		'DISPLAY' => 'Eliza',
 #		'WIDE' => true,
-		'STREAM' => 's4',
+		'STREAM' => 's5',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated'],
