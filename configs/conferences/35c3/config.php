@@ -359,8 +359,8 @@ $CONFIG['ROOMS'] = array(
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#35C3-hall-a @ hackint', # TODO same value as last year, but maybe check with signal angel
-			'URL'     => 'irc://irc.hackint.eu:6667/35C3-hall-a',
+			'DISPLAY' => '#35C3-hall-a @ hackint',
+			'URL'     => 'ircs://irc.hackint.org:6667/35C3-hall-a',
 		),
 
 		/**
@@ -415,8 +415,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#35C3-hall-b @ hackint', # TODO check
-			'URL'     => 'irc://irc.hackint.eu:6667/35C3-hall-c',
+			'DISPLAY' => '#35C3-hall-b @ hackint',
+			'URL'     => 'ircs://irc.hackint.org:6667/35C3-hall-b',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
@@ -449,8 +449,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#35C3-hall-c @ hackint', # TODO check
-			'URL'     => 'irc://irc.hackint.eu:6667/35C3-hall-c',
+			'DISPLAY' => '#35C3-hall-c @ hackint',
+			'URL'     => 'ircs://irc.hackint.org:6667/35C3-hall-c',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
@@ -482,8 +482,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#35C3-hall-d @ hackint', # TODO check
-			'URL'     => 'irc://irc.hackint.eu:6667/35C3-hall-d',
+			'DISPLAY' => '#35C3-hall-d @ hackint',
+			'URL'     => 'ircs://irc.hackint.org:6667/35C3-hall-d',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
@@ -516,8 +516,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-			'DISPLAY' => '#35C3-hall-e @ hackint', # TODO check
-			'URL'     => 'irc://irc.hackint.eu:6667/35C3-hall-e',
+			'DISPLAY' => '#35C3-hall-e @ hackint',
+			'URL'     => 'ircs://irc.hackint.org:6667/35C3-hall-e',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
@@ -734,7 +734,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'irc://irc.hackint.eu:6667/35C3-%s',
+	'URL' => 'ircs://irc.hackint.org:6667/35C3-%s',
 );
 
 /**
