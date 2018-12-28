@@ -104,9 +104,11 @@ body .schedule {
 			text-shadow: 0 0 3px @schedule-daychange;
 		}
 
-		&.pause {
-			background-color: @schedule-pause-bg;
+		&.pause, &.optout {
 			color: @schedule-pause;
+			background-color: @schedule-pause-bg;
+			background-image: linear-gradient(135deg, rgba(255,255,255,.35) 15%, transparent 15%, transparent 30%, rgba(255,255,255,.35) 30%, rgba(255,255,255,.35) 45%, transparent 45%, transparent 60%, rgba(255,255,255,.35) 60%, rgba(255,255,255,.35) 75%, transparent 75%, transparent 90%, rgba(255,255,255,.35) 90%, rgba(255,255,255,.35));
+			background-size: 148px;
 		}
 	}
 
