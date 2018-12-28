@@ -23,5 +23,5 @@ echo $tpl->render(array(
 
 	'columns' => array_intersect($allcols, $cols),
 	'allcolumns' => $allcols,
-	'hostname' => @$_SERVER['SERVER_NAME'],
+	'hostname' => shell_exec('hostname -f'),
 ));
