@@ -42,9 +42,9 @@ class Stream
 		switch($this->getSelection())
 		{
 			case 'sd':
-			case 'slides':
 				return array(1024, 576);
 
+			case 'slides':
 			case 'hd':
 				return array(1920, 1080);
 
