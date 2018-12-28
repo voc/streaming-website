@@ -51,7 +51,7 @@
 								<h3>
 									<?=h($event['title'])?><? if (@$event['optout']): ?><i> (no stream)</i><? endif ?>
 								</h3>
-								<? if($event['speaker']): ?>
+								<? if(! empty(trim($event['speaker']))): ?>
 									<h5>by&nbsp;<?=h($event['speaker'])?></h5>
 								<? endif ?>
 							<? endif ?>
