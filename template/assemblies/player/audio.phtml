@@ -1,8 +1,9 @@
-<audio
-	autoplay="autoplay"
+<video
 	preload="auto"
-	style="width: 300px;"
-	class="mejs"
+	controls="controls"
+	autoplay="autoplay"
+	style="height: 400px; display: block; margin: auto;"
+	poster="<?=h($stream->getPoster())?>"
 >
 	<source
 		src="<?=h($stream->getAudioUrl('mp3'))?>"
@@ -12,4 +13,4 @@
 		src="<?=h($stream->getAudioUrl('opus'))?>"
 		type="audio/opus"
 	/>
-</audio>
+</video>

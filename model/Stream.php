@@ -264,4 +264,7 @@ class Stream
 			'opus' => 'Opus',
 		);
 	}
+	public function getPoster() {
+		return joinpath(['/', 'thumbs', rawurlencode($this->getRoom()->getStream()).'-poster.png']);
+	}
 }

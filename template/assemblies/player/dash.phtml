@@ -2,7 +2,8 @@
 <script type="text/javascript" src="<?=h($assets)?>clapprio/level-selector.min.js"></script>
 <script type="text/javascript" src="<?=h($assets)?>clapprio/audio-selector.min.js"></script>
 
-<div class="dashContainer">
+
+<div class="dashContainer" style="min-height: 100px" >
 	<div id="player"></div>
 </div>
 
@@ -44,6 +45,7 @@
 		return new Clappr.Player({
 			sources: sources,
 			width: "100%",
+			poster: "<?=h($stream->getPoster())?>",
 			plugins: [DashShakaPlayback, LevelSelector, AudioSelector],
 			shakaConfiguration: {
 				abr: {
