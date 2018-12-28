@@ -77,6 +77,7 @@ class Feedback
 			SELECT *
 			  FROM feedback
 			 WHERE reported BETWEEN :from AND :to
+			 ORDER BY reported ASC
 		');
 		$stm->setFetchMode(PDO::FETCH_ASSOC);
 
