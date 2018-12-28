@@ -7,7 +7,7 @@ if(!$feedback->isLoggedIn())
 	exit;
 }
 
-$from = isset($_POST['from']) ? strtotime($_POST['from']) : strtotime('2000-01-01');
+$from = isset($_POST['from']) ? strtotime($_POST['from']) : time();
 $to   = isset($_POST['to'])   ? strtotime($_POST['to'])   : time() + 24*60*60;
 $cols = isset($_POST['col'])  ? $_POST['col']          : array('reported', 'stream', 'player', 'issuetext');
 
