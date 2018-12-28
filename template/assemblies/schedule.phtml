@@ -8,7 +8,7 @@
 				<? $fromstart = 0; ?>
 				<? foreach($events as $event): ?>
 					<div
-						class="block <?=h(@$event['special'] ?: 'event')?>"
+						class="block <?=h(@$event['special'] ?: 'event')?> <?=h((@$event['optout']) ? 'optout' : '')?>"
 						style="width: <?=h(round($event['duration'] / $schedule->getScale()))?>px; left: <?=h(round($fromstart / $schedule->getScale()))?>px"
 						data-start="<?=intval($event['start'])?>"
 						data-end="<?=intval($event['end'])?>"
@@ -30,7 +30,7 @@
 
 							<? if(@$event['special'] == 'daychange'): ?>
 
-								<h3><?=h($event['title'])?></h3>
+							<h3><?=h($event['title'])?></h3>
 
 							<? elseif(@$event['special'] == 'gap'): ?>
 
@@ -49,7 +49,7 @@
 									<?=h($scheduleRoom ? $scheduleRoom->getDisplay() : $roomname) ?>
 								</h4>
 								<h3>
-									<?=h($event['title'])?>
+									<?=h($event['title'])?><? if (@$event['optout']): ?><i> (no stream)</i><? endif ?>
 								</h3>
 								<? if($event['speaker']): ?>
 									<h5>by&nbsp;<?=h($event['speaker'])?></h5>

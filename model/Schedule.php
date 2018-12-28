@@ -39,6 +39,13 @@ class Schedule
 		return isset( $mapping[$scheduleRoom] );
 	}
 
+	public function isOptout($event) {
+		if (isset($event->recording)) {
+			return $event->recording->optout == 'true';
+		}
+		return false;
+	}
+
 	public function getMappedRoom($scheduleRoom) {
 		$mapping = $this->getScheduleToRoomSlugMapping();
 		return $this->getConference()->getRoomIfExists( @$mapping[$scheduleRoom] );
@@ -199,6 +206,7 @@ class Schedule
 						'end' => $end,
 						'duration' => $duration,
 						'room_known' => $this->isRoomMapped($name),
+						'optout' => $this->isOptout($event),
 					);
 
 					$lastend = $end;
