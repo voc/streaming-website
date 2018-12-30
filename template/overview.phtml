@@ -56,7 +56,8 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<div class="panel-title">
-									<?=h($room->getDisplay())?>
+									<span class="roomtitle regular"><?=h($room->getDisplay())?></span>
+									<span class="roomtitle short"><?=h($room->getDisplayShort())?></span>
 								</div>
 							</div>
 
@@ -72,7 +73,7 @@
 
 								<? else: ?>
 
-									<h2><?=h($room->getDisplay())?></h2>
+								<h2><?=h($room->getDisplay())?></h2>
 
 								<? endif ?>
 

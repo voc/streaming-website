@@ -46,7 +46,7 @@
 									&ndash;
 									<?=h(strftime('%H:%M', $event['end']))?>
 									&nbsp;in&nbsp;
-									<?=h($scheduleRoom ? $scheduleRoom->getDisplay() : $roomname) ?>
+									<?=h($scheduleRoom ? $scheduleRoom->getDisplayShort() : $roomname) ?>
 								</h4>
 								<h3>
 									<?=h($event['title'])?><? if (@$event['optout']): ?><i> (no stream)</i><? endif ?>

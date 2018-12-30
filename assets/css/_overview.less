@@ -1,4 +1,18 @@
 body.overview {
+	.panel-title {
+		.roomtitle.short {
+			display: none;
+		}
+		@media (max-width: @screen-xs-max) {
+			.roomtitle.regular {
+				display: none;
+			}
+			.roomtitle.short {
+				display: inline;
+			}
+		}
+	}
+
 	.panel-body {
 		min-height: 10px;
 	}

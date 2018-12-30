@@ -67,6 +67,16 @@ class Room
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.DISPLAY', $this->getSlug());
 	}
 
+	public function getDisplayShort() {
+		$display_short = $this->getConference()->get('ROOMS.'.$this->getSlug().'.DISPLAY_SHORT', $this->getSlug());
+		if (empty($display_short)) {
+			return $this->getDisplay();
+		}
+		else {
+			return $display_short;
+		}
+	}
+
 
 
 	public function hasStereo() {

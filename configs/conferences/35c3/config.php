@@ -158,6 +158,13 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'DISPLAY' => 'Adams',
 
+		/**
+		 * Anzeigename abgekürzt - wird im Schedule angezeigt.
+		 * Auf dem Overview im Mobile view.
+		 *
+		 * DISPLAY_SHORT' => 'Shorter',
+		 */
+
 		'WIDE' => true,
 
 		/**
@@ -528,6 +535,7 @@ $CONFIG['ROOMS'] = array(
 
 	'chaoswest' => array(
 		'DISPLAY' => 'Chaos West Bühne',
+		'DISPLAY_SHORT' => 'Chaos West',
 		'STREAM' => 's150',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -560,6 +568,7 @@ $CONFIG['ROOMS'] = array(
 
 	'wikipakawg' => array(
 		'DISPLAY' => 'WikiPakaWG Esszimmer',
+		'DISPLAY_SHORT' => 'WikiPakaWG',
 		'STREAM' => 's151',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -587,6 +596,7 @@ $CONFIG['ROOMS'] = array(
 
 	'oio' => array(
 		'DISPLAY' => 'Open Infrastructure Orbit Vortrags-Arena',
+		'DISPLAY_SHORT' => 'OIO',
 		'STREAM' => 'soio',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
