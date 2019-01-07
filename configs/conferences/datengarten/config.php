@@ -107,7 +107,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/browse/events/datengarten/index.html',
+	'RELEASES' => 'https://media.ccc.de/c/datengarten',
 
 	/**
 	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
@@ -454,7 +454,7 @@ $CONFIG['IRC'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#ccc @ ircnet',
+	'DISPLAY' => '#cccb @ hackint',
 
 	/**
 	 * URL für die IRC-Links.
@@ -465,7 +465,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'irc://irc.de.ircnet.net/ccc',
+	'URL' => 'irc://irc.hackint.org/cccb',
 );
 
 /**
