@@ -11,7 +11,6 @@ require_once('lib/helper.php');
 
 require_once('lib/PhpTemplate.php');
 require_once('lib/Exceptions.php');
-require_once('lib/less.php/Less.php');
 
 require_once('model/ModelBase.php');
 require_once('model/Conferences.php');
@@ -28,6 +27,8 @@ require_once('model/Stream.php');
 require_once('model/Relive.php');
 require_once('model/Upcoming.php');
 
+require_once('lib/less.php/Autoloader.php');
+Less_Autoloader::register();
 
 ob_start();
 if(isset($argv) && isset($argv[1]))
