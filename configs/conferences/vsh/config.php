@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2019-02-22 19:00"),
+	'STARTS_AT' => strtotime("2019-02-22 18:00"),
 
 	'ENDS_AT' => strtotime("2019-02-24 14:00"),
 
