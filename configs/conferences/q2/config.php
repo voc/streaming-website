@@ -26,7 +26,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	//'CLOSED' => 'running',
+	'CLOSED' => 'after',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
