@@ -86,7 +86,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/fossgis19',
+	'RELEASES' => 'https://media.ccc.de/c/fossgis2019',
 
 	/**
 	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
@@ -112,9 +112,9 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'audimax',
 			'mathe',
 			'physik',
+			'audimax',
 		),
 	),
 );
@@ -146,8 +146,8 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#fossgis19 @ twitter/mastodon',
-			'TEXT'    => '#fossgis19',
+			'DISPLAY' => '#fossgis2019 @ twitter/mastodon',
+			'TEXT'    => '#fossgis2019',
 		),
 	),
 
@@ -172,8 +172,8 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#fossgis19 @ twitter/mastodon',
-			'TEXT'    => '#fossgis19',
+			'DISPLAY' => '#fossgis2019 @ twitter/mastodon',
+			'TEXT'    => '#fossgis2019',
 		),
 	),
 	
@@ -198,8 +198,8 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#fossgis19 @ twitter/mastodon',
-			'TEXT'    => '#fossgis19',
+			'DISPLAY' => '#fossgis2019 @ twitter/mastodon',
+			'TEXT'    => '#fossgis2019',
 		),
 	),
 );
