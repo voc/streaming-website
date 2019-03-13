@@ -104,7 +104,7 @@ $CONFIG['CONFERENCE'] = array(
  */
 $CONFIG['OVERVIEW'] = array(
 	/**
-	 * Abschnitte aud der Startseite und darunter aufgeführte Räume
+	 * Abschnitte auf der Startseite und darunter aufgeführte Räume
 	 * Es können beliebig neue Gruppen und Räume hinzugefügt werden
 	 *
 	 * Die Räume müssen in $CONFIG['ROOMS'] konfiguriert werden,
@@ -112,9 +112,9 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'mathe',
-			'physik',
 			'audimax',
+			'physik',
+			'mathe',
 		),
 	),
 );
@@ -224,9 +224,9 @@ $CONFIG['SCHEDULE'] = array(
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
-	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 * Wird diese Zeile auskommentiert,: werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Workshop Raum'),
+	'ROOMFILTER' => array('Audimax S239', 'Physik Z254', 'Mathe Z211'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
