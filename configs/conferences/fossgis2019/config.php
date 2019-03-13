@@ -231,7 +231,7 @@ $CONFIG['SCHEDULE'] = array(
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
-	'SCALE' => 6,
+	'SCALE' => 4,
 
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute

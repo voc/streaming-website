@@ -41,14 +41,15 @@
 								<h3><?=h($event['title'])?></h3>
 
 							<? else: ?>
-
-								<h4><?=h(strftime('%H:%M', $event['start']))?>
-									&ndash;
-									<?=h(strftime('%H:%M', $event['end']))?>
-									&nbsp;in&nbsp;
-									<?=h($scheduleRoom ? $scheduleRoom->getDisplayShort() : $roomname) ?>
-								</h4>
-								<h3>
+								<? if($event['duration'] > 10*60): /* only display when event is longer as 10 minutes */ ?>
+									<h4><?=h(strftime('%H:%M', $event['start']))?>
+										&ndash;
+										<?=h(strftime('%H:%M', $event['end']))?>
+										&nbsp;in&nbsp;
+										<?=h($scheduleRoom ? $scheduleRoom->getDisplayShort() : $roomname) ?>
+									</h4>
+								<? endif ?>
+								<h3 title="<?=$event['title']?>">
 									<?=h($event['title'])?><? if (@$event['optout']): ?><i> (no stream)</i><? endif ?>
 								</h3>
 								<? if(! empty(trim($event['speaker']))): ?>
