@@ -113,7 +113,6 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Live' => array(
 			'audimax',
-			'physik',
 			'mathe',
 		),
 	),
@@ -226,7 +225,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert,: werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Audimax S239', 'Physik Z254', 'Mathe Z211'),
+	//'ROOMFILTER' => array('Audimax S239', 'Physik Z254', 'Mathe Z211'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
