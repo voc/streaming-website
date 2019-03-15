@@ -112,7 +112,6 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'audimax',
 			'mathe',
 		),
 	),
