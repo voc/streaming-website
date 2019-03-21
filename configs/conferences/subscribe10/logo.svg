@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="127.7921mm"
+   height="22.693577mm"
+   viewBox="0 0 127.7921 22.693577"
+   version="1.1"
+   id="svg1398"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/danimo/dev/voc/streaming-website/configs/conferences/subscribe10/logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs1392" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="386.9254"
+     inkscape:cy="-483.11459"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="956"
+     inkscape:window-height="1041"
+     inkscape:window-x="960"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata1395">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.7033697,-3.2293785)">
+    <g
+       style="display:inline;opacity:1;fill:#00a066;fill-opacity:1"
+       id="g16"
+       transform="matrix(0.26458333,0,0,0.26458333,-185.97603,-251.61411)">
+      <path
+         id="sublogo_x5F_subscribe"
+         d="m 756.005,963.188 c -10.081,0 -19.348,3.479 -26.669,9.303 l 8.637,8.639 c 5.068,-3.672 11.296,-5.838 18.033,-5.838 17,0 30.781,13.783 30.781,30.782 0,16.999 -13.781,30.781 -30.781,30.781 -17,0 -30.782,-13.782 -30.782,-30.781 0,-6.676 2.127,-12.854 5.737,-17.897 l -8.644,-8.645 c -5.759,7.302 -9.198,16.521 -9.198,26.542 0,23.685 19.201,42.885 42.885,42.885 23.684,0 42.885,-19.2 42.885,-42.885 0,-23.685 -19.199,-42.886 -42.884,-42.886 z m 10e-4,64.817 c 12.111,0 21.931,-9.817 21.931,-21.931 0,-12.111 -9.82,-21.931 -21.931,-21.931 -12.112,0 -21.931,9.819 -21.931,21.931 10e-4,12.114 9.82,21.931 21.931,21.931 z m -13.762,-24.744 h 11.293 v -11.294 h 5.306 v 11.294 h 11.288 v 5.307 h -11.288 v 11.282 h -5.306 v -11.282 h -11.293 z"
+         inkscape:connector-curvature="0"
+         style="fill:#00a066;fill-rule:evenodd;fill-opacity:1" />
+      <text
+         transform="translate(815.9785,1027.6465)"
+         id="text19"
+         style="line-height:0%;fill:#00a066;fill-opacity:1">
+        <tspan
+           x="0"
+           y="0"
+           font-size="61.5872"
+           letter-spacing="-3"
+           id="tspan21"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:61.58720016px;font-family:Overpass;-inkscape-font-specification:Overpass;letter-spacing:-3;fill:#00a066;fill-opacity:1">
+          <tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.58750153px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00a066;fill-opacity:1"
+             id="tspan4147">SUBSCRIBE</tspan>
+          <tspan
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:61.58750153px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00a066;fill-opacity:1"
+             id="tspan4149">10</tspan>
+        </tspan>
+      </text>
+    </g>
+  </g>
+</svg>
