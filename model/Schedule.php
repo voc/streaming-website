@@ -93,8 +93,8 @@ class Schedule
 
 			foreach($day->room as $room)
 			{
-				$name = (string)$room['name'];
-				if($this->isRoomFiltered($name))
+				$roomName = (string)$room['name'];
+				if($this->isRoomFiltered($roomName))
 					continue;
 
 				foreach($room->event as $event)
@@ -136,8 +136,8 @@ class Schedule
 				$roomidx++;
 				$lastend = false;
 
-				$name = trim((string)$room['name']);
-				if($this->isRoomFiltered($name))
+				$roomName = trim((string)$room['name']);
+				if($this->isRoomFiltered($roomName))
 					continue;
 
 				$eventsSorted = [];
@@ -163,7 +163,7 @@ class Schedule
 					{
 						// synthesize pause event
 						$pauseduration = $start - $lastend;
-						$program[$name][] = array(
+						$program[$roomName][] = array(
 							'special' => 'pause',
 							'title' => round($pauseduration / 60).' minutes pause',
 
@@ -173,12 +173,12 @@ class Schedule
 							'start' => $lastend,
 							'end' => $start,
 							'duration' => $pauseduration,
-							'room_known' => $this->isRoomMapped($name),
+							'room_known' => $this->isRoomMapped($roomName),
 						);
 					}
 					else if(!$lastend && $daystart < $start)
 					{
-						$program[$name][] = array(
+						$program[$roomName][] = array(
 							'special' => 'gap',
 
 							'fstart' => date('c', $daystart),
@@ -187,7 +187,7 @@ class Schedule
 							'start' => $daystart,
 							'end' => $start,
 							'duration' => $start - $daystart,
-							'room_known' => $this->isRoomMapped($name),
+							'room_known' => $this->isRoomMapped($roomName),
 						);
 					}
 
@@ -195,7 +195,7 @@ class Schedule
 				if(isset($event->persons)) foreach($event->persons->person as $person)
 					$personnames[] = (string)$person;
 
-				$program[$name][] = array(
+				$program[$roomName][] = array(
 						'title' => (string)$event->title,
 						'speaker' => implode(', ', $personnames),
 
@@ -205,7 +205,7 @@ class Schedule
 						'start' => $start,
 						'end' => $end,
 						'duration' => $duration,
-						'room_known' => $this->isRoomMapped($name),
+						'room_known' => $this->isRoomMapped($roomName),
 						'optout' => $this->isOptout($event),
 					);
 
@@ -216,7 +216,7 @@ class Schedule
 				if(!$lastend) $lastend = $daystart;
 				if($lastend < $dayend)
 				{
-					$program[$name][] = array(
+					$program[$roomName][] = array(
 						'special' => 'gap',
 
 						'fstart' => date('c', $lastend),
@@ -230,7 +230,7 @@ class Schedule
 
 				if($dayidx < count($schedule->day))
 				{
-					$program[$name][] = array(
+					$program[$roomName][] = array(
 						'special' => 'daychange',
 						'title' => 'Daychange from Day '.$dayidx.' to '.($dayidx+1),
 
