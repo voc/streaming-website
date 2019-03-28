@@ -1,13 +1,57 @@
 @import "../../../assets/css/_structure.less";
 
+@link-color:            #aaaaaa;
+@panel-bg:              darkgrey ;
+@well-bg:               @panel-bg;
+@panel-primary-border:  white;
+@panel-default-heading-bg: white;
+@panel-default-text:    white;
+
+@navbar-default-link-color: #FFFFFF;
+
+//@nav-link-hover-bg:     #ff0000;
+
+@navbar-default-bg:     #ff0000;
+
 // conference specific styles here
 
-@brand-primary:         #aaa;
+body {
+	background-color: black;
+}
 
-img.jhberlin {
-	width: 400px;
-	position: absolute;
-	bottom: 30px;
-	left: 10px;
-	z-index: -100;
+.banner {
+	color: black;
+
+	h2 {
+		font-weight: normal;
+	}
+}
+
+.navbar-brand {
+	//color: transparent !important;//
+	color: white;
+	height: 50px;
+	//background-image: url('logo.png');//
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	background-position: 15px 10px;
+	.icon {
+		display: none !important;
+	}
+}
+
+footer a {
+	color: @link-color;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: #ff0000;
+	color: white;
+	border: black;
+}
+
+.nav > li > a{
+	background: #ff0000;
+	color: white;
+	border: white;
 }

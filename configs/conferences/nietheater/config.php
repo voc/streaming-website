@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Aufstand der Huren',
+	'TITLE' => 'NIE Theater - Aufstand der Huren',
 
 	/**
 	 * Veranstalter
@@ -47,21 +47,22 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Wir arbeiten jetzt seit gut zwei Jahren als NIE Kollektiv zusammen, sind aus der Besetzung der Volksbühne hervorgegangen, die manche von uns mitgeplant haben.
-Seitdem haben wir ca. 10 Produktionen zur Premiere in unseren Kellerräumlichkeiten in Neukölln gebracht.
+	'DESCRIPTION' => 'Gespielt im Keller der Karl-Marx-Str.58 in Neukölln und ausgewählten Orten in Berlin. Der Zuschauerraum ist in ebendiesem Keller sowie der Bar de la Plaine, Marseille auf der Terrasse von Mikis Theodorakis, Athen (nur mit pers. Einladung) und weiteren Orten in Berlin.
 
-Jetzt planen wir ein großes Gemeinschaftsstück, das gleichzeitig auch unseren Umzug in unsere neuen Räume und eine Intervention in der Stadt darstellt. Wir werden bei uns im
-Keller in der Karl-Marx-Str. starten und dann rausgehen und unseren Weg zum neuen Ort gehen, an verschiedenen Stationen anhaltend und alles per
-Livekamera zum Publikum im Keller zurückübertragen.
-Wenn der Einzug vollzogen ist, wird ein Reisebus vorfahren und das Publikum an unseren neuen Ort bringen, an dem dann ein Programm für die nächste Woche stattfindet (Theater, Konzerte, Panels, Vorträge...).
+In Frankreich zerlegen Menschen aus der Provinz das reizende Paris. Von der Regierung erwarten sie viel, aber eben nichts Gutes. Zeitgleich herrscht in Berlin die Ordnung, die nicht nur die europäischen Nachbarn verarmen lässt, sondern auch die eigene Bevölkerung mit diskreten aber harten Mitteln aus ihren Wohnungen vertreibt und zu Arbeiten anstachelt, die immer weniger Sinn ergeben. Ein Lebensbereich nach dem anderen wird vermessen, mit einem Wert belegt und dann billig verscherbelt, wobei alle Orte, denen es nicht vorrangig ums Geldverdienen geht, verschwinden sollen.
 
-Das ganze Stück hat im Moment den Arbeitstitel "Aufstand der Huren",
-da die Hauptfiguren in körperlichen u geistigen Ausbeutungs- und Ausverkaufsverhältnissen stecken, aus denen sie sich mehr oder weniger erfolgreich befreien.
-Ich bevorzuge die französische Variate des Titels: "Aufstand der Uren".
-Der Plot folgt einem klassischen Heist-Movie mit Figuren wie dem Pfandleiher, dem Mogul, dem korrupten Sherrif von Neukölln, Verrat und Liebe und Glück und Unglück.
+„Ich mag Sex, aber ich will ihn nicht verkaufen. Auf jeden Fall nicht immer.“ Karl Lagerfeld
 
-Besonders ist daran, dass der Weg zum Ziel in Etappen eingeteilt ist,
-für die unterschiedliche Personen die Regie übernehmen und das ganze von unserem Übertragungs-Kamerateam und den Schauspielern zusammengehalten wird. ',
+Darauf scheinen viele Leute schlicht keine Lust mehr zu haben. Das westliche Gesellschaftsmodell ist am Tiefpunkt seiner Glaubwürdigkeit angekommen. Aber was kann man schon machen? Oder: Was kann man noch machen?
+Es wird auf jeden Fall nicht ausreichen, einzig mehr Honorar für seine Dienste zu verlangen. Die Herausforderung liegt vielmer darin, demokratisch auf der Bedingung von Gleichheit und Freiheit entscheiden zu können, was und wie produziert wird und dabei nicht hinter die bereits erreichten Freiheiten für die je Einzelne zurückzufallen.
+
+„Öffentliche Anliegen verhandelt man am Besten in der Öffentlichkeit, alle anderen im Schlafzimmer.“ Wilde
+
+Im Theater bilden wir kleine Gesellschaften aus, weil bei der Produktion unterschiedliche Tätigkeiten anfallen und Fähigkeiten benötigt werden. In Anbetracht der derzeit proklamierten Alternativlosigkeit ist dieser gesellschaftliche Aspekt nicht unwichtig. Mehr als dreißig Schauspieler und Technikerinnen, zwei handvoll lebende und tote Autoren und acht Regisseure bringen dieses Stück gemeinsam auf die Bühne.
+
+Die Paranoia wuchert und an jeder einträglichen Straßenecke lauert der Verrat. Eine Bande Huren zieht knallhart einen Juwelenraub durch, ein korrupter Sherriff geht seinen Weg, Lili will Sim-Karten kaufen und irgendwas mit Beethoven. Erotikabenteuer in der langen Nacht Berlins.
+
+Jeder hat die Möglichkeit seine persönlichen Interessen und Obsessionen zu verfolgen. Das ganze Stück wird mit der Kamera aufgezeichnet und an ausgewählten Orten in Berlin, Athen und Marseille übertragen. Die Stadt wird zur Bühne. Mit direkter Action & viel mehr Text als in Paris.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -76,7 +77,7 @@ für die unterschiedliche Personen die Regie übernehmen und das ganze von unser
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		<a href="http://nie.zone/">nie.zone</a>
+		<a href="https://niekollektiv.de/">niekollektiv.de</a>
 	',
 
 	/**
