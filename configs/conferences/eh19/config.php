@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/eh19/index.json',
+	//'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/eh19/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -237,7 +237,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Konzertsaal', 'Workshop A'),
+	'ROOMFILTER' => array('EI 7', 'EI 9'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
