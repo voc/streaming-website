@@ -68,9 +68,9 @@ class Room
 	}
 
 	public function getDisplayShort() {
-		$display_short = $this->getConference()->get('ROOMS.'.$this->getSlug().'.DISPLAY_SHORT', $this->getSlug());
+		$display_short = $this->getConference()->get('ROOMS.'.$this->getSlug().'.DISPLAY_SHORT', '');
 		if (empty($display_short)) {
-			return $this->getDisplay();
+			return $this->getDisplay(); // getDisplay() falls back to slug
 		}
 		else {
 			return $display_short;

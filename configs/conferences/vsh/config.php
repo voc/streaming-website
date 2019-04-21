@@ -8,9 +8,9 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2019-02-04 18:00"),
+	'STARTS_AT' => strtotime("2019-02-22 18:00"),
 
-	'ENDS_AT' => strtotime("2019-02-04 22:00"),
+	'ENDS_AT' => strtotime("2019-02-24 14:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -70,7 +70,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	//'BANNER_HTML' => '',
+	'BANNER_HTML' => '<div class="logo"></div>',
 
 	/**
 	 * Link zu den Recordings
