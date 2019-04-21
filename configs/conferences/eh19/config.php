@@ -125,7 +125,6 @@ $CONFIG['OVERVIEW'] = array(
         'GROUPS' => array(
                 'Lecture Rooms' => array(
         		'EI7',
-				'EI9',
         	),
         ),
 );
@@ -140,7 +139,8 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'EI7' => array(
+    'EI7' => array(
+        'WIDE' => true,
 		'DISPLAY' => 'EI 7',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
@@ -158,26 +158,6 @@ $CONFIG['ROOMS'] = array(
 		'FEEDBACK' => true,
 		'EMBED' => true,
 		'IRC' => false,
-		'TWITTER' => true,
-	),
-	'EI9' => array(
-		'DISPLAY' => 'EI 9',
-
-		'STREAM' => 's2',
-		'PREVIEW' => true,
-
-		'TRANSLATION' => false,
-		'STEREO' => false,
-        'DASH' => true,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'AUDIO' => true,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'EI 9',
-
-		'FEEDBACK' => true,
-		'EMBED' => true,
 		'TWITTER' => true,
 	),
 );
@@ -237,7 +217,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('EI 7', 'EI 9'),
+	'ROOMFILTER' => array('EI 7'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
