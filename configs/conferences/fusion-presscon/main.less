@@ -1,0 +1,90 @@
+@import "../../../assets/css/_structure.less";
+
+@link-color:            #ffffff;
+@panel-bg:              #212020;
+@well-bg:               @panel-bg;
+@panel-primary-border:  #212020;
+@panel-default-heading-bg: blue;
+@panel-default-text:    black;
+
+@navbar-default-link-color: white;
+
+//@nav-link-hover-bg:     #ff0000;
+
+@navbar-default-bg:     black;
+
+// conference specific styles here
+
+@font-face {
+	font-family: 'Dosis';
+	src: url("/configs/conferences/fusion-presscon/dosis-v6-latin-regular.woff2");
+}
+
+h1, h2, h3, a, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+        font-family: 'Dosis',sans-serif;
+	color: white;
+}
+
+
+body {
+	background-color: black;
+	background-image: url("/configs/conferences/fusion-presscon/bg.png");
+        background-repeat: repeat;
+        font-family: 'Open Sans',Helvetica;
+	border: None;
+
+}
+
+.banner {
+	color: #94002f;
+
+	h2 {
+		font-weight: normal;
+	}
+}
+
+.navbar-brand {
+	//color: transparent !important;//
+	color: white;
+	height: 50px;
+	background-image: url('logo.png');//
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	background-position: 0px 10px;
+	.icon {
+		display: none !important;
+	}
+}
+
+footer a {
+	color: @link-color;
+}
+
+.well {
+	background: #212020;
+	border: #212020;
+	color: #b7b5b5;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: #333;
+	color: white;
+	border: None;
+}
+
+.nav > li > a{
+	background: #333;
+	color: white;
+	border: None;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover{
+	background: #94002f;
+	color: white;
+	border: None;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+	border: None;
+}
