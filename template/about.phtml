@@ -3,24 +3,17 @@
 	<p>
 		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> is organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>.
 	</p>
-	<p>
-		If you like what we're doing, you can flattr us:<br /><br />
-		<a href="https://flattr.com/thing/3755795/">
-			<img src="<?=h($assets)?>/img/flattrbutton.png" alt="Flattr this" />
-		</a>
-	</p>
-
 
 	<h2>Licences</h2>
 	<p>
-		The video stream is licensed under <a href="https://creativecommons.org/licenses/by/3.0/de/">CC Attribution 3.0 Germany (CC BY 3.0 DE)</a>. This may not hold true for the slides or the actual performance. If in doubt please contact the speaker directly.
+		The video stream is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC Attribution 4.0 (CC BY 4.0)</a>. This may not hold true for the slides or the actual performance. If in doubt please contact the speaker directly.
 	</p>
 	<p>
 		Although the licence permits it, we would like to ask you not to distribute stream dumps. We try to release finished cuts of recordings as quickly as possible
 		<? if($conference->hasReleases()): ?>
 			on <a href="<?=h($conference->getReleasesUrl())?>"><?=h($conference->getReleasesUrl())?></a>
 		<? endif ?>.
-		Early releases of incomplete stream dumps without audio translation, subtitles, intros, <a href="https://auphonic.com/">unprocessed audio</a> and missing meta data is not what we had in mind when we spent months of our spare time with preparations.
+		Early releases of incomplete stream dumps without audio translation, subtitles, intros, unprocessed audio and missing meta data is not what we had in mind when we spent months of our spare time with preparations.
 	</p>
 
 	<h2>Privacy Policy</h2>
