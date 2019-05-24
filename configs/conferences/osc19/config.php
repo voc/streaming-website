@@ -385,7 +385,8 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://events.opensuse.org/conference/oSC19/schedule.xml',
+	#'URL' => 'https://events.opensuse.org/conference/oSC19/schedule.xml',
+	'URL' => 'https://gist.githubusercontent.com/danimo/4c7ebffa80513e812e779e4739298659/raw/b7d50130dff587c24fea9ce573c165a389d9e1c8/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
