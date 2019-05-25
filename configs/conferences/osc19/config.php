@@ -343,7 +343,7 @@ $CONFIG['ROOMS'] = array(
 		// 	'TEXT'    => '#fossgis2016',
 		// ),
 	),
-	'medium' => array(
+	'galerie' => array(
 		'DISPLAY' => 'Galerie',
 		'STREAM' => 's42',
 		'PREVIEW' => true,
