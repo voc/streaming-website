@@ -1,0 +1,54 @@
+@import "../../../assets/css/_structure.less";
+
+@yellow: rgb(250, 199, 55);
+@darkred: rgb(51, 48, 48);
+@lightred: rgb(51, 48, 48);
+
+@link-color:               @yellow;
+@panel-primary-border:     @yellow;
+
+@panel-default-heading-bg: @darkred;
+@panel-default-text:       @yellow;
+@panel-bg:                 @lightred;
+@panel-default-border:     @yellow;
+
+@text-color:               @yellow;
+
+h1 { color: @yellow; }
+
+body.overview .panel-body {
+    min-height: 10px;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(wortkugelgelb.png);
+	background-size: contain;
+}
+
+.gpn19 {
+	background-image: url(wortkugelgelb.png);
+	background-repeat: no-repeat;
+	background-size: 320px 240px;
+
+	position: fixed;
+	left: 10px;
+	bottom: 40px;
+
+	width: 320px;
+	height: 240px;
+
+	opacity: 0.4;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+body {
+    background: url(background.png) no-repeat right top;
+}
