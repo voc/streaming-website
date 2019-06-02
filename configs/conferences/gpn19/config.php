@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
         'Vortragsräume' => array(
 #            'medientheater',
             'grosses-studio',
-            'vortragssaal',
+#            'vortragssaal',
 #            'openhub'
         ),
     ),
