@@ -119,10 +119,10 @@ $CONFIG['OVERVIEW'] = array(
      */
     'GROUPS' => array(
         'Vortragsräume' => array(
-            'medientheater',
+#            'medientheater',
             'grosses-studio',
             'vortragssaal',
-            'openhub'
+#            'openhub'
         ),
     ),
 );
