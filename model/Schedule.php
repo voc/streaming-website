@@ -81,6 +81,7 @@ class Schedule
 			return [];
 
 		$program = array();
+		$rooms = array();
 
 		// re-calculate day-ends
 		// some schedules have long gaps before the first talk or talks that expand beyond the dayend
@@ -96,6 +97,9 @@ class Schedule
 				$roomName = (string)$room['name'];
 				if($this->isRoomFiltered($roomName))
 					continue;
+				
+				if(!in_array($roomName, $rooms))
+					$rooms[] = $roomName;
 
 				foreach($room->event as $event)
 				{
@@ -131,14 +135,38 @@ class Schedule
 			$dayend = (int)$day['end'];
 
 			$roomidx = 0;
-			foreach($day->room as $room)
+			foreach($rooms as $roomName)
 			{
 				$roomidx++;
 				$lastend = false;
 
-				$roomName = trim((string)$room['name']);
 				if($this->isRoomFiltered($roomName))
 					continue;
+
+				$result = $day->xpath("room[@name='".$roomName."']");
+				if(!$result) {
+					// this room has no events on this day -> add long gap
+					$program[$roomName][] = array(
+						'special' => 'gap',
+
+						'fstart' => date('c', $daystart),
+						'fend' => date('c', $dayend),
+
+						'start' => $daystart,
+						'end' => $dayend,
+						'duration' => $dayend - $daystart,
+					);
+					$program[$roomName][] = array(
+						'special' => 'daychange',
+						'title' => 'Daychange from Day '.$dayidx.' to '.($dayidx+1),
+
+						'start' => $dayend,
+						'end' => (int)$schedule->day[$dayidx]['start'],
+						'duration' => 60*60,
+					);
+					continue;
+				}
+				$room = $result[0];
 
 				$eventsSorted = [];
 				foreach($room->event as $event)
