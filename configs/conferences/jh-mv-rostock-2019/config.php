@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Jugend hackt Rostock 2019',
+	'TITLE' => 'Jugend hackt MV | Rostock 2019',
 
 	/**
 	 * Veranstalter
@@ -76,7 +76,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-#	'BANNER_HTML' => '<img src="../configs/conferences/jh-rostock-2019/Banner_JH-Rostock-2018.svg" class="jhrostock">',
+	'BANNER_HTML' => '<img src="../configs/conferences/jh-mv-rostock-2019/LogoRostock.svg" class="jhrostock">',
 
 	/**
 	 * Link zu den Recordings
