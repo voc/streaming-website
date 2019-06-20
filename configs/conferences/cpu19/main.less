@@ -1,0 +1,57 @@
+@import "../../../assets/css/_structure.less";
+
+@link-color:            #006699;
+@panel-bg:              #ddd;
+@well-bg:               @panel-bg;
+@panel-primary-border:  #1d212c;
+@panel-default-heading-bg: #333333;
+@panel-default-text:    #FFFFFF;
+
+@navbar-default-link-color: #FFFFFF;
+
+//@nav-link-hover-bg:     #000000;
+
+@navbar-default-bg:     #1d212c;
+
+// conference specific styles here
+
+body {
+    /*font-family: Fira Code,Monaco,Consolas,Ubuntu Mono,monospace;*/
+    background-color: #1d212c;
+    color: #fff;
+}
+
+.banner {
+	color: #006699;
+
+	h2 {
+		font-weight: normal;
+	}
+}
+
+.well {
+	background: #212020;
+	border: #212020;
+	color: #b7b5b5;
+}
+
+
+footer a {
+	color: @link-color;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: #eee;
+}
+
+.logo {
+	background: url('logo.svg') no-repeat center;
+	height: 170px;
+	position: absolute;
+	bottom: 30px + 25px;
+	z-index: -100;
+
+	left: 0;
+	right: 0;
+}
+
