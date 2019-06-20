@@ -144,7 +144,7 @@ $CONFIG['ROOMS'] = array(
     'H20' => array(
         'WIDE' => true,
 		'DISPLAY' => 'H20',
-		'STREAM' => 'q1',
+		'STREAM' => 's89',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
