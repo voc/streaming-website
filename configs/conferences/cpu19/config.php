@@ -154,7 +154,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'AUDIO' => true,
 
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'H20',
 
 		'FEEDBACK' => false,
