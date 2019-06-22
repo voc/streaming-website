@@ -112,8 +112,13 @@ class Schedule
 				}
 			}
 
-			$day['start'] = $daystart;
-			$day['end'] = $dayend;
+			if((int)$daystart >= PHP_INT_MAX) {
+				$day['start'] = strtotime((string)$day['start']);
+				$day['end'] = strtotime((string)$day['end']);
+			} else {
+				$day['start'] = $daystart;
+				$day['end'] = $dayend;
+			}
 		}
 
 
