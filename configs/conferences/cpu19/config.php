@@ -216,11 +216,11 @@ $CONFIG['SCHEDULE'] = array(
 	'URL' => 'https://pretalx.chaos-party-ulm.de/cpu19/schedule/export/schedule.xml',
 
 	/**
-	 * Nur die angegebenen Räume aus dem Fahrplan beachten
-	 *
+	     * Nur die angegebenen Räume aus dem Fahrplan beachten
+	     *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('H20'),
+	//'ROOMFILTER' => array('H20'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
