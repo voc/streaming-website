@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Rooms' => array(
-			'eventloft',
+			'einsteincenter',
 		),
 	),
 );
@@ -136,18 +136,18 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'eventloft' => array(
+	'einsteincenter' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Eventloft',
+		'DISPLAY' => 'Einstein Center Digital Future',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's3',
+		'STREAM' => 's4',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -251,7 +251,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'S1',
+		'SCHEDULE_NAME' => 'S4',
 
 		/**
 		 * Feedback anzeigen (boolean)
