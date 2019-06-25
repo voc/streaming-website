@@ -122,7 +122,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'q2' => array(
+	's1' => array(
 		'DISPLAY' => 'ConTent',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
@@ -136,7 +136,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'q2',
+		'SCHEDULE_NAME' => 's1',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
