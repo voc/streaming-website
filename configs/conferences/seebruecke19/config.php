@@ -40,7 +40,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'seebrueck.org',
+	'AUTHOR' => 'seebruecke.org',
 
 	/**
 	 * Beschreibungstext
@@ -104,7 +104,7 @@ Wie Carola werden wir nicht mehr warten. Solange die EU und die europäischen Re
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/seebrueck19/index.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/seebruecke19/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
