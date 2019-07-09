@@ -7,9 +7,9 @@ $upcoming_dgs = array_values(array_filter($upcoming_events, function($event) {
 }));
 if(count($upcoming_dgs) < 1)
 {
-	$EPISODE = '???';
-	$DATE = strtotime('1970-01-01 22:00');
-	$TITLE = 'Unknown';
+	$EPISODE = '101';
+	$DATE = strtotime('2019-07-09 20:00');
+	$TITLE = 'Strommessen, aber richtig!';
 }
 else
 {
