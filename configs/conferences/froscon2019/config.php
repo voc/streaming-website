@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'S1', 'S3', 'S4', 'S5', 'S6', 'S41', 'S42', 'C116'
+			'S1', 'S3', 'S4', 'S5', 'S6', 'S41', 'S42' //, 'C116'
 		),
 	),
 );
