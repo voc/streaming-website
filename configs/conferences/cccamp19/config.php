@@ -500,7 +500,7 @@ $CONFIG['IRC'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#camp-everywhere @ hackint',
+	'DISPLAY' => '#camp @ hackint',
 
 	/**
 	 * URL für die IRC-Links.
@@ -511,7 +511,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'https://webirc.hackint.org/#camp-everywhere',
+	'URL' => 'https://webirc.hackint.org/#camp',
 );
 
 /**
