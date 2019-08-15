@@ -366,7 +366,8 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Meitner',
+        'SCHEDULE_NAME' => 'Meitner',
+
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -375,7 +376,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'thm' => array(
-		'DISPLAY' => 'Three Headed Monkey',
+		'DISPLAY' => 'Three Headed Monkey (Plank)',
 		'STREAM' => 's5',
         'PREVIEW' => true,
         'STEREO' => false,
@@ -388,7 +389,8 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => true,
 		'MUSIC' => false,
 
-		'SCHEDULE' => false,
+        'SCHEDULE' => true,
+        'SCHEDULE_NAME' => 'Plank',
 
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
@@ -412,14 +414,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://fahrplan.events.ccc.de/camp/2019/Fahrplan/schedule.xml',
+	'URL' => 'https://data.c3voc.de/camp2019/everything.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Saal G', 'Saal 6'),
+	'ROOMFILTER' => array('Curie', 'Meitner', 'Plank'),
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -509,7 +511,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'irc://irc.hackint.eu:6667/camp-everywhere',
+	'URL' => 'https://webirc.hackint.org/#camp-everywhere',
 );
 
 /**
