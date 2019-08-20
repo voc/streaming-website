@@ -99,7 +99,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/cccamp19/index.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/camp2019/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -353,7 +353,7 @@ $CONFIG['ROOMS'] = array(
 
 	'tent-2' => array(
 		'DISPLAY' => 'Tent 2 (Meitner)',
-		'STREAM' => 's3',
+		'STREAM' => 's2',
         'PREVIEW' => true,
         'STEREO' => false,
 
@@ -531,7 +531,7 @@ $CONFIG['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#cccamp19 @ twitter',
+	'DISPLAY' => '#CCCamp19 @ twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -539,7 +539,7 @@ $CONFIG['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#cccamp19',
+	'TEXT' => '#CCCamp19',
 );
 
 
