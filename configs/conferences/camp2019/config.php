@@ -317,13 +317,13 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-		//'IRC_CONFIG' => array(
-		//	'DISPLAY' => '#31C3-hall-1 @ hackint',
-		//	'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-1',
-		//),
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '#camp-curie @ hackint',
+			'URL'     => 'https://webirc.hackint.org/#camp-curie',
+		),
 
 		/**
-		 * Twitter-Link aktivieren (boolean)
+		 * Twitter-Link aktiviernn (boolean)
 		 *
 		 * Ist dieses Feld auf true gesetzt, wird ein Link zu Twitter angezeigt.
 		 *
@@ -345,10 +345,10 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['TWITTER']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-		//'TWITTER_CONFIG' => array(
-		//	'DISPLAY' => '#hall1 @ twitter',
-		//	'TEXT'    => '#31C3 #hall1',
-		//),
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#tentcurie @ twitter',
+			'TEXT'    => '#tentcurie #cccamp19',
+		),
 	),
 
 	'tent-2' => array(
@@ -372,7 +372,15 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
-		'TWITTER' => true,
+        'TWITTER' => true,
+        'IRC_CONFIG' => array(
+             'DISPLAY' => '#camp-meitner @ hackint',
+             'URL'     => 'https://webirc.hackint.org/#camp-meitner',
+         ),
+        'TWITTER_CONFIG' => array(
+             'DISPLAY' => '#tentmeitner @ twitter',
+             'TEXT'    => '#tentmeitner #cccamp19',
+         ),
 	),
 
 	'thm' => array(
