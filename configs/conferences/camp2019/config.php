@@ -346,7 +346,7 @@ $CONFIG['ROOMS'] = array(
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#tentcurie @ twitter',
+			'DISPLAY' => '#tentcurie @ fediverse/twitter',
 			'TEXT'    => '#tentcurie #cccamp19',
 		),
 	),
@@ -378,7 +378,7 @@ $CONFIG['ROOMS'] = array(
              'URL'     => 'https://webirc.hackint.org/#camp-meitner',
          ),
         'TWITTER_CONFIG' => array(
-             'DISPLAY' => '#tentmeitner @ twitter',
+             'DISPLAY' => '#tentmeitner @ fediverse/twitter',
              'TEXT'    => '#tentmeitner #cccamp19',
          ),
 	),
@@ -539,7 +539,7 @@ $CONFIG['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#CCCamp19 @ twitter',
+	'DISPLAY' => '#CCCamp19 @ fediverse/twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
