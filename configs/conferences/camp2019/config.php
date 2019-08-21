@@ -319,7 +319,7 @@ $CONFIG['ROOMS'] = array(
 		*/
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#camp-curie @ hackint',
-			'URL'     => 'https://webirc.hackint.org/#camp-curie',
+			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#camp-curie',
 		),
 
 		/**
@@ -375,7 +375,7 @@ $CONFIG['ROOMS'] = array(
         'TWITTER' => true,
         'IRC_CONFIG' => array(
              'DISPLAY' => '#camp-meitner @ hackint',
-             'URL'     => 'https://webirc.hackint.org/#camp-meitner',
+             'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#camp-meitner',
          ),
         'TWITTER_CONFIG' => array(
              'DISPLAY' => '#tentmeitner @ fediverse/twitter',
@@ -519,7 +519,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'https://webirc.hackint.org/#camp',
+	'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#camp',
 );
 
 /**
