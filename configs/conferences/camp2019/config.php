@@ -409,30 +409,6 @@ $CONFIG['ROOMS'] = array(
 		'TWITTER' => true,
     ),
 
-    'pwny' => array(
-        'DISPLAY' => 'Pwny Racing - Episode 7 @ Dragon Sleep Pwn Sector',
-        'STREAM' => 'q2',
-        'PREVIEW' => true,
-        'STEREO' => false,
-        
-        'TRANSLATION' => false,
-        'SD_VIDEO' => true,
-        'HD_VIDEO' => true,
-        'DASH' => true,
-        'AUDIO' => true,
-        'SLIDES' => false,
-        'MUSIC' => false,
-
-        'SCHEDULE' => false,
-        'SCHEDULE_NAME' => 'Plank',
-
-        'FEEDBACK' => false,
-        'SUBTITLES' => false,
-        'EMBED' => true,
-        'IRC' => false,
-        'TWITTER' => false,
-     ),
-
 );
 
 
