@@ -387,7 +387,7 @@ $CONFIG['ROOMS'] = array(
 
 	'thm' => array(
 		'DISPLAY' => 'Three Headed Monkey (Plank)',
-		'STREAM' => 's5',
+		'STREAM' => 's4',
         'PREVIEW' => true,
         'STEREO' => false,
 
