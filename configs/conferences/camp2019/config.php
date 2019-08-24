@@ -421,10 +421,6 @@ $CONFIG['ROOMS'] = array(
         'AUDIO' => false,
         'SLIDES' => false,
         'MUSIC' => false,
-
-        'SCHEDULE' => false,
-        'SCHEDULE_NAME' => 'Plank',
-
         'FEEDBACK' => false,
         'SUBTITLES' => false,
         'EMBED' => true,
