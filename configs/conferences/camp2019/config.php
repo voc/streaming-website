@@ -127,7 +127,6 @@ $CONFIG['OVERVIEW'] = array(
 			'thm',
         ),
         'Villages' => array(
-            'toc',
         ),
     ),       
 );
@@ -407,25 +406,6 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => true,
 		'TWITTER' => true,
-    ),
-    'toc' => array(
-        'DISPLAY' => 'TOC',
-        'STREAM' => 'q2',
-        'PREVIEW' => true,
-        'STEREO' => false,
-
-        'TRANSLATION' => false,
-        'SD_VIDEO' => true,
-        'HD_VIDEO' => true,
-        'DASH' => true,
-        'AUDIO' => false,
-        'SLIDES' => false,
-        'MUSIC' => false,
-        'FEEDBACK' => false,
-        'SUBTITLES' => false,
-        'EMBED' => true,
-        'IRC' => false,
-        'TWITTER' => false,
     ),
 
 );
