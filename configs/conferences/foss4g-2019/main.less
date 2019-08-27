@@ -1,0 +1,45 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+
+@brand-primary:         @chaosblue;
+@chaosblue:             #0076ba;
+@commyellow:            #ffc600;
+@campgreen:             #99ba00;
+
+body.overview .room-tent-1 .panel-default > .panel-heading {
+    background-color: @chaosblue;
+}
+
+body.overview .room-tent-2 .panel-default > .panel-heading {
+    background-color: @commyellow;
+}
+
+body.overview .room-thm .panel-default > .panel-heading {
+    background-color: @campgreen;
+}
+
+body.overview .room-toc .panel-default > .panel-heading {
+    background-color: @chaosblue;
+}
+
+body.overview .room-thm .panel-heading {
+    display: block;
+}
+
+body.overview .room-toc .panel-heading {
+    display: block;
+}
+
+body {
+     background-image: url(foss4g19_logo.png);
+     background-repeat: no-repeat;
+     background-size: 468px 676px;
+     background-position: left bottom;
+     background-attachment: fixed;
+}
+
+nav .navbar-brand .icon {
+    background-image: url(foss4g19_logo.png);
+    background-size: contain;
+}
