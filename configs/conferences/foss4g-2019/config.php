@@ -98,7 +98,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/foss4g2019/index.json',
+	//'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/foss4g2019/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -617,7 +617,7 @@ $CONFIG['ROOMS'] = array(
 
 	'NationalTheater' => array(
 		'DISPLAY' => 'National Theater Plenary Hall',
-		'STREAM' => 's11',
+		'STREAM' => 's80',
         'PREVIEW' => true,
         'STEREO' => false,
 
