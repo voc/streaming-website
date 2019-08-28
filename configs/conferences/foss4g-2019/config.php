@@ -667,15 +667,15 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	'ROOMFILTER' => array(  'Plenary (National Theatre)',
                             'Ronda Ballroom',
+                            'Rapsodia Ballroom',
                             'Fortuna West',
                             'Fortuna East',
-                            'Rapsodia Ballroom',
                             'Opera Room',
-                            'Opereta Room',
+               /*             'Opereta Room',
                             'Simfonia',
                             'Menuet',
                             'Hora Room',
-                            'Coral Room',
+                            'Coral Room'  */
                             ),
 
 	/**
