@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2019-08-28 08:00"),
+	'STARTS_AT' => strtotime("2019-08-28 07:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -26,7 +26,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'running',
+//	'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
