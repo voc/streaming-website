@@ -1,5 +1,8 @@
 <?php
 
+$prev_tz = date_default_timezone_get();
+date_default_timezone_set('Europe/Bucharest');
+
 $CONFIG['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
@@ -696,7 +699,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
-	'SIMULATE_OFFSET' => 0,
+	'SIMULATE_OFFSET' => 3600,
 );
 
 
@@ -800,4 +803,5 @@ $CONFIG['TWITTER'] = array(
 );
 
 
+date_default_timezone_set($prev_tz);
 return $CONFIG;
