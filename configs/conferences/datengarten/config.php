@@ -256,13 +256,13 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 
 		/**
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		//'SCHEDULE_NAME' => 'Saal 1',
+		'SCHEDULE_NAME' => 'Saal23',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -365,7 +365,7 @@ $CONFIG['ROOMS'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-//$CONFIG['SCHEDULE'] = array(
+$CONFIG['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -374,7 +374,7 @@ $CONFIG['ROOMS'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-//	'URL' => 'configs/schedule.xml',
+	'URL' => 'https://berlin.ccc.de/datengarten/index.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
@@ -396,7 +396,7 @@ $CONFIG['ROOMS'] = array(
 	 */
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2014-12-28') - strtotime(/* Today */ '2015-03-01'),
 //	'SIMULATE_OFFSET' => 0,
-//);
+);
 
 
 
