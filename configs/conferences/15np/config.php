@@ -150,7 +150,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 		'MUSIC' => false,
 
-		'SCHEDULE' => true,
+		'SCHEDULE' => false,
 		'SCHEDULE_NAME' => 'Hauptbühne',
 
 		'FEEDBACK' => false,
@@ -174,7 +174,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 		'MUSIC' => false,
 
-		'SCHEDULE' => true,
+		'SCHEDULE' => false,
 		'SCHEDULE_NAME' => 'Roter Salon',
 
 		'FEEDBACK' => false,
