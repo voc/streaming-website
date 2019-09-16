@@ -81,7 +81,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://www.youtube.com/playlist?list=PL4ibkKyj5eYSZEz0la9WRZxGkROzTnzZP',
+	'RELEASES' => 'https://www.youtube.com/playlist?list=PL4ibkKyj5eYTLrFWiYriW0BSk99v-lWd2',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
