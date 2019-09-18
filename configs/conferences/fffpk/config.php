@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		<a href="https://www.fridays-for-future.de/de/">fridays-for-future.de</a>
+		<a href="https://fridaysforfuture.de/allefuersklima/">fridaysforfuture.de</a>
 	',
 
 	/**
