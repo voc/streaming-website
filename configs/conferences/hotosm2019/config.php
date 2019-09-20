@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'HOT SUMMIT 2019',
+	'TITLE' => 'HOT Summit 2019',
 
 	/**
 	 * Veranstalter
@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-//	'RELEASES' => 'https://media.ccc.de/c/hotosm2019',
+	'RELEASES' => 'https://www.youtube.com/hotosm',
 
 	/**
 	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
