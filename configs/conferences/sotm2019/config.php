@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2019-09-20 8:30"),
+	'STARTS_AT' => strtotime("2019-09-21 9:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2019-09-20 18:00"),
+	'ENDS_AT' => strtotime("2019-09-23 17:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'HOT Summit 2019',
+	'TITLE' => 'State of the Map 2019',
 
 	/**
 	 * Veranstalter
@@ -54,7 +54,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'HOTOSM, OpenStreetMap, GIS, OpenSource, Geo',
+	'KEYWORDS' => 'State of the Map, Heidelberg, OpenStreetMap, GIS, OpenSource, Geo',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		<a href="https://summit2019.hotosm.org/">Humanitarian OpenStreetMap Team 2019</a>
+		<a href="https://2019.stateofthemap.org">State of the Map 2019</a>
 	',
 
 	/**
@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://www.youtube.com/hotosm',
+	'RELEASES' => 'http://media.ccc.de/c/sotm2019',
 
 	/**
 	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
@@ -110,7 +110,7 @@ $CONFIG['OVERVIEW'] = array(
 		'Live' => array(
 			'west',
 			'ost',
-			'klein'
+			'gross'
 		),
 	),
 );
@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Horsaal West',
+		'SCHEDULE_NAME' => 'HSW',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -156,15 +156,15 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Horsaal Ost',
+		'SCHEDULE_NAME' => 'HSO',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
 	),
 
-	'klein' => array(
-		'DISPLAY' => 'Kleiner Hörsaal',
+	'gross' => array(
+		'DISPLAY' => 'Großer Hörsaal',
 		'STREAM' => 's5',
 		'PREVIEW' => true,
 
@@ -177,7 +177,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Kleiner Horsaal',
+		'SCHEDULE_NAME' => 'GHS',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -200,7 +200,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'https://c3voc.de/share/schedules/hotosm2019.xml',
+	'URL' => 'http://sotm.osmz.ru/19.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
