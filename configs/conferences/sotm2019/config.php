@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	//'DESCRIPTION' => '',
+	'DESCRIPTION' => 'State of the Map is the annual event for all mappers and OpenStreetMap users. Enjoy three days in the heart of Europe with talks, discussions, workshops, code and documentation sprints all around the free and open map of the world.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
