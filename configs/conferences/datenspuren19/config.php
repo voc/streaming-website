@@ -344,7 +344,7 @@ $CONFIG['ROOMS'] = array(
 
   	'kleiner-saal' => array(
   		'DISPLAY' => 'Kleiner Saal',
-  		'STREAM' => 's2',
+  		'STREAM' => 's4',
   		'PREVIEW' => true,
   
   		'TRANSLATION' => false,
