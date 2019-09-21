@@ -92,7 +92,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-//	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/hotosm2019/index.json',
+	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/sotm2019/index.json',
 );
 
 /**
@@ -107,7 +107,7 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Live' => array(
+		'Lecture rooms' => array(
 			'west',
 			'ost',
 			'gross'
@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HSW',
+		'SCHEDULE_NAME' => 'Hörsaal West',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -156,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HSO',
+		'SCHEDULE_NAME' => 'Hörsaal Ost',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -177,7 +177,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'GHS',
+		'SCHEDULE_NAME' => 'Großer Hörsaal',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
