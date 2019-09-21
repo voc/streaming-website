@@ -207,7 +207,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert,: werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Audimax S239', 'Physik Z254', 'Mathe Z211'),
+	'ROOMFILTER' => array('Großer Hörsaal', 'Hörsaal Ost', 'Hörsaal West'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
