@@ -108,7 +108,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture rooms' => array(
-			'west',
+//			'west',
 			'ost',
 			'gross'
 		),
