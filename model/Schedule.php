@@ -138,6 +138,7 @@ class Schedule
 			foreach($rooms as $roomName)
 			{
 				$roomidx++;
+				$laststart = false;
 				$lastend = false;
 
 				if($this->isRoomFiltered($roomName))
@@ -187,6 +188,10 @@ class Schedule
 					$duration = $this->strToDuration((string)$event->duration);
 					$end = $start + $duration;
 
+					// skip duplicate events in fahrplan source
+					if ( $laststart == $start )
+						continue;
+
 					if($lastend && $lastend < $start)
 					{
 						// synthesize pause event
@@ -219,11 +224,11 @@ class Schedule
 						);
 					}
 
-				$personnames = array();
-				if(isset($event->persons)) foreach($event->persons->person as $person)
-					$personnames[] = (string)$person;
+					$personnames = array();
+					if(isset($event->persons)) foreach($event->persons->person as $person)
+						$personnames[] = (string)$person;
 
-				$program[$roomName][] = array(
+					$program[$roomName][] = array(
 						'title' => (string)$event->title,
 						'speaker' => implode(', ', $personnames),
 
@@ -237,6 +242,7 @@ class Schedule
 						'optout' => $this->isOptout($event),
 					);
 
+					$laststart = $start;
 					$lastend = $end;
 				}
 
