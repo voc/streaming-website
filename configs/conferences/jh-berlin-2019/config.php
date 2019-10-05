@@ -120,7 +120,6 @@
 		 */
 			'GROUPS' => array(
 				'Lecture Rooms' => array(
-						'kuppelhalle',
 						'betonhalle',
 				),
 			),
