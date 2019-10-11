@@ -78,6 +78,23 @@ $CONFIG['CONFERENCE'] = array(
 	 'BANNER_HTML' => '<div class="logo"></div>',
 
 	/**
+	 * HTML-Code für die 'Event has not started yet' Seite. Ersetzt den Standardtext.
+	 */
+	 'NOT_STARTED_HTML' => '
+		<h1>Sonoj 2019 has not started yet</h1>
+
+		<p>
+			Live streams will be available here throughout the
+			event. During and leading up to the event
+			<a href="ircs://chat.freenode.net/sonoj">#sonoj on Freenode</a>
+			will be a place for discussion and questions.
+			If you do not have an IRC client installed, try out
+			<a href="https://webchat.freenode.net/">freenode webchat</a>.
+			So even if you are not able to visit in person,
+			please feel free to participate remotely.
+		</p>',
+
+	/**
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
