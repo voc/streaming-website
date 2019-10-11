@@ -188,6 +188,13 @@ class Conference extends ModelBase
 		return $this->get('CONFERENCE.FOOTER_HTML');
 	}
 
+	public function hasNotStartedHtml() {
+		return $this->has('CONFERENCE.NOT_STARTED_HTML');
+	}
+	public function getNotStartedHtml() {
+		return $this->get('CONFERENCE.NOT_STARTED_HTML');
+	}
+
 
 	public function getRooms()
 	{

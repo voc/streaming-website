@@ -1,7 +1,11 @@
 <div class="container about">
+<? if($conference->hasNotStartedHtml()): ?>
+	<?= $conference->getNotStartedHtml() ?>
+<? else: ?>
 	<h1><?=h($conference->getTitle())?> has not started yet</h1>
 
 	<p>
 		Live streams will be available here once it has started. Please check back later.
 	</p>
+<? endif ?>
 </div>
