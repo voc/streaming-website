@@ -142,7 +142,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-    'HBK' => array(
+    'ruum42' => array(
         'WIDE' => true,
 		'DISPLAY' => 'ruum42',
 		'STREAM' => 'q2',
@@ -156,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HBK',
+		'SCHEDULE_NAME' => 'ruum42',
 
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
