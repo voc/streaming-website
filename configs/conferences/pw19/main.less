@@ -1,0 +1,238 @@
+@import "../../../assets/css/_structure.less";
+
+
+// conference specific styles here
+@pw-darkblue:   #1c234c;
+@pw-lightblue:  #7e94b7;
+@pw-yellow:     #ffd900;
+@pw-darkgrey:   #677077;
+@pw-lightgrey:  #b5b5b7;
+@pw-darkpink:   #ea5297;
+@pw-lightpink:  #ef7eb0;
+
+@pw-color:     @pw-darkpink;
+
+@body-text:     @pw-darkblue;
+
+@overview-color: @pw-darkblue;
+
+@darker-grey:   #262626;
+@dark-grey:     lighten(@darker-grey, 20%);
+@light-grey:    lighten(@darker-grey, 30%);
+@lighter-grey:  lighten(@darker-grey, 40%);
+
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @pw-color;
+@text-color:            @body-text;
+
+@link-color:            @body-text;
+@link-hover-color:      @lighter-grey;
+
+// @navbar-height:         70px;
+
+@navbar-default-bg:     @pw-lightpink;
+@navbar-default-border: @pw-lightpink;
+
+@navbar-default-link-color:       white;
+//@navbar-default-link-hover-color: @link-hover-color;
+
+body {
+	background-image: url("/configs/conferences/pw19/assets/bg.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color: @pw-darkpink;
+	padding: @navbar-height 0;
+	color: @body-text;
+}
+
+body > div.container:after{
+	content: "";
+	background-image: url("/configs/conferences/pw19/assets/splash.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	height: 462px;
+	width: 346px;
+	z-index: -9999;
+}
+
+body > .container {
+	background-color: rgba(255,255,255, 0.4);
+	padding-bottom: 15px;
+	border: 2px solid @pw-lightpink;
+}
+
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: "pt_sansregular",Arial,sans-serif;
+}
+
+.group-live {
+	margin-top: 60px;
+}
+
+.btn {
+	border: 1px solid @pw-lightpink;
+}
+ul.nav > li > a {
+	border-left: 2px solid @pw-lightpink !important;
+	border-right: none !important;
+	border-top: 2px solid @pw-lightpink !important;
+	border-bottom: none !important;
+}
+ul.nav {
+	border-right:  2px solid @pw-lightpink !important;
+}
+
+.overview {
+	h2 {
+		text-align: center;
+
+		text-transform: uppercase;
+		font-weight: bold;
+
+		margin: 40px 0 20px 0;
+		color: @pw-darkblue;
+	}
+
+	.room, .recordings {
+		a, a:hover {
+			text-decoration: none;
+			color: @overview-color;
+		}
+
+		.panel {
+			//background: none;
+			background-color: rgba(255,255,255,0.9);
+			border: 2px solid @pw-lightpink;
+
+			&:hover {
+				text-decoration: none;
+
+				.panel-body {
+					border-top: 2px solid @pw-lightpink;
+				}
+
+				.panel-body .program-schedule .next-talk {
+					border-bottom: 2px solid @pw-lightpink;
+				}
+			}
+
+			.panel-title {
+				color: @overview-color;
+				font-size: 18px;
+			}
+
+			.panel-primary {
+				background-color: @light-grey;
+				border-color: @pw-lightpink;
+				color: @overview-color;
+				a {
+					color: @overview-color;
+				}
+			}
+
+			.panel-heading {
+				background: none;
+				border: none;
+
+				display: block !important;
+
+				text-transform: uppercase;
+				font-weight: bold;
+
+				padding: 8px 15px;
+
+				a {
+					color: @overview-color;
+				}
+			}
+
+		}
+	}
+}
+
+.overview .room-group-live-music .room .panel .panel-body {
+	margin-bottom: 0;
+}
+
+.banner img {
+	max-width: 50%;
+}
+.banner {
+	display: none
+}
+
+.well a {
+	color: @dark-grey;
+	text-decoration: underline;
+}
+.alert {
+	a {
+		text-decoration: underline;
+	}
+	&.alert-success a {
+		color: @state-success-text;
+	}
+	&.alert-info a {
+		color: @state-info-text;
+	}
+	&.alert-warning a {
+		color: @state-warning-text;
+	}
+	&.alert-danger a {
+		color: @state-danger-text;
+	}
+}
+
+body.multiview .cell {
+	color: black;
+}
+
+.closed .about a {
+	text-decoration: underline;
+	color: @brand-primary;
+}
+
+.schedule .block.pause {
+	color: black !important;
+}
+
+
+footer {
+	color: lightgrey;
+}
+
+.nav-tabs > li > a {
+	border-radius: 0 !important;
+	background-color: rgba(255,255,255,0.4);
+	&:hover {
+		background-color: rgba(255,255,255,0.6);
+	}
+}
+
+body.room .tab-content {
+	background-color: rgba(255,255,255,0.85);
+	border-left: 2px solid @pw-lightpink;
+	border-bottom: 2px solid @pw-lightpink;
+	border-right: 2px solid @pw-lightpink;
+}
+
+@media (max-width: 768px)
+{
+	nav {
+		position: static !important;
+	}
+	body {
+		padding: 0 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.banner {
+		margin-top: 60px;
+	}
+}
