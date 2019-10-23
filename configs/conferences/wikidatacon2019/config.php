@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
 			'kleist',
-			'keppler',
+			'kepler',
 			'einstein',
 		),
 	),
@@ -345,8 +345,8 @@ $CONFIG['ROOMS'] = array(
 		// ),
 	),
 
-	'keppler' => array(
-		'DISPLAY' => 'Keppler',
+	'kepler' => array(
+		'DISPLAY' => 'Kepler',
 		'STREAM' => 's3',
 		'PREVIEW' => true,
 
@@ -359,8 +359,8 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'DISPLAY' => 'Keppler',
-		'SCHEDULE_NAME' => 'Keppler',
+		'DISPLAY' => 'Kepler',
+		'SCHEDULE_NAME' => 'Kepler',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -420,7 +420,7 @@ $CONFIG['SCHEDULE'] = array(
 	*/
 	'ROOMFILTER' => [
 		'Kleist',
-		'Keppler',
+		'Kepler',
 		'Einstein',
 	],
 
