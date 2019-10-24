@@ -11,12 +11,13 @@ foreach (Conferences::getActiveConferences() as $conference)
 
 	$isCurrentlyStreaming = false;
 
+	// iterate through all rooms and only activate flag if there is something other than a daychange event
 	foreach($conference->getRooms() as $room) {
 		$currentTalk = $room->getCurrentTalk($now);
 
 		if ($currentTalk) {
-			$isCurrentlyStreaming = true;
-			if (isset($currentTalk['special']) && $currentTalk['special'] == 'daychange') {
+			// if current event is a daychange ignore room, but only if the next talk does not start in 30 minutes
+			if ( !(isset($currentTalk['special']) && $currentTalk['special'] == 'daychange' && $currentTalk['end'] - $basetime > 30*60 )) {
 				$isCurrentlyStreaming = true;
 				break;
 			}
