@@ -154,9 +154,20 @@ class Room
 		);
 	}
 
+	public function hasWebchat() {
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.WEBCHAT') && $this->getConference()->has('WEBCHAT_URL');
+	}
+
+	public function getWebchatUrl() {
+		return sprintf(
+			$this->getConference()->get('ROOMS.'.$this->getSlug().'.WEBCHAT_URL', $this->getConference()->get('WEBCHAT_URL')),
+			rawurlencode($this->getSlug())
+		);
+	}
+
 
 	public function hasChat() {
-		return $this->hasTwitter() || $this->hasIrc();
+		return $this->hasTwitter() || $this->hasIrc() || $this->hasWebchat();
 	}
 
 

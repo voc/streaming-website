@@ -1,3 +1,9 @@
+<? if($room->hasWebchat()): ?>
+	<div>
+		<iframe class="webchatframe" src="<?=h($room->getWebchatUrl())?>"></iframe>
+	</div>
+<? endif ?>
+
 <? if($room->hasIrc()): ?>
 	<div>
 		<a class="btn btn-primary irclink" href="<?=h($room->getIrcUrl())?>" target="_blank">
