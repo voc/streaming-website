@@ -326,10 +326,10 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#sonoj @ freenode',
-			'URL'     => 'ircs://chat.freenode.net:6697/sonoj',
-		),
+		//'IRC_CONFIG' => array(
+		//	'DISPLAY' => '#sonoj @ freenode',
+		//	'URL'     => 'ircs://chat.freenode.net:6697/sonoj',
+		//),
 
 		/**
 		 * Twitter-Link aktivieren (boolean)
@@ -358,6 +358,8 @@ $CONFIG['ROOMS'] = array(
 		// 	'DISPLAY' => '#fossgis2016 @ twitter',
 		// 	'TEXT'    => '#fossgis2016',
 		// ),
+
+		'WEBCHAT' => true,
 	),
 );
 
@@ -433,6 +435,12 @@ $CONFIG['TWITTER'] = array(
 	 */
 	'TEXT' => '#sonoj2019',
 );
+
+$CONFIG['IRC'] = array(
+	'DISPLAY' => '#sonoj @ freenode',
+	'URL'     => 'ircs://chat.freenode.net:6697/sonoj',
+);
+$CONFIG['WEBCHAT_URL'] = 'https://sonoj.org/chat';
 
 
 return $CONFIG;
