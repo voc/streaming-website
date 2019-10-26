@@ -120,8 +120,8 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
 			'kleist',
-			'kepler',
-			'einstein',
+//			'kepler',
+//			'einstein',
 		),
 	),
 );
@@ -420,8 +420,8 @@ $CONFIG['SCHEDULE'] = array(
 	*/
 	'ROOMFILTER' => [
 		'Kleist',
-		'Kepler',
-		'Einstein',
+//		'Kepler',
+//		'Einstein',
 	],
 
 	/**
