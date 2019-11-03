@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'configs/conferences/jh-ulm-2019/vod.json',
+	'RELIVE_JSON' => 'configs/conferences/jh19-ulm/vod.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
