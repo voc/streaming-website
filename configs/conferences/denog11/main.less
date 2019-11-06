@@ -1,0 +1,53 @@
+@import "../../../assets/css/_structure.less";
+
+@gelb: #f9cd00;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #292a2d;
+
+@brand-primary: @gelb;
+@well-bg: @grey-lighter;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: @grey-darker;
+@panel-default-text: @gelb;
+@panel-bg: @grey-lighter;
+
+body {
+	background-color: @dark;
+	color: @grey-light;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(denog-logo-konferenz-11_v001_whitebg.png);
+	background-size: contain;
+}
+
+.outer-div {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+}
+
+.denog11 {
+	background-image: url(denog-logo-konferenz-11_v001_whitebg.png);
+	background-repeat: no-repeat;
+	background-size: 500px 354px;
+
+	margin: 0 auto;
+
+	width: 500px;
+	height: 354px;
+
+	opacity: 1;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
