@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2018-11-12 13:30"),
+	'ENDS_AT' => strtotime("2019-11-12 13:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -119,7 +119,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Helmut Schmidt Auditorium'
+			'helmut-schmidt-auditorium'
 		),
 	),
 );
@@ -134,9 +134,9 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Helmut Schmidt Auditorium' => array(
+	'helmut-schmidt-auditorium' => array(
                 'DISPLAY' => 'Helmut Schmidt Auditorium',
-                'STREAM' => 's1',
+                'STREAM' => 's2',
                 'PREVIEW' => true,
                 'TRANSLATION' => false,
                 'STEREO' => false,
