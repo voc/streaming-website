@@ -157,6 +157,7 @@ $CONFIG['ROOMS'] = array(
 
                 'EMBED' => true,
                 'IRC' => true,
+		'TWITTER' => true,
 	)
 );
 
@@ -202,6 +203,16 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-05-21') - strtotime(/* Today */ '2016-05-19'),
 	'SIMULATE_OFFSET' => 0,
+);
+
+$CONFIG['TWITTER'] = array(
+    'DISPLAY' => '#denog11 @ twitter',
+    'TEXT' => '#denog11',
+);
+
+$CONFIG['IRC'] = array(
+    'DISPLAY' => '#denog @ IRCnet',
+    'URL' => 'irc://irc.man-da.de:6667/denog',
 );
 
 
