@@ -1,0 +1,102 @@
+@import "../../../assets/css/_structure.less";
+
+@orange: #FE5000;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #D0D0CE;
+@dark: #000000;
+@green: #00BB31;
+
+@brand-primary: @orange;
+@well-bg: @grey-lighter;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: @grey-darker;
+@panel-default-text: @orange;
+@panel-bg: @grey-lighter;
+
+/*
+ * font
+ */
+ @import url("/configs/conferences/36c3/font.css");
+
+.font-headline {
+	//color: @color-grey;
+	font-family: 'Blackout 2AM', sans-serif;
+  	font-weight: 100; /* black*/
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+body.overview .room a.title,
+body.overview .panel-primary a,
+.navbar-brand,
+.panel-heading,
+.panel-default > .panel-heading,
+.nav.nav-tabs {
+	.font-headline()
+}
+
+h2 { color: @green; }
+
+body.overview .panel-body {
+    min-height: 10px;
+}
+
+body {
+	background-color: @dark;
+	color: @grey-light;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav.navbar {
+	.navbar-brand {
+		color: @orange;
+	}
+
+	.navbar-right {
+		text-align: right;
+
+		.btn-ssl, a.feedback, a.releases, a.about {
+			color: @orange;
+			background-color: transparent;
+			border-color: @orange;
+
+			&:hover {
+				background-color: @green;
+				border-color: @green;
+			}
+		}
+
+		.btn-ssl.btn-warning {
+			color: grey;
+			background: transparent;
+			border-color: grey;
+		}
+	}
+}
+
+.congress {
+	background-image: url(destruction.png);
+	background-repeat: no-repeat;
+	background-size: 500px 213px;
+
+	position: fixed;
+	left: 10px;
+	bottom: 40px;
+
+	width: 500px;
+	height: 213px;
+
+	opacity: 1;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
