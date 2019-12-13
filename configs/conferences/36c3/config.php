@@ -133,7 +133,7 @@ $CONFIG['OVERVIEW'] = array(
 			'chaoswest',
 			'wikipakawg',
 			'oio',
-			'sendezentrum'
+			'sz'
 		),
 	),
 );
@@ -373,7 +373,7 @@ $CONFIG['ROOMS'] = array(
 			'oio' => array(
 				'DISPLAY' => 'Open Infrastructure Orbit',
 				'DISPLAY_SHORT' => 'OIO',
-				'STREAM' => 'soio',
+				'STREAM' => 'q1',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
@@ -395,6 +395,34 @@ $CONFIG['ROOMS'] = array(
 				'TWITTER_CONFIG' => array(
 					'DISPLAY' => 'freifunk @ twitter',
 					'TEXT'    => '@freifunk',
+				),
+			),
+
+			'sz' => array(
+				'DISPLAY' => 'Sendezentrum',
+				'DISPLAY_SHORT' => 'SZ',
+				'STREAM' => 's80',
+				'PREVIEW' => true,
+				'TRANSLATION' => [
+				],
+				'STEREO' => false,
+				'SD_VIDEO' => true,
+				'HD_VIDEO' => true,
+				'DASH' => true,
+				'AUDIO' => true,
+				'SLIDES' => false,
+				'MUSIC' => false,
+						'SCHEDULE' => true,
+				'SCHEDULE_NAME' => 'Sendezentrum',
+				'FEEDBACK' => true,
+				'SUBTITLES' => false,
+				'SUBTITLES_ROOM_ID' => 2,
+				'EMBED' => true,
+				'IRC' => false,
+				'TWITTER' => true,
+				'TWITTER_CONFIG' => array(
+					'DISPLAY' => 'sendezenrtum @ twitter',
+					'TEXT'    => '@sendezentrum',
 				),
 			),
 			
