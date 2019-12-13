@@ -15,6 +15,22 @@
 @panel-default-text: @orange;
 @panel-bg: @grey-lighter;
 
+@navbar-height:         70px;
+@navbar-default-bg:     black;
+@navbar-default-border: black;
+
+/*
+ * buttons
+ */
+ @btn-font-weight: 600;
+ a.btn, input.btn, .btn-primary {
+	 text-transform: uppercase;
+	 //color: @orange;
+ }
+ a.btn:hover, input.btn:hover {
+	 color: @green;
+ }
+
 /*
  * font
  */
@@ -39,6 +55,7 @@ body.overview .panel-primary a,
 	.font-headline()
 }
 
+h1, h3 { color: @orange; }
 h2 { color: @green; }
 
 body.overview .panel-body {
@@ -48,10 +65,7 @@ body.overview .panel-body {
 body {
 	background-color: @dark;
 	color: @grey-light;
-}
-
-.overview .panel-title {
-	font-weight: bold;
+	padding: @navbar-height 0;
 }
 
 nav.navbar {
