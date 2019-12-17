@@ -173,7 +173,7 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => true,
 				'IRC_CONFIG' => array(
 					'DISPLAY' => '#36C3-hall-a @ hackint',
-					'URL'     => 'ircs://irc.hackint.org:6697/36C3-hall-a',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-a',
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
@@ -205,7 +205,7 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => true,
 				'IRC_CONFIG' => array(
 					'DISPLAY' => '#36C3-hall-b @ hackint',
-					'URL'     => 'ircs://irc.hackint.org:6697/36C3-hall-b',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-b',
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
@@ -237,7 +237,7 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => true,
 				'IRC_CONFIG' => array(
 					'DISPLAY' => '#36C3-hall-c @ hackint',
-					'URL'     => 'ircs://irc.hackint.org:6697/36C3-hall-c',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-c',
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
@@ -269,7 +269,7 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => true,
 				'IRC_CONFIG' => array(
 					'DISPLAY' => '#36C3-hall-d @ hackint',
-					'URL'     => 'ircs://irc.hackint.org:6697/36C3-hall-d',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-d',
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
@@ -279,7 +279,7 @@ $CONFIG['ROOMS'] = array(
 			),
 			'halle' => array(
 				'DISPLAY' => 'Eliza',
-				'STREAM' => 's4',
+				'STREAM' => 's5',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 					['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -301,7 +301,7 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => true,
 				'IRC_CONFIG' => array(
 					'DISPLAY' => '#36C3-hall-e @ hackint',
-					'URL'     => 'ircs://irc.hackint.org:6697/36C3-hall-e',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-e',
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
@@ -338,7 +338,7 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => true,
 				'IRC_CONFIG' => array(
 					'DISPLAY' => '#chaoswest-stage @ hackint',
-					'URL'     => 'ircs://irc.hackint.org:6697/chaoswest-stage',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#chaoswest-stage',
 				),
 			),
 		
@@ -549,7 +549,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'ircs://irc.hackint.org:6697/36C3-%s',
+    'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s',
 );
 
 /**
