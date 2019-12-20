@@ -149,7 +149,7 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'halla' => array(
-				'DISPLAY' => 'Adams',
+				'DISPLAY' => 'Ada',
 				'WIDE' => true,
                 'STREAM' => 's1',
                 'PREVIEW' => true,
@@ -165,7 +165,7 @@ $CONFIG['ROOMS'] = array(
                 'AUDIO' => true,
                 'MUSIC' => false,
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'Adams',
+                'SCHEDULE_NAME' => 'Ada',
                 'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'SUBTITLES_ROOM_ID' => 1,
@@ -357,7 +357,7 @@ $CONFIG['ROOMS'] = array(
 				'SLIDES' => false,
 				'MUSIC' => false,
 						'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'WikiPakaWG Esszimmer',
+				'SCHEDULE_NAME' => 'WikiPaka WG: Esszimmer',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'SUBTITLES_ROOM_ID' => 2,
@@ -413,7 +413,7 @@ $CONFIG['ROOMS'] = array(
 				'SLIDES' => false,
 				'MUSIC' => false,
 						'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'Sendezentrum',
+				'SCHEDULE_NAME' => 'Bühne',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'SUBTITLES_ROOM_ID' => 2,
@@ -447,8 +447,8 @@ $CONFIG['SCHEDULE'] = array(
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    'ROOMFILTER' => array('Adams', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
-		'WikiPakaWG Esszimmer', 'Chaos-West Bühne', 'OIO Stage'),
+    'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
+		'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'Bühne'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
