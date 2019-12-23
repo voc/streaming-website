@@ -136,15 +136,35 @@ nav.navbar {
 }
 
 .congress {
-	background-image: url(36c3_vert.png);
+     background-image: url(36c3_vert.png);
+     background-repeat: no-repeat;
+     background-size: 160px 780px;
+
+     position: fixed;
+     left: 10px;
+     bottom: 100px;
+
+     width: 160px;
+     height: 780px;
+
+     opacity: 1;
+     z-index: -100;
+
+     @media (max-width: @screen-sm-min) {
+         display: none;
+     }
+ }
+
+.congress-motto {
+	background-image: url(motto_vertical.png);
 	background-repeat: no-repeat;
-	background-size: 160px 780px;
+	background-size: 116px 780px;
 
 	position: fixed;
-	left: 10px;
-	bottom: 40px;
+	right: 10px;
+	bottom: 100px;
 
-	width: 160px;
+	width: 116px;
 	height: 780px;
 
 	opacity: 1;
