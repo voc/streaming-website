@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	 'RELIVE_JSON' => 'https://live.ber.c3voc.de/relive/36c3/index.json'
+	 //'RELIVE_JSON' => 'https://live.ber.c3voc.de/relive/36c3/index.json'
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
@@ -595,8 +595,14 @@ $CONFIG['EXTRA_FILES'] = array(
 	'everything.schedule.xml' => 'http://data.c3voc.de/36C3/everything.schedule.xml',
 	'everything.schedule.json' => 'http://data.c3voc.de/36C3/everything.schedule.json',
 
-	'workshops.schedule.xml' => 'http://data.c3voc.de/36C3/workshops.schedule.xml',
-	'workshops.schedule.json' => 'http://data.c3voc.de/36C3/workshops.schedule.json',
+    'stages.schedule.xml' => 'http://data.c3voc.de/36C3/stages.schedule.xml',
+    'stages.schedule.json' => 'http://data.c3voc.de/36C3/stages.schedule.json',
+
+    'wiki.schedule.xml' => 'http://data.c3voc.de/36C3/wiki.schedule.xml',
+    'wiki.schedule.json' => 'http://data.c3voc.de/36C3/wiki.schedule.json',
+
+	//'workshops.schedule.xml' => 'http://data.c3voc.de/36C3/workshops.schedule.xml',
+	//'workshops.schedule.json' => 'http://data.c3voc.de/36C3/workshops.schedule.json',
 );
 
 
