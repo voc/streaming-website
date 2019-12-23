@@ -345,9 +345,10 @@ $CONFIG['ROOMS'] = array(
 			'wikipakawg' => array(
 				'DISPLAY' => 'WikiPakaWG Esszimmer',
 				'DISPLAY_SHORT' => 'WikiPakaWG',
-				'STREAM' => 's151',
+				'STREAM' => 's89',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
+					['endpoint' => 'translated',   'label' => 'Translated1'],
 				],
 				'STEREO' => false,
 				'SD_VIDEO' => true,
