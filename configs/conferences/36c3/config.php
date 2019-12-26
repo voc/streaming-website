@@ -133,7 +133,8 @@ $CONFIG['OVERVIEW'] = array(
 			'chaoswest',
 			'wikipakawg',
 			'oio',
-			'sz'
+            'sz',
+            'cdc'
 		),
 	),
 );
@@ -374,7 +375,7 @@ $CONFIG['ROOMS'] = array(
 			'oio' => array(
 				'DISPLAY' => 'Open Infrastructure Orbit',
 				'DISPLAY_SHORT' => 'OIO',
-				'STREAM' => 'q1',
+				'STREAM' => 'oio',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
@@ -397,7 +398,35 @@ $CONFIG['ROOMS'] = array(
 					'DISPLAY' => 'freifunk @ twitter',
 					'TEXT'    => '@freifunk',
 				),
-			),
+            ),
+
+            'cdc' => array(
+                 'DISPLAY' => 'CDC',
+                 'DISPLAY_SHORT' => 'CDC',
+                 'STREAM' => 'cdc',
+                 'PREVIEW' => true,
+                 'TRANSLATION' => [
+                 ],
+                 'STEREO' => false,
+                 'SD_VIDEO' => true,
+                 'HD_VIDEO' => true,
+                 'DASH' => true,
+                 'AUDIO' => true,
+                 'SLIDES' => false,
+                 'MUSIC' => false,
+                 'SCHEDULE' => true,
+                 'SCHEDULE_NAME' => 'CDC Stage',
+                 'FEEDBACK' => true,
+                 'SUBTITLES' => false,
+                 'SUBTITLES_ROOM_ID' => 2,
+                 'EMBED' => true,
+                 'IRC' => false,
+                 //'TWITTER' => true,
+                 //'TWITTER_CONFIG' => array(
+                 //    'DISPLAY' => 'freifunk @ twitter',
+                 //    'TEXT'    => '@freifunk',
+                 ),
+             ),
 
 			'sz' => array(
 				'DISPLAY' => 'Sendezentrum',
