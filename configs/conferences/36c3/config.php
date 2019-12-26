@@ -425,7 +425,7 @@ $CONFIG['ROOMS'] = array(
                  //'TWITTER_CONFIG' => array(
                  //    'DISPLAY' => 'freifunk @ twitter',
                  //    'TEXT'    => '@freifunk',
-                 ),
+                 //),
              ),
 
 			'sz' => array(
