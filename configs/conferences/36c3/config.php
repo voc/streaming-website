@@ -178,8 +178,8 @@ $CONFIG['ROOMS'] = array(
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#hallA @ twitter',
-					'TEXT'    => '#36C3 #hallA',
+					'DISPLAY' => '#Ada @ twitter',
+					'TEXT'    => '#36C3 #Ada',
 				),
 			),
 			'hallb' => array(
@@ -210,8 +210,8 @@ $CONFIG['ROOMS'] = array(
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#hallB @ twitter',
-					'TEXT'    => '#36C3 #hallB',
+					'DISPLAY' => '#Borg @ twitter',
+					'TEXT'    => '#36C3 #Borg',
 				),
 			),
 			'hallc' => array(
@@ -242,8 +242,8 @@ $CONFIG['ROOMS'] = array(
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#hallC @ twitter',
-					'TEXT'    => '#36C3 #hallC',
+					'DISPLAY' => '#Clarke @ twitter',
+					'TEXT'    => '#36C3 #Clarke',
 				),
 			),
 			'halld' => array(
@@ -274,8 +274,8 @@ $CONFIG['ROOMS'] = array(
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#hallD @ twitter',
-					'TEXT'    => '#36C3 #hallD',
+					'DISPLAY' => '#Dijkstra @ twitter',
+					'TEXT'    => '#36C3 #Dijkstra',
 				),
 			),
 			'halle' => array(
@@ -306,8 +306,8 @@ $CONFIG['ROOMS'] = array(
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#hallE @ twitter',
-					'TEXT'    => '#36C3 #hallE',
+					'DISPLAY' => '#Eliza @ twitter',
+					'TEXT'    => '#36C3 #Eliza',
 				),
 			),
 			'chaoswest' => array(
@@ -333,8 +333,8 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => false,
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '@ChaosWildWest @ twitter',
-					'TEXT'    => '@ChaosWildWest',
+					'DISPLAY' => '#CWStage @ twitter',
+					'TEXT'    => '#CWStage',
 				),
 				'IRC' => true,
 				'IRC_CONFIG' => array(
@@ -395,8 +395,8 @@ $CONFIG['ROOMS'] = array(
 				'IRC' => false,
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => 'freifunk @ twitter',
-					'TEXT'    => '@freifunk',
+					'DISPLAY' => '#OIOStage @ twitter',
+					'TEXT'    => '#OIOStage',
 				),
             ),
 
