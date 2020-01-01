@@ -6,6 +6,12 @@ if(!$relive->isEnabled())
 
 $talk = $relive->getTalk(intval($_GET['id']));
 
+if($talk['status'] == 'released' && empty($_GET['redirect'])) {
+	header("HTTP/1.1 301 Moved Permanently"); 
+	header('Location: ' . $talk['release_url']);
+	return;
+}
+
 echo $tpl->render(array(
 	'page' => 'relive-player',
 	'title' => 'Relive: ' . $talk['title'],
