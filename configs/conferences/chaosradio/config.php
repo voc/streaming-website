@@ -9,7 +9,7 @@ $upcoming_crs = array_values(array_filter($upcoming_events, function($event) {
 if(count($upcoming_crs) < 1)
 {
 	$EPISODE = '???';
-	$DATE = strtotime('1970-01-01 22:00');
+	$DATE = strtotime('1970-01-01 20:15');
 	$TITLE = 'Chaosradio';
 	$IM_CCCB = true;
 }
@@ -19,7 +19,7 @@ else
 	preg_match('/^events:cr([0-9]+)$/i', $upcoming_cr['short_name'], $m);
 
 	$EPISODE = intval($m[1]);
-	$DATE = strtotime($upcoming_cr['start_date'].' 22:00');
+	$DATE = strtotime($upcoming_cr['start_date'].' 20:15');
 	$TITLE = $upcoming_cr['name'];
 	$IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
 }
