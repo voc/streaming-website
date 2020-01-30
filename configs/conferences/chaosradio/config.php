@@ -25,7 +25,6 @@ else
 }
 
 $STREAM = $IM_CCCB ? 's23' : 'q2';
-$STREAM = 's1';
 
 $CONFIG['CONFERENCE'] = array(
 	/**
