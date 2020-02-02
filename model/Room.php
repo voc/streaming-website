@@ -48,7 +48,7 @@ class Room
 	}
 
 	public function getThumb() {
-		return joinpath(['/', 'thumbs', $this->getStream().'.png']);
+		return proto().'://cdn.c3voc.de'.joinpath(['/thumbnail', $this->getStream(), 'thumb.jpeg']);
 	}
 
 	public function getLink() {

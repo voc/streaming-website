@@ -265,6 +265,6 @@ class Stream
 		);
 	}
 	public function getPoster() {
-		return joinpath(['/', 'thumbs', rawurlencode($this->getRoom()->getStream()).'-poster.png']);
+		return proto().'://cdn.c3voc.de'.joinpath(['/thumbnail', $this->getRoom()->getStream(), 'poster.jpeg']);
 	}
 }
