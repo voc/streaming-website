@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Jugend Hackt Jülich 2020',
+	'TITLE' => 'Jugend Hackt: Mädchen vernetzen 2020',
 
 	/**
 	 * Veranstalter
