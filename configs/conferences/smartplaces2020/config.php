@@ -161,7 +161,7 @@ $CONFIG['ROOMS'] = array(
 		 * die native-Streams verwendet, andernfalls wird native und translated
 		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
 		 */
-		'TRANSLATION' => false,
+		'TRANSLATION' => true,
 
 		/**
 		 * stereo-Tonspur statt native-Tonspur benutzen
