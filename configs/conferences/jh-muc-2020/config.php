@@ -359,37 +359,39 @@ $CONFIG['EMBED'] = true;
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-$CONFIG['SCHEDULE'] = array(
-	/**
-	 * URL zum Fahrplan-XML
-	 *
-	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
-	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
-	 * externer HTTP-Cache vorgeschaltet werden.
-	 */
-	'URL' => 'configs/conferences/jh-jue-2020/schedule.xml',
+// $CONFIG['SCHEDULE'] = array(
+// 	/**
+// 	 * URL zum Fahrplan-XML
+// 	 *
+// 	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
+// 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
+// 	 * externer HTTP-Cache vorgeschaltet werden.
+// 	 */
+// 	'URL' => 'configs/conferences/jh-muc-20/schedule.xml',
 
-        /**
-         * Nur die angegebenen Räume aus dem Fahrplan beachten
-         *
-         * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-         */
-        'ROOMFILTER' => array('s5'),
+//         /**
+//          * Nur die angegebenen Räume aus dem Fahrplan beachten
+//          *
+//          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+//          *
+// 		 * 'ROOMFILTER' => array('s80'),
+// 		 */
 
-	/**
-	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-	 */
-	'SCALE' => 7,
 
-	/**
-	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-	 *
-	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
-	 */
-	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2019-05-21') - strtotime(/* Today */ '2019-05-19'),
-	'SIMULATE_OFFSET' => 0,
-);
+// 	/**
+// 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
+// 	 */
+// 	'SCALE' => 7,
+
+// 	/**
+// 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
+// 	 *
+// 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
+// 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
+// 	 */
+// 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2019-05-21') - strtotime(/* Today */ '2019-05-19'),
+// 	'SIMULATE_OFFSET' => 0,
+// );
 
 
 return $CONFIG;
