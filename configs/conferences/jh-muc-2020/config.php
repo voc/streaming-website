@@ -139,14 +139,14 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Hörsaal Zentralbibliothek',
+		'DISPLAY' => 'München @ Jugend Hackt',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's5',
+		'STREAM' => 's80',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -211,7 +211,7 @@ $CONFIG['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
 		 * Default-Stream angenommen.
 		 */
-		'SLIDES' => true,
+		'SLIDES' => false,
 
 		/**
 		 * Audio-Only-Stream verfügbar
@@ -250,7 +250,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'S23',
+		'SCHEDULE_NAME' => 'raum',
 
 		/**
 		 * Feedback anzeigen (boolean)
