@@ -153,7 +153,7 @@ $CONFIG['ROOMS'] = array(
 
 	'anatomie' => array(
 		'DISPLAY' => 'HS Anatomie',
-		'STREAM' => 's2',
+		'STREAM' => 's6',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -179,7 +179,7 @@ $CONFIG['ROOMS'] = array(
 	
 	'weismannhaus' => array(
 		'DISPLAY' => 'HS Weismannhaus',
-		'STREAM' => 's6',
+		'STREAM' => 's2',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
