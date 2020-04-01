@@ -1,0 +1,50 @@
+@import "../../../assets/css/_structure.less";
+
+@link-color:            #e22129;
+@panel-bg:              #ddd;
+@well-bg:               @panel-bg;
+@panel-primary-border:  #FFFFFF;
+@panel-default-heading-bg: #333333;
+@panel-default-text:    #e22129;
+
+@navbar-default-link-color: #FFFFFF;
+
+@nav-link-hover-bg:     #000000;
+
+@navbar-default-bg:     #ccc;
+
+// conference specific styles here
+
+body {
+/*	background-color: #215c68; */
+}
+
+.banner {
+	color: #e22129;
+
+	h2 {
+		font-weight: normal;
+	}
+}
+
+.navbar-brand {
+	// color: transparent !important;
+	height: 50px;
+	background-image: url('logo.svg');
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	background-position: 15px 10px;
+	padding-left: 120px;
+	color: #e22129 !important;
+	.icon {
+		display: none !important;
+	}
+}
+
+footer a {
+	color: @link-color;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: #e22129;
+}
