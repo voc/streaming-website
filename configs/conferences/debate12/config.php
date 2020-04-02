@@ -70,7 +70,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://cadus.org">CADUS</a> with friendly support from the <a href="https://c3voc.de">C3VOC</a>
+	<a href=" https://webirc.hackint.org/#irc://irc.hackint.org/#debate">Chat</a> - Debate! wird präsentiert von <a href="https://cadus.org">CADUS</a> mit freundlicher Unterstützung vom <a href="https://c3voc.de">c3VOC</a>
 	',
 
 	/**
