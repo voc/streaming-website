@@ -56,7 +56,7 @@ Eine sichtbare Gemeinschaft wird es nur dank des heimlichen Helden des Chaos: De
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'divoc, ostern, easter',
+    'KEYWORDS' => 'DIVOC, Hacking, Chaos Computer Club, Video, Music, Podcast, Media, Streaming, Hacker, Everywhere, Hidden Service, Ostern, Easter',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -78,7 +78,7 @@ Eine sichtbare Gemeinschaft wird es nur dank des heimlichen Helden des Chaos: De
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<div class="logo"></div>',
+    'BANNER_HTML' => '<div class="congress"></div><div class="congress-motto"></div>',
 
 	/**
 	 * Link zu den Recordings
@@ -86,6 +86,8 @@ Eine sichtbare Gemeinschaft wird es nur dank des heimlichen Helden des Chaos: De
 	 */
 	//'RELEASES' => 'https://media.ccc.de/c/osc18',
 	//'RELEASES' => 'https://www.youtube.com/playlist?list=PL_AMhvchzBaeIQntCDiVNUUgmRaAzam1V',
+
+    'RELEASES' => 'https://media.ccc.de/c/divoc',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -354,6 +356,35 @@ $CONFIG['ROOMS'] = array(
  * Embedding-Funktionen deaktiviert.
  */
 $CONFIG['EMBED'] = true;
+
+/**
+ * Konfiguration des Feedback-Formulars
+ *
+ * Wird dieser Block auskommentiert, wird das gesamte Feedback-System deaktiviert
+ */
+$CONFIG['FEEDBACK'] = array(
+	/**
+	 * DSN zum abspeichern der eingegebenen Daten
+	 * die Datenbank muss eine Tabelle enthaltem, die dem in `lib/schema.sql` angegebenen
+	 * Schema entspricht.
+	 *
+	 * Achtung vor Dateirechten: Bei SQLite reicht es nicht, wenn wer Webseiten-Benutzer
+	 * die .sqlite3-Datei schreiben darf, er muss auch im übergeordneten Order neue
+	 * (Lock-)Dateien anlegen dürfen
+	 */
+	'DSN' => 'sqlite:/opt/streaming-feedback/feedback.sqlite3',
+
+	/**
+	 * Login-Daten für die /feedback/read/-Seite, auf der eingegangenes
+	 * Feedback gelesen werden kann.
+	 *
+	 * Durch auskommentieren der beiden Optionen wird diese Seite komplett deaktiviert,
+	 * es kann dann nur noch durch manuelle Inspektion der .sqlite3-Datei auf das Feedback
+	 * zugegriffen werden.
+	 */
+	'USERNAME' => 'katze',
+	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
+);
 
 /**
  * Konfigurationen zum Konferenz-Fahrplan
