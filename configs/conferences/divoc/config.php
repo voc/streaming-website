@@ -102,7 +102,7 @@ Eine sichtbare Gemeinschaft wird es nur dank des heimlichen Helden des Chaos: De
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	// 'RELIVE_JSON' => '',
+	'RELIVE_JSON' => 'https://live.alb.c3voc.de/relive/divoc/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
