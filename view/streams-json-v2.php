@@ -104,7 +104,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 			$roomstruct[] = array(
 				'slug' => $room->getSlug(),
 				'schedulename' => $room->getScheduleName(),
-				'thumb' => forceslash(baseurl()).$room->getThumb(),
+				'thumb' => $room->getThumb(),
 				'link' => forceslash(baseurl()).$room->getLink(),
 				'display' => $room->getDisplay(),
 				'stream' => $room->getStream(),
