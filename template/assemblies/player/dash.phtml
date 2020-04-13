@@ -1,31 +1,5 @@
-<script type="text/javascript" src="<?=h($assets)?>js/player.js"></script>
-
-<div class="dashContainer" style="min-height: 100px" >
-	<div id="stream-player"></div>
-</div>
-
-<!--
- TODO: do this properly
--->
-<script type="text/javascript">
-(function(){
-	new VOCPlayer.default({
-		parentId: "#stream-player",
-		vocStream: "<?=h($room->getStream())?>",
-		poster: "<?=h($stream->getPoster())?>",
-	});
-}());
-</script>
-
-<style type="text/css">
-#stream-player > [data-player] {
-	padding-bottom: 56.25%;
-	height: auto !important;
-}
-#stream-player > .fullscreen {
-  padding-bottom: 0;
-}
-body.room .player-wrap.tab-content {
-	padding: 0;
-}
-</style>
+<div class="video-wrap"
+	data-voc-player
+	data-stream="<?=h($room->getStream())?>"
+	data-poster="<?=h($stream->getPoster())?>"
+></div>

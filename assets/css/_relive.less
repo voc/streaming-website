@@ -30,29 +30,6 @@ body.relive-player {
 	.player-wrap {
 		padding: 0;
 		border: 1px solid #ddd;
-
-		.video-wrap {
-			margin: 0 auto;
-
-			> [data-player] {
-				// force 16:9 aspect ratio
-				// https://gordonlesti.com/bootstrap-responsive-embed-aspect-ratio/
-				padding-bottom: 56.25%;
-				max-width: 100%;
-				height: auto !important;
-			}
-			
-			//Change play button color from #FFF to grey.
-			.player-poster[data-poster] .play-wrapper[data-poster] svg path {
-				fill: #ccc; 
-			}
-			
-			//Change loading indicator color from #FFF to grey.
-			.spinner-three-bounce[data-spinner] > div {
-				background-color: #ccc;
-			}
-			
-		}
 	}
 
 	.well, .alert {

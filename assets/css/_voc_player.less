@@ -1,0 +1,33 @@
+.video-wrap[data-voc-player] {
+	margin: 0 auto;
+
+	& > [data-player] {
+		max-width: 100%;
+		padding-bottom: 56.25%;
+		height: auto !important;
+	}
+	& > .fullscreen {
+	  padding-bottom: 0;
+	}
+
+	.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] {
+		height: 40px;
+	}
+
+	.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] {
+		height: 2px;
+		background-color: #ccc;
+	}
+
+	// Change play button color from #FFF to grey.
+	.player-poster[data-poster] .play-wrapper[data-poster] svg path {
+		// fill: rgba(255, 255, 255, 0.8);
+		fill: #ccc;
+	}
+
+	// Change loading indicator color from #FFF to grey.
+	.spinner-three-bounce[data-spinner] > div {
+		// background-color: rgba(255, 255, 255, 0.8);
+		background-color: #ccc;
+	}
+}

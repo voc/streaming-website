@@ -32,54 +32,72 @@ $(function() {
 		features: ['playpause', 'volume', 'current']
 	});
 
-	var $relivePlayer = $('body.relive-player .video-wrap');
-	if($relivePlayer.length > 0) {
-		var sprites = [];
-
-		if($relivePlayer.data("sprites")) {
-			sprites = ClapprThumbnailsPlugin.buildSpriteConfig(
-				$relivePlayer.data("sprites"),
-				$relivePlayer.data("sprites-n"),
-				160, 90,
-				$relivePlayer.data("sprites-cols"),
-				$relivePlayer.data("sprites-interval")
-			);
-		}
-
-		var player = new Clappr.Player({
-			baseUrl: 'assets/clapprio/',
-			plugins: {
-				core: [ClapprThumbnailsPlugin, PlaybackRatePlugin]
-			},
-
-			source: $relivePlayer.data('m3u8'),
-			height: $relivePlayer.data('height'),
-			width: $relivePlayer.data('width'),
+	var $player = $('.video-wrap[data-voc-player]');
+	if ($player.length > 0) {
+		var config = {
+			parent: $player.get(0),
+			plugins: [],
+			baseUrl: 'assets/voc-player/',
 			autoPlay: true,
-			scrubThumbnails: {
-				backdropHeight: 64,
-				spotlightHeight: 84,
-				thumbs: sprites
-			},
+			poster: $player.data("poster"),
 			events: {
 				onReady: function() {
+					var player = this;
 					var playback = player.core.getCurrentContainer().playback;
 					var params = deserialize(location.href)
 
 					playback.once(Clappr.Events.PLAYBACK_PLAY, function() {
+
+						// Allow custom skip via URL
 						var seek = parseFloat(params.t);
 						if (!isNaN(seek)) {
 							player.seek(seek);
+
+						// skip forward to scheduled beginning of the talk at
+						// ~ 0:14:30  (30 sec offset, if speaker starts on time)
 						} else if (playback.getPlaybackType() == 'vod') {
-							// skip forward to scheduled beginning of the talk at ~ 0:14:30  (30 sec offset, if speaker starts on time)
 							player.seek(14 * 60 + 30);
 						}
 					});
 				}
 			}
-		});
+		}
 
-		player.attachTo($relivePlayer.get(0));
+		// Select source
+		if ($player.data("stream")) {
+			config.vocStream = $player.data("stream");
+		} else if ($player.data("source")) {
+			config.source = $player.data('source');
+			config.playbackRateConfig = {
+				defaultValue: 1,
+				options: [
+				  {value: 0.75, label: '0.75x'},
+				  {value: 1, label: '1x'},
+				  {value: 1.25, label: '1.25x'},
+				  {value: 1.5, label: '1.5x'},
+				  {value: 2, label: '2x'},
+				],
+			};
+			config.plugins.push(PlaybackRatePlugin);
+		}
+
+		// Show timeline previews if present
+		if ($player.data("sprites")) {
+			var sprites = ClapprThumbnailsPlugin.buildSpriteConfig(
+				$player.data("sprites"),
+				$player.data("sprites-n"),
+				160, 90,
+				$player.data("sprites-cols"),
+				$player.data("sprites-interval")
+			);
+			config.plugins.push(ClapprThumbnailsPlugin);
+			config.scrubThumbnails = {
+				backdropHeight: 64,
+				spotlightHeight: 84,
+				thumbs: sprites
+			};
+		}
+		new VOCPlayer.Player(config);
 	}
 
 	$(window).on('load', function() {

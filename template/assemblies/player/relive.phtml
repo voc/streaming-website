@@ -1,9 +1,7 @@
 <div
-	style="max-width: <?=h($width)?>px; max-height: <?=h($height)?>px;"
 	class="video-wrap"
-	data-width="<?=h($width)?>"
-	data-height="<?=h($height)?>"
-	data-m3u8="<?=h(forceproto($talk['playlist']))?>"
+	data-voc-player
+	data-source="<?= h(forceproto($talk['playlist'])) ?>"
 	<? if(array_key_exists('sprites', $talk)): ?>
 	data-sprites="<?= h($talk['sprites']['url']) ?>"
 	data-sprites-n="<?= h($talk['sprites']['n']) ?>"
