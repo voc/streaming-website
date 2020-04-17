@@ -1,0 +1,181 @@
+@import "../../../assets/css/_structure.less";
+
+@mainGrey: #f79520;
+@grey-lighter: #555555;
+@greyLight: #666565;
+@bggrey: #333333;
+@green: #5ab547;
+@orange: #f79520;
+
+@brand-primary: @mainGrey;
+@well-bg: @grey-lighter;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @mainGrey;
+@panel-default-heading-bg: @greyLight;
+@panel-default-text: @mainGrey;
+@panel-bg: @grey-lighter;
+
+@navbar-height:         70px;
+@navbar-default-bg:     #444444;
+@navbar-default-border: #6d6e71;
+
+/*
+ * buttons
+ */
+ @btn-font-weight: 600;
+ a.btn, input.btn, .btn-primary {
+	 text-transform: uppercase;
+	 //color: @orange;
+ }
+ a.btn:hover, input.btn:hover {
+	 color: @green;
+ }
+
+/*
+ * font
+ */
+ @import url("/configs/conferences/divoc2020/font.css");
+
+.font-headline {
+	//color: @color-grey;
+	font-family: 'Archivo Black', sans-serif;
+  	font-weight: 100; /* black*/
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+//h3,
+body.overview .room a.title,
+body.overview .panel-primary a,
+.navbar-brand,
+.panel-heading,
+.panel-default > .panel-heading,
+.nav.nav-tabs {
+	.font-headline()
+}
+
+.panel-default {
+	border-color: #ad621b;
+}
+   
+.panel-default > .panel-heading {
+	border-color: @green;
+}
+
+
+body.room .tab-content {
+	border-left: 1px solid @green;
+	border-bottom: 1px solid @green;
+	border-right: 1px solid @green;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+ color: #FE5000;
+}
+
+.panel {
+	background-color: transparent;
+}
+
+
+.panel-default > .panel-heading {
+	background-color: #ad621b;
+}
+   
+body .schedule .now {
+	//background-color: rgba(222,103,100,0.6);
+	//background-color: unset;
+
+}
+
+body .schedule .block.event h3 {
+ overflow: unset;
+ font-size: 16px;
+}
+
+
+h1, h3 { color: @orange; }
+h2 { color: @green; }
+
+
+body.overview .panel-body {
+    min-height: 10px;
+}
+
+body {
+	background-color: @bggrey;
+	color: @green;
+	padding: @navbar-height 0;
+}
+
+body .schedule .block h5 {
+ color: #767676;
+}
+
+.nav > li {
+ position: relative;
+ display: block;
+ background-color: #333333;
+}
+
+
+nav.navbar {
+	.navbar-brand {
+		color: @mainGrey;
+	}
+
+	.navbar-right {
+		text-align: right;
+
+		.btn-ssl, a.feedback, a.releases, a.about {
+			color: @mainGrey;
+			background-color: transparent;
+			border-color: @mainGrey;
+
+			&:hover {
+				background-color: @green;
+				border-color: @green;
+			}
+		}
+
+		.btn-ssl.btn-warning {
+			color: grey;
+			background: transparent;
+			border-color: grey;
+		}
+	}
+}
+
+.congress {
+     background-image: url(hiddenservicesidebar-01.png);
+     background-repeat: no-repeat;
+     background-size: 200px;
+
+     position: fixed;
+     left: 10px;
+     top: 200px;
+
+     width: 290px;
+     height: 1080px;
+
+     opacity: 1;
+     z-index: -100;
+
+     @media (max-width: @screen-sm-min) {
+         display: none;
+     }
+ }
+
+
+
+nav .navbar-brand .icon {
+	background-image: url(voctobunny.svg);
+}
+
+body .schedule .room.highlight .block {
+ background-color: #275127;
+}
+
