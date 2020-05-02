@@ -150,10 +150,10 @@ class Stream
 		{
 			case 'webm':
 				if($this->getSelection() == 'hd')
-					return '1920x1080, VP8+Vorbis in WebM, 3.5 MBit/s';
+					return '1920x1080, VP9+Opus in WebM, 3.5 MBit/s';
 
 				else if($this->getSelection() == 'sd')
-					return '1024x576, VP8+Vorbis in WebM, 1 MBit/s';
+					return '1024x576, VP9+Opus in WebM, 1 MBit/s';
 
 			case 'hls':
 				if($this->getSelection() == 'hd')
@@ -161,6 +161,9 @@ class Stream
 
 				else if($this->getSelection() == 'sd')
 					return '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 800 kBit/s';
+
+			case 'dash':
+				return 'VP9+Opus mit WebM-Segmenten';
 		}
 
 		return null;

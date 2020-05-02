@@ -184,10 +184,6 @@ class Room
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.HD_VIDEO');
 	}
 
-	public function hasVideo() {
-		return $this->hasSdVideo() || $this->hasHdVideo();
-	}
-
 	public function hasAudio() {
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.AUDIO');
 	}
@@ -262,12 +258,6 @@ class Room
 		if($this->hasMusic())
 			$selections[] = 'music';
 
-		if($this->hasHdVideo())
-			$selections[] = 'hd';
-
-		if($this->hasSdVideo())
-			$selections[] = 'sd';
-
 		if($this->hasSlides())
 			$selections[] = 'slides';
 
@@ -290,9 +280,6 @@ class Room
 
 		if($this->hasMusic())
 			$tabs[] = 'music';
-
-		if($this->hasVideo())
-			$tabs[] = 'video';
 
 		if($this->hasSlides())
 			$tabs[] = 'slides';
