@@ -110,7 +110,7 @@ $CONFIG['ROOMS'] = array(
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
-		'STEREO' => false,
+
 
 		'DASH' => true,
 		'SD_VIDEO' => true,

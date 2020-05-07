@@ -141,7 +141,7 @@ $CONFIG['ROOMS'] = array(
 		'STREAM' => 's23',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
-		'STEREO' => false,
+
 		'DASH' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,

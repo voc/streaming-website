@@ -140,7 +140,7 @@ $CONFIG['ROOMS'] = array(
 		'STREAM' => 's3',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
-		'STEREO' => false,
+
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
@@ -163,7 +163,7 @@ $CONFIG['ROOMS'] = array(
 		'STREAM' => 's4',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
-		'STEREO' => false,
+
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,

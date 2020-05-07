@@ -8,7 +8,7 @@ if(!$room->hasEmbed())
 $selection = $_GET['selection'];
 $language = $_GET['language'];
 
-if ($language !== 'native' && $language !== 'stereo') {
+if ($language !== 'native') {
 	if (! $room->hasTranslation()) {
 		throw new NotFoundException('Not translated');
 	}

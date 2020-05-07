@@ -373,7 +373,7 @@ class Room
 			throw new NotFoundException('Selection '.$selection.' in Room '.$this->getSlug());
 
 		$translation_label = null;
-		if ($language !== 'native' && $language !== 'stereo') {
+		if ($language !== 'native') {
 			if (! $this->hasTranslation()) {
 				throw new NotFoundException('Translated Streams of Room '. $this->getSlug());
 			}
@@ -389,9 +389,6 @@ class Room
 
 	public function createStreamObject($selection, $language = 'native', $languageLabel = null)
 	{
-		if($language == 'native' && $this->hasStereo())
-			$language = 'stereo';
-
 		return new Stream($this, $selection, $language, $languageLabel);
 	}
 }

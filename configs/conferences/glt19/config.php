@@ -174,16 +174,6 @@ $CONFIG['ROOMS'] = array(
         'TRANSLATION' => false,
 
         /**
-         * stereo-Tonspur statt native-Tonspur benutzen
-         *
-         * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden
-         * die "native"-Mono-Streams verwendet, andernfalls wird statt "native"
-         * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
-         * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
-         */
-        'STEREO' => false,
-
-        /**
          * SD-Video-Stream (1024×576) verfügbar
          *
          * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein SD-Video
@@ -358,7 +348,7 @@ $CONFIG['ROOMS'] = array(
         'STREAM' => 's5',
         'PREVIEW' => true,
         'TRANSLATION' => false,
-        'STEREO' => false,
+
         'SD_VIDEO' => true,
         'HD_VIDEO' => true,
         'SLIDES' => true,
@@ -380,7 +370,7 @@ $CONFIG['ROOMS'] = array(
          'STREAM' => 's6',
          'PREVIEW' => true,
          'TRANSLATION' => false,
-         'STEREO' => false,
+ 
          'SD_VIDEO' => true,
          'HD_VIDEO' => true,
          'SLIDES' => true,
@@ -402,7 +392,7 @@ $CONFIG['ROOMS'] = array(
          'STREAM' => 's2',
          'PREVIEW' => true,
          'TRANSLATION' => false,
-         'STEREO' => false,
+ 
          'SD_VIDEO' => true,
          'HD_VIDEO' => true,
          'SLIDES' => true,
@@ -424,7 +414,7 @@ $CONFIG['ROOMS'] = array(
           'STREAM' => 's3',
           'PREVIEW' => true,
           'TRANSLATION' => false,
-          'STEREO' => false,
+  
           'SD_VIDEO' => true,
           'HD_VIDEO' => true,
           'SLIDES' => true,
@@ -446,7 +436,7 @@ $CONFIG['ROOMS'] = array(
           'STREAM' => 's4',
           'PREVIEW' => true,
           'TRANSLATION' => false,
-          'STEREO' => false,
+  
           'SD_VIDEO' => true,
           'HD_VIDEO' => true,
           'SLIDES' => true,

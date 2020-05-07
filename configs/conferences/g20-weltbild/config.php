@@ -144,7 +144,7 @@ $CONFIG['ROOMS'] = array(
 		'STREAM' => 'weltbild1',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
-		'STEREO' => false,
+
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'SLIDES' => false,
@@ -164,7 +164,7 @@ $CONFIG['ROOMS'] = array(
 		'STREAM' => 'weltbild2',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
-		'STEREO' => true,
+
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'SLIDES' => false,

@@ -172,7 +172,7 @@
 			 * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
 			 * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
 			 */
-			'STEREO' => false,
+	
 
 			/**
 			 * SD-Video-Stream (1024×576) verfügbar
@@ -378,7 +378,7 @@
 			 * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
 			 * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
 			 */
-			'STEREO' => false,
+	
 
 			/**
 			 * SD-Video-Stream (1024×576) verfügbar

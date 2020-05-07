@@ -161,7 +161,7 @@ $CONFIG['ROOMS'] = array(
 		 */
         'PREVIEW' => true,
 
-        'STEREO' => false,
+
 
 		/**
 		 * Übersetzungstonspur aktivieren
@@ -171,16 +171,6 @@ $CONFIG['ROOMS'] = array(
 		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
 		 */
 		'TRANSLATION' => true,
-
-		/**
-		 * stereo-Tonspur statt native-Tonspur benutzen
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden
-		 * die "native"-Mono-Streams verwendet, andernfalls wird statt "native"
-		 * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
-		 * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
-		 */
-		'STEREO' => false,
 
 		/**
 		 * SD-Video-Stream (1024×576) verfügbar
@@ -356,7 +346,7 @@ $CONFIG['ROOMS'] = array(
 		'DISPLAY' => 'Tent 2 (Meitner)',
 		'STREAM' => 's2',
         'PREVIEW' => true,
-        'STEREO' => false,
+
 
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -388,7 +378,7 @@ $CONFIG['ROOMS'] = array(
 		'DISPLAY' => 'Three Headed Monkey (Plank)',
 		'STREAM' => 's5',
         'PREVIEW' => true,
-        'STEREO' => false,
+
 
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,

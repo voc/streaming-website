@@ -172,7 +172,7 @@ $CONFIG['ROOMS'] = array(
 		 * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
 		 * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
 		 */
-		'STEREO' => true,
+
 
 
                 /** Wenn aktiviert, wird DASH streaming angeboten */

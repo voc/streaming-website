@@ -158,7 +158,7 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-                'STEREO' => false,
+
                 'SD_VIDEO' => true,
                 'HD_VIDEO' => true,
                 'SLIDES' => true,
@@ -190,7 +190,7 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
@@ -222,7 +222,7 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
@@ -254,7 +254,7 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
@@ -286,7 +286,7 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
@@ -317,7 +317,7 @@ $CONFIG['ROOMS'] = array(
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,
@@ -351,7 +351,7 @@ $CONFIG['ROOMS'] = array(
 				'TRANSLATION' => [
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,
@@ -379,7 +379,7 @@ $CONFIG['ROOMS'] = array(
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,
@@ -407,7 +407,7 @@ $CONFIG['ROOMS'] = array(
                  'PREVIEW' => true,
                  'TRANSLATION' => [
                  ],
-                 'STEREO' => false,
+ 
                  'SD_VIDEO' => true,
                  'HD_VIDEO' => true,
                  'DASH' => true,
@@ -435,7 +435,7 @@ $CONFIG['ROOMS'] = array(
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
-				'STEREO' => false,
+		
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,

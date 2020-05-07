@@ -139,7 +139,7 @@ $CONFIG['ROOMS'] = array(
 		'DISPLAY' => 'National Theater Plenary Hall',
 		'STREAM' => 's80',
         'PREVIEW' => true,
-        'STEREO' => false,
+
 
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
