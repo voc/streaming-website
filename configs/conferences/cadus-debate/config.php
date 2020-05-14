@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2020-04-02 20:00"),
+	'STARTS_AT' => strtotime("2020-05-14 20:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2020-04-02 22:00"),
+	'ENDS_AT' => strtotime("2020-05-14 22:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,29 +33,31 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate: Open Source Hardware in Post-Konflikt-Gebieten und Transition Areas',
+	'TITLE' => 'Debate: Globale Schuldenkrise – ein Problem von Covid-19?',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'Martin Häuer (Open Source Ecology) und Stephen Kovats (r0g agency)',
+	//'AUTHOR' => '',
 
 	/**
 	 * Beschreibungstext
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Open Source Hardware in Post-Konflikt-Gebieten und Transition Areas
-	
-	Das Prinzip von Open Source ist vor allem aus dem Software-Bereich bekannt, wird aber zunehmend auch auf Hardware angewandt. Damit soll es leichter werden, Geräte herzustellen und zu reparieren, zu modifizieren und zu recyclen. Innovationsprozesse können so demokratisiert werden. Die alte Eigentumsfrage "Wem gehören Produktionsmittel" wird damit umformuliert zu: "Wem gehört Technologie?" bzw., "Wer ist praktisch – durch Wissen und Lizenzen – dazu in der Lage, Geräte herzustellen und weiterzuentwickeln?".
-	
-	Eine interessante Frage in Industrienationen; und eine potentiell elementare Frage in (Post-)Katastrophenregionen. Aspekte wie Schnelligkeit, Flexibilität/Anpassbarkeit, Wartbarkeit und Aufbau eines lokalen & unabhängigen Ökosystems sind hier von großer Bedeutung.
-	
-	Should we open-source the world? Should we start in South Sudan? Should we leave these questions to GIZ...?
-	
-	Auf eine Diskussion mit euch über diese Fragen freuen sich Martin Häuer von Open Source Ecology und Stephen Kovats von der r0g agency for open culture & critical transformation.',
+	'DESCRIPTION' => 'Schon vor der Covid-19 Pandemie hatten viele Länder Probleme, ihre Schulden zu begleichen.
+        Horrende Zinszahlungen haben die Staatshaushalte vieler Länder ausgehöhlt: Sie zahlen mehr an ihre Investoren,
+        als sie für ihre Gesundheitssysteme ausgeben.
+
+        In diesem Debate! widmen wir uns den globalen Finanzströmen, den Auswirkungen von vorangegangenen globalen
+        Finanzkrisen auf Gender-(Un-) Gerechtigkeit, und den derzeitigen Versuchen von NGOs und multilateralen Akteur*innen,
+        die Schuldenkrise einzudämmen.
+
+        Dazu haben wir Mareike Beck eingeladen, politische Ökonomin, derzeit am King\'s College London. Ihre
+        Forschungsschwerpunkte sind die Politik der globalen Finanzmärkte, insbesondere die Rolle der globalen Banken
+        in der Finanzialisierung und deren Auswirkungen auf Verschuldung und Ungleichheit.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -154,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's23',
+		'STREAM' => 'q1',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
