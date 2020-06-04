@@ -376,8 +376,8 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-05-21') - strtotime(/* Today */ '2016-05-19'),
 //	'SIMULATE_OFFSET' => 3600*2,
-//);
-//
+);
+
 
 /**
  * Globale Konfiguration der Twitter-Links.
