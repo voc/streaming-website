@@ -346,7 +346,7 @@ $CONFIG['EMBED'] = true;
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-//$CONFIG['SCHEDULE'] = array(
+$CONFIG['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -354,19 +354,19 @@ $CONFIG['EMBED'] = true;
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-//	'URL' => 'https://events.opensuse.org/conference/oSC18/schedule.xml',
+	'URL' => 'https://event.klimacamp-leipzigerland.de/2020/schedule/export/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
 	*
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
-	//'ROOMFILTER' => ['Galerie', 'Saal', ' GI Studio'],
+	'ROOMFILTER' => ['Circus tent'],
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
-//	'SCALE' => 5,
+	'SCALE' => 5,
 
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
