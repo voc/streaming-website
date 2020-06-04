@@ -139,7 +139,7 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Stream',
+		'DISPLAY' => 'Circus tent',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -231,13 +231,13 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 
 		/**
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => '',
+		'SCHEDULE_NAME' => 'Circus tent',
 
 		/**
 		 * Feedback anzeigen (boolean)
