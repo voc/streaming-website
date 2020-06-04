@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	// 'RELIVE_JSON' => '',
+	 'RELIVE_JSON' => 'http://live.alb.c3voc.de/relive/<conference slug>/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -237,7 +237,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Circus tent',
+		'SCHEDULE_NAME' => 'Zirkuszelt',
 
 		/**
 		 * Feedback anzeigen (boolean)
