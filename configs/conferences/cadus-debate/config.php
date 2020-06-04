@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate: Globale Schuldenkrise – ein Problem von Covid-19?',
+	'TITLE' => 'Debate 14: Vor Corona, mit Corona, trotz Corona - #leavenoonebehind',
 
 	/**
 	 * Veranstalter
@@ -47,17 +47,9 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Schon vor der Covid-19 Pandemie hatten viele Länder Probleme, ihre Schulden zu begleichen.
-        Horrende Zinszahlungen haben die Staatshaushalte vieler Länder ausgehöhlt: Sie zahlen mehr an ihre Investoren,
-        als sie für ihre Gesundheitssysteme ausgeben.
+	'DESCRIPTION' => 'Während mensch in Berlin mittlerweile schon genau hinschauen muss um zu sehen, dass wir in Zeiten einer Pandemie leben, ist die Lage an den europäischen Außengrenzen ernst: Im zentralen Mittelmeer und auf den griechischen Inseln herrscht humanitärer Notstand. Das war bereits vor Corona der Fall, mit Corona hat sich die Lage verschärft und trotz Lockerungen, auch dort vor Ort, bessert sich die humanitäre Lage nicht.
 
-        In diesem Debate! widmen wir uns den globalen Finanzströmen, den Auswirkungen von vorangegangenen globalen
-        Finanzkrisen auf Gender-(Un-) Gerechtigkeit, und den derzeitigen Versuchen von NGOs und multilateralen Akteur*innen,
-        die Schuldenkrise einzudämmen.
-
-        Dazu haben wir Mareike Beck eingeladen, politische Ökonomin, derzeit am King\'s College London. Ihre
-        Forschungsschwerpunkte sind die Politik der globalen Finanzmärkte, insbesondere die Rolle der globalen Banken
-        in der Finanzialisierung und deren Auswirkungen auf Verschuldung und Ungleichheit.',
+Franziska Schmidt von der Refugee Law Clinic (RLC) Berlin auf Samos und Ruben Neugebauer von Sea-Watch berichten über die Situation und diskutieren über eure Fragen aus dem Chat.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -156,7 +148,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'q1',
+		'STREAM' => 's23',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
