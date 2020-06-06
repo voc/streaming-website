@@ -164,19 +164,8 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'TRANSLATION' => false,
 
-		/**
-		 * stereo-Tonspur statt native-Tonspur benutzen
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden
-		 * die "native"-Mono-Streams verwendet, andernfalls wird statt "native"
-		 * der Streamname "stereo" eingesetzt. Im normalen Konferenz-Setup
-		 * müssen dann beide Kanäle der Kamera mit einem Signal bespielt werden.
-		 */
-
-
-
-                /** Wenn aktiviert, wird DASH streaming angeboten */
-                'DASH' => true,
+		/** Wenn aktiviert, wird DASH streaming angeboten */
+		'DASH' => true,
 
 		/**
 		 * SD-Video-Stream (1024×576) verfügbar
@@ -314,7 +303,7 @@ $CONFIG['ROOMS'] = array(
 		*/
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#31C3-hall-1 @ hackint',
-			'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-1',
+			'URL'	  => 'irc://irc.hackint.eu:6667/31C3-hall-1',
 		),
 
 		/**
@@ -342,7 +331,7 @@ $CONFIG['ROOMS'] = array(
 		*/
 		'TWITTER_CONFIG' => array(
 			'DISPLAY' => '#jhhh @ twitter',
-			'TEXT'    => '#jhhh #jugendhackt',
+			'TEXT'	  => '#jhhh #jugendhackt',
 		),
 	),
 );
@@ -369,12 +358,12 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	'URL' => 'configs/conferences/jh-hh-2019/schedule.xml',
 
-        /**
-         * Nur die angegebenen Räume aus dem Fahrplan beachten
-         *
-         * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-         */
-        'ROOMFILTER' => array('S23'),
+		/**
+		 * Nur die angegebenen Räume aus dem Fahrplan beachten
+		 *
+		 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+		 */
+		'ROOMFILTER' => array('S23'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
