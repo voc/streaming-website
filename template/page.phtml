@@ -62,12 +62,19 @@
 		<script type="text/javascript" src="<?=h($assets)?>js/lib/bootstrap.min.js"></script>
 		<script type="text/javascript" src="<?=h($assets)?>js/lib/bootstrap-datepicker.min.js"></script>
 
+
+		<? if(isset($GLOBALS['netcut']) && $GLOBALS['netcut'] === true): ?>
+		<link href="<?=h($assets)?>netcut/lib/videojs/video-js.min.css" rel="stylesheet">
+		<link href="<?=h($assets)?>netcut/lib/videojs-markers/videojs.markers.min.css" rel="stylesheet">
+		<link href="<?=h($assets)?>netcut/assets/style.css" rel="stylesheet">
+		<? else: ?>
 		<script type="text/javascript" src="<?=h($assets)?>mejs/mediaelement-and-player.min.js"></script>
 		<script type="text/javascript" src="<?=h($assets)?>voc-player/player.js"></script>
 		<script type="text/javascript">window.Clappr = window.VOCPlayer</script>
 		<script type="text/javascript" src="<?=h($assets)?>voc-player/clappr-thumbnails-plugin.js"></script>
 		<script type="text/javascript" src="<?=h($assets)?>voc-player/clappr-playback-rate-plugin.js"></script>
 		<script type="text/javascript" src="<?=h($assets)?>js/lustiges-script.js"></script>
+		<? endif ?>
 
 		<? if(isset($subtitles) && $subtitles->isEnabled()): ?>
 		<script type="text/javascript" src="<?=h($assets)?>js/lustige-subtitles.js"></script>

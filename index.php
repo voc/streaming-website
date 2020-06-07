@@ -70,6 +70,8 @@ try {
 	$route = rtrim($route, '/');
 
 	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
+	$GLOBALS['netcut'] = preg_match('@^relive/([0-9]+)/cut$@', $route);
+
 
 	// generic template
 	$tpl = new PhpTemplate('template/page.phtml');
@@ -249,6 +251,15 @@ try {
 			'id' => $m[1],
 		);
 		require('view/relive-player.php');
+	}
+
+	// ROUTES AVAILABLE AFTER BUT NOT BEFORE THE CONFERENCE
+	else if(preg_match('@^relive/([0-9]+)/cut$@', $route, $m))
+	{
+		$_GET = array(
+			'id' => $m[1],
+		);
+		require('view/relive-player-netcut.php');
 	}
 
 	else if($route == 'relive')

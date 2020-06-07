@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="row headline">
+		<div class="col-xs-12">
+			<h1>netc<img src="<?=h($assets)?>netcut/assets/winkekatze.png" style="height:30px" />t: <?=h($title)?></h1>
+		</div>
+	</div>
+
+	<? if($talk['status'] == 'released'): ?>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="alert alert-success">
+					<h3>Released</h3>
+					<p>Beware! This is an unprocessed streamdump, the final release was released at <a href="<?=h($talk['release_url'])?>"><?=h(parse_url($talk['release_url'], PHP_URL_HOST))?></a>.</p>
+				</div>
+			</div>
+		</div>
+	<? endif ?>
+
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="player-wrap">
+
+				<div id="webcut">
+				<video class="video-js vjs-default-skin" id="video" preload="auto" data-setup="{}" controls autoplay style="min-height: 480px; width: 100%;" poster="<?=h($talk['thumbnail'])?>">
+					<source src="<?= h(forceproto($talk['playlist'])) ?>" type="application/x-mpegURL">
+				</video>
+				</div>
+				<br />
+				Preview: Press i/o to set markers, I/O to jump to markers<br />
+				<span id="inframe"></span><br />
+				<span id="outframe"></span><br />
+
+				<script type="text/javascript" src="<?=h($assets)?>netcut/lib/jquery/jquery-3.3.1.min.js"></script>
+				<script type="text/javascript" src="<?=h($assets)?>netcut/lib/videojs/video.min.js"></script>
+				<script type="text/javascript" src="<?=h($assets)?>netcut/lib/videojs-markers/videojs-markers.min.js"></script>
+				<script type="text/javascript" src="<?=h($assets)?>netcut/lib/videojs-hotkeys/videojs.hotkeys.min.js"></script>
+
+				<script type="text/javascript">
+				VIDEO_FPS = 25;
+				//INFRAME = 5073;
+				//OUTFRAME = 184746;
+				INFRAME = 7179;
+				OUTFRAME = 24687;
+				</script>
+
+				<script type="text/javascript" src="<?=h($assets)?>netcut/assets/script.js"></script>
+
+			</div>
+		</div>
+	</div>
+</div>
