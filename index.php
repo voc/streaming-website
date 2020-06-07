@@ -70,8 +70,6 @@ try {
 	$route = rtrim($route, '/');
 
 	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
-	$GLOBALS['netcut'] = preg_match('@/cut$@', $route);
-
 
 	// generic template
 	$tpl = new PhpTemplate('template/page.phtml');
