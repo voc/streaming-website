@@ -6040,7 +6040,7 @@ class Less_Tree_Import extends Less_Tree{
 				//if the path is relative, the file should be in the current directory
 				$import_dirs[ $this->currentFileInfo['currentDirectory'] ] = $this->currentFileInfo['uri_root'];
 
-			}else{
+			}else if ($this->currentFileInfo){
 				//otherwise, the file should be relative to the server root
 				$import_dirs[ $this->currentFileInfo['entryPath'] ] = $this->currentFileInfo['entryUri'];
 
