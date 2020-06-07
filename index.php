@@ -70,7 +70,7 @@ try {
 	$route = rtrim($route, '/');
 
 	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
-	$GLOBALS['netcut'] = preg_match('@^relive/([0-9]+)/cut$@', $route);
+	$GLOBALS['netcut'] = preg_match('@/cut$@', $route);
 
 
 	// generic template
