@@ -1,0 +1,17 @@
+.vjs-marker {
+  height: 10px;
+  top: -5px;
+  margin: 0;
+}
+
+.inframe {
+  background-color: #00FF00 ! important;
+  width: 4px ! important;
+  border-radius: 0% ! important;
+}
+
+.outframe {
+  background-color: #FF0067 ! important;
+  width: 4px ! important;
+  border-radius: 0% ! important;
+}
