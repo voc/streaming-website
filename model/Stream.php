@@ -135,10 +135,10 @@ class Stream
 		switch($proto)
 		{
 			case 'webm':
-				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.webm';
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.webm']);
 
 			case 'hls':
-				return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8';
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
 		}
 
 		return null;
@@ -203,10 +203,10 @@ class Stream
 		switch($proto)
 		{
 			case 'mp3':
-				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.mp3';
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.mp3']);
 
 			case 'opus':
-				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.opus';
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.opus']);
 		}
 
 		return null;
@@ -237,10 +237,10 @@ class Stream
 		switch($proto)
 		{
 			case 'mp3':
-				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'.mp3';
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'.mp3']);
 
 			case 'opus':
-				return proto().'://cdn.c3voc.de/'.rawurlencode($this->getRoom()->getStream()).'.opus';
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'.opus']);
 
 			default:
 				return null;
@@ -267,6 +267,6 @@ class Stream
 		);
 	}
 	public function getPoster() {
-		return proto().'://cdn.c3voc.de'.joinpath(['/thumbnail', $this->getRoom()->getStream(), 'poster.jpeg']);
+		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getRoom()->getStream(), 'poster.jpeg']);
 	}
 }

@@ -48,7 +48,7 @@ class Room
 	}
 
 	public function getThumb() {
-		return proto().'://cdn.c3voc.de'.joinpath(['/thumbnail', $this->getStream(), 'thumb.jpeg']);
+		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getStream(), 'thumb.jpeg']);
 	}
 
 	public function getLink() {
@@ -201,11 +201,11 @@ class Room
 	}
 
 	public function getHLSPlaylistUrl() {
-		return proto().'://cdn.c3voc.de/hls/'.rawurlencode($this->getStream()).'_native_hd.m3u8';
+		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getStream()).'_native_hd.m3u8']);
 	}
 
 	public function getDashManifestUrl() {
-		return proto().'://cdn.c3voc.de/dash/'.rawurlencode($this->getStream()).'/manifest.mpd';
+		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'dash', rawurlencode($this->getStream()).'/manifest.mpd']);
 	}
 
 	public function getDashTech() {
