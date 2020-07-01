@@ -122,7 +122,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'track1' => array(
 		'DISPLAY' => 'Track 1',
-		'STREAM' => 'sotm-track1',
+		'STREAM' => 'sotm1',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -143,7 +143,7 @@ $CONFIG['ROOMS'] = array(
 
 	'track2' => array(
 		'DISPLAY' => 'Track 2',
-		'STREAM' => 'sotm-track2',
+		'STREAM' => 'sotm2',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
