@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2019-09-21 9:00"),
+	'STARTS_AT' => strtotime("2020-07-04 9:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2019-09-23 17:00"),
+	'ENDS_AT' => strtotime("2020-07-05 22:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'State of the Map 2019',
+	'TITLE' => 'State of the Map 2020',
 
 	/**
 	 * Veranstalter
@@ -47,14 +47,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'State of the Map is the annual event for all mappers and OpenStreetMap users. Enjoy three days in the heart of Europe with talks, discussions, workshops, code and documentation sprints all around the free and open map of the world.',
+	'DESCRIPTION' => 'The State of the Map conference is the annual OpenStreetMap conference run by the OpenStreetMap Foundation. It is organised by the SotM Working Group, a team of volunteers. This year our host venue is the University of Cape Town (UCT). Enjoy two days with talks, discussions, workshops, code and documentation sprints all around the free and open map of the world.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'State of the Map, Heidelberg, OpenStreetMap, GIS, OpenSource, Geo',
+	'KEYWORDS' => 'State of the Map, Capetown, Online, OpenStreetMap, GIS, OpenSource, Geo',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		<a href="https://2019.stateofthemap.org">State of the Map 2019</a>
+		<a href="https://2020.stateofthemap.org">State of the Map 2020</a>
 	',
 
 	/**
@@ -75,14 +75,14 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-//	'BANNER_HTML' => '<img src="../configs/conferences/hotosm2019/logo.png">',
+//	'BANNER_HTML' => '<img src="../configs/conferences/hotosm2020/logo.png">',
 
 
 	/**
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'http://media.ccc.de/c/sotm2019',
+	'RELEASES' => 'http://media.ccc.de/c/sotm2020',
 
 	/**
 	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
@@ -92,7 +92,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/sotm2019/index.json',
+	'RELIVE_JSON' => 'http://live.alb.c3voc.de/relive/sotm2020/index.json',
 );
 
 /**
@@ -108,9 +108,8 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture rooms' => array(
-//			'west',
-			'ost',
-			'gross'
+			'track1',
+			'track2'
 		),
 	),
 );
@@ -121,9 +120,9 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'west' => array(
-		'DISPLAY' => 'Hörsaal West',
-		'STREAM' => 's80',
+	'track1' => array(
+		'DISPLAY' => 'Track 1',
+		'STREAM' => 'sotm-track1',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -135,16 +134,16 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Hörsaal West',
+		'SCHEDULE_NAME' => 'Track 1',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
 	),
 
-	'ost' => array(
-		'DISPLAY' => 'Hörsaal Ost',
-		'STREAM' => 's6',
+	'track2' => array(
+		'DISPLAY' => 'Track 2',
+		'STREAM' => 'sotm-track2',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -156,28 +155,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Hörsaal Ost',
-		'FEEDBACK' => false,
-		'SUBTITLES' => false,
-		'EMBED' => true,
-		'IRC' => false,
-	),
-
-	'gross' => array(
-		'DISPLAY' => 'Großer Hörsaal',
-		'STREAM' => 's5',
-		'PREVIEW' => true,
-
-		'TRANSLATION' => false,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'DASH' => true,
-		'AUDIO' => true,
-		'SLIDES' => true,
-		'MUSIC' => false,
-
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Großer Hörsaal',
+		'SCHEDULE_NAME' => 'Track 2',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -200,7 +178,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'http://sotm.osmz.ru/19.xml',
+	'URL' => 'http://sotm.osmz.ru/2020.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
