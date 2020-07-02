@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2020-06-04 20:00"),
+	'STARTS_AT' => strtotime("2020-07-02 20:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2020-06-04 21:30"),
+	'ENDS_AT' => strtotime("2020-07-02 21:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 14: Vor Corona, mit Corona, trotz Corona - #leavenoonebehind',
+	'TITLE' => 'Debate 15: Offene Technologien für freie Kommunikation',
 
 	/**
 	 * Veranstalter
@@ -47,9 +47,15 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Während mensch in Berlin mittlerweile schon genau hinschauen muss um zu sehen, dass wir in Zeiten einer Pandemie leben, ist die Lage an den europäischen Außengrenzen ernst: Im zentralen Mittelmeer und auf den griechischen Inseln herrscht humanitärer Notstand. Das war bereits vor Corona der Fall, mit Corona hat sich die Lage verschärft und trotz Lockerungen, auch dort vor Ort, bessert sich die humanitäre Lage nicht.
+	'DESCRIPTION' => 'Den aktuellen Angriff der Trump-Regierung auf den Open Technology Fund in den USA nehmen wir zum Anlass, uns hier vor Ort einmal umzuschauen: welche Förderungen gibt es, und warum sind sie wichtig für offene Technologie-Projekte? Ist freies Internet auch für den humanitären Kontext ein Thema?
 
-Franziska Schmidt von der Refugee Law Clinic (RLC) Berlin auf Samos und Ruben Neugebauer von Sea-Watch berichten über die Situation und diskutieren über eure Fragen aus dem Chat.',
+	Wir freuen uns auf ein spannendes Gespräch über diese Fragen mit unseren beiden Gästen:
+	
+	Elisa vom SUPERRR Lab hat das letzte Jahr dazu geforscht und Empfehlungen für Förderer entwickelt, wie Infrastrukturprojekte besser unterstützt werden können. Als ehemalige Leiterin des Prototype Funds kennt sie sich auch mit der bürokratischen Seite von Förderung besser aus, als ihr lieb ist.
+	
+	Elektra hat die Entwicklung der Meshtechnologie für Communitynetzwerke bei Freifunk aktiv mitgestaltet und u.a. in Bangladesh, Indien, Chile, Tanzania, Südafrika unterrichtet. Sie arbeitet als Open-Software- und Open-Hardwareentwicklerin und hat unter anderem den B.A.T.M.A.N. Routingalgorithmus für Freifunk-Netze initiiert und mit der Freifunk-Community entwickelt. Außerdem war sie an der Entwicklung der Mesh-Potato beteiligt, einem Wireless-Router für drahtlose Ad-Hoc-Netzwerke in global benachteiligten Regionen.
+	
+	Wie immer seid ihr herzlich eingeladen, über den Chat Fragen zu stellen und mitzudiskutieren.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
