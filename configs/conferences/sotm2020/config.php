@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Track 1',
-		'FEEDBACK' => false,
+		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
@@ -156,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Track 2',
-		'FEEDBACK' => false,
+		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
