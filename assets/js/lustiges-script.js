@@ -58,7 +58,8 @@ $(function() {
 						// skip forward to scheduled beginning of the talk at
 						// ~ 0:14:30  (30 sec offset, if speaker starts on time)
 						} else if (playback.getPlaybackType() == 'vod') {
-							player.seek(14 * 60 + 30);
+							// TODO use varable, or add field to relive.json api
+							player.seek(150);
 						}
 					});
 				}
