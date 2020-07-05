@@ -46,7 +46,7 @@
 
 				<script type="text/javascript">
 				VIDEO_FPS = 25;
-				INFRAME = 900*25;
+				INFRAME = ($relive->getPreRecOffset())*25;
 				OUTFRAME = <?= ($talk['duration']-900)*25 ?>;
 				</script>
 
