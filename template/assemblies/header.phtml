@@ -22,6 +22,12 @@
 				<span class="fa fa-info"></span>
 			</a>
 		</div>
+
+		<? if(isset($room) && $room->hasSchedule()): ?>
+			<div class="navbar-right navbar-time">
+				Current Time
+			</div>
+		<? endif ?>
 	</div>
 </nav>
 

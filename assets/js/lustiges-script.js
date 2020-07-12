@@ -127,6 +127,7 @@ $(function() {
 $(function() {
 	var
 		$schedule = $('body .schedule'),
+		$time = $('.navbar-time'),
 		$now = $schedule.find('.now'),
 		scrollLock = false,
 		rewindTimeout,
@@ -154,6 +155,23 @@ $(function() {
 		}
 	});
 
+	function formatLocalTime(timestamp, offset) {
+		const d = new Date(timestamp * 1000);
+
+		// js timezone offset is negative
+		const diff = -d.getTimezoneOffset() - offset;
+		d.setUTCMinutes(d.getUTCMinutes() - diff);
+
+		return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+	}
+
+	function formatOffset(offset) {
+		const sign = offset < 0 ? "-" : "+";
+		const hours = String(Math.floor(Math.abs(offset)/60)).padStart(2, '0');
+		const minutes = String(Math.abs(offset)%60).padStart(2, '0');
+		return sign + hours + ":" + minutes;
+	}
+
 	// schedule now-marker & scrolling
 	function updateProgramView(initial) {
 		var
@@ -167,12 +185,22 @@ $(function() {
 			.find('.room')
 			.first()
 			.find('.block')
-			.filter(function(i, el) { 
+			.filter(function(i, el) {
 				return $(this).data('start') < now;
 			}).last();
 
-		if($block.length == 0)
-			return $now.css('width', 0);
+		// if we are yet to start find first block as reference
+		if (!$block.length)
+			$block = $schedule
+				.find('.room').first()
+				.find('.block').first();
+
+		// still no luck
+		if(!$block.length) {
+			$now.find('.overlay').css('width', 0);
+			$now.find('.label').text('now');
+			return;
+		}
 
 		var
 			// start & end-timestamp
@@ -195,15 +223,19 @@ $(function() {
 			px_in_display = px - scrollx;
 
 		//console.log($block.get(0), new Date(start*1000), new Date(now*1000), new Date(end*1000), normalized, px);
-		$now.css('width', px);
+		const eventOffset = parseFloat($block.data('offset')) || 0;
+		const eventTime = formatLocalTime(now, eventOffset);
+		$now.find('.overlay').css('width', px);
+		$now.find('.label').text("now (" + eventTime + ")");
+		$time.text(eventTime + " (" + formatOffset(eventOffset) + ")");
 
 		// scrolling is locked by manual interaction
-		if(scrollLock)
+		if (scrollLock)
 			return;
 
 		if(
 			// now marker is > 2/3 of the schedule-display-width
-			px_in_display > (displayw * 2/3) || 
+			px_in_display > (displayw * 2/3) ||
 
 			// now marker is <1/7 of the schedule-display-width
 			px_in_display < (displayw/7)

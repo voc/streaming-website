@@ -1,10 +1,14 @@
 <div class="schedule scroll-container">
 	<div class="scroll-element">
-		<div class="now"><span>now</span></div>
+		<? $totalWidth = round($schedule->getDurationSum() / $schedule->getScale()) ?>
+		<div class="now" style="width: <?= h($totalWidth) ?>px">
+			<div class="overlay"></div>
+			<div class="label">now</div>
+		</div>
 		<? $rooms = $schedule->getSchedule() ?>
 		<? foreach($rooms as $roomname => $events): ?>
 			<? $scheduleRoom = $schedule->getMappedRoom($roomname) ?>
-			<div class="room <? if(isset($room) && $roomname == $room->getScheduleName()): ?>highlight<? endif ?>" style="width: <?=round($schedule->getDurationSum() / $schedule->getScale())?>px">
+			<div class="room <? if(isset($room) && $roomname == $room->getScheduleName()): ?>highlight<? endif ?>" style="width: <?= h($totalWidth) ?>px">
 				<? $fromstart = 0; ?>
 				<? foreach($events as $event): ?>
 					<div
@@ -12,6 +16,7 @@
 						style="width: <?=h(round($event['duration'] / $schedule->getScale()))?>px; left: <?=h(round($fromstart / $schedule->getScale()))?>px"
 						data-start="<?=intval($event['start'])?>"
 						data-end="<?=intval($event['end'])?>"
+						data-offset="<?=intval($event['offset']/60)?>"
 					>
 						<? $fromstart += $event['duration'] ?>
 						<? if($scheduleRoom): ?>
@@ -42,9 +47,9 @@
 
 							<? else: ?>
 								<? if($event['duration'] > 10*60): /* only display when event is longer as 10 minutes */ ?>
-									<h4><?=h(strftime('%H:%M', $event['start']))?>
+									<h4><?=h($event['tstart'])?>
 										&ndash;
-										<?=h(strftime('%H:%M', $event['end']))?>
+										<?=h($event['tend'])?>
 										&nbsp;in&nbsp;
 										<?=h($scheduleRoom ? $scheduleRoom->getDisplayShort() : $roomname) ?>
 									</h4>
