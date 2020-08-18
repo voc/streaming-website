@@ -161,7 +161,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'S2' => array(
 		'DISPLAY' => 'HS 3',
-		'STREAM' => 's2',
+		'STREAM' => 's3',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 
@@ -185,7 +185,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'S3' => array(
 		'DISPLAY' => 'HS 4',
-		'STREAM' => 's3',
+		'STREAM' => 's4',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 
@@ -209,7 +209,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'S4' => array(
 		'DISPLAY' => 'HS 5',
-		'STREAM' => 's4',
+		'STREAM' => 's5',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 
@@ -233,7 +233,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'S5' => array(
 		'DISPLAY' => 'C116',
-		'STREAM' => 's5',
+		'STREAM' => 's2',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 
