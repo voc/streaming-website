@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 15: Offene Technologien für freie Kommunikation',
+	'TITLE' => 'Debate 16: Olinda, Brazil: making in times of COVID-19',
 
 	/**
 	 * Veranstalter
@@ -47,15 +47,16 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Den aktuellen Angriff der Trump-Regierung auf den Open Technology Fund in den USA nehmen wir zum Anlass, uns hier vor Ort einmal umzuschauen: welche Förderungen gibt es, und warum sind sie wichtig für offene Technologie-Projekte? Ist freies Internet auch für den humanitären Kontext ein Thema?
+	'DESCRIPTION' => 'Debate visits Brazil! The makerspace Casa Criatura in Olinda produced thousands of pieces of 
+	PPE (personal protective equipment) by mixing open, globally designed products with local practices, and donated 
+	it to local indigenous health authorities, Afro Brazilian traditional communities and public hospitals. The 
+	makerspace also developed an open source aerosol box together with physicists and teachers from reference hospitals 
+	in the region, igniting a community of makers and health care professionals around it. And, most importantly, the 
+	demunis, the ordinary citizens with community obligations, received support too. All these activities were 
+	accompanied by the overarching question, how communities can better care for themselves during pandemics.
 
-	Wir freuen uns auf ein spannendes Gespräch über diese Fragen mit unseren beiden Gästen:
-	
-	Elisa vom SUPERRR Lab hat das letzte Jahr dazu geforscht und Empfehlungen für Förderer entwickelt, wie Infrastrukturprojekte besser unterstützt werden können. Als ehemalige Leiterin des Prototype Funds kennt sie sich auch mit der bürokratischen Seite von Förderung besser aus, als ihr lieb ist.
-	
-	Elektra hat die Entwicklung der Meshtechnologie für Communitynetzwerke bei Freifunk aktiv mitgestaltet und u.a. in Bangladesh, Indien, Chile, Tanzania, Südafrika unterrichtet. Sie arbeitet als Open-Software- und Open-Hardwareentwicklerin und hat unter anderem den B.A.T.M.A.N. Routingalgorithmus für Freifunk-Netze initiiert und mit der Freifunk-Community entwickelt. Außerdem war sie an der Entwicklung der Mesh-Potato beteiligt, einem Wireless-Router für drahtlose Ad-Hoc-Netzwerke in global benachteiligten Regionen.
-	
-	Wie immer seid ihr herzlich eingeladen, über den Chat Fragen zu stellen und mitzudiskutieren.',
+	We speak with Ricardo Ruiz, a member of the Global Innovation Gathering and the Careables network, about the current 
+	situation and activities in the city of Olinda and Recife, north-eastern Brazil.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
