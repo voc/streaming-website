@@ -105,6 +105,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 				'slug' => $room->getSlug(),
 				'schedulename' => $room->getScheduleName(),
 				'thumb' => $room->getThumb(),
+				'poster' => $room->getPoster(),
 				'link' => forceslash(baseurl()).$room->getLink(),
 				'display' => $room->getDisplay(),
 				'stream' => $room->getStream(),
