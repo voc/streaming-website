@@ -138,7 +138,7 @@ class Stream
 				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.webm']);
 
 			case 'hls':
-				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
 		}
 
 		return null;
