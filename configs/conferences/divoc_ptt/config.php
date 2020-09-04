@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2010-04-06 15:30"),
+	'STARTS_AT' => strtotime("2020-09-04 17:30"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-04-13 4:00"),
+	'ENDS_AT' => strtotime("2020-09-06 19:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -26,7 +26,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'after',
+	'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -54,7 +54,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'DIVOC, Hacking, Chaos Computer Club, Video, Music, Podcast, Media, Streaming, Hacker, Everywhere, Hidden Service',
+	'KEYWORDS' => 'DIVOC, Hacking, Chaos Computer Club, Video, Music, Podcast, Media, Streaming, Hacker, Everywhere, Push To Talk, PTT',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -86,7 +86,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/divoc',
+	'RELEASES' => 'https://media.ccc.de/c/divocptt',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -139,7 +139,7 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'halla' => array(
-				'DISPLAY' => 'Ada',
+				'DISPLAY' => 'Scheider-Hoover',
 				'WIDE' => true,
                 'STREAM' => 's1',
                 'PREVIEW' => true,
@@ -155,20 +155,20 @@ $CONFIG['ROOMS'] = array(
                 'AUDIO' => true,
                 'MUSIC' => false,
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'Ada',
+                'SCHEDULE_NAME' => 'Scheider-Hoover',
                 'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'SUBTITLES_ROOM_ID' => 1,
                 'EMBED' => true,
 				'IRC' => true,
 				'IRC_CONFIG' => array(
-					'DISPLAY' => '#36C3-hall-a @ hackint',
-					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-a',
+					'DISPLAY' => '#divoc @ hackint',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#divoc',
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#Ada @ twitter',
-					'TEXT'    => '#36C3 #Ada',
+					'DISPLAY' => '#pushtotalk @ twitter',
+					'TEXT'    => '#pushtotalk',
 				),
 			),
 			
@@ -187,15 +187,15 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://gist.githubusercontent.com/stblassitude/362a118b0941e2cf3f88f69342dc59ab/raw/ce5e73898c63aa91ea894fe949d0a440b4a999bc/divoc-schedule.xml',
+	'URL' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
 
     /**
      * Nur die angegebenen Räume aus dem Fahrplan beachten
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
-		'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
+    //'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
+	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
@@ -285,7 +285,7 @@ $CONFIG['IRC'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#36C3-%s @ hackint',
+	'DISPLAY' => '#divoc @ hackint',
 
 	/**
 	 * URL für die IRC-Links.
@@ -296,7 +296,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-    'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s',
+    'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#divoc',
 );
 
 /**
@@ -324,7 +324,7 @@ $CONFIG['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#36C3 #%s',
+	'TEXT' => '#pushtotalk #%s',
 );
 
 /**
@@ -334,19 +334,19 @@ $CONFIG['TWITTER'] = array(
  * unter dem angegebenen Dateinamen in diesem Konfigurationsordner abgelegt.
  */
 $CONFIG['EXTRA_FILES'] = array(
-	'schedule.xml'  => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xml',
-	'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.json',
-	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.ics',
-	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xcal',
+	'schedule.xml'  => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
+	'schedule.json' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.json',
+	'schedule.ics'  => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.ics',
+	'schedule.xcal' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xcal',
 
-	'everything.schedule.xml' => 'http://data.c3voc.de/36C3/everything.schedule.xml',
-	'everything.schedule.json' => 'http://data.c3voc.de/36C3/everything.schedule.json',
+	'everything.schedule.xml' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
+	'everything.schedule.json' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.json',
 
-    'stages.schedule.xml' => 'http://data.c3voc.de/36C3/stages.schedule.xml',
-    'stages.schedule.json' => 'http://data.c3voc.de/36C3/stages.schedule.json',
+    'stages.schedule.xml' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
+    'stages.schedule.json' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.json',
 
-    'wiki.schedule.xml' => 'http://data.c3voc.de/36C3/wiki.schedule.xml',
-    'wiki.schedule.json' => 'http://data.c3voc.de/36C3/wiki.schedule.json',
+    'wiki.schedule.xml' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
+    'wiki.schedule.json' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.json',
 
 	//'workshops.schedule.xml' => 'http://data.c3voc.de/36C3/workshops.schedule.xml',
 	//'workshops.schedule.json' => 'http://data.c3voc.de/36C3/workshops.schedule.json',
