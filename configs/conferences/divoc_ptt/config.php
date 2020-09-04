@@ -139,7 +139,7 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'halla' => array(
-				'DISPLAY' => 'Scheider-Hoover',
+				'DISPLAY' => 'Schneider-Hoover',
 				'WIDE' => true,
                 'STREAM' => 'divoc',
                 'PREVIEW' => true,
@@ -155,7 +155,7 @@ $CONFIG['ROOMS'] = array(
                 'AUDIO' => true,
                 'MUSIC' => false,
                 'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'Scheider-Hoover',
+                'SCHEDULE_NAME' => 'Schneider-Hoover',
                 'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'SUBTITLES_ROOM_ID' => 1,
