@@ -62,10 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://ccc.de">Chaos Computer Club e.V</a>,
-		<a href="https://www.isystems.at/">iSystems</a>,
-		<a href="https://fem.tu-ilmenau.de/">FeM</a>,
-		<a href="https://www.ags.tu-bs.de/">ags</a> &
+		by <a href="https://ccc.de">Chaos Computer Club e.V</a> &
 		<a href="https://c3voc.de">C3VOC</a>
 	',
 
