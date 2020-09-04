@@ -1,0 +1,23 @@
+﻿/** Blackout Midnight **/
+@font-face {
+    font-family: "Blackout Midnight";
+    font-weight: 100;
+    font-style: normal;
+    src: url("blackout_midnight-webfont.eot");
+    src: url("blackout_midnight-webfont.eot?#iefix") format('embedded-opentype'),
+         url("blackout_midnight-webfont.svg") format("svg"),
+         url("blackout_midnight-webfont.ttf") format("ttf"),
+         url("blackout_midnight-webfont.woff") format("woff");
+}
+
+/** Blackout 2AM **/
+@font-face {
+    font-family: "Blackout 2AM";
+    font-weight: 100;
+    font-style: normal;
+    src: url("blackout_two_am-webfont.eot");
+    src: url("blackout_two_am-webfont.eot?#iefix") format('embedded-opentype'),
+         url("blackout_two_am-webfont.svg") format("svg"),
+         url("blackout_two_am-webfont.ttf") format("ttf"),
+         url("blackout_two_am-webfont.woff") format("woff");
+}
