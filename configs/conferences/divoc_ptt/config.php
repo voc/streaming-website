@@ -141,7 +141,7 @@ $CONFIG['ROOMS'] = array(
 	'halla' => array(
 				'DISPLAY' => 'Scheider-Hoover',
 				'WIDE' => true,
-                'STREAM' => 's1',
+                'STREAM' => 'divoc',
                 'PREVIEW' => true,
 				'TRANSLATION' => [
 					['endpoint' => 'translated',   'label' => 'Translated1'],
