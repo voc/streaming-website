@@ -51,10 +51,6 @@ class Room
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getStream(), 'thumb.jpeg']);
 	}
 
-	public function getPoster() {
-		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getStream(), 'poster.jpeg']);
-	}
-
 	public function getLink() {
 		return joinpath([$this->getConference()->getSlug(), $this->getSlug()]).url_params();
 	}
@@ -252,7 +248,7 @@ class Room
 
 	public function getSelectionNames()
 	{
-		$selections = array('hd');
+		$selections = array();
 		if($this->hasDash())
 			$selections[] = 'dash';
 
