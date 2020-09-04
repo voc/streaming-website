@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://live.alb.c3voc.de/relive/relive_ptt/index.json'
+	'RELIVE_JSON' => 'https://live.alb.c3voc.de/relive/divoc_ptt/index.json'
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
@@ -187,7 +187,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
+	'URL' => 'https://data.c3voc.de/divoc/everything.schedule.xml',
 
     /**
      * Nur die angegebenen Räume aus dem Fahrplan beachten
@@ -339,14 +339,8 @@ $CONFIG['EXTRA_FILES'] = array(
 	'schedule.ics'  => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.ics',
 	'schedule.xcal' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xcal',
 
-	'everything.schedule.xml' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
-	'everything.schedule.json' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.json',
-
-    'stages.schedule.xml' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
-    'stages.schedule.json' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.json',
-
-    'wiki.schedule.xml' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.xml',
-    'wiki.schedule.json' => 'https://talks.mrmcd.net/ptt/schedule/export/schedule.json',
+	'everything.schedule.xml' => 'https://data.c3voc.de/divoc/everything.schedule.xml',
+	'everything.schedule.json' => 'https://data.c3voc.de/divoc/everything.schedule.json',
 
 	//'workshops.schedule.xml' => 'http://data.c3voc.de/36C3/workshops.schedule.xml',
 	//'workshops.schedule.json' => 'http://data.c3voc.de/36C3/workshops.schedule.json',
