@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/eh19/index.json',
+	'RELIVE_JSON' => 'http://live.alb.c3voc.de/relive/bigbrotherawards2020/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -149,7 +149,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 
 		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'EI 7',
+		'SCHEDULE_NAME' => 'Hechelei Bielefeld',
 
 		'FEEDBACK' => true,
 		'EMBED' => true,
