@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Lecture rooms' => array(
 			'co2',
-			'ch4',
+			'nh4',
 		),
 	),
 );
