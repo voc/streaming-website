@@ -16,8 +16,9 @@
 // conference specific styles here
 
 body {
-	background-color: #232323;
-    color: #666;
+	background-image: url('puzzle.jpg');
+	color: #666;
+	font-family: "Candara", Helvetica, sans-serif;
 }
 
 .banner {
@@ -28,22 +29,57 @@ body {
 	}
 }
 
+.navbar-default {
+	background-color: white;
+	border-color: hsl( 221, 50%, 93% );
+}
+
 .navbar-brand {
 	// color: transparent !important;
 	height: 50px;
-	//background-image: url('logo.svg');
+	background-image: url('logo.svg');
 	background-repeat: no-repeat;
 	background-size: auto 30px;
 	background-position: 15px 10px;
 	padding-left: 120px;
-	color: #232323 !important;
+	color: #0081cc !important;
+	font-family: "Consolas", "Courier new", monospace;
+	font-weight: bold;
 	.icon {
 		display: none !important;
 	}
 }
 
-footer a {
-	color: @link-color;
+.nav-tabs {
+	& > li > a {
+		color: white;
+		font-family: "Candara", Helvetica, sans-serif;
+		background-color: hsl( 221, 50%, 40% );
+		&:hover {
+			color: black;
+			background-color: #8ed1fc;
+		}
+	}
+
+	& > li.active > a {
+		color: black;
+		background-color: #8ed1fc;
+	}
+}
+
+footer {
+	background-color: white;
+	border-width: 1px 0 0;
+	border-color: hsl( 221, 50%, 93% );
+	font-family: "Consolas", "Courier new", monospace;
+	color: rgb(31, 44, 71);
+	a {
+		color: rgb(31, 44, 71);
+		font-weight: bold;
+		&:hover {
+			box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+		}
+	}
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -51,5 +87,5 @@ footer a {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: white;
+  color: #23a28f;
 }
