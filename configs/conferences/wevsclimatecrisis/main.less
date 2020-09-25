@@ -50,6 +50,23 @@ body {
 	}
 }
 
+.nav-tabs {
+	& > li > a {
+		color: white;
+		font-family: "Candara", Helvetica, sans-serif;
+		background-color: hsl( 221, 50%, 40% );
+		&:hover {
+			color: black;
+			background-color: #8ed1fc;
+		}
+	}
+
+	& > li.active > a {
+		color: black;
+		background-color: #8ed1fc;
+	}
+}
+
 footer {
 	background-color: white;
 	border-width: 1px 0 0;
