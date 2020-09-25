@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'we vs climatecrisis',
+	'TITLE' => 'We vs ClimateCrisis',
 
 	/**
 	 * Veranstalter
@@ -62,7 +62,8 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		wevsclimatecrisis.de
+		by <a href="https://wevsclimatecrisis.de/">We vs ClimateCrisis</a>, a <a href="https://developersforfuture.org">DevelopersForFuture</a> initiative, with friendly support from the <a href="https://c3voc.de">C3VOC</a>
+		&#x007C; <span>Background image by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/puzzle-pieces?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 	',
 
 	/**
