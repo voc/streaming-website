@@ -137,7 +137,7 @@ $CONFIG['ROOMS'] = array(
 	 */
 	'Arch Conf' => array(
 		'DISPLAY' => 'Arch Conf',
-		'STREAM' => 'main',
+		'STREAM' => 'sarchmain',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 
