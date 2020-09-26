@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Digital Rooms' => array(
-			'Arch Conf'
+			'ArchConf'
 		),
 	),
 );
@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Arch Conf' => array(
+	'ArchConf' => array(
 		'DISPLAY' => 'Arch Conf',
 		'STREAM' => 'sarchmain',
 		'PREVIEW' => true,
