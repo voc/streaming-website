@@ -402,7 +402,7 @@ $CONFIG['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#vcfb @vcfb on twitter',
+	'DISPLAY' => '#vcfb @vcfberlin on twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
