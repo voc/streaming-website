@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2020-09-03 19:45"),
+	'STARTS_AT' => strtotime("2020-10-01 19:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2020-09-03 22:15"),
+	'ENDS_AT' => strtotime("2020-10-01 22:15"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 16: Olinda, Brazil: making in times of COVID-19',
+	'TITLE' => 'Debate 17: Humanitäre Hilfe im politischen Kreuzfeuer: von den Steinen, die uns auf dem Weg nach Moria in den Weg gelegt wurden',
 
 	/**
 	 * Veranstalter
@@ -47,16 +47,34 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Debate visits Brazil! The makerspace Casa Criatura in Olinda produced thousands of pieces of 
-	PPE (personal protective equipment) by mixing open, globally designed products with local practices, and donated 
-	it to local indigenous health authorities, Afro Brazilian traditional communities and public hospitals. The 
-	makerspace also developed an open source aerosol box together with physicists and teachers from reference hospitals 
-	in the region, igniting a community of makers and health care professionals around it. And, most importantly, the 
-	demunis, the ordinary citizens with community obligations, received support too. All these activities were 
-	accompanied by the overarching question, how communities can better care for themselves during pandemics.
+	'DESCRIPTION' => 'Seit Mai 2020 hat CADUS der griechischen Regierung immer wieder angeboten, auf den Inseln in der Ägäis die medizinische Versorgung der Geflüchteten zu unterstützen. Die Hilfe wurde zunächst mit fadenscheinigen Ausreden abgelehnt, irgendwann reagierte Griechenland gar nicht mehr auf unsere wiederholenden Angebote.
 
-	We speak with Ricardo Ruiz, a member of the Global Innovation Gathering and the Careables network, about the current 
-	situation and activities in the city of Olinda and Recife, north-eastern Brazil.',
+Zeitgleich war ein Ehrenamtlicher unseres Berliner Medics Teams vor Ort und hat uns berichtet, wie die lokale Polizei die medizinische Versorgung der Menschen nach dem Brand aktiv verhinderte.
+Die Liste der Menschenrechte, gegen die mutmaßlich auf Lesbos verstoßen wurde und immer noch wird, ist lang.
+
+In dieser Folge von Debate sprechen wir mit Sebastian Jünemann, Gründer von CADUS und Leiter der Rapid Response-Projekte der Organisation, und mit Louis Kennedy, Rettungsassistent und Teil der CADUS Medics Gruppe. Louis wird von seinen Erfahrungen vor Ort berichten während Sebastian den internationalen Humanitären Hilfe-Mechanismus kritisch in den Blick nimmt.
+
+Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
+
+Donnerstag 01.10.2020
+Start 20:00
+
+Stream
+https://streaming.media.ccc.de/cadus-debate
+
+Chat
+https://webirc.hackint.org/#irc://irc.hackint.org/#debate
+
+Sprache: Deutsch
+
+DEBATE Corona Edition zum nachschauen:
+https://media.ccc.de/c/cadusdebate
+Was ist Debate?
+
+Uns ist es wichtig, nicht nur dort Hilfe zu leisten wo sie dringend gebraucht wird, sondern auch, die humanitäre Praxis immer wieder kritisch zu reflektieren. Deshalb laden wir jeden ersten Donnerstag im Monat um 20 Uhr zu Vortrag und Diskussion über ein aktuelles Thema der humanitären Hilfe ein.
+
+abboniere den Debate-Newsletter
+',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -155,7 +173,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'debate',
+		'STREAM' => 's23',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
