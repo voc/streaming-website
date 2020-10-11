@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2019-09-18 17:30"),
+	'STARTS_AT' => strtotime("2020-10-13 09:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2019-09-18 19:15"),
+	'ENDS_AT' => strtotime("2020-10-13 11:15"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -47,14 +47,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Pressekonferenz von Fridays for Future zum Klimastreik am 20. September und zu den Erwartungen an das Klimakabinett.',
+	'DESCRIPTION' => 'Pressekonferenz von Fridays for Future zur Machbarkeitsstudie.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'Fridays for Future, Klimakabinett',
+	'KEYWORDS' => 'Fridays for Future, Machbarkeitsstudie',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		<a href="https://fridaysforfuture.de/allefuersklima/">fridaysforfuture.de</a>
+		<a href="https://fridaysforfuture.de/">fridaysforfuture.de</a>
 	',
 
 	/**
@@ -109,7 +109,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'gasometer',
+			'fff',
 		),
 	),
 );
@@ -121,8 +121,8 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
 	'gasometer' => array(
-		'DISPLAY' => 'Gasometer',
-		'STREAM' => 'q2',
+		'DISPLAY' => 'Pressekonferenz',
+		'STREAM' => 'fff',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
