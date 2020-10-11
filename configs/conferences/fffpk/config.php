@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'gasometer' => array(
+	'fff' => array(
 		'DISPLAY' => 'Pressekonferenz',
 		'STREAM' => 'fff',
 		'PREVIEW' => true,
