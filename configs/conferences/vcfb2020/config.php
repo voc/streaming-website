@@ -100,7 +100,7 @@ Ausgehend von dieser Website wird das VCFB 2020 in einem Wiki und einem Videokon
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/vcfb2020/index.json',
+	'RELIVE_JSON' => 'http://live.alb.c3voc.de/relive/vcfb2020/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
