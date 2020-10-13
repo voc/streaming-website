@@ -72,7 +72,7 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'RELEASES' => 'https://www.youtube.com/channel/UCkZIh0tBls7FIGTvYPF-H-w',
 
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/ogtm18/index.json',
+	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/ogtm18/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden

@@ -95,7 +95,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-//	'RELIVE_JSON' => 'https://live.ber.c3voc.de/relive/s23/index.json',
+//	'RELIVE_JSON' => 'https://relive.c3voc.de/relive/s23/index.json',
 );
 
 /**

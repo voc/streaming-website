@@ -92,7 +92,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.alb.c3voc.de/relive/sotm2020/index.json',
+	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/sotm2020/index.json',
 );
 
 /**

@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://live.ber.c3voc.de/relive/unteilbar18/index.json',
+	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/unteilbar18/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
