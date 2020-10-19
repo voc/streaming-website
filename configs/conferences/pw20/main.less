@@ -1,0 +1,224 @@
+@import "../../../assets/css/_structure.less";
+
+
+// conference specific styles here
+@pw-darkblue:   #1c234c;
+@pw-darkgrey:   #677077;
+@pw-lightgrey:  #b5b5b7;
+@pw-lightblue:  #7e94b7;
+@pw-yellow:     #ffd900;
+@pw-darkpink:   #ea5297;
+@pw-purple:  	#954b97;
+@pw-turquoise:  #bde3f2;
+
+@pw-color:     @pw-purple;
+
+@body-text:     @pw-darkblue;
+
+@overview-color: @pw-darkblue;
+
+@darker-grey:   #262626;
+@dark-grey:     lighten(@darker-grey, 20%);
+@light-grey:    lighten(@darker-grey, 30%);
+@lighter-grey:  lighten(@darker-grey, 40%);
+
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @pw-color;
+@text-color:            @body-text;
+
+@link-color:            @body-text;
+@link-hover-color:      @lighter-grey;
+
+// @navbar-height:         70px;
+
+@navbar-default-bg:     @pw-lightblue;
+@navbar-default-border: @pw-lightblue;
+
+@navbar-default-link-color:       white;
+//@navbar-default-link-hover-color: @link-hover-color;
+
+body {
+	background-image: url("/configs/conferences/pw20/assets/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: @pw-lightblue;
+	padding: @navbar-height 0;
+	color: @body-text;
+}
+
+body > .container {
+	background-color: rgba(255,255,255, 1);
+	margin-top: 2.5em;
+	padding-bottom: 15px;
+	border: 2px solid  rgba(255,255,255, 0.33);
+	border-radius: 1em;
+}
+
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: "pt_sansregular",Arial,sans-serif;
+}
+
+h1 {
+	margin-top: 12px;
+}
+
+.btn {
+	border: 1px solid @pw-lightblue;
+}
+ul.nav > li > a {
+	border-bottom: none !important;
+}
+ul.nav {
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.overview {
+	h2 {
+		text-align: center;
+
+		text-transform: uppercase;
+		font-weight: bold;
+
+		margin: 40px 0 20px 0;
+		color: @pw-darkblue;
+	}
+
+	.room, .recordings {
+		a, a:hover {
+			text-decoration: none;
+			color: @overview-color;
+		}
+
+		.panel {
+			//background: none;
+			background-color: rgba(255,255,255,0.9);
+			border: 2px solid @pw-lightblue;
+
+			&:hover {
+				text-decoration: none;
+
+				.panel-body {
+					border-top: 2px solid @pw-lightblue;
+				}
+
+				.panel-body .program-schedule .next-talk {
+					border-bottom: 2px solid @pw-lightblue;
+				}
+			}
+
+			.panel-title {
+				color: @overview-color;
+				font-size: 18px;
+			}
+
+			.panel-primary {
+				background-color: @light-grey;
+				border-color: @pw-lightblue;
+				color: @overview-color;
+				a {
+					color: @overview-color;
+				}
+			}
+
+			.panel-heading {
+				background: none;
+				border: none;
+
+				display: block !important;
+
+				text-transform: uppercase;
+				font-weight: bold;
+
+				padding: 8px 15px;
+
+				a {
+					color: @overview-color;
+				}
+			}
+
+		}
+	}
+}
+
+.overview .room-group-live-music .room .panel .panel-body {
+	margin-bottom: 0;
+}
+
+.banner img {
+	max-width: 50%;
+}
+.banner {
+	display: none
+}
+
+.well a {
+	color: @dark-grey;
+	text-decoration: underline;
+}
+.alert {
+	a {
+		text-decoration: underline;
+	}
+	&.alert-success a {
+		color: @state-success-text;
+	}
+	&.alert-info a {
+		color: @state-info-text;
+	}
+	&.alert-warning a {
+		color: @state-warning-text;
+	}
+	&.alert-danger a {
+		color: @state-danger-text;
+	}
+}
+
+body.multiview .cell {
+	color: black;
+}
+
+.closed .about a {
+	text-decoration: underline;
+	color: @brand-primary;
+}
+
+.schedule .block.pause {
+	color: black !important;
+}
+
+
+footer {
+	color: lightgrey;
+}
+
+.nav-tabs > li > a {
+	border-radius: 0 !important;
+	background-color: rgba(255,255,255,0.4);
+	&:hover {
+		background-color: rgba(255,255,255,0.6);
+	}
+}
+
+body.room .tab-content {
+	background-color: rgba(255,255,255,0.85);
+	border: none;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+@media (max-width: 768px)
+{
+	nav {
+		position: static !important;
+	}
+	body {
+		padding: 0 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.banner {
+		margin-top: 60px;
+	}
+}
