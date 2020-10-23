@@ -126,7 +126,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'saal1' => array(
 		'DISPLAY' => 'Saal 1',
-		'STREAM' => 'q1',
+		'STREAM' => 'pw20',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
