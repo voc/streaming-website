@@ -24,7 +24,9 @@ else
 	$IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
 }
 
-$STREAM = $IM_CCCB ? 's23' : 'q2';
+#$STREAM = $IM_CCCB ? 's23' : 'q2';
+STREAM="chaosradio"
+
 
 $CONFIG['CONFERENCE'] = array(
 	/**
