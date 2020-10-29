@@ -25,7 +25,7 @@ else
 }
 
 #$STREAM = $IM_CCCB ? 's23' : 'q2';
-STREAM="chaosradio"
+$STREAM="chaosradio";
 
 
 $CONFIG['CONFERENCE'] = array(
