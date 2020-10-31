@@ -133,8 +133,8 @@ $CONFIG['OVERVIEW'] = array(
 			'chaoswest',
 			'wikipakawg',
 			'oio',
-            'sz',
-            'cdc'
+			'sz',
+			'cdc'
 		),
 	),
 );
@@ -152,25 +152,25 @@ $CONFIG['ROOMS'] = array(
 	'halla' => array(
 				'DISPLAY' => 'Ada',
 				'WIDE' => true,
-                'STREAM' => 's1',
-                'PREVIEW' => true,
+				'STREAM' => 's1',
+				'PREVIEW' => true,
 				'TRANSLATION' => [
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
 
-                'SD_VIDEO' => true,
-                'HD_VIDEO' => true,
-                'SLIDES' => true,
-                'DASH' => true,
-                'AUDIO' => true,
-                'MUSIC' => false,
-                'SCHEDULE' => true,
-                'SCHEDULE_NAME' => 'Ada',
-                'FEEDBACK' => true,
+				'SD_VIDEO' => true,
+				'HD_VIDEO' => true,
+				'SLIDES' => true,
+				'DASH' => true,
+				'AUDIO' => true,
+				'MUSIC' => false,
+				'SCHEDULE' => true,
+				'SCHEDULE_NAME' => 'Ada',
+				'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'SUBTITLES_ROOM_ID' => 1,
-                'EMBED' => true,
+				'EMBED' => true,
 				'IRC' => true,
 				'IRC_CONFIG' => array(
 					'DISPLAY' => '#36C3-hall-a @ hackint',
@@ -201,7 +201,6 @@ $CONFIG['ROOMS'] = array(
 				'SCHEDULE_NAME' => 'Borg',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
-				'SUBTITLES_ROOM_ID' => 2,
 				'EMBED' => true,
 				'IRC' => true,
 				'IRC_CONFIG' => array(
@@ -328,7 +327,6 @@ $CONFIG['ROOMS'] = array(
 				'SCHEDULE_NAME' => 'Chaos-West Bühne',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
-				'SUBTITLES_ROOM_ID' => 2,
 				'EMBED' => true,
 				'IRC' => false,
 				'TWITTER' => true,
@@ -362,7 +360,6 @@ $CONFIG['ROOMS'] = array(
 				'SCHEDULE_NAME' => 'WikiPaka WG: Esszimmer',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
-				'SUBTITLES_ROOM_ID' => 2,
 				'EMBED' => true,
 				'IRC' => false,
 				'TWITTER' => true,
@@ -390,7 +387,6 @@ $CONFIG['ROOMS'] = array(
 				'SCHEDULE_NAME' => 'OIO Stage',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
-				'SUBTITLES_ROOM_ID' => 2,
 				'EMBED' => true,
 				'IRC' => false,
 				'TWITTER' => true,
@@ -398,35 +394,34 @@ $CONFIG['ROOMS'] = array(
 					'DISPLAY' => '#OIOStage @ twitter',
 					'TEXT'    => '#OIOStage',
 				),
-            ),
+			),
 
-            'cdc' => array(
-                 'DISPLAY' => 'CDC',
-                 'DISPLAY_SHORT' => 'CDC',
-                 'STREAM' => 'cdc',
-                 'PREVIEW' => true,
-                 'TRANSLATION' => [
-                 ],
- 
-                 'SD_VIDEO' => true,
-                 'HD_VIDEO' => true,
-                 'DASH' => true,
-                 'AUDIO' => true,
-                 'SLIDES' => false,
-                 'MUSIC' => false,
-                 'SCHEDULE' => true,
-                 'SCHEDULE_NAME' => 'CDC Stage',
-                 'FEEDBACK' => true,
-                 'SUBTITLES' => false,
-                 'SUBTITLES_ROOM_ID' => 2,
-                 'EMBED' => true,
-                 'IRC' => false,
-                 //'TWITTER' => true,
-                 //'TWITTER_CONFIG' => array(
-                 //    'DISPLAY' => 'freifunk @ twitter',
-                 //    'TEXT'    => '@freifunk',
-                 //),
-             ),
+			'cdc' => array(
+				 'DISPLAY' => 'CDC',
+				 'DISPLAY_SHORT' => 'CDC',
+				 'STREAM' => 'cdc',
+				 'PREVIEW' => true,
+				 'TRANSLATION' => [
+				 ],
+
+				 'SD_VIDEO' => true,
+				 'HD_VIDEO' => true,
+				 'DASH' => true,
+				 'AUDIO' => true,
+				 'SLIDES' => false,
+				 'MUSIC' => false,
+				 'SCHEDULE' => true,
+				 'SCHEDULE_NAME' => 'CDC Stage',
+				 'FEEDBACK' => true,
+				 'SUBTITLES' => false,
+				 'EMBED' => true,
+				 'IRC' => false,
+				 //'TWITTER' => true,
+				 //'TWITTER_CONFIG' => array(
+				 //    'DISPLAY' => 'freifunk @ twitter',
+				 //    'TEXT'    => '@freifunk',
+				 //),
+			 ),
 
 			'sz' => array(
 				'DISPLAY' => 'Sendezentrum',
@@ -446,12 +441,11 @@ $CONFIG['ROOMS'] = array(
 				'SCHEDULE_NAME' => 'DLF- und Podcast-Bühne',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
-				'SUBTITLES_ROOM_ID' => 2,
 				'EMBED' => true,
 				'IRC' => false,
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => 'sendezenrtum @ twitter',
+					'DISPLAY' => 'sendezentrum @ twitter',
 					'TEXT'    => '@sendezentrum',
 				),
 			),
@@ -472,12 +466,12 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	'URL' => 'https://data.c3voc.de/36C3/stages.schedule.xml',
 
-    /**
-     * Nur die angegebenen Räume aus dem Fahrplan beachten
-     *
-     * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-     */
-    'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
+	/**
+	 * Nur die angegebenen Räume aus dem Fahrplan beachten
+	 *
+	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 */
+	'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
 		'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
@@ -579,7 +573,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-    'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s',
+	'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s',
 );
 
 /**
@@ -625,11 +619,11 @@ $CONFIG['EXTRA_FILES'] = array(
 	'everything.schedule.xml' => 'http://data.c3voc.de/36C3/everything.schedule.xml',
 	'everything.schedule.json' => 'http://data.c3voc.de/36C3/everything.schedule.json',
 
-    'stages.schedule.xml' => 'http://data.c3voc.de/36C3/stages.schedule.xml',
-    'stages.schedule.json' => 'http://data.c3voc.de/36C3/stages.schedule.json',
+	'stages.schedule.xml' => 'http://data.c3voc.de/36C3/stages.schedule.xml',
+	'stages.schedule.json' => 'http://data.c3voc.de/36C3/stages.schedule.json',
 
-    'wiki.schedule.xml' => 'http://data.c3voc.de/36C3/wiki.schedule.xml',
-    'wiki.schedule.json' => 'http://data.c3voc.de/36C3/wiki.schedule.json',
+	'wiki.schedule.xml' => 'http://data.c3voc.de/36C3/wiki.schedule.xml',
+	'wiki.schedule.json' => 'http://data.c3voc.de/36C3/wiki.schedule.json',
 
 	//'workshops.schedule.xml' => 'http://data.c3voc.de/36C3/workshops.schedule.xml',
 	//'workshops.schedule.json' => 'http://data.c3voc.de/36C3/workshops.schedule.json',
