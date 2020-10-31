@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'http://media.ccc.de/c/sotm2020',
+	'RELEASES' => 'https://media.ccc.de/c/sotm2020',
 
 	/**
 	 * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
@@ -92,7 +92,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/sotm2020/index.json',
+	'RELIVE_JSON' => 'https://relive.c3voc.de/relive/sotm2020/index.json',
 );
 
 /**
@@ -178,7 +178,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	'URL' => 'http://sotm.osmz.ru/2020.xml',
+	'URL' => 'https://sotm.osmz.ru/2020.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten

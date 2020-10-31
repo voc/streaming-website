@@ -295,9 +295,11 @@ class Schedule
 	{
 		$sum = 0;
 		$schedule = $this->getSchedule();
-		foreach(reset($schedule) as $event)
-			$sum += $event['duration'];
-
+		if ($schedule) {
+			foreach(reset($schedule) as $event) {
+				$sum += $event['duration'];
+			}
+		}
 		return $sum;
 	}
 
