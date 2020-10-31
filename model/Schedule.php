@@ -89,31 +89,32 @@ class Schedule
 		// so to be on the safer side we calculate our own daystart/end here
 		foreach($schedule->day as $day)
 		{
-			$daystart = PHP_INT_MAX;
-			$dayend = 0;
+			$daystart = new DateTimeImmutable('+100 year');
+			$dayend = new DateTimeImmutable('-100 year');
 
 			foreach($day->room as $room)
 			{
 				$roomName = (string)$room['name'];
 				if($this->isRoomFiltered($roomName))
 					continue;
-				
+
 				if(!in_array($roomName, $rooms))
 					$rooms[] = $roomName;
 
 				foreach($room->event as $event)
 				{
-					$start = strtotime((string)$event->date);
-					$duration = $this->strToDuration((string)$event->duration);
-					$end = $start + $duration;
+					$start = new DateTimeImmutable((string)$event->date);
+					$interval = $this->strToInterval((string)$event->duration);
+					$end = $start->add($interval);
 
-					$daystart = min($daystart, $start);
-					$dayend = max($dayend, $end);
+					$daystart = $start < $daystart ? $start : $daystart;
+					$dayend = $end > $dayend ? $end : $dayend;
 				}
 			}
 
-			$day['start'] = $daystart;
-			$day['end'] = $dayend;
+			// stringify again to store in simplexml
+			$day['start'] = $daystart->format('c');
+			$day['end'] = $dayend->format('c');
 		}
 
 
@@ -123,23 +124,23 @@ class Schedule
 			$daysSorted[] = $day;
 		}
 
-		usort($daysSorted, function($a, $b) {
-			return (int)$a['start'] - (int)$b['start'];
+		usort($daysSorted, function($a, $b): int {
+			return strcmp($a['start'], $b['start']);
 		});
 
 		$dayidx = 0;
 		foreach($daysSorted as $day)
 		{
 			$dayidx++;
-			$daystart = (int)$day['start'];
-			$dayend = (int)$day['end'];
+			$daystart = new DateTimeImmutable($day['start']);
+			$dayend = new DateTimeImmutable($day['end']);
 
 			$roomidx = 0;
 			foreach($rooms as $roomName)
 			{
 				$roomidx++;
-				$laststart = false;
-				$lastend = false;
+				$laststart = NULL;
+				$lastend = NULL;
 
 				if($this->isRoomFiltered($roomName))
 					continue;
@@ -147,24 +148,16 @@ class Schedule
 				$result = $day->xpath("room[@name='".$roomName."']");
 				if(!$result) {
 					// this room has no events on this day -> add long gap
-					$program[$roomName][] = array(
-						'special' => 'gap',
+					$gap = $this->makeEvent($daystart, $dayend);
+					$gap['special'] = 'gap';
+					$program[$roomName][] = $gap;
 
-						'fstart' => date('c', $daystart),
-						'fend' => date('c', $dayend),
-
-						'start' => $daystart,
-						'end' => $dayend,
-						'duration' => $dayend - $daystart,
-					);
-					$program[$roomName][] = array(
-						'special' => 'daychange',
-						'title' => 'Daychange from Day '.$dayidx.' to '.($dayidx+1),
-
-						'start' => $dayend,
-						'end' => (int)$schedule->day[$dayidx]['start'],
-						'duration' => 60*60,
-					);
+					$end = new DateTimeImmutable($schedule->day[$dayidx]['start']);
+					$daychange = $this->makeEvent($dayend, $end);
+					$daychange['special'] = 'daychange';
+					$daychange['title'] = 'Daychange from Day '.$dayidx.' to '.($dayidx+1);
+					$daychange['duration'] = 3600;
+					$program[$roomName][] = $daychange;
 					continue;
 				}
 				$room = $result[0];
@@ -184,103 +177,74 @@ class Schedule
 
 				foreach($eventsSorted as $event)
 				{
-					$start = strtotime((string)$event->date);
-					$duration = $this->strToDuration((string)$event->duration);
-					$end = $start + $duration;
+					$start = new DateTimeImmutable((string)$event->date);
+					$interval = $this->strToInterval((string)$event->duration);
+					$end = $start->add($interval);
 
 					// skip duplicate events in fahrplan source
 					if ( $laststart == $start )
-						continue;
+					continue;
 
 					if($lastend && $lastend < $start)
 					{
-						// synthesize pause event
-						$pauseduration = $start - $lastend;
-						$program[$roomName][] = array(
-							'special' => 'pause',
-							'title' => round($pauseduration / 60).' minutes pause',
-
-							'fstart' => date('c', $lastend),
-							'fend' => date('c', $start),
-
-							'start' => $lastend,
-							'end' => $start,
-							'duration' => $pauseduration,
-							'room_known' => $this->isRoomMapped($roomName),
-						);
+						// pause between talks
+						$pause = $this->makeEvent($lastend, $start);
+						$pause['special'] = 'pause';
+						$pause['title'] = round($pause['duration'] / 60).' minutes pause';
+						$pause['room_known'] = $this->isRoomMapped($roomName);
+						$program[$roomName][] = $pause;
 					}
 					else if(!$lastend && $daystart < $start)
 					{
-						$program[$roomName][] = array(
-							'special' => 'gap',
-
-							'fstart' => date('c', $daystart),
-							'fend' => date('c', $start),
-
-							'start' => $daystart,
-							'end' => $start,
-							'duration' => $start - $daystart,
-							'room_known' => $this->isRoomMapped($roomName),
-						);
+						// gap before first talk
+						$gap = $this->makeEvent($daystart, $start);
+						$gap['special'] = 'gap';
+						$gap['room_known'] = $this->isRoomMapped($roomName);
+						$program[$roomName][] = $gap;
 					}
 
 					$personnames = array();
 					if(isset($event->persons)) foreach($event->persons->person as $person)
 						$personnames[] = (string)$person;
 
-					$program[$roomName][] = array(
-						'title' => (string)$event->title,
-						'speaker' => implode(', ', $personnames),
-
-						'fstart' => date('c', $start),
-						'fend' => date('c', $end),
-
-						'start' => $start,
-						'end' => $end,
-						'duration' => $duration,
-						'room_known' => $this->isRoomMapped($roomName),
-						'optout' => $this->isOptout($event),
-					);
+					// normal talk
+					$talk = $this->makeEvent($start, $end);
+					$talk['title'] = (string)$event->title;
+					$talk['speaker'] = implode(', ', $personnames);
+					$talk['room_known'] = $this->isRoomMapped($roomName);
+					$talk['optout'] = $this->isOptout($event);
+					$program[$roomName][] = $talk;
 
 					$laststart = $start;
 					$lastend = $end;
 				}
 
-				// synthesize daychange event
 				if(!$lastend) $lastend = $daystart;
 				if($lastend < $dayend)
 				{
-					$program[$roomName][] = array(
-						'special' => 'gap',
-
-						'fstart' => date('c', $lastend),
-						'fend' => date('c', $dayend),
-
-						'start' => $lastend,
-						'end' => $dayend,
-						'duration' => $dayend - $lastend,
-					);
+					// gap after last talk
+					$gap = $this->makeEvent($lastend, $dayend);
+					$gap['special'] = 'gap';
+					$program[$roomName][] = $gap;
 				}
 
 				if($dayidx < count($schedule->day))
 				{
-					$program[$roomName][] = array(
-						'special' => 'daychange',
-						'title' => 'Daychange from Day '.$dayidx.' to '.($dayidx+1),
-
-						'start' => $dayend,
-						'end' => (int)$schedule->day[$dayidx]['start'],
-						'duration' => 60*60,
-					);
+					// daychange
+					$end = new DateTimeImmutable($schedule->day[$dayidx]['start']);
+					$daychange = $this->makeEvent($dayend, $end);
+					$daychange['special'] = 'daychange';
+					$daychange['title'] = 'Daychange from Day '.$dayidx.' to '.($dayidx+1);
+					$daychange['duration'] = 3600;
+					$program[$roomName][] = $daychange;
 				}
 			}
 		}
 
-
 		$mapping = $this->getScheduleToRoomSlugMapping();
 		if($this->getConference()->has('SCHEDULE.ROOMFILTER'))
 		{
-			// sort by roomfilter
+			// determine roomfilter
 			$roomfilter = $this->getConference()->get('SCHEDULE.ROOMFILTER');
 
 			// map roomfilter-rooms to room-slugs
@@ -291,13 +255,39 @@ class Schedule
 				return $e;
 			}, $roomfilter);
 
-			// sort according to roomtilter ordering
+			// sort according to roomfilter ordering
 			uksort($program, function($a, $b) use ($roomfilter) {
 				return array_search($a, $roomfilter) - array_search($b, $roomfilter);
 			});
 		}
 
 		return $program;
+	}
+
+	private function makeEvent(DateTimeImmutable $from, DateTimeImmutable $to): array {
+		return array(
+			'fstart' => $from->format('c'),
+			'fend' => $to->format('c'),
+			'tstart' => $from->format('H:i'),
+			'tend' => $to->format('H:i'),
+
+			'start' => $from->getTimestamp(),
+			'end' => $to->getTimestamp(),
+			'offset' => $from->getOffset(),
+			'duration' => $to->getTimestamp() - $from->getTimestamp(),
+		);
+	}
+
+	private function intervalToDuration(DateInterval $interval): int {
+		$one = new DateTimeImmutable();
+		$two = $one->add($interval);
+		return $two->getTimestamp() - $one->getTimestamp();
+	}
+
+	private function strToInterval(string $str): DateInterval
+	{
+		$parts = explode(':', $str);
+		return new DateInterval('PT'.$parts[0].'H'.$parts[1].'M');
 	}
 
 
@@ -312,22 +302,17 @@ class Schedule
 	}
 
 
-
-	private function strToDuration($str)
-	{
-		$parts = explode(':', $str);
-		return ((int)$parts[0] * 60 + (int)$parts[1]) * 60;
-	}
-
 	public function getScheduleUrl()
 	{
 		return $this->getConference()->get('SCHEDULE.URL');
 	}
 
+
 	public function getScheduleCache()
 	{
 		return sprintf('/tmp/schedule-cache-%s.xml', $this->getConference()->getSlug());
 	}
+
 
 	public function getScheduleToRoomSlugMapping()
 	{
