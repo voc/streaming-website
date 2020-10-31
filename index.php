@@ -112,6 +112,12 @@ try {
 		exit;
 	}
 
+	else if($route == 'config.json')
+	{
+		require('view/config-json.php');
+		exit;
+	}
+
 	else if($route == 'about')
 	{
 		// global about-page
@@ -181,6 +187,12 @@ catch(Exception $e)
 ob_start();
 try {
 	$conference = Conferences::getConference($mandator);
+
+	if($route == 'config.json')
+	{
+		require('view/config-json.php');
+		exit();
+	}
 
 	// update template information
 	$tpl->set(array(
