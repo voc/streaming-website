@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	 'RELIVE_JSON' => 'http://relive.c3voc.de/relive/denog10/index.json'
+	 'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/denog10/index.json'
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und

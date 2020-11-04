@@ -104,7 +104,7 @@ Wie Carola werden wir nicht mehr warten. Solange die EU und die europäischen Re
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/seebruecke19/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/seebruecke19/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden

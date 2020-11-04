@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/gpn17/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/gpn17/index.json',
 );
 
 /**

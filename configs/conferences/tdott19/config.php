@@ -104,7 +104,7 @@ Zwischen 11:00 Uhr und 18:00 Uhr heißen wir unsere Gäste herzlich willkommen. 
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'http://relive.c3voc.de/relive/cpu19/index.json',
+	//'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/cpu19/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden

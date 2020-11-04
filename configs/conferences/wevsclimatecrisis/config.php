@@ -98,7 +98,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-        'RELIVE_JSON' => 'https://relive.c3voc.de/relive/wevsclimatecrisis/index.json',
+        'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/wevsclimatecrisis/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden

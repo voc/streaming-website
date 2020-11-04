@@ -97,7 +97,7 @@
 		 * Wird beides aktiviert, hat der externe Link Vorrang!
 		 * Wird beides auskommentiert, wird der Link nicht angezeigt
 		 */
-               'RELIVE_JSON' => 'http://relive.c3voc.de/relive/jh18-berlin/index.json',
+               'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/jh18-berlin/index.json',
 
 		/**
 		 * APCU-Cache-Zeit in Sekunden

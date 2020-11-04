@@ -91,7 +91,7 @@ Am 7. und 8. Juli kommen Trump, Putin, Erdogan, Merkel und Kollegen auf einen Pl
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
 	// 'RELIVE_JSON' => 'configs/conferences/32c3/vod.json',
-	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/tint/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/tint/index.json',
 );
 
 /**

@@ -93,7 +93,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://relive.c3voc.de/relive/netzstreikfuersklima/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/netzstreikfuersklima/index.json',
 );
 
 /**
