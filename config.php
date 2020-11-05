@@ -61,7 +61,7 @@ $GLOBALS['CONFIG']['DOWNLOAD'] = [
 	 *
 	 * Auskommentieren, um alle Konferenzen zu beachten
 	 */
-	'MAX_CONFERENCE_AGE' => 14 /* Tage */,
+	'MAX_CONFERENCE_AGE' => 365 /* Tage */,
 ];
 
 $GLOBALS['CONFIG']['CDN'] = "cdn.c3voc.de";
