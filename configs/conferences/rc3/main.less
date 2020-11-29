@@ -1,0 +1,32 @@
+@import "../../../assets/css/_structure.less";
+
+@one: #B239FF;
+@two: #6800E7;
+@three: #05B9EC;
+@four: #FFFFFF;
+@dark: #100E23;
+
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #D0D0CE;
+
+@brand-primary: @one;
+@well-bg: @dark;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: @grey-darker;
+@panel-default-text: @one;
+@panel-bg: @grey-lighter;
+
+@navbar-height:         70px;
+@navbar-default-bg:     black;
+@navbar-default-border: black;
+
+body {
+	background-color: @dark;
+	padding: @navbar-height 0;
+
+	@media (max-width: 498px) { /* when the navbar breaks */
+		padding: 165px 0;
+	}
+}
