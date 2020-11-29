@@ -122,10 +122,6 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Live' => array(
 			'halla',
-			'hallb',
-			'hallc',
-			'halld',
-			'halle',
 		),
 		'Assemblies Live' => array(
 			'chaoswest',
@@ -150,13 +146,13 @@ $CONFIG['ROOMS'] = array(
 	'halla' => array(
 				'DISPLAY' => 'Ada',
 				'WIDE' => true,
-				'STREAM' => 's1',
+				'STREAM' => 'rc3',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-
+				
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
@@ -171,8 +167,8 @@ $CONFIG['ROOMS'] = array(
 				'EMBED' => true,
 				'IRC' => true,
 				'IRC_CONFIG' => array(
-					'DISPLAY' => '#rC3-hall-a @ hackint',
-					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-hall-a',
+					'DISPLAY' => '#rC3-test @ hackint',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-test',
 				),
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
@@ -194,7 +190,7 @@ $CONFIG['ROOMS'] = array(
 				'AUDIO' => true,
 				'SLIDES' => false,
 				'MUSIC' => false,
-					'SCHEDULE' => true,
+				'SCHEDULE' => true,
 				'SCHEDULE_NAME' => 'Chaos-West Bühne',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
