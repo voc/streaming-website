@@ -28,11 +28,10 @@ if(@$_SERVER['SERVER_NAME'] == 'localhost')
 {
 	// keine Konfiguration -> BASEURL wird automatisch erraten
 }
-// if($_SERVER['SERVER_NAME'] == 'pre.stream.c3voc.de')
-// {
-// 	// Preview-Domain
-// 	$GLOBALS['CONFIG']['BASEURL'] = '//pre.stream.c3voc.de/';
-// }
+else if($_SERVER['SERVER_NAME'] == 'streaming.test.c3voc.de')
+{
+	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.test.c3voc.de/';
+}
 else
 {
 	// Set a safe Default
