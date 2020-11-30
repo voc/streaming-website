@@ -1,26 +1,41 @@
 @import "../../../assets/css/_structure.less";
 
+// conference specific styles here
 @one: #B239FF;
 @two: #6800E7;
 @three: #05B9EC;
 @four: #FFFFFF;
-@dark: #100E23;
+@dark: #160624;
+@dark2: #100E23;
 
 @grey-lighter: #333333;
 @grey-darker: #2a2a2a;
 @grey-light: #D0D0CE;
 
-@brand-primary: @one;
+@brand-primary: @two;
 @well-bg: @dark;
-@navbar-default-bg: @grey-lighter;
-@btn-default-bg: @grey-light;
-@panel-default-heading-bg: @grey-darker;
-@panel-default-text: @one;
-@panel-bg: @grey-lighter;
+@navbar-default-bg: @dark;
+@btn-default-bg: @two;
+
+@panel-default-border: @two;
+@panel-default-heading-bg: @two;
+@panel-default-text: @four;
+@panel-bg: @dark;
 
 @navbar-height:         70px;
-@navbar-default-bg:     black;
-@navbar-default-border: black;
+@navbar-default-border: @two;
+
+@nav-tabs-active-link-hover-color: @four;
+@nav-tabs-active-link-hover-bg: @one;
+@nav-tabs-active-link-hover-border-color: @one;
+@nav-tabs-border-color: @one;
+
+// schedule 
+@schedule-pause:        @grey-lighter;
+@schedule-pause-bg:     fade(@schedule-pause, 30%);
+@brand-success: @three; // @schedule-selected-room
+@brand-danger: @one; // @schedule-now
+@schedule-gap-bg: @dark;
 
 body {
 	background-color: @dark;
@@ -29,4 +44,27 @@ body {
 	@media (max-width: 498px) { /* when the navbar breaks */
 		padding: 165px 0;
 	}
+}
+
+@headings-color: @four;
+h1, h2 {
+    color: #46eed5;
+}
+
+/*
+ * font
+ */
+@import url("/configs/conferences/rc3/font.css");
+
+@font-family-sans-serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@headings-font-family: "orbitron-medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+h1, h2,
+body.overview .room a.title,
+body.overview .panel-primary a,
+.navbar-brand,
+.panel-heading,
+.panel-default > .panel-heading,
+.nav.nav-tabs {
+	font-family: @headings-font-family
 }

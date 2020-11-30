@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "orbitron-medium";
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/orbitron-medium-webfont.woff") format("woff"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/orbitron-medium-webfont.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 100;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Thin.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Thin.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 100;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ThinItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ThinItalic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraLight.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraLightItalic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Light.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Light.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-LightItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-LightItalic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Regular.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Regular.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Italic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Italic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Medium.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Medium.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-MediumItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-MediumItalic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-SemiBold.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-SemiBoldItalic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Bold.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Bold.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-BoldItalic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraBold.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-ExtraBoldItalic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-style: normal;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Black.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-Black.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-style: italic;
+    src: url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-BlackItalic.woff2") format("woff2"), url("https://app-test.rc3.cccv.de/static/plainui/fonts/Montserrat-BlackItalic.woff") format("woff")
+}
