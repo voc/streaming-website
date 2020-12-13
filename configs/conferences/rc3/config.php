@@ -122,13 +122,14 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Live' => array(
 			'halla',
+			'hallb',
 		),
 		'Assemblies Live' => array(
 			'chaoswest',
-			'wikipakawg',
-			'oio',
+			'wikipaka',
+			#'oio',
 			'sz',
-			'cdc'
+			'muc'
 		),
 	),
 );
@@ -143,7 +144,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'halla' => array(
+			'halla' => array(
 				'DISPLAY' => 'Ada',
 				'WIDE' => true,
 				'STREAM' => 'rc3',
@@ -176,10 +177,43 @@ $CONFIG['ROOMS'] = array(
 					'TEXT'    => '#rC3 #Ada',
 				),
 			),
+			'hallb' => array(
+				'DISPLAY' => 'Borg',
+				'WIDE' => true,
+				'STREAM' => 'rc3',
+				'PREVIEW' => true,
+				'TRANSLATION' => [
+					['endpoint' => 'translated',   'label' => 'Translated1'],
+					['endpoint' => 'translated-2', 'label' => 'Translated2']
+				],
+				
+				'SD_VIDEO' => true,
+				'HD_VIDEO' => true,
+				'SLIDES' => true,
+				'DASH' => true,
+				'AUDIO' => true,
+				'MUSIC' => false,
+				'SCHEDULE' => true,
+				'SCHEDULE_NAME' => 'Borg',
+				'FEEDBACK' => true,
+				'SUBTITLES' => false,
+				'SUBTITLES_ROOM_ID' => 1,
+				'EMBED' => true,
+				'IRC' => true,
+				'IRC_CONFIG' => array(
+					'DISPLAY' => '#rC3-test @ hackint',
+					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-test',
+				),
+				'TWITTER' => true,
+				'TWITTER_CONFIG' => array(
+					'DISPLAY' => '#Borg @ twitter',
+					'TEXT'    => '#rC3 #Borg',
+				),
+			),
 			'chaoswest' => array(
-				'DISPLAY' => 'Chaos-West Bühne',
+				'DISPLAY' => 'Chaos-West TV',
 				'DISPLAY_SHORT' => 'Chaos-West',
-				'STREAM' => 's150',
+				'STREAM' => 'cwtv',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
@@ -191,15 +225,15 @@ $CONFIG['ROOMS'] = array(
 				'SLIDES' => false,
 				'MUSIC' => false,
 				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'Chaos-West Bühne',
+				'SCHEDULE_NAME' => 'Chaos-West TV',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'EMBED' => true,
 				'IRC' => false,
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#CWStage @ twitter',
-					'TEXT'    => '#CWStage',
+					'DISPLAY' => '#CWTV @ twitter',
+					'TEXT'    => '#CWTV',
 				),
 				'IRC' => true,
 				'IRC_CONFIG' => array(
@@ -208,10 +242,10 @@ $CONFIG['ROOMS'] = array(
 				),
 			),
 		
-			'wikipakawg' => array(
-				'DISPLAY' => 'WikiPakaWG Esszimmer',
-				'DISPLAY_SHORT' => 'WikiPakaWG',
-				'STREAM' => 's89',
+			'wikipaka' => array(
+				'DISPLAY' => 'WikiPaka',
+				'DISPLAY_SHORT' => 'WikiPaka',
+				'STREAM' => 'wikipaka',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 					['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -224,15 +258,15 @@ $CONFIG['ROOMS'] = array(
 				'SLIDES' => false,
 				'MUSIC' => false,
 				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'WikiPaka WG: Esszimmer',
+				'SCHEDULE_NAME' => 'WikiPaka',
 				'FEEDBACK' => true,
 				'SUBTITLES' => false,
 				'EMBED' => true,
 				'IRC' => false,
 				'TWITTER' => true,
 				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#wikipakaWG @ twitter',
-					'TEXT'    => '#wikipakaWG',
+					'DISPLAY' => '#wikipaka @ twitter',
+					'TEXT'    => '#wikipaka',
 				),
 			),
 		
@@ -263,36 +297,36 @@ $CONFIG['ROOMS'] = array(
 				),
 			),
 
-			'cdc' => array(
-				 'DISPLAY' => 'CDC',
-				 'DISPLAY_SHORT' => 'CDC',
-				 'STREAM' => 'cdc',
-				 'PREVIEW' => true,
-				 'TRANSLATION' => [
-				 ],
-
-				 'SD_VIDEO' => true,
-				 'HD_VIDEO' => true,
-				 'DASH' => true,
-				 'AUDIO' => true,
-				 'SLIDES' => false,
-				 'MUSIC' => false,
-				 'SCHEDULE' => true,
-				 'SCHEDULE_NAME' => 'CDC Stage',
-				 'FEEDBACK' => true,
-				 'SUBTITLES' => false,
-				 'EMBED' => true,
-				 'IRC' => false,
-				 //'TWITTER' => true,
-				 //'TWITTER_CONFIG' => array(
-				 //    'DISPLAY' => 'freifunk @ twitter',
-				 //    'TEXT'    => '@freifunk',
-				 //),
-			 ),
-
 			'sz' => array(
 				'DISPLAY' => 'Sendezentrum',
 				'DISPLAY_SHORT' => 'SZ',
+				'STREAM' => 'sendezentrum',
+				'PREVIEW' => true,
+				'TRANSLATION' => [
+				],
+		
+				'SD_VIDEO' => true,
+				'HD_VIDEO' => true,
+				'DASH' => true,
+				'AUDIO' => true,
+				'SLIDES' => false,
+				'MUSIC' => false,
+				'SCHEDULE' => true,
+				'SCHEDULE_NAME' => 'DLF- und Podcast-Bühne',
+				'FEEDBACK' => true,
+				'SUBTITLES' => false,
+				'EMBED' => true,
+				'IRC' => false,
+				'TWITTER' => true,
+				'TWITTER_CONFIG' => array(
+					'DISPLAY' => 'sendezentrum @ twitter',
+					'TEXT'    => '@sendezentrum',
+				),
+			),
+
+			'muc' => array(
+				'DISPLAY' => 'München',
+				'DISPLAY_SHORT' => 'MUC',
 				'STREAM' => 's80',
 				'PREVIEW' => true,
 				'TRANSLATION' => [
