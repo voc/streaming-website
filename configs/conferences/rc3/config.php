@@ -8,7 +8,9 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2020-11-27 06:00"),
+	//'STARTS_AT' => strtotime("2020-11-27 06:00"),
+	'STARTS_AT' => strtotime("2020-12-27 06:00"),
+
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -26,28 +28,28 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	// 'CLOSED' => 'after',
+	'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'rC3 Test',
+	'TITLE' => 'rC3 Test', # TODO
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-  'AUTHOR' => 'CCC',
+	'AUTHOR' => 'CCC',
 
 	/**
 	 * Beschreibungstext
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-  'DESCRIPTION' => 'Live streaming from the Remote Communication Experience',
+	'DESCRIPTION' => 'Live streaming from the Remote Communication Experience',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -99,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	 'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/rc3/index.json'
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/rc3/index.json'
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
@@ -121,15 +123,27 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'halla',
-			'hallb',
+			'one',
+			'two',
 		),
 		'Assemblies Live' => array(
-			'chaoswest',
+			'bitwaescherei',
+			'c3lounge',
+			'cbase',
+			'chaosstudio-hamburg',
+			'chaostrawler',
+			'chaoszone',
+			'cwtv',
+			'franconiannet',
+			'hacc',
+			'kreaturworks',
+			'oio',
+			'r3s',
+			'restrealitaet',
+			'sendezentrum',
 			'wikipaka',
-			#'oio',
-			'sz',
-			'muc'
+			'xhain',
+			'test',
 		),
 	),
 );
@@ -144,213 +158,676 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-			'halla' => array(
-				'DISPLAY' => 'Ada',
-				'WIDE' => true,
-				'STREAM' => 'rc3',
-				'PREVIEW' => true,
-				'TRANSLATION' => [
-					['endpoint' => 'translated',   'label' => 'Translated1'],
-					['endpoint' => 'translated-2', 'label' => 'Translated2']
-				],
-				
-				'SD_VIDEO' => true,
-				'HD_VIDEO' => true,
-				'SLIDES' => true,
-				'DASH' => true,
-				'AUDIO' => true,
-				'MUSIC' => false,
-				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'Ada',
-				'FEEDBACK' => true,
-				'SUBTITLES' => false,
-				'SUBTITLES_ROOM_ID' => 1,
-				'EMBED' => true,
-				'IRC' => true,
-				'IRC_CONFIG' => array(
-					'DISPLAY' => '#rC3-test @ hackint',
-					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-test',
-				),
-				'TWITTER' => true,
-				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#Ada @ twitter',
-					'TEXT'    => '#rC3 #Ada',
-				),
-			),
-			'hallb' => array(
-				'DISPLAY' => 'Borg',
-				'WIDE' => true,
-				'STREAM' => 'rc3',
-				'PREVIEW' => true,
-				'TRANSLATION' => [
-					['endpoint' => 'translated',   'label' => 'Translated1'],
-					['endpoint' => 'translated-2', 'label' => 'Translated2']
-				],
-				
-				'SD_VIDEO' => true,
-				'HD_VIDEO' => true,
-				'SLIDES' => true,
-				'DASH' => true,
-				'AUDIO' => true,
-				'MUSIC' => false,
-				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'Borg',
-				'FEEDBACK' => true,
-				'SUBTITLES' => false,
-				'SUBTITLES_ROOM_ID' => 1,
-				'EMBED' => true,
-				'IRC' => true,
-				'IRC_CONFIG' => array(
-					'DISPLAY' => '#rC3-test @ hackint',
-					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-test',
-				),
-				'TWITTER' => true,
-				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#Borg @ twitter',
-					'TEXT'    => '#rC3 #Borg',
-				),
-			),
-			'chaoswest' => array(
-				'DISPLAY' => 'Chaos-West TV',
-				'DISPLAY_SHORT' => 'Chaos-West',
-				'STREAM' => 'cwtv',
-				'PREVIEW' => true,
-				'TRANSLATION' => [
-				],
+	'one' => array(
+		'DISPLAY' => 'rc1',
+		'WIDE' => true,
+		'STREAM' => 'rc3',
+		'PREVIEW' => true,
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated1'],
+			['endpoint' => 'translated-2', 'label' => 'Translated2']
+		],
 		
-				'SD_VIDEO' => true,
-				'HD_VIDEO' => true,
-				'DASH' => true,
-				'AUDIO' => true,
-				'SLIDES' => false,
-				'MUSIC' => false,
-				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'Chaos-West TV',
-				'FEEDBACK' => true,
-				'SUBTITLES' => false,
-				'EMBED' => true,
-				'IRC' => false,
-				'TWITTER' => true,
-				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#CWTV @ twitter',
-					'TEXT'    => '#CWTV',
-				),
-				'IRC' => true,
-				'IRC_CONFIG' => array(
-					'DISPLAY' => '#chaoswest-stage @ hackint',
-					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#chaoswest-stage',
-				),
-			),
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'SLIDES' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'rc1',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'SUBTITLES_ROOM_ID' => 1,
+		'EMBED' => true,
+		'IRC' => true,
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '#rC3-one @ hackint',
+			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-one',
+		),
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#rC3one @ mastodon/twitter',
+			'TEXT'    => '#rC3one',
+		),
+	),
+	'two' => array(
+		'DISPLAY' => 'rc2',
+		'WIDE' => true,
+		'STREAM' => 'rc3',
+		'PREVIEW' => true,
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated1'],
+			['endpoint' => 'translated-2', 'label' => 'Translated2']
+		],
 		
-			'wikipaka' => array(
-				'DISPLAY' => 'WikiPaka',
-				'DISPLAY_SHORT' => 'WikiPaka',
-				'STREAM' => 'wikipaka',
-				'PREVIEW' => true,
-				'TRANSLATION' => [
-					['endpoint' => 'translated',   'label' => 'Translated1'],
-				],
-		
-				'SD_VIDEO' => true,
-				'HD_VIDEO' => true,
-				'DASH' => true,
-				'AUDIO' => true,
-				'SLIDES' => false,
-				'MUSIC' => false,
-				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'WikiPaka',
-				'FEEDBACK' => true,
-				'SUBTITLES' => false,
-				'EMBED' => true,
-				'IRC' => false,
-				'TWITTER' => true,
-				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#wikipaka @ twitter',
-					'TEXT'    => '#wikipaka',
-				),
-			),
-		
-			'oio' => array(
-				'DISPLAY' => 'Open Infrastructure Orbit',
-				'DISPLAY_SHORT' => 'OIO',
-				'STREAM' => 'oio',
-				'PREVIEW' => true,
-				'TRANSLATION' => [
-				],
-		
-				'SD_VIDEO' => true,
-				'HD_VIDEO' => true,
-				'DASH' => true,
-				'AUDIO' => true,
-				'SLIDES' => false,
-				'MUSIC' => false,
-				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'OIO Stage',
-				'FEEDBACK' => true,
-				'SUBTITLES' => false,
-				'EMBED' => true,
-				'IRC' => false,
-				'TWITTER' => true,
-				'TWITTER_CONFIG' => array(
-					'DISPLAY' => '#OIOStage @ twitter',
-					'TEXT'    => '#OIOStage',
-				),
-			),
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'SLIDES' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'rc2',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'SUBTITLES_ROOM_ID' => 2,
+		'EMBED' => true,
+		'IRC' => true,
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '#rC3-two @ hackint',
+			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-two',
+		),
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#rC3two @ mastodon/twitter',
+			'TEXT'    => '#rC3two',
+		),
+	),
+	'chaoswest' => array(
+		'DISPLAY' => 'Chaos-West TV',
+		'DISPLAY_SHORT' => 'Chaos-West',
+		'STREAM' => 'cwtv',
+		'PREVIEW' => true,
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated1'],
+			['endpoint' => 'translated-2', 'label' => 'Translated2']
+		],
 
-			'sz' => array(
-				'DISPLAY' => 'Sendezentrum',
-				'DISPLAY_SHORT' => 'SZ',
-				'STREAM' => 'sendezentrum',
-				'PREVIEW' => true,
-				'TRANSLATION' => [
-				],
-		
-				'SD_VIDEO' => true,
-				'HD_VIDEO' => true,
-				'DASH' => true,
-				'AUDIO' => true,
-				'SLIDES' => false,
-				'MUSIC' => false,
-				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'DLF- und Podcast-Bühne',
-				'FEEDBACK' => true,
-				'SUBTITLES' => false,
-				'EMBED' => true,
-				'IRC' => false,
-				'TWITTER' => true,
-				'TWITTER_CONFIG' => array(
-					'DISPLAY' => 'sendezentrum @ twitter',
-					'TEXT'    => '@sendezentrum',
-				),
-			),
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Chaos-West TV',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#CWTV @ twitter',
+			'TEXT'    => '#CWTV',
+		),
+		'IRC' => true,
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '#chaoswest-stage @ hackint',
+			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#chaoswest-stage',
+		),
+	),
+	'bitwaescherei' => array(
+			'DISPLAY' => 'Bitwäscherei',
+			'DISPLAY_SHORT' => 'Bitwäscherei',
+			'STREAM' => 'bitwaescherei',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
 
-			'muc' => array(
-				'DISPLAY' => 'München',
-				'DISPLAY_SHORT' => 'MUC',
-				'STREAM' => 's80',
-				'PREVIEW' => true,
-				'TRANSLATION' => [
-				],
-		
-				'SD_VIDEO' => true,
-				'HD_VIDEO' => true,
-				'DASH' => true,
-				'AUDIO' => true,
-				'SLIDES' => false,
-				'MUSIC' => false,
-				'SCHEDULE' => true,
-				'SCHEDULE_NAME' => 'DLF- und Podcast-Bühne',
-				'FEEDBACK' => true,
-				'SUBTITLES' => false,
-				'EMBED' => true,
-				'IRC' => false,
-				'TWITTER' => true,
-				'TWITTER_CONFIG' => array(
-					'DISPLAY' => 'sendezentrum @ twitter',
-					'TEXT'    => '@sendezentrum',
-				),
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'Bitwäscherei Zürich',
+			'ROOM_GUID' => '2c5f8217-8583-45ef-ab10-fa2ff5492d19',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-bitwaescherei @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-bitwaescherei',
 			),
-			
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-bitwaescherei @ mastodon/twitter',
+				'TEXT'    => '#rC3-bitwaescherei',
+			),
+	),
+	'c3lounge' => array(
+			'DISPLAY' => 'c3lounge',
+			'DISPLAY_SHORT' => 'c3lounge',
+			'STREAM' => 'c3lounge',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'c3lounge',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-c3lounge @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-c3lounge',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-c3lounge @ mastodon/twitter',
+				'TEXT'    => '#rC3-c3lounge',
+			),
+	),
+	'cbase' => array(
+			'DISPLAY' => 'c-base',
+			'DISPLAY_SHORT' => 'c-base',
+			'STREAM' => 'cbase',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'c-base',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-cbase @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-cbase',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-cbase @ mastodon/twitter',
+				'TEXT'    => '#rC3-cbase',
+			),
+	),
+	'chaostrawler' => array(
+			'DISPLAY' => 'chaostrawler',
+			'DISPLAY_SHORT' => 'chaostrawler',
+			'STREAM' => 'chaostrawler',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'chaostrawler',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-chaostrawler @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-chaostrawler',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-chaostrawler @ mastodon/twitter',
+				'TEXT'    => '#rC3-chaostrawler',
+			),
+	),
+	'chaoszone' => array(
+			'DISPLAY' => 'ChaosZone TV',
+			'DISPLAY_SHORT' => 'ChaosZone TV',
+			'STREAM' => 'chaoszone',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+				['endpoint' => 'translated',   'label' => 'Translated1'],
+				['endpoint' => 'translated-2', 'label' => 'Translated2']
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'ChaosZone TV Stream',
+			'ROOM_GUID' => '084fed6f-8da2-4870-b8c2-7a2b1dce88bd',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-chaoszone @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-chaoszone',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-chaoszone @ mastodon/twitter',
+				'TEXT'    => '#rC3-chaoszone',
+			),
+	),
+	'chaosstudio-hamburg' => array(
+			'DISPLAY' => 'Chaos Studio Hamburg',
+			'DISPLAY_SHORT' => 'CSH',
+			'STREAM' => 'csh',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+				['endpoint' => 'translated',   'label' => 'Translated1'],
+				['endpoint' => 'translated-2', 'label' => 'Translated2']
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'chaosstudio-hamburg',
+			'ROOM_GUID' => 'ebc42052-10f7-4aef-bbe9-cfe9026880cc',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-csh @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-csh',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-csh @ mastodon/twitter',
+				'TEXT'    => '#rC3-csh',
+			),
+	),
+	'cwtv' => array(
+			'DISPLAY' => 'Chaos-West TV',
+			'DISPLAY_SHORT' => 'Chaos-West TV',
+			'STREAM' => 'cwtv',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'Chaos-West TV',
+			'ROOM_GUID' => '48f5bce3-5b46-44d8-9f36-90bed9bd4be0',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-cwtv @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-cwtv',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-cwtv @ mastodon/twitter',
+				'TEXT'    => '#rC3-cwtv',
+			),
+	),
+	'franconiannet' => array(
+			'DISPLAY' => 'franconian.net',
+			'DISPLAY_SHORT' => 'franconian.net',
+			'STREAM' => 'franconiannet',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'franconian.net',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-franconiannet @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-franconiannet',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-franconiannet @ mastodon/twitter',
+				'TEXT'    => '#rC3-franconiannet',
+			),
+	),
+	'hacc' => array(
+			'DISPLAY' => 'hacc/about:future',
+			'DISPLAY_SHORT' => 'hacc/about:future',
+			'STREAM' => 'hacc',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'hacc München / about:future - München',
+			'ROOM_GUID' => '60dd7f55-9f88-4de6-ad98-b9c4e2810300',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-hacc @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-hacc',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-hacc @ mastodon/twitter',
+				'TEXT'    => '#rC3-hacc',
+			),
+	),
+	'kreaturworks' => array(
+			'DISPLAY' => 'KreaturWorks',
+			'DISPLAY_SHORT' => 'KreaturWorks',
+			'STREAM' => 'kreaturworks',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'KreaturWorks',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-kreaturworks @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-kreaturworks',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-kreaturworks @ mastodon/twitter',
+				'TEXT'    => '#rC3-kreaturworks',
+			),
+	),
+	'oio' => array(
+			'DISPLAY' => 'OpenInfrastructureOrbit',
+			'DISPLAY_SHORT' => 'OpenInfrastructureOrbit',
+			'STREAM' => 'oio',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'OpenInfrastructureOrbit',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-oio @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-oio',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-OIO @ mastodon/twitter',
+				'TEXT'    => '#rC3-OIO',
+			),
+	),
+	'r3s' => array(
+			'DISPLAY' => 'R3S',
+			'DISPLAY_SHORT' => 'R3S',
+			'STREAM' => 'r3s',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'r3s - Remote Rhein Ruhr Stage',
+			'ROOM_GUID' => 'c4a577e2-52e7-4f6f-a5c0-e3822d64f84a',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-r3s @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-r3s',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-r3s @ mastodon/twitter',
+				'TEXT'    => '#rC3-r3s',
+			),
+	),
+	'restrealitaet' => array(
+			'DISPLAY' => 'Restrealitaet',
+			'DISPLAY_SHORT' => 'Restrealitaet',
+			'STREAM' => 'restrealitaet',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'Restrealitaet',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-restrealitaet @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-restrealitaet',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-restrealitaet @ mastodon/twitter',
+				'TEXT'    => '#rC3-restrealitaet',
+			),
+	),
+	'sendezentrum' => array(
+			'DISPLAY' => 'Sendezentrum',
+			'DISPLAY_SHORT' => 'Sendezentrum',
+			'STREAM' => 'sendezentrum',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'SZ Bühne',
+			'ROOM_GUID' => 'feb91cb1-eb66-43f1-a86f-f8d43909fbe0',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-sendezentrum @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-sendezentrum',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-sendezentrum @ mastodon/twitter',
+				'TEXT'    => '#rC3-sendezentrum',
+			),
+	),
+	'wikipaka' => array(
+			'DISPLAY' => 'Wikipaka',
+			'DISPLAY_SHORT' => 'Wikipaka',
+			'STREAM' => 'wikipaka',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'Wikipaka',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-wikipaka @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-wikipaka',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-wikipaka @ mastodon/twitter',
+				'TEXT'    => '#rC3-wikipaka',
+			),
+	),
+	'xhain' => array(
+			'DISPLAY' => 'xHain',
+			'DISPLAY_SHORT' => 'xHain',
+			'STREAM' => 'xhain',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'xHain',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => true,
+			'IRC_CONFIG' => array(
+				'DISPLAY' => '#rc3-xhain @ hackint',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-xhain',
+			),
+			'TWITTER' => true,
+			'TWITTER_CONFIG' => array(
+				'DISPLAY' => '#rC3-xhain @ mastodon/twitter',
+				'TEXT'    => '#rC3-xhain',
+			),
+	),
+	'wikipaka' => array(
+		'DISPLAY' => 'WikiPaka',
+		'DISPLAY_SHORT' => 'WikiPaka',
+		'STREAM' => 'wikipaka',
+		'PREVIEW' => true,
+		'TRANSLATION' => [
+			['endpoint' => 'translated',   'label' => 'Translated1'],
+		],
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'WikiPaka',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#wikipaka @ twitter',
+			'TEXT'    => '#wikipaka',
+		),
+	),
+
+	'test' => array(
+		'DISPLAY' => 'Test',
+		'DISPLAY_SHORT' => 'Test',
+		'STREAM' => 's80',
+		'PREVIEW' => true,
+		'TRANSLATION' => [
+		],
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Bühne',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => 'rC3-test @ mastodon/twitter',
+			'TEXT'    => 'rC3-test',
+		),
+	),
 );
 
 /**
@@ -365,15 +842,15 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://data.c3voc.de/36C3/stages.schedule.xml',
+	'URL' => 'https://data.c3voc.de/rC3/everything.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
-		'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
+	//'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
+	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
@@ -512,13 +989,13 @@ $CONFIG['TWITTER'] = array(
  * unter dem angegebenen Dateinamen in diesem Konfigurationsordner abgelegt.
  */
 $CONFIG['EXTRA_FILES'] = array(
-	'schedule.xml'  => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xml',
-	'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.json',
-	'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.ics',
-	'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xcal',
+	//'schedule.xml'  => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xml',
+	//'schedule.json' => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.json',
+	//'schedule.ics'  => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.ics',
+	//'schedule.xcal' => 'https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xcal',
 
-	//'everything.schedule.xml' => 'http://data.c3voc.de/36C3/everything.schedule.xml',
-	//'everything.schedule.json' => 'http://data.c3voc.de/36C3/everything.schedule.json',
+	'everything.schedule.xml' => 'http://data.c3voc.de/rC3/everything.schedule.xml',
+	'everything.schedule.json' => 'http://data.c3voc.de/rC3/everything.schedule.json',
 
 	//'stages.schedule.xml' => 'http://data.c3voc.de/36C3/stages.schedule.xml',
 	//'stages.schedule.json' => 'http://data.c3voc.de/36C3/stages.schedule.json',
