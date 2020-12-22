@@ -224,39 +224,6 @@ $CONFIG['ROOMS'] = array(
 			'TEXT'    => '#rC3two',
 		),
 	),
-	'chaoswest' => array(
-		'DISPLAY' => 'Chaos-West TV',
-		'DISPLAY_SHORT' => 'Chaos-West',
-		'STREAM' => 'cwtv',
-		'PREVIEW' => true,
-		'TRANSLATION' => [
-			['endpoint' => 'translated',   'label' => 'Translated1'],
-			['endpoint' => 'translated-2', 'label' => 'Translated2']
-		],
-
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'DASH' => true,
-		'AUDIO' => true,
-		'SLIDES' => false,
-		'MUSIC' => false,
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Chaos-West TV',
-		'FEEDBACK' => true,
-		'SUBTITLES' => false,
-		'EMBED' => true,
-		'IRC' => false,
-		'TWITTER' => true,
-		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#CWTV @ twitter',
-			'TEXT'    => '#CWTV',
-		),
-		'IRC' => true,
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#chaoswest-stage @ hackint',
-			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#chaoswest-stage',
-		),
-	),
 	'bitwaescherei' => array(
 			'DISPLAY' => 'Bitwäscherei',
 			'DISPLAY_SHORT' => 'Bitwäscherei',
@@ -285,13 +252,13 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-bitwaescherei @ mastodon/twitter',
-				'TEXT'    => '#rC3-bitwaescherei',
+				'DISPLAY' => '#rC3bitwaescherei @ mastodon/twitter',
+				'TEXT'    => '#rC3bitwaescherei',
 			),
 	),
 	'c3lounge' => array(
 			'DISPLAY' => 'c3lounge',
-			'DISPLAY_SHORT' => 'c3lounge',
+			'DISPLAY_SHORT' => 'lounge',
 			'STREAM' => 'c3lounge',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
@@ -312,13 +279,13 @@ $CONFIG['ROOMS'] = array(
 			'EMBED' => true,
 			'IRC' => true,
 			'IRC_CONFIG' => array(
-				'DISPLAY' => '#rc3-c3lounge @ hackint',
+				'DISPLAY' => '#rc3-lounge @ hackint',
 				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-c3lounge',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-c3lounge @ mastodon/twitter',
-				'TEXT'    => '#rC3-c3lounge',
+				'DISPLAY' => '#rC3lounge @ mastodon/twitter',
+				'TEXT'    => '#rC3lounge',
 			),
 	),
 	'cbase' => array(
@@ -349,12 +316,12 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-cbase @ mastodon/twitter',
-				'TEXT'    => '#rC3-cbase',
+				'DISPLAY' => '#rC3cbase @ mastodon/twitter',
+				'TEXT'    => '#rC3cbase',
 			),
 	),
 	'chaostrawler' => array(
-			'DISPLAY' => 'chaostrawler',
+			'DISPLAY' => 'ChaosTrawler Stubnitz',
 			'DISPLAY_SHORT' => 'chaostrawler',
 			'STREAM' => 'chaostrawler',
 			'PREVIEW' => true,
@@ -369,7 +336,7 @@ $CONFIG['ROOMS'] = array(
 			'SLIDES' => false,
 			'MUSIC' => false,
 			'SCHEDULE' => true,
-			'SCHEDULE_NAME' => 'chaostrawler',
+			'SCHEDULE_NAME' => 'ChaosTrawler Stubnitz/Gängeviertel Hamburg',
 			'ROOM_GUID' => '',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
@@ -381,13 +348,13 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-chaostrawler @ mastodon/twitter',
-				'TEXT'    => '#rC3-chaostrawler',
+				'DISPLAY' => '#rC3chaostrawler @ mastodon/twitter',
+				'TEXT'    => '#rC3chaostrawler',
 			),
 	),
 	'chaoszone' => array(
 			'DISPLAY' => 'ChaosZone TV',
-			'DISPLAY_SHORT' => 'ChaosZone TV',
+			'DISPLAY_SHORT' => 'CZTV',
 			'STREAM' => 'chaoszone',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
@@ -415,12 +382,12 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-chaoszone @ mastodon/twitter',
-				'TEXT'    => '#rC3-chaoszone',
+				'DISPLAY' => '#rC3chaoszone @ mastodon/twitter',
+				'TEXT'    => '#rC3chaoszone',
 			),
 	),
 	'chaosstudio-hamburg' => array(
-			'DISPLAY' => 'Chaos Studio Hamburg',
+			'DISPLAY' => 'ChaosStudio Hamburg',
 			'DISPLAY_SHORT' => 'CSH',
 			'STREAM' => 'csh',
 			'PREVIEW' => true,
@@ -449,13 +416,13 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-csh @ mastodon/twitter',
-				'TEXT'    => '#rC3-csh',
+				'DISPLAY' => '#rC3csh @ mastodon/twitter',
+				'TEXT'    => '#rC3csh',
 			),
 	),
 	'cwtv' => array(
 			'DISPLAY' => 'Chaos-West TV',
-			'DISPLAY_SHORT' => 'Chaos-West TV',
+			'DISPLAY_SHORT' => 'CWTV',
 			'STREAM' => 'cwtv',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
@@ -481,13 +448,13 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-cwtv @ mastodon/twitter',
-				'TEXT'    => '#rC3-cwtv',
+				'DISPLAY' => '#rC3cwtv @ mastodon/twitter',
+				'TEXT'    => '#rC3cwtv',
 			),
 	),
 	'franconiannet' => array(
-			'DISPLAY' => 'franconian.net',
-			'DISPLAY_SHORT' => 'franconian.net',
+			'DISPLAY' => 'backspace/franconian.net',
+			'DISPLAY_SHORT' => 'backspace',
 			'STREAM' => 'franconiannet',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
@@ -501,7 +468,7 @@ $CONFIG['ROOMS'] = array(
 			'SLIDES' => false,
 			'MUSIC' => false,
 			'SCHEDULE' => true,
-			'SCHEDULE_NAME' => 'franconian.net',
+			'SCHEDULE_NAME' => 'backspace / franconian.net - Bamberg',
 			'ROOM_GUID' => '',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
@@ -513,8 +480,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-franconiannet @ mastodon/twitter',
-				'TEXT'    => '#rC3-franconiannet',
+				'DISPLAY' => '#rC3franconiannet @ mastodon/twitter',
+				'TEXT'    => '#rC3franconiannet',
 			),
 	),
 	'hacc' => array(
@@ -545,8 +512,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-hacc @ mastodon/twitter',
-				'TEXT'    => '#rC3-hacc',
+				'DISPLAY' => '#rC3hacc @ mastodon/twitter',
+				'TEXT'    => '#rC3hacc',
 			),
 	),
 	'kreaturworks' => array(
@@ -577,13 +544,13 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-kreaturworks @ mastodon/twitter',
-				'TEXT'    => '#rC3-kreaturworks',
+				'DISPLAY' => '#rC3kreaturworks @ mastodon/twitter',
+				'TEXT'    => '#rC3kreaturworks',
 			),
 	),
 	'oio' => array(
 			'DISPLAY' => 'OpenInfrastructureOrbit',
-			'DISPLAY_SHORT' => 'OpenInfrastructureOrbit',
+			'DISPLAY_SHORT' => 'OIO',
 			'STREAM' => 'oio',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
@@ -597,7 +564,7 @@ $CONFIG['ROOMS'] = array(
 			'SLIDES' => false,
 			'MUSIC' => false,
 			'SCHEDULE' => true,
-			'SCHEDULE_NAME' => 'OpenInfrastructureOrbit',
+			'SCHEDULE_NAME' => 'OIO/A:F Bühne',
 			'ROOM_GUID' => '',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
@@ -609,17 +576,16 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-OIO @ mastodon/twitter',
-				'TEXT'    => '#rC3-OIO',
+				'DISPLAY' => '#rC3OIO @ mastodon/twitter',
+				'TEXT'    => '#rC3OIO',
 			),
 	),
 	'r3s' => array(
-			'DISPLAY' => 'R3S',
+			'DISPLAY' => 'Remote Rhein Ruhr Stage',
 			'DISPLAY_SHORT' => 'R3S',
 			'STREAM' => 'r3s',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
-
 			],
 
 			'SD_VIDEO' => true,
@@ -630,7 +596,7 @@ $CONFIG['ROOMS'] = array(
 			'SLIDES' => false,
 			'MUSIC' => false,
 			'SCHEDULE' => true,
-			'SCHEDULE_NAME' => 'r3s - Remote Rhein Ruhr Stage',
+			'SCHEDULE_NAME' => 'r3s - Monheim/Rhein',
 			'ROOM_GUID' => 'c4a577e2-52e7-4f6f-a5c0-e3822d64f84a',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
@@ -642,8 +608,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-r3s @ mastodon/twitter',
-				'TEXT'    => '#rC3-r3s',
+				'DISPLAY' => '#rC3r3s @ mastodon/twitter',
+				'TEXT'    => '#rC3r3s',
 			),
 	),
 	'restrealitaet' => array(
@@ -674,8 +640,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-restrealitaet @ mastodon/twitter',
-				'TEXT'    => '#rC3-restrealitaet',
+				'DISPLAY' => '#rC3restrealitaet @ mastodon/twitter',
+				'TEXT'    => '#rC3restrealitaet',
 			),
 	),
 	'sendezentrum' => array(
@@ -706,8 +672,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-sendezentrum @ mastodon/twitter',
-				'TEXT'    => '#rC3-sendezentrum',
+				'DISPLAY' => '#rC3sendezentrum @ mastodon/twitter',
+				'TEXT'    => '#rC3sendezentrum',
 			),
 	),
 	'wikipaka' => array(
@@ -738,8 +704,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-wikipaka @ mastodon/twitter',
-				'TEXT'    => '#rC3-wikipaka',
+				'DISPLAY' => '#rC3wikipaka @ mastodon/twitter',
+				'TEXT'    => '#rC3wikipaka',
 			),
 	),
 	'xhain' => array(
@@ -770,8 +736,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3-xhain @ mastodon/twitter',
-				'TEXT'    => '#rC3-xhain',
+				'DISPLAY' => '#rC3xhain @ mastodon/twitter',
+				'TEXT'    => '#rC3xhain',
 			),
 	),
 	'wikipaka' => array(
@@ -863,7 +829,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
-	'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2019-12-27') - strtotime(/* Today */ date("Y-m-d")),
+	'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2020-12-27') - strtotime(/* Today */ date("Y-m-d")),
 	//'SIMULATE_OFFSET' => 0,
 );
 
