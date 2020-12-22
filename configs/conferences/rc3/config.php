@@ -423,7 +423,7 @@ $CONFIG['ROOMS'] = array(
 	'cwtv' => array(
 			'DISPLAY' => 'Chaos-West TV',
 			'DISPLAY_SHORT' => 'CWTV',
-			'STREAM' => 'cwtv',
+			'STREAM' => 'cwtv2',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
 			],
