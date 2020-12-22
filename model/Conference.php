@@ -249,4 +249,7 @@ class Conference extends ModelBase
 	public function getAdditionalHtml() {
 		return $this->get('CONFERENCE.ADDITIONAL_HTML');
 	}
+	public function getAdditionalLicenceHtml() {
+		return $this->get('CONFERENCE.ADDITIONAL_LICENCE_HTML');
+	}
 }

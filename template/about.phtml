@@ -1,12 +1,15 @@
 <div class="container about">
 	<h1>About the Live-Streams and Recordings</h1>
 	<p>
-		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> is organized and performed by the <a href="http://c3voc.de">Chaos Computer Club Video Operation Center</a>. All times in the schedule are UTC+2, we are happy to accept Pull requests to fix that, c.f. <a href="https://github.com/openstreetmap/stateofthemap-2020/issues/61">https://github.com/openstreetmap/stateofthemap-2020/issues/61</a>.
+		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> is organized and performed by the <a href="https://c3voc.de">Chaos Computer Club Video Operation Center</a>.
 	</p>
 
 	<h2>Licences</h2>
 	<p>
-		The video stream is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC Attribution 4.0 (CC BY 4.0)</a>. This may not hold true for the slides or the actual performance. If in doubt please contact the speaker directly.
+		The video stream is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC Attribution 4.0 International (CC BY 4.0)</a>. This may not hold true for the slides or the actual performance. If in doubt please contact the speaker directly.
+	</p>
+	<p>
+		<?=$conference->getAdditionalLicenceHtml()?>
 	</p>
 	<p>
 		Although the licence permits it, we would like to ask you not to distribute stream dumps. We try to release finished cuts of recordings as quickly as possible
