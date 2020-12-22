@@ -130,7 +130,6 @@ $CONFIG['OVERVIEW'] = array(
 		),
 		'Assemblies Live' => array(
 			'bitwaescherei',
-			'c3lounge',
 			'cbase',
 			'chaosstudio-hamburg',
 			'chaostrawler',
@@ -145,11 +144,81 @@ $CONFIG['OVERVIEW'] = array(
 			'sendezentrum',
 			'wikipaka',
 			'xhain',
+			'c3lounge',
+			'infobeamer',
 			'test',
 		),
+		// 'Music' => array()
 	),
 );
 
+
+/**
+ * Globale Konfiguration der IRC-Links.
+ *
+ * Wird dieser Block auskommentiert, werden keine IRC-Links mehr erzeugt. Sollen die
+ * IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
+ * existieren sein. ggf. einfach auf true setzen:
+ *
+ *   $CONFIG['IRC'] = true
+ */
+$CONFIG['IRC'] = array(
+	/**
+	 * Anzeigetext für die IRC-Links.
+	 *
+	 * %s wird durch den Raum-Slug ersetzt.
+	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
+	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
+	 */
+	'DISPLAY' => '#rC3-%s @ hackint',
+
+	/**
+	 * URL für die IRC-Links.
+	 * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
+	 * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#33C3-%s'
+	 * verwendet werden.
+	 *
+	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
+	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
+	 */
+	'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-%s',
+);
+
+/**
+ * Globale Konfiguration der Twitter-Links.
+ *
+ * Wird dieser Block auskommentiert, werden keine Twitter-Links mehr erzeugt. Sollen die
+ * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
+ * existieren sein. ggf. einfach auf true setzen:
+ *
+ *   $CONFIG['TWITTER'] = true
+ */
+$CONFIG['TWITTER'] = array(
+	/**
+	 * Anzeigetext für die Twitter-Links.
+	 *
+	 * %s wird durch den Raum-Slug ersetzt.
+	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
+	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
+	 */
+	'DISPLAY' => '#rC3%s @ mastodon/twitter',
+
+	/**
+	 * Vorgabe-Tweet-Text für die Twitter-Links.
+	 *
+	 * %s wird durch den Raum-Slug ersetzt.
+	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
+	 */
+	'TEXT' => '#rC3%s',
+);
+
+/**
+ * Globaler Schalter für die Embedding-Funktionalitäten
+ *
+ * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
+ * Embedding-Funktionen deaktiviert.
+ */
+$CONFIG['EMBED'] = true;
 
 
 /**
@@ -259,8 +328,8 @@ $CONFIG['ROOMS'] = array(
 			),
 	),
 	'c3lounge' => array(
-			'DISPLAY' => 'c3lounge',
-			'DISPLAY_SHORT' => 'lounge',
+			'DISPLAY' => 'Lounge',
+			'DISPLAY_SHORT' => 'Lounge',
 			'STREAM' => 'c3lounge',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
@@ -274,7 +343,7 @@ $CONFIG['ROOMS'] = array(
 			'SLIDES' => false,
 			'MUSIC' => false,
 			'SCHEDULE' => true,
-			'SCHEDULE_NAME' => 'c3lounge',
+			'SCHEDULE_NAME' => 'rc3 Lounge',
 			'ROOM_GUID' => '',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
@@ -282,7 +351,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-lounge @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-c3lounge',
+				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-lounge',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -770,17 +839,35 @@ $CONFIG['ROOMS'] = array(
 		),
 	),
 
+	'infobeamer' => array(
+		'DISPLAY' => 'Infobeamer',
+		'DISPLAY_SHORT' => 'Infobeamer',
+		'STREAM' => 'infobeamer',
+		'PREVIEW' => true,
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'HLS' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => false,
+	),
+
 	'test' => array(
 		'DISPLAY' => 'Test',
 		'DISPLAY_SHORT' => 'Test',
 		'STREAM' => 's80',
 		'PREVIEW' => true,
-		'TRANSLATION' => [
-		],
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'DASH' => true,
+		'HLS' => true,
 		'AUDIO' => true,
 		'SLIDES' => false,
 		'MUSIC' => false,
@@ -810,7 +897,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://data.c3voc.de/rC3/everything.schedule.xml',
+	'URL' => 'https://data.c3voc.de/rC3/channels.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
@@ -823,7 +910,7 @@ $CONFIG['SCHEDULE'] = array(
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
-	'SCALE' => 7,
+	'SCALE' => 6,
 
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
@@ -864,13 +951,6 @@ $CONFIG['FEEDBACK'] = array(
 	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
 );
 
-/**
- * Globaler Schalter für die Embedding-Funktionalitäten
- *
- * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
- * Embedding-Funktionen deaktiviert.
- */
-$CONFIG['EMBED'] = true;
 
 /**
  * Konfiguration des L2S2-Systems
@@ -891,64 +971,6 @@ $CONFIG['EMBED'] = true;
 // 	'FRONTEND_URL' => 'https://live.c3subtitles.de/',
 // );
 
-/**
- * Globale Konfiguration der IRC-Links.
- *
- * Wird dieser Block auskommentiert, werden keine IRC-Links mehr erzeugt. Sollen die
- * IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
- * existieren sein. ggf. einfach auf true setzen:
- *
- *   $CONFIG['IRC'] = true
- */
-$CONFIG['IRC'] = array(
-	/**
-	 * Anzeigetext für die IRC-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
-	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
-	 */
-	'DISPLAY' => '#rC3-%s @ hackint',
-
-	/**
-	 * URL für die IRC-Links.
-	 * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
-	 * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#33C3-%s'
-	 * verwendet werden.
-	 *
-	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
-	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
-	 */
-	'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-%s',
-);
-
-/**
- * Globale Konfiguration der Twitter-Links.
- *
- * Wird dieser Block auskommentiert, werden keine Twitter-Links mehr erzeugt. Sollen die
- * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
- * existieren sein. ggf. einfach auf true setzen:
- *
- *   $CONFIG['TWITTER'] = true
- */
-$CONFIG['TWITTER'] = array(
-	/**
-	 * Anzeigetext für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
-	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
-	 */
-	'DISPLAY' => '#%s @ twitter',
-
-	/**
-	 * Vorgabe-Tweet-Text für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
-	 */
-	'TEXT' => '#rC3 #%s',
-);
 
 /**
  * Liste zusätzlich herunterzuladender Dateien
