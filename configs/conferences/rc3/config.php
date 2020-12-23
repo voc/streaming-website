@@ -485,8 +485,8 @@ $CONFIG['ROOMS'] = array(
 			),
 	),
 	'hacc' => array(
-			'DISPLAY' => 'hacc/about:future',
-			'DISPLAY_SHORT' => 'hacc/about:future',
+			'DISPLAY' => 'about:future',
+			'DISPLAY_SHORT' => 'hacc/a:f',
 			'STREAM' => 'hacc',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
