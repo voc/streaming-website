@@ -321,7 +321,7 @@ $CONFIG['ROOMS'] = array(
 			),
 	),
 	'chaostrawler' => array(
-			'DISPLAY' => 'ChaosTrawler Stubnitz',
+			'DISPLAY' => 'ChaosTrawler Stubnitz/Gängeviertel',
 			'DISPLAY_SHORT' => 'chaostrawler',
 			'STREAM' => 'chaostrawler',
 			'PREVIEW' => true,
@@ -337,19 +337,19 @@ $CONFIG['ROOMS'] = array(
 			'MUSIC' => false,
 			'SCHEDULE' => true,
 			'SCHEDULE_NAME' => 'ChaosTrawler Stubnitz/Gängeviertel Hamburg',
-			'ROOM_GUID' => '',
+			'ROOM_GUID' => 'd736ad8f-29ec-4a02-811e-9877798437ba',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
 			'EMBED' => true,
-			'IRC' => true,
+			'IRC' => false,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-chaostrawler @ hackint',
 				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-chaostrawler',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3chaostrawler @ mastodon/twitter',
-				'TEXT'    => '#rC3chaostrawler',
+				'DISPLAY' => '#chaostrawler @ mastodon/twitter',
+				'TEXT'    => '#chaostrawler',
 			),
 	),
 	'chaoszone' => array(
