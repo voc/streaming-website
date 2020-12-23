@@ -743,8 +743,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3sendezentrum @ mastodon/twitter',
-				'TEXT'    => '#rC3sendezentrum',
+				'DISPLAY' => '#rC3sz @ mastodon/twitter',
+				'TEXT'    => '#rC3sz',
 			),
 	),
 	'wikipaka' => array(
