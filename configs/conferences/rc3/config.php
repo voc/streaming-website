@@ -35,7 +35,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'rC3 Test', # TODO
+	'TITLE' => 'RC3 Test', # TODO
 
 	/**
 	 * Veranstalter

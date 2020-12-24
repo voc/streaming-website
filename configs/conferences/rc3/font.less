@@ -1,0 +1,21 @@
+// font path mixin
+.fontPath(@path, @filename){
+  src: url('@{path}@{filename}.woff2') format('woff2'),
+       url('@{path}@{filename}.woff') format('woff');
+}
+
+@font-path: "fonts/";
+
+@font-face {
+  font-family: "orbitron-bold";
+  font-weight: 500;
+  font-style: normal;
+  .fontPath(@font-path, "orbitron-bold-webfont");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  .fontPath(@font-path, "Montserrat-Regular");
+}

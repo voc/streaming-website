@@ -3,10 +3,10 @@
 // conference specific styles here
 @one: #B239FF;
 @two: #6800E7;
-@three: #05B9EC;
+@three: #26beff;
 @four: #FFFFFF;
-@dark: #160624;
-@dark2: #100E23;
+@dark2: #201d47;
+@dark: #100E23;
 
 @grey-lighter: #333333;
 @grey-darker: #2a2a2a;
@@ -14,8 +14,14 @@
 
 @brand-primary: @two;
 @well-bg: @dark;
+@link-color: @two;
+@nav-link-hover-bg: @two;
 @navbar-default-bg: @dark;
+@border-radius-base: 0px;
+
+@btn-default-color: white;
 @btn-default-bg: @two;
+@btn-default-border: @two;
 @text-color: @four;
 
 @panel-default-border: @two;
@@ -25,13 +31,16 @@
 
 @navbar-height:         70px;
 @navbar-default-border: @two;
+@navbar-default-brand-color: @three;
 
+@nav-tabs-link-hover-border-color: @two;
 @nav-tabs-active-link-hover-color: @four;
 @nav-tabs-active-link-hover-bg: @one;
 @nav-tabs-active-link-hover-border-color: @one;
+@nav-tabs-justified-link-border-color: @one;
 @nav-tabs-border-color: @one;
 
-// schedule 
+// schedule
 @schedule-pause:        @grey-lighter;
 @schedule-pause-bg:     fade(@schedule-pause, 30%);
 @brand-success: @three; // @schedule-selected-room
@@ -49,16 +58,17 @@ body {
 
 @headings-color: @four;
 h1, h2 {
-    color: #46eed5;
+	// color: #46eed5;
+	color: @three;
 }
 
 /*
  * font
  */
-@import url("/configs/conferences/rc3/font.css");
+@import "font.less";
 
 @font-family-sans-serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-@headings-font-family: "orbitron-medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@headings-font-family: "orbitron-bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 h1, h2,
 body.overview .room a.title,
@@ -67,5 +77,14 @@ body.overview .panel-primary a,
 .panel-heading,
 .panel-default > .panel-heading,
 .nav.nav-tabs {
-	font-family: @headings-font-family
+	font-family: @headings-font-family;
+}
+
+.nav-tabs>li>a {
+	color: white;
+	background: @dark2;
+}
+
+.panel-body{
+	color: white;
 }
