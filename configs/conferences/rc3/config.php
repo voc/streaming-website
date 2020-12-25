@@ -524,7 +524,7 @@ $CONFIG['ROOMS'] = array(
 			),
 	),
 	'franconiannet' => array(
-			'DISPLAY' => 'backspace/franconian.net',
+			'DISPLAY' => 'franconian.net',
 			'DISPLAY_SHORT' => 'backspace',
 			'STREAM' => 'franconiannet',
 			'PREVIEW' => true,
