@@ -28,14 +28,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'running',
+	//'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'RC3 Test', # TODO
+	'TITLE' => 'rC3', 
 
 	/**
 	 * Veranstalter
@@ -811,51 +811,6 @@ $CONFIG['ROOMS'] = array(
 				'TEXT'    => '#rC3xhain',
 			),
 	),
-
-	'infobeamer' => array(
-		'DISPLAY' => 'Infobeamer',
-		'DISPLAY_SHORT' => 'Infobeamer',
-		'STREAM' => 'infobeamer',
-		'PREVIEW' => true,
-
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'DASH' => true,
-		'HLS' => true,
-		'AUDIO' => true,
-		'SLIDES' => false,
-		'MUSIC' => false,
-		'SCHEDULE' => true,
-		'EMBED' => true,
-		'IRC' => false,
-		'TWITTER' => false,
-	),
-
-	'test' => array(
-		'DISPLAY' => 'Test',
-		'DISPLAY_SHORT' => 'Test',
-		'STREAM' => 's80',
-		'PREVIEW' => true,
-
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'DASH' => true,
-		'HLS' => true,
-		'AUDIO' => true,
-		'SLIDES' => false,
-		'MUSIC' => false,
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Bühne',
-		'FEEDBACK' => true,
-		'SUBTITLES' => false,
-		'EMBED' => true,
-		'IRC' => false,
-		'TWITTER' => true,
-		'TWITTER_CONFIG' => array(
-			'DISPLAY' => 'rC3-test @ mastodon/twitter',
-			'TEXT'    => 'rC3-test',
-		),
-	),
 );
 
 /**
@@ -891,7 +846,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
-	'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2020-12-27') - strtotime(/* Today */ date("Y-m-d")),
+	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2020-12-27') - strtotime(/* Today */ date("Y-m-d")),
 	//'SIMULATE_OFFSET' => 0,
 );
 
