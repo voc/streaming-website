@@ -230,9 +230,9 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'one' => array(
-		'DISPLAY' => 'rc1',
+		'DISPLAY' => 'rC1',
 		'WIDE' => true,
-		'STREAM' => 'rc3',
+		'STREAM' => 's1',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -246,7 +246,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'rc1',
+		'SCHEDULE_NAME' => 'rC1',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 1,
@@ -263,9 +263,9 @@ $CONFIG['ROOMS'] = array(
 		),
 	),
 	'two' => array(
-		'DISPLAY' => 'rc2',
+		'DISPLAY' => 'rC2',
 		'WIDE' => true,
-		'STREAM' => 'q2',
+		'STREAM' => 's2',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -279,7 +279,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'rc2',
+		'SCHEDULE_NAME' => 'rC2',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 2,
