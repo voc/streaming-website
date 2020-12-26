@@ -144,11 +144,11 @@ $CONFIG['OVERVIEW'] = array(
 			'sendezentrum',
 			'wikipaka',
 			'xhain',
-			'c3lounge',
 			'infobeamer',
-			'test',
 		),
-		// 'Music' => array()
+		'Music Live' => array(
+			'c3lounge'
+		)
 	),
 );
 
@@ -330,6 +330,8 @@ $CONFIG['ROOMS'] = array(
 	'c3lounge' => array(
 			'DISPLAY' => 'Lounge',
 			'DISPLAY_SHORT' => 'Lounge',
+			'WIDE' => true,
+
 			'STREAM' => 'c3lounge',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
