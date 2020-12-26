@@ -145,6 +145,7 @@ $CONFIG['OVERVIEW'] = array(
 			'wikipaka',
 			'xhain',
 			'infobeamer',
+			'classics'
 		),
 		'Music Live' => array(
 			'c3lounge'
@@ -828,6 +829,24 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => false,
+	),
+	'classics' => array(
+		'DISPLAY' => 'FeM Congress Classics',
+		'DISPLAY_SHORT' => 'Classics',
+		'STREAM' => 'classics',
+		'PREVIEW' => true,
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'HLS' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+		'SCHEDULE' => false,
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
