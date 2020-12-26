@@ -49,7 +49,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Live streaming from the Remote Communication Experience',
+	'DESCRIPTION' => 'Live streaming from the Remote Chaos Experience',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
