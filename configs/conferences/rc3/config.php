@@ -811,6 +811,26 @@ $CONFIG['ROOMS'] = array(
 				'TEXT'    => '#rC3xhain',
 			),
 	),
+
+	'infobeamer' => array(
+		'DISPLAY' => 'Infobeamer',
+		'DISPLAY_SHORT' => 'Infobeamer',
+		'STREAM' => 'infobeamer',
+		'PREVIEW' => true,
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'HLS' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => false,
+	),
+
 );
 
 /**
