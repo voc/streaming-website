@@ -332,7 +332,7 @@ $CONFIG['ROOMS'] = array(
 	'c3lounge' => array(
 			'DISPLAY' => 'Lounge',
 			'DISPLAY_SHORT' => 'Lounge',
-			'WIDE' => true,
+			'WIDE' => false,
 
 			'STREAM' => 'c3lounge',
 			'PREVIEW' => true,
@@ -366,10 +366,10 @@ $CONFIG['ROOMS'] = array(
     'ambientlounge' => array(
              'DISPLAY' => 'Ambient Lounge',
              'DISPLAY_SHORT' => 'Ambient Lounge',
-             'WIDE' => true,
+             'WIDE' => false,
 
              'STREAM' => 'ambientlounge',
-             'PREVIEW' => false,
+             'PREVIEW' => true,
              'TRANSLATION' => [
              ],
 
@@ -380,7 +380,7 @@ $CONFIG['ROOMS'] = array(
              'AUDIO' => false,
              'SLIDES' => false,
              'MUSIC' => true,
-             'SCHEDULE' => false,
+             'SCHEDULE' => true,
              'SCHEDULE_NAME' => 'Ambient Lounge',
              'ROOM_GUID' => '',
              'FEEDBACK' => true,
@@ -881,7 +881,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 		'SLIDES' => false,
 		'MUSIC' => false,
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
