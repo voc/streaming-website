@@ -233,7 +233,7 @@ $CONFIG['ROOMS'] = array(
 	'one' => array(
 		'DISPLAY' => 'rC1',
 		'WIDE' => true,
-		'STREAM' => 's1',
+		'STREAM' => 'rc1',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -266,7 +266,7 @@ $CONFIG['ROOMS'] = array(
 	'two' => array(
 		'DISPLAY' => 'rC2',
 		'WIDE' => true,
-		'STREAM' => 's2',
+		'STREAM' => 'rc2',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
