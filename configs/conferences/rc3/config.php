@@ -912,7 +912,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
-	'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2020-12-27') - strtotime(/* Today */ date("Y-m-d")),
+	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2020-12-27') - strtotime(/* Today */ date("Y-m-d")),
 	//'SIMULATE_OFFSET' => 0,
 );
 
