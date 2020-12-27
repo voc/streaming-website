@@ -70,6 +70,7 @@ try {
 	$route = rtrim($route, '/');
 
 	$GLOBALS['forceopen'] = isset($_GET['forceopen']);
+	$GLOBALS['regenschedcache'] = isset($_GET['regenschedcache']) && !isset($_SERVER['HTTP_X_REAL_IP']);
 
 	// generic template
 	$tpl = new PhpTemplate('template/page.phtml');
