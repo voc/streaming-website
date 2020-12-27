@@ -148,7 +148,8 @@ $CONFIG['OVERVIEW'] = array(
 			'classics'
 		),
 		'Music Live' => array(
-			'c3lounge'
+            'c3lounge',
+            'ambientlounge'
 		)
 	),
 );
@@ -361,7 +362,41 @@ $CONFIG['ROOMS'] = array(
 				'DISPLAY' => '#rC3lounge @ mastodon/twitter',
 				'TEXT'    => '#rC3lounge',
 			),
-	),
+    ),
+    'ambientlounge' => array(
+             'DISPLAY' => 'Ambient Lounge',
+             'DISPLAY_SHORT' => 'Ambient Lounge',
+             'WIDE' => true,
+
+             'STREAM' => 'ambientlounge',
+             'PREVIEW' => false,
+             'TRANSLATION' => [
+             ],
+
+             'SD_VIDEO' => false,
+             'HD_VIDEO' => false,
+             'DASH' => false,
+             'HLS' => false,
+             'AUDIO' => false,
+             'SLIDES' => false,
+             'MUSIC' => true,
+             'SCHEDULE' => false,
+             'SCHEDULE_NAME' => 'Ambient Lounge',
+             'ROOM_GUID' => '',
+             'FEEDBACK' => true,
+             'SUBTITLES' => false,
+             'EMBED' => true,
+             'IRC' => false,
+             'IRC_CONFIG' => array(
+                 'DISPLAY' => '#rc3-lounge @ hackint',
+                 'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-lounge',
+             ),
+             'TWITTER' => false,
+             'TWITTER_CONFIG' => array(
+                 'DISPLAY' => '#rC3lounge @ mastodon/twitter',
+                 'TEXT'    => '#rC3lounge',
+             ),
+     ),
 	'cbase' => array(
 			'DISPLAY' => 'c-base',
 			'DISPLAY_SHORT' => 'c-base',
