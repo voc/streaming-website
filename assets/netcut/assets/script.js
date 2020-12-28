@@ -25,15 +25,21 @@ player.ready(function() {
   });
 });
 
+// 900*25 - 600*25
+var offset = window.offset || 19121; // manual mesured value for rC3
 var inframe = document.getElementById('inframe');
 var outframe = document.getElementById('outframe');
 
+// values for Tracker.c3voc.de
+var CUTIN = (INFRAME - offset);
+var CUTOUT = (INFRAME - offset);
+
 if(INFRAME != -1) {
-  inframe.innerHTML = "inframe: " + (INFRAME / 25) + " seconds (frame " + INFRAME + ")\n";
+  inframe.innerHTML = "inframe: " + (CUTIN / 25) + " seconds (Record.Cutin: " + CUTIN + ")\n";
 }
 
 if(OUTFRAME != -1) {
-  outframe.innerHTML = "outframe: " + (OUTFRAME / 25) + " seconds (frame " + OUTFRAME + ")\n";
+  outframe.innerHTML = "outframe: " + (CUTOUT / 25) + " seconds (Record.Cutout: " + CUTOUT + ")\n";
 }
 
 function fnord(e) {
@@ -68,3 +74,12 @@ function fnord(e) {
 var playerdiv = document.getElementById('webcut');
 playerdiv.addEventListener("keydown", fnord);
 player.focus();
+
+document.addEventListener('keydown', function (event) {
+  // do not capture events from input fields
+  if (event.target.tagName === 'INPUT') {
+    return;
+  }
+  // redirect all other events to player
+  fnord(event);
+});
