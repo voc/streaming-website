@@ -32,7 +32,7 @@ foreach ( $channels as $c ) {
 		'IRC' => true,
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#rc3-$c[slug] @ hackint',
-			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-$c[slug]',
+			'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-$c[slug]',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(

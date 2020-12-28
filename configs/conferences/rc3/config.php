@@ -183,7 +183,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-%s',
+	'URL' => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rC3-%s',
 );
 
 /**
@@ -256,7 +256,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => true,
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#rC3-one @ hackint',
-			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-one',
+			'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rC3-one',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
@@ -289,7 +289,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => true,
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#rC3-two @ hackint',
-			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rC3-two',
+			'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rC3-two',
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
@@ -321,7 +321,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-bitwaescherei @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-bitwaescherei',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-bitwaescherei',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -355,7 +355,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-lounge @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-lounge',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-lounge',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -389,7 +389,7 @@ $CONFIG['ROOMS'] = array(
              'IRC' => false,
              'IRC_CONFIG' => array(
                  'DISPLAY' => '#rc3-lounge @ hackint',
-                 'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-lounge',
+                 'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-lounge',
              ),
              'TWITTER' => false,
              'TWITTER_CONFIG' => array(
@@ -421,7 +421,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-cbase @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-cbase',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-cbase',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -453,7 +453,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-chaostrawler @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-chaostrawler',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-chaostrawler',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -487,7 +487,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-chaoszone @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-chaoszone',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-chaoszone',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -521,7 +521,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-csh @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-csh',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-csh',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -553,7 +553,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-cwtv @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-cwtv',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-cwtv',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -585,7 +585,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-franconiannet @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-franconiannet',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-franconiannet',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -617,7 +617,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-hacc @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-hacc',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-hacc',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -649,7 +649,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-kreaturworks @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-kreaturworks',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-kreaturworks',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -681,7 +681,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-oio @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-oio',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-oio',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -713,7 +713,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-r3s @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-r3s',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-r3s',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -745,7 +745,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-restrealitaet @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-restrealitaet',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-restrealitaet',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -777,7 +777,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-sendezentrum @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-sendezentrum',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-sendezentrum',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -809,7 +809,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-wikipaka @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-wikipaka',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-wikipaka',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
@@ -841,7 +841,7 @@ $CONFIG['ROOMS'] = array(
 			'IRC' => true,
 			'IRC_CONFIG' => array(
 				'DISPLAY' => '#rc3-xhain @ hackint',
-				'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#rc3-xhain',
+				'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-xhain',
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
