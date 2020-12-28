@@ -26,11 +26,13 @@
 					id="video" preload="auto" data-setup="{}" controls 
 					style="min-height: 100px;" 
 					poster="<?=h($talk['thumbnail'])?>" 	
-					data-sprites="<?= h($talk['sprites']['url']) ?>"
-					data-sprites-n="<?= h($talk['sprites']['n']) ?>"
-					data-sprites-cols="<?= h($talk['sprites']['cols']) ?>"
-					data-sprites-interval="<?= h($talk['sprites']['interval']) ?>"
-				>
+					<? if (!empty($talk['sprites'])) { ?>
+						data-sprites="<?= h($talk['sprites']['url']) ?>"
+						data-sprites-n="<?= h($talk['sprites']['n']) ?>"
+						data-sprites-cols="<?= h($talk['sprites']['cols']) ?>"
+						data-sprites-interval="<?= h($talk['sprites']['interval']) ?>"
+					<? } ?>
+					>
 					<source src="<?= h(forceproto($talk['playlist'])) ?>" type="application/x-mpegURL">
 				</video>
 				</div>
