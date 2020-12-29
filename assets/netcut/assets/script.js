@@ -47,17 +47,19 @@ function fnord(e) {
   var frame = Math.round(player.currentTime() / (1/VIDEO_FPS));
 
   if(e['key'] == 'i') {
+    var CUTIN = (frame - offset);
     player.markers.getMarkers().forEach(function(x, i){
       if(x.text == 'inframe') player.markers.remove([i]);
     });
     player.markers.add([{time: time, text: 'inframe', class: 'inframe'}]);
-    inframe.innerHTML = "inframe: " + time + " seconds (frame " + frame + ")\n";
+    inframe.innerHTML = "inframe: " + (CUTIN / 25) + " seconds (Record.Cutin: " + CUTIN + ")\n";
   } else if(e['key'] == 'o') {
+    var CUTOUT = (frame - offset);
     player.markers.getMarkers().forEach(function(x, i){
       if(x.text == 'outframe') player.markers.remove([i]);
     });
     player.markers.add([{time: time, text: 'outframe', class: 'outframe'}]);
-    outframe.innerHTML = "outframe: " + time + " seconds (frame " + frame + ")\n";
+    outframe.innerHTML = "outframe: " + (CUTOUT / 25) + " seconds (Record.CutOut " + CUTOUT + ")\n";
   } else if(e['key'] == 'I') {
     player.markers.getMarkers().forEach(function(x, i){
       if(x.text == 'inframe') player.currentTime(x.time);
