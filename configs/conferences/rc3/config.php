@@ -882,6 +882,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'classics',
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
