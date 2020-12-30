@@ -18,7 +18,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2020-12-30 20:00"),
+	'ENDS_AT' => strtotime("2020-12-31 03:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -126,26 +126,26 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Live' => array(
 			'one',
-			'two',
+			//'two',
+			'classics',
 		),
 		'Assemblies Live' => array(
 			'bitwaescherei',
-			'cbase',
+			//'cbase',
 			'chaosstudio-hamburg',
 			'chaostrawler',
-			'chaoszone',
 			'cwtv',
-			'franconiannet',
-			'hacc',
+			//'hacc',
 			'kreaturworks',
 			'oio',
-			'r3s',
+			//'r3s',
 			'restrealitaet',
-			'sendezentrum',
+			//'sendezentrum',
 			'wikipaka',
 			'xhain',
 			'infobeamer',
-			'classics'
+			'franconiannet',
+			'chaoszone',
 		),
 		'Music Live' => array(
             'c3lounge',
@@ -873,6 +873,7 @@ $CONFIG['ROOMS'] = array(
 		'DISPLAY_SHORT' => 'Classics',
 		'STREAM' => 'classics',
 		'PREVIEW' => true,
+		'WIDE' => true,
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
