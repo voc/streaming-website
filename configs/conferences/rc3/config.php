@@ -124,33 +124,28 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Live' => array(
-			'one',
-			//'two',
-			'classics',
+		'Music Live' => array(
+            'c3lounge',
+            //'ambientlounge'
 		),
 		'Assemblies Live' => array(
 			'bitwaescherei',
 			//'cbase',
-			'chaosstudio-hamburg',
+			//'chaosstudio-hamburg',
 			'chaostrawler',
 			'cwtv',
 			//'hacc',
 			'kreaturworks',
-			'oio',
+			//'oio',
 			//'r3s',
-			'restrealitaet',
+			//'restrealitaet',
 			//'sendezentrum',
 			'wikipaka',
 			'xhain',
-			'infobeamer',
 			'franconiannet',
-			'chaoszone',
+			'infobeamer',
+			//'chaoszone',
 		),
-		'Music Live' => array(
-            'c3lounge',
-            'ambientlounge'
-		)
 	),
 );
 
@@ -332,7 +327,7 @@ $CONFIG['ROOMS'] = array(
 	'c3lounge' => array(
 			'DISPLAY' => 'Lounge',
 			'DISPLAY_SHORT' => 'Lounge',
-			'WIDE' => false,
+			'WIDE' => true,
 
 			'STREAM' => 'c3lounge',
 			'PREVIEW' => true,
