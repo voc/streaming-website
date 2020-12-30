@@ -342,7 +342,7 @@ $CONFIG['ROOMS'] = array(
 			'SLIDES' => false,
 			'MUSIC' => false,
 			'SCHEDULE' => true,
-			'SCHEDULE_NAME' => 'rc3 Lounge',
+			'SCHEDULE_NAME' => 'rC3 Lounge',
 			'ROOM_GUID' => '',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
@@ -905,8 +905,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
-	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
+	'ROOMFILTER' => array('rC3 Lounge', 'Bitwäscherei Zürich', 'ChaosTrawler', 'xHain Berlin'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
