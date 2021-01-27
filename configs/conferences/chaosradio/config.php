@@ -9,7 +9,7 @@ $upcoming_crs = array_values(array_filter($upcoming_events, function($event) {
 if(count($upcoming_crs) < 1)
 {
 	$EPISODE = '???';
-	$DATE = strtotime('1970-01-01 20:15');
+	$DATE = strtotime('1970-01-01 21:00');
 	$TITLE = 'Chaosradio';
 	$IM_CCCB = true;
 }
@@ -19,7 +19,7 @@ else
 	preg_match('/^events:cr([0-9]+)$/i', $upcoming_cr['short_name'], $m);
 
 	$EPISODE = intval($m[1]);
-	$DATE = strtotime($upcoming_cr['start_date'].' 20:15');
+	$DATE = strtotime($upcoming_cr['start_date'].' 21:00');
 	$TITLE = $upcoming_cr['name'];
 	$IM_CCCB = ($upcoming_cr['location'] == 'CCCB');
 }
@@ -36,7 +36,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => $DATE - 60*30, // -30 Minuten,
+	'STARTS_AT' => $DATE - 60*20, // -20 Minuten,
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -44,7 +44,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => $DATE + 60*225,
+	'ENDS_AT' => $DATE + 60*120,
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
