@@ -44,7 +44,7 @@ if [ "x$DEPLOY_BRANCH" != "xmaster" ]; then
 	echo ""
 fi
 
-for host in lb.dus.c3voc.de lb.alb.c3voc.de lb.dort.c3voc.de blade17.fra.c3voc.de blade19.fra.c3voc.de; do
+for host in lb.dus.c3voc.de lb.alb.c3voc.de lb.dort.c3voc.de; do
 echo "deploying to $host"
 ssh -A voc@$host 'sudo sh' << EOT
 cd /srv/nginx/streaming-website
