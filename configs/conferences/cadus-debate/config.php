@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2020-10-01 19:45"),
+	'STARTS_AT' => strtotime("2021-02-04 19:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2020-10-01 22:15"),
+	'ENDS_AT' => strtotime("2020-02-04 22:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 17: Humanitäre Hilfe im politischen Kreuzfeuer: von den Steinen, die uns auf dem Weg nach Moria in den Weg gelegt wurden',
+	'TITLE' => 'Debate 18: Open Source Software-Toolbox für NGOs',
 
 	/**
 	 * Veranstalter
@@ -47,16 +47,25 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Seit Mai 2020 hat CADUS der griechischen Regierung immer wieder angeboten, auf den Inseln in der Ägäis die medizinische Versorgung der Geflüchteten zu unterstützen. Die Hilfe wurde zunächst mit fadenscheinigen Ausreden abgelehnt, irgendwann reagierte Griechenland gar nicht mehr auf unsere wiederholenden Angebote.
+	'DESCRIPTION' => 'Ob für die Logistik oder die Finanzbuchhaltung, bei der Arbeit einer NGO braucht es oft 
+	teure Software, die selten genau auf die speziellen Bedürfnisse der Organisation zugeschnitten ist. 
+	Besonders visionsgetriebene Organisationen kämpfen mit knappen Budgets und begrenzten Ressourcen für die 
+	Verwirklichung ihrer Ideale und oft gegen bürokratische Hürden.
 
-Zeitgleich war ein Ehrenamtlicher unseres Berliner Medics Teams vor Ort und hat uns berichtet, wie die lokale Polizei die medizinische Versorgung der Menschen nach dem Brand aktiv verhinderte.
-Die Liste der Menschenrechte, gegen die mutmaßlich auf Lesbos verstoßen wurde und immer noch wird, ist lang.
-
-In dieser Folge von Debate sprechen wir mit Sebastian Jünemann, Gründer von CADUS und Leiter der Rapid Response-Projekte der Organisation, und mit Louis Kennedy, Rettungsassistent und Teil der CADUS Medics Gruppe. Louis wird von seinen Erfahrungen vor Ort berichten während Sebastian den internationalen Humanitären Hilfe-Mechanismus kritisch in den Blick nimmt.
+	OpenAnt ist eine Software-Toolbox, die versucht, all die vielfältigen Software-Bereiche einer 
+	Hilfsorganisation abzudecken, sei es Logistik, Organisation oder Öffentlichkeitsarbeit. OpenAnt ist nicht 
+	nur eine Toolbox sondern auch ein Netzwerk. Nonprofits, Anwender:innen, Entwickler:innen und Förder:innen 
+	arbeiten gemeinsam daran, die Opensource-Anwendung zu verbessern.
+	
+	
+	In diesem Debate sprechen wir darüber, wie und wo OpenAnt NGOs unterstützen kann und welche Funktionalität 
+	vielleicht noch fehlt. Ben freut sich, mit Euch zu debattieren in wieweit OpenAnt auch von nicht technisch 
+	versierten NGOs eingesetzt werden kann und wo die Grenzen von OpenAnt sind. Wir freuen uns auf die Diskussion 
+	mit Euch.
 
 Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
 
-Donnerstag 01.10.2020
+Donnerstag 04.02.2021
 Start 20:00
 
 Stream
