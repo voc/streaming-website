@@ -1,0 +1,50 @@
+@import "../../../assets/css/_structure.less";
+
+@link-color:            #000000;
+@panel-bg:              #FFFFFF;
+@well-bg:               @panel-bg;
+@panel-primary-border:  #FFFFFF;
+@panel-default-heading-bg: #333333;
+@panel-default-text:    #000000;
+
+@navbar-default-link-color: #FFFFFF;
+
+@nav-link-hover-bg:     #000000;
+
+@navbar-default-bg:     rgb(255, 255, 255);
+
+// conference specific styles here
+
+body {
+	background-color: #00aa75;
+}
+
+.banner {
+	color: #000000;
+
+	h2 {
+		font-weight: normal;
+	}
+}
+
+.navbar-brand {
+	// color: transparent !important;
+	height: 50px;
+	background-image: url('CAC_Logo_rosa.png');
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	background-position: 15px 10px;
+	padding-left: 120px;
+	color: #000000 !important;
+	.icon {
+		display: none !important;
+	}
+}
+
+footer a {
+	color: @link-color;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: #FFFFFF;
+}
