@@ -156,6 +156,7 @@ $CONFIG['OVERVIEW'] = array(
 			'niedersachsen',
 			'bayern',
 			'sachsen',
+			'ocd'
 		),
 	),
 );
@@ -341,7 +342,25 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-
+	'ocd' => array(
+		'DISPLAY' => 'Open Club Day',
+		'STREAM' => 'ocd',
+		'PREVIEW' => true,
+		'TRANSLATION' => false,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'SLIDES' => false,
+		'DASH' => true,
+		'AUDIO' => true,
+		'MUSIC' => false,
+		'SCHEDULE' => false,
+		'SCHEDULE_NAME' => '',
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => false,
+	),
 
 );
 
