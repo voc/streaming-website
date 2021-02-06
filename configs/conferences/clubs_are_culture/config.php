@@ -147,15 +147,6 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture rooms' => array(
-			'bremen',
-			'bawue',
-			'hessen',
-			'hamburg',
-			'berlin',
-			'brandenburg',
-			'niedersachsen',
-			'bayern',
-			'sachsen',
 			'ocd'
 		),
 	),
