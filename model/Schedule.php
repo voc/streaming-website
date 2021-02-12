@@ -72,8 +72,7 @@ class Schedule
 
 	public function getSchedule()
 	{
-		$cachefile = sprintf('/dev/shm/getschedule-cache-%s.cache', $this->getConference()->getSlug());
-		$tmpcachefile = sprintf('/dev/shm/getschedule-cache-%s.cache.new', $this->getConference()->getSlug());
+		$cachefile = sprintf('/tmp/getschedule-cache-%s.cache', $this->getConference()->getSlug());
 		if(file_exists($cachefile) && !$GLOBALS['regenschedcache']) {
 			return unserialize(file_get_contents($cachefile));
 		}
@@ -268,8 +267,7 @@ class Schedule
 		}
 
 		if($GLOBALS['regenschedcache']) {
-			file_put_contents($tmpcachefile, serialize($program));
-			rename($tmpcachefile, $cachefile);
+			file_put_contents($cachefile, serialize($program));
 		}
 
 		return $program;
