@@ -116,7 +116,7 @@ $CONFIG['OVERVIEW'] = array(
 			'lounge',
 			'glassroom',
 			'cyber',
-			'extra',
+			'clubraum',
 		),
 	),
 );
@@ -184,8 +184,8 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'extra' => array(
-		'DISPLAY' => 'Extra Room?',
+	'clubraum' => array(
+		'DISPLAY' => 'Clubraum',
 		'STREAM' => 'winter-s4',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
@@ -196,7 +196,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'Extra Room?',
+		'SCHEDULE_NAME' => 'Clubraum',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -225,7 +225,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => '',
+	'URL' => 'https://cfp.digitale-gesellschaft.ch/wk04/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
