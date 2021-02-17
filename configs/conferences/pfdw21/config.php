@@ -124,7 +124,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'lounge' => array(
+	'pfdw21' => array(
 		'DISPLAY' => 'Demo Day 2021',
 		'STREAM' => 'pfdw21',
 		'PREVIEW' => true,
@@ -142,7 +142,7 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
-	),
+	)
 );
 
 /**
