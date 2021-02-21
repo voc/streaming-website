@@ -129,7 +129,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'lounge' => array(
 		'DISPLAY' => 'Lounge',
-		'STREAM' => 'winter-s1',
+		'STREAM' => 'winter1',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -148,7 +148,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'glassroom' => array(
 		'DISPLAY' => 'Glassroom',
-		'STREAM' => 'winter-s2',
+		'STREAM' => 'winter2',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -167,7 +167,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'cyber' => array(
 		'DISPLAY' => 'Cyber',
-		'STREAM' => 'winter-s3',
+		'STREAM' => 'winter3',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -186,7 +186,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'clubraum' => array(
 		'DISPLAY' => 'Clubraum',
-		'STREAM' => 'winter-s4',
+		'STREAM' => 'winter4',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
