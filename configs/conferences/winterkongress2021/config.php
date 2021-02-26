@@ -90,7 +90,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	 'RELIVE_JSON' => 'configs/conferences/winterkongress2021/relive.json',
+	 'RELIVE_JSON' => 'https://relive.c3voc.de/relive/winterkongress2021/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -225,7 +225,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'configs/conferences/winterkongress2021/schedule.xml',
+  'URL' => 'https://cfp.digitale-gesellschaft.ch/wk04/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
