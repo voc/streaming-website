@@ -26,7 +26,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'running',
+	//'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-/*	'glassroom' => array(
+	'glassroom' => array(
 		'DISPLAY' => 'Glassroom',
 		'STREAM' => 'winter2',
 		'PREVIEW' => true,
@@ -202,7 +202,7 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
-  ),*/
+	),
 );
 
 /**
