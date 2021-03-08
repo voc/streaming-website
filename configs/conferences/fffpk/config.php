@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Fridays for Future - #AlleFür1Komma5',
+	'TITLE' => 'Fridays for Future – #AlleFür1Komma5',
 
 	/**
 	 * Veranstalter
