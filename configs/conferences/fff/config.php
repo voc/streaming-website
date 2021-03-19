@@ -93,7 +93,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/fffpk/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/fff/index.json',
 );
 
 /**
@@ -134,7 +134,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'q2',
+		'SCHEDULE_NAME' => 'fff',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
