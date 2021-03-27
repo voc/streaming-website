@@ -12,16 +12,15 @@
 @pink: #d10069;
 
 @brand-primary: @pink;
-@well-bg: @dark-green;
-@navbar-default-bg: @plum;
+@well-bg: @plum;
 @btn-default-bg: @mainGrey;
-@panel-default-heading-bg: @plum;
+@panel-default-heading-bg: @mainGrey;
 @panel-default-text: @green;
-@panel-bg: @plum;
+@panel-bg: @dark-green;
 
 @navbar-height: 70px;
-@navbar-default-bg: #444444;
-@navbar-default-border: @pink;
+@navbar-default-bg: @dark-green;
+@navbar-default-border: transparent;
 
 /*
  * buttons
@@ -37,7 +36,7 @@ input.btn,
 a.btn:hover,
 input.btn:hover {
   color: @dark-green;
-  border-color: @dark-green;
+  border-color: @orange;
   background-color: @orange;
 }
 
@@ -138,7 +137,7 @@ body.overview .panel-body {
 }
 
 body {
-  background-color: @dark-green;
+  background-color: @plum;
   color: white;
   padding: @navbar-height 0;
 }
@@ -170,8 +169,9 @@ nav.navbar {
       border-color: @mainGrey;
 
       &:hover {
-        background-color: @green;
-        border-color: @green;
+        color: @dark-green;
+        background-color: @orange;
+        border-color: @orange;
       }
     }
 
