@@ -138,7 +138,7 @@ $CONFIG['ROOMS'] = array(
 	'piscopia' => array(
 		'DISPLAY' => 'Piscopia',
 		'WIDE' => true,
-		'STREAM' => 'divoc_r2r',
+		'STREAM' => 'divocr2r',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -147,7 +147,7 @@ $CONFIG['ROOMS'] = array(
 		'STEREO' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		//'SLIDES' => true,
+		'SLIDES' => false,
 		'DASH' => true,
 		'AUDIO' => true,
 		'MUSIC' => false,
@@ -189,7 +189,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Ada', 'Borg', 'Clarke', 'Dijkstra', 'Eliza',
+	'ROOMFILTER' => array('Piscopia'),
 	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
@@ -328,6 +328,7 @@ $CONFIG['TWITTER'] = array(
  * Dict mit dem Dateinamen im Key und einer URL im Value. Die Dateien werden
  * unter dem angegebenen Dateinamen in diesem Konfigurationsordner abgelegt.
  */
+/**
 $CONFIG['EXTRA_FILES'] = array(
 	'schedule.xml'  => 'https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/schedule/export/schedule.xml',
 	'schedule.json' => 'https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/schedule/export/schedule.json',
@@ -340,6 +341,7 @@ $CONFIG['EXTRA_FILES'] = array(
 	//'workshops.schedule.xml' => 'http://data.c3voc.de/36C3/workshops.schedule.xml',
 	//'workshops.schedule.json' => 'http://data.c3voc.de/36C3/workshops.schedule.json',
 );
+*/
 
 
 return $CONFIG;
