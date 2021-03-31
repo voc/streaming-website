@@ -164,8 +164,8 @@ $CONFIG['ROOMS'] = array(
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#reboot2respawn @ twitter',
-			'TEXT'    => '#reboot2respawn',
+			'DISPLAY' => '#divoc-r2r @ twitter',
+			'TEXT'    => '#divoc-r2r',
 		),
 	),
 );
@@ -311,7 +311,7 @@ $CONFIG['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#reboot2respawn @ twitter',
+	'DISPLAY' => '#divoc-r2r @ twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -319,7 +319,7 @@ $CONFIG['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#reboot2respawn',
+	'TEXT' => '#divoc-r2r',
 );
 
 /**
