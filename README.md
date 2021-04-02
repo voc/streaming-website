@@ -103,3 +103,32 @@ betrachtet](https://gist.github.com/MaZderMind/a91f242efb2f446a2237d4596896efd6)
   - [re-data](https://github.com/ocdata/re-data/tree/feature/34c3)
     - Scraping code: [https://github.com/ocdata/re-data/blob/feature/34c3/scraper/34C3/scraper.js](https://github.com/ocdata/re-data/blob/feature/34c3/scraper/34C3/scraper.js)
     - During events data appears here: [http://api.conference.bits.io/](http://api.conference.bits.io/)
+
+## Troubleshooting
+
+### Falsche PHP-Version
+
+Wenn `serve.sh` einen Fehler wirft wie z.B. `PHP Fatal error:  Uncaught ErrorException: Required parameter $rules follows optional parameter $value in /<path-to-repository>/lib/less.php/Less.php:5501` kann es sein, dass du eine falsche PHP-Version verwendest. Wenn `php --version` 8 oder neuer zurückgibt, dann ist deine Version zu neu. Versuche auf deinem Betriebssystem PHP 7.4 zu installieren und in den Skripts, die zu benötigst, die Version anzupassen. Zum Beispiel wird dann aus
+```
+// vorher
+php -S localhost:$port -d short_open_tag=true index.php
+```
+dann
+```
+//nachher
+php7.4 -S localhost:$port -d short_open_tag=true index.php
+```
+
+### Fehlermeldung `Call to undefined function iconv()`
+Wenn du beim Aufrufen der Seite im Browser nur eine leere Seite siehst, schau in dein Terminal, ob es einen Fehler gab. Wenn du einen Fehler wie `PHP Fatal error:  Uncaught Error: Call to undefined function iconv()` siehst, ist bei dir die iconv-Extention nicht aktiviert. Du kannst diese in deiner globalen `php.ini` aktivieren. Wo diese Datei liegt kannst du mit `php --ini` bzw. `php7 --ini` rausfinden. Suche in der Datei nach der richtigen Zeile und entferne das Semikolon am Anfang. Wenn es kein Semikolon gibt, sollte die Extension bereits aktiviert sein.
+```
+// vorher
+;extension=iconv
+```
+```
+// nachher
+extension=iconv
+```
+
+### Fehlermeldung `lessc: command not found`
+Wenn du beim Ausführen von Skripten den Fehler `lessc: command not found` bekommst, fehlt dir ein less-Compiler. Es gibt verschiedene Arten, sich einen less-Compiler zu installieren. Falls du `npm` verwendest, kannst du beispielsweise less global installieren mit `npm install -g less`. Anschließen sollte `lessc` dann global auf deinem System verfügbar sein.
