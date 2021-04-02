@@ -4,12 +4,13 @@
 @grey-lighter: #555555;
 @greyLight: #666565;
 @bggrey: #333333;
+@white: #fff;
 
 @green: #00c466;
 @orange: #fe7900;
 @dark-green: #00292d;
 @plum: #1f0229;
-@pink: #d10069;
+@pink: #ff47a3;
 
 @brand-primary: @pink;
 @well-bg: @plum;
@@ -149,7 +150,7 @@ body .schedule .block h5 {
 .nav > li {
   position: relative;
   display: block;
-  background-color: #333333;
+  background-color: @dark-green;
 }
 
 nav.navbar {
@@ -208,5 +209,32 @@ nav .navbar-brand .icon {
 }
 
 body .schedule .room.highlight .block {
-  background-color: #275127;
+  background-color: @plum;
+}
+
+body .schedule .now .overlay {
+  background-color: rgba(52, 36, 59, 0.4);
+}
+
+body .schedule .block h3 {
+  font-weight: bold;
+}
+
+body .schedule .block h4 {
+  color: @mainGrey;
+}
+
+body .schedule .block h5 {
+  color: @green;
+}
+
+body .schedule .block.optout,
+body .schedule .block.pause {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+}
+
+
+#switcher div[disabled] {
+  background-color: @plum;
+  color: @green;
 }
