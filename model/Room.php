@@ -209,7 +209,7 @@ class Room
 	}
 
 	public function getHLSPlaylistUrl() {
-		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getStream()).'_native_hd.m3u8']);
+		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getStream()).'/native_hd.m3u8']);
 	}
 
 	public function getDashManifestUrl() {
