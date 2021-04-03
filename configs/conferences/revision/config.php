@@ -123,7 +123,7 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
 	'revision' => array(
-		'DISPLAY' => 'revision',
+		'DISPLAY' => 'Revision',
 		'STREAM' => 'revision',
 		'PREVIEW' => true,
 
