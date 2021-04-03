@@ -81,6 +81,10 @@ class Room
 		}
 	}
 
+	public function h264Only() {
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.H264_ONLY', false);
+	}
+
 
 
 	public function hasStereo() {

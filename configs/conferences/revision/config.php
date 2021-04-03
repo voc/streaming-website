@@ -111,8 +111,11 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'revision',
+			'revision'
 		),
+		'Live + HQ (Experimental)' => array(
+			'revision_passthrough'
+		)
 	),
 );
 
@@ -130,6 +133,32 @@ $CONFIG['ROOMS'] = array(
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
+		'DASH' => true,
+		'AUDIO' => true,
+		'SLIDES' => false,
+		'MUSIC' => false,
+
+		'SCHEDULE' => false,
+		'SCHEDULE_NAME' => 'revision',
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => false,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#revision @ twitter/mastodon',
+			'TEXT'    => '#revision',
+		),
+	),
+	'revision_passthrough' => array(
+		'DISPLAY' => 'revision Passthrough',
+		'STREAM' => 'revision_passthrough',
+		'PREVIEW' => true,
+
+		'TRANSLATION' => true,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'H264_ONLY' => true,
 		'DASH' => true,
 		'AUDIO' => true,
 		'SLIDES' => false,

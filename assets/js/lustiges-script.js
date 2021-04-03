@@ -41,6 +41,7 @@ $(function() {
 			autoPlay: true,
 			poster: $player.data("poster"),
 			audioOnly: !!$player.data("audio-only"),
+			h264Only: !!$player.data("h264-only"),
 			preferredAudioLanguage: $player.data("preferred-language"),
 			events: {
 				onReady: function() {
