@@ -1,39 +1,81 @@
 @import "../../../assets/css/_structure.less";
 
 .navbar-default {
- background-color: #acb2bb;
- border-color: #e7e7e7
+    background-color: #acb2bb;
+    border-color: #e7e7e7
+}
+
+body, footer, .navbar {
+    color: #fafafa;
+    background: #183867;
+    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 400;
 }
 
 body {
- color: #0a0a0a;
- background: #fefefe;
- font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
- font-weight: 400;
- background: transparent;
- background: url(revision-2021-bg.jpg) no-repeat center center fixed;
- background-size: cover;
+    background: transparent;
+    background: url(revision-2021-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+a, .footer a {
+    color: #a0a0a0;
+}
+
+a:hover, a:active, a:focus {
+    color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
- font-family: inherit;
- font-weight: 500;
- line-height: 1.1;
- color: white;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: white;
 }
 
 .panel {
- background-color: #183867;
+    background-color: #183867;
 }
 
 .tab-content > .tab-pane {
- background-color: #183867;
+    background-color: #183867;
 }
 
-a {
- color: #fff;
- font-weight: bold;
+.nav-tabs > li > a {
+    color: #fafafa;
 }
 
+.nav-tabs > li:hover > a {
+    background-color: #337ab7;
+    color: #fafafa;
+}
 
+.nav-tabs > li.active > a,
+.nav-tabs > li.active:hover > a {
+    background-color: #183867;
+    color: #fafafa;
+}
 
+.nav-tabs > li:hover > a,
+.nav-tabs > li.active > a {
+    border-color: #337ab7 !important;
+    border-bottom-color: #ddd !important;
+}
+
+.nav-tabs.nav-functions > li:hover > a,
+.nav-tabs.nav-functions > li.active > a {
+    border-bottom-color: #183867 !important;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+nav .navbar-time {
+    padding: 15px;
+}
+
+.about {
+	background-color: rgba(0, 0, 0, 0.5);
+}
