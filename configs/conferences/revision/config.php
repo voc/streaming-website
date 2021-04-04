@@ -139,7 +139,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'revision',
+		'SCHEDULE_NAME' => 'Revision Party',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -165,7 +165,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'revision',
+		'SCHEDULE_NAME' => 'Revision Party',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -194,14 +194,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-	//'URL' => 'https://cfp.privacyweek.at/pw18/schedule/export/schedule.xml',
+  'URL' => 'https://bats.science/revision-schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Saal 1', 'Saal 2', 'Workshop Raum'),
+	'ROOMFILTER' => array('Revision Party'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
