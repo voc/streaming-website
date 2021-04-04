@@ -138,7 +138,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Revision Party',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -164,7 +164,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Revision Party',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
