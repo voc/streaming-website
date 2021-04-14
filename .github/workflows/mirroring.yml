@@ -1,13 +1,22 @@
 name: Mirroring
 
-on: [push, delete]
+on: 
+  push:
+  delete:
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  to_gitolite:
-    runs-on: ubuntu-18.04
+  lint-and-mirror:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: pixta-dev/repository-mirroring-action@v1
+    - uses: actions/checkout@v2
+
+    - name: PHP Lint
+      uses: michaelw90/PHP-Lint@2.1.0
+
+    - name: Mirror to VOC gitolite
+      uses: pixta-dev/repository-mirroring-action@v1
       with:
         target_repo_url:
           git@git.c3voc.de:streaming-website.git
