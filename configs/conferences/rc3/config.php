@@ -1,6 +1,6 @@
 <?php
 
-$CONFIG['CONFERENCE'] = array(
+CONFIG['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
 	 * mit einem Text der Art "hat noch nicht angefangen" angezeigt.
