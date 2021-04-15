@@ -1,8 +1,7 @@
 name: Mirroring
 
-on: 
-  push:
-  delete:
+on:
+  workflow_dispatch:
   pull_request:
     branches: [ master ]
 
