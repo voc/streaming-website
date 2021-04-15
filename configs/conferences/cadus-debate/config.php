@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 18: Open Source Software-Toolbox für NGOs',
+	'TITLE' => 'Debate Humanitarian Aid',
 
 	/**
 	 * Veranstalter
@@ -47,43 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Ob für die Logistik oder die Finanzbuchhaltung, bei der Arbeit einer NGO braucht es oft 
-	teure Software, die selten genau auf die speziellen Bedürfnisse der Organisation zugeschnitten ist. 
-	Besonders visionsgetriebene Organisationen kämpfen mit knappen Budgets und begrenzten Ressourcen für die 
-	Verwirklichung ihrer Ideale und oft gegen bürokratische Hürden.
-
-	OpenAnt ist eine Software-Toolbox, die versucht, all die vielfältigen Software-Bereiche einer 
-	Hilfsorganisation abzudecken, sei es Logistik, Organisation oder Öffentlichkeitsarbeit. OpenAnt ist nicht 
-	nur eine Toolbox sondern auch ein Netzwerk. Nonprofits, Anwender:innen, Entwickler:innen und Förder:innen 
-	arbeiten gemeinsam daran, die Opensource-Anwendung zu verbessern.
-	
-	
-	In diesem Debate sprechen wir darüber, wie und wo OpenAnt NGOs unterstützen kann und welche Funktionalität 
-	vielleicht noch fehlt. Ben freut sich, mit Euch zu debattieren in wieweit OpenAnt auch von nicht technisch 
-	versierten NGOs eingesetzt werden kann und wo die Grenzen von OpenAnt sind. Wir freuen uns auf die Diskussion 
-	mit Euch.
-
-Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
-
-Donnerstag 04.02.2021
-Start 20:00
-
-Stream
-https://streaming.media.ccc.de/cadus-debate
-
-Chat
-https://webirc.hackint.org/#irc://irc.hackint.org/#debate
-
-Sprache: Deutsch
-
-DEBATE Corona Edition zum nachschauen:
-https://media.ccc.de/c/cadusdebate
-Was ist Debate?
-
-Uns ist es wichtig, nicht nur dort Hilfe zu leisten wo sie dringend gebraucht wird, sondern auch, die humanitäre Praxis immer wieder kritisch zu reflektieren. Deshalb laden wir jeden ersten Donnerstag im Monat um 20 Uhr zu Vortrag und Diskussion über ein aktuelles Thema der humanitären Hilfe ein.
-
-abboniere den Debate-Newsletter
-',
+	'DESCRIPTION' => '',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
