@@ -124,7 +124,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'pfdw21' => array(
+	'42021' => array(
 		'DISPLAY' => '420 Day',
 		'STREAM' => '42021',
 		'PREVIEW' => true,
