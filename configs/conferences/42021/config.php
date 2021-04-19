@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => '420',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -165,7 +165,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	//'URL' => 'https://cfp.digitale-gesellschaft.ch/wk04/schedule.xml',
+	'URL' => 'https://import.c3voc.de/schedule/42021.xml?showall=yes',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
