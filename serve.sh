@@ -3,10 +3,10 @@
 php_bin=""
 port=8000
 
-for try_bin in {php7,php}
+for try_bin in php7 php
 do
 	php_bin=$(command -v $try_bin)
-	if [[ -n "$php_bin" ]]
+	if [ -n "$php_bin" ]
 	then
 		break
 	fi
