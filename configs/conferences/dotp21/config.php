@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'DotP 2021',
+	'TITLE' => 'Day of the Podcast 2021',
 
 	/**
 	 * Veranstalter
