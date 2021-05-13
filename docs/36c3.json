@@ -1,0 +1,478 @@
+{
+    "$schema": "./config-schema.json",
+    "conference": {
+        "title": "36C3",
+        "acronym": "36c3",
+        "organizer": "CCC",
+        "description": "Live streaming from the 36th Chaos Communication Congress",
+        "keywords": [
+            "36C3",
+            "Hacking",
+            "Chaos Computer Club",
+            "Video",
+            "Music",
+            "Podcast",
+            "Media",
+            "Streaming",
+            "Hacker",
+            "Leipzig",
+            "Resource exhaustion"
+        ],
+        "start": "2019-12-27T07:00:00+02:00",
+        "end": "2019-12-30T19:00:00+02:00"
+    },
+    "rooms": [
+        {
+            "name": "Ada",
+            "slug": "halla",
+            "streamId": "s1",
+            "streamingConfig": {
+                "display": "Ada",
+                "wide": true,
+                "stream": "s1",
+                "preview": true,
+                "translation": [
+                    {
+                        "endpoint": "translated",
+                        "label": "Translated1"
+                    },
+                    {
+                        "endpoint": "translated-2",
+                        "label": "Translated2"
+                    }
+                ],
+                "sd_video": true,
+                "hd_video": true,
+                "slides": true,
+                "dash": true,
+                "audio": true,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "Ada",
+                "feedback": true,
+                "subtitles": false,
+                "subtitles_room_id": 1,
+                "embed": true,
+                "irc": true,
+                "irc_config": {
+                    "display": "#36C3-hall-a @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-a"
+                },
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#Ada @ twitter",
+                    "text": "#36C3 #Ada"
+                }
+            }
+        },
+        {
+            "name": "Borg",
+            "slug": "hallb",
+            "streamId": "s2",
+            "streamingConfig": {
+                "display": "Borg",
+                "stream": "s2",
+                "preview": true,
+                "translation": [
+                    {
+                        "endpoint": "translated",
+                        "label": "Translated1"
+                    },
+                    {
+                        "endpoint": "translated-2",
+                        "label": "Translated2"
+                    }
+                ],
+                "sd_video": true,
+                "hd_video": true,
+                "slides": true,
+                "dash": true,
+                "audio": true,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "Borg",
+                "feedback": true,
+                "subtitles": false,
+                "embed": true,
+                "irc": true,
+                "irc_config": {
+                    "display": "#36C3-hall-b @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-b"
+                },
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#Borg @ twitter",
+                    "text": "#36C3 #Borg"
+                }
+            }
+        },
+        {
+            "name": "Clarke",
+            "slug": "hallc",
+            "streamId": "s3",
+            "streamingConfig": {
+                "display": "Clarke",
+                "stream": "s3",
+                "preview": true,
+                "translation": [
+                    {
+                        "endpoint": "translated",
+                        "label": "Translated1"
+                    },
+                    {
+                        "endpoint": "translated-2",
+                        "label": "Translated2"
+                    }
+                ],
+                "sd_video": true,
+                "hd_video": true,
+                "slides": true,
+                "dash": true,
+                "audio": true,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "Clarke",
+                "feedback": true,
+                "subtitles": false,
+                "subtitles_room_id": 3,
+                "embed": true,
+                "irc": true,
+                "irc_config": {
+                    "display": "#36C3-hall-c @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-c"
+                },
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#Clarke @ twitter",
+                    "text": "#36C3 #Clarke"
+                }
+            }
+        },
+        {
+            "name": "Dijkstra",
+            "slug": "halld",
+            "streamId": "s4",
+            "streamingConfig": {
+                "display": "Dijkstra",
+                "stream": "s4",
+                "preview": true,
+                "translation": [
+                    {
+                        "endpoint": "translated",
+                        "label": "Translated1"
+                    },
+                    {
+                        "endpoint": "translated-2",
+                        "label": "Translated2"
+                    }
+                ],
+                "sd_video": true,
+                "hd_video": true,
+                "slides": true,
+                "dash": true,
+                "audio": true,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "Dijkstra",
+                "feedback": true,
+                "subtitles": false,
+                "subtitles_room_id": 4,
+                "embed": true,
+                "irc": true,
+                "irc_config": {
+                    "display": "#36C3-hall-d @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-d"
+                },
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#Dijkstra @ twitter",
+                    "text": "#36C3 #Dijkstra"
+                }
+            }
+        },
+        {
+            "name": "Eliza",
+            "slug": "halle",
+            "streamId": "s5",
+            "streamingConfig": {
+                "display": "Eliza",
+                "stream": "s5",
+                "preview": true,
+                "translation": [
+                    {
+                        "endpoint": "translated",
+                        "label": "Translated1"
+                    },
+                    {
+                        "endpoint": "translated-2",
+                        "label": "Translated2"
+                    }
+                ],
+                "sd_video": true,
+                "hd_video": true,
+                "slides": true,
+                "dash": true,
+                "audio": true,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "Eliza",
+                "feedback": true,
+                "subtitles": false,
+                "subtitles_room_id": 5,
+                "embed": true,
+                "irc": true,
+                "irc_config": {
+                    "display": "#36C3-hall-e @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-hall-e"
+                },
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#Eliza @ twitter",
+                    "text": "#36C3 #Eliza"
+                }
+            }
+        },
+        {
+            "name": "Chaos-West Bühne",
+            "slug": "chaoswest",
+            "streamId": "s150",
+            "streamingConfig": {
+                "display": "Chaos-West Bühne",
+                "display_short": "Chaos-West",
+                "stream": "s150",
+                "preview": true,
+                "translation": [],
+                "sd_video": true,
+                "hd_video": true,
+                "dash": true,
+                "audio": true,
+                "slides": false,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "Chaos-West Bühne",
+                "feedback": true,
+                "subtitles": false,
+                "embed": true,
+                "irc": true,
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#CWStage @ twitter",
+                    "text": "#CWStage"
+                },
+                "irc_config": {
+                    "display": "#chaoswest-stage @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#chaoswest-stage"
+                }
+            }
+        },
+        {
+            "name": "WikiPakaWG Esszimmer",
+            "slug": "wikipakawg",
+            "streamId": "s89",
+            "streamingConfig": {
+                "display": "WikiPakaWG Esszimmer",
+                "display_short": "WikiPakaWG",
+                "stream": "s89",
+                "preview": true,
+                "translation": [
+                    {
+                        "endpoint": "translated",
+                        "label": "Translated1"
+                    }
+                ],
+                "sd_video": true,
+                "hd_video": true,
+                "dash": true,
+                "audio": true,
+                "slides": false,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "WikiPaka WG: Esszimmer",
+                "feedback": true,
+                "subtitles": false,
+                "embed": true,
+                "irc": false,
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#wikipakaWG @ twitter",
+                    "text": "#wikipakaWG"
+                }
+            }
+        },
+        {
+            "name": "Open Infrastructure Orbit",
+            "slug": "oio",
+            "streamId": "oio",
+            "streamingConfig": {
+                "display": "Open Infrastructure Orbit",
+                "display_short": "OIO",
+                "stream": "oio",
+                "preview": true,
+                "translation": [],
+                "sd_video": true,
+                "hd_video": true,
+                "dash": true,
+                "audio": true,
+                "slides": false,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "OIO Stage",
+                "feedback": true,
+                "subtitles": false,
+                "embed": true,
+                "irc": false,
+                "twitter": true,
+                "twitter_config": {
+                    "display": "#OIOStage @ twitter",
+                    "text": "#OIOStage"
+                }
+            }
+        },
+        {
+            "name": "CDC",
+            "slug": "cdc",
+            "streamId": "cdc",
+            "streamingConfig": {
+                "display": "CDC",
+                "display_short": "CDC",
+                "stream": "cdc",
+                "preview": true,
+                "translation": [],
+                "sd_video": true,
+                "hd_video": true,
+                "dash": true,
+                "audio": true,
+                "slides": false,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "CDC Stage",
+                "feedback": true,
+                "subtitles": false,
+                "embed": true,
+                "irc": false
+            }
+        },
+        {
+            "name": "Sendezentrum",
+            "slug": "sz",
+            "streamId": "s80",
+            "streamingConfig": {
+                "display": "Sendezentrum",
+                "display_short": "SZ",
+                "stream": "s80",
+                "preview": true,
+                "translation": [],
+                "sd_video": true,
+                "hd_video": true,
+                "dash": true,
+                "audio": true,
+                "slides": false,
+                "music": false,
+                "schedule": true,
+                "schedule_name": "DLF- und Podcast-Bühne",
+                "feedback": true,
+                "subtitles": false,
+                "embed": true,
+                "irc": false,
+                "twitter": true,
+                "twitter_config": {
+                    "display": "sendezentrum @ twitter",
+                    "text": "@sendezentrum"
+                }
+            }
+        }
+    ],
+    "streamingConfig": {
+        "features": {
+            "embed": true,
+            "relive": true,
+            "feedback": true,
+            "chat": {
+                "hashtag": "#36C3",
+                "irc": {
+                    "display": "#36C3-%s @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s"
+                },
+                "twitter": {
+                    "text": "#36C3 #%s"
+                }
+            }
+        },
+        "schedule": {
+            "url": "https://data.c3voc.de/36C3/stages.schedule.xml",
+            "roomfilter": [
+                "Ada",
+                "Borg",
+                "Clarke",
+                "Dijkstra",
+                "Eliza",
+                "WikiPaka WG: Esszimmer",
+                "Chaos-West Bühne",
+                "OIO Stage",
+                "DLF- und Podcast-Bühne"
+            ],
+            "scale": 7
+        },
+        "overviewPage": {
+            "sections": [
+                {
+                    "title": "Live",
+                    "rooms": [
+                        {
+                            "slug": "halla"
+                        },
+                        {
+                            "slug": "hallb"
+                        },
+                        {
+                            "slug": "hallc"
+                        },
+                        {
+                            "slug": "halld"
+                        },
+                        {
+                            "slug": "halle"
+                        }
+                    ]
+                },
+                {
+                    "title": "Assemblies Live",
+                    "rooms": [
+                        {
+                            "slug": "chaoswest"
+                        },
+                        {
+                            "slug": "wikipakawg"
+                        },
+                        {
+                            "slug": "oio"
+                        },
+                        {
+                            "slug": "sz"
+                        },
+                        {
+                            "slug": "cdc"
+                        }
+                    ]
+                }
+            ]
+        },
+        "html": {
+            "banner": "<div class=\"congress\"></div><div class=\"congress-motto\"></div>",
+            "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V</a>,\n\t\t<a href=\"https://www.isystems.at/\">iSystems</a>,\n\t\t<a href=\"https://fem.tu-ilmenau.de/\">FeM</a>,\n\t\t<a href=\"https://www.ags.tu-bs.de/\">ags</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+            "not_started": null
+        },
+        "extraFiles": {
+            "schedule.xml": "https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xml",
+            "schedule.json": "https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.json",
+            "schedule.ics": "https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.ics",
+            "schedule.xcal": "https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.xcal",
+            "everything.schedule.xml": "http://data.c3voc.de/36C3/everything.schedule.xml",
+            "everything.schedule.json": "http://data.c3voc.de/36C3/everything.schedule.json",
+            "stages.schedule.xml": "http://data.c3voc.de/36C3/stages.schedule.xml",
+            "stages.schedule.json": "http://data.c3voc.de/36C3/stages.schedule.json",
+            "wiki.schedule.xml": "http://data.c3voc.de/36C3/wiki.schedule.xml",
+            "wiki.schedule.json": "http://data.c3voc.de/36C3/wiki.schedule.json"
+        }
+    }
+}
