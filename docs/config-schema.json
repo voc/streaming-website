@@ -21,7 +21,7 @@
           "title": "Acronym",
           "description": "VOC Kürzel für die Konferenz, falls nicht bekannt bitte nicht selbst ausdenken sondern nachfragen. Wird in den URLs als Slug für die Konferenz verwendet.",
           "type": "string",
-          "examples": ["36c3", "rc3", "divoc_r2r"],
+          "examples": ["36c3", "rc3", "divoc-ptt"],
           "pattern": "^[a-z0-9_-]+$"
         },
         "organizer": {
@@ -94,7 +94,10 @@
           }
         },
         "keywords" :{
-          "type":"array"
+          "type":"array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -127,8 +130,8 @@
               },
               "streamId": {
                 "type": "string",
-                "title": "The streamId schema",
-                "description": "",
+                "title": "Stream ID",
+                "description": "Der Name des Kanals im VOC Streaming CDN z.B. s1",
                 "default": "",
                 "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"]
               },
@@ -169,20 +172,20 @@
     "Features": {
       "type": "object",
       "additionalProperties": false,
-      "title": "Globale Features",
+      "title": "Globale Schalter",
       "description": "",
       "properties": {
-        "embed": {
-          "type": "boolean",
-          "title": "Globaler Schalter für die Embedding-Funktionalitäten",
-          "description": "Wird diese Option deaktivert, werden alle Embedding-Funktionen deaktiviert.",
-          "default": true
-        },
         "relive": {
           "type": "boolean",
-          "title": "The relive schema",
-          "description": "",
+          "title": "Relive aktiv",
+          "description": "Wird diese Option deaktivert, wird die UI für temporäre Mitschnitte nicht angezeigt",
           "default": false
+        },
+        "embed": {
+          "type": "boolean",
+          "title": "Embedding",
+          "description": "Wird diese Option deaktivert, werden alle Embedding-Funktionen deaktiviert.",
+          "default": true
         },
         "feedback": {
           "type": "boolean",
@@ -264,18 +267,12 @@
               "title": "Nur die angegebenen Räume aus dem Fahrplan beachten",
               "description": "Wird diese Option ignoriert, werden alle Räume angezeigt",
               "default": [],
-              "examples": [["Piscopia"]],
               "additionalItems": true,
               "items": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "title": "The first anyOf schema",
-                    "description": "",
-                    "default": "",
-                    "examples": ["Piscopia"]
-                  }
-                ]
+                "type": "string",
+                "description": "",
+                "default": "",
+                "examples": ["Piscopia"]
               }
             }
           },
@@ -362,7 +359,7 @@
         },
         "wide": {
           "type": "boolean",
-          "title": "The wide schema",
+          "title": "16:9",
           "description": "",
           "default": true
         },
@@ -377,54 +374,48 @@
           "title": "Übersetzungstonspur aktivieren",
           "description": "Betrifft video sd / hd, slides, audio",
           "items": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/TranslationConfig"
-              }
-            ]
+            "$ref": "#/definitions/TranslationConfig"
           }
         },
         "stereo": {
           "type": "boolean",
-          "title": "The stereo schema",
+          "title": "Stereo",
           "description": "",
           "default": false
         },
         "dash": {
           "type": "boolean",
-          "title": "DASH-Stream verfügbar",
+          "title": "DASH",
           "description": "",
           "default": true
         },
         "hd_video": {
           "type": "boolean",
-          "title": "HD-Video-Stream (1920×1080) verfügbar",
-          "description": "Wenn dieses Flag deaktiviert wird kein HD-Video angeboten. Wird auch SD_VIDEO und DASH deaktivert, wird für diesen Raum überhaupt kein Video angeboten. In diesem Fall wird Slides, Audio und zuletzt Musik als Default-Stream angenommen – sofern aktiviert.",
+          "title": "HD",
+          "description": "Wenn dieses Flag deaktiviert wird kein HD-Video (1920×1080) angeboten. Wird auch SD-Video und DASH deaktivert, wird für diesen Raum überhaupt kein Video angeboten. In diesem Fall wird Slides, Audio und zuletzt Musik als Default-Stream angenommen – sofern aktiviert.",
           "default": true
         },
         "sd_video": {
           "type": "boolean",
-          "title": "The sd_video schema",
+          "title": "SD",
           "description": "",
           "default": true
         },
         "slides": {
           "type": "boolean",
-          "title": "Slide-Only-Stream (1024×576) verfügbar",
-          "description": "",
+          "title": "Slide-Only-Stream",
+          "description": "Getrennter Stream für Vortragsfolien verfügbar",
           "default": false
         },
         "audio": {
-          "$id": "#/properties/conference/properties/rooms/items/anyOf/0/properties/streamingConfig/properties/audio",
           "type": "boolean",
-          "title": "Audio-Only-Stream verfügbar",
+          "title": "Audio-Only-Stream",
           "description": "",
           "default": false
         },
         "music": {
-          "$id": "#/properties/conference/properties/rooms/items/anyOf/0/properties/streamingConfig/properties/music",
           "type": "boolean",
-          "title": "Musik-Stream verfügbar",
+          "title": "Musik-Stream",
           "description": "",
           "default": false
         },
@@ -590,43 +581,35 @@
             ]
           ],
           "items": {
-            "anyOf": [
-              {
-                "type": "object",
-                "title": "Abschnitt",
+            "type": "object",
+            "title": "Abschnitt",
+            "description": "",
+            "default": {},
+            "required": ["title", "items"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Titel der Gruppe",
                 "description": "",
-                "default": {},
-                "required": ["title", "items"],
-                "properties": {
-                  "title": {
-                    "type": "string",
-                    "title": "Titel der Gruppe",
-                    "description": "",
-                    "default": "Live",
-                    "examples": ["Live", "Audio"]
-                  },
-                  "items": {
-                    "type": "array",
-                    "title": "Räume / Channels",
-                    "description": "",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "type": "object",
-                          "required": ["slug"],
-                          "additionalProperties": true,
-                          "properties": {
-                            "slug": {
-                              "type": "string"
-                            }
-                          }
-                        }
-                      ]
+                "default": "Live",
+                "examples": ["Live", "Audio"]
+              },
+              "items": {
+                "type": "array",
+                "title": "Räume / Channels",
+                "description": "",
+                "items": {
+                  "type": "object",
+                  "required": ["slug"],
+                  "additionalProperties": true,
+                  "properties": {
+                    "slug": {
+                      "type": "string"
                     }
                   }
                 }
               }
-            ]
+            }
           }
         }
       }

@@ -387,13 +387,15 @@
             "embed": true,
             "relive": true,
             "feedback": true,
-            "irc": {
-                "display": "#36C3-%s @ hackint",
-                "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s"
-            },
-            "twitter": {
-                "display": "#%s @ twitter",
-                "text": "#36C3 #%s"
+            "chat": {
+                "hashtag": "#36C3",
+                "irc": {
+                    "display": "#36C3-%s @ hackint",
+                    "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s"
+                },
+                "twitter": {
+                    "text": "#36C3 #%s"
+                }
             }
         },
         "schedule": {
