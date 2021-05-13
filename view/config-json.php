@@ -46,7 +46,7 @@ function formatRooms($conference) {
 		$struct[] = array(
 			'name' => $room->getDisplay(),
 			'slug' => $room->getSlug(),
-			'livestreamId' => $room->getStream(),
+			'streamId' => $room->getStream(),
 			'streamingConfig' => lowerCaseKeys($config),
 		);
 	}

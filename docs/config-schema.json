@@ -1,0 +1,618 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://c3voc.de/streaming-website/config",
+  "type": "object",
+  "title": "VOC streaming-website configuration",
+  "description": " deployed at https://streaming.media.ccc.de",
+  "required": ["conference"],
+  "properties": {
+    "conference": {
+      "type": "object",
+      "required": ["title", "acronym"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Titel der Konferenz",
+          "description": "Kann Leer- und Sonderzeichen enthalten. Dieser wird im Seiten-Header, im &lt;title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als Anzeigetext benutzt.",
+          "examples": ["DiVOC - Reboot to Respawn"]
+        },
+        "acronym": {
+          "title": "Acronym",
+          "description": "VOC Kürzel für die Konferenz, falls nicht bekannt bitte nicht selbst ausdenken sondern nachfragen. Wird in den URLs als Slug für die Konferenz verwendet.",
+          "type": "string",
+          "examples": ["36c3", "rc3", "divoc-ptt"],
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "organizer": {
+          "type": "string",
+          "title": "Veranstalter",
+          "description": "Wird für den &lt;meta name=\"author\">-Tag verwendt. Ist das Feld leer, wird kein solcher &ltmeta>-Tag generiert.",
+          "examples": ["CCC", "DiVOC"]
+        },
+        "description": {
+          "type": "string",
+          "title": "Beschreibungstext",
+          "description": "Wird für den &lt;meta name=\"description\">-Tag verwendet. Wird diese Option ignoriert, wird kein solcher &lt;meta>-Tag generiert.",
+          "examples": [
+            "Livestream des Digital verteilten Online-Chaos",
+            "Live streaming from the 36th Chaos Communication Congress"
+          ]
+        },
+        "start": {
+          "type": "string",
+          "format": "datetime-local",
+          "title": "Startzeitpunkt der Konferenz",
+          "description": "Befinden wir uns davor, wird die Closed-Seite mit einem Text der Art 'hat noch nicht angefangen' angezeigt. Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. ",
+          "examples": ["2021-04-02T09:30:00+02:00"],
+          "options": {
+            "grid_columns": 2,
+            "inputAttributes": {
+              "placeholder": "Enter datetime"
+            },
+            "flatpickr": {
+              "wrap": true,
+              "time_24hr": true,
+              "allowInput": true
+            }
+          }
+        },
+        "end": {
+          "type": "string",
+          "format": "datetime-local",
+          "examples": ["2021-04-05T18:30:00+02:00"],
+          "options": {
+            "grid_columns": 2,
+            "inputAttributes": {
+              "placeholder": "Enter datetime"
+            },
+            "flatpickr": {
+              "wrap": true,
+              "time_24hr": true,
+              "allowInput": true
+            }
+          }
+        },
+        "time_zone_name": {
+          "title": "Zeitzone",
+          "type": "string",
+          "examples": ["Europe/Amsterdam", "Europe/Berlin"],
+          "default": "Europe/Amsterdam",
+          "pattern": "^[A-Z][a-z+]/[A-Z][a-z+]$"
+        },
+        "colors": {
+          "type": "object",
+          "properties": {
+            "main": {
+              "type": "string",
+              "format": "color"
+            },
+            "background": {
+              "type": "string",
+              "format": "color"
+            }
+          }
+        },
+        "keywords" :{
+          "type":"array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "rooms": {
+      "type": "array",
+      "title": "Räume",
+      "description": "(= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "default": {},
+            "required": ["name", "slug", "streamId", "streamingConfig"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Raum Name",
+                "description": "(aus Schedule)",
+                "default": "",
+                "examples": ["Piscopia"]
+              },
+              "slug": {
+                "type": "string",
+                "title": "Raum-Slug",
+                "description": "Wird in den URLs oder im Feedback verwendet",
+                "default": "",
+                "examples": ["halla", "vortrag", "piscopia"]
+              },
+              "streamId": {
+                "type": "string",
+                "title": "Stream ID",
+                "description": "Der Name des Kanals im VOC Streaming CDN z.B. s1",
+                "default": "",
+                "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"]
+              },
+              "streamingConfig": {
+                "$ref": "#/definitions/RoomStreamingConfig"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "streamingConfig": {
+      "$ref": "#/definitions/StreamingConfig"
+    }
+  
+  },
+  "definitions": {
+    "Room": {
+      "type": "object",
+      "description": "Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "streamId": {
+          "type": "string"
+        },
+        "streamingConfig": {
+          "$ref": "#/definitions/RoomStreamingConfig"
+        }
+      },
+      "required": ["streamId", "name", "slug", "streamingConfig"]
+    },
+    "Features": {
+      "type": "object",
+      "additionalProperties": false,
+      "title": "Globale Schalter",
+      "description": "",
+      "properties": {
+        "relive": {
+          "type": "boolean",
+          "title": "Relive aktiv",
+          "description": "Wird diese Option deaktivert, wird die UI für temporäre Mitschnitte nicht angezeigt",
+          "default": false
+        },
+        "embed": {
+          "type": "boolean",
+          "title": "Embedding",
+          "description": "Wird diese Option deaktivert, werden alle Embedding-Funktionen deaktiviert.",
+          "default": true
+        },
+        "feedback": {
+          "type": "boolean",
+          "title": "Feedback Formular",
+          "description": "Wird diese Option deaktivert, wird das gesamte Feedback-System deaktiviert",
+          "default": false
+        },
+        "chat": {
+          "type": "object",
+          "title": "Globale Konfiguration für Chat und Social Media",
+          "properties": {
+            "hashtag": {
+              "type": "string",
+              "title": "Hashtag der Konferenz",
+              "examples": ["#36C3", "#divoc-r2r"]
+            },
+            "twitter": {
+              "type": ["boolean", "object"]
+            },
+            "mastodon":{
+              "type": "boolean"
+            },
+            "matrix": {
+              "type": "boolean"
+            },
+            "irc": {
+              "$ref": "#/definitions/IrcConfig",
+              "title": "Globale Konfiguration der IRC-Links",
+              "description": "Wird dieser Block auf null gesetzt, werden keine IRC-Links mehr erzeugt. Sollen die IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem existieren sein. ggf. einfach auf true setzen.",
+              "required": ["display", "url"],
+              "properties": {
+                "url": {
+                  "title": "URL für die IRC-Links",
+                  "description": "Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem WebIrc-Provider wie z.B. 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s' verwendet werden. %s wird durch den urlencodeten Raum-Slug ersetzt. Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.",
+                  "examples": ["https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s", "ircs://irc.hackint.eu:6667/36C3-%s"]
+                },
+                "display": {
+                  "type": "string",
+                  "title": "Anzeigetext für die IRC-Links",
+                  "description": "%s wird durch den Raum-Slug ersetzt. Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "StreamingConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "title": "Konfigurationen",
+      "description": "",
+      "default": {},
+      "required": ["features", "overviewPage"],
+      "properties": {
+        "schedule": {
+          "type": "object",
+          "title": "Konferenz-Fahrplan",
+          "required": ["url", "scale"],
+          "properties": {
+            "url": {
+              "type": "string",
+              "title": "URL zum Fahrplan-XML",
+              "description": "Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein externer HTTP-Cache vorgeschaltet werden.",
+              "default": "",
+              "examples": [
+                "https://data.c3voc.de/divoc/everything.schedule.xml"
+              ]
+            },
+            "scale": {
+              "$id": "#/properties/conference/properties/streamingConfig/properties/schedule/properties/scale",
+              "type": "integer",
+              "title": "Skalierung der Programm-Vorschau ",
+              "description": "in Sekunden pro Pixel",
+              "default": 7
+            },
+            "roomfilter": {
+              "type": "array",
+              "title": "Nur die angegebenen Räume aus dem Fahrplan beachten",
+              "description": "Wird diese Option ignoriert, werden alle Räume angezeigt",
+              "default": [],
+              "additionalItems": true,
+              "items": {
+                "type": "string",
+                "description": "",
+                "default": "",
+                "examples": ["Piscopia"]
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "features": {
+          "$ref": "#/definitions/Features"
+        },
+        "overviewPage": {
+          "$ref": "#/definitions/Page"
+        },
+        "html": {
+          "type": "object",
+          "description": "Anpassung der Standard-Texte",
+          "properties": {
+            "banner": {
+              "type": ["string", "null"],
+              "format": "text",
+              "title": "HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)",
+              "description": "wird üblicherweise für KeyVisuals oder Textmarke verwendet (vgl. Hintergrund des Sliders oben auf http://media.ccc.de/)\nDieser HTML-Block wird üblicherweise in der main.less speziell für die Konferenz umgestaltet.\nWird diese Zeile nicht konnfiguriert, wird kein Banner ausgegeben.",
+              "examples": [
+                "<img src=\"../configs/conferences/fiffkon16/logo.png\" class=\"FIfFKon\">",
+                "<div class=\"congress\"></div><div class=\"congress-motto\"></div>"
+              ]
+            },
+            "footer": {
+              "type": ["string", "null"],
+              "format": "html",
+              "title": "HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)",
+              "description": "Sollte üblicherweise nur Inline-Elemente enthalten. Wird diese Zeile gelassen, wird die Standard-Attribuierung für (c3voc.de) verwendet",
+              "default": null,
+              "examples": [
+                "by <a href=\"https://di.c3voc.de\">DiVOC Organizers</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+              ]
+            },
+            "not_started": {
+              "$id": "#/properties/conference/properties/streamingConfig/properties/html/properties/not_started",
+              "type": ["string", "null"],
+              "format": "textarea",
+              "title": "HTML-Code für die 'Event has not started yet' Seite",
+              "description": "Ersetzt den Standardtext",
+              "examples": [
+                "<h1>Sonoj 2019 has not started yet</h1>\n<p>Live streams will be available here throughout the event. During and leading up to the event <a href=\"ircs://chat.freenode.net/sonoj\">#sonoj on Freenode</a>\nwill be a place for discussion and questions.\nIf you do not have an IRC client installed, try out <a href=\"https://webchat.freenode.net/#sonoj\">freenode webchat</a>. So even if you are not able to visit in person, please feel free to participate remotely.\n</p>"
+              ]
+            }
+          }
+        },
+        "extraFiles": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "RoomStreamingConfig": {
+      "type": "object",
+      "title": "RoomStreamingConfig",
+      "description": "",
+      "default": {},
+      "examples": [
+        {
+          "schedule_name": "Piscopia",
+          "display": "Piscopia",
+          "stream": "divocr2r",
+          "preview": true,
+          "stereo": false,
+          "sd_video": true,
+          "hd_video": true,
+          "slides": false,
+          "dash": true,
+          "audio": true
+        }
+      ],
+      "required": ["display", "stream", "preview", "slides", "schedule"],
+      "properties": {
+        "display": {
+          "type": "string",
+          "title": "Anzeige-Name",
+          "description": "",
+          "default": "",
+          "examples": ["Piscopia"]
+        },
+        "display_short": {
+          "type": "string"
+        },
+        "wide": {
+          "type": "boolean",
+          "title": "16:9",
+          "description": "",
+          "default": true
+        },
+        "preview": {
+          "type": "boolean",
+          "title": "Stream-Vorschaubildchen auf der Übersichtsseite anzeigen",
+          "description": "",
+          "default": true
+        },
+        "translation": {
+          "type": "array",
+          "title": "Übersetzungstonspur aktivieren",
+          "description": "Betrifft video sd / hd, slides, audio",
+          "items": {
+            "$ref": "#/definitions/TranslationConfig"
+          }
+        },
+        "stereo": {
+          "type": "boolean",
+          "title": "Stereo",
+          "description": "",
+          "default": false
+        },
+        "dash": {
+          "type": "boolean",
+          "title": "DASH",
+          "description": "",
+          "default": true
+        },
+        "hd_video": {
+          "type": "boolean",
+          "title": "HD",
+          "description": "Wenn dieses Flag deaktiviert wird kein HD-Video (1920×1080) angeboten. Wird auch SD-Video und DASH deaktivert, wird für diesen Raum überhaupt kein Video angeboten. In diesem Fall wird Slides, Audio und zuletzt Musik als Default-Stream angenommen – sofern aktiviert.",
+          "default": true
+        },
+        "sd_video": {
+          "type": "boolean",
+          "title": "SD",
+          "description": "",
+          "default": true
+        },
+        "slides": {
+          "type": "boolean",
+          "title": "Slide-Only-Stream",
+          "description": "Getrennter Stream für Vortragsfolien verfügbar",
+          "default": false
+        },
+        "audio": {
+          "type": "boolean",
+          "title": "Audio-Only-Stream",
+          "description": "",
+          "default": false
+        },
+        "music": {
+          "type": "boolean",
+          "title": "Musik-Stream",
+          "description": "",
+          "default": false
+        },
+        "schedule": {
+          "type": "boolean",
+          "title": "Fahrplan-Ansicht auf der Raum-Seite aktivieren",
+          "description": "Wenn diese Option deaktivert wird der Raum nicht im Fahrplan gesucht und auch auf der Startseite findet keine Darstellung statt. Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren des globalen Flags deaktiviert werden.",
+          "default": true
+        },
+        "schedule_name": {
+          "type": "string",
+          "title": "Name des Raums im Fahrplan",
+          "description": "Wenn dieses Feld ignoriert wird der Raum-Display-Name verwendet",
+          "examples": ["Piscopia"]
+        },
+        "feedback": {
+          "type": "boolean",
+          "title": "Feedback anzeigen",
+          "description": "Wenn diese Option deaktivert taucht der Raum auch im globalen Feedback-Formular nicht auf. Hängt vom Feedback-Flag in den globalen Optionen ab.",
+          "default": true
+        },
+        "subtitles": {
+          "type": "boolean",
+          "title": "Subtitles-Player aktivieren",
+          "description": "Subtitles-Button und die damit verbundenen Funktionen. Hängt vom Subtitles-Flag in den globalen Optionen ab.",
+          "default": false
+        },
+        "subtitles_room_id": {
+          "type": "integer",
+          "title": "ID des Raumes im L2S2-System",
+          "description": "",
+          "examples": [1]
+        },
+        "embed": {
+          "type": "boolean",
+          "title": "Embed-Form aktivieren",
+          "description": "Ist dieses Option aktiviert, wird ein Embed-Tab unter dem Video angezeigt. Darüber kann der Player als iframe eingebunden werden. Wenn diese Option deaktivert ist, wird kein Embed-Tab angeboten und die URL zum Einbetten existiert nicht. Ebenso können alle Embedding-Funktionialitäten durch deaktiveren des globalen EMBED-Blocks deaktiviert werden.",
+          "default": true
+        },
+        "chat": {
+          "type": ["boolean", "object"],
+          "title": "Chat-Tab aktivieren/konfigurieren",
+          "description": "Ist diese Option aktiviert, wird ein Chat-Tab mit den jeweiligen Links angezeigt.",
+          "default": false,
+          "$ref": "#/definitions/ChatConfig"
+        }
+      }
+    },
+    "TranslationConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["endpoint", "label"],
+      "properties": {
+        "endpoint": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      }
+    },
+    "ChatConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "irc": {
+
+        },
+        "twitter": {
+
+        },
+        "mastodon":{
+
+        },
+        "matrix": {
+
+        }
+      }
+    },
+    "IrcConfig": {
+      "title": "IRC",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "display": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["display", "url"]
+    },
+    "TwitterConfig": {
+      "title": "Twitter",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "display": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": ["display", "text"]
+    },
+    "Page": {
+      "type": "object",
+      "title": "Konfiguration der Stream-Übersicht auf der Startseite",
+      "description": "",
+      "default": {},
+      "required": ["sections"],
+      "properties": {
+        "sections": {
+          "type": "array",
+          "title": "Abschnitte und darunter aufgeführte Räume",
+          "description": "Es können beliebig neue Gruppen und Räume hinzugefügt werden",
+          "default": [],
+          "examples": [
+            [
+              {
+                "title": "Live",
+                "rooms": [
+                  {
+                    "slug": "halla"
+                  },
+                  {
+                    "slug": "hallb"
+                  },
+                  {
+                    "slug": "hallc"
+                  },
+                  {
+                    "slug": "halld"
+                  },
+                  {
+                    "slug": "halle"
+                  }
+                ]
+              },
+              {
+                "title": "Assemblies Live",
+                "rooms": [
+                  {
+                    "slug": "chaoswest"
+                  },
+                  {
+                    "slug": "wikipakawg"
+                  },
+                  {
+                    "slug": "oio"
+                  },
+                  {
+                    "slug": "sz"
+                  },
+                  {
+                    "slug": "cdc"
+                  }
+                ]
+              }
+            ]
+          ],
+          "items": {
+            "type": "object",
+            "title": "Abschnitt",
+            "description": "",
+            "default": {},
+            "required": ["title", "items"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Titel der Gruppe",
+                "description": "",
+                "default": "Live",
+                "examples": ["Live", "Audio"]
+              },
+              "items": {
+                "type": "array",
+                "title": "Räume / Channels",
+                "description": "",
+                "items": {
+                  "type": "object",
+                  "required": ["slug"],
+                  "additionalProperties": true,
+                  "properties": {
+                    "slug": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
