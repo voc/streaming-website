@@ -128,7 +128,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'buehne1' => array(
 		'DISPLAY' => 'Bühne 1',
-		'STREAM' => 'fossgis21-1',
+		'STREAM' => 'fossgis1',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -153,7 +153,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'buehne2' => array(
 		'DISPLAY' => 'Bühne 2',
-		'STREAM' => 'fossgis21-2',
+		'STREAM' => 'fossgis2',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -178,7 +178,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'buehne3' => array(
 		'DISPLAY' => 'Bühne 3',
-		'STREAM' => 'fossgis21-3',
+		'STREAM' => 'fossgis3',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
@@ -203,7 +203,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'buehne4' => array(
 		'DISPLAY' => 'Bühne 4',
-		'STREAM' => 'fossgis21-4',
+		'STREAM' => 'fossgis4',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => false,
