@@ -420,7 +420,7 @@ $CONFIG['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#debate @ twitter',
+	'DISPLAY' => '#CADUSDebate @ twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -428,7 +428,7 @@ $CONFIG['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#debate',
+	'TEXT' => '#CADUSDebate',
 );
 
 $CONFIG['IRC'] = array(
