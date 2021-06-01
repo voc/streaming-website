@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-05-06 19:45"),
+	'STARTS_AT' => strtotime("2021-06-03 19:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-05-06 23:00"),
+	'ENDS_AT' => strtotime("2021-06-03 23:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate Humanitarian Aid',
+	'TITLE' => 'Debate 21: Neue Luftüberwachung: Wie Frontex Geflüchteten beim Ertrinken zuschaut',
 
 	/**
 	 * Veranstalter
@@ -47,7 +47,31 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => '',
+	'DESCRIPTION' => 'Seit 2019 errichtet Frontex eine Grenztruppe von 10.000 Beamt:innen. Die "Verordnung über die Europäische Grenz- und Küstenwache" ist in den vergangenen Jahren zweimal von der EU erneuert worden. Seit 2016 ist es Frontex erlaubt, eigene Ausrüstung zu erwerben. Zuerst hat Frontex in das Leasing von Luftüberwachung investiert. Dieser anfangs bemannte Flugdienst wird nun durch unbemannte Systeme mit deutlich größerer Reichweite ausgebaut. Auch die Agentur für die Sicherheit des Seeverkehrs (EMSA) verfügt inzwischen über eine Drohnenflotte.
+	Beim Debate #21 schildert Matthias Monroy, wie Drohnen als militärische Hochtechnologie nun die vorverlagerte EU-Migrationsabwehr übernehmen. An ihren Außengrenzen schaffen sie neue Absatzmärkte für die europäische und israelische Rüstungsindustrie.
+	Eine derart militarisierte Luftüberwachung sorgt für neue Menschenrechtsverletzungen. Ruben Neugebauer erklärt, wie Frontex Geflüchtete im zentralen Mittelmeer nur noch aus der Luft beobachtet. Statt selbst zu retten wird die tunesische oder libysche "Küstenwache" über Seenotfälle informiert.
+	
+Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
+
+Donnerstag 03.06.2021
+Start 20:00
+
+Stream
+https://streaming.media.ccc.de/cadus-debate
+
+Chat
+https://webirc.hackint.org/#irc://irc.hackint.org/#debate
+
+Sprache: Deutsch
+
+DEBATE zum Nachschauen:
+https://media.ccc.de/c/cadusdebate
+
+Was ist Debate?
+Uns ist es wichtig, nicht nur dort Hilfe zu leisten wo sie dringend gebraucht wird, sondern auch, die humanitäre Praxis immer wieder kritisch zu reflektieren. Deshalb laden wir jeden ersten Donnerstag im Monat um 20 Uhr zu Vortrag und Diskussion über ein aktuelles Thema der humanitären Hilfe ein.
+
+Abboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinfo/announcement-cadus
+',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -396,7 +420,7 @@ $CONFIG['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#CADUSDebate @ twitter',
+	'DISPLAY' => '#debate @ twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -404,7 +428,7 @@ $CONFIG['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#CADUSDebate',
+	'TEXT' => '#debate',
 );
 
 $CONFIG['IRC'] = array(
