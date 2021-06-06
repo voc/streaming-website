@@ -128,7 +128,7 @@ function download_for_conference($what, $conference, $url, $cache)
 		$url,
 		$cache
 	);
-	$resp = do_download($url, $cache);
+	$resp = do_download($what, $url, $cache);
 	if($resp !== true)
 	{
 		stderr(
@@ -151,7 +151,7 @@ function download($what, $url, $cache)
 		$url,
 		$cache
 	);
-	$resp = do_download($url, $cache);
+	$resp = do_download($what, $url, $cache);
 	if($resp !== true)
 	{
 		stderr(
@@ -165,7 +165,7 @@ function download($what, $url, $cache)
 	return true;
 }
 
-function do_download($url, $cache)
+function do_download($what, $url, $cache)
 {
 	$handle = curl_init($url);
 	curl_setopt_array($handle, [
@@ -190,6 +190,20 @@ function do_download($url, $cache)
 	$tempfile = tempnam(dirname($cache), 'dl-');
 	if(!$tempfile)
 		return 'could not create tempfile in '.dirname($cache);
+
+	if ($what == 'schedule-xml') {
+		try {
+			simplexml_load_string($return);
+		} except (Exception $e) {
+			return 'simplexml_load_string() did raise an Exception: ',$e->getMessage();
+		}
+	} elseif ($what == 'relive-json') {
+		try {
+			json_decode($return, null, 512, JSON_THROW_ON_ERROR);
+		} except (Exception $e) {
+			return 'json_decode() did raise an Exception: ',$e->getMessage();
+		}
+	}
 
 	if(false === file_put_contents($tempfile, $return))
 		return 'could write data into tempfile '.$tempfile;
