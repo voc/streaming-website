@@ -15,4 +15,21 @@ class Upcoming
 			return array();
 		}
 	}
+
+	/*
+		Try to find the next upcoming event, which does not match current event.
+	*/
+	public function getNextEvent($currentEvent = "")
+	{
+		$nextEvents = getNextEvents();
+		foreach($nextEvents as $event) {
+			similar_text($event["name"], $currentEvent, $percentMatch);
+
+			if($percentMatch < 50) {
+				return $event;
+			}
+		}
+
+		return @$nextEvents[0];
+	}
 }
