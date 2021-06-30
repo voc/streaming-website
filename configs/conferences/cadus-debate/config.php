@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-06-03 19:45"),
+	'STARTS_AT' => strtotime("2021-07-01 19:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-06-03 23:00"),
+	'ENDS_AT' => strtotime("2021-07-01 23:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 21: Neue Luftüberwachung: Wie Frontex Geflüchteten beim Ertrinken zuschaut',
+	'TITLE' => 'Debate 22: Open Tech for Everyone: Wieso freie Technik wichtig für die Gesellschaft ist',
 
 	/**
 	 * Veranstalter
@@ -47,13 +47,13 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Seit 2019 errichtet Frontex eine Grenztruppe von 10.000 Beamt:innen. Die "Verordnung über die Europäische Grenz- und Küstenwache" ist in den vergangenen Jahren zweimal von der EU erneuert worden. Seit 2016 ist es Frontex erlaubt, eigene Ausrüstung zu erwerben. Zuerst hat Frontex in das Leasing von Luftüberwachung investiert. Dieser anfangs bemannte Flugdienst wird nun durch unbemannte Systeme mit deutlich größerer Reichweite ausgebaut. Auch die Agentur für die Sicherheit des Seeverkehrs (EMSA) verfügt inzwischen über eine Drohnenflotte.
-	Beim Debate #21 schildert Matthias Monroy, wie Drohnen als militärische Hochtechnologie nun die vorverlagerte EU-Migrationsabwehr übernehmen. An ihren Außengrenzen schaffen sie neue Absatzmärkte für die europäische und israelische Rüstungsindustrie.
-	Eine derart militarisierte Luftüberwachung sorgt für neue Menschenrechtsverletzungen. Ruben Neugebauer erklärt, wie Frontex Geflüchtete im zentralen Mittelmeer nur noch aus der Luft beobachtet. Statt selbst zu retten wird die tunesische oder libysche "Küstenwache" über Seenotfälle informiert.
+	'DESCRIPTION' => 'Corona Warn App, das Internet, Smartphones - sie alle basieren größtenteils auf Open Source Software. Da lässt sich schon erahnen: Freie Software und Open Tech sind nicht nur was für Vollblut-Nerds und Informatiker. In unserem neuen DEBATE wollen wir genau darüber reden. Carina, Eileen, Elisa und Raphael diskutieren mit euch, was Open Source überhaupt ist und warum die Frage "Open oder nicht" eben nicht nur in IT-Kreisen geführt werden sollte. Sie geben außerdem praktische Tipps, wie jede*r Mensch zu mehr "Open" in der Welt beitragen kann, auch ohne Programmierkenntnisse.
+
+	Carina, selbst Open Source und Open Science Enthusiastin, moderiert das Debate. Zu Gast haben wir Eileen, UX Designerin und Mitglied von Open Source Design, Elisa, die zu Open Source Communities forscht und Raphael, der die Open Source Software Pretix mitaufgebaut hat und instand hält.
 	
 Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
 
-Donnerstag 03.06.2021
+Donnerstag 01.07.2021
 Start 20:00
 
 Stream
