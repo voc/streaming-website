@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'HS1/2', 'HS3', 'HS4', 'HS5', 'C116'
+			'HS1', 'HS3', 'HS4', 'HS5', 'C116'
 		),
 	),
 );
@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'HS1/2' => array(
+	'HS1' => array(
 		'DISPLAY' => 'HS 1/2',
 		'STREAM' => 'frosconhs1',
 		'PREVIEW' => true,
