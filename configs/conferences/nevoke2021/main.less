@@ -1,0 +1,81 @@
+@import "../../../assets/css/_structure.less";
+@import "https://use.typekit.net/bow8ixn.css";
+
+@brand-primary:         #fff;
+@text-color:            #fff;
+@background:            #00082f;
+
+@link-color:            @brand-primary;
+@panel-bg:              @background;
+@well-bg:               @panel-bg;
+
+@panel-default-border:  #000000;
+@panel-primary-border:  #000000;
+
+@navbar-default-color:  #fe3800;
+@navbar-default-bg:     @background;
+@navbar-default-link-color:       #fe3800;
+@navbar-default-link-hover-color: #fe3800;
+
+@footer-default-color:            @text-color;
+@footer-default-bg:               @background;
+@footer-default-link-color:       @text-color;
+@footer-default-link-hover-color: @text-color;
+
+// darker nav tabs:
+
+@nav-link-hover-bg: #43a5ff; // nav-tabs-link-hover-bg gibts nicht... :/
+@nav-tabs-active-link-hover-bg: @background;
+@nav-tabs-active-link-hover-color: @brand-primary;
+
+@custom-nav-border-color: #404663;
+@nav-tabs-link-hover-border-color: #888; // slightly darker border
+
+@nav-tabs-border-color:                       @custom-nav-border-color;
+@nav-tabs-active-link-hover-border-color:     @custom-nav-border-color;
+@nav-tabs-justified-link-border-color:        @custom-nav-border-color;
+@nav-tabs-justified-active-link-border-color: @custom-nav-border-color;
+
+body {
+  font-family: ff-tisa-web-pro, serif;
+  font-weight: 400;
+  line-height:1.5
+}
+
+body.room {
+  .tab-content {
+	border-left:  .0625rem solid @custom-nav-border-color;
+	border-bottom: .0625rem solid @custom-nav-border-color;
+	border-right:  .0625rem solid @custom-nav-border-color;
+  }
+}
+
+// end darker nav tabs
+
+
+body {
+  h1 {
+	color: @brand-primary;
+  }
+}
+
+.banner {
+  text-align: center;
+  color: @brand-primary;
+}
+
+body {
+  background-color: @background;
+}
+
+img.c4logo {
+  width: 200px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  z-index: -100;
+}
+
+.panel-default > .panel-heading {
+  background-color: #ffd600;
+}
