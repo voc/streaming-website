@@ -26,7 +26,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'running',
+	//'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -111,10 +111,10 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'revision'
+			'nevoke'
 		),
 		'Live + HQ (Experimental)' => array(
-			'revision_passthrough'
+			'nevoke_passthrough'
 		)
 	),
 );
@@ -125,9 +125,9 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'revision' => array(
-		'DISPLAY' => 'Revision',
-		'STREAM' => 'revision',
+	'nevoke' => array(
+		'DISPLAY' => 'névoke',
+		'STREAM' => 'nevoke',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
@@ -138,21 +138,21 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Revision Party',
+		'SCHEDULE' => false,
+		'SCHEDULE_NAME' => 'nevoke',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#revision @ twitter/mastodon',
-			'TEXT'    => '#revision',
+			'DISPLAY' => '#nevoke @ twitter/mastodon',
+			'TEXT'    => '#nevoke',
 		),
 	),
-	'revision_passthrough' => array(
-		'DISPLAY' => 'revision Passthrough',
-		'STREAM' => 'revision_passthrough',
+	'nevoke_passthrough' => array(
+		'DISPLAY' => 'névoke Passthrough',
+		'STREAM' => 'nevoke_passthrough',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
@@ -164,16 +164,16 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Revision Party',
+		'SCHEDULE' => false,
+		'SCHEDULE_NAME' => 'nevoke',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#revision @ twitter/mastodon',
-			'TEXT'    => '#revision',
+			'DISPLAY' => '#nevoke @ twitter/mastodon',
+			'TEXT'    => '#nevoke',
 		),
 	),
 
@@ -194,14 +194,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-  'URL' => 'https://bats.science/revision-schedule.xml',
+  //'URL' => 'https://bats.science/revision-schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Revision Party'),
+	//'ROOMFILTER' => array('Revision Party'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
