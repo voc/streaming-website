@@ -140,7 +140,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'nevoke',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -166,7 +166,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'nevoke',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
@@ -196,14 +196,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * das Script configs/download.sh heruntergeladen, welches von einem
 	 * Cronjob regelmäßig getriggert wird.
 	 */
-  //'URL' => 'https://bats.science/revision-schedule.xml',
+  'URL' => 'https://www.nevoke.eu/timetable/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Revision Party'),
+	'ROOMFILTER' => array('nevoke'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
