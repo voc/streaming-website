@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-08-14 15:00 CEST"),
+	'STARTS_AT' => strtotime("2021-08-14 14:00 CEST"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-08-15 05:00 CEST"),
+	'ENDS_AT' => strtotime("2021-08-15 06:00 CEST"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -61,8 +61,10 @@ $CONFIG['CONFERENCE'] = array(
 	 * Sollte üblicherweise nur Inline-Elemente enthalten
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
-	'FOOTER_HTML' => '
-		<a href="https://party.xn--nvoke-bsa.eu/start">névoke Partymeister</a>
+  'FOOTER_HTML' => '
+		<a href="https://party.xn--nvoke-bsa.eu/start">Voting &rarr;</a>
+￼		&nbsp;&nbsp;
+￼		<a href="https://discord.gg/GZS5aB4Yun">Chat &rarr;</a>
 	',
 
 	/**
