@@ -63,9 +63,8 @@ $CONFIG['CONFERENCE'] = array(
 	 */
   'FOOTER_HTML' => '
 		<a href="https://party.xn--nvoke-bsa.eu/start">Voting &rarr;</a>
-￼		&nbsp;&nbsp;
-￼		<a href="https://discord.gg/GZS5aB4Yun">Chat &rarr;</a>
-	',
+		&nbsp;&nbsp;
+		<a href="https://discord.gg/GZS5aB4Yun">Chat &rarr;</a>',
 
 	/**
 	 * HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)
