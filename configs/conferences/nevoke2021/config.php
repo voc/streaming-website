@@ -62,7 +62,9 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		<a href="https://party.xn--nvoke-bsa.eu/start">névoke Partymeister</a>
+		<a href="https://party.xn--nvoke-bsa.eu/start">Voting &rarr;</a>
+		&nbsp;&nbsp;
+		<a href="https://discord.gg/GZS5aB4Yun">Chat &rarr;</a>
 	',
 
 	/**
