@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'HS1', 'HS3', 'HS4', 'HS5', 'C116'
+			'HS1', 'HS3', 'HS4', 'HS5', 'C116', 'C120', 'LPI'
 		),
 	),
 );
@@ -255,6 +255,54 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => false,
 	),
+	'C120' => array(
+		'DISPLAY' => 'C120',
+		'STREAM' => 'frosconc120',
+		'PREVIEW' => true,
+		'TRANSLATION' => false,
+
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'SLIDES' => true,
+
+		'AUDIO' => true,
+		'MUSIC' => false,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'C120',
+
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+
+		'EMBED' => true,
+		'IRC' => false,
+	),
+	'LPI' => array(
+		'DISPLAY' => 'LPI',
+		'STREAM' => 'frosconlpi',
+		'PREVIEW' => true,
+		'TRANSLATION' => false,
+
+
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'SLIDES' => true,
+
+		'AUDIO' => true,
+		'MUSIC' => false,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'LPI',
+
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+
+		'EMBED' => true,
+		'IRC' => false,
+	),
 );
 
 /**
@@ -284,7 +332,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('HS 1/2', 'HS3', 'HS4', 'HS5', 'C116'),
+	'ROOMFILTER' => array('HS 1/2', 'HS3', 'HS4', 'HS5', 'C116', 'C120', 'LPI'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
