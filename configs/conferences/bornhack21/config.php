@@ -238,7 +238,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Speaker-Ten',
+		'SCHEDULE_NAME' => 'Speaker Tent',
 
 		/**
 		 * Feedback anzeigen (boolean)
