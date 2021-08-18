@@ -355,7 +355,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://cdn.c3voc.de/relive/bornhack21/index.json',
+	'URL' => 'https://bornhack.dk/bornhack-2021/program/frab.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
