@@ -96,7 +96,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	/**'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/gpw2021/index.json',**/
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/bh21/index.json',**/
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -232,13 +232,13 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 
 		/**
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'speaker-ten',
+		'SCHEDULE_NAME' => 'Speaker-Ten',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -355,7 +355,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://datenzoo.de/schedule.xml',
+	'URL' => 'https://cdn.c3voc.de/relive/bornhack21/index.json',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
