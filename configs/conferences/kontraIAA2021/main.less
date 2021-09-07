@@ -59,12 +59,17 @@ input.btn:hover {
     url("Ubuntu.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("OpenSans-Bold.ttf")
+}
+
 /*
  * headlines
  */
 
 .font-headline {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Open Sans Bold";
   color: @primary;
 }
 
@@ -151,6 +156,18 @@ h3 {
   color: @text;
 }
 
+h1 {
+  padding: 0.3em;
+}
+h1::before {
+  background-image: url(KonTra_Logo_purple.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  content: " ";
+  padding-left: 4em;
+}
+
 body.overview .panel-body {
   min-height: 10px;
 }
@@ -203,7 +220,7 @@ nav.navbar {
 }
 
 .congress {
-  background-image: url(R2R_logo.png);
+  background-image: url(KonTra_Logo_purple.png);
   background-repeat: no-repeat;
   background-size: 200px;
 
@@ -223,7 +240,8 @@ nav.navbar {
 }
 
 nav .navbar-brand .icon {
-  background-image: url(voctobunny.svg);
+  background-image: url(KonTra_Logo_purple.png);
+  display: none;
 }
 
 body .schedule .room.highlight .block {

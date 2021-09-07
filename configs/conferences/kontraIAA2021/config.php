@@ -153,11 +153,11 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Piscopia',
-		'FEEDBACK' => true,
+		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 1,
 		'EMBED' => true,
-		'IRC' => true,
+		'IRC' => false,
 		'IRC_CONFIG' => array(
 			'DISPLAY' => '#divoc @ hackint',
 			'URL'     => 'https://webirc.hackint.org/#irc://irc.libera.chat/#kontraIAA',
@@ -189,7 +189,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Piscopia'),
+	'ROOMFILTER' => array('Kranhalle'),
 	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
