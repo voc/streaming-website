@@ -182,7 +182,6 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	//'URL' => 'https://data.c3voc.de/divoc/everything.schedule.xml',
     'URL' => 'https://gitlab.infra4future.de/hacc/events/kontraiaa-schedule/-/raw/main/kontraiaa.schedule.xml', //http://localhost:4000/kontraiaa.schedule.xml',
 
 	/**
@@ -190,7 +189,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('Piscopia'),
+    'ROOMFILTER' => array('Kranhalle'),
 	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
