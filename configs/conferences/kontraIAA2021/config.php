@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-09-09 09:30"),
+	'STARTS_AT' => strtotime("2021-09-09 00:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-09-10 18:30"),
+	'ENDS_AT' => strtotime("2021-09-10 23:59"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -61,11 +61,11 @@ $CONFIG['CONFERENCE'] = array(
 	 * Sollte üblicherweise nur Inline-Elemente enthalten
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
-/*	'FOOTER_HTML' => '
-		by <a href="https://di.c3voc.de">DiVOC Organizers</a> &
+	'FOOTER_HTML' => '
+		Stream by <a href="https://muc.hacc.earth">hacc Munich</a> &
 		<a href="https://c3voc.de">C3VOC</a>
 	',
-*/
+
 	/**
 	 * HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)
 	 * wird üblicherweise für KeyVisuals oder Textmarke verwendet (vgl. Blaues
@@ -98,7 +98,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/kontraIAA2021/index.json'
+	//'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/kontraIAA2021/index.json'
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
@@ -138,7 +138,7 @@ $CONFIG['ROOMS'] = array(
 	'kranhalle' => array(
 		'DISPLAY' => 'KRANHALLE',
 		'WIDE' => true,
-		'STREAM' => 'kranhalle',
+		'STREAM' => 'kontraiaa',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -182,14 +182,15 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://data.c3voc.de/divoc/everything.schedule.xml',
+	//'URL' => 'https://data.c3voc.de/divoc/everything.schedule.xml',
+    'URL' => 'https://gitlab.infra4future.de/hacc/events/kontraiaa-schedule/-/raw/main/kontraiaa.schedule.xml', //http://localhost:4000/kontraiaa.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Kranhalle'),
+	//'ROOMFILTER' => array('Piscopia'),
 	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
