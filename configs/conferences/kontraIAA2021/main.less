@@ -1,0 +1,281 @@
+@import "../../../assets/css/_structure.less";
+
+@mainGrey: lightgray;
+@grey-lighter: white;
+@greyLight: white;
+@bggrey: gray;
+@white: #fff;
+
+@green: #00c466;
+@orange: #fe7900;
+@plum: #1f0229;
+@pink: #ff47a3;
+
+@primary: #dede37;
+@secondary: #dceeec;
+@tertiary: #8d79b6;
+@dark-green: @secondary;
+
+@text: black;
+
+@well-bg: @white;
+@btn-default-bg: @mainGrey;
+@panel-default-heading-bg: @mainGrey;
+@panel-default-text: black;
+@panel-bg: @dark-green;
+@background: white;
+
+@navbar-height: 70px;
+@navbar-default-bg: @dark-green;
+@navbar-default-border: transparent;
+
+/*
+ * buttons
+ */
+@btn-font-weight: 600;
+a.btn,
+input.btn,
+.btn-primary {
+  color: @text;
+  border-color: @text;
+  background-color: @secondary;
+}
+a.btn:hover,
+input.btn:hover {
+  background-color: @primary;
+}
+
+/*
+ * font
+ */
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 100;
+  font-style: normal;
+  src: url("Ubuntu.eot");
+  src: url("Ubuntu.eot?#iefix") format("embedded-opentype"),
+    url("Ubuntu.otf") format("opentype"), url("Ubuntu.svg") format("svg"),
+    url("Ubuntu.ttf") format("ttf"), url("Ubuntu.woff") format("woff"),
+    url("Ubuntu.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("OpenSans-Bold.ttf")
+}
+
+/*
+ * headlines
+ */
+
+.font-headline {
+  font-family: "Open Sans Bold";
+  color: @primary;
+}
+
+h1,
+h2,
+h3,
+body.overview .room a.title,
+body.overview .panel-primary a,
+.navbar-brand,
+.panel-heading,
+.panel-default > .panel-heading,
+.nav.nav-tabs {
+  .font-headline();
+}
+
+h1 {
+font-size: 40pt;
+}
+
+
+/*
+ * panels
+ */
+
+.panel-default {
+  border-color: @primary;
+}
+
+.panel-default > .panel-heading {
+  border-color: @primary;
+}
+
+/*
+ * navbar
+ */
+
+body.room .tab-content {
+  border-left: 1px solid @primary;
+  border-bottom: 1px solid @primary;
+  border-right: 1px solid @primary;
+}
+
+.nav-tabs > li > a {
+color: @text;
+}
+.nav-tabs > li > a:hover {
+color: black;
+background-color: @primary;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: black;
+}
+
+.panel {
+  background-color: transparent;
+}
+
+.panel-default > .panel-heading {
+  background-color: #ad621b;
+}
+
+/*
+ * schedule
+ */
+
+body .schedule .now {
+  //background-color: rgba(222,103,100,0.6);
+  //background-color: unset;
+}
+
+body .schedule .block.event h3 {
+  overflow: unset;
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  color: @primary;
+}
+h3 {
+  color: @text;
+}
+
+h1 {
+  padding: 0.3em;
+}
+h1::before {
+  background-image: url(KonTra_Logo_purple.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  content: " ";
+  padding-left: 4em;
+}
+
+body.overview .panel-body {
+  min-height: 10px;
+}
+
+body {
+  background-color: @background;
+  color: @text;
+  padding: @navbar-height 0;
+}
+
+body .schedule .block h5 {
+  color: #767676;
+}
+
+.nav > li {
+  position: relative;
+  display: block;
+  background-color: @dark-green;
+}
+
+nav.navbar {
+  .navbar-brand {
+    /*color: @mainGrey;*/
+  }
+
+  .navbar-right {
+    text-align: right;
+
+    .btn-ssl,
+    a.feedback,
+    a.releases,
+    a.about {
+      color: #5e5e5e;
+      background-color: transparent;
+      border-color: #5e5e5e;
+
+      &:hover {
+        color: @text;
+        background-color: @primary;
+        border-color: @text;
+      }
+    }
+
+    .btn-ssl.btn-warning {
+      color: grey;
+      background: transparent;
+      border-color: grey;
+    }
+  }
+}
+
+.congress {
+  background-image: url(KonTra_Logo_purple.png);
+  background-repeat: no-repeat;
+  background-size: 200px;
+
+  position: fixed;
+  left: 10px;
+  top: 200px;
+
+  width: 290px;
+  height: 1080px;
+
+  opacity: 1;
+  z-index: -100;
+
+  @media (max-width: @screen-sm-min) {
+    display: none;
+  }
+}
+
+nav .navbar-brand .icon {
+  background-image: url(KonTra_Logo_purple.png);
+  display: none;
+}
+
+body .schedule .room.highlight .block {
+  background-color: @secondary;
+}
+
+body .schedule .now .overlay {
+  background-color: rgba(100,100,100, 0.2);
+}
+
+body .schedule .block h3 {
+  font-weight: bold;
+}
+
+body .schedule .block h4 {
+  color: @tertiary;
+}
+
+body .schedule .block h5 {
+  color: black;
+}
+
+body .schedule .block.optout,
+body .schedule .block.pause {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+}
+
+
+#switcher div[disabled] {
+  background-color: @plum;
+  color: @green;
+}
+
+.tab-pane {
+background-color: @secondary;
+}
