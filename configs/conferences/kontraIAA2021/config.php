@@ -47,14 +47,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-  'DESCRIPTION' => 'Livestream von der Kontra IAA Konferenz',
+  'DESCRIPTION' => 'Kontra IAA – Konferenz für transformative Mobilität',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-//	'KEYWORDS' => 'DiVOC, Hacking, Chaos Computer Club, Video, Music, Podcast, Media, Streaming, Hacker, Everywhere, Reboot to Respawn, R2R',
+	'KEYWORDS' => 'kontraIAA, IAA, Kongress, Video, Music, Podcast, Media, Streaming, Everywhere, Aktivismus, Mobilität',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -77,7 +77,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	/** 'BANNER_HTML' => '<img src="../configs/conferences/fiffkon16/logo.png" class="FIfFKon">', **/
-//	'BANNER_HTML' => '<div class="congress"></div><div class="congress-motto"></div>',
+	'BANNER_HTML' => '<div class="congress"></div><div class="congress-motto"></div>',
 
 	/**
 	 * Link zu den Recordings
@@ -152,7 +152,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Piscopia',
+		'SCHEDULE_NAME' => 'Kranhalle',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 1,
