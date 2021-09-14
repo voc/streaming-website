@@ -1,30 +1,170 @@
 @import "../../../assets/css/_structure.less";
-@brand-primary:         #41afff;
+@brand-primary: #ff5f00;
 
-nav .navbar-brand .icon {
-	//background-image: url("logo.png");
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 27px;
-	width: 27px;
+/* Karla font by Jonny Pinhorn, licensed under OFL
+ * https://fonts.google.com/specimen/Karla */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('fonts/Karla-Regular.woff2') format('woff2'),
+        url('fonts/Karla-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-.banner .logo {
-  //background-image: url("logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+@font-face {
+    font-family: 'Karla';
+    src: url('fonts/Karla-Bold.woff2') format('woff2'),
+        url('fonts/Karla-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
-  padding-left: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 320px;
-  min-height: 64px;
-  max-height: 72px;
-  max-width: 1170px;
 
-  line-height: 64px;
+/* Iosevka font by Renzhi Li (be5invis), licensed under OFL
+ * https://typeof.net/Iosevka/ */
 
-  /* height: 72px; */
-/*  float: left; */
+@font-face {
+    font-family: 'Iosevka';
+    src: url('fonts/Iosevka.woff2') format('woff2'),
+        url('fonts/Iosevka.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    src: url('fonts/Iosevka-Bold.woff2') format('woff2'),
+        url('fonts/Iosevka-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    src: url('fonts/Iosevka-Thin.woff2') format('woff2'),
+        url('fonts/Iosevka-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* XDC 2021 styles */
+
+nav .navbar-brand .icon {
+    background-image: url("logo.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    margin-top: -3px;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-headline, .navbar-brand {
+    font-family: "Iosevka", monospace;
+}
+
+.font-headline {
+  font-family: "Iosevka", sans-serif;
+}
+
+a {
+    color: #dd4900;
+}
+
+a:hover, a:focus {
+    color: #A23601;
+}
+
+/* Timetable links */
+.schedule .block h4 {
+    color: #C44100
+}
+
+.schedule .block h4:hover, .schedule .block h4:focus {
+    color: #9F3500
+}
+
+.schedule .room.highlight .block {
+    background-color: #ffd1b0;
+}
+
+.schedule .block.daychange {
+    text-shadow: 0 0 3px #ff8e4a;
+}
+
+.panel-heading {
+    background: rgb(229,76,24);
+    background: linear-gradient(90deg, rgba(229,76,24,1) 0%, rgba(254,195,80,1) 100%);
+}
+
+.panel-title {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.nav-tabs .active {
+    border-top: rgb(229, 76, 24) 3px solid;
+}
+
+.nav-tabs.nav-justified li a {
+    border-radius: 0;
+}
+
+.btn-primary {
+    border-color: #E54C18;
+    background-color: #E54C18;
+}
+
+.btn-primary[disabled] {
+    border-color: #FF855B;
+    background-color: #FF855B;
+}
+
+.btn-primary:hover {
+    border-color: #C43200;
+    background-color: #C43200;
+}
+
+.btn-primary:active, .btn-primary:focus {
+    border-color: #AB2C00;
+    background-color: #AB2C00;
+}
+
+.irclink {
+    font-family: "Iosevka", monospace;
+    background: rgb(229,76,24);
+    background: linear-gradient(90deg, rgba(229,76,24,1) 0%, rgba(254,195,80,1) 100%);
+    text-shadow: 1px 1px 2px #333;
+    border-color: orange;
+
+}
+
+.irclink:hover, .irclink:focus, .irclink:active {
+    background: rgb(196,57,9);
+    background: linear-gradient(90deg, rgb(196,57,9,1) 0%, rgb(255,176,22) 100%);
+    border-color: orange;
+}
+
+.form-control:focus {
+    border-color: rgb(255, 119, 59);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 95, 33, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 95, 33, 0.6);
+}
+
+nav .navbar-time {
+    padding: 20px 5px;
+    line-height: 12px;
 }
