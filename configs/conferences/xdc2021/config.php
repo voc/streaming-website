@@ -33,30 +33,28 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => ' X.Org Developers Conference',
+	'TITLE' => 'X.Org Developers Conference 2021',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => ' X.Org Developers Conference',
+	'AUTHOR' => 'X.Org Foundation',
 
 	/**
 	 * Beschreibungstext
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'The X.Org Developers Conference (XDC) is the event for developers working on all things Open graphics (Linux kernel, Mesa, DRM, Wayland, X11, etc.).
-
-	',
+	'DESCRIPTION' => 'The X.Org Developers Conference (XDC) is the event for developers working on all things Open graphics (Linux kernel, Mesa, DRM, Wayland, X11, etc.).',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'x.org',
+	'KEYWORDS' => 'x.org, xorg, xdc, graphics',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -64,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://indico.freedesktop.org/event/1/">https://indico.freedesktop.org/event/1//</a>
+		<a href="https://xdc2021.x.org">XDC 2021</a> &middot; <a href="https://x.org">X.org Foundation</a> &middot; hosted by <a href="https://c3voc.de">C3VOC</a>
 	',
 
 	/**
@@ -294,7 +292,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle IRC-Links durch auskommentieren
 		 * des globalen $CONFIG['IRC']-Blocks deaktiviert werden
 		 */
-		'IRC' => false,
+		'IRC' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -303,9 +301,9 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-                'IRC_CONFIG' => array(
-			'DISPLAY' => 'Deutscher Perl Workshop@matrix',
-			'URL'     => 'https://matrix.to/#/#GermanPerlWorkshop:matrix.org?via=matrix.org',
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '##xdc2021 @ OFTC',
+			'URL'     => 'https://webchat.oftc.net/?channels=##xdc2021',
 		),
 
 		/**
@@ -322,7 +320,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Twitter-Links durch auskommentieren
 		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
 		 **/
-		'TWITTER' => false,
+		'TWITTER' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -331,10 +329,10 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['TWITTER']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-		// 'TWITTER_CONFIG' => array(
-		// 	'DISPLAY' => '#fossgis2016 @ twitter',
-		// 	'TEXT'    => '#fossgis2016',
-		// ),
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#XDC2021 @ Twitter',
+			'TEXT'    => '#XDC2021',
+		),
 	),
 	'xdc221' => array(
 		/**
@@ -493,7 +491,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle IRC-Links durch auskommentieren
 		 * des globalen $CONFIG['IRC']-Blocks deaktiviert werden
 		 */
-		'IRC' => false,
+		'IRC' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -502,9 +500,9 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-                'IRC_CONFIG' => array(
-			'DISPLAY' => 'Deutscher Perl Workshop@matrix',
-			'URL'     => 'https://matrix.to/#/#GermanPerlWorkshop:matrix.org?via=matrix.org',
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '##xdc2021 @ OFTC',
+			'URL'     => 'https://webchat.oftc.net/?channels=##xdc2021',
 		),
 
 		/**
@@ -521,7 +519,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Twitter-Links durch auskommentieren
 		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
 		 **/
-		'TWITTER' => false,
+		'TWITTER' => true,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -530,10 +528,10 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['TWITTER']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-		// 'TWITTER_CONFIG' => array(
-		// 	'DISPLAY' => '#fossgis2016 @ twitter',
-		// 	'TEXT'    => '#fossgis2016',
-		// ),
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#XDC2021 @ Twitter',
+			'TEXT'    => '#XDC2021',
+		),
 	),
 );
 
@@ -593,6 +591,8 @@ $CONFIG['SCHEDULE'] = array(
  *
  *   $CONFIG['TWITTER'] = true
  */
+
+$CONFIG['TWITTER'] = true;
 
 //$CONFIG['TWITTER'] = array(
 	/**
