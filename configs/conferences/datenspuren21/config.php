@@ -238,7 +238,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Big lecture hall',
+		'SCHEDULE_NAME' => 'Großer Saal',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -363,7 +363,7 @@ $CONFIG['SCHEDULE'] = array(
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
 	'ROOMFILTER' => [
-        'Big lecture hall',
+        'Großer Saal',
 	],
 
 	/**
