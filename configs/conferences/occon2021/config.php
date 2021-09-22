@@ -136,7 +136,7 @@ $CONFIG['ROOMS'] = array(
 	 */
 	'stage' => array(
 		'DISPLAY' => 'ownCloud conference 2021 - Conference Room',
-		'STREAM' => 'stage',
+		'STREAM' => 'occon2021',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'HD_VIDEO' => true,
