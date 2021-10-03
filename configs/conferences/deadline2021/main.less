@@ -1,0 +1,60 @@
+@import "../../../assets/css/_structure.less";
+@import (css) url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
+
+@dl21-bg-dark:      #070713;
+@dl21-bg-medium:    #101326;
+@dl21-bg-bright:    #192134;
+
+@navbar-default-bg: @dl21-bg-bright;
+@panel-bg:          @dl21-bg-dark;
+@well-bg:           @panel-bg;
+
+@panel-default-border:  #444;
+@panel-primary-border:  @panel-default-border;
+@nav-tabs-border-color:                       @panel-default-border;
+@nav-tabs-active-link-hover-border-color:     @panel-default-border;
+@nav-tabs-justified-link-border-color:        @panel-default-border;
+@nav-tabs-justified-active-link-border-color: @panel-default-border;
+
+@nav-tabs-active-link-hover-bg:    @dl21-bg-bright;
+@nav-tabs-active-link-hover-color: #ffffff;
+
+
+nav .navbar-brand .icon {
+	background-image: url("dl2021w.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 256px;
+	height: 32px;
+}
+
+body {
+	background-color: @dl21-bg-dark;
+	background: linear-gradient(to bottom, #070713 0%, #101326 100%);
+	background-attachment: fixed;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	color: #999999;
+}
+
+.panel-default > .panel-heading {
+	background-color: @dl21-bg-bright;
+	color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, nav {
+	font-family: Poppins, sans-serif;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+h1 {
+	margin-top: 40px;  // otherwise the navbar occludes part of the heading
+}
+
+a {
+	color: #999999;
+}
+a:hover {
+	color: #db4f3d;
+}
