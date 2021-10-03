@@ -111,10 +111,10 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'deadline'
+			'deadline21'
 		),
 		'Live + HQ (Experimental)' => array(
-			'deadline_passthrough'
+			'deadline21_passthrough'
 		)
 	),
 );
@@ -127,7 +127,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'deadline' => array(
 		'DISPLAY' => 'Deadline',
-		'STREAM' => 'deadline',
+		'STREAM' => 'deadline21',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
@@ -152,7 +152,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'deadline_passthrough' => array(
 		'DISPLAY' => 'Deadline Passthrough',
-		'STREAM' => 'deadline_passthrough',
+		'STREAM' => 'deadline21_passthrough',
 		'PREVIEW' => true,
 
 		'TRANSLATION' => true,
