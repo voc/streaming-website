@@ -125,7 +125,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'deadline' => array(
+	'deadline21' => array(
 		'DISPLAY' => 'Deadline',
 		'STREAM' => 'deadline21',
 		'PREVIEW' => true,
@@ -150,7 +150,7 @@ $CONFIG['ROOMS'] = array(
 			'TEXT'    => '#deadlineBER',
 		),
 	),
-	'deadline_passthrough' => array(
+	'deadline21_passthrough' => array(
 		'DISPLAY' => 'Deadline Passthrough',
 		'STREAM' => 'deadline21_passthrough',
 		'PREVIEW' => true,
