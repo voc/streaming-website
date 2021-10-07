@@ -123,7 +123,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Vortrag',
+			'Medientheater',
 		),
 	),
 );
@@ -138,11 +138,11 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Vortrag' => array(
+	'Medientheater' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Vortrag',
+		'DISPLAY' => 'Medientheater',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -242,7 +242,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Vortrag',
+		'SCHEDULE_NAME' => 'Medientheater',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -367,7 +367,7 @@ $CONFIG['SCHEDULE'] = array(
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
 	'ROOMFILTER' => [
-		'Vortrag',
+		'Medientheater',
 	],
 
 	/**
