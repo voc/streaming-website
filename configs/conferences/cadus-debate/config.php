@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-07-01 19:45"),
+	'STARTS_AT' => strtotime("2021-10-14 19:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-07-01 23:00"),
+	'ENDS_AT' => strtotime("2021-10-014 23:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,8 +33,8 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 22: Open Tech for Everyone: Wieso freie Technik wichtig für die Gesellschaft ist',
-
+	'TITLE' => 'Debate 23: Cadus Mobile Hospital 2.0: zwischen kreativer Innovation und internationaler Bürokratie',
+	
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
@@ -47,13 +47,15 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Corona Warn App, das Internet, Smartphones - sie alle basieren größtenteils auf Open Source Software. Da lässt sich schon erahnen: Freie Software und Open Tech sind nicht nur was für Vollblut-Nerds und Informatiker. In unserem neuen DEBATE wollen wir genau darüber reden. Carina, Eileen, Elisa und Raphael diskutieren mit euch, was Open Source überhaupt ist und warum die Frage "Open oder nicht" eben nicht nur in IT-Kreisen geführt werden sollte. Sie geben außerdem praktische Tipps, wie jede*r Mensch zu mehr "Open" in der Welt beitragen kann, auch ohne Programmierkenntnisse.
-
-	Carina, selbst Open Source und Open Science Enthusiastin, moderiert das Debate. Zu Gast haben wir Eileen, UX Designerin und Mitglied von Open Source Design, Elisa, die zu Open Source Communities forscht und Raphael, der die Open Source Software Pretix mitaufgebaut hat und instand hält.
+	'DESCRIPTION' => 'Heute geht es bei CADUS Debate zur Abwechslung mal um uns selbst: woran hat unsere Emergency Response Abteilung in den letzten Monaten gearbeitet?
+	In der Emergency Response von CADUS standen 2021 bislang zwei Themen im Vordergrund: Neukonzeption und -bau eines Mobile Hospitals, um auf die dramatische Situation für Menschen auf der Flucht an den Außengrenzen Europas mit neuen Konzepten reagieren zu können. Und außerdem der Prozess der Klassifizierung als Emergency Medical Team nach den Richtlinien der WHO, in dem wir nun langsam auf die Zielgerade einbiegen.
+	Der Spagat, den wir dabei hinlegen (mussten) ist denkbar groß. Bei diesem Debate stellen wir euch vor, wie wir es - in unseren Augen - geschafft haben, beide Projekte zu vereinen. Was steckt hinter dem neuen Mobile Hospital? Was kann es, was ist das Besondere, und worin liegen eigentlich die Vorteile, wenn Grassroots-Aktivismus auf internationalen Bürokratiewahnsinn trifft?
+	
+	Mit Sicherheit sind von unserer Seite einige steile Thesen dabei, die auch erstmal nicht nur auf Zustimmung treffen werden… umso mehr freuen wir uns darauf, das mit euch zu diskutieren! Erstmals seit Beginn der Pandemie sowohl live vor Ort im CADUS Crisis Response Makerspace, als auch im mittlerweile gewohnten online-Format. Stellt eure Fragen im Chat, oder live im Makerspace unter 2G-Bedingungen mit einem kühlen Getränk in der Hand.
 	
 Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
 
-Donnerstag 01.07.2021
+Donnerstag 14.10.2021
 Start 20:00
 
 Stream
