@@ -107,7 +107,7 @@ Abboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinf
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELEASES' => 'https://media.ccc.de/c/osc18',
+	'RELEASES' => 'https://media.ccc.de/c/cadusdebate?sort=date',
 	//'RELEASES' => 'https://www.youtube.com/playlist?list=PL_AMhvchzBaeIQntCDiVNUUgmRaAzam1V',
 
 	/**
@@ -123,7 +123,7 @@ Abboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinf
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	// 'RELIVE_JSON' => '',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/cadusdebate/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
