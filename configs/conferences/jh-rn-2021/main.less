@@ -33,6 +33,11 @@
 @navbar-default-link-color: @pw-color;
 @navbar-default-link-hover-color: @link-hover-color;
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/configs/conferences/jh-rn-2021/SourceSansPro-Regular.ttf.woff2') format('woff2');
+}
+
 body {
 	background-image: url("/configs/conferences/jh-rn-2021/bg.png");
 	background-repeat: repeat;
@@ -40,6 +45,7 @@ body {
 	background-size: 100%;
 	padding: @navbar-height 0;
 	font-family: "Source Sans Pro","Noto Sans",Arial,sans-serif;
+    font-size: 16px
 }
 
 h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
@@ -84,6 +90,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
         }
 
         .panel-title {
+            font-size: 25px;
             color: @overview-color;
         }
 
