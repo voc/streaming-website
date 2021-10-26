@@ -134,9 +134,6 @@ class Stream
 
 		switch($proto)
 		{
-			case 'webm':
-				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.webm']);
-
 			case 'hls':
 				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getRoom()->getStream()).'/'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
 		}
@@ -147,13 +144,6 @@ class Stream
 	{
 		switch($proto)
 		{
-			case 'webm':
-				if($this->getSelection() == 'hd')
-					return '1920x1080, VP9+Opus in WebM, 3.5 MBit/s';
-
-				else if($this->getSelection() == 'sd')
-					return '1024x576, VP9+Opus in WebM, 1 MBit/s';
-
 			case 'hls':
 				if($this->getSelection() == 'hd')
 					return '1920x1080, h264+AAC im MPEG-TS-Container via HTTP, 3 MBit/s';
@@ -170,7 +160,6 @@ class Stream
 	public static function getVideoProtos()
 	{
 		return array(
-			'webm' => 'WebM',
 			'hls' => 'HLS',
 		);
 	}
@@ -183,9 +172,6 @@ class Stream
 	{
 		switch($proto)
 		{
-			case 'webm':
-				return '1024x576, VP8+Vorbis in WebM, 400 kBit/s';
-
 			case 'hls':
 				return '1024x576, h264+AAC im MPEG-TS-Container via HTTP, 400 kBit/s';
 		}
