@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-10-14 19:45"),
+	'STARTS_AT' => strtotime("2021-11-04 19:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-10-14 23:00"),
+	'ENDS_AT' => strtotime("2021-11-04 23:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 23: Cadus Mobile Hospital 2.0: zwischen kreativer Innovation und internationaler Bürokratie',
+	'TITLE' => 'Debate 24: Über die Tiefen des Bergbaus: Mining, Menschen & Umwelt',
 	
 	/**
 	 * Veranstalter
@@ -47,15 +47,18 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Heute geht es bei CADUS Debate zur Abwechslung mal um uns selbst: woran hat unsere Emergency Response Abteilung in den letzten Monaten gearbeitet?
-	In der Emergency Response von CADUS standen 2021 bislang zwei Themen im Vordergrund: Neukonzeption und -bau eines Mobile Hospitals, um auf die dramatische Situation für Menschen auf der Flucht an den Außengrenzen Europas mit neuen Konzepten reagieren zu können. Und außerdem der Prozess der Klassifizierung als Emergency Medical Team nach den Richtlinien der WHO, in dem wir nun langsam auf die Zielgerade einbiegen.
-	Der Spagat, den wir dabei hinlegen (mussten) ist denkbar groß. Bei diesem Debate stellen wir euch vor, wie wir es - in unseren Augen - geschafft haben, beide Projekte zu vereinen. Was steckt hinter dem neuen Mobile Hospital? Was kann es, was ist das Besondere, und worin liegen eigentlich die Vorteile, wenn Grassroots-Aktivismus auf internationalen Bürokratiewahnsinn trifft?
-	
-	Mit Sicherheit sind von unserer Seite einige steile Thesen dabei, die auch erstmal nicht nur auf Zustimmung treffen werden… umso mehr freuen wir uns darauf, das mit euch zu diskutieren! Erstmals seit Beginn der Pandemie sowohl live vor Ort im CADUS Crisis Response Makerspace, als auch im mittlerweile gewohnten online-Format. Stellt eure Fragen im Chat, oder live im Makerspace unter 2G-Bedingungen mit einem kühlen Getränk in der Hand.
+	'DESCRIPTION' => 'Was bedeutet der Bedarf an Rohstoffen der Industrieländer für die Regionen im Globalen Süden, 
+	in denen sie gewonnen werden? In diesem Debate spricht Johanna Sydow von der NGO Germanwatch mit uns über 
+	Arbeitsverhältnisse, gesundheitliche Auswirkungen und Umweltschäden im Kontext von Mining. Und auch darüber, 
+	was das mit uns selbst zu tun hat: vor allem im IT-Bereich ist der Bedarf an bestimmten, durch Bergbau im 
+	Globalen Süden gewonnen Rohstoffen groß.
+
+	Wie wehren sich Betroffene gegen die Folgen des Bergbaus, welche aktuellen Entwicklungen gibt es auf der 
+	politischen Ebene, und wie können wir uns selbst verantwortungsbewusst verhalten?	
 	
 Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
 
-Donnerstag 14.10.2021
+Donnerstag 04.11.2021
 Start 20:00
 
 Stream
