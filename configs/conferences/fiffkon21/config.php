@@ -97,14 +97,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/esbz-wallnacht/index.json',
+	'RELIVE_JSON' => 'https://relive.c3voc.de/relive/fiffkon2021/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
 	 * Wird diese Zeile auskommentiert, werden die apc_*-Methoden nicht verwendet und
 	 * das Relive-Json bei jedem Request von der Quelle geladen und geparst
 	 */
-	//'RELIVE_JSON_CACHE' => 30*60,
+	'RELIVE_JSON_CACHE' => 30*60,
 );
 
 /**
