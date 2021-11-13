@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	/**'RELEASES' => 'https://media.ccc.de/c/gpw2021',**/
+	'RELEASES' => 'https://media.ccc.de/c/fiffkon21',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
