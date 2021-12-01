@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-11-04 19:45"),
+	'STARTS_AT' => strtotime("2021-12-02 19:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-11-04 23:00"),
+	'ENDS_AT' => strtotime("2021-12-02 23:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 24: Über die Tiefen des Bergbaus: Mining, Menschen & Umwelt',
+	'TITLE' => 'Debate 25: EU-Außengrenzen in Osteuropa',
 	
 	/**
 	 * Veranstalter
@@ -47,18 +47,20 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Was bedeutet der Bedarf an Rohstoffen der Industrieländer für die Regionen im Globalen Süden, 
-	in denen sie gewonnen werden? In diesem Debate spricht Johanna Sydow von der NGO Germanwatch mit uns über 
-	Arbeitsverhältnisse, gesundheitliche Auswirkungen und Umweltschäden im Kontext von Mining. Und auch darüber, 
-	was das mit uns selbst zu tun hat: vor allem im IT-Bereich ist der Bedarf an bestimmten, durch Bergbau im 
-	Globalen Süden gewonnen Rohstoffen groß.
+	'DESCRIPTION' => 'Seit Jahren fliehen Menschen aus Krisen- und Kriegsregionen über die sogenannte Balkanroute, auf der Suche 
+nach einem sicheren Ort zum Leben. Dabei hat sich das bosnisch-kroatische Grenzgebiet zu einem Hotspot 
+entwickelt. Tausende Menschen sind dort, im bosnischen Grenzkanton Una-Sana, gestrandet, da die kroatische 
+Polizei systematisch gewaltvolle Pushbacks, also illegale Rückführungen aus Kroatien nach Bosnien, 
+durchführt. Diese rechtswidrige, unmenschliche Praxis wird von der EU mitfinanziert. In Bosnien ist die 
+Situation für die Fliehenden katastrophal: unter menschenunwürdigen Bedingungen müssen sie in Zelten und 
+Ruinen ausharren. Gerade im nun wieder einbrechenden Winter wird Bosnien zur Kältefalle für People on 
+the Move. In dem Vortrag berichtet Blindspots e.V.  von der aktuellen Lage im Una-Sana Kanton und zeigt 
+dabei die persönlichen Perspektiven der Menschen vor Ort. Außerdem stellen sie ihre eigene Arbeit vor - 
+einer Initiative, die seit rund einem Jahr unter dem Motto #SolidarityWithoutBorders vor Ort aktiv ist.	
 
-	Wie wehren sich Betroffene gegen die Folgen des Bergbaus, welche aktuellen Entwicklungen gibt es auf der 
-	politischen Ebene, und wie können wir uns selbst verantwortungsbewusst verhalten?	
-	
 Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
 
-Donnerstag 04.11.2021
+Donnerstag 02.12.2021
 Start 20:00
 
 Stream
