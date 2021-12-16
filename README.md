@@ -12,7 +12,7 @@ Gegebenheiten und die Gestaltung der Konferenz angepasst werden können.
 ## Development
 
 Während der Entwicklung kann der eingebaute PHP-Webserver verwendet werden:
-```
+```sh
 $ ./serve.sh
 PHP 7.0.4-7ubuntu2.1 Development Server started at Mon Jun 20 22:40:17 2016
 Listening on http://localhost:8000
@@ -23,9 +23,17 @@ Press Ctrl-C to quit.
 
 Unterstützt wird PHP ab 5.4.
 
+### Docker
+
+Wer lieber Docker mag, kann auch folgende Zeile verwenden:
+
+```sh
+docker run -it -p 8000:8000 -v "$PWD":/app -w /app php:7-cli -S 0.0.0.0:8000 -d short_open_tag=true index.php
+```
+
 ### Abhängigkeiten
 
-```
+```sh
 apt install php7.0-curl php7.0-xml
 # - or -
 apt install php-curl php-xml
@@ -109,13 +117,13 @@ betrachtet](https://gist.github.com/MaZderMind/a91f242efb2f446a2237d4596896efd6)
 ### Falsche PHP-Version
 
 Wenn `serve.sh` einen Fehler wirft wie z.B. `PHP Fatal error:  Uncaught ErrorException: Required parameter $rules follows optional parameter $value in /<path-to-repository>/lib/less.php/Less.php:5501` kann es sein, dass du eine falsche PHP-Version verwendest. Wenn `php --version` 8 oder neuer zurückgibt, dann ist deine Version zu neu. Versuche auf deinem Betriebssystem PHP 7.4 zu installieren und in den Skripts, die zu benötigst, die Version anzupassen. Zum Beispiel wird dann aus
-```
-// vorher
+```sh
+# vorher
 php -S localhost:$port -d short_open_tag=true index.php
 ```
 dann
-```
-//nachher
+```sh
+# nachher
 php7.4 -S localhost:$port -d short_open_tag=true index.php
 ```
 
