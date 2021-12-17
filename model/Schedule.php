@@ -146,13 +146,20 @@ class Schedule
 					continue;
 
 				$result = $day->xpath("room[@name='".$roomName."']");
+				// if this room has no events on this day -> add long gap
 				if(!$result) {
-					// this room has no events on this day -> add long gap
+					$nextday = $schedule->day[$dayidx];
+					
+					// but not if it is the last day
+					if(!$nextday) {
+						continue;
+					}
+
 					$gap = $this->makeEvent($daystart, $dayend);
 					$gap['special'] = 'gap';
 					$program[$roomName][] = $gap;
 
-					$end = new DateTimeImmutable($schedule->day[$dayidx]['start']);
+					$end = new DateTimeImmutable($nextday['start']);
 					$daychange = $this->makeEvent($dayend, $end);
 					$daychange['special'] = 'daychange';
 					$daychange['title'] = 'Daychange from Day '.$dayidx.' to '.($dayidx+1);
