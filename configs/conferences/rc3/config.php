@@ -126,6 +126,8 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		// TODO sort array in random order, based on current hour
 		'Assemblies Live' => array(
+			'test',
+			'infobeamer',
 			'cbase',
 			'cwtv',
 			'r3s',
