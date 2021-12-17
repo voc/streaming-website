@@ -137,7 +137,6 @@ $CONFIG['OVERVIEW'] = array(
 			'sendezentrum',
 			'haecksen',
 			'gehacktesfromhell',
-			'kreaturworks',
 			'xhain',
 		),
 		'Music Live' => array(
