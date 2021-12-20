@@ -694,7 +694,7 @@ $CONFIG['ROOMS'] = array(
 	'xhain' => array(
 			'DISPLAY' => 'xHain',
 			'DISPLAY_SHORT' => 'xHain',
-			'STREAM' => 'xhain',
+			'STREAM' => 'xHain',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
 			],
@@ -707,7 +707,7 @@ $CONFIG['ROOMS'] = array(
 			'SLIDES' => false,
 			'MUSIC' => false,
 			'SCHEDULE' => true,
-			'SCHEDULE_NAME' => 'xHain Mainhall',
+			'SCHEDULE_NAME' => 'Lichtung',
 			'ROOM_GUID' => '',
 			'FEEDBACK' => true,
 			'SUBTITLES' => false,
