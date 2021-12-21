@@ -124,7 +124,9 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Teststreams' => array(
+		'Test Streams' => array(
+			'lukas',
+			'derchris',
 			'test',
 			'infobeamer',
 		),
@@ -564,6 +566,62 @@ $CONFIG['ROOMS'] = array(
 				'TEXT'    => '#rC3kreaturworks',
 			),
 	),
+	'lukas' => array(
+			'DISPLAY' => 'Lukas Premium Test Stream',
+			'DISPLAY_SHORT' => 'LUKAS',
+			'STREAM' => 'lukas',
+			'PREVIEW' => true,
+			'TRANSLATION' => [
+				['endpoint' => 'translated',   'label' => 'Translated1'],
+				['endpoint' => 'translated-2', 'label' => 'Translated2']
+			],
+
+			'SD_VIDEO' => true,
+			'HD_VIDEO' => true,
+			'DASH' => true,
+			'HLS' => true,
+			'AUDIO' => true,
+			'SLIDES' => false,
+			'MUSIC' => false,
+			'SCHEDULE' => true,
+			'SCHEDULE_NAME' => 'lukas - Premium',
+			'ROOM_GUID' => '',
+			'FEEDBACK' => true,
+			'SUBTITLES' => false,
+			'EMBED' => true,
+			'IRC' => false,
+			'IRC_CONFIG' => array(),
+			'TWITTER' => false,
+			'TWITTER_CONFIG' => array(),
+	),
+	'derchris' => array(
+                        'DISPLAY' => 'C3VOC Ping Pong',
+                        'DISPLAY_SHORT' => 'DERCHRIS',
+                        'STREAM' => 'derchris',
+                        'PREVIEW' => true,
+                        'TRANSLATION' => [
+                                ['endpoint' => 'translated',   'label' => 'Translated1'],
+                                ['endpoint' => 'translated-2', 'label' => 'Translated2']
+                        ],
+
+                        'SD_VIDEO' => true,
+                        'HD_VIDEO' => true,
+                        'DASH' => true,
+                        'HLS' => true,
+                        'AUDIO' => true,
+                        'SLIDES' => false,
+                        'MUSIC' => false,
+                        'SCHEDULE' => true,
+                        'SCHEDULE_NAME' => '',
+                        'ROOM_GUID' => '',
+                        'FEEDBACK' => true,
+                        'SUBTITLES' => false,
+                        'EMBED' => true,
+                        'IRC' => false,
+                        'IRC_CONFIG' => array(),
+                        'TWITTER' => false,
+                        'TWITTER_CONFIG' => array(),
+        ),
 	'r3s' => array(
 			'DISPLAY' => 'Remote Rhein Ruhr Stage',
 			'DISPLAY_SHORT' => 'R3S',
