@@ -457,7 +457,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'franconiannet' => array(
 			'DISPLAY' => 'franconian.net',
-			'DISPLAY_SHORT' => 'backspace',
+			'DISPLAY_SHORT' => 'franconian',
 			'STREAM' => 'franconiannet',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
