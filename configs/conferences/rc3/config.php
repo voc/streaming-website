@@ -125,7 +125,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		// TODO sort array in random order, based on current hour
-		'Assemblies Live' => array(
+		'Channels' => array(
 			'cbase',
 			'cwtv',
 			'r3s',
@@ -139,9 +139,9 @@ $CONFIG['OVERVIEW'] = array(
 			'gehacktesfromhell',
 			'xhain',
 		),
-		'Music Live' => array(
+		'Music' => array(
 			'c3lounge',
-			//'ambientlounge'
+			'abchillgleis'
 		),
 	),
 );
@@ -257,12 +257,12 @@ $CONFIG['ROOMS'] = array(
 				'TEXT'    => '#rC3lounge',
 			),
 	),
-	'ambientlounge' => array(
-			 'DISPLAY' => 'Ambient Lounge',
-			 'DISPLAY_SHORT' => 'Ambient Lounge',
+	'abchillgleis' => array(
+			 'DISPLAY' => 'Abchillgleis',
+			 'DISPLAY_SHORT' => 'Abchillgleis',
 			 'WIDE' => false,
 
-			 'STREAM' => 'ambientlounge',
+			 'STREAM' => 'abchillgleis',
 			 'PREVIEW' => true,
 			 'TRANSLATION' => [
 			 ],
@@ -275,7 +275,7 @@ $CONFIG['ROOMS'] = array(
 			 'SLIDES' => false,
 			 'MUSIC' => true,
 			 'SCHEDULE' => true,
-			 'SCHEDULE_NAME' => 'Ambient Lounge',
+			 'SCHEDULE_NAME' => 'Abchillgleis',
 			 'ROOM_GUID' => '',
 			 'FEEDBACK' => true,
 			 'SUBTITLES' => false,
@@ -684,8 +684,8 @@ $CONFIG['ROOMS'] = array(
 		),
 		'TWITTER' => true,
 		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#rC3haecksen @ mastodon/twitter',
-			'TEXT'    => '#rC3haecksen',
+			'DISPLAY' => '#rC3gehacktesfromhell @ mastodon/twitter',
+			'TEXT'    => '#rC3gehacktesfromhell',
 		),
 	),
 
