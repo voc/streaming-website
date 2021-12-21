@@ -129,7 +129,7 @@ $CONFIG['OVERVIEW'] = array(
 			'cbase',
 			'cwtv',
 			'r3s',
-			'chaosstudio-hamburg',
+			'csh',
 			'chaoszone',
 			'fem',
 			'franconiannet',
@@ -389,10 +389,10 @@ $CONFIG['ROOMS'] = array(
 				'TEXT'    => '#rC3chaoszone',
 			),
 	),
-	'chaosstudio-hamburg' => array(
+	'csh' => array(
 			'DISPLAY' => 'ChaosStudio Hamburg',
 			'DISPLAY_SHORT' => 'CSH',
-			'STREAM' => 'chaosstudio-hamburg',
+			'STREAM' => 'csh',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
 				['endpoint' => 'translated',   'label' => 'Translated1'],
