@@ -692,7 +692,7 @@ $CONFIG['ROOMS'] = array(
 	'xhain' => array(
 			'DISPLAY' => 'xHain',
 			'DISPLAY_SHORT' => 'xHain',
-			'STREAM' => 'xHain',
+			'STREAM' => 'xhain',
 			'PREVIEW' => true,
 			'TRANSLATION' => [
 			],
