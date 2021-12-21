@@ -124,7 +124,11 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		// TODO sort array in random order, based on current hour
+		'Teststreams' => array(
+			'test',
+			'infobeamer',
+		),
+		// TODO sort array in random order, based on current hour or simular
 		'Channels' => array(
 			'cbase',
 			'cwtv',
