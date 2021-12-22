@@ -1,0 +1,10 @@
+<? if($room->hasInfo()): ?>
+    <div class="col-xs-12">
+		<h3>Info about <?=h($stream->getDisplay())?></h3>
+	</div>
+    <div class="col-sm-12">
+        <p>
+		    <?=$room->getInfo()?>
+	    </p>
+    </div>
+<? endif ?>

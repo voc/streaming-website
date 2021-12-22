@@ -31,7 +31,11 @@ class Relive
 
 	public function getJsonCache()
 	{
-		return sprintf('/tmp/relive-cache-%s.json', $this->getConference()->getSlug());
+		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+			return sprintf('C:\tmp\relive-cache-%s.json', $this->getConference()->getSlug());
+		} else {
+			return sprintf('/tmp/relive-cache-%s.json', $this->getConference()->getSlug());
+		}
 	}
 
 	public function getTalks()
