@@ -183,7 +183,7 @@ class Room
 	}
 
 	public function hasInfo() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.INFO') && $this->getConference()->get('EMBED');
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.INFO') && $this->getConference()->get('INFO');
 	}
 
 	public function getInfo() {
