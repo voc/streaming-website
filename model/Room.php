@@ -173,7 +173,6 @@ class Room
 		);
 	}
 
-
 	public function hasChat() {
 		return $this->hasTwitter() || $this->hasIrc() || $this->hasWebchat();
 	}
@@ -183,7 +182,14 @@ class Room
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.EMBED') && $this->getConference()->get('EMBED');
 	}
 
+	public function hasInfo() {
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.INFO') && $this->getConference()->get('EMBED');
+	}
 
+	public function getInfo() {
+		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.INFO');
+	}
+	
 	public function hasSdVideo() {
 		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SD_VIDEO');
 	}

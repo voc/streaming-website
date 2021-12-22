@@ -214,6 +214,14 @@ $CONFIG['TWITTER'] = array(
  */
 $CONFIG['EMBED'] = true;
 
+/**
+ * Globaler Schalter für die Raum Infos
+ *
+ * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
+ * Raum Infos deaktiviert.
+ */
+$CONFIG['INFO'] = true;
+
 
 /**
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
@@ -256,6 +264,7 @@ $CONFIG['ROOMS'] = array(
 				'DISPLAY' => '#rC3lounge @ mastodon/twitter',
 				'TEXT'    => '#rC3lounge',
 			),
+			'INFO' => '',
 	),
 	'abchillgleis' => array(
 			 'DISPLAY' => 'Abchillgleis',

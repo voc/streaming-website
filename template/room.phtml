@@ -47,6 +47,11 @@
 				<a href="#embed" role="tab" data-toggle="tab">Embed</a>
 			</li>
 		<? endif ?>
+		<? if($room->hasInfo()): ?>
+			<li>
+				<a href="#info" role="tab" data-toggle="tab">Info</a>
+			</li>
+		<? endif ?>
 	</ul>
 
 	<div class="functions-wrap tab-content">
@@ -72,6 +77,11 @@
 		<? if($room->hasEmbed()): ?>
 			<div role="tabpanel" class="tab-pane" id="embed">
 				<? require("$assemblies/embed-form.phtml") ?>
+			</div>
+		<? endif ?>
+		<? if($room->hasInfo()): ?>
+			<div role="tabpanel" class="tab-pane" id="info">
+				<? require("$assemblies/info.phtml") ?>
 			</div>
 		<? endif ?>
 	</div>
