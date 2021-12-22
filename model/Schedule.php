@@ -319,7 +319,11 @@ class Schedule
 
 	public function getScheduleCache()
 	{
-		return sprintf('/tmp/schedule-cache-%s.xml', $this->getConference()->getSlug());
+		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+			return sprintf('C:\tmp\schedule-cache-%s.xml', $this->getConference()->getSlug());
+		} else {
+			return sprintf('/tmp/schedule-cache-%s.xml', $this->getConference()->getSlug());
+		}
 	}
 
 
