@@ -666,7 +666,7 @@ $CONFIG['ROOMS'] = array(
 	'gehacktesfromhell' => array(
 		'DISPLAY' => 'Gehacktes from Hell',
 		'DISPLAY_SHORT' => 'gehacktesfromhell',
-		'STREAM' => 'gehacktesfromhell',
+		'STREAM' => 'gehacktes',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -802,7 +802,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://data.c3voc.de/rC3_21/everything.schedule.xml',
+	'URL' => 'https://data.c3voc.de/rC3_21/channels.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
