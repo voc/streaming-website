@@ -18,10 +18,10 @@ foreach ( $channels as $c ) {
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => false,
+		'DASH' => true,
 		'H264_ONLY' => true,
 		'HLS' => true,
-		'AUDIO' => true,
+		'AUDIO' => false,
 		'SLIDES' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
