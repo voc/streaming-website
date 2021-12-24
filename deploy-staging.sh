@@ -46,7 +46,7 @@ fi
 
 for host in streaming.test.c3voc.de; do
 	echo "deploying to $host"
-	ssh -A voc@$host 'sudo sh' << EOT
+	ssh voc@$host 'sudo sh' << EOT
 cd /srv/nginx/streaming-website
 
 echo "updating code"
