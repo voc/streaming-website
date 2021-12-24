@@ -5,7 +5,7 @@ for cmd in find xargs php git; do
 done
 
 
-find . -name "*.php" -print0 | grep -v archive | xargs -0 -n1 php -l
+find . -name "*.php" -print0 | grep -va archive | xargs -0 -n1 php -l
 if [ $? -ne 0 ]; then
 	echo "not deploying b0rken code ;)"
 	exit 1
@@ -46,7 +46,7 @@ fi
 
 for host in streaming.test.c3voc.de; do
 	echo "deploying to $host"
-	ssh -A voc@$host 'sudo sh' << EOT
+	ssh voc@$host 'sudo sh' << EOT
 cd /srv/nginx/streaming-website
 
 echo "updating code"

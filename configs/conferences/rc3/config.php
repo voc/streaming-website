@@ -249,7 +249,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -316,7 +317,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -348,7 +350,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -382,7 +385,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -416,7 +420,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -448,7 +453,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -480,7 +486,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -512,7 +519,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -544,7 +552,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -634,7 +643,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -667,7 +677,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -702,7 +713,8 @@ $CONFIG['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		'DASH' => false,
+			'H264_ONLY' => true,
 		'HLS' => true,
 		'AUDIO' => true,
 		'SLIDES' => false,
@@ -737,7 +749,8 @@ $CONFIG['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		'DASH' => false,
+			'H264_ONLY' => true,
 		'HLS' => true,
 		'AUDIO' => true,
 		'SLIDES' => false,
@@ -770,7 +783,8 @@ $CONFIG['ROOMS'] = array(
 
 			'SD_VIDEO' => true,
 			'HD_VIDEO' => true,
-			'DASH' => true,
+			'DASH' => false,
+			'H264_ONLY' => true,
 			'HLS' => true,
 			'AUDIO' => true,
 			'SLIDES' => false,
@@ -801,7 +815,8 @@ $CONFIG['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		'DASH' => false,
+		'H264_ONLY' => true,
 		'HLS' => true,
 		'AUDIO' => true,
 		'SLIDES' => false,
@@ -821,7 +836,8 @@ $CONFIG['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		'DASH' => false,
+		'H264_ONLY' => true,
 		'HLS' => true,
 		'AUDIO' => true,
 		'SLIDES' => false,
@@ -839,7 +855,8 @@ $CONFIG['ROOMS'] = array(
 
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
-		'DASH' => true,
+		'DASH' => false,
+		'H264_ONLY' => true,
 		'HLS' => true,
 		'AUDIO' => true,
 		'SLIDES' => false,
