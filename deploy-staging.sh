@@ -5,7 +5,7 @@ for cmd in find xargs php git; do
 done
 
 
-find . -name "*.php" -print0 | grep -v archive | xargs -0 -n1 php -l
+find . -name "*.php" -print0 | grep -va archive | xargs -0 -n1 php -l
 if [ $? -ne 0 ]; then
 	echo "not deploying b0rken code ;)"
 	exit 1
