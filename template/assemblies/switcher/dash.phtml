@@ -38,6 +38,7 @@
 		<? endforeach ?>
 	</div>
 
+	<? if(!$room->h264Only()): ?>
 	<div class="directlinks">
 		<h3>Direct link to DASH-Manifest</h3>
 
@@ -55,5 +56,5 @@
 			</div>
 		</div>
 	</div>
-
+	<? endif ?>
 </div>
