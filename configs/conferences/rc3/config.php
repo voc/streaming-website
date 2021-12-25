@@ -739,8 +739,8 @@ $CONFIG['ROOMS'] = array(
 			),
 			'TWITTER' => true,
 			'TWITTER_CONFIG' => array(
-				'DISPLAY' => '#rC3xhain @ mastodon/twitter',
-				'TEXT'    => '#rC3xhain',
+				'DISPLAY' => '#rC3hell @ mastodon/twitter',
+				'TEXT'    => '#rC3hell',
 			),
 	),
 
