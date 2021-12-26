@@ -473,8 +473,8 @@ $CONFIG['ROOMS'] = array(
 	),
 	'aboutfuture' => array(
 		'DISPLAY' => 'about:future',
-		'DISPLAY_SHORT' => 'hacc/a:f',
-		'STREAM' => 'hacc',
+		'DISPLAY_SHORT' => 'a:f',
+		'STREAM' => 'aboutfuture',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 		],
