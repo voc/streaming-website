@@ -1,25 +1,7 @@
-<!-- Uses regular player only if translation is forced -->
-<? if($stream->isTranslated()): ?>
-<video
-	preload="auto"
-	controls="controls"
-	autoplay="autoplay"
-	style="max-height: 400px; max-width:100vw; display: block; margin: auto;"
-	poster="<?=h($stream->getPoster())?>"
->
-	<source
-		src="<?=h($stream->getAudioUrl('mp3'))?>"
-		type="audio/mp3"
-	/>
-</video>
-
 <!-- Use voc-player per default, TODO: implement preferred language feature -->
-<? else: ?>
 <div class="video-wrap"
 	data-voc-player
-	data-stream="<?=h($room->getStream())?>"
+	data-stream="<?=h($stream->getAudioUrl('hls'))?>"
 	data-poster="<?=h($stream->getPoster())?>"
 	data-audio-only="true"
 ></div>
-<? endif ?>
-

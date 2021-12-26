@@ -100,9 +100,13 @@ class Stream
 				break;
 
 			case 'dash':
-				# no special attribution, this is the "normal" stream
+				if($room->h264Only()) {
+					$display .= 'HLS';
+				} else {
+					$display .= 'DASH';
+				}
 				break;
-
+			
 			default:
 				$display .= ucfirst($this->getSelection());
 				break;
@@ -188,11 +192,8 @@ class Stream
 	{
 		switch($proto)
 		{
-			case 'mp3':
-				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.mp3']);
-
-			case 'opus':
-				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], rawurlencode($this->getRoom()->getStream()).'_'.rawurlencode($this->getLanguage()).'.opus']);
+			case 'hls':
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls/'.rawurlencode($this->getRoom()->getStream()).'/segment_'.rawurlencode(ucfirst($this->getLanguage())).'.m3u8']);
 		}
 
 		return null;
@@ -201,11 +202,8 @@ class Stream
 	{
 		switch($proto)
 		{
-			case 'mp3':
-				return 'MP3-Audio, 96 kBit/s';
-
-			case 'opus':
-				return 'Opus-Audio, 64 kBit/s';
+			case 'hls':
+				return 'AAC, VBR';
 		}
 
 		return null;
@@ -213,8 +211,7 @@ class Stream
 	public static function getAudioProtos()
 	{
 		return array(
-			'mp3' => 'MP3',
-			'opus' => 'Opus',
+			'hls' => 'HLS',
 		);
 	}
 

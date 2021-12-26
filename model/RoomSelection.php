@@ -48,6 +48,9 @@ class RoomSelection
 
 			case 'music':
 				return 'Radio';
+			
+			case 'hls':
+				return 'HLS';
 
 			default:
 				return ucfirst($this->getSelection());
