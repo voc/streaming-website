@@ -7,15 +7,29 @@
 @font-path: "fonts/";
 
 @font-face {
-  font-family: "orbitron-bold";
-  font-weight: 500;
+  font-family: 'montserratbold';
+  font-weight: normal;
   font-style: normal;
-  .fontPath(@font-path, "orbitron-bold-webfont");
+  .fontPath(@font-path, "montserrat-bold-webfont");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
+  font-family: 'montserratitalic';
+  font-weight: normal;
   font-style: normal;
-  .fontPath(@font-path, "Montserrat-Regular");
+  .fontPath(@font-path, "montserrat-italic-webfont");
+}
+
+@font-face {
+  font-family: 'montserratregular';
+  font-weight: normal;
+  font-style: normal;
+  .fontPath(@font-path, "montserrat-regular-webfont");
+}
+
+@font-face {
+  font-family: 'changasemibold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('@{font-path}changa-semibold.ttf');
 }
