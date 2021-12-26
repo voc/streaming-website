@@ -28,7 +28,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'before',
+	// 'CLOSED' => 'before',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -138,10 +138,10 @@ $CONFIG['OVERVIEW'] = array(
 			'haecksen',
 			'gehacktesfromhell',
 			'xhain',
-        ),
-        'Info' => array(
-            'infobeamer'
-        ),
+		),
+		'Info' => array(
+			'infobeamer'
+		),
 		'Music' => array(
 			'c3lounge',
 			'abchillgleis'
@@ -782,8 +782,8 @@ $CONFIG['ROOMS'] = array(
 		'TWITTER' => false,
 	),
 	'infobeamer' => array(
-        'WIDE' => true,
-        'DISPLAY' => 'Infobeamer',
+		'WIDE' => true,
+		'DISPLAY' => 'Infobeamer',
 		'DISPLAY_SHORT' => 'Infobeamer',
 		'STREAM' => 'infobeamer',
 		'PREVIEW' => true,
