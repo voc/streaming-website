@@ -93,7 +93,9 @@ foreach (Conferences::getActiveConferences() as $conference)
 						endif;
 				}
 
-				if(!$room->h264Only()):
+				if($room->h264Only() and $key == "dash-native") {
+					continue;
+				} else {
 					$streams[] = array(
 						'slug' => $key,
 						'display' => $stream->getDisplay(),
@@ -102,7 +104,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 						'videoSize' => $stream->getVideoSize(),
 						'urls' => (object)$urls,
 					);
-				endif;
+				}
 			}
 
 			$roomstruct[] = array(
