@@ -48,10 +48,14 @@
 @brand-danger: @one; // @schedule-now
 @schedule-gap-bg: @dark;
 
-.block.event {
+body .schedule .block.event {
 	background-color: rgba(0, 0, 0, 0.3);
 }
+body .schedule .block h5 {
+	color: #606060;
+}
 
+// headings
 @headings-color: @four;
 h1, h2 {
 	color: @three;
@@ -61,30 +65,11 @@ h3 {
     color: #888;
 }
 
-body .schedule .block h5 {
- color: #606060;
-}
-
-body {
-	background-color: #000;
-    background: url(background-21.png) no-repeat right top fixed;
-	background-size: 100% 100%;
-	padding: @navbar-height 0;
-
-	@media (max-width: 498px) { /* when the navbar breaks */
-		padding: 165px 0;
-	}
-}
-
-
-
-/*
- * font
- */
+// font
 @import "font.less";
 
-@font-family-sans-serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-@headings-font-family: "orbitron-bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-family-sans-serif: "montserratregular";
+@headings-font-family: "changasemibold";
 
 h1, h2,
 body.overview .room a.title,
@@ -96,19 +81,44 @@ body.overview .panel-primary a,
 	font-family: @headings-font-family;
 }
 
+
+body {
+	background-color: #000;
+	background: url(background-21.png) no-repeat right top fixed;
+	background-size: 100% 100%;
+	padding: @navbar-height 0;
+
+	@media screen and (orientation: portrait) {
+		background: url(background-21-mobile.jpg) no-repeat right top fixed;
+	}
+
+	@media (max-width: 498px) { /* when the navbar breaks */
+		padding: 165px 0;
+	}
+}
+
 .nav-tabs>li>a {
 	color: white;
 	background: @dark2;
 }
 
+.navbar-header, .navbar, .navbar .btn {
+	background: none;
+	border: none;
+}
+
+.navbar {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
 .panel-body {
 
 } 
+
 .tab-content{
 	background-color: rgba(0, 0, 0, 0.65) !important;
 }
 
 .btn {
 	background: none !important;
-	border: none;
 }
