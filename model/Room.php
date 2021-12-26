@@ -264,7 +264,10 @@ class Room
 	{
 		$selections = array();
 		if($this->hasDash())
-			$selections[] = 'dash';
+			if($this->h264Only())
+				$selections[] = 'hls';
+			else
+				$selections[] = 'dash';
 
 		if($this->hasAudio())
 			$selections[] = 'audio';
