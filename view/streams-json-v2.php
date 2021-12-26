@@ -81,24 +81,30 @@ foreach (Conferences::getActiveConferences() as $conference)
 							);
 						}
 						break;
-
+									
 					case 'dash':
-						$urls['dash'] = array(
-							'display' => 'DASH, baby',
-							'tech' => $room->getDashTech(),
-							'url' => $room->getDashManifestUrl(),
-						);
-						break;
+						if(!$room->h264Only()):
+							$urls['dash'] = array(
+								'display' => 'DASH, baby',
+								'tech' => $room->getDashTech(),
+								'url' => $room->getDashManifestUrl(),
+							);
+							break;
+						endif;
 				}
 
-				$streams[] = array(
-					'slug' => $key,
-					'display' => $stream->getDisplay(),
-					'type' => $stream->getPlayerType(),
-					'isTranslated' => $stream->isTranslated(),
-					'videoSize' => $stream->getVideoSize(),
-					'urls' => (object)$urls,
-				);
+				if($room->h264Only() and $key == "dash-native") {
+					continue;
+				} else {
+					$streams[] = array(
+						'slug' => $key,
+						'display' => $stream->getDisplay(),
+						'type' => $stream->getPlayerType(),
+						'isTranslated' => $stream->isTranslated(),
+						'videoSize' => $stream->getVideoSize(),
+						'urls' => (object)$urls,
+					);
+				}
 			}
 
 			$roomstruct[] = array(

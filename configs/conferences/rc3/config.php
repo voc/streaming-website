@@ -28,14 +28,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	//'CLOSED' => 'running',
+	'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'rC3 NOWHERE', 
+	'TITLE' => 'rC3 NOWHERE Test', 
 
 	/**
 	 * Veranstalter
@@ -124,7 +124,13 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		// TODO sort array in random order, based on current hour
+		'Test Streams' => array(
+			'lukas',
+			'derchris',
+			'test',
+			'infobeamer',
+		),
+		// TODO sort array in random order, based on current hour or simular
 		'Channels' => array(
 			'cbase',
 			'cwtv',
@@ -546,7 +552,7 @@ $CONFIG['ROOMS'] = array(
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'DASH' => true,
-		'H264_ONLY' => false,
+		'H264_ONLY' => true,
 		'HLS' => true,
 		'AUDIO' => false,
 		'SLIDES' => false,
