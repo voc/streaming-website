@@ -1,12 +1,12 @@
 @import "../../../assets/css/_structure.less";
 
 // conference specific styles here
-@one: #B239FF;
-@two: #6800E7;
-@three: #26beff;
-@four: #FFFFFF;
+@one: #f035e7;
+@two: #4e7ffa;
+@three: rgba(255, 255, 255, 0.9);
+@four: #ccc;
 @dark2: #201d47;
-@dark: #100E23;
+@dark: rgba(0, 0, 0, 0.7);
 
 @grey-lighter: #333333;
 @grey-darker: #2a2a2a;
@@ -22,11 +22,12 @@
 @btn-default-color: white;
 @btn-default-bg: @two;
 @btn-default-border: @two;
-@text-color: @four;
+@text-color: @three;
 
-@panel-default-border: @two;
-@panel-default-heading-bg: @two;
-@panel-default-text: @four;
+// room pannels on overview page
+@panel-default-border: @three;
+@panel-default-heading-bg: @three;
+@panel-default-text: @dark2;
 @panel-bg: @dark;
 
 @navbar-height:         70px;
@@ -34,11 +35,11 @@
 @navbar-default-brand-color: @three;
 
 @nav-tabs-link-hover-border-color: @two;
-@nav-tabs-active-link-hover-color: @four;
-@nav-tabs-active-link-hover-bg: @one;
-@nav-tabs-active-link-hover-border-color: @one;
-@nav-tabs-justified-link-border-color: @one;
-@nav-tabs-border-color: @one;
+@nav-tabs-active-link-hover-color: @dark;
+@nav-tabs-active-link-hover-bg: @three;
+@nav-tabs-active-link-hover-border-color: @three;
+@nav-tabs-justified-link-border-color: @three;
+@nav-tabs-border-color: @three;
 
 // schedule
 @schedule-pause:        @grey-lighter;
@@ -47,8 +48,19 @@
 @brand-danger: @one; // @schedule-now
 @schedule-gap-bg: @dark;
 
+.block.event {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+@headings-color: @four;
+h1, h2 {
+	color: @three;
+}
+
 body {
-	background-color: @dark;
+	background-color: #000;
+    background: url(background-21.png) no-repeat right top fixed;
+	background-size: 100% 100%;
 	padding: @navbar-height 0;
 
 	@media (max-width: 498px) { /* when the navbar breaks */
@@ -56,11 +68,7 @@ body {
 	}
 }
 
-@headings-color: @four;
-h1, h2 {
-	// color: #46eed5;
-	color: @three;
-}
+
 
 /*
  * font
@@ -85,6 +93,20 @@ body.overview .panel-primary a,
 	background: @dark2;
 }
 
-.panel-body{
-	color: white;
+.navbar-header, .navbar {
+	background: none !important;
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border: none;
+}
+
+.panel-body {
+
+} 
+.tab-content{
+	background-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.btn {
+	background: none !important;
+	border: none;
 }
