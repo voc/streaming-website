@@ -11,19 +11,9 @@
 		<? endif ?>
 		<div class="row room-group room-group-n<?=h($i++)?> room-group-<?=h(slugify($group))?>">
 
-			<?
-				$count = count($rooms); 
-				$idx = 0;
-				usort($rooms, function ($a, $b) {
-					global $upcomingTalksPerRoom;
-					return (
-						$upcomingTalksPerRoom[ $a->getSlug() ]['next']['start'] 
-						<=> 
-						$upcomingTalksPerRoom[ $b->getSlug() ]['next']['start']
-					); 
-				});
-
-				foreach($rooms as $room): 
+			<? $count = count($rooms); $idx = 0 ?>
+			<? foreach($rooms as $room): ?>
+				<? 
 					$is_wide = 0;
 					/* when the count is odd and this is the last item - make it full width */
 					if (($count % 2 == 1) && ($idx == $count - 1)) {
@@ -87,22 +77,18 @@
 
 								<? endif ?>
 
-								<? if($room->hasSchedule()): 
-									$upcoming = @$upcomingTalksPerRoom[ $room->getSlug() ] ?: [];
-									$current = @$upcoming['current'];
-									$next = @$upcoming['next']; ?>
+								<? if($room->hasSchedule()): ?>
+									<? $upcoming = @$upcomingTalksPerRoom[ $room->getSlug() ] ?: [] ?>
 									<div class="program-schedule">
-										<? if($current['title']): ?>
-										<div class="talk current-talk" title="<?=h(@$current['title'] ?: 'none') ?>">
-											<strong>Now (since <?=date('G:i', @$upcoming['start']) ?>):</strong><br/>
-											<span class="t"><?=h(@$upcoming['title'] ?: 'none') ?></span>
+										<div class="talk current-talk" title="<?=h(@$upcoming['current']['title'] ?: 'none') ?>">
+                    <strong>Now (since <?=date('G:i', @$upcoming['current']['start']) ?>):</strong><br/>
+											<span class="t"><?=h(@$upcoming['current']['title'] ?: 'none') ?></span>
 										</div>
-										<? endif; if($next['title']): ?>
-										<div class="talk next-talk" title="<?=h(@$next['title'] ?: 'none') ?>">
-											<strong>Next Talk (<?=date('G:i', @$next['start']) ?>):</strong><br/>
-											<span class="t"><?=h(@$next['title'] ?: 'none') ?></span>
+
+										<div class="talk next-talk" title="<?=h(@$upcoming['next']['title'] ?: 'none') ?>">
+											<strong>Next Talk (<?=date('G:i', @$upcoming['next']['start']) ?>):</strong><br/>
+											<span class="t"><?=h(@$upcoming['next']['title'] ?: 'none') ?></span>
 										</div>
-										<? endif ?>
 									</div>
 								<? endif ?>
 							</div>
