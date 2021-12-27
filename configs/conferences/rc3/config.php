@@ -149,6 +149,10 @@ $CONFIG['OVERVIEW'] = array(
 	),
 );
 
+if ( date('H') < 10 ) {
+	krsort($CONFIG['OVERVIEW']['GROUPS']);
+}
+
 
 /**
  * Globale Konfiguration der IRC-Links.
@@ -235,9 +239,9 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'c3lounge' => array(
-		'DISPLAY' => 'Lounge',
+		'DISPLAY' => 'rC3 Lounge',
 		'DISPLAY_SHORT' => 'Lounge',
-		'WIDE' => true,
+		#'WIDE' => true,
 
 		'STREAM' => 'c3lounge',
 		'PREVIEW' => true,
@@ -273,7 +277,7 @@ $CONFIG['ROOMS'] = array(
 	'abchillgleis' => array(
 		'DISPLAY' => 'Abchillgleis',
 		'DISPLAY_SHORT' => 'Abchillgleis',
-		'WIDE' => false,
+		#'WIDE' => false,
 
 		'STREAM' => 'abchillgleis',
 		'PREVIEW' => true,
@@ -672,8 +676,8 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'gehacktesfromhell' => array(
-		'DISPLAY' => 'Gehacktes from Hell',
-		'DISPLAY_SHORT' => 'gehacktesfromhell',
+		'DISPLAY' => 'Gehacktes from Hell / Bierscheune',
+		'DISPLAY_SHORT' => 'Hell',
 		'STREAM' => 'gehacktes',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -708,7 +712,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'xhain' => array(
-		'DISPLAY' => 'xHain',
+		'DISPLAY' => 'xHain Lichtung',
 		'DISPLAY_SHORT' => 'xHain',
 		'STREAM' => 'xhain',
 		'PREVIEW' => true,
@@ -836,8 +840,8 @@ $CONFIG['SCHEDULE'] = array(
 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
-	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2021-12-27') - strtotime(/* Today */ date("Y-m-d")),
-	'SIMULATE_OFFSET' => 0,
+	// 'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2021-12-27') - strtotime(/* Today */ date("Y-m-d")),
+	//'SIMULATE_OFFSET' => 0,
 );
 
 /*
