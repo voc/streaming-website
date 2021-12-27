@@ -411,6 +411,7 @@ $CONFIG['ROOMS'] = array(
 			'DISPLAY' => '#rC3csh @ mastodon/twitter',
 			'TEXT'    => '#rC3csh',
 		),
+		'INFO' => 'Find the speakers after the talk: <a href="https://rc3.world/2021/room/extended-questions-and-answers/">Extended Q&A Session</a><br>Weitere Informationen zu unserem Programm <a href="https://wiki.hamburg.ccc.de/RC3_2021:Startseite">in unserem Wiki.</a>',
 	),
 	'cwtv' => array(
 		'DISPLAY' => 'Chaos-West TV',
