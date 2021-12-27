@@ -761,8 +761,12 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'FeM Channel',
-		'EMBED' => true,
-		'IRC' => false,
+		'EMBED' => true,,
+		'IRC' => true,
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '#rc3-fem @ hackint',
+			'URL'     => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#rc3-fem',
+		),
 		'TWITTER' => false,
 	),
 
