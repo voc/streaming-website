@@ -99,14 +99,16 @@ class Stream
 				$display .= 'Radio';
 				break;
 
-			case 'dash':
-				if($room->h264Only()) {
-					$display .= 'HLS';
-				} else {
-					$display .= 'DASH';
+			case 'hls':
+				// do not add suffix when we only provide HLS
+				if($this->getRoom()->h264Only()) {
+					break;
 				}
-				break;
-			
+			case 'dash':
+				if($this->getRoom()->h264Only()) {
+					$display .= 'DASH';
+					break;
+				}
 			default:
 				$display .= ucfirst($this->getSelection());
 				break;
