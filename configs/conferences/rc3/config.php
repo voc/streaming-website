@@ -149,6 +149,10 @@ $CONFIG['OVERVIEW'] = array(
 	),
 );
 
+if ( date('H') < 10 ) {
+	krsort($CONFIG['OVERVIEW']['GROUPS']);
+}
+
 
 /**
  * Globale Konfiguration der IRC-Links.
@@ -237,7 +241,7 @@ $CONFIG['ROOMS'] = array(
 	'c3lounge' => array(
 		'DISPLAY' => 'rC3 Lounge',
 		'DISPLAY_SHORT' => 'Lounge',
-		'WIDE' => true,
+		#'WIDE' => true,
 
 		'STREAM' => 'c3lounge',
 		'PREVIEW' => true,
@@ -273,7 +277,7 @@ $CONFIG['ROOMS'] = array(
 	'abchillgleis' => array(
 		'DISPLAY' => 'Abchillgleis',
 		'DISPLAY_SHORT' => 'Abchillgleis',
-		'WIDE' => false,
+		#'WIDE' => false,
 
 		'STREAM' => 'abchillgleis',
 		'PREVIEW' => true,
