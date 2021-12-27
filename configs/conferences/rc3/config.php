@@ -235,7 +235,7 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'c3lounge' => array(
-		'DISPLAY' => 'Lounge',
+		'DISPLAY' => 'rC3 Lounge',
 		'DISPLAY_SHORT' => 'Lounge',
 		'WIDE' => true,
 
@@ -672,8 +672,8 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'gehacktesfromhell' => array(
-		'DISPLAY' => 'Gehacktes from Hell',
-		'DISPLAY_SHORT' => 'gehacktesfromhell',
+		'DISPLAY' => 'Gehacktes from Hell / Bierscheune',
+		'DISPLAY_SHORT' => 'Hell',
 		'STREAM' => 'gehacktes',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
@@ -708,7 +708,7 @@ $CONFIG['ROOMS'] = array(
 	),
 
 	'xhain' => array(
-		'DISPLAY' => 'xHain',
+		'DISPLAY' => 'xHain Lichtung',
 		'DISPLAY_SHORT' => 'xHain',
 		'STREAM' => 'xhain',
 		'PREVIEW' => true,
