@@ -335,7 +335,7 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|slides|dash)/(native|stereo|[^/]+)(/no-autoplay)?$@', $route, $m))
+	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|hls|slides|dash)/(native|stereo|[^/]+)(/no-autoplay)?$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
