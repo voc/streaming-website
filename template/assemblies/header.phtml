@@ -7,23 +7,23 @@
 			</a>
 		</div>
 
-		<div class="nav navbar-form navbar-right button-wrapper">
+		<div class="nav navbar-right button-wrapper">
 			<? if(isset($room) && $room->hasSchedule()): ?>
 				<span class="navbar-text navbar-time">
 					Current Time
 				</span>
 			<? endif ?>
 			<? if(!$conference->hasEnded() && $conference->hasFeedback()): ?>
-				<a class="form-control btn btn-default feedback" title="Feedback" href="<?=h($conference->getFeedbackUrl())?>">
+				<a class="btn btn-default navbar-btn feedback" title="Feedback" href="<?=h($conference->getFeedbackUrl())?>">
 					<span class="fa fa-bullhorn"></span>
 				</a>
 			<? endif ?>
 			<? if($conference->hasReleases()): ?>
-				<a class="form-control btn btn-default releases" title="Releases" href="<?=h($conference->getReleasesUrl())?>">
+				<a class="btn btn-default navbar-btn releases" title="Releases" href="<?=h($conference->getReleasesUrl())?>">
 					<span class="fa fa-video-camera"></span>
 				</a>
 			<? endif ?>
-			<a class="form-control btn btn-default about" title="About" href="<?=$conference->getAboutLink()?>">
+			<a class="btn btn-default navbar-btn about" title="About" href="<?=$conference->getAboutLink()?>">
 				<span class="fa fa-info"></span>
 			</a>
 		</div>
