@@ -11,9 +11,19 @@
 		<? endif ?>
 		<div class="row room-group room-group-n<?=h($i++)?> room-group-<?=h(slugify($group))?>">
 
-			<? $count = count($rooms); $idx = 0 ?>
-			<? foreach($rooms as $room): ?>
-				<? 
+			<?
+				$count = count($rooms); 
+				$idx = 0;
+				usort($rooms, function ($a, $b) {
+					global $upcomingTalksPerRoom;
+					return (
+						$upcomingTalksPerRoom[ $a->getSlug() ]['next']['start'] 
+						<=> 
+						$upcomingTalksPerRoom[ $b->getSlug() ]['next']['start']
+					); 
+				});
+
+				foreach($rooms as $room): 
 					$is_wide = 0;
 					/* when the count is odd and this is the last item - make it full width */
 					if (($count % 2 == 1) && ($idx == $count - 1)) {
