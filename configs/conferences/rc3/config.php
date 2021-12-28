@@ -126,8 +126,8 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		// TODO sort array in random order, based on current hour or simular
 		'Channels' => array(
-			'cbase',
 			'cwtv',
+			'cbase',
 			'r3s',
 			'csh',
 			'chaoszone',
