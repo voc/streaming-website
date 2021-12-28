@@ -3,6 +3,8 @@
 class Relive
 {
 	private $conference;
+	private $talks_by_id;
+	private $talks_by_guid;
 
 	public function __construct($conference)
 	{
@@ -72,7 +74,8 @@ class Relive
 				return $delta;
 		});
 
-		$talks_by_id = array();
+		$this->talks_by_id = array();
+		$this->talks_by_guid = array();
 		foreach ($talks as $talk)
 		{
 			if($talk['status'] == 'not_running')
@@ -96,19 +99,26 @@ class Relive
 				$talk['roomlink'] = $room->getLink();
 			}
 
-			$talks_by_id[$talk['id']] = $talk;
+			$this->talks_by_id[$talk['id']] = $talk;
+			$this->talks_by_guid[$talk['guid']] = $talk;
 		}
 
-		return $talks_by_id;
+
+		return $this->talks_by_id;
 	}
 
 	public function getTalk($id)
 	{
-		$talks = $this->getTalks();
-		if(!isset($talks[$id]))
-			throw new NotFoundException('Relive-Talk id '.$id);
+		if (!$this->talks_by_guid) {
+			$this->getTalks();
+		}
 
-		return $talks[$id];
+		if(!isset($this->talks_by_id[$id]) && !isset($this->talks_by_guid[$id]))
+		throw new NotFoundException('Relive-Talk '.$id);
+
+		return is_numeric($id) 
+			? $this->talks_by_id[intval($id)]
+			: $this->talks_by_guid[$id];
 	}
 
 	private function getScheduleToRoomMapping()
