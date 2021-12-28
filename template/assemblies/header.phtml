@@ -8,6 +8,11 @@
 		</div>
 
 		<div class="nav navbar-form navbar-right button-wrapper">
+			<? if(isset($room) && $room->hasSchedule()): ?>
+				<span class="navbar-text navbar-time">
+					Current Time
+				</span>
+			<? endif ?>
 			<? if(!$conference->hasEnded() && $conference->hasFeedback()): ?>
 				<a class="form-control btn btn-default feedback" title="Feedback" href="<?=h($conference->getFeedbackUrl())?>">
 					<span class="fa fa-bullhorn"></span>
@@ -22,12 +27,6 @@
 				<span class="fa fa-info"></span>
 			</a>
 		</div>
-
-		<? if(isset($room) && $room->hasSchedule()): ?>
-			<div class="navbar-right navbar-time">
-				Current Time
-			</div>
-		<? endif ?>
 	</div>
 </nav>
 
