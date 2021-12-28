@@ -14,12 +14,14 @@
 			<?
 				$count = count($rooms); 
 				$idx = 0;
-				usort($rooms, function ($a, $b) {
+				usort($rooms, function ($r_a, $r_b) {
 					global $upcomingTalksPerRoom;
+					$u_a = $upcomingTalksPerRoom[ $r_a->getSlug() ];
+					$u_b = $upcomingTalksPerRoom[ $r_b->getSlug() ];
 					return (
-						$upcomingTalksPerRoom[ $a->getSlug() ]['next']['start'] 
+						(@$u_a['current']['special'] ? $u_a['next']['start'] : $u_a['current']['start']) 
 						<=> 
-						$upcomingTalksPerRoom[ $b->getSlug() ]['next']['start']
+						(@$u_b['current']['special'] ? $u_b['next']['start'] : $u_b['current']['start'])
 					); 
 				});
 
