@@ -19,9 +19,9 @@
 					$u_a = $upcomingTalksPerRoom[ $r_a->getSlug() ];
 					$u_b = $upcomingTalksPerRoom[ $r_b->getSlug() ];
 					return (
-						(@$u_a['current']['special'] ? $u_a['next']['start'] : $u_a['current']['start']) 
+						(@$u_a['current']['special'] ? @$u_a['next']['start'] : @$u_a['current']['start']) 
 						<=> 
-						(@$u_b['current']['special'] ? $u_b['next']['start'] : $u_b['current']['start'])
+						(@$u_b['current']['special'] ? @$u_b['next']['start'] : @$u_b['current']['start'])
 					); 
 				});
 
