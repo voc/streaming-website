@@ -132,7 +132,7 @@ $CONFIG['OVERVIEW'] = array(
 			# 'r3s',
 			'csh',
 			# 'chaoszone',
-			'fem',
+			#'fem',
 			'franconiannet',
 			'aboutfuture',
 			# 'sendezentrum',
