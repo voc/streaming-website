@@ -126,6 +126,7 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		// TODO sort array in random order, based on current hour or simular
 		'Channels' => array(
+			'c3lounge',
 			'infobeamer',
 			'cwtv',
 			# 'cbase',
@@ -139,10 +140,6 @@ $CONFIG['OVERVIEW'] = array(
 			# 'haecksen',
 			# 'gehacktesfromhell',
 			'xhain',
-		),
-		'Music' => array(
-			'c3lounge',
-			# 'abchillgleis'
 		),
 	),
 );
