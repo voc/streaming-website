@@ -18,7 +18,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-12-31 03:00"),
+	'ENDS_AT' => strtotime("2021-12-31 05:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -126,6 +126,8 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		// TODO sort array in random order, based on current hour or simular
 		'Channels' => array(
+			'infobeamer',
+			'cbase',
 			'cwtv',
 			'cbase',
 			'r3s',
@@ -134,13 +136,10 @@ $CONFIG['OVERVIEW'] = array(
 			'fem',
 			'franconiannet',
 			'aboutfuture',
-			'sendezentrum',
+			# 'sendezentrum',
 			'haecksen',
 			'gehacktesfromhell',
 			'xhain',
-		),
-		'Info' => array(
-			'infobeamer'
 		),
 		'Music' => array(
 			'c3lounge',
@@ -791,7 +790,6 @@ $CONFIG['ROOMS'] = array(
 		'TWITTER' => false,
 	),
 	'infobeamer' => array(
-		'WIDE' => true,
 		'DISPLAY' => 'Infobeamer',
 		'DISPLAY_SHORT' => 'Infobeamer',
 		'STREAM' => 'infobeamer',

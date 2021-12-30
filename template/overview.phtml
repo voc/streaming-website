@@ -12,17 +12,26 @@
 		<div class="row room-group room-group-n<?=h($i++)?> room-group-<?=h(slugify($group))?>">
 
 			<?
+				/* 
+				$rooms = array_filter($rooms, function($r) {
+					global $upcomingTalksPerRoom;
+					$upcoming = @$upcomingTalksPerRoom[ $r->getSlug() ];
+					return isset($upcoming['next']);
+				}); */
 				$count = count($rooms); 
 				$idx = 0;
 				usort($rooms, function ($r_a, $r_b) {
 					global $upcomingTalksPerRoom;
 					$u_a = $upcomingTalksPerRoom[ $r_a->getSlug() ];
+					$a = @$u_a['current']['special'] ? $u_a['next'] : $u_a['current'];
 					$u_b = $upcomingTalksPerRoom[ $r_b->getSlug() ];
-					return (
-						(@$u_a['current']['special'] ? @$u_a['next']['start'] : @$u_a['current']['start']) 
-						<=> 
-						(@$u_b['current']['special'] ? @$u_b['next']['start'] : @$u_b['current']['start'])
-					); 
+					$b = @$u_b['current']['special'] ? $u_b['next'] : $u_b['current'];
+
+					if ( $u_a['next'] === null || $u_b['next'] === null) {
+						return -($u_a['next'] <=> $u_b['next']);
+					}
+
+					return @$a['start'] <=> @$b['start']; 
 				});
 
 				foreach($rooms as $room): 
@@ -91,6 +100,7 @@
 
 								<? if($room->hasSchedule()): 
 									$upcoming = @$upcomingTalksPerRoom[ $room->getSlug() ] ?: [];
+									// echo var_dump($upcoming);
 									$current = @$upcoming['current'];
 									$next = @$upcoming['next']; ?>
 									<div class="program-schedule">
