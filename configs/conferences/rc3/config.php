@@ -127,7 +127,6 @@ $CONFIG['OVERVIEW'] = array(
 		// TODO sort array in random order, based on current hour or simular
 		'Channels' => array(
 			'infobeamer',
-			'cbase',
 			'cwtv',
 			'cbase',
 			'r3s',
@@ -138,7 +137,7 @@ $CONFIG['OVERVIEW'] = array(
 			'aboutfuture',
 			# 'sendezentrum',
 			'haecksen',
-			'gehacktesfromhell',
+			# 'gehacktesfromhell',
 			'xhain',
 		),
 		'Music' => array(
