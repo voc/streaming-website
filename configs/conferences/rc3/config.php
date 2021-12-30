@@ -129,7 +129,7 @@ $CONFIG['OVERVIEW'] = array(
 			'infobeamer',
 			'cwtv',
 			# 'cbase',
-			'r3s',
+			# 'r3s',
 			'csh',
 			# 'chaoszone',
 			'fem',
