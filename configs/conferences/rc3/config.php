@@ -128,10 +128,10 @@ $CONFIG['OVERVIEW'] = array(
 		'Channels' => array(
 			'infobeamer',
 			'cwtv',
-			'cbase',
+			# 'cbase',
 			'r3s',
 			'csh',
-			'chaoszone',
+			# 'chaoszone',
 			'fem',
 			'franconiannet',
 			'aboutfuture',
@@ -142,7 +142,7 @@ $CONFIG['OVERVIEW'] = array(
 		),
 		'Music' => array(
 			'c3lounge',
-			'abchillgleis'
+			# 'abchillgleis'
 		),
 	),
 );
