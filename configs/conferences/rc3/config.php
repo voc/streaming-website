@@ -136,7 +136,7 @@ $CONFIG['OVERVIEW'] = array(
 			'franconiannet',
 			'aboutfuture',
 			# 'sendezentrum',
-			'haecksen',
+			# 'haecksen',
 			# 'gehacktesfromhell',
 			'xhain',
 		),
