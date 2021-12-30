@@ -1,0 +1,324 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//pretalx//talks.mrmcd.net//
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20001029T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZNAME:CET
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20000326T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZNAME:CEST
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:pretalx-ptt-CKHNL9@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200904T180000
+DTEND;TZID=Europe/Berlin:20200904T181500
+DESCRIPTION:Opening
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Opening - DiVOC-Team
+URL:https://talks.mrmcd.net/ptt/talk/CKHNL9/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-JJMHBB@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200904T183000
+DTEND;TZID=Europe/Berlin:20200904T194500
+DESCRIPTION:In the midst of technical\, economic\, political and sociologic
+ al struggles\, many communities in Latin America have been marginalized by
+  major telephone operators due to high infrastructure costs and low profit
+  margins. Most are still relying on exorbitant landline and satellite serv
+ ices. Despite the ideals of freedom\, collaboration\, shared knowledge and
+  more equitable distribution of power that are at the mythical origin of t
+ he Internet\, it has become clear that we are living within a context of c
+ oncentration of power over the network infrastructure. \nIn this session\,
+  we will talk about three Latin American community internet/intranet netwo
+ rks that appear simultaneously as the subversion of this process of concen
+ tration and as the resumption of ideals of freedom in the network.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Connection\, Resistance and Autonomy in Peripheral Communities - De
+ bora Leal\, Javi
+URL:https://talks.mrmcd.net/ptt/talk/JJMHBB/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-BEZZBK@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200904T200000
+DTEND;TZID=Europe/Berlin:20200904T211500
+DESCRIPTION:Schnelleinstieg in QGIS anhand einer Kartierung von Brutvögeln
+ . Wir werden einen GeoJson-Export auswerten\, dabei Layer-Stile ausprobier
+ en und Polygone zeichnen.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Monitoring häufiger Brutvögel - Auswertung mit QGIS - coco
+URL:https://talks.mrmcd.net/ptt/talk/BEZZBK/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-LWZNMV@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200904T213000
+DTEND;TZID=Europe/Berlin:20200905T003000
+DESCRIPTION:Hacker Jeopardy
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Hacker Jeopardy - h3rb3rn
+URL:https://talks.mrmcd.net/ptt/talk/LWZNMV/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-YSMJE9@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T013000
+DTEND;TZID=Europe/Berlin:20200905T023000
+DESCRIPTION:Kammer Gruppe is the name of a project by _djura_\, a DJ\, musi
+ cian and performer from Novi Sad\, Serbia
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:PANZERKUNST BY KAMMER GRUPPE - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/YSMJE9/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-JCTBWT@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T023000
+DTEND;TZID=Europe/Berlin:20200905T033000
+DESCRIPTION:Der Komponist Thies Mynther (auch Komponist der Musik zum Commu
+ nityfilm All Creatures Welcome) \, der Theatermacher Veit Sprenger (Showca
+ se Beat le Mot) und der bildende Künstler Tobias Euler (Gründer des lege
+ ndären Jonny Knüppel in Berlin) haben zu Ehren des großen Musikers Moon
+ dog eine interventionistische Musikmaschine entwickelt. Die Moon Machine i
+ st eine mobile Musikinsel\, eine Bricolage mit pneumatischen Instrumenten 
+ und mechatronischen Klangautomaten\, Sonnenschirm\, Signalhörnern und aku
+ stischen Kollisionswarngeräten. Damit erkunden die drei Künstler die Wel
+ t Moondogs. Seine Werke und Instrumente wie die Trimba oder die Dragon’s
+  Teeth werden dafür um eigene Melodien\, Gedichte und musikalische Experi
+ mente ergänzt. \nBasierend auf Auszügen aus Ausstellungen und Performanc
+ es gestalten Sie für das DiVOC: Push To Talk einen exklusiven Stream of c
+ onsciousness.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Euler/Mynther/Sprenger- Ghosts in the Moon Machine - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/JCTBWT/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-7SUCM7@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T033000
+DTEND;TZID=Europe/Berlin:20200905T043000
+DESCRIPTION:Kicking off in fine style\, Gora teamed up with Boogizm co-foun
+ der Fym as »Gora & Eloy«. Their project is a unique definition of broken
+  bass house\, a unique blend of hi-tec bassdriven sound\, broken beats\, w
+ eird bleeps and warm analogue space. Their productions are full of quirky 
+ flavors whilst maintaining a banging dancefloor appeal.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Gora & Eloy - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/7SUCM7/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-WBA9KZ@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T043000
+DTEND;TZID=Europe/Berlin:20200905T063000
+DESCRIPTION:Ist seid enigen Jahren beim Booking-Team des Congress. \nMitbeg
+ ründer der Nachtdigital.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Steffen Bennemann - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/WBA9KZ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-AGAMHV@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T140000
+DTEND;TZID=Europe/Berlin:20200905T151500
+DESCRIPTION:#### DE: \nWie bringe ich meine Schaltungs-Idee von einem Bread
+ board auf ein richtiges PCB?\nMuss es immer ein Dev-Board sein\, oder kann
+  ich das auch selbst?\nDein Dev-Board ist zu groß\, kann zu viel\, macht 
+ nicht genug? Dann bau dir dein eigenes!\n\n---\n\n#### EN:\nBring you circ
+ uit ideas from breadboard to a PCB. Does it have to be a dev-board or can 
+ I make it myself?\nYour dev-board is too big\, too powerful\, not powerful
+  enough? Make your own!
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Breadboard to Printed Circuit Board - Bring your ideas - Jadyn
+URL:https://talks.mrmcd.net/ptt/talk/AGAMHV/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-USPQZF@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T153000
+DTEND;TZID=Europe/Berlin:20200905T154500
+DESCRIPTION:The ongoing pandemic lead to a huge outburst of solidarity in a
+ cademia and citizen science.\nHear about the journey of some of them :)
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:How (some) biohackers tackle the COVID19 pandemic - an example - su
+ n
+URL:https://talks.mrmcd.net/ptt/talk/USPQZF/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-VXGHJQ@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T160000
+DTEND;TZID=Europe/Berlin:20200905T161500
+DESCRIPTION:YouTube verändert das Lernen und Lehren in massiver Form in je
+ dem Bereich der Ausbildung. Als YouTuber im Bereich der Elektrotechnik ber
+ ichte ich über diesen Trend und die unglaublichen Chancen\, welche sich a
+ us diesem Trend ableiten lassen.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Warum momentan Lernvideos auf YouTube durch die Decke gehen? - Alex
+ ander Stöger
+URL:https://talks.mrmcd.net/ptt/talk/VXGHJQ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-U8GQZT@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T163000
+DTEND;TZID=Europe/Berlin:20200905T174500
+DESCRIPTION:Allen Bemühungen zum Trotz setzen sich in jüngerer Vergangenh
+ eit auch Technologien durch\, die unserer Hackerethik widersprechen. Wer E
+ ltern\, Kindern oder Schulleitungen zu einem Grundverständnis von Datensc
+ hutz verhelfen will\, trifft oft auf Gleichgültigkeit.\nIn diesem Worksho
+ p wollen wir gemeinsam Bilder entwickeln\, die das Thema Datenschutz angep
+ asst für verschiedene Gruppen einfach und verständlich darstellen. Wir f
+ reuen uns auf alle technisch\, pädagogisch\, politisch Interessierte\, di
+ e sich im Alltag das ein oder andere Mal gewünscht haben\, ein passendes 
+ Bild zur Hand zu haben.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:"Na und\, ich habe doch nichts zu verbergen?" - mit Bildern den Dat
+ enschutz einfach und zielgruppengerecht erklären - cyber4EDU
+URL:https://talks.mrmcd.net/ptt/talk/U8GQZT/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-NKBDXR@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T183000
+DTEND;TZID=Europe/Berlin:20200905T194500
+DESCRIPTION:Alle zwei Jahre werden KRITIS-Betreiber nach § 8a BSI-Gesetz a
+ uf angemessenen und branchenspezifischen Stand der Technik geprüft. In di
+ esem Vortrag werden die Erlebnisse\, Hürden und Herausforderungen diskuti
+ ert\, auf die man als KRITIS-Prüfer tritt\, wenn man kritische Infrastruk
+ turen prüft.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Erlebnisse eines KRITIS Prüfers - HonkHase
+URL:https://talks.mrmcd.net/ptt/talk/NKBDXR/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-L3ATSC@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T200000
+DTEND;TZID=Europe/Berlin:20200905T201500
+DESCRIPTION:Der feministische Buchklub - eine Nachlese direkt im Anschluss 
+ an die self-Organised Session.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Feministischer Buchklub - Best of - melzai\, c_ristina
+URL:https://talks.mrmcd.net/ptt/talk/L3ATSC/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-ZSZWMT@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T203000
+DTEND;TZID=Europe/Berlin:20200905T214500
+DESCRIPTION:Vom 3.-8. September findet das Camp der Werkkooperative der Tec
+ hnikfreundinnen (WTF) eG i.G. und des VEB IT eV statt ("Hacker eG") Wir ha
+ ben vor\, für die daheimgebliebenen Member in Hybridmanier Dinge zu strea
+ men oder in BBB zu nutzen. Das Camp findet komplett draußen auf einem Ber
+ g im Vogtland statt\, wohin wir per Richtfunk etwas Netz beamen werden.\nW
+ ir machen eine Liveschalte zwischen divoc und Camp und wollen ein Gemeinsc
+ haftserlebnis schaffen. Inhaltlich könnte es einen Camprundgang mit mobil
+ er Kamera geben\, ein Laberfeuer\, ein WTF-StateOfTheUnion\, ein WTF-AskUs
+ Anything\, Onlinewaffeln mit dem WOC\, oder oder.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Hacker eG Camp Bridge - ajuvo\, L3D
+URL:https://talks.mrmcd.net/ptt/talk/ZSZWMT/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-AHCWTD@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T220000
+DTEND;TZID=Europe/Berlin:20200905T230000
+DESCRIPTION:http://www.thord1s.de/
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:THORD1S - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/AHCWTD/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-HDQMHC@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200905T230000
+DTEND;TZID=Europe/Berlin:20200906T000000
+DESCRIPTION:Crazy\, erratic and edgy Gameboy-music from St. Pauli\, the ana
+ rchistic heart of Hamburg. Founder of 8 Pauli\, a series of chiptune-parti
+ es in Germany.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:the mad bitter - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/HDQMHC/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-UUAGJX@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200906T000000
+DTEND;TZID=Europe/Berlin:20200906T010000
+DESCRIPTION:https://unicornpartisans.net/
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:unicorn partisans - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/UUAGJX/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-WHFTLZ@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200906T010000
+DTEND;TZID=Europe/Berlin:20200906T040000
+DESCRIPTION:https://www.mixcloud.com/Morelle/
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Morelle - DiVOC-Lounge
+URL:https://talks.mrmcd.net/ptt/talk/WHFTLZ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-RCKRHP@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200906T140000
+DTEND;TZID=Europe/Berlin:20200906T151500
+DESCRIPTION:Am CERN habe ich eine kleine Instanz von Compiler-Explorer (aka
+  godbolt.org) betrieben und möchte berichten welche Modifikationen und Ha
+ cks dabei entstanden sind.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Betrieb und Modifikationen einer eigenen Compiler-Explorer Instanz 
+ - pseyfert
+URL:https://talks.mrmcd.net/ptt/talk/RCKRHP/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-BK7TFR@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200906T153000
+DTEND;TZID=Europe/Berlin:20200906T164500
+DESCRIPTION:Ein interaktiver Motivationstalk über Kunst\, was sie ist\, wa
+ s sie ausmacht und warum dafür nicht unbedingt etwas können muss.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Ist das Kunst oder ist das nur schön? - Contenna
+URL:https://talks.mrmcd.net/ptt/talk/BK7TFR/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-TAS93S@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200906T170000
+DTEND;TZID=Europe/Berlin:20200906T171500
+DESCRIPTION:Nach meinen bisherigen Vorträgen über 3D-gedruckte Orgelpfeif
+ en habe ich an zwei neuen Pfeifensorten gearbeitet: Diaphone und Flauto Mi
+ rabilis\, und die möchte ich kurz vorstellen.
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Kleines Orgelpfeifen-Update - Benjamin Wand
+URL:https://talks.mrmcd.net/ptt/talk/TAS93S/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-ptt-CJB3XK@talks.mrmcd.net
+DTSTART;TZID=Europe/Berlin:20200906T173000
+DTEND;TZID=Europe/Berlin:20200906T180000
+DESCRIPTION:Closing
+DTSTAMP:20210330T213406Z
+LOCATION:Schneider-Hoover
+SUMMARY:Closing - DiVOC-Team
+URL:https://talks.mrmcd.net/ptt/talk/CJB3XK/
+END:VEVENT
+END:VCALENDAR

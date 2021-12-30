@@ -1,0 +1,756 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//pretalx//pretalx.c3voc.de//
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20001029T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZNAME:CET
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20000326T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZNAME:CEST
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-38PPT7@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T100000
+DTEND;TZID=Europe/Berlin:20210402T101500
+DESCRIPTION:Im Opening erzählen wir euch\, was euch in den nächsten Tagen
+  alles an spannenden Vorträgen und sonstigen Veranstaltungen erwartet. Sc
+ haut doch neben dem Vortrags-Schedule auch schonmal rein in die Self-Organ
+ ised Sessions\, die Assemblies\, die Welt\; schaut vorbei beim Infodesk\, 
+ beim Eventphone und vielem mehr: \n\nhttps://di.c3voc.de/r2r:start
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Opening - hexchen\, NicKira
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/38PPT7/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-HTBUVL@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T101500
+DTEND;TZID=Europe/Berlin:20210402T103000
+DESCRIPTION:Wie reagieren wir auf die Klimakrise? Und wie auf andere Krisen
+ \, zum Beispiel Corona? Und wie gewichten wir das in der Öffentlichkeit? 
+ Und warum weichen wir bei unserer Gewichtung derart von den Fakten ab?
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Zur Psychoanalyse der Klimakrise - André
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/HTBUVL/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-KWWQLB@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T112000
+DTEND;TZID=Europe/Berlin:20210402T120500
+DESCRIPTION:Achtung Datenschutz! Jetzt wird es wild. Begleitet uns auf eine
+ r Safari durch den wilden Dschungel der Umsetzungen. Nix für schwache Ner
+ ven.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Datenschutz Wildlife - C_ristina\, Katrin
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KWWQLB/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-CZLMKG@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T123000
+DTEND;TZID=Europe/Berlin:20210402T131500
+DESCRIPTION:The Anthropocene brings with it a frighteningly wide range of e
+ nvironmental crises -- climate change\, ocean acidification\, pollution\, 
+ rising extinction rates and risks of zoonotic pandemics\, just to name a f
+ ew. We speak about these as if they were tied together\, but it is actuall
+ y rather hard to say how exactly this is. \n\nIn this talk\, I will analys
+ e some aspects of the Anthropocene with regard to their "problematicness"\
+ , just as programmers might think through the problem definition\, necessa
+ ry assumptions and Big-O notation before even starting to write a single l
+ ine of code. In this\, I will try to give a broad overview of attempts to 
+ model the environmental crises of the Anthropocene. I will argue that some
+  of these are essentially solved\; but "solved" as in "chess is solved"\; 
+ although we know that our computer can give us a definitive way of winning
+ \, we still play it. For others\, however\, the scientific state-of-the-ar
+ t can only point to a path towards a solution. Furthermore\, some of the t
+ hings we think about as problems are actually more like ongoing catastroph
+ es: No action will make them go away\, there is no solution in a strict se
+ nse\; rather we have to live with them in such a way as to contain their c
+ riticalness. This assessment will make it clear that we urgently need to r
+ ethink the relationship between us and our environment in the Anthropocene
+  since this will determine which aspects of the Anthropocene are problemat
+ ic\, catastrophic or even apocalyptic.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Solving problems of the Anthropocene -- The tricky\, the hard and t
+ he impossible - Theodor Sperlea
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/CZLMKG/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-KBURYL@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T152000
+DTEND;TZID=Europe/Berlin:20210402T153500
+DESCRIPTION:Die rC3 und die "world" haben viele mit Congress-Entzugserschei
+ nungen zurückgelassen. Der Talk bietet eine Einstiegshilfe zum Aufsetzten
+  und Betreiben einer eigenen Instanz der rC3 world.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Workadventure selbst betreiben: Ein Serviervorschlag - devnope
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KBURYL/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-MF8A7V@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T160000
+DTEND;TZID=Europe/Berlin:20210402T164500
+DESCRIPTION:Nach dem "WirVsVirus"-Hackathon der Bundesregierung verbreitet 
+ sich die Idee\, dass Hackathons unsere Welt retten können\, immer weiter.
+  Ganz so einfach ist das nicht. Ein Vortrag über Sinn und Zweck von Hacka
+ thons\, gesellschaftliche Veränderung\, Digital-Hypes und diskriminierend
+ e Strukturen – und wie wir es besser machen könnten.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Falsche Hackathon-Versprechen: Warum Digitalisierung nachhaltigere 
+ Ansätze braucht. - joliyea
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MF8A7V/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-XHNSYF@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T171000
+DTEND;TZID=Europe/Berlin:20210402T175500
+DESCRIPTION:Jedes Jahr werden viele Computer entsorgt\, obwohl sie noch fun
+ ktionieren. Eine andere Realität ist auch\, dass es Menschen gibt\, die s
+ ich keinen Computer leisten können. Gerade Schülern aus ökonomisch bena
+ chteiligten Haushalten wird der Start in die digitale Welt erschwert.\n\nI
+ m Leipziger Hackspace dezentrale e. V. wurde das Hardware For Future-Proje
+ kt im Frühjahr 2020 gegründet. In ehrenamtlicher Arbeit werden Computer 
+ aufbereitet\, Linux bildet dabei die Basis. Mit Hilfe von zahlreichen Spen
+ den konnten im vergangenen Jahr bereits mehrere hundert Rechner an Bedürf
+ tige ausgegeben werden.\n\nEs werden Einblicke in die Arbeit des Projekts 
+ geben\, darunter einen Abriss der Geschichte\, einen Überblick wie Mensch
+ en an einen Computer kommen\, sowie Details zur technischen Realisierung m
+ ittels FAI\, Clonezilla und Ansible. Weiter soll es um die Erfahrungen in 
+ der Sammlung von Hardware\, der Zusammenarbeit mit öffentlichen Stellen u
+ nd um die kleinen Überraschungen eines solchen Projekts gehen.\n\nDer Vor
+ trag richtet sich nicht nur an Menschen\, die ein ähnliches Projekt umset
+ zen wollen\, sondern auch an Mitarbeiter und Firmen\, die sich eine sinnvo
+ llere Nutzung ihrer ausgedienten Hardware vorstellen können.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Hardware For Future: Mit ausrangierter Hardware helfen - katzenpara
+ doxon\, Prätorianer
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/XHNSYF/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-FBTQ8F@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T182000
+DTEND;TZID=Europe/Berlin:20210402T183500
+DESCRIPTION:C3 News Show
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:C3 News Show\, die 1. - C3 news show
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/FBTQ8F/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-SNX9YV@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T200000
+DTEND;TZID=Europe/Berlin:20210402T204500
+DESCRIPTION:Biometrische Überwachung ist bei uns angekommen. Staatliche Ak
+ teure begnügen sich noch mit Feldtests und Aufrüstung. Private Akteure w
+ ie pimeyes und Clearview AI werten längst unsere biometrischen Daten aus 
+ und legen unsere Gesichter in Datenbanken ab.\n\nWir zeigen Euch\, wo noch
+  in Deutschland und Europa heute schon biometrische Überwachungstechnolog
+ ien eingesetzt werden.\n\nWenn wir jetzt nichts tun\, werden wir bald auf 
+ jedem Schritt und nicht nur bei jedem Klick erfasst und überwacht. Daher 
+ haben wir im Februar eine Europäische Bürgerinitiative für ein Verbot b
+ iometrischer Massenüberwachung gestartet. Wir stellen die Initiative kurz
+  vor\, zeigen\, wie ihr selbst aktiv werden könnt und was wir für die n
+ ächsten Monate geplant haben.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Reclaim your Face! Biometrische Massenüberwachung und wie wir uns 
+ dagegen wehren können - Vik\, kantorkel
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SNX9YV/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-ZJYNWZ@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T210000
+DTEND;TZID=Europe/Berlin:20210402T230000
+DESCRIPTION:All Creatures Welcome zeichnet ein utopisches Bild der Gesellsc
+ haft im digitalen Zeitalter. Begleitet vom Appell “use hacking as a mind
+ set”\, taucht die Zuschauer*in in ein dokumentarisches Abenteuerspiel ei
+ n und erkundet die Welt der digitalen Communities bei den Veranstaltungen 
+ des Chaos Computer Clubs\, Europas größte Hackervereinigung.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:All Creatures Welcome - Filmgizmo
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/ZJYNWZ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-ZNX78X@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210402T233000
+DTEND;TZID=Europe/Berlin:20210403T000000
+DESCRIPTION:Bridges bringt Musiker*innen mit und ohne Flucht- und Migration
+ shintergrund zusammen. Dadurch werden aus Fremden Freund*innen. Bridges 
+ – Musik verbindet engagiert sich für einen musikalischen Dialog\, der g
+ eprägt ist durch die unterschiedlichen kulturellen Hintergründe der Musi
+ ker*innen.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Bridges - Musik verbindet - 
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/ZNX78X/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-NFLFCH@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T000000
+DTEND;TZID=Europe/Berlin:20210403T020000
+DESCRIPTION:Gute Musik und schlechter Humor.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:spiegeleule - spiegeleule
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/NFLFCH/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-LFCPLS@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T020000
+DTEND;TZID=Europe/Berlin:20210403T040000
+DESCRIPTION:Seitdem Ingo denken kann widmet er seine Ohren der Musik\, übe
+ rwiegend elektronischer Natur. Mit zehn experimentierte er mit ersten Mixt
+ apes auf Kassetten\, mit 16 kam der erste Mixer dazu.\n\nDie Entwicklungen
+  digitaler Soundbearbeitung und -manipulation am Computer lockten ihn 2013
+  zum Mixen zurück. Er entdeckt immer ausgefeiltere Möglichkeiten\, sich 
+ musikalisch auszudrücken und lässt als „Triankel“ alle Musikbegeiste
+ rten daran teil haben.\nMitlerweile spielt Triankel auf diversen Festivals
+  und Parties\, die er zum Teil auch selbst organisiert\, und auf zahlreich
+ en weiteren Veranstaltungen.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Triankel - Triankel
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/LFCPLS/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-CQ9WRF@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T040000
+DTEND;TZID=Europe/Berlin:20210403T060000
+DESCRIPTION:Hey\, ich bin avocadoom vom CCC-Darmstadt und neben dem ganzen 
+ gehacke lege ich ab und zu hobbymäßig House auf. Über tropische Klänge
+  bis hin zu industriellem Gehämmer ist für alle Ohren etwas dabei. Kurz 
+ gesagt\, es gibt Tech\, bis das House zusammenbricht.\n\nEin paar frühere
+  Sets von mir gibt es unter: https://www.mixcloud.com/avocadoom/
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:avocadoom - Tech bis das House zusammenbricht - avocadoom
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/CQ9WRF/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-9X9SLG@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T100000
+DTEND;TZID=Europe/Berlin:20210403T104500
+DESCRIPTION:Eine praktische Anwendung des IPv6 Internets\, um Verbindung zu
+  entfernten Maschinen aufzunehmen\, ohne Software\, ohne "Fummel und Gemur
+ kse" dazu einfache Grundlagen zu IPv6-Adressen.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Entfernte Maschine verbinden mit IPv6 - mutant
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9X9SLG/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-FYYMHS@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T111000
+DTEND;TZID=Europe/Berlin:20210403T115500
+DESCRIPTION:Since 1953\, the DMZ (Korean Demilitarized Zone) separates Kore
+ a into two countries. Unique biodiversity has grown between landmines to b
+ ecome a curious lab for researchers interested in Life and Earth sciences\
+ , heavy industry\, armament\, and technology. On the diplomatic scene\, th
+ e DMZ is the home of the Joint Security Area\, a strategic hotspot for int
+ ernational negotiations in East Asia\, commanded by a Western nation\, the
+  USA. To be reunited the two Koreas need the U.S President's approval. The
+  North and the South are ready for it\, but the external American validati
+ on is still pending. Not only will it end the war\, but it will also produ
+ ce a better way to tackle the climate crisis in this part of the world.\n\
+ nIndeed\, one current project between South Korea and North Korea is to jo
+ intly invest in the construction of railways\, a clean means of transporta
+ tion that will reduce pollution caused by air and sea freight forwarding. 
+ However\, this project is perceived as a threat for neighboring countries 
+ because trains would probably increase the economic power of Korea in East
+  Asia. The Japanese government influenced the former American President\, 
+ Trump\, to not sign the reunification\, against the will of Koreans. \n\nT
+ o hack the DMZ\, we have used art and social science. First\, in a reverse
+  engineering way\, we managed to gather historical\, biological\, politica
+ l\, technological data with art projects depicting the Cold War border. Th
+ en\, we interviewed Japanese\, Chinese\, Taiwanese tech artists and curato
+ rs on their knowledge of the DMZ. It uncovered historical political tensio
+ ns between their country and Korea\, that remain in social discourses thro
+ ugh generations. Finally\, by studying how Western countries view North Ko
+ rea and South Korea\, we came to the point to destroy silly stereotypes. B
+ ehind Kim Jong Un\, North Korean Hackers\, South Korean Gamers\, or BTS Ar
+ my\, there are thoughtful projects aimed to handle environmental and socia
+ l challenges but delayed by external political influences\, and the balanc
+ e of power on the international scene. \n\nThe best way to hack the DMZ is
+  not technical\, but intellectual. It starts in the human mind with knowle
+ dge of this Cold War border\, the actual Korean culture\, and the internat
+ ional relations in East Asia.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Hacking the DMZ (the border between the two Koreas) - Caroline Murg
+ ue
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/FYYMHS/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-9E8ZNZ@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T122000
+DTEND;TZID=Europe/Berlin:20210403T130500
+DESCRIPTION:Let's have a retrospective of what happened in the EventFahrpla
+ n project in the last months and what is planned.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:State of EventFahrplan 2021 - tbsprs
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9E8ZNZ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-MHNXMW@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T150000
+DTEND;TZID=Europe/Berlin:20210403T154500
+DESCRIPTION:Menschen mit Behinderungen haben ein in Deutschland anerkanntes
+  Menschenrecht auf Inklusion. Dass das hier immer noch nicht funktioniert\
+ , ist vielen nicht bewusst - was auch an zu wenig Kontrolle durch die Medi
+ en liegt. Woran das wohl liegen mag?
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:failed: [Inklusion] - betalars
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MHNXMW/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-KDHE87@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T161000
+DTEND;TZID=Europe/Berlin:20210403T165500
+DESCRIPTION:Vorträge über spannende Themen im Netz zu halten oder selber 
+ anzuschauen ist toll. Dinge gemeinsam zu entdecken und auszuprobieren mach
+ t aber oft noch mehr Spaß. In diesem Vortrag werdet ihr erfahren\, wie Ha
+ nds-On Tutorials mit 10-15 Teilnehmern auch auf Online Veranstaltungen wie
+  der Reboot to Respawn durchgeführt werden können: Mit virtuellen Linux 
+ Desktops in der Cloud und anderen Open Source Tools. \n\nIm Vortrag werde 
+ ich zeigen\, wie mit Cloud basierten Desktops jedem Teilnehmer eine vorkon
+ figurierte und identische Umgebung für eine Hands-On Session zur Verfügu
+ ng gestellt werden kann und somit alle sofort startbereit sind. Hat ein Te
+ ilnehmer Probleme während des Tutorials\, kann der Organisator sich jeder
+ zeit auf den Desktop jedes Teilnehmers dazuschalten\, 'sehen' wo das Probl
+ em liegt\, und weiterhelfen. Da die Desktops in der Cloud sind\, macht es 
+ dann auch technisch keinen Unterschied mehr\, ob sich die Teilnehmer im gl
+ eichen Raum befinden oder sich an unterschiedlichen Orten für den gemeins
+ amen 'Spaß am Gerät' virtuell zusammenfinden.\n\nTechnische Details gibt
+  es auch schon vor dem Vortrag hier: https://blog.wirelessmoves.com/2021/0
+ 1/running-ubuntu-20-04-with-a-gui-in-the-cloud.html
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Hands-On Tutorials mit Virtuellen Desktops in der Cloud - heurekus
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KDHE87/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-LQ8JFE@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T172000
+DTEND;TZID=Europe/Berlin:20210403T180500
+DESCRIPTION:Wir berichten über die Entstehung des Kollektivs\, von der Ide
+ e zur Umsetzung und warum wir finden\, dass es gerade im Bereich der Gynä
+ kologie kollektiven Empowerments bedarf und warum eine trans-inklusive\, q
+ ueer-feministische\, antirassistische und antiableistische Haltung dabei s
+ o wichtig ist.\nZentral für unsere Arbeit ist das Verständnis als Kollek
+ tiv. Schon beim ersten Treffen haben wir gemerkt\, dass wir ganz unterschi
+ edliche Kompetenzen mitbringen\, die das Projekt voranbringen und wir ungl
+ aublich viel voneinander lernen können. In unserem Panel wollen wir Einbl
+ ick in unsere Arbeit geben und erzählen\, welche Themen uns in den letzte
+ n 1\,5 Jahren besonders beschäftigt haben.\nDen Code für die Web-Plattfo
+ rm entwickeln wir Stück für Stück weiter. Dabei ist für uns wichtig da
+ ss sich unsere Haltung auch im Code wiederfindet\, wir gemeinsam Entscheid
+ ungen zur Technik treffen\, selbstbestimmt damit umgehen und datensparsam 
+ arbeiten. Auch diesen Aspekt wollen wir diskutieren.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Gynformation bringt gynäkologische Selbstbestimmung ins Netz - C_r
+ istina\, Kollektiv für gynäkologische Selbstbestimmung
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/LQ8JFE/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-WZTGVU@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T183000
+DTEND;TZID=Europe/Berlin:20210403T184500
+DESCRIPTION:C3 News Show
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:C3 News Show\, die 2. - C3 news show
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/WZTGVU/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-TBWCCJ@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T200000
+DTEND;TZID=Europe/Berlin:20210403T204500
+DESCRIPTION:Abgeschrieben\, aussortiert und weggestellt. Funktionieren aber
+  noch: Laptops\, Computer oder Tablets. Genau die werden dringend gebrauch
+ t – von Schülerinnen und Schülern\, die keinen eigenen Rechner haben. 
+ Gemeinsam mit Partnern\, Unterstützern und Spendern sorgen wir dafür\, d
+ ass sie einen bekommen. Damit am Ende alle einen haben. Wir sammeln diese 
+ alten Rechner bei Unternehmen\, Institutionen und von privaten Haushalten\
+ , machen sie fit und verteilen sie an Schülerinnen und Schüler\, die bis
+ lang nicht oder nur eingeschränkt an e-Learning oder Homeschooling teilne
+ hmen konnten. So wird Kindern und Jugendlichen zu mehr Chancengleichheit v
+ erholfen. Das ist die Idee von HEY\, ALTER! Alte Rechner für junge Leute.
+  Ganz einfach.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:HEY\, ALTER! Alte Rechner für Junge Leute! - Daniel Marks\, Lukas 
+ Tyburzy
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/TBWCCJ/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-3MXRDE@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T211000
+DTEND;TZID=Europe/Berlin:20210403T215500
+DESCRIPTION:Did you know that you can get a domain that contains an emoji? 
+  \nWell\, technically speaking you can't because domains only allow a very
+  limited character set.  \n \nHowever\, there is a workaround to that call
+ ed Punycode.  \nYou can encode non-supported characters to punycode and al
+ low people to visit your site by entering those characters in their URL ba
+ r -the browser will take care of encoding them.\n\nSounds good\, doesn't i
+ t?  \nWell\, unicode is more complex than one would think\; especially the
+  parts around emoji are.  \nThat means encoding those characters isn't eas
+ y and a lot goes wrong.\n\nI want to showcase some ways in that emoji/ pun
+ ycode domains are broken\, how you can have fun with them and why you shou
+ ld actually just avoid them for anything you want to use productively.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Emoji domains and how wonderfully broken they are - dysphoricUnicor
+ n
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/3MXRDE/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-DGRKMU@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T221500
+DTEND;TZID=Europe/Berlin:20210403T230000
+DESCRIPTION:ZLDKM - Zwei Leute\, die Kunst machen. Im Zuge der COVID-19-Pan
+ demie setzten sie sich in einen virtuellen Thinktank und überlegten wie (
+ neue) Kunst mit den gegebenen Einschränkungen einer globalen Pandemie ent
+ stehen kann. Aus den ersten Überlegungen entstand ein Generator\, der sic
+ h vom Internet inspirieren lässt und Kunstwerke schafft. Idee\, Konzept\,
+  Umsetzung und Ergebnisse sind Inhalt des Vortrages.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Das Netz als Inspirationsquelle für Kunst(werke) - ST (ZLDKM)\, St
+ efan (ZLDKM)
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DGRKMU/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-7EDPBT@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210403T230000
+DTEND;TZID=Europe/Berlin:20210404T000000
+DESCRIPTION:LENI
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:LENI - LENI
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/7EDPBT/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-VRTJHA@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T000000
+DTEND;TZID=Europe/Berlin:20210404T020000
+DESCRIPTION:Maya ist DJ\, Film- und Fotokünstlerin. Ihre musikalischen Wur
+ zeln liegen irgendwo zwischen Disco und Punk. Die musikalische Sozialisati
+ on begann in den 70er Jahren im Plattenladen ihres Vater. Sie lebt und arb
+ eitet seit 1989 in Frankfurt am Main und fing zu dieser Zeit auch mit dem 
+ Auflegen an. Seit 1996 ist sie Sendungsmacherin bei Radio X und dort auch 
+ Bookerin für die x-fade Dj Night bei Radio X.\n\nIhr musikalisches Spekt
+ rum ist weit gefächert. Es reicht von Ambient\, Elektro\, House\, Disco\,
+  Hip Hop\, Trip Hop\, Electonica\, Filmmusik und Scores bis hin zu poppige
+ m Kitschquatsch. Auch gut zu erahnen anhand einiger Titel ihrer Radiosendu
+ ngen: „MUSIC FOR FILMS“\, „The Art Of Quiet Fighting“\, „Radical
+  Ambient Inferno”\, „Maya’s Super Scientific Playroom“\, „Hirsch
+  & Stille – Discokrach“ und „Was ist Ambient?“.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Radical Ambient Inferno w/ Maya DJ - Antje-Maya Hirsch
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/VRTJHA/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-DMREWM@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T020000
+DTEND;TZID=Europe/Berlin:20210404T030000
+DESCRIPTION:"Floor Play - Pleasure Taste"
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:DJ LadyBird - DJ LadyBird
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DMREWM/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-GSDGXP@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T102000
+DTEND;TZID=Europe/Berlin:20210404T103500
+DESCRIPTION:Do you know where your food is coming from? Who grew your cucum
+ ber\, how much space did the chickens have? How can we support rural arrea
+ rs? Make changes so it is possible to live and work on the countryside whi
+ le also ensuring food security and a sustainable reboot for agriculture? C
+ hallenging the big food factories and supporting biodiversity? The skandin
+ vian grass root movement reko has some answers and hopes to inspirate. A s
+ hort story of how to spark change to a small rural community.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Reko\, lets reboot agriculture - Julia Westberg
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/GSDGXP/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-SMHXFD@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T111000
+DTEND;TZID=Europe/Berlin:20210404T115500
+DESCRIPTION:Wie wir in Pandemiezeiten weiter gemeinsam reparieren
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Repair for Future - Andreas Frisch
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SMHXFD/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-3ASR88@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T122000
+DTEND;TZID=Europe/Berlin:20210404T130500
+DESCRIPTION:Hydrogen is a crucial piece of a future climate neutral industr
+ y and lately gained a lot of attention. The talk will separate hype from r
+ eal need for the smallest molecule and we will look at why will likely see
+  hydrogen-based steel plants in the future\, but hydrogen-based cars and h
+ eaters will play a minor role at best .
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Hydrogen beyond the hype - Hanno Böck
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/3ASR88/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-JLXJDB@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T150000
+DTEND;TZID=Europe/Berlin:20210404T154500
+DESCRIPTION:If you use the web regularly\, you probably keep running into s
+ ites that seem to be built to be _unusable_.  \nThinking that it's better 
+ to assume incompetence than malevolence (and because you don't really have
+  much of a choice) you disregard that thought and continue on with using t
+ he site.\n\nHowever\, sometimes people actually do act malevolently and of
+ ten times building a bad user experience can lead to larger profits: Peopl
+ e who abandon their attempt to cancel some subscription\, accept to receiv
+ e newsletters and store whatever tracking cookies one throws at them\, sim
+ ply because they are too tired from having to navigate the other options\,
+  end up being seen as more "valuable" customers.\n\nIn this talk I want to
+  have a look at those dark patterns from the perspective of both an end us
+ er and a developer who's had to implement them to pay their rent.  \nI wan
+ t to show you how to find dark patterns (so you can complain about them\, 
+ if you're able to\, which might lead to their removal) and why a job where
+  you're asked to build them is probably not worth keeping.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Dark patterns - What they are and what having to implement them say
+ s about your job - dysphoricUnicorn
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/JLXJDB/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-RXZV33@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T161000
+DTEND;TZID=Europe/Berlin:20210404T165500
+DESCRIPTION:An electronics learning kit based on the pseudo-assembler langu
+ age and simplified electronics of the "Shenzhen I/O" puzzle game by Zachtr
+ onics (http://www.zachtronics.com/shenzhen-io). Built with the cheapest mi
+ crocontroller china has to offer.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Shenzhen I/O IRL - an open source educational electronics puzzle. -
+  Rick Pannen
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/RXZV33/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-8FDKVL@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T172000
+DTEND;TZID=Europe/Berlin:20210404T180500
+DESCRIPTION:Die Darstellung von minderjährigen Patienten in dem Medien ist
+  mitunter hochproblematisch. Es ist vermutlich längst nicht\nfür jedes K
+ ind angenehm\, wenn es mit seiner\nErkrankung derart öffentlich vorgefüh
+ rt wird. Be-\nsonders heikel ist zu bewerten\, dass nicht das\nKind\, sond
+ ern dessen Eltern zustimmen\, und\ndass sich die Einstellung zur veröffen
+ tlichung persön-\nlicher Daten im Laufe des Lebens ändern kann.\nDas Int
+ ernet bewahrt indes alles in einer Art\numfassendem Medienlangzeitgedächt
+ nis. Moder-\nne KI-gestützte Gesichtserkennungssoftware in\nForm von Apps
+  ermöglicht es inzwischen jedem\nLaien\, Menschen anhand von Fotos im Int
+ ernet\nzu identifizieren. Praktisch alle\, die danach su-\nchen\, können 
+ sich jetzt und künftig auf diese\nWeise Informationen über andere bescha
+ ffen\,\nauch Informationen über deren Krankheitszu-\nstand. Darüber soll
+ ten Eltern und Kinder aufge-\nklärt werden\, insbesondere von Kinderärzt
+ en\, die\nvon Journalisten um geeignete Kinderdar-\nsteller gebeten werden
+ .
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:»Wir bräuchten mal ein krankes Kind zum Filmen« - Martina Lenzen
+ -Schulte
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/8FDKVL/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-E7CZPY@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T183000
+DTEND;TZID=Europe/Berlin:20210404T184500
+DESCRIPTION:C3 News Show
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:C3 News Show\, die 3. - C3 news show
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/E7CZPY/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-SPDXA3@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T200000
+DTEND;TZID=Europe/Berlin:20210404T204500
+DESCRIPTION:Astronomical factors play no role in the current anthropogenic 
+ climate crisis\, but astronomy can nevertheless help to solve it. If astro
+ nomers manage to reduce their own carbon footprint\, we can become role mo
+ dels for demanding realistic change and continue to collaborate globally. 
+ More importantly\, astronomy can convey a sense of uniqueness of our plane
+ t\, a feeling of global citizenship and awe for the wonders of the univers
+ e. Awe triggers empathy and may thus help to convince the public of the ne
+ cessary actions to avoid climate breakdown.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Astronomy and the climate crisis - Leonard Burtscher
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SPDXA3/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-EKWBXY@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T211000
+DTEND;TZID=Europe/Berlin:20210404T215500
+DESCRIPTION:Das Scheitern öffentlicher IT-Infrastruktur ist kein Zufall\, 
+ es hat System.\n\nAusgehend von den bekannten gescheiterten Digitalprojekt
+ en soll dargestellt werden wie diese bei Befolgen der Hackerethik hätten 
+ abgewendet werden können.\n\nDieser Vortrag soll der Beginn einer gemeins
+ amen Sammlung von Lessons Learned von\, für und mit der Community und int
+ eressierten Menschen sein.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Sancho Panzas gesucht: Erlebnisberichte aus der öffentlichen IT-In
+ frastruktur - Little Detritus\, Martin Tschirsich\, md
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/EKWBXY/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-8YDCXL@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T222000
+DTEND;TZID=Europe/Berlin:20210404T230500
+DESCRIPTION:Einführung in die Computergeisttheorie #cmt von ThomasFankhaus
+ er.ch
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:EinOhm Computergeisttheorie - Thomas Fankhauser
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/8YDCXL/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-XJTEDB@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210404T230000
+DTEND;TZID=Europe/Berlin:20210405T000000
+DESCRIPTION:One hour of ecstatic\, fast and hard electronic music\, largely
+  created on the original 1995 nintendo gameboy classic by german chiptune 
+ musician TRIAC
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:TRIAC - Supermelodic Gameboytechno & Hybrid Chiptune - TRIAC
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/XJTEDB/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-DPAPVP@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210405T000000
+DTEND;TZID=Europe/Berlin:20210405T020000
+DESCRIPTION:Fulminantes DJ und VJ Spektakel im Livestream aus Berlin bei de
+ m sich Micha und Vik einmal durch die Trancebretter der 90er und 2000er Ja
+ hre spielen und clx und Generation Gästeliste eure Beamer überfallen
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:RTE: RemoteTranceExperience (Dj/Vj Set) - Vik\, @sondala | Generati
+ on Gästeliste
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DPAPVP/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-HK9QBY@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210405T100000
+DTEND;TZID=Europe/Berlin:20210405T104500
+DESCRIPTION:Was wir zu einem zufriedenen (Über-)leben brauchen und wenn ja
+  woher und wie überhaupt?\n\nMit der Verknüpfung dreier Ideen möchte ic
+ h Hoffnung und Lust wecken selbst mitzumachen und eine Idee einer lebenswe
+ rten Stadtgesellschaft zeichnen. Am eigenen Lebensort. Glückliche Genügs
+ amkeit (Suffizienz)\, lokale\, selbst betriebene Infrastrukturen & Versorg
+ ung und sozialer Austausch von Ressourcen\, Wissen und Erfahrungen. \nWir 
+ könnten einen wahnsinnig großen Anteil unseres alltäglichen und nicht a
+ lltäglichen Bedarfs in räumlich viel kleineren Zusammenhängen erzeugen 
+ und verteilen als wir es heute tun. Diesen Vorschlag den die new economics
+  foundation 2009 beschreibt und der sich in vielen Ideen wie z.B dem Konze
+ pt der Transition Towns wiederfindet\, können wir nutzen. Verbunden mit g
+ egenseitigem Austausch von Erfahrungen\, Selbstorganisation und einer Land
+ wirtschaft und Beschaffung und Einsatz von Ressourcen\, die nicht gegen un
+ sere Lebensgrundlagen arbeitet\, sondern mit ihnen\, kann sich eine Stadtg
+ emeinschaft oder Region unabhängiger machen von überregionalen Krisen od
+ er Katastrophen\; sich im Austausch mit anderen unterstützen und der Natu
+ r und unseren Lebensgrundlagen dienen.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Lokale Resilienz & glückliche Genügsamkeit - Timm
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/HK9QBY/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-NBCJKN@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210405T111000
+DTEND;TZID=Europe/Berlin:20210405T115500
+DESCRIPTION:Will algorithms solve the problem of climate change? Unlikely. 
+ But more data lets us monitor the earth\, optimize solar panels\, and gene
+ rally understand problems. But is it sustainable? What about the click wor
+ kers that do the magic behind shiny AI toys? And don't data centers use a 
+ lot of energy\, too? Is there a way to measure a sustainability score for 
+ automated decision making that won't burn the planet\, create a livable so
+ ciety for all humans and still won't make us poor? We're working on it. Le
+ t's talk!
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:SustAIn: Sustainability Index for Artificial Intelligence - Jens Oh
+ lig\, Friederike Rohde
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/NBCJKN/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-VWM3YT@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210405T122000
+DTEND;TZID=Europe/Berlin:20210405T123500
+DESCRIPTION:C3 News Show
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:C3 News Show\, die 4. - C3 news show
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/VWM3YT/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-MFDUG3@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210405T140000
+DTEND;TZID=Europe/Berlin:20210405T155500
+DESCRIPTION:Lightning Talks sind kurze Vorträge die alle DiVOC-Teilnehmend
+ en halten können\, zu Themen die euch so interessieren. Slides sind mögl
+ ich aber nicht verpflichtend.
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Lightning Talks - BenjaminWand
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MFDUG3/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-SLXEWL@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210405T162000
+DTEND;TZID=Europe/Berlin:20210405T170500
+DESCRIPTION:Wer ist in Pandemiezeiten eigentlich genau KRITIS-Betreiber und
+  wie gehen die Betreiber mit der Pandemie und den damit Verbundenen Proble
+ men für sie um?\nWas bedeutet eine Krise in der Krise?\nUnd wie machen KR
+ ITIS Betreiber Krisen- und Pandemieplanung?\nAber was uns wirklich antreib
+ t: Was hat das alles mit Nudeln und Toilettenpapier auf sich?\nEin Blick h
+ inter die KRITISchen Kulissen...
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Kritische Infrastrukturen in Pandemie-Zeiten - HonkHase
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SLXEWL/
+END:VEVENT
+BEGIN:VEVENT
+UID:pretalx-divoc-reboot-to-respawn-2021-PSARJW@pretalx.c3voc.de
+DTSTART;TZID=Europe/Berlin:20210405T173000
+DTEND;TZID=Europe/Berlin:20210405T181500
+DESCRIPTION:Platzhalter fürs Closing
+DTSTAMP:20210330T213408Z
+LOCATION:Piscopia
+SUMMARY:Infrastructure-Review + Closing - hexchen\, NicKira
+URL:https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/PSARJW/
+END:VEVENT
+END:VCALENDAR

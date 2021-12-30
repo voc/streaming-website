@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<iCalendar xmlns:pentabarf='http://pentabarf.org' xmlns:xCal='urn:ietf:params:xml:ns:xcal'>
+    <vcalendar>
+        <version>2.0</version>
+        <prodid>-//Pentabarf//Schedule//EN</prodid>
+        <x-wr-caldesc></x-wr-caldesc>
+        <x-wr-calname></x-wr-calname>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>CKHNL9@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-CKHNL9</pentabarf:event-slug>
+            <pentabarf:title>Opening</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200904T180000</dtstart>
+            <dtend>20200904T181500</dtend>
+            <duration>0.01500</duration>
+            <summary>Opening</summary>
+            <description>Opening
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:CKHNL9).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Kurz und knapp</category>
+            <url>https://talks.mrmcd.net/ptt/talk/CKHNL9/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Team</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>JJMHBB@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-JJMHBB</pentabarf:event-slug>
+            <pentabarf:title>Connection, Resistance and Autonomy in Peripheral Communities</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200904T183000</dtstart>
+            <dtend>20200904T194500</dtend>
+            <duration>1.01500</duration>
+            <summary>Connection, Resistance and Autonomy in Peripheral Communities</summary>
+            <description>The three examples of community infrastructure are governed locally by and for the community, reviving the possibility of relationships based on trust and solidarity. We will show how the development of three very distinct community networks occurred - one located in the Amazon rainforest state of Pará (Brazil), called co-NecteBV,  Telecomunicaciones Indigenas Comunitaria (TIC) located in 17 communities in Oaxaca (Mexico) and ABRADIG that promote the implementation of Digital Radio in Brazil.
+In this presentation, we hope to bring information about the history of the community network deployment and the challenges that we all face.
+15 mins - talk about co-NecteBV (Debora and Elaine)
+2-5 mins - live tour in Acara co-NecteBV
+15 mins - talk about TIC (Javi)
+2-5 mins - live tour in Oaxaca
+15 mins - talk about implementation of Digital Radio in Brazil (Anya Orlova)
+20 mins for questions and conversation
+
+*You can submit questions about this talk in [this pad](https://di.c3voc.de/pad/ptt:talk:JJMHBB).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/JJMHBB/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>Debora Leal</attendee>
+            
+            <attendee>Javi</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>BEZZBK@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-BEZZBK</pentabarf:event-slug>
+            <pentabarf:title>Monitoring häufiger Brutvögel - Auswertung mit QGIS</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200904T200000</dtstart>
+            <dtend>20200904T211500</dtend>
+            <duration>1.01500</duration>
+            <summary>Monitoring häufiger Brutvögel - Auswertung mit QGIS</summary>
+            <description>Deutschland meldet jährlich offizielle Statistiken über Vogelbestände an die EU. Die Datengrundlage wird von tausenden Ehrenamtlichen erfasst - bis vor Kurzem mit Papier und Bleistift. Seit 2020 werden Brutvögel digital kartiert, so dass die Geodaten in QGIS ausgewertet werden können.
+
+Die Auswertung vom GeoJson-Export zur Liste vermutlicher Brutreviere werde ich mit euch durchspielen. Dabei können wir in QGIS mit Layer-Stilen herumspielen und in Polygonen über das Verhalten bekannter Gartenvögel spekulieren.
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:BEZZBK).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/BEZZBK/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>coco</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>LWZNMV@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-LWZNMV</pentabarf:event-slug>
+            <pentabarf:title>Hacker Jeopardy</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200904T213000</dtstart>
+            <dtend>20200905T003000</dtend>
+            <duration>3.00000</duration>
+            <summary>Hacker Jeopardy</summary>
+            <description>Hacker Jeopardy
+
+Kandidat:in werden: https://jitsi.dorf-post.de/hacker-jeopardy</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/LWZNMV/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>h3rb3rn</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>YSMJE9@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-YSMJE9</pentabarf:event-slug>
+            <pentabarf:title>PANZERKUNST BY KAMMER GRUPPE</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200905T013000</dtstart>
+            <dtend>20200905T023000</dtend>
+            <duration>1.00000</duration>
+            <summary>PANZERKUNST BY KAMMER GRUPPE</summary>
+            <description>[I] Anfänger - Ouverture
+[II] Tzereter  - Myths And Legends /Sonata in C minor/
+[III] Lehrling - Dreams /Rondo in D minor/
+[IV] Geselle - First Blood /Suite No.1/
+[V] Krieger - Carnage /Suite No.2/
+[VI] Hoher Krieger - Heart Of Steel /Suite No.3/
+[VII] Meister - Far From Home /Suite No.4/
+[VIII] Adept - Echoes /Interlude/
+[IX] Altmeister - Transcendence /Last movement/
+
+— I do not stand by in the presence of evil! — 
+
+Kammer Gruppe is the name of a project by _djura_, a DJ, musician and performer from Novi Sad, Serbia
+
+Panzerkunst was meant to premiere on 37C3, but here it is, exclusively (and prematurely) on Push to Talk - A Digital Distributed Online Chaos. Not like you asked :)
+
+The name for this set came from a movie Alita: Battle Angel and manga series Gunnm. Panzerkunst is the first martial art to anticipate combat in zero gravity, originating on Mars. It is the fighting style used by Alita and, with the exception of a handful of practitioners, is nearly extinct. The names of all Panzerkunst moves and disciplines are in German and practitioners are called Künstler, In this set, each movement (track) is named after one of nine ranks that represent the progress of a Künstler.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/YSMJE9/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>JCTBWT@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-JCTBWT</pentabarf:event-slug>
+            <pentabarf:title>Euler/Mynther/Sprenger- Ghosts in the Moon Machine</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200905T023000</dtstart>
+            <dtend>20200905T033000</dtend>
+            <duration>1.00000</duration>
+            <summary>Euler/Mynther/Sprenger- Ghosts in the Moon Machine</summary>
+            <description>Der Komponist Thies Mynther (auch Komponist der Musik zum Communityfilm All Creatures Welcome) , der Theatermacher Veit Sprenger (Showcase Beat le Mot) und der bildende Künstler Tobias Euler (Gründer des legendären Jonny Knüppel in Berlin) haben zu Ehren des großen Musikers Moondog eine interventionistische Musikmaschine entwickelt. Die Moon Machine ist eine mobile Musikinsel, eine Bricolage mit pneumatischen Instrumenten und mechatronischen Klangautomaten, Sonnenschirm, Signalhörnern und akustischen Kollisionswarngeräten. Damit erkunden die drei Künstler die Welt Moondogs. Seine Werke und Instrumente wie die Trimba oder die Dragon’s Teeth werden dafür um eigene Melodien, Gedichte und musikalische Experimente ergänzt. 
+Basierend auf Auszügen aus Ausstellungen und Performances gestalten Sie für das DiVOC: Push To Talk einen exklusiven Stream of consciousness. 
+
+The composer Thies Mynther (also known from bands such as Phantom Ghost and collaborator of Chicks on Speed), the theater maker Veit Sprenger (Showcase Beat le Mot) and the visual artist Tobias Euler (founder of the legendary Jonny Knüppel in Berlin) have developed an interventionist music machine, inititially built in honor of the outstanding musician Moondog.The Moon Machine is a mobile music island, a bricolage with pneumatic instruments and mechatronic sound machines, sun umbrella, signal horns and acoustic collision warning devices. Based on Moondog’s works and his instrument inventions such as the Trimba or the Dragon&#x27;s Teeth, the artists complement the composer’s canon with their own melodies, poems and musical experiments. Built in 2019, the three artists continue to explore its performative possibilities in different contexts, after exhibitions and shows in Münster and Hamburg they will create an exclusive stream of consciousness for DiVOC: Push To Talk. 
+
+    Tobias Euler (born 1977) studied the liberal arts at the Bauhaus University in Weimar. His scope of activities includes graphic design, illustration, photography, interactive installations, mechatronics and music. In addition to various exhibitions Tobias Euler collaborated in theatre productions and developed scenography concepts, interactive sound objects and large-scale kinetic installations.
+
+    Thies Mynther (born 1968) is a composer, lyricist, producer and performer and as such has contributed to over a hundred album releases. In the early 2000s he extended the focus of his activities to sound design and score composition.
+    Since 2012 he has dedicated himself to conceive playful hybrids of digital media and performative means to produce contemporary, art-related forms of musical theatre.
+
+    Veit Sprenger (born 1967) is a theatre maker, author and producer. He is founding member of the theatre group Showcase Beat Le Mot, with whom he has produced theatre pieces, performances, art actions and music videos since 1998.To date he has produced more than forty theatre pieces, which were staged in sixteen different countries.
+
+https://www.thiesmynther.com/</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/JCTBWT/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>7SUCM7@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-7SUCM7</pentabarf:event-slug>
+            <pentabarf:title>Gora &amp; Eloy</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200905T033000</dtstart>
+            <dtend>20200905T043000</dtend>
+            <duration>1.00000</duration>
+            <summary>Gora &amp; Eloy</summary>
+            <description>Kicking off in fine style, Gora teamed up with Boogizm co-founder Fym as »Gora &amp; Eloy«. Their project is a unique definition of broken bass house, a unique blend of hi-tec bassdriven sound, broken beats, weird bleeps and warm analogue space. Their productions are full of quirky flavors whilst maintaining a banging dancefloor appeal.
+
+
+https://www.instagram.com/goraeloy/</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/7SUCM7/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>WBA9KZ@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-WBA9KZ</pentabarf:event-slug>
+            <pentabarf:title>Steffen Bennemann</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200905T043000</dtstart>
+            <dtend>20200905T063000</dtend>
+            <duration>2.00000</duration>
+            <summary>Steffen Bennemann</summary>
+            <description>Ist seid enigen Jahren beim Booking-Team des Congress. 
+Mitbegründer der Nachtdigital  ( https://www.youtube.com/watch?v=rX-WU3MYykc )
+
+https://soundcloud.com/steffenbennemann</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/WBA9KZ/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>AGAMHV@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-AGAMHV</pentabarf:event-slug>
+            <pentabarf:title>Breadboard to Printed Circuit Board - Bring your ideas</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200905T140000</dtstart>
+            <dtend>20200905T151500</dtend>
+            <duration>1.01500</duration>
+            <summary>Breadboard to Printed Circuit Board - Bring your ideas</summary>
+            <description>#### DE:
+Wer kennt es nicht, ihr habt ein Breadboard mit Kabeln überall und es funktioniert sogar. Aber wie bekomme ich das jetzt von A nach B ohne das es auseinander fällt oder kann es wirklich verbauen und benutzen.
+Da kommt schnell mal die Idee auf, ich könnte doch mal eine Platine herstellen. Aber nur wie?
+
+Und löte ich einfach meine Dev-Boards auf oder nur die Bauteile, und wo bekomme ich überhaupt Bauteile oder das PCB her?
+
+Wie erstelle ich mein PCB Design. Ist das teuer? Kann ich das einfach so?
+
+Die Kurze Antwort ist: Ja du kannst das!
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:AGAMHV).*
+
+---
+
+#### EN:
+Who doesn‘t know the feeling when you have made a mess of wires on your desk and it even works? But how do I move this thing now, or even mount and use properly?
+You’ve probably thought about making PCBs but how?
+
+Just solder the dev-boards on the PCB or make everything myself? Where do I get PCBs and parts from? Is it expensive?
+
+Can I even make a PCB design?
+
+Short answer is: YES!
+
+*You can submit questions about this talk in [this pad](https://di.c3voc.de/pad/ptt:talk:AGAMHV).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/AGAMHV/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>Jadyn</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>USPQZF@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-USPQZF</pentabarf:event-slug>
+            <pentabarf:title>How (some) biohackers tackle the COVID19 pandemic - an example</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200905T153000</dtstart>
+            <dtend>20200905T154500</dtend>
+            <duration>0.01500</duration>
+            <summary>How (some) biohackers tackle the COVID19 pandemic - an example</summary>
+            <description>Rapid and exhaustive testing on SARS-CoV-2 is one of the key pillars of pandemic-control management.
+The Biotech-Industry didn‘t miss their chance in pivoting this huge „market“ and sell their testing reagents to horrendous prices. Even in Nigeria one test still costs 60$.
+
+We, the DIY-bio community &amp; academical developmental aid organizations, are finally catching up: developing, validating and distributing open source test-protocols and the critical resources and knowledge to produce key elements (enzymes) by your own.
+
+This approach to distribute DNA-rings (plasmids), necessary for producing enzymes in bacteria, can help cut cost tenfold or more, rendering low-resource regions more independent from the patent- &amp; price-war on Biotech and heavily limiting supply chain dependencies.
+
+*You can submit questions about this talk in [this pad](https://di.c3voc.de/pad/ptt:talk:USPQZF).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Kurz und knapp</category>
+            <url>https://talks.mrmcd.net/ptt/talk/USPQZF/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>sun</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>VXGHJQ@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-VXGHJQ</pentabarf:event-slug>
+            <pentabarf:title>Warum momentan Lernvideos auf YouTube durch die Decke gehen?</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200905T160000</dtstart>
+            <dtend>20200905T161500</dtend>
+            <duration>0.01500</duration>
+            <summary>Warum momentan Lernvideos auf YouTube durch die Decke gehen?</summary>
+            <description>Die Digitalisierung ist nicht mehr weg zudenken. Gerade jetzt in Zeiten der Krise und des Corona ändert sich vieles im Bereich der Ausbildung. Die Lehre findet weitestgehend online via. Skype oder Teams statt. Bei Fragen der Studierenden wird YouTube die erste Anlaufstelle.
+
+Als größter Edutuber im Bereich Elektrotechnik, sehe ich, dass immer mehr Studenten und Schüler die Plattform YouTube nicht nur für Musik und Comedy nutzten sondern auch für Ihre Ausbildung und Studium. Warum ist das so? Wieso sind klassische Vorlesungen im Vergleich zu Onlinevideos stinklangweilig? Welche Möglichkeiten und Chancen bittet das ganze? Über diesen Trend möchte ich in 10 Minuten referieren anschließend gibt es Q&amp;A.
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:VXGHJQ).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Kurz und knapp</category>
+            <url>https://talks.mrmcd.net/ptt/talk/VXGHJQ/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>Alexander Stöger</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>U8GQZT@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-U8GQZT</pentabarf:event-slug>
+            <pentabarf:title>&quot;Na und, ich habe doch nichts zu verbergen?&quot; - mit Bildern den Datenschutz einfach und zielgruppengerecht erklären</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200905T163000</dtstart>
+            <dtend>20200905T174500</dtend>
+            <duration>1.01500</duration>
+            <summary>&quot;Na und, ich habe doch nichts zu verbergen?&quot; - mit Bildern den Datenschutz einfach und zielgruppengerecht erklären</summary>
+            <description>Wir sind cyber4EDU und setzen uns für den verantwortungsvollen Umgang mit Technologie im Bildungswesen ein. Die Vorzüge von datenschutzkonformen und dezentralen Lösungen gegenüber Schüler\*innen, Lehrkräften/Pädagog\*innen, Schulleitungen, Bildungsbehörden und politischen Akteur\*innen darzulegen ist dabei nicht immer einfach. Darum wollen wir mit euch zusammen (sprachliche) Bilder entwickeln, die einfach, kurz und prägnant sind. Als Beispiele zur Erklärung sei die Darstellung von &quot;Verschlüsselung&quot; anhand der Bilder &quot;Postkarte und Briefumschlag&quot; bzw. den &quot;Prozessor&quot; für das &quot;Herz eines Computers oder Smartphones&quot; genannt.
+
+**Als Teaser:**
+Wie würdest du einen komplexen Sachverhalt wie ...
+    * Privatsphäre
+    * Algorithmus
+    * Metadaten
+    * dezentrale Infrastruktur
+   ... in einfachen Bildern erklären?
+
+In dem interaktiven Workshop wollen wir in Kleingruppen (in Breakoutrooms von BigBlueButton) anschauliche Bilder für typische Beispiele finden und besprechen. Die dabei entstehenden Ergebnisse sollen jeweils in Mitschriften festgehalten, im Anschluss im Plenum präsentiert und an uns geschickt werden, damit wir ein Gesamtprotokoll anfertigen können. 
+Ziel ist es, am Ende des Workshops sachlich korrekte und anschauliche Bilder in der Argumentation für mehr Datenschutz in Schulen/Bildungseinrichtungen zielgruppenorientiert parat zu haben.
+
+Herzlich willkommen sind alle, denen die einfache Vermittlung abstrakter Konzepte ein Anliegen ist - egal, ob ihr lieber Bilder erschafft oder bewertet.
+
+**Infos zum Stream:**
+Die Einführung und die Ergebnisse des Workshops werden gestreamt.
+In der Zwischenzeit bieten wir im Stream den thematisch passenden Vortrag &quot;Spuren im Netz - einfach erklärt&quot; von derMicha an. 
+Während des Vortrags werden die Teilnehmenden des Workshops in Kleingruppen abseits des Streams arbeiten. So können sie ungestört ihrer Kreativität freien Lauf lassen, während im Stream weiterhin Programm zu sehen ist.
+
+**Auswertungen**
+Aufbereitungen der Gruppenarbeiten sind nun auf der Seite von cyber4EDU zu finden: https://cyber4edu.org/c4e/wiki/workshops/divoc_ptt 
+
+*Stell deine Fragen zum Vortrag von derMicha [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:U8GQZT).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/U8GQZT/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>cyber4EDU</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>NKBDXR@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-NKBDXR</pentabarf:event-slug>
+            <pentabarf:title>Erlebnisse eines KRITIS Prüfers</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200905T183000</dtstart>
+            <dtend>20200905T194500</dtend>
+            <duration>1.01500</duration>
+            <summary>Erlebnisse eines KRITIS Prüfers</summary>
+            <description>Fällt zu Hause ein IT-System aus, repariert man diese oder tauscht sie aus. In Firmen ist das auch eher der Regelfall. Wenn aber eine Anlage oder Komponente einer kritischen Infrastruktur ausgetauscht oder nach neuen Sicherheitsanforderungen angepasst werden müsste, ist das nicht ganz so trivial realisierbar. Auf welche - teilweise Jahrzehnte gereifte - Problemstellungen ein KRITIS-Prüfer dann trifft - und wie diese ggf. gelöst werden können - wird direkt aus dem Leben eines KRITIS-Prüfers erzählt. Schauen wir doch mal gemeinsam, auf was man dabei so stößt und welcher neue archäologische Bereich daraus geprägt werden kann.
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:NKBDXR).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/NKBDXR/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>HonkHase</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>L3ATSC@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-L3ATSC</pentabarf:event-slug>
+            <pentabarf:title>Feministischer Buchklub - Best of</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200905T200000</dtstart>
+            <dtend>20200905T201500</dtend>
+            <duration>0.01500</duration>
+            <summary>Feministischer Buchklub - Best of</summary>
+            <description>Der feministische Buchklub ist mal wieder zusammengekommen. Auf Einladung der Haecksen tauschten sich am Samstag von 18h bis 19h interessierte Menschen in einer Self-Organised Session über Bücher, Filme, Podcasts aus. Hier im Stream präsentieren wir euch im Anschluss ein Best-Of: Wo findet ihr die frisch aktualisierten Empfehlungen, wie könnt ihr auch in Zukunft weiter beitragen und Empfehlungen teilen? Wer keine Zeit für den kompletten Buchklub hatte oder zu spät darauf aufmerksam wurde, kann sich hier live oder später in der Aufzeichnung informieren und mit uns die gemeinsam erarbeiteten Ergebnisse feiern. Schau dafür auch gerne hier vorbei:  https://wiki.haecksen.org/index.php/Haecksen_library
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:L3ATSC).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Kurz und knapp</category>
+            <url>https://talks.mrmcd.net/ptt/talk/L3ATSC/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>melzai</attendee>
+            
+            <attendee>c_ristina</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>ZSZWMT@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-ZSZWMT</pentabarf:event-slug>
+            <pentabarf:title>Hacker eG Camp Bridge</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200905T203000</dtstart>
+            <dtend>20200905T214500</dtend>
+            <duration>1.01500</duration>
+            <summary>Hacker eG Camp Bridge</summary>
+            <description>Vom 3.-8. September findet das Camp der Werkkooperative der Technikfreundinnen (WTF) eG i.G. und des VEB IT eV statt (&quot;Hacker eG&quot;) Wir haben vor, für die daheimgebliebenen Member in Hybridmanier Dinge zu streamen oder in BBB zu nutzen. Das Camp findet komplett draußen auf einem Berg im Vogtland statt, wohin wir per Richtfunk etwas Netz beamen werden.
+Wir machen eine Liveschalte zwischen divoc und Camp und wollen ein Gemeinschaftserlebnis schaffen. Inhaltlich könnte es einen Camprundgang mit mobiler Kamera geben, ein Laberfeuer, ein WTF-StateOfTheUnion, ein WTF-AskUsAnything, Onlinewaffeln mit dem WOC, oder oder. Infos zu unserem Genossenschaftsprojekt gibt es auf https://vebit.xyz - Aber am besten Ihr kommt zur DivoC-WTF-Schaltkonferenz!
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:ZSZWMT).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/ZSZWMT/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>ajuvo</attendee>
+            
+            <attendee>L3D</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>AHCWTD@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-AHCWTD</pentabarf:event-slug>
+            <pentabarf:title>THORD1S</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200905T220000</dtstart>
+            <dtend>20200905T230000</dtend>
+            <duration>1.00000</duration>
+            <summary>THORD1S</summary>
+            <description>http://www.thord1s.de/</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/AHCWTD/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>HDQMHC@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-HDQMHC</pentabarf:event-slug>
+            <pentabarf:title>the mad bitter</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200905T230000</dtstart>
+            <dtend>20200906T000000</dtend>
+            <duration>1.00000</duration>
+            <summary>the mad bitter</summary>
+            <description>Crazy, erratic and edgy Gameboy-music from St. Pauli, the anarchistic heart of Hamburg. Founder of 8 Pauli, a series of chiptune-parties in Germany.
+https://soundcloud.com/the-mad-bitter</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/HDQMHC/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>UUAGJX@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-UUAGJX</pentabarf:event-slug>
+            <pentabarf:title>unicorn partisans</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200906T000000</dtstart>
+            <dtend>20200906T010000</dtend>
+            <duration>1.00000</duration>
+            <summary>unicorn partisans</summary>
+            <description>https://unicornpartisans.net/</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/UUAGJX/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>WHFTLZ@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-WHFTLZ</pentabarf:event-slug>
+            <pentabarf:title>Morelle</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20200906T010000</dtstart>
+            <dtend>20200906T040000</dtend>
+            <duration>3.00000</duration>
+            <summary>Morelle</summary>
+            <description>https://www.mixcloud.com/Morelle/</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Musik</category>
+            <url>https://talks.mrmcd.net/ptt/talk/WHFTLZ/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Lounge</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>RCKRHP@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-RCKRHP</pentabarf:event-slug>
+            <pentabarf:title>Betrieb und Modifikationen einer eigenen Compiler-Explorer Instanz</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200906T140000</dtstart>
+            <dtend>20200906T151500</dtend>
+            <duration>1.01500</duration>
+            <summary>Betrieb und Modifikationen einer eigenen Compiler-Explorer Instanz</summary>
+            <description>Compiler-Explorer (godbolt.org) ist unter C++ Entwickler*innen ein sehr
+beliebtes Werkzeug. Teilweise um zu lesen was ein Compiler tatsächlich aus dem
+eigenen Quelltext macht, teilweise um an Code Fragmenten rumzufrickeln bis der
+Compiler endlich zufrieden ist, aber auch als pastebin mit eingebauter
+Compiler-diagnostics, … oder um im Internet recht zu haben und in einer
+aufgeheizten Diskussion sagen zu können &quot;hier ist der Code, der Compiler frisst
+ihn und macht super gute Assembly draus&quot;.
+
+Für die tägliche Arbeit an unserem Software-Stack hat mir allerdings viel gefeht:
+ * einfache Einbindung von header files unserer
+in-house Bibliotheken (incl. des aktuellen nightly builds und header files aus
+code generation)
+ * Anwendung unseres clang-format styles für einfacheres
+hin-und-her Kopieren
+ * reibungslosere Bedienung von tools die alle
+doch eher frickelig sind
+ * Auflösung von transitiven Link-Abhängigkeiten für Code-Execution
+
+Challenge accepted: Was als kleiner proof-of-principle im Hackcenter bei der
+GPN 2018 anfing lief von Herbst 2018 bis Frühjahr 2020 als Webservice am
+CERN für eine Hand voll Nutzer.
+
+Im Vortrag möchte ich nur wenig C++ und Assembly zeigen oder gar wiederholen
+was ihr von Matt Godbolt auf YouTube findet. Stattdessen zeige ich was alles
+nicht out-of-the-box ging und die Hacks die nötig waren bis alles
+zufriedenstellend lief und Nutzer*innen ihren Code kompilieren und ausführen konnten.
+
+Am Rande möchte ich auch Security Bedenken erwähnen die mir kamen - was dabei raus kam
+ist allerdings nicht zur Nachahmung empfohlen.
+
+Im Laufe des talks gibt es drei kurze Umfragen (Namen müssen nicht angegeben werden)
+
+ - https://t1p.de/yi0o (Wie gut kennt ihr Compiler-Explorer schon?)
+ - https://t1p.de/derq (Wollt ihr ein detailiertes C++ Beispiel?)
+ - https://t1p.de/n317 (Wollt ihr eine live Demo wie man eine Instanz startet?)
+
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:RCKRHP).*
+
+links:
+ * [original blogpost](https://pseyfert.web.cern.ch/pseyfert/blog/compiler-explorer-for-lhcb.html)
+ * [updates blogpost](https://pseyfert.web.cern.ch/pseyfert/blog/compiler-exploring-conted.html)
+ * [github repo 0: core executable to generate configuration for compilation](https://github.com/pseyfert/compilecommands_to_compilerexplorer)
+ * [github repo 1: executable to generate configuration extensions for linking and executing](https://github.com/pseyfert/parse-cmake-for-ce4lhcb)
+ * [github repo 2: some other files used in the configuration](https://github.com/pseyfert/lhcb-compiler-explorer-config)
+ * [github repo 3: docker setup used in production](https://github.com/pseyfert-cern-gitlab-backup/lb-compiler-explorer)
+ * [github repo 4: record/backup/archive of what ran in production - hourly snapshots](https://github.com/pseyfert-cern-gitlab-backup/compiler-explorer)</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/RCKRHP/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>pseyfert</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>BK7TFR@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-BK7TFR</pentabarf:event-slug>
+            <pentabarf:title>Ist das Kunst oder ist das nur schön?</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200906T153000</dtstart>
+            <dtend>20200906T164500</dtend>
+            <duration>1.01500</duration>
+            <summary>Ist das Kunst oder ist das nur schön?</summary>
+            <description>Du traust dich nicht etwas kreatives zu machen, weil du Angst hast, dass es nicht gut wird? 
+Dann ist dieser Talk genau das Richtige für dich!
+
+Ein einem kleinen Vortrags-Teil werden wir uns kurz mit Kunst beschäftigen. Was ist Kunst? Was macht sie aus? Und warum unterscheidet sich das vom Handwerk Kunst?
+Nach diesem kurzen Vortrag geht es in einen interaktiven Teil, in dem wir gemeinsam live malen und in dem Fragen gestellt werden können.
+
+Es soll gegen den Drang des Perfektionismus gehen. Die Freude an der Kunst feiern. Den Selbstwert stärken. Und vor allem Mut machen, sich selbst an kreative Dinge heran zu wagen, ohne Angst vor dem Ergebnis zu haben.
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:BK7TFR).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Interaktiv</category>
+            <url>https://talks.mrmcd.net/ptt/talk/BK7TFR/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>Contenna</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>TAS93S@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-TAS93S</pentabarf:event-slug>
+            <pentabarf:title>Kleines Orgelpfeifen-Update</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200906T170000</dtstart>
+            <dtend>20200906T171500</dtend>
+            <duration>0.01500</duration>
+            <summary>Kleines Orgelpfeifen-Update</summary>
+            <description>Musikinstrumentenbau ist überwiegend geheim-by-accident, er wird persönlich weiter gegeben und ist nicht ohne weiteres öffentlich zugänglich. Das ist für musik- und handwerklich interessierte Nerds natürlich unbefriedigend.
+Nach meinen bisherigen Vorträgen über 3D-gedruckte Orgelteile und Orgelpfeifen habe ich nun an zwei neuen Pfeifensorten gearbeitet, die bisher noch wenig erforscht sind: Diaphone und Flauto Mirabilis.
+Ich erkläre nochmal kurz die Grundlagen zur Klangerzeugung bei Blasinstrumenten (Vorwissen ist also nicht nötig) und stelle euch dann die beiden neuen Pfeifensorten vor.
+
+Weiterführende Links: 
+https://media.ccc.de/v/WHTT3V
+https://media.ccc.de/v/35c3-9768-open_source_orgelbau
+https://github.com/benjaminwand/3d-printed-labial-pipe
+https://benjaminwand.github.io/verbose-cv/projects/flauto_mirabilis.html
+https://github.com/benjaminwand/3d-printed-diaphone-pipe
+https://www.youtube.com/watch?v=g_tp1z9HByQ
+
+Spektrogramm auf Mac: ffmpeg -f avfoundation -i &quot;:0&quot; -lavfi showspectrum=s=300x720:slide=rscroll -c:v rawvideo -r 25 -pix_fmt yuv420p -f matroska - | mpv - 
+Spektrogramm auf Linux: ffplay -f pulse -i &quot;default&quot;
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:TAS93S).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Kurz und knapp</category>
+            <url>https://talks.mrmcd.net/ptt/talk/TAS93S/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>Benjamin Wand</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>CJB3XK@@talks.mrmcd.net</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-CJB3XK</pentabarf:event-slug>
+            <pentabarf:title>Closing</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20200906T173000</dtstart>
+            <dtend>20200906T180000</dtend>
+            <duration>0.03000</duration>
+            <summary>Closing</summary>
+            <description>Closing
+- Infrastructure Review
+- Ausblick: rC3 – Remote Chaos Experience
+- Q&amp;A
+
+*Stell deine Fragen zum Talk [in diesem Pad](https://di.c3voc.de/pad/ptt:talk:CJB3XK).*</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Kurz und knapp</category>
+            <url>https://talks.mrmcd.net/ptt/talk/CJB3XK/</url>
+            <location>Schneider-Hoover</location>
+            
+            <attendee>DiVOC-Team</attendee>
+            
+        </vevent>
+        
+    </vcalendar>
+</iCalendar>

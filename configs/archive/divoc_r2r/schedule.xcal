@@ -1,0 +1,1238 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<iCalendar xmlns:pentabarf='http://pentabarf.org' xmlns:xCal='urn:ietf:params:xml:ns:xcal'>
+    <vcalendar>
+        <version>2.0</version>
+        <prodid>-//Pentabarf//Schedule//EN</prodid>
+        <x-wr-caldesc></x-wr-caldesc>
+        <x-wr-calname></x-wr-calname>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>38PPT7@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-38PPT7</pentabarf:event-slug>
+            <pentabarf:title>Opening</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T100000</dtstart>
+            <dtend>20210402T101500</dtend>
+            <duration>0.01500</duration>
+            <summary>Opening</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (10 minutes + Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/38PPT7/</url>
+            <location>Piscopia</location>
+            
+            <attendee>hexchen</attendee>
+            
+            <attendee>NicKira</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>HTBUVL@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-HTBUVL</pentabarf:event-slug>
+            <pentabarf:title>Zur Psychoanalyse der Klimakrise</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T101500</dtstart>
+            <dtend>20210402T103000</dtend>
+            <duration>0.01500</duration>
+            <summary>Zur Psychoanalyse der Klimakrise</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (10 minutes + Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/HTBUVL/</url>
+            <location>Piscopia</location>
+            
+            <attendee>André</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>KWWQLB@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-KWWQLB</pentabarf:event-slug>
+            <pentabarf:title>Datenschutz Wildlife</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T112000</dtstart>
+            <dtend>20210402T120500</dtend>
+            <duration>0.04500</duration>
+            <summary>Datenschutz Wildlife</summary>
+            <description>Bei der Umsetzung von Datenschutzmaßnahmen kennt die Kreativität keine Grenzen. Aber ist auch alles was möglich ist auch sinnvoll? Wir präsentieren ein Best-of dieser Umsetzungen und lassen euch abstimmen: Ist das noch Datenschutz, ist es Kunst oder kann es weg.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KWWQLB/</url>
+            <location>Piscopia</location>
+            
+            <attendee>C_ristina</attendee>
+            
+            <attendee>Katrin</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>CZLMKG@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-CZLMKG</pentabarf:event-slug>
+            <pentabarf:title>Solving problems of the Anthropocene -- The tricky, the hard and the impossible</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210402T123000</dtstart>
+            <dtend>20210402T131500</dtend>
+            <duration>0.04500</duration>
+            <summary>Solving problems of the Anthropocene -- The tricky, the hard and the impossible</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/CZLMKG/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Theodor Sperlea</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>KBURYL@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-KBURYL</pentabarf:event-slug>
+            <pentabarf:title>Workadventure selbst betreiben: Ein Serviervorschlag</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T152000</dtstart>
+            <dtend>20210402T153500</dtend>
+            <duration>0.01500</duration>
+            <summary>Workadventure selbst betreiben: Ein Serviervorschlag</summary>
+            <description>Die rC3 und die &quot;world&quot; haben viele mit Congress-Entzugserscheinungen zurückgelassen. Der Gedanke liegt nahe, eine eigene Instanz der Pixel-Welt betreiben zu wollen. Aber wo fängt man an? Was braucht es, um so einen Server bereitzustellen? Wie wird der Kram überhaupt aufgesetzt? Die Dokumentation für WorkAdventure ist noch dünn und die Leute, die man fragen kann, sind rar.
+
+In diesem Vortrag soll eine Einstiegshilfe zum Aufsetzen und Betreiben einer solchen WorkAdventure-Instanz geliefert werden. Ziel ist es, mit minimalen Aufwand einen Server einzurichten, der eine WorkAdventure-Installation bereitstellt. Hierfür wird eine Blanko-Debian-VM mithilfe von Ansible automatisch mit einer Grundkonfiguration sowie WorkAdventure samt Konfiguration bespielt. Dies ermöglicht es euch, eigens entworfene oder öffentlich zugängliche Welt-Designs auszuliefern. Den Treffen in der 16-Bit Pixel-Welt steht dann nichts mehr im Weg.
+
+Tech-Stack:
+* Debian  
+* Ansible  
+* Docker  
+* Docker-Compose   
+
+Vorkentnnisse:
+Sowohl Linux als auch Ansible sind in Grundzügen bekannt.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (10 minutes + Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KBURYL/</url>
+            <location>Piscopia</location>
+            
+            <attendee>devnope</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>MF8A7V@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-MF8A7V</pentabarf:event-slug>
+            <pentabarf:title>Falsche Hackathon-Versprechen: Warum Digitalisierung nachhaltigere Ansätze braucht.</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T160000</dtstart>
+            <dtend>20210402T164500</dtend>
+            <duration>0.04500</duration>
+            <summary>Falsche Hackathon-Versprechen: Warum Digitalisierung nachhaltigere Ansätze braucht.</summary>
+            <description>Der Talk zeigt, warum die Erwartung, dass Hackathons Probleme lösen könnten, schlichtweg falsch und sogar gefährlich ist. Der Vortrag liefert Erklärungsansätze, wie Hackathons zu oberflächlichen und strukturell ausschließenden Veranstaltungen werden – und wie falsche Vorstellungen und wirtschaftliche oder politische Interessen dazu beitragen.
+
+Also sind Hackathons immer böse? – Nein!
+
+Wir hacken sehr gerne und wir hacken sehr viel. Natürlich freut es uns, wenn wir uns zusammensetzen können, gemeinsam spinnen, ausprobieren, lernen – und sich auch noch jemand um die Rahmenbedingungen wie Essen kümmert. Umso schöner, wenn dabei auch noch ein lauffähiges Ergebnis rauskommt. Aber Hackathons alleine können eben keine Probleme lösen.
+
+Im Rahmen von Code for Germany haben wir verschiedene Erfahrungen und Perspektiven aus Zivilgesellschaft und Verwaltung zusammengetragen und einen &quot;Hackathon-Leitfaden&quot; geschrieben – der vor allem zeigt, unter welchen eng gesteckten Rahmenbedingungen ein Hackathon erfolgreich sein kann ([Link zum GitHub-Repo](https://github.com/okfde/hackathon-leitfaden)). Die Kernideen werden unter anderem im Vortrag vorgestellt, wir freuen uns aber vor allem über noch mehr Gedanken dazu und natürlich Pull Requests.
+
+Vor allem will der Vortrag helfen bei der Entscheidung: Soll ich bei einem Hackathon teilnehmen? Was erwarte ich davon und wie groß ist die Chance, dass diese Erwartungen auch erfüllt werden?</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MF8A7V/</url>
+            <location>Piscopia</location>
+            
+            <attendee>joliyea</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>XHNSYF@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-XHNSYF</pentabarf:event-slug>
+            <pentabarf:title>Hardware For Future: Mit ausrangierter Hardware helfen</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T171000</dtstart>
+            <dtend>20210402T175500</dtend>
+            <duration>0.04500</duration>
+            <summary>Hardware For Future: Mit ausrangierter Hardware helfen</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/XHNSYF/</url>
+            <location>Piscopia</location>
+            
+            <attendee>katzenparadoxon</attendee>
+            
+            <attendee>Prätorianer</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>FBTQ8F@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-FBTQ8F</pentabarf:event-slug>
+            <pentabarf:title>C3 News Show, die 1.</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210402T182000</dtstart>
+            <dtend>20210402T183500</dtend>
+            <duration>0.01500</duration>
+            <summary>C3 News Show, die 1.</summary>
+            <description>Herald News Show</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>C3 News Show</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/FBTQ8F/</url>
+            <location>Piscopia</location>
+            
+            <attendee>C3 news show</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>SNX9YV@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-SNX9YV</pentabarf:event-slug>
+            <pentabarf:title>Reclaim your Face! Biometrische Massenüberwachung und wie wir uns dagegen wehren können</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T200000</dtstart>
+            <dtend>20210402T204500</dtend>
+            <duration>0.04500</duration>
+            <summary>Reclaim your Face! Biometrische Massenüberwachung und wie wir uns dagegen wehren können</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SNX9YV/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Vik</attendee>
+            
+            <attendee>kantorkel</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>ZJYNWZ@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-ZJYNWZ</pentabarf:event-slug>
+            <pentabarf:title>All Creatures Welcome</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210402T210000</dtstart>
+            <dtend>20210402T230000</dtend>
+            <duration>2.00000</duration>
+            <summary>All Creatures Welcome</summary>
+            <description>Wir zeigen den Film. Im Anschluß gibt es eine Q&amp;A mit Sandra und weiteren Menschen.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/ZJYNWZ/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Filmgizmo</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>ZNX78X@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-ZNX78X</pentabarf:event-slug>
+            <pentabarf:title>Bridges - Musik verbindet</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210402T233000</dtstart>
+            <dtend>20210403T000000</dtend>
+            <duration>0.03000</duration>
+            <summary>Bridges - Musik verbindet</summary>
+            <description>Künstlerin: Eleanna Pitsikaki, Kanun
+Titel: Sweet breeze von Eleanna Pitsikaki, komponiert 2017
+
+Künstlerin: Johanna-Leonore Dahlhoff, Flöte
+Titel: Saturday Afternoon Improvisation
+
+Künstler: Hesham Hamra, Oud
+Musiktitel: Bint al shalabiya, Üsküdara, Ja Hnayna Firuz
+
+Künstlerin: Enkhtuya Jambalrdorj, Pferdekopfgeige und mongolischer Untertongesang
+Titel: Heimweh
+
+Künstler: Andrés Rosales, E-Gitarre
+Titel: Montagmittag Improvisation</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 30min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/ZNX78X/</url>
+            <location>Piscopia</location>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>NFLFCH@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-NFLFCH</pentabarf:event-slug>
+            <pentabarf:title>spiegeleule</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T000000</dtstart>
+            <dtend>20210403T020000</dtend>
+            <duration>2.00000</duration>
+            <summary>spiegeleule</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/NFLFCH/</url>
+            <location>Piscopia</location>
+            
+            <attendee>spiegeleule</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>LFCPLS@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-LFCPLS</pentabarf:event-slug>
+            <pentabarf:title>Triankel</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T020000</dtstart>
+            <dtend>20210403T040000</dtend>
+            <duration>2.00000</duration>
+            <summary>Triankel</summary>
+            <description>Seine Musik spielt technisch gesehen zwischen einem DJ Set und einem LiveAct, da er nicht einfach nur die Stücke in reiner Abfolge arrangiert, sondern die Elemente auf all seinen Decks zu einem neuen Gesamtwerk verbindet. Er vermischt Weltmusikalische Klänge und Gesänge mit treibenden elektronischen Beats und lässt diese Elemente regelrecht miteinander verschmelzen.
+
+So erschafft er in jedem seiner Sets eine musikalisch abwechslungsreiche Reise und holt die Hörenden und Tanzenden immer wieder mit sanft verspielten und gleichzeitig dramatisch ineinander verwobenen Klängen ab und trägt sie mit geschlossenen Augen und einem breiten Lächeln auf den Lippen gemeinsam zur Ekstase.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/LFCPLS/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Triankel</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>CQ9WRF@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-CQ9WRF</pentabarf:event-slug>
+            <pentabarf:title>avocadoom - Tech bis das House zusammenbricht</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T040000</dtstart>
+            <dtend>20210403T060000</dtend>
+            <duration>2.00000</duration>
+            <summary>avocadoom - Tech bis das House zusammenbricht</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/CQ9WRF/</url>
+            <location>Piscopia</location>
+            
+            <attendee>avocadoom</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>9X9SLG@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-9X9SLG</pentabarf:event-slug>
+            <pentabarf:title>Entfernte Maschine verbinden mit IPv6</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T100000</dtstart>
+            <dtend>20210403T104500</dtend>
+            <duration>0.04500</duration>
+            <summary>Entfernte Maschine verbinden mit IPv6</summary>
+            <description>Vorgestellt wird eine praktische Anwendung des IPv6 Internets, um eine Verbindung zu entfernten Maschinen aufzunehmen. Das geschieht nur per IPv6 aber ohne (zusätzliche) Software, ohne VPN und (fast) ohne Hilfsmittel.  Dabei werden einfache Grundlagen zum Adressaufbau in IPv6 vorgestellt. 
+Eine Work-in-progress-Kopie ist im Internet erreichbar unter 
+https://www.schweinekraftland.de/Home_Network_access_IPv6/Home_Network_access_IPv6_HTML/img0.html   Zur geistigen Vorbereitung empfehle ich den Podcast &quot;Anna-Lena Baecker RFCE014: IPv6&quot; mit Clemens Schrimpe  
+https://requestforcomments.de/archives/412
+RFCs zum Thema IPv6 Übersicht in 
+https://tools.ietf.org/wg/v6ops/
+Kochbuch: 
+http://mutant21.onastroidst6krpn.onion/schweinekraftland/Home_Network_access_IPv6/Home_Network_access_IPv6.htm
+https://schweinekraftland.de/Home_Network_access_IPv6/Home_Network_access_IPv6.htm
+IPv6 links:
+dancing Turtle http://[2001:200:dff:fff1:216:3eff:feb1:44d7]/
+https://test.schrimpe.de/
+https://www.ipv6.bieringer.de/</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9X9SLG/</url>
+            <location>Piscopia</location>
+            
+            <attendee>mutant</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>FYYMHS@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-FYYMHS</pentabarf:event-slug>
+            <pentabarf:title>Hacking the DMZ (the border between the two Koreas)</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210403T111000</dtstart>
+            <dtend>20210403T115500</dtend>
+            <duration>0.04500</duration>
+            <summary>Hacking the DMZ (the border between the two Koreas)</summary>
+            <description>Caroline Murgue is a Franco-Korean Anthropologist and an Artist who graduated from Chelsea College of Arts in London and EHESS in Paris. She also studied International Relations at the Institute of Political Science in Lyon. Driven by critical and creative thinking, her philosophy is to make our lives a work of art in an all tech society. 
+As an Artist, Caroline has been working on a project to uncover with sounds and visuals the political genealogy of the DMZ, the border between the two Koreas.
+As an Anthropologist and researcher on the systems of computer thinking, she lectured on AI/Data ethics at the MIT, Google, Microsoft. She founded the Touch Symposium, to spark the conversation between tech professionals and philosophers. She’s a member of the Hacker collective, cDc.
+
+
+Seung Jung is a Korean artist who graduated from Art School in 2006 (ENSAPC - école nationale supérieure d&#x27;art de Paris-Cergy). He lives and works in Seoul and his work used to focus on the system of contemporary capitalistic society through various mediums such as installation or digital art.
+Since 2016, Seung has attempted a new challenge of experimental artworks by engaging science and engineering theories. He obtained a second master degree at Seoul Media Institute of Technology and has developed a new concept with his thesis: Refraction of Data.
+His works of art have been featured in Korean eye, Saatchi gallery, London; Busan biennale, Korea; Plastic Garden, East bridge (798), Beijing; New Romance (Korea-Australia exchange); MMCA Seoul; Transfer K-NRW, Bonn, Germany; ACC residency showcase, Gwangju, Korea; Davinci creative 2019, Seoul, etc. He attended different residency programs abroad to share his experience: ArtOMI, New York, USA; TAV, Taipei, Taiwan, etc.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/FYYMHS/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Caroline Murgue</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>9E8ZNZ@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-9E8ZNZ</pentabarf:event-slug>
+            <pentabarf:title>State of EventFahrplan 2021</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210403T122000</dtstart>
+            <dtend>20210403T130500</dtend>
+            <duration>0.04500</duration>
+            <summary>State of EventFahrplan 2021</summary>
+            <description>[EventFahrplan](https://github.com/EventFahrplan/EventFahrplan) is the project behind a couple of apps for Android which you might already have used at Remote Chaos Experience (rC3), Chaos Communication Congress (3xC3), Chaos Communication Camp, [DiVOC](https://play.google.com/store/apps/details?id=info.metadude.android.divoc.schedule), MRMCD, FrOSCon, GPN, Datenspuren, FIfFKon, FOSDEM, FOSSGIS and other events.
+
+In this talk you will get to know not only the details of the programming work but also all the other topics which require time and engagement to run this project such as translation, design, documentation, advertisement, outreach, communication with users.
+
+Currently, the project is run by one person with occasional - but very welcome - contributions in the form of code reviews, translation, pull requests or just time to discuss ideas. There is essential no financial backing for the project - all work is done in personal spare time. A few people are giving money via [GitHub Sponsors](https://github.com/sponsors/johnjohndoe) - thank you!
+
+After this talk and Q&amp;A you will have solid understanding of how you can contribute to the project, shape its future or finance its development.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9E8ZNZ/</url>
+            <location>Piscopia</location>
+            
+            <attendee>tbsprs</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>MHNXMW@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-MHNXMW</pentabarf:event-slug>
+            <pentabarf:title>failed: [Inklusion]</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T150000</dtstart>
+            <dtend>20210403T154500</dtend>
+            <duration>0.04500</duration>
+            <summary>failed: [Inklusion]</summary>
+            <description>In seinem Vortrag &quot;failed: [Empathy]&quot; hat betalars aufzeigen wollen, wie Unterschiede in den Gedanken- und Gefühlswelten zu autistischen Menschen Medienschaffende davon abhalten diese gut zu repräsentieren. So entstehen Darstellungen, die Vorurteile bekräftigen, wegen denen autistische Menschen von gesellschaftlicher Teilhabe ausgeschlossen werden.
+
+In der ursprünglich wohlwollend und allmählich verärgert kritischen Auseinandersetung mit dem ZDF ist klar geworden: eigentlich sind die entmenschlichenden Darstellungen einer autistischen Figur nur ein Symptom eines noch viel größeren Problems:
+
+Das ZDF setzt wie fast alle anderen Medienunternehmen auch das Grundrecht auf Inklusion nicht um.
+
+Wie der Status von Inklusion in den Medien ist, wo es gut funktioniert, was ihr als Betroffene und Allys unternehmen könnt und, warum sich das ZDF, als wichtiger Partner der &quot;Aktion Mensch&quot;  eigentlich genauso anstellt, wie alle anderen auch, beleuchtet mein Talk.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MHNXMW/</url>
+            <location>Piscopia</location>
+            
+            <attendee>betalars</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>KDHE87@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-KDHE87</pentabarf:event-slug>
+            <pentabarf:title>Hands-On Tutorials mit Virtuellen Desktops in der Cloud</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T161000</dtstart>
+            <dtend>20210403T165500</dtend>
+            <duration>0.04500</duration>
+            <summary>Hands-On Tutorials mit Virtuellen Desktops in der Cloud</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KDHE87/</url>
+            <location>Piscopia</location>
+            
+            <attendee>heurekus</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>LQ8JFE@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-LQ8JFE</pentabarf:event-slug>
+            <pentabarf:title>Gynformation bringt gynäkologische Selbstbestimmung ins Netz</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T172000</dtstart>
+            <dtend>20210403T180500</dtend>
+            <duration>0.04500</duration>
+            <summary>Gynformation bringt gynäkologische Selbstbestimmung ins Netz</summary>
+            <description>Gynformation ist ein queer-feministisches Kollektiv, das sich aus Patient*innen-Perspektive für Selbstbestimmung bei gynäkologischen Behandlungen einsetzt.
+Auf unserer Webseite entsteht auf Basis von Patient*innen-Empfehlungen ein bundesweites Verzeichnis von gynäkologisch behandelnden Personen, die diskriminierungsfrei arbeiten, ein Bewusstsein für Konsens bei der Behandlung haben und Informationen und Raum für selbstbestimmte Entscheidungen geben. So finden sich in unserem Verzeichnis zum Beispiel Informationen darüber ob Praxisräume barrierefrei sind, ob trans Personen in einer Praxis sensiblen Umgang erfahren oder ob Schwangerschaftsabbrüche angeboten werden. 
+Neben dem Empfehlungsverzeichnis entsteht eine Sammlung von inhaltlichen Ressourcen, die Anstoß geben wollen, sich Wissen über Gynäkologie und den eigenen Körper anzueignen.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/LQ8JFE/</url>
+            <location>Piscopia</location>
+            
+            <attendee>C_ristina</attendee>
+            
+            <attendee>Kollektiv für gynäkologische Selbstbestimmung</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>WZTGVU@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-WZTGVU</pentabarf:event-slug>
+            <pentabarf:title>C3 News Show, die 2.</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210403T183000</dtstart>
+            <dtend>20210403T184500</dtend>
+            <duration>0.01500</duration>
+            <summary>C3 News Show, die 2.</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>C3 News Show</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/WZTGVU/</url>
+            <location>Piscopia</location>
+            
+            <attendee>C3 news show</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>TBWCCJ@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-TBWCCJ</pentabarf:event-slug>
+            <pentabarf:title>HEY, ALTER! Alte Rechner für Junge Leute!</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T200000</dtstart>
+            <dtend>20210403T204500</dtend>
+            <duration>0.04500</duration>
+            <summary>HEY, ALTER! Alte Rechner für Junge Leute!</summary>
+            <description>Corona hat die Schwächen und Versäumnisse der Digitalisierung in Deutschland – nicht nur in der Bildung – voll und ganz ans Licht gebracht. Es mangelt an allem: Infrastruktur, Bandbreite, aber auch Wissen und Erfahrung fehlen. Und am schmerzlichsten fehlt es denen die bereits wenig haben. In Braunschweig entstand daher aus einer einmaligen Aktion, die eine Hand voll bedürftige Schüler mit Geräten aus Unternehmensbeständen versorgt hat, die Idee zu HEY ALTER!
+
+HEY, ALTER! hat es sich zur Aufgabe gemacht die abgeschriebenen und aussortierten Geräte aus Firmen einzusammeln, fit zu machen und an Schüler*innen auszugeben die diese dringend benötigen – ohne große Bürokratie. Auf diese Weise gibt HEY, ALTER! den alten Geräten, die sonst verschrottet worden wären, ein zweites Leben. Wir vermeiden so Tonnen von Elektroschrott und tragen zu einem nachhaltigeren Umgang mit der Hardware der Firmen bei. Den Schülern verhelfen diese Geräte zu mehr Teilhabe und Chancengleichheit die mit dem Distanzunterricht jetzt mehr als sonst bedroht ist. 
+
+HEY, ALTER! Gibt es nun schon in knapp 20 Städten und Kreisen quer durch Deutschland und es werden mit rasanter Geschwindigkeit immer mehr! Und das ist kein Wunder, denn das Konzept von HEY, ALTER! ist eine Art “soziales Franchise”. Dies macht es neuen lokalen Initiativen einfach das Konzept zu übernehmen und lokal zu implementieren. Innerhalb eines Tages können alle Zugänge und Infos bereit gestellt werden die eine neue Initiative benötigt um zu starten! HEY, ALTER! ist eine geschützte Marke die den lokalen Initiativen kostenlos zur Nutzung bereitgestellt wird. Diese Marke macht gerade quer durch Deutschland von sich Reden. Das macht es für Unternehmen unglaublich attraktiv eine Spende an uns mit unserem Logo und Fotos zu bewerben. Social-Media-Posts der Spenden und Berichte in Zeitung, Radio und Fernsehen verhelfen den Spendern zu mehr Reichweite. Für die Spender ist dies eine kostenlose Werbung mit sozialem Engagement eine Win-Win-Situation für Unternehmen, die Umwelt, die Schulen, aber vor allem für die Schüler*innen. 
+
+In unserem Talk geben wir Euch Einblicke in unsere Arbeitsabläufe und zeigen, wie mit sozialem Franchising gute Ideen schnell und einfach verbreitet werden können.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/TBWCCJ/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Daniel Marks</attendee>
+            
+            <attendee>Lukas Tyburzy</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>3MXRDE@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-3MXRDE</pentabarf:event-slug>
+            <pentabarf:title>Emoji domains and how wonderfully broken they are</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210403T211000</dtstart>
+            <dtend>20210403T215500</dtend>
+            <duration>0.04500</duration>
+            <summary>Emoji domains and how wonderfully broken they are</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/3MXRDE/</url>
+            <location>Piscopia</location>
+            
+            <attendee>dysphoricUnicorn</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>DGRKMU@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-DGRKMU</pentabarf:event-slug>
+            <pentabarf:title>Das Netz als Inspirationsquelle für Kunst(werke)</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T221500</dtstart>
+            <dtend>20210403T230000</dtend>
+            <duration>0.04500</duration>
+            <summary>Das Netz als Inspirationsquelle für Kunst(werke)</summary>
+            <description>ZLDKM- Zwei Leute, die Kunst machen. Sie begegneten sich 2002 auf dem 19C3 im Haus am Köllnischen Park in Berlin und blieben seit dem in Kontakt, arbeiteten zusammen, setzten Projekte um und sie machen Kunst. Bis heute. Durch die Einschränkungen der COVID-19-Pandemie war eine Zusammenarbeit im alten Maße nicht möglich, also setzten sie sich in einen virtuellen Thinktank und überlegten. Etwas Neues sollte entstehen, als Intervention und als Test, ob es möglich ist, mit den gegebenen Einschränkungen Kunst zu schaffen, kreativ zu sein, neue Ideen und Innovationen zu entwickeln. Im Fokus steht die Kunst als unbedingtes Ergebnis. Weniger das wer und das wie. Kunst als Motor der Veränderung, Kunst als Inspiration, Kunst als Spiegel. Kunst als Überbrückungshilfe, die kein versteckter Kredit ist, den wir in der Zukunft teuer bezahlen müssen, sondern Kunst als echte Investition für eine Zukunft in der wir leben wollen.
+
+Aus den ersten Überlegungen entstand Software die zum Beispiel aus unerwünschter E-Mail Werbung (Spam) oder aus Netzwerkverkehr (Portscans), der Zeit und statistischen Daten eines virtualisierten Computers im Internet, Kunstwerke im Piet Mondrian Stil generiert. Warum Piet Mondrian? Mondrian gehörte mit seinem späteren Werk zu den Begründern der abstrakten Malerei. Die streng geometrischen Gemälde wurden oft in Kunst, Architektur, Mode, Werbung und Populärkultur zitiert. Die orthogonale Bildstruktur mit den schwarzen Linien und den Primärfarben Rot, Gelb und Blau sowie den Nicht-Farben Schwarz, Weiß und Grau tauchten in Mondrians Bildern ab etwa 1921 auf. 100 Jahre später nehmen wir diese Art der Komposition auf und experimentieren damit. Mondrians Werke wurden durch ihn, sein Umfeld oder seine Wahrnehmung inspiriert. Wie groß welche Fläche wird oder welche Farbe bzw. Nicht-Farbe eine Fläche bekommt, wurde durch ihn bewusst oder unbewusst entschieden. Seine Kompositionen hingen von Faktoren ab, die uns nicht bekannt sind und die Mondrian selbst vielleicht auch nicht bekannt waren. Wir versuchen nun das Internet, als Inspirationsquelle einzusetzen und die Werke so entstehen zu lassen.
+
+In dem Vortrag wollen wir die Idee, das Konzept, die Umsetzung und erste Ergebnisse zeigen.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DGRKMU/</url>
+            <location>Piscopia</location>
+            
+            <attendee>ST (ZLDKM)</attendee>
+            
+            <attendee>Stefan (ZLDKM)</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>7EDPBT@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-7EDPBT</pentabarf:event-slug>
+            <pentabarf:title>LENI</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210403T230000</dtstart>
+            <dtend>20210404T000000</dtend>
+            <duration>1.00000</duration>
+            <summary>LENI</summary>
+            <description>Treibende Basslines shakern ausgelassen mit Percussions. Sanfte Vocals liebkosen mit schönen Melodien. Ungefähr so kann man LENI’s Stil beschreiben. Vielleicht ist es aber auch doch noch viel mehr als das? 
+Eins steht fest - im Downtempo fühlt sie sich angekommen.
+So richtig Zuhause ist LENI in Leipzig, wo sie am liebsten mit ihrer [ɔstˈɛnd]-Crew unterwegs ist. 
+Die Liebe zur elektronischen Musik und die Verbindung in die Szene waren schon immer da. Also kein Wunder, dass sie auch selbst leidenschaftlich gerne hinter den Decks steht und mit ihrem Sound verzaubert.
+
+https://soundcloud.com/lenilow</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/7EDPBT/</url>
+            <location>Piscopia</location>
+            
+            <attendee>LENI</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>VRTJHA@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-VRTJHA</pentabarf:event-slug>
+            <pentabarf:title>Radical Ambient Inferno w/ Maya DJ</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T000000</dtstart>
+            <dtend>20210404T020000</dtend>
+            <duration>2.00000</duration>
+            <summary>Radical Ambient Inferno w/ Maya DJ</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/VRTJHA/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Antje-Maya Hirsch</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>DMREWM@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-DMREWM</pentabarf:event-slug>
+            <pentabarf:title>DJ LadyBird</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210404T020000</dtstart>
+            <dtend>20210404T030000</dtend>
+            <duration>1.00000</duration>
+            <summary>DJ LadyBird</summary>
+            <description>DJ LadyBird:
+Born in Vienna / Austria in the 80ies LadyBird grew up with Jungle, Drum´n Bass and 2Step on the one hand and on the other hand was influenced by the vienna downtempo style from Kruder &amp; Dorfmeister. In early 2000 her student job was DJing and she continued djing on radio shows. On a trip to London in the early 2000 she was exposed to the UK Dance Music - since then she is hooked on Dance- and House Music. Since 2009 she is influenced by the Berlin Club scene and actually spotted on House, LofiHouse, TechHouse, Bass, Garage with a lot of Soul and Funk inside!
+Be curious!!</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DMREWM/</url>
+            <location>Piscopia</location>
+            
+            <attendee>DJ LadyBird</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>GSDGXP@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-GSDGXP</pentabarf:event-slug>
+            <pentabarf:title>Reko, lets reboot agriculture</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T102000</dtstart>
+            <dtend>20210404T103500</dtend>
+            <duration>0.01500</duration>
+            <summary>Reko, lets reboot agriculture</summary>
+            <description>Reko circles 
+The idea came from Finland where the first circles have existed since 2013. Reko means rejäl konsumption which translates to real consumption. The idea is to bring together producers and consumers for food and raw products. Directly without hands in the middle. Locally produced, bought by the people that will eat it. Meeting each other for the exchange of products. Reko supports values like local food production, combined with trust, a passion for exciting ingredients and a love for small scale production. The circles are open for everyone. Through direct contact between consumers and producers a reliability is built. Consumers can ask detailed questions about the ways their food is produced. They get a different level of appreciation really knowing where it is coming from.It makes them able to buy products that are not available in stores and getting products as fresh as possible. Small scale producers can play along with their strengths like educating about their products, trying out new things and handling overproduction better. 
+How does it work in practice? 
+I heard about the Reko movement in 2018. I lived in the countryside outside a small town. A place not known for sustainable change or innovation. But I had heard about some small farms that had been started, exploring more sustainable ways of farming. Though these spots existed there was a connection missing with the small town and the people living there. So together with a neighbour we started Reko Ring Hörby.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (10 minutes + Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/GSDGXP/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Julia Westberg</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>SMHXFD@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-SMHXFD</pentabarf:event-slug>
+            <pentabarf:title>Repair for Future</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210404T111000</dtstart>
+            <dtend>20210404T115500</dtend>
+            <duration>0.04500</duration>
+            <summary>Repair for Future</summary>
+            <description>Die Repair-Café-Szene wurde auf ihrem Höhepunkt des gesellschaftlichen Interesses von der Covid-Pandemie kalt erwischt. Schnell eröffneten jedoch einige lokale Gruppen Online-Reparatursprechstunden. Bei einer bundesweiten Schwerpunktwoche Anfang Februar fanden sie unter reger Beteiligung aus dem Netzwerk Reparatur-Initiativen ihren bisherigen Höhepunkt.
+Auch die EU wartet mit einigen vielversprechenden Neuerungen auf.
+Ich gebe einen Überblick zu Erfahrungen und Grenzen von virtuellen Repair-Cafés und die aktuellen politischen Entwicklungen zum Thema Reparierbarkeit.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SMHXFD/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Andreas Frisch</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>3ASR88@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-3ASR88</pentabarf:event-slug>
+            <pentabarf:title>Hydrogen beyond the hype</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T122000</dtstart>
+            <dtend>20210404T130500</dtend>
+            <duration>0.04500</duration>
+            <summary>Hydrogen beyond the hype</summary>
+            <description>The EU recently published a Hydrogen roadmap, many countries, Germany included, have their own hydrogen strategies. Many hydrogen-based pilot projects have been announced lately. Behind the push for hydrogen is a mixture of lobbying interests - primarily by the natural gas industry - and real concern about decarbonizing certain industries.
+
+The talk will give an overview on hydrogen and the current hype. Today hydrogen is usually produced with natural gas, but in the future green hydrogen made with renewable energy and electrolysis will hopefully take its place. There is an emerging consensus that hydrogen will play its role in certain areas like the steel and chemical industry, but it is not the climate panacea that some think it is. We will also detour to some of the molecules that can be made from hydrogen and learn why future ships may run on Ammonia.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/3ASR88/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Hanno Böck</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>JLXJDB@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-JLXJDB</pentabarf:event-slug>
+            <pentabarf:title>Dark patterns - What they are and what having to implement them says about your job</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T150000</dtstart>
+            <dtend>20210404T154500</dtend>
+            <duration>0.04500</duration>
+            <summary>Dark patterns - What they are and what having to implement them says about your job</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/JLXJDB/</url>
+            <location>Piscopia</location>
+            
+            <attendee>dysphoricUnicorn</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>RXZV33@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-RXZV33</pentabarf:event-slug>
+            <pentabarf:title>Shenzhen I/O IRL - an open source educational electronics puzzle.</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T161000</dtstart>
+            <dtend>20210404T165500</dtend>
+            <duration>0.04500</duration>
+            <summary>Shenzhen I/O IRL - an open source educational electronics puzzle.</summary>
+            <description>This is currently work in progress. 
+
+I implemented an interpreter for the Shenzhen I/O pseudo-assembler language and an implementation of the &quot;Simple I/O&quot; and &quot;XBus&quot; pins on the ultra-cheap 8bit Padauk PFS173 microcontroller (3000 words of flash memory, 256bytes of RAM).
+
+The kit consists of a GUI application for programming the microcontrollers and a circuit board. The board connects to any PC via USB and  has 2 emulated &quot;MC5000&quot; microcontrollers and different peripherals like buttons, a seven segment display, a buzzer etc. that can be connected via jumper wires. Users have to solve tasks by connecting the components with jumper wires and programm the microcontrollers with up to 14 lines of pseudo-assembly language.
+
+Everything is based on open source (Compiler toolchain, GUI and electronics) and is intended to be used a gamified platform for learning basic electronics and programming skills.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/RXZV33/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Rick Pannen</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>8FDKVL@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-8FDKVL</pentabarf:event-slug>
+            <pentabarf:title>»Wir bräuchten mal ein krankes Kind zum Filmen«</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210404T172000</dtstart>
+            <dtend>20210404T180500</dtend>
+            <duration>0.04500</duration>
+            <summary>»Wir bräuchten mal ein krankes Kind zum Filmen«</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/8FDKVL/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Martina Lenzen-Schulte</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>E7CZPY@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-E7CZPY</pentabarf:event-slug>
+            <pentabarf:title>C3 News Show, die 3.</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T183000</dtstart>
+            <dtend>20210404T184500</dtend>
+            <duration>0.01500</duration>
+            <summary>C3 News Show, die 3.</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>C3 News Show</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/E7CZPY/</url>
+            <location>Piscopia</location>
+            
+            <attendee>C3 news show</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>SPDXA3@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-SPDXA3</pentabarf:event-slug>
+            <pentabarf:title>Astronomy and the climate crisis</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T200000</dtstart>
+            <dtend>20210404T204500</dtend>
+            <duration>0.04500</duration>
+            <summary>Astronomy and the climate crisis</summary>
+            <description>Astronomy is a dirty business, at least in terms of its carbon footprint. Frequent, long-distance flights, the operation of observatories at remote locations, as well as the execution of CPU-intensive simulations lead to per-capita greenhouse gas emission significantly larger than those of the general population. Fortunately, inexpensive solutions, that would significantly reduce our carbon footprint immediately, are available. In this talk, I will break down the typical emissions from astronomical research and argue that we should reduce our own emissions significantly and become role models for demanding realistic change while we continue to collaborate globally. Perhaps more importantly, astronomers can convey awe for the wonders of the universe, a sense of the uniqueness of our planet, and a feeling of global citizenship -- the most important ingredients to provoke a feeling of urgency about the climate crisis, that ideally leads to climate action.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SPDXA3/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Leonard Burtscher</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>EKWBXY@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-EKWBXY</pentabarf:event-slug>
+            <pentabarf:title>Sancho Panzas gesucht: Erlebnisberichte aus der öffentlichen IT-Infrastruktur</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210404T211000</dtstart>
+            <dtend>20210404T215500</dtend>
+            <duration>0.04500</duration>
+            <summary>Sancho Panzas gesucht: Erlebnisberichte aus der öffentlichen IT-Infrastruktur</summary>
+            <description>Ziele wie Dezentralität, Datensparsamkeit, Selbstbestimmung der User oder das erstrittene Digitale Grundrecht auf Integrität und Vertraulichkeit informationstechnischer Systeme werden regelmäßig mißachtet und die Folgen sind bekannt: Vom abgekündigten digitalen Personalausweis  über die die Gesundheitskarte bis hin zum Gesamt-Architektur der digitalen Verwaltung mit DeMail, OZG und RegModG. Bei Digitalprojekten sich keine Gedanken über die technische Umsetzung zu machen, ist wie die Behauptung, der Strom kommt aus der Steckdose. Dabei haben Technikfolgen  erhebliche Auswirkungen auf die Bevölkerung. Ob wir von kleinen, dezentralen Systemen versorgt werden oder von einzelnen Großanlagen abhängig sind, deren Komplexität und Hersteller wir werden kontrollieren noch steuern können.
+
+Während die Politik &quot;neue Begriffe&quot; wie Digitale Souveränität, Datenhoheit, Cybersecurity und Datenethik erfindet, haben sich die Herausforderungen kaum geändert.
+
+Wir wollen aufzeigen, wie ein befolgen von entsprechenden Grundprinzipien - wie u.a. der Hackerethik - oft ein solches Scheitern verhindert  hätten und wie der Staat es wieder und wieder geschafft hat, Projekte in  einen fubar-Zustand zu versetzen.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/EKWBXY/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Little Detritus</attendee>
+            
+            <attendee>Martin Tschirsich</attendee>
+            
+            <attendee>md</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>8YDCXL@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-8YDCXL</pentabarf:event-slug>
+            <pentabarf:title>EinOhm Computergeisttheorie</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210404T222000</dtstart>
+            <dtend>20210404T230500</dtend>
+            <duration>0.04500</duration>
+            <summary>EinOhm Computergeisttheorie</summary>
+            <description>Digitale Kunstarbeit als Live-Performance
+
+Im Selbstexperiment schenke ich dem Computer meine Daten, um mehr über uns zu erfahren.
+
+
+Haben Computer bereits Bewusstsein?
+Ja, klar.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/8YDCXL/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Thomas Fankhauser</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>XJTEDB@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-XJTEDB</pentabarf:event-slug>
+            <pentabarf:title>TRIAC - Supermelodic Gameboytechno &amp; Hybrid Chiptune</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210404T230000</dtstart>
+            <dtend>20210405T000000</dtend>
+            <duration>1.00000</duration>
+            <summary>TRIAC - Supermelodic Gameboytechno &amp; Hybrid Chiptune</summary>
+            <description>Since 2009, TRIAC has been making music with Gameboys. The acoustic products of his endeavours are generally called CHIPTUNE, i.e. music from the sound chips of old game consoles. Stylistically, TRIAC&#x27;s sounds are somewhere between synthwave, techno and hardcore, but prefer to not be pigeonholed.
+For over 10 yeras TRIAC has been on the road, both nationally and internationally on more than 100 gigs in various locations. From the pancake bistro to the concert hall, from London to Cyprus - in every city a dance-mad crowd was able to discover that Gameboys can do much more than just play games.
+On meanwhile 9 published albums and EPs one can convince oneself of the sound spectrum of the old grey console, that has not yet come into age at all.
+With fast, good-humored and well danceable beats from the soundchips of the Nintendo Gameboys TRIAC conjures a grin on the face of everyone who gets themselves involved!</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/XJTEDB/</url>
+            <location>Piscopia</location>
+            
+            <attendee>TRIAC</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>DPAPVP@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-DPAPVP</pentabarf:event-slug>
+            <pentabarf:title>RTE: RemoteTranceExperience (Dj/Vj Set)</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210405T000000</dtstart>
+            <dtend>20210405T020000</dtend>
+            <duration>2.00000</duration>
+            <summary>RTE: RemoteTranceExperience (Dj/Vj Set)</summary>
+            <description>DJ Team: zement micha &amp; Vik (Retox x Systemabsturz)
+VJ Team: clx &amp; Generation Gästeliste
+
+Links:
+
+zement micha: https://soundcloud.com/user_zement1000
+Vik: https://soundcloud.com/systemabsturz/
+clx &amp; Generation Gästeliste: https://www.youtube.com/v/GecMZVIASI4</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Music 120min</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DPAPVP/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Vik</attendee>
+            
+            <attendee>@sondala | Generation Gästeliste</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>HK9QBY@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-HK9QBY</pentabarf:event-slug>
+            <pentabarf:title>Lokale Resilienz &amp; glückliche Genügsamkeit</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210405T100000</dtstart>
+            <dtend>20210405T104500</dtend>
+            <duration>0.04500</duration>
+            <summary>Lokale Resilienz &amp; glückliche Genügsamkeit</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/HK9QBY/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Timm</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>NBCJKN@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-NBCJKN</pentabarf:event-slug>
+            <pentabarf:title>SustAIn: Sustainability Index for Artificial Intelligence</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210405T111000</dtstart>
+            <dtend>20210405T115500</dtend>
+            <duration>0.04500</duration>
+            <summary>SustAIn: Sustainability Index for Artificial Intelligence</summary>
+            <description>SustAIn is a project by AlgorithmWatch, DAI-Labor TU Berlin, and IÖW Intitut für ökologische Wirtschaftsforschung, funded by the Federal ministry of environment in Germany.
+
+With the SustAIn project, we will explore the sustainability impact of AI technologies and systems and work out their potential for our world – for example, through less resource consumption, fair working conditions or sustainable consumption. Our approach to sustainability is based on the 3 Nested Dependencies Model, which prioritizes the environmental, social, and economic pillars of sustainability. Sustainable economic development can only take place in a socially just society and both are dependent on the protection of planetary boundaries. In addition, SustAIn draws on the 17 Sustainable Development Goals (SDGs) adopted by the UN member states in 2015.
+
+To encourage public and policy debates on the topic, we will create a sustainability index for AI systems to serve as a rating system. With our Sustainable AI Labs, we will work with developers to create guidelines for sustainable AI development and come up with policy recommendations.</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/NBCJKN/</url>
+            <location>Piscopia</location>
+            
+            <attendee>Jens Ohlig</attendee>
+            
+            <attendee>Friederike Rohde</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>VWM3YT@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-VWM3YT</pentabarf:event-slug>
+            <pentabarf:title>C3 News Show, die 4.</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>en</pentabarf:language>
+            <pentabarf:language-code>en</pentabarf:language-code>
+            <dtstart>20210405T122000</dtstart>
+            <dtend>20210405T123500</dtend>
+            <duration>0.01500</duration>
+            <summary>C3 News Show, die 4.</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>C3 News Show</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/VWM3YT/</url>
+            <location>Piscopia</location>
+            
+            <attendee>C3 news show</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>MFDUG3@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-MFDUG3</pentabarf:event-slug>
+            <pentabarf:title>Lightning Talks</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210405T140000</dtstart>
+            <dtend>20210405T155500</dtend>
+            <duration>1.05500</duration>
+            <summary>Lightning Talks</summary>
+            <description>Da könnt ihr eure Lightning Talks eintragen: https://di.c3voc.de/r2r:lightning-talks</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Lightning Talks</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MFDUG3/</url>
+            <location>Piscopia</location>
+            
+            <attendee>BenjaminWand</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>SLXEWL@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-SLXEWL</pentabarf:event-slug>
+            <pentabarf:title>Kritische Infrastrukturen in Pandemie-Zeiten</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210405T162000</dtstart>
+            <dtend>20210405T170500</dtend>
+            <duration>0.04500</duration>
+            <summary>Kritische Infrastrukturen in Pandemie-Zeiten</summary>
+            <description>In diesem Vortrag geht es darum, 
+* wie sich einordnen lässt, wer in Corona Pandemie Zeiten KRITIS-Betreiber ist und auf welcher gesetzlichen Grundlage das basiert,
+* welche Maßnahmen KRITIS-Betreiber ergreifen um die Versorgung der Bevölkerung in Krisenlagen wie in einer Pandemie sicherzustellen und
+* welche Herausforderungen KRITIS-Betreiber dabei stemmen müssen
+Angesichts der aktuellen und immer noch anhaltenden Corona-Krise stehen die Betreiber Kritischer Infrastrukturen im besonderen Fokus der Berichterstattung. Die Bevölkerung stellt fest, was Kritische Infrastrukturen sind und wie verletzlich diese in Krisenzeiten sein können. Ängste kommen auf, dass die Versorgungslage bedroht ist.
+Aber sind KRITIS-Betreiber tatsächlich schlecht in einer Pandemie aufgestellt? Welche Maßnahmen wenden diese eigentlich in Krisenlagen an, um die Versorgung der Bevölkerung mit Strom, Wasser, Internet und Mobilfunk oder auch Nahrung in einer weltweiten Krise sicherzustellen? Und welch besonderen Herausforderungen müssen diese dabei stemmen, weil die Krisenlage nicht dem normalen Betriebsmodus entspricht?</description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SLXEWL/</url>
+            <location>Piscopia</location>
+            
+            <attendee>HonkHase</attendee>
+            
+        </vevent>
+        
+        <vevent>
+            <method>PUBLISH</method>
+            <uid>PSARJW@@pretalx.c3voc.de</uid>
+            <pentabarf:event-id></pentabarf:event-id>
+            <pentabarf:event-slug>-PSARJW</pentabarf:event-slug>
+            <pentabarf:title>Infrastructure-Review + Closing</pentabarf:title>
+            <pentabarf:subtitle></pentabarf:subtitle>
+            <pentabarf:language>de</pentabarf:language>
+            <pentabarf:language-code>de</pentabarf:language-code>
+            <dtstart>20210405T173000</dtstart>
+            <dtend>20210405T181500</dtend>
+            <duration>0.04500</duration>
+            <summary>Infrastructure-Review + Closing</summary>
+            <description></description>
+            <class>PUBLIC</class>
+            <status>CONFIRMED</status>
+            <category>Talk/Performance (30 minutes plus Q&amp;A)</category>
+            <url>https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/PSARJW/</url>
+            <location>Piscopia</location>
+            
+            <attendee>hexchen</attendee>
+            
+            <attendee>NicKira</attendee>
+            
+        </vevent>
+        
+    </vcalendar>
+</iCalendar>
