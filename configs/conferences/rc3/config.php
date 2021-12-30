@@ -829,7 +829,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('rC3 Lounge', 'Bitwäscherei Zürich', 'ChaosTrawler', 'xHain Berlin'),
+	'ROOMFILTER' => array('rC3 Lounge', 'Lichtung'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
