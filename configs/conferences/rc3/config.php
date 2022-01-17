@@ -139,7 +139,7 @@ $CONFIG['OVERVIEW'] = array(
 			# 'sendezentrum',
 			# 'haecksen',
 			# 'gehacktesfromhell',
-			# 'xhain',
+			'xhain',
 		),
 	),
 );
