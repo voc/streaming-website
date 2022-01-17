@@ -84,7 +84,7 @@ try {
 		'conference' => new GenericConference(),
 	));
 
-	if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
+	if(startswith('//', baseurl()))
 	{
 		$tpl->set(array(
 			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route).url_params(),
@@ -125,7 +125,7 @@ try {
 		exit;
 	}
 
-	@list($mandator, $route) = explode('/', $route, 2);
+	list($mandator, $route) = array_merge(explode('/', $route, 2), array(true));
 	if(!$mandator)
 	{
 		// root requested

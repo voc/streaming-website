@@ -81,13 +81,13 @@
 		<? endif ?>
 	</head>
 	<body class="<?=h(is_numeric($page[0]) ? 'e'.$page : $page)?>">
-		<? if(!@$naked): ?>
+		<? if(isset($naked) && !$naked): ?>
 			<? include("$assemblies/header.phtml") ?>
 		<? endif ?>
 
 		<? include("$page.phtml") ?>
 
-		<? if(!@$naked): ?>
+		<? if(isset($naked) && !$naked): ?>
 			<? include("$assemblies/footer.phtml") ?>
 		<? endif ?>
 
