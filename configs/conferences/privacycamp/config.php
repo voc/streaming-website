@@ -161,7 +161,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'alice' => array(
 		'DISPLAY' => 'Room Alice',
-		'STREAM' => 'privacycamp-alice',
+		'STREAM' => 'privacycampalice',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -181,7 +181,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'bob' => array(
 		'DISPLAY' => 'Room Bob',
-		'STREAM' => 'privacycamp-bob',
+		'STREAM' => 'privacycampbob',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
