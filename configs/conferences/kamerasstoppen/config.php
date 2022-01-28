@@ -175,7 +175,7 @@ $CONFIG['ROOMS'] = array(
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
-		'IRC' => false,
+		'IRC' => true,
 		'TWITTER' => false,
 	),
 );
@@ -198,5 +198,28 @@ $CONFIG['EMBED'] = true;
  *   $CONFIG['TWITTER'] = true
  */
 $CONFIG['TWITTER'] = false;
+
+$CONFIG['IRC'] = array(
+	/**
+	 * Anzeigetext für die IRC-Links.
+	 *
+	 * %s wird durch den Raum-Slug ersetzt.
+	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
+	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
+	 */
+	'DISPLAY' => '#kameras-stoppen @ hackint',
+
+	/**
+	 * URL für die IRC-Links.
+	 * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
+	 * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#31C3-%s'
+	 * verwendet werden.
+	 *
+	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
+	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
+	 */
+	'URL' => 'https://webirc.hackint.org/#ircs://irc.hackint.org/#kameras-stoppen',
+);
+
 
 return $CONFIG;
