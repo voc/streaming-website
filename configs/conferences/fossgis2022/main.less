@@ -1,0 +1,224 @@
+@import "../../../assets/css/_structure.less";
+
+/* noto-sans-regular - latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/configs/conferences/fossgis2022/assets/noto-sans-v8-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans'), local('NotoSans'),
+       url('/configs/conferences/fossgis2022/assets/noto-sans-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/configs/conferences/fossgis2022/assets/noto-sans-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/configs/conferences/fossgis2022/assets/noto-sans-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/configs/conferences/fossgis2022/assets/noto-sans-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/configs/conferences/fossgis2022/assets/noto-sans-v8-latin-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+
+
+// conference specific styles here
+@pw-color:     #AAAAAA;
+@bg-orange:       #ee7f00;
+
+@body-text:     @pw-color;
+
+@overview-color: @pw-color;
+
+@darker-grey:   rgba(16,16,15,.9);
+@dark-grey:     lighten(@darker-grey, 10%);
+@light-grey:    lighten(@darker-grey, 20%);
+@lighter-grey:  lighten(@darker-grey, 30%);
+
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @darker-grey;
+@text-color:            @body-text;
+
+@link-color:            @body-text;
+@link-hover-color:      @lighter-grey;
+
+// @navbar-height:         70px;
+
+@navbar-default-bg:     @bg-orange;
+@navbar-default-border: @bg-orange;
+
+@navbar-default-link-color: @pw-color;
+//@navbar-default-link-hover-color: @link-hover-color;
+
+body {
+	background-image: url("/configs/conferences/fossgis2022/assets/bg.png");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-attachment: fixed;
+	background-size: 100%;
+	padding: @navbar-height 0;
+	color: @body-text;
+	font-family: "Noto Sans",Arial,sans-serif;
+}
+
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: "Noto Sans",Arial,sans-serif;
+	font-weight: bold;
+}
+
+.group-live {
+	margin-top: 60px;
+}
+
+.room {
+	h1 {
+		text-align: center;
+
+		text-transform: uppercase;
+		font-weight: bold;
+
+		margin: 40px 0 20px 0;
+		color: @bg-orange;
+	}
+}
+
+.overview, .relive {
+	h1, h2 {
+		text-align: center;
+
+		text-transform: uppercase;
+		font-weight: bold;
+
+		margin: 40px 0 20px 0;
+		color: @bg-orange;
+	}
+
+	.room, .recordings, .recording {
+		a, a:hover {
+			text-decoration: none;
+			color: @overview-color;
+		}
+
+		.panel {
+			//background: none;
+			background-color: @darker-grey;
+			border: 1px solid @bg-orange;
+
+			&:hover {
+				text-decoration: none;
+			    background-color: @dark-grey;
+
+			}
+
+			.panel-title {
+				color: @overview-color;
+				font-size: 18px;
+			}
+
+			.panel-primary {
+				background-color: @light-grey;
+				border-color: @light-grey;
+				color: @overview-color;
+				a {
+					color: @overview-color;
+				}
+			}
+
+			.panel-heading {
+				background: none;
+				border: none;
+
+				display: block !important;
+
+				text-transform: uppercase;
+				font-weight: bold;
+
+				padding: 8px 15px;
+
+				a {
+					color: @overview-color;
+				}
+			}
+
+		}
+	}
+}
+
+.overview .room-group-live-music .room .panel .panel-body {
+	margin-bottom: 0;
+}
+
+.banner img {
+	max-width: 50%;
+}
+.banner {
+	display: none
+}
+
+.well a {
+	color: @dark-grey;
+	text-decoration: underline;
+}
+.alert {
+	a {
+		text-decoration: underline;
+	}
+	&.alert-success a {
+		color: @state-success-text;
+	}
+	&.alert-info a {
+		color: @state-info-text;
+	}
+	&.alert-warning a {
+		color: @state-warning-text;
+	}
+	&.alert-danger a {
+		color: @state-danger-text;
+	}
+}
+
+body.multiview .cell {
+	color: black;
+}
+
+.closed .about a {
+	text-decoration: underline;
+	color: @brand-primary;
+}
+
+.schedule .block.pause {
+	color: black !important;
+}
+
+
+footer {
+	color: lightgrey;
+}
+
+.nav-tabs > li > a {
+	//border-radius: 0 !important;
+	background-color: @darker-grey;
+	border: 1px solid @bg-orange;
+	&:hover {
+		background-color: @dark-grey;
+		text-decoration: none;
+	}
+}
+
+body.room .tab-content {
+	background-color: @lighter-grey;
+	border-left: 1px solid @bg-orange;
+	border-bottom: 1px solid @bg-orange;
+	border-right: 1px solid @bg-orange;
+}
+
+@media (max-width: 768px)
+{
+	nav {
+		position: static !important;
+	}
+	body {
+		padding: 0 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.banner {
+		margin-top: 60px;
+	}
+}
