@@ -35,6 +35,7 @@
 @text-color:            @body-text;
 
 @link-color:            @body-text;
+//@link-color:            black;
 @link-hover-color:      @lighter-grey;
 
 // @navbar-height:         70px;
@@ -48,9 +49,9 @@
 body {
 	background-image: url("/configs/conferences/fossgis2022/assets/bg.png");
 	background-repeat: no-repeat;
-	background-position: bottom;
+	background-position: left;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: contain;
 	padding: @navbar-height 0;
 	color: @body-text;
 	font-family: "Noto Sans",Arial,sans-serif;
@@ -185,6 +186,15 @@ body.multiview .cell {
 	color: black !important;
 }
 
+.schedule {
+    a {
+        color: @darker-grey;
+    }
+
+    a:hover {
+        color: @light-grey;
+    }
+}
 
 footer {
 	color: lightgrey;
