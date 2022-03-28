@@ -61,8 +61,8 @@ $CONFIG['CONFERENCE'] = array(
 	 * Sollte üblicherweise nur Inline-Elemente enthalten
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
-	'FOOTER_HTML' => '
-		Streaming by <a href="https://c3voc.de">C3VOC</a>
+  'FOOTER_HTML' => '
+		Content by <a href="https://gerp.amigatraktor.com">Gerp 2022 Demoparty</a> | Streaming by <a href="https://c3voc.de">C3VOC</a>
 	',
 
 	/**
@@ -75,7 +75,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 'BANNER_HTML' => '<div class="logo"></div>',
+	 'BANNER_HTML' => '<div class="logo"><a href="https://gerp.amigatraktor.com"><img src="https://gerp.amigatraktor.com/img/logos/gerp2022-thin.png" /></a></div>',
 
 	/**
 	 * Link zu den Recordings
@@ -112,7 +112,7 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Demoparty' => array(
+		'Gerp 2022' => array(
 			'gerpdemo',
 		),
 	),
@@ -200,5 +200,27 @@ $CONFIG['SCHEDULE'] = array(
  *   $CONFIG['TWITTER'] = true
  */
 $CONFIG['TWITTER'] = false;
+
+$CONFIG['IRC'] = array(
+	/**
+	 * Anzeigetext für die IRC-Links.
+	 *
+	 * %s wird durch den Raum-Slug ersetzt.
+	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
+	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
+	 */
+	'DISPLAY' => 'Gerp 2022',
+
+	/**
+	 * URL für die IRC-Links.
+	 * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
+	 * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#31C3-%s'
+	 * verwendet werden.
+	 *
+	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
+	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
+	 */
+	'URL' => 'https://gerp.amigatraktor.com',
+);
 
 return $CONFIG;
