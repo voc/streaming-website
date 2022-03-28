@@ -75,7 +75,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 'BANNER_HTML' => '<div class="logo"><a href="https://gerp.amigatraktor.com"><img src="https://gerp.amigatraktor.com/img/logos/gerp2022-thin.png" /></a></div>',
+	 'BANNER_HTML' => '<div class="logo"></div>',
 
 	/**
 	 * Link zu den Recordings
