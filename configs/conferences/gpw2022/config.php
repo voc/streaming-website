@@ -232,7 +232,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => true,
+		'SCHEDULE' => false,
 
 		/**
 		 * Name des Raums im Fahrplan
@@ -355,7 +355,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://datenzoo.de/schedule.xml',
+	//'URL' => 'https://datenzoo.de/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
