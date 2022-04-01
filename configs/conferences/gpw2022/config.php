@@ -199,6 +199,7 @@ $CONFIG['ROOMS'] = array(
 		//'SLIDES' => true,
 
                 'DASH' => true,
+		'H264_ONLY' => true,
 
 
 		/**
