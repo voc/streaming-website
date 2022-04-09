@@ -6,6 +6,7 @@ import dateutil.parser
 import pytz
 import datetime
 import slugify
+from xml.sax import saxutils
 
 xml = """<?xml version='1.0' encoding='utf-8' ?>
 <schedule>
@@ -43,7 +44,7 @@ for i in range(4):
         title = event["title"].replace("\n", ", ")
         if len(title) > 43:
             title = title[:40] + "..."
-        xml += "        <title>%s</title>\n" % title
+        xml += "        <title>%s</title>\n" % saxutils.escape(title)
         xml += "        <slug>%s</slug>\n" % slugify.slugify("REVISION" + "-" + str(c+1) + "-" + event["category"] + "-" + event["title"])
         xml += "        <subtitle></subtitle>\n"
         xml += "        <room>Revision</room>\n"
