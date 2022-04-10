@@ -199,7 +199,7 @@ $CONFIG['ROOMS'] = array(
 		 */
 		//'SLIDES' => true,
 
-                'DASH' => true,
+                'DASH' => false,
 
 
 		/**
