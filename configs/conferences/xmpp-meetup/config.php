@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/esbz-wallnacht/index.json',
+	//'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/xmpp-meetup/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -347,72 +347,6 @@ $CONFIG['ROOMS'] = array(
  */
 $CONFIG['EMBED'] = true;
 
-/**
- * Konfigurationen zum Konferenz-Fahrplan
- * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
- */
-$CONFIG['SCHEDULE'] = array(
-	/**
-	 * URL zum Fahrplan-XML
-	 *
-	 * Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht
-	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
-	 * externer HTTP-Cache vorgeschaltet werden.
-	 */
-#	'URL' => 'https://datenzoo.de/schedule.xml',
-
-	/**
-	* Nur die angegebenen Räume aus dem Fahrplan beachten
-	*
-	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-	*/
-	//'ROOMFILTER' => [
-	//	'Vortrag',
-	//],
-
-	/**
-	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-	 */
-	'SCALE' => 7,
-
-	/**
-	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-	 *
-	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
-	 */
-	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2021-03-24') - strtotime(/* Today */ '2021-03-04'),
-	'SIMULATE_OFFSET' => 0,
-);
-
-/**
- * Globale Konfiguration der Twitter-Links.
- *
- * Wird dieser Block auskommentiert, werden keine Twitter-Links mehr erzeugt. Sollen die
- * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
- * existieren sein. ggf. einfach auf true setzen:
- *
- *   $CONFIG['TWITTER'] = true
- */
-
-//$CONFIG['TWITTER'] = array(
-	/**
-	 * Anzeigetext für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
-	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
-	 */
-	//'DISPLAY' => '#vcfb @vcfberlin on twitter',
-
-	/**
-	 * Vorgabe-Tweet-Text für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
-	 */
-	//'TEXT' => '#vcfb',
-//);
 $CONFIG['IRC'] = true;
 
 
