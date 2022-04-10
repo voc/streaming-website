@@ -200,7 +200,7 @@ $CONFIG['ROOMS'] = array(
 		//'SLIDES' => true,
 
                 'DASH' => false,
-
+                'H264_ONLY' => true,
 
 		/**
 		 * Audio-Only-Stream verfügbar
