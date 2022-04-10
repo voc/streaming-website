@@ -359,7 +359,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://datenzoo.de/schedule.xml',
+#	'URL' => 'https://datenzoo.de/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
