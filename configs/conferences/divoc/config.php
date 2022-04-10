@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2022-04-15 15:30"),
+	'STARTS_AT' => strtotime("2022-04-15 12:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -138,7 +138,7 @@ $CONFIG['ROOMS'] = array(
 	'Main Stream' => array(
 		'DISPLAY' => 'Main Stream',
 		'WIDE' => true,
-		'STREAM' => 'divocbb3',
+		'STREAM' => 'csh',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
 			['endpoint' => 'translated',   'label' => 'Translated1'],
@@ -189,7 +189,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	'ROOMFILTER' => array('Main Stream'),
+	// 'ROOMFILTER' => array('Main Stream'),
 	//	'WikiPaka WG: Esszimmer', 'Chaos-West Bühne', 'OIO Stage', 'DLF- und Podcast-Bühne'),
 
 	/**
