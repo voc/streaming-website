@@ -77,7 +77,6 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	/** 'BANNER_HTML' => '<img src="../configs/conferences/fiffkon16/logo.png" class="FIfFKon">', **/
-	'BANNER_HTML' => '<div class="congress"></div><div class="congress-motto"></div>',
 
 	/**
 	 * Link zu den Recordings
@@ -120,7 +119,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'stream',
+			'bb3',
 		),
 	),
 );
@@ -135,7 +134,7 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'stream' => array(
+	'bb3' => array(
 		'DISPLAY' => 'Main Stream',
 		'WIDE' => true,
 		'STREAM' => 'csh',
