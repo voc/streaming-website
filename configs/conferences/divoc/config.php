@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-04-17 23:50"),
+	'ENDS_AT' => strtotime("2022-04-17 23:50"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -119,7 +119,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'bb3',
+			'bb3', 'bb3lounge',
 		),
 	),
 );
@@ -147,11 +147,43 @@ $CONFIG['ROOMS'] = array(
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'SLIDES' => false,
-		'DASH' => true,
+    'DASH' => true,
+    'H264_ONLY' => true,
 		'AUDIO' => true,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Main Stream',
+		'FEEDBACK' => true,
+		'SUBTITLES' => false,
+		'SUBTITLES_ROOM_ID' => 1,
+		'EMBED' => true,
+		'IRC' => true,
+		'IRC_CONFIG' => array(
+			'DISPLAY' => '#divoc @ hackint',
+			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#divoc',
+		),
+		'TWITTER' => true,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#divocbb3 @ twitter',
+			'TEXT'    => '#divocbb3',
+		),
+	),
+	'bb3lounge' => array(
+		'DISPLAY' => 'Lounge',
+		'WIDE' => true,
+		'STREAM' => 'bb3lounge',
+		'PREVIEW' => true,
+    'TRANSLATION' => false,
+		'STEREO' => false,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'SLIDES' => false,
+    'DASH' => true,
+    'H264_ONLY' => true,
+		'AUDIO' => true,
+		'MUSIC' => false,
+		'SCHEDULE' => false,
+		'SCHEDULE_NAME' => 'Lounge',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 1,
