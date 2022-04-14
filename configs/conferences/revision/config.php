@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2022-04-15 10:00"),
+	'STARTS_AT' => strtotime("2022-04-15 15:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2022-04-18 15:00"),
+	'ENDS_AT' => strtotime("2022-04-18 16:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -110,7 +110,7 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Stream' => array(
+		'Main Stream' => array(
 			'revision'
 		),
 		'Extras' => array(
@@ -126,16 +126,16 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
 	'revision' => array(
-		'DISPLAY' => 'Revision',
+		'DISPLAY' => 'Revision Main Stream',
 		'STREAM' => 'revision',
 		'PREVIEW' => true,
 
-		'TRANSLATION' => true,
+		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'H264_ONLY' => true,
 		'DASH' => true,
-		'AUDIO' => true,
+		'AUDIO' => false,
 		'SLIDES' => false,
 		'MUSIC' => false,
 
@@ -156,12 +156,12 @@ $CONFIG['ROOMS'] = array(
 		'STREAM' => 'revisionextras',
 		'PREVIEW' => true,
 
-		'TRANSLATION' => true,
+		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'H264_ONLY' => true,
 		'DASH' => true,
-		'AUDIO' => true,
+		'AUDIO' => false,
 		'SLIDES' => false,
 		'MUSIC' => false,
 
