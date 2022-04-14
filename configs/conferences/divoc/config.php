@@ -119,7 +119,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Live' => array(
-			'bb3', 'bb3lounge',
+			'bb3'
 		),
 	),
 );
@@ -140,50 +140,18 @@ $CONFIG['ROOMS'] = array(
 		'STREAM' => 'csh',
 		'PREVIEW' => true,
 		'TRANSLATION' => [
-			['endpoint' => 'translated',   'label' => 'Translated1'],
-			['endpoint' => 'translated-2', 'label' => 'Translated2']
+			['endpoint' => 'translated',   'label' => 'Translated'],
 		],
 		'STEREO' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'SLIDES' => false,
-    'DASH' => true,
-    'H264_ONLY' => true,
+    		'DASH' => true,
+    		'H264_ONLY' => true,
 		'AUDIO' => true,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Main Stream',
-		'FEEDBACK' => true,
-		'SUBTITLES' => false,
-		'SUBTITLES_ROOM_ID' => 1,
-		'EMBED' => true,
-		'IRC' => true,
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#divoc @ hackint',
-			'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#divoc',
-		),
-		'TWITTER' => true,
-		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#divocbb3 @ twitter',
-			'TEXT'    => '#divocbb3',
-		),
-	),
-	'bb3lounge' => array(
-		'DISPLAY' => 'Lounge',
-		'WIDE' => true,
-		'STREAM' => 'bb3lounge',
-		'PREVIEW' => true,
-    'TRANSLATION' => false,
-		'STEREO' => false,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'SLIDES' => false,
-    'DASH' => true,
-    'H264_ONLY' => true,
-		'AUDIO' => true,
-		'MUSIC' => false,
-		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'Lounge',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 1,
@@ -213,7 +181,8 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://data.c3voc.de/divoc/everything.schedule.xml',
+	// 'URL' => 'https://data.c3voc.de/divoc/everything.schedule.xml',
+	'URL' => 'https://pretalx.c3voc.de/divoc-bb3/schedule/export/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
