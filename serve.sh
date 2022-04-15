@@ -19,4 +19,11 @@ then
 	port=$1
 fi
 
+# check if we should update schedules, upcoming, etc.
+if [[ ! $(find "configs/upcoming.json" -newermt "8 hours ago") ]]; then
+	echo "Updating schedules…\n"
+	./download.sh
+	echo
+fi
+
 $php_bin -S localhost:$port -d short_open_tag=true index.php
