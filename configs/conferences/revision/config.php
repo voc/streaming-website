@@ -1,5 +1,10 @@
 <?php
 
+
+$CONFIG['PLAYER'] = array(
+	'VERSION' => 'player-revision.js',
+);
+
 $CONFIG['CONFERENCE'] = array(
 	/**
 	 * Der Startzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns davor, wird die Closed-Seite
