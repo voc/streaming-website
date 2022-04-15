@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
 	'bb3' => array(
-		'DISPLAY' => 'Main Stream',
+		'DISPLAY' => 'Mainstream',
 		'WIDE' => true,
 		'STREAM' => 'csh',
 		'PREVIEW' => true,
@@ -151,7 +151,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => true,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Main Stream',
+		'SCHEDULE_NAME' => 'Mainstream',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'SUBTITLES_ROOM_ID' => 1,
