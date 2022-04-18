@@ -1,17 +1,24 @@
-stage('Deploy in Test env') {
-    when {
-        branch 'staging'
-    }
-    steps {
-        sh "./deploy-staging.sh"
-    }
-}
+#!groovy
 
-stage('Deploy in Prod env') {
-    when {
-        branch 'master'
-    }
-    steps {
-        // sh "./deploy.sh"
-    }
+final def BRANCH = env.BRANCH_NAME
+
+node {
+	properties([
+			disableConcurrentBuilds()
+	])
+
+	stage('git') {
+		checkout([
+				$class             : 'GitSCM',
+				branches           : scm.branches,
+				userRemoteConfigs  : scm.userRemoteConfigs
+		])
+	}
+
+	stage('deploy') {
+		if (BRANCH == 'staging') {
+			sh('./deploy-staging.sh')
+			// currentBuild.displayName = "${IMAGE_TAG}_${BUILD_NUMBER}"
+		}
+	}
 }
