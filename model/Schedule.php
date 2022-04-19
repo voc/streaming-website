@@ -3,6 +3,7 @@
 class Schedule
 {
 	private $conference;
+	private $program;
 
 	public function __construct($conference)
 	{
@@ -70,8 +71,23 @@ class Schedule
 		return simplexml_load_string($schedule);
 	}
 
+	public function getRoomSchedule($roomName, $roomGuid) {
+
+		// build program, if not realy set
+		if (!isset($this->program)) {
+			$this->getSchedule();
+		}
+
+		return $this->program[$roomName];
+	}
+
 	public function getSchedule()
 	{
+		// reusue already computed schedule, if set.
+		if (isset($this->program)) {
+			return $this->program;
+		}
+
 		// download schedule-xml
 		$schedule = $this->fetchSchedule();
 
@@ -267,8 +283,9 @@ class Schedule
 				return array_search($a, $roomfilter) - array_search($b, $roomfilter);
 			});
 		}
+		$this->program = $program;
 
-		return $program;
+		return $this->program;
 	}
 
 	private function makeEvent(DateTimeImmutable $from, DateTimeImmutable $to): array {
