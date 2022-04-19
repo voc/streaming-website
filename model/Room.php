@@ -47,6 +47,15 @@ class Room
 		return $this->slug;
 	}
 
+	private function get($key, $fallbackValue = null) {
+		$keychain = 'ROOMS.'.$this->getSlug().'.'.$key;
+		return $this->conference->get($keychain, $fallbackValue ?: @$GLOBALS['CONFIG']['ROOM_DEFAULTS'][$key]);
+	}
+
+	private function has($key) {
+		return $this->conference->has('ROOMS.'.$this->getSlug().'.'.$key);
+	}
+
 	public function getThumb() {
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getStream(), 'thumb.jpeg']);
 	}
@@ -60,19 +69,19 @@ class Room
 	}
 
 	public function getStream() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.STREAM', $this->getSlug());
+		return $this->get('STREAM') ?: $this->get('streamId') ?: $this->getSlug();
 	}
 
 	public function getScheduleName() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SCHEDULE_NAME', $this->getDisplay());
+		return $this->get('SCHEDULE_NAME', $this->getDisplay());
 	}
 
 	public function getDisplay() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.DISPLAY', $this->getSlug());
+		return $this->get('DISPLAY') ?: $this->get('name') ?: $this->getSlug();
 	}
 
 	public function getDisplayShort() {
-		$display_short = $this->getConference()->get('ROOMS.'.$this->getSlug().'.DISPLAY_SHORT', '');
+		$display_short = $this->get('DISPLAY_SHORT', '');
 		if (empty($display_short)) {
 			return $this->getDisplay(); // getDisplay() falls back to slug
 		}
@@ -82,49 +91,47 @@ class Room
 	}
 
 	public function h264Only() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.H264_ONLY', false);
+		return $this->get('H264_ONLY');
 	}
 
-
-
 	public function hasStereo() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.STEREO');
+		return $this->get('STEREO');
 	}
 
 	public function hasPreview() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.PREVIEW');
+		return $this->get('PREVIEW');
 	}
 
 	public function requestsWide() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.WIDE');
+		return $this->get('WIDE');
 	}
 
 	public function hasSchedule() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SCHEDULE') && $this->getConference()->has('SCHEDULE');
+		return $this->get('SCHEDULE') && $this->getConference()->has('SCHEDULE');
 	}
 
 	public function hasSubtitles() {
 		return
-			$this->getConference()->get('ROOMS.'.$this->getSlug().'.SUBTITLES') &&
-			$this->getConference()->has('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID') &&
+			$this->get('SUBTITLES') &&
+			$this->has('SUBTITLES_ROOM_ID') &&
 			$this->getConference()->has('SUBTITLES');
 	}
 	public function getSubtitlesRoomId() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SUBTITLES_ROOM_ID');
+		return $this->get('SUBTITLES_ROOM_ID');
 	}
 
 	public function hasFeedback() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.FEEDBACK') && $this->getConference()->has('FEEDBACK');
+		return $this->get('FEEDBACK') && $this->getConference()->has('FEEDBACK');
 	}
 
 
 	public function hasTwitter() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TWITTER') && $this->getConference()->has('TWITTER');
+		return $this->get('TWITTER') && $this->getConference()->has('TWITTER');
 	}
 
 	public function getTwitterDisplay() {
 		return sprintf(
-			$this->getConference()->get('ROOMS.'.$this->getSlug().'.TWITTER_CONFIG.DISPLAY', $this->getConference()->get('TWITTER.DISPLAY')),
+			$this->get('TWITTER_CONFIG.DISPLAY', $this->getConference()->get('TWITTER.DISPLAY')),
 			$this->getSlug()
 		);
 	}
@@ -138,37 +145,37 @@ class Room
 
 	public function getTwitterText() {
 		return sprintf(
-			$this->getConference()->get('ROOMS.'.$this->getSlug().'.TWITTER_CONFIG.TEXT', $this->getConference()->get('TWITTER.TEXT')),
+			$this->get('TWITTER_CONFIG.TEXT', $this->getConference()->get('TWITTER.TEXT')),
 			$this->getSlug()
 		);
 	}
 
 
 	public function hasIrc() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.IRC') && $this->getConference()->has('IRC');
+		return $this->get('IRC') && $this->getConference()->has('IRC');
 	}
 
 	public function getIrcDisplay() {
 		return sprintf(
-			$this->getConference()->get('ROOMS.'.$this->getSlug().'.IRC_CONFIG.DISPLAY', $this->getConference()->get('IRC.DISPLAY')),
+			$this->get('IRC_CONFIG.DISPLAY', $this->getConference()->get('IRC.DISPLAY')),
 			$this->getSlug()
 		);
 	}
 
 	public function getIrcUrl() {
 		return sprintf(
-			$this->getConference()->get('ROOMS.'.$this->getSlug().'.IRC_CONFIG.URL', $this->getConference()->get('IRC.URL')),
+			$this->get('IRC_CONFIG.URL', $this->getConference()->get('IRC.URL')),
 			rawurlencode($this->getSlug())
 		);
 	}
 
 	public function hasWebchat() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.WEBCHAT') && $this->getConference()->has('WEBCHAT_URL');
+		return $this->get('WEBCHAT') && $this->getConference()->has('WEBCHAT_URL');
 	}
 
 	public function getWebchatUrl() {
 		return sprintf(
-			$this->getConference()->get('ROOMS.'.$this->getSlug().'.WEBCHAT_URL', $this->getConference()->get('WEBCHAT_URL')),
+			$this->get('WEBCHAT_URL', $this->getConference()->get('WEBCHAT_URL')),
 			rawurlencode($this->getSlug())
 		);
 	}
@@ -179,39 +186,39 @@ class Room
 
 
 	public function hasEmbed() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.EMBED') && $this->getConference()->get('EMBED');
+		return $this->get('EMBED') && $this->getConference()->get('EMBED');
 	}
 
 	public function hasInfo() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.INFO') && $this->getConference()->get('INFO');
+		return $this->get('INFO') && $this->getConference()->get('INFO');
 	}
 
 	public function getInfo() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.INFO');
+		return $this->get('INFO');
 	}
 	
 	public function hasSdVideo() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SD_VIDEO');
+		return $this->get('SD_VIDEO');
 	}
 
 	public function hasHdVideo() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.HD_VIDEO');
+		return $this->get('HD_VIDEO');
 	}
 
 	public function hasAudio() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.AUDIO');
+		return $this->get('AUDIO');
 	}
 
 	public function hasSlides() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.SLIDES');
+		return $this->get('SLIDES');
 	}
 
 	public function hasMusic() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.MUSIC');
+		return $this->get('MUSIC');
 	}
 
 	public function hasDash() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.DASH');
+		return $this->get('DASH');
 	}
 
 	public function getHLSPlaylistUrl() {
@@ -227,7 +234,7 @@ class Room
 	}
 
 	public function getTranslations() {
-		return $this->getConference()->get('ROOMS.'.$this->getSlug().'.TRANSLATION');
+		return $this->get('TRANSLATION');
 	}
 
 	private function getTranslationEndpoints() {
