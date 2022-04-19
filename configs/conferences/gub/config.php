@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2020-03-17 18:45"),
+	'STARTS_AT' => strtotime("2022-04-26 18:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2020-03-17 22:00"),
+	'ENDS_AT' => strtotime("2020-04-26 22:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -138,21 +138,25 @@ $CONFIG['ROOMS'] = array(
 		 * Angezeige-Name
 		 */
 		'DISPLAY' => 'xHain',
-		'STREAM' => 's23',
-		'PREVIEW' => true,
-		'TRANSLATION' => false,
+                'STREAM' => 'xHain',
 
-		'DASH' => true,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'SLIDES' => false,
-		'AUDIO' => true,
-		'MUSIC' => false,
-		'SCHEDULE' => false,
-		'FEEDBACK' => false,
-		'SUBTITLES' => false,
-		'EMBED' => true,
-		'IRC' => false,
+                'TRANSLATION' => false,
+                'SD_VIDEO' => true,
+                'HD_VIDEO' => true,
+                'H264_ONLY' => true,
+                'DASH' => true,
+                'AUDIO' => true,
+                'SLIDES' => false,
+                'MUSIC' => false,
+
+                'FEEDBACK' => false,
+                'SUBTITLES' => false,
+                'EMBED' => true,
+                'IRC' => false,
+                'TWITTER' => false,
+
+                'SCHEDULE' => false,
+                'SCHEDULE_NAME' => 'Vortrag',
 	),
 	);
 
