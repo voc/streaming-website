@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Gespräch unter Bäumen ist die monatliche Vortragsreihe des xHain HackdracutMakespace',
+	'DESCRIPTION' => 'Gespräch unter Bäumen ist die monatliche Vortragsreihe des xHain Hack+Makespace',
          /**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
