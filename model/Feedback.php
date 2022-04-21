@@ -9,6 +9,12 @@ class Feedback
 		$this->conference = $conference;
 	}
 
+	private function get($key) {
+		return $this->conference->has(['FEEDBACK', $key])
+			? $this->conference->get(['FEEDBACK', $key])
+			: @$GLOBALS['CONFIG']['FEEDBACK'][$key];
+	}
+
 	public function getConference() {
 		return $this->conference;
 	}
@@ -27,7 +33,7 @@ class Feedback
 
 	public function store($info)
 	{
-		$db = new PDO($this->getConference()->get('FEEDBACK.DSN'));
+		$db = new PDO($this->get('DSN'));
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$stm = $db->prepare('
@@ -56,8 +62,8 @@ class Feedback
 	{
 		return
 			isset($_SERVER['PHP_AUTH_USER']) &&
-			$_SERVER['PHP_AUTH_USER'] == $this->getConference()->get('FEEDBACK.USERNAME') &&
-			$_SERVER['PHP_AUTH_PW'] == $this->getConference()->get('FEEDBACK.PASSWORD');
+			$_SERVER['PHP_AUTH_USER'] == $this->get('USERNAME') &&
+			$_SERVER['PHP_AUTH_PW'] == $this->get('PASSWORD');
 	}
 
 	public function requestLogin()
@@ -70,12 +76,12 @@ class Feedback
 
 	public function read($from, $to)
 	{
-		$db = new PDO($this->getConference()->get('FEEDBACK.DSN'));
+		$db = new PDO($this->get('DSN'));
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$stm = $db->prepare('
 			SELECT *
-			  FROM feedback
+			 FROM feedback
 			 WHERE reported BETWEEN :from AND :to
 			 ORDER BY reported DESC
 		');

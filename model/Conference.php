@@ -162,7 +162,7 @@ class Conference extends ModelBase
 	}
 
 	public function hasFeedback() {
-		return $this->has('FEEDBACK');
+		return $this->has('FEEDBACK') && $this->get('FEEDBACK') !== false;
 	}
 	public function getFeedbackUrl() {
 		return joinpath([$this->getSlug(), 'feedback']).url_params();
