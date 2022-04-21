@@ -64,6 +64,37 @@ $GLOBALS['CONFIG']['DOWNLOAD'] = [
 ];
 
 $GLOBALS['CONFIG']['CDN'] = "cdn.c3voc.de";
+
+/**
+ * Konfiguration des Feedback-Formulars
+ *
+ * Wird dieser Block auskommentiert, wird das gesamte Feedback-System deaktiviert
+ */
+$GLOBALS['CONFIG']['FEEDBACK'] = array(
+	/**
+	 * DSN zum abspeichern der eingegebenen Daten
+	 * die Datenbank muss eine Tabelle enthaltem, die dem in `lib/schema.sql` angegebenen
+	 * Schema entspricht.
+	 *
+	 * Achtung vor Dateirechten: Bei SQLite reicht es nicht, wenn wer Webseiten-Benutzer
+	 * die .sqlite3-Datei schreiben darf, er muss auch im übergeordneten Order neue
+	 * (Lock-)Dateien anlegen dürfen
+	 */
+	'DSN' => 'sqlite:/opt/streaming-feedback/feedback.sqlite3',
+
+	/**
+	 * Login-Daten für die /feedback/read/-Seite, auf der eingegangenes
+	 * Feedback gelesen werden kann.
+	 *
+	 * Durch auskommentieren der beiden Optionen wird diese Seite komplett deaktiviert,
+	 * es kann dann nur noch durch manuelle Inspektion der .sqlite3-Datei auf das Feedback
+	 * zugegriffen werden.
+	 */
+	'USERNAME' => 'katze',
+	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
+);
+
+
 /**
  * Konfiguration der Room-Defaults
  *
