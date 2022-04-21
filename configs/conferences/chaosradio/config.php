@@ -1,7 +1,6 @@
 <?php
 
-$upcoming = new Upcoming();
-$upcoming_events = $upcoming->getNextEvents();
+$upcoming_events = Upcoming::getNextEvents();
 $upcoming_crs = array_values(array_filter($upcoming_events, function($event) {
 	return preg_match('/^events:cr[0-9]+$/i', $event['short_name']);
 }));

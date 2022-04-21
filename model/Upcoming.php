@@ -2,13 +2,18 @@
 
 class Upcoming
 {
-	public function getNextEvents()
+	private static $events;
+
+	public static function getNextEvents()
 	{
 		try {
-			$events = file_get_contents('configs/upcoming.json');
-			$events = json_decode($events, true);
+			if (!isset(self::$events)) {
+				$events = file_get_contents('configs/upcoming.json');
+				$events = json_decode($events, true);
 
-			return array_values($events['voc_events']);
+				self::$events = array_values($events['voc_events']);
+			}
+			return self::$events;
 		}
 		catch(ErrorException $e)
 		{

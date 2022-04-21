@@ -1,7 +1,6 @@
 <?php
 
-$upcoming = new Upcoming();
-$events = $upcoming->getNextEvents();
+$events = Upcoming::getNextEvents();
 
 echo $tpl->render(array(
 	'page' => 'closed',
