@@ -13,7 +13,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2022-04-21 19:00"),
+	'STARTS_AT' => strtotime("2022-05-31 19:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -21,7 +21,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2022-04-21 24:00"),
+	'ENDS_AT' => strtotime("2022-05-31 22:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -59,7 +59,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'Netzpolitik,Digitale Gesellschaft, Netzpolitischer Abend',
+	'KEYWORDS' => 'Netzpolitik, Digitale Gesellschaft, Netzpolitischer Abend',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -67,7 +67,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		<a href="https://www.digitale-gesellschaft.ch/dossier/netzpolitischer-abend/">Digitale Gesellschaft</a>
+		<a href="https://netzpolitischer-abend.ch/">Netzpolitischer Abend</a> der <a href="https://www.digitale-gesellschaft.ch/">Digitalen Gesellschaft</a>
 	',
 
 	/**
