@@ -1,9 +1,37 @@
 <?php
 
+$upcoming = Upcoming::getNextEvents('/^dgna$/i');
 
-$CONFIG['PLAYER'] = array(
-	'VERSION' => 'player-revision.js',
-);
+if(count($upcoming) < 1)
+{
+	$DATE = strtotime('1970-01-01 22:00');
+	$TITLE = 'Unknown';
+}
+else
+{
+	$upcoming_event = $upcoming[0];
+	$DATE = strtotime($upcoming_event['start_date']);
+	$TITLE = $upcoming_event['name'];
+}
+
+/**
+ * Globaler Schalter für die Embedding-Funktionalitäten
+ *
+ * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
+ * Embedding-Funktionen deaktiviert.
+ */
+$CONFIG['EMBED'] = true;
+
+/**
+ * Globale Konfiguration der Twitter-Links.
+ *
+ * Wird dieser Block auskommentiert, werden keine Twitter-Links mehr erzeugt. Sollen die
+ * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
+ * existieren sein. ggf. einfach auf true setzen:
+ *
+ *   $CONFIG['TWITTER'] = true
+ */
+$CONFIG['TWITTER'] = false;
 
 $CONFIG['CONFERENCE'] = array(
 	/**
@@ -13,25 +41,15 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2022-05-31 19:00"),
+	'STARTS_AT' => $DATE - 60*30, // -30 Minuten,
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2022-05-31 22:00"),
-
-	/**
-	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
-	 * simuliert, dass die Konferenz noch nicht begonnen hat. Der Wert 'after' simuliert, dass die Konferenz
-	 * bereits beendet ist. 'running' simuliert eine laufende Konferenz.
-	 *
-	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
-	 * zu 'running'.
-	 */
-	//'CLOSED' => 'after',
+	'ENDS_AT' => $DATE + 60*150, // +2½ Stunden,
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
@@ -59,7 +77,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'Netzpolitik, Digitale Gesellschaft, Netzpolitischer Abend',
+	'KEYWORDS' => 'Netzpolitik,Digitale Gesellschaft, Netzpolitischer Abend',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -115,7 +133,7 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Main Stream' => array(
+		'Live' => array(
 			'netzabend'
 		),
 	),
@@ -128,7 +146,7 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
 	'netzabend' => array(
-		'DISPLAY' => 'Main Stream',
+		'DISPLAY' => 'Netzabend',
 		'STREAM' => 'netzabend',
 		'PREVIEW' => true,
 
@@ -142,77 +160,12 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => false,
-		// 'SCHEDULE_NAME' => 'Revision',
 		'FEEDBACK' => false,
-		'SUBTITLES' => false,
 		'EMBED' => true,
-		'IRC' => false,
-		'TWITTER' => false,
-		'TWITTER_CONFIG' => array(
-			// 'DISPLAY' => '#revision @ twitter/mastodon',
-			// 'TEXT'    => '#revision',
-		),
 	),
 
 );
 
 
-
-/**
- * Konfigurationen zum Konferenz-Fahrplan
- * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
- */
-// $CONFIG['SCHEDULE'] = array(
-// 	/**
-// 	 * URL zum Fahrplan-XML
-// 	 *
-// 	 * Diese URL muss immer verfügbar sein, sonst könnte die Programm-Ansicht
-// 	 * aufhören zu funktionieren. Üblicherweise wird diese daher Datei über
-// 	 * das Script configs/download.sh heruntergeladen, welches von einem
-// 	 * Cronjob regelmäßig getriggert wird.
-// 	 */
-//   'URL' => 'https://bats.science/revision-schedule.xml',
-
-// 	/**
-// 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
-// 	 *
-// 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-// 	 */
-// 	'ROOMFILTER' => array('Revision'),
-
-// 	/**
-// 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-// 	 */
-// 	'SCALE' => 6,
-
-// 	/**
-// 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-// 	 *
-// 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-// 	 * Konferenz-Datum 2016-12-29 auf den heutigen Tag 2016-02-24 verschoben ist.
-// 	 */
-// 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-10-23 11:00') - strtotime(/* Today */ date('Y-m-d')),
-// 	//'SIMULATE_OFFSET' => 0,
-// );
-
-
-/**
- * Globaler Schalter für die Embedding-Funktionalitäten
- *
- * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
- * Embedding-Funktionen deaktiviert.
- */
-$CONFIG['EMBED'] = true;
-
-/**
- * Globale Konfiguration der Twitter-Links.
- *
- * Wird dieser Block auskommentiert, werden keine Twitter-Links mehr erzeugt. Sollen die
- * Twitter-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
- * existieren sein. ggf. einfach auf true setzen:
- *
- *   $CONFIG['TWITTER'] = true
- */
-$CONFIG['TWITTER'] = false;
 
 return $CONFIG;
