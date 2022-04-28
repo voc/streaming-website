@@ -75,7 +75,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 'BANNER_HTML' => 'BigBrotherAwards',
+	 //'BANNER_HTML' => 'BigBrotherAwards',
 
 	/**
 	 * Link zu den Recordings
