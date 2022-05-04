@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
      * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
      */
     'FOOTER_HTML' => '
-		Event by https://www.bfdi.bund.de/ | Streaming by <a href="https://c3voc.de">C3VOC</a>
+		Event by <a href="https://www.bfdi.bund.de">BfDI</a> | Streaming by <a href="https://c3voc.de">C3VOC</a>
 	',
 
     /**
