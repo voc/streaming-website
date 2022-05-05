@@ -140,7 +140,7 @@ $CONFIG['ROOMS'] = array(
 		'DASH' => true,
 		'H264_ONLY' => true,
 		'HLS' => true,
-		'AUDIO' => true,
+		'AUDIO' => false,
 		'SLIDES' => false,
 		'MUSIC' => false,
 
