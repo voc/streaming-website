@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
      *
      * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
      */
-    'ENDS_AT' => strtotime("2022-05-06 04:00"),
+    'ENDS_AT' => strtotime("2022-05-05 21:30"),
 
     /**
      * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,21 +33,21 @@ $CONFIG['CONFERENCE'] = array(
      * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
      * Anzeigetext benutzt
      */
-    'TITLE' => 'BfDI',
+    'TITLE' => 'Eröffnungsveranstaltung der Bonner Tage der Demokratie 2022 mit dem BfDI',
 
     /**
      * Veranstalter
      * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
      * <meta>-Tag generiert.
      */
-    'AUTHOR' => 'BfDI',
+    'AUTHOR' => 'Trio Service GmbH',
 
     /**
      * Beschreibungstext
      * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
      * <meta>-Tag generiert.
      */
-    'DESCRIPTION' => 'BfDI',
+    'DESCRIPTION' => 'Eröffnungsveranstaltung der Bonner Tage der Demokratie 2022 mit dem BfDI',
 
     /**
      * Schlüsselwortliste, Kommasepariert
@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
      * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
      */
     'FOOTER_HTML' => '
-		Event by <a href="https://www.bfdi.bund.de">BfDI</a> | Streaming by <a href="https://c3voc.de">C3VOC</a>
+		Event by <a href="https://www.trio-medien.de">Trio Service GmbH</a> | Streaming by <a href="https://c3voc.de">C3VOC</a>
 	',
 
     /**
@@ -130,7 +130,7 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
 	'bfdi' => array(
-		'DISPLAY' => 'BfDI',
+		'DISPLAY' => 'Eröffnungsveranstaltung',
 		'STREAM' => 'bfdi',
 		'PREVIEW' => true,
 
@@ -150,7 +150,7 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
-		'TWITTER' => true,
+		'TWITTER' => false,
 		'TWITTER_CONFIG' => array(
 			'DISPLAY' => '#glt22 @ twitter/mastodon',
 			'TEXT'    => '#glt22',
