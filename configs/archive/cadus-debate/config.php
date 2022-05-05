@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-11-04 19:45"),
+	'STARTS_AT' => strtotime("2022-05-05 20:15"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-11-04 23:00"),
+	'ENDS_AT' => strtotime("2022-05-05 23:15"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 24: Über die Tiefen des Bergbaus: Mining, Menschen & Umwelt',
+	'TITLE' => 'Debate 25: Solidarität in neoliberalen Zeiten - NGOs, Yuppis und der Versuch, globale Ungleichheit zu dekonstruieren.',
 	
 	/**
 	 * Veranstalter
@@ -47,19 +47,22 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Was bedeutet der Bedarf an Rohstoffen der Industrieländer für die Regionen im Globalen Süden, 
-	in denen sie gewonnen werden? In diesem Debate spricht Johanna Sydow von der NGO Germanwatch mit uns über 
-	Arbeitsverhältnisse, gesundheitliche Auswirkungen und Umweltschäden im Kontext von Mining. Und auch darüber, 
-	was das mit uns selbst zu tun hat: vor allem im IT-Bereich ist der Bedarf an bestimmten, durch Bergbau im 
-	Globalen Süden gewonnen Rohstoffen groß.
-
-	Wie wehren sich Betroffene gegen die Folgen des Bergbaus, welche aktuellen Entwicklungen gibt es auf der 
-	politischen Ebene, und wie können wir uns selbst verantwortungsbewusst verhalten?	
+	'DESCRIPTION' => 'n dieser Ausgabe von CADUS Debate werfen wir mit Dominik Winkler einen kritischen Blick auf die Rolle von NGOs im Kontext transnationaler 
+	Solidaritäten. Umweltschutz, Solidarität mit Menschen auf der Flucht, Krisenvorsorge, Armutsbekämpfung – in den Bars von Berlin bis New York lässt sich mit 
+	diesen Themen nicht unbedingt polarisieren. Vielmehr stehen solidarische Personen als besonders spannend, interessant oder heldenhaft da, und verdienen mit 
+	diesen Themen teils auch noch genug für ihre Wohnung und Leben in Berlin Kreuzberg. Eine Yuppisierung der Solidariät?
+	
+	Mittlerweile gibt es kaum ein gesellschaftspolitisches Problem ohne dazugehörige NGO und ihren Mitarbeiter:innen. Dass mit dem rasanten Ausbreiten dieser 
+	Organisationsform aber die Probleme nicht kleiner werden, gibt Grund zum Zweifeln.
+	
+	Im Vortrag wird die Geschichte von NGOs und ihrer Rolle in einer neoliberalen Welt kritisch beleuchtet, und eine kritische Selbstreflektion angeregt. 
+	Welche desaströsen Effekte auf lokale Zivilgesellschaften können beobachtet werden? Wo endet Solidarität und wo beginnt Lohnarbeit? Warum lässt sich Ungleichheit
+	nicht einfach wegreflektieren und warum ist „White Saviourism“ mehr als nur eine Einstellungssache?
 	
 Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
 
-Donnerstag 04.11.2021
-Start 20:00
+Donnerstag 05.05.2022
+Start 20:30
 
 Stream
 https://streaming.media.ccc.de/cadus-debate
