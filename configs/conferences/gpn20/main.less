@@ -1,0 +1,88 @@
+@import "../../../assets/css/_structure.less";
+
+@orange: #ff6e00;
+@greyish: rgb(51, 48, 48);
+
+@link-color:               @orange;
+@panel-primary-border:     @orange;
+
+@panel-default-heading-bg: @greyish;
+@panel-default-text:       @orange;
+@panel-bg:                 @greyish;
+@panel-default-border:     @orange;
+
+@text-color:               @orange;
+
+@font-face {
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/configs/conferences/gpn20/iceland.woff2') format('woff2'),
+         url('/configs/conferences/gpn20/iceland.ttf') format('truetype');
+}
+
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    line-height: 1.1;
+    color: @orange;
+}
+
+h1, h2, .h1, .h2  {
+    font-family: 'Iceland';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: @orange;
+}
+
+body.overview .panel-body {
+    min-height: 10px;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(kringel.png);
+	background-size: contain;
+}
+
+.navbar-default {
+    font-color: @orange;
+    background: @panel-default-heading-bg;
+}
+
+.gpn20 {
+	background-image: url(kringel.png);
+	background-repeat: no-repeat;
+	background-size: 320px 320px;
+
+	position: fixed;
+	left: 10px;
+	bottom: 70px;
+
+	width: 320px;
+	height: 320px;
+
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+footer {
+    position: unset;
+    font-color: @orange;
+    background: @panel-default-heading-bg;
+}
+
+body {
+    //background-image: url(background.svg);
+    background-image: linear-gradient(to bottom left, #00abbe, #050707);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover; 
+    background-attachment: fixed;
+
+}
