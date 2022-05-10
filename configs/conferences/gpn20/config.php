@@ -121,8 +121,7 @@ $CONFIG['OVERVIEW'] = array(
         'Vortragsräume' => array(
             'medientheater',
             'vortragssaal',
-            'blauersalon',
-            'biomedien'
+            'blauersalon'
         ),
     ),
 );
@@ -207,29 +206,6 @@ $CONFIG['ROOMS'] = array(
         'IRC' => false,
         'TWITTER' => true,
 	),
-    'biomedien' => array(
-        'DISPLAY' => "Ausstellung BioMedien",
-        'STREAM' => 's3',
-        'PREVIEW' => true,
-
-        'TRANSLATION' => false,
-        'SD_VIDEO' => true,
-        'HD_VIDEO' => true,
-        'DASH' => true,
-        'H264_ONLY' => true,
-        'HLS' => true,
-        'AUDIO' => true,
-        'SLIDES' => false,
-        'MUSIC' => false,
-
-        'SCHEDULE' => true,
-        'SCHEDULE_NAME' => "Ausstellung BioMedien",
-        'FEEDBACK' => true,
-        'SUBTITLES' => false,
-        'EMBED' => true,
-        'IRC' => false,
-        'TWITTER' => true,
-	),
 );
 
 /**
@@ -255,7 +231,7 @@ $CONFIG['SCHEDULE'] = array(
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    'ROOMFILTER' => ["Medientheater", "Vortragssaal", "Blauer Salon", "Ausstellung BioMedien"],
+    'ROOMFILTER' => ["Medientheater", "Vortragssaal", "Blauer Salon"],
 
     /**
      * Skalierung der Programm-Vorschau in Sekunden pro Pixel
