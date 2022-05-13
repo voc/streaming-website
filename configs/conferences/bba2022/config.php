@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2022-05-05 20:15"),
+	'STARTS_AT' => strtotime("2022-04-29 17:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2022-05-05 23:15"),
+	'ENDS_AT' => strtotime("2022-04-29 20:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -26,67 +26,35 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	//'CLOSED' => false,
+	//'CLOSED' => 'running',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 25: Solidarität in neoliberalen Zeiten - NGOs, Yuppis und der Versuch, globale Ungleichheit zu dekonstruieren.',
-	
+	'TITLE' => 'BigBrotherAwards 2022',
+
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	//'AUTHOR' => '',
+	'AUTHOR' => 'BigBrotherAwards',
 
 	/**
 	 * Beschreibungstext
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'n dieser Ausgabe von CADUS Debate werfen wir mit Dominik Winkler einen kritischen Blick auf die Rolle von NGOs im Kontext transnationaler 
-	Solidaritäten. Umweltschutz, Solidarität mit Menschen auf der Flucht, Krisenvorsorge, Armutsbekämpfung – in den Bars von Berlin bis New York lässt sich mit 
-	diesen Themen nicht unbedingt polarisieren. Vielmehr stehen solidarische Personen als besonders spannend, interessant oder heldenhaft da, und verdienen mit 
-	diesen Themen teils auch noch genug für ihre Wohnung und Leben in Berlin Kreuzberg. Eine Yuppisierung der Solidariät?
-	
-	Mittlerweile gibt es kaum ein gesellschaftspolitisches Problem ohne dazugehörige NGO und ihren Mitarbeiter:innen. Dass mit dem rasanten Ausbreiten dieser 
-	Organisationsform aber die Probleme nicht kleiner werden, gibt Grund zum Zweifeln.
-	
-	Im Vortrag wird die Geschichte von NGOs und ihrer Rolle in einer neoliberalen Welt kritisch beleuchtet, und eine kritische Selbstreflektion angeregt. 
-	Welche desaströsen Effekte auf lokale Zivilgesellschaften können beobachtet werden? Wo endet Solidarität und wo beginnt Lohnarbeit? Warum lässt sich Ungleichheit
-	nicht einfach wegreflektieren und warum ist „White Saviourism“ mehr als nur eine Einstellungssache?
-	
-Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
-
-Donnerstag 05.05.2022
-Start 20:30
-
-Stream
-https://streaming.media.ccc.de/cadus-debate
-
-Chat
-https://webirc.hackint.org/#irc://irc.hackint.org/#debate
-
-Sprache: Deutsch
-
-DEBATE zum Nachschauen:
-https://media.ccc.de/c/cadusdebate
-
-Was ist Debate?
-Uns ist es wichtig, nicht nur dort Hilfe zu leisten wo sie dringend gebraucht wird, sondern auch, die humanitäre Praxis immer wieder kritisch zu reflektieren. Deshalb laden wir jeden ersten Donnerstag im Monat um 20 Uhr zu Vortrag und Diskussion über ein aktuelles Thema der humanitären Hilfe ein.
-
-Abboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinfo/announcement-cadus
-',
+	'DESCRIPTION' => '',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'CADUS, Debate, Humanitarian, Aid',
+	'KEYWORDS' => 'bba',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -94,7 +62,7 @@ Abboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinf
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://cadus.org">CADUS</a> with friendly support from the <a href="https://c3voc.de">C3VOC</a>
+		by <a href="https://bigbrotherawards.de/">bigbrotherawards.de</a>
 	',
 
 	/**
@@ -107,14 +75,13 @@ Abboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinf
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<div class="logo"></div>',
+	 //'BANNER_HTML' => 'BigBrotherAwards',
 
 	/**
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/cadusdebate?sort=date',
-	//'RELEASES' => 'https://www.youtube.com/playlist?list=PL_AMhvchzBaeIQntCDiVNUUgmRaAzam1V',
+	/**'RELEASES' => 'https://media.ccc.de/c/gpw2021',**/
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -129,7 +96,7 @@ Abboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinf
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/cadusdebate/index.json',
+	/**'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/gpw2021/index.json',**/
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -151,8 +118,8 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Lecture rooms' => array(
-			'stream',
+		'Lecture Rooms' => array(
+			'bba22',
 		),
 	),
 );
@@ -167,18 +134,18 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'stream' => array(
+	'bba22' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'CADUS Debate Humanitarian Aid!',
+		'DISPLAY' => 'BigBrotherAwards 2022',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'debate',
+		'STREAM' => 'bba22',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -194,7 +161,7 @@ $CONFIG['ROOMS'] = array(
 		 * die native-Streams verwendet, andernfalls wird native und translated
 		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
 		 */
-		'TRANSLATION' => false,
+		'TRANSLATION' => true,
 
 		/**
 		 * SD-Video-Stream (1024×576) verfügbar
@@ -206,7 +173,7 @@ $CONFIG['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
 		 * als Default-Stream angenommen.
 		 */
-		'SD_VIDEO' => true,
+		//'SD_VIDEO' => true,
 
 		/**
 		 * HD-Video-Stream (1920×1080) verfügbar
@@ -219,10 +186,7 @@ $CONFIG['ROOMS'] = array(
 		 * als Default-Stream angenommen.
 		 */
 		'HD_VIDEO' => true,
-		/** 
-		 * H264 ONLY  
-		 */
-		'H264_ONLY' => true,
+
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
 		 *
@@ -232,8 +196,11 @@ $CONFIG['ROOMS'] = array(
 		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
 		 * Default-Stream angenommen.
 		 */
-		'SLIDES' => false,
-		'DASH' => true,
+		//'SLIDES' => true,
+
+    'DASH' => true,
+    'H264_ONLY' => true,
+
 
 		/**
 		 * Audio-Only-Stream verfügbar
@@ -243,7 +210,7 @@ $CONFIG['ROOMS'] = array(
 		 *
 		 * In diesem Fall wird, sofern aktiviert, Musik als Default-Stream angenommen.
 		 */
-		'AUDIO' => true,
+		'AUDIO' => false,
 
 		/**
 		 * Musik-Stream verfügbar
@@ -272,7 +239,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => '',
+		'SCHEDULE_NAME' => 'Vortrag',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -325,7 +292,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle IRC-Links durch auskommentieren
 		 * des globalen $CONFIG['IRC']-Blocks deaktiviert werden
 		 */
-		'IRC' => true,
+		'IRC' => false,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -334,10 +301,12 @@ $CONFIG['ROOMS'] = array(
 		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
 		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
 		*/
-		// 'IRC_CONFIG' => array(
-		// 	'DISPLAY' => '#31C3-hall-1 @ hackint',
-		// 	'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-1',
-		// ),
+		/*
+        'IRC_CONFIG' => array(
+			'DISPLAY' => 'BigBrotherAwards@mastodon',
+			'URL'     => 'https://digitalcourage.social/@digitalcourage',
+		),
+		*/
 
 		/**
 		 * Twitter-Link aktivieren (boolean)
@@ -353,7 +322,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Twitter-Links durch auskommentieren
 		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
 		 **/
-		'TWITTER' => true,
+		'TWITTER' => false,
 
 		/**
 		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
@@ -381,7 +350,7 @@ $CONFIG['EMBED'] = true;
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-//$CONFIG['SCHEDULE'] = array(
+// $CONFIG['SCHEDULE'] = array(
 	/**
 	 * URL zum Fahrplan-XML
 	 *
@@ -389,19 +358,21 @@ $CONFIG['EMBED'] = true;
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-//	'URL' => 'https://events.opensuse.org/conference/oSC18/schedule.xml',
+	// 'URL' => 'https://datenzoo.de/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
 	*
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
-	//'ROOMFILTER' => ['Galerie', 'Saal', ' GI Studio'],
+	//'ROOMFILTER' => [
+	//	'Vortrag',
+	//],
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
 	 */
-//	'SCALE' => 5,
+	// 'SCALE' => 7,
 
 	/**
 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
@@ -409,10 +380,9 @@ $CONFIG['EMBED'] = true;
 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
 	 * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
 	 */
-	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2016-05-21') - strtotime(/* Today */ '2016-05-19'),
-//	'SIMULATE_OFFSET' => 3600*2,
-//);
-// 
+	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2021-03-24') - strtotime(/* Today */ '2021-03-04'),
+	// 'SIMULATE_OFFSET' => 0,
+// );
 
 /**
  * Globale Konfiguration der Twitter-Links.
@@ -423,7 +393,8 @@ $CONFIG['EMBED'] = true;
  *
  *   $CONFIG['TWITTER'] = true
  */
-$CONFIG['TWITTER'] = array(
+
+//$CONFIG['TWITTER'] = array(
 	/**
 	 * Anzeigetext für die Twitter-Links.
 	 *
@@ -431,7 +402,7 @@ $CONFIG['TWITTER'] = array(
 	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
 	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 	 */
-	'DISPLAY' => '#CADUSDebate @ twitter',
+	//'DISPLAY' => '#vcfb @vcfberlin on twitter',
 
 	/**
 	 * Vorgabe-Tweet-Text für die Twitter-Links.
@@ -439,29 +410,9 @@ $CONFIG['TWITTER'] = array(
 	 * %s wird durch den Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'TEXT' => '#CADUSDebate',
-);
+	//'TEXT' => '#vcfb',
+//);
+// $CONFIG['IRC'] = true;
 
-$CONFIG['IRC'] = array(
-    /**
-     * Anzeigetext für die IRC-Links.
-     *
-     * %s wird durch den Raum-Slug ersetzt.
-     * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
-     * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
-     */
-    'DISPLAY' => '#debate @ hackint',
-
-    /**
-     * URL für die IRC-Links.
-     * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
-     * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#33C3-%s'
-     * verwendet werden.
-     *
-     * %s wird durch den urlencodeten Raum-Slug ersetzt.
-     * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
-     */
-    'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#debate',
-);
 
 return $CONFIG;
