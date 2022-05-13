@@ -1,0 +1,75 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "title": "DiVOC - Bridging Bubbles",
+        "acronym": "divoc",
+        "organizer": "DiVOC",
+        "description": "Livestream des Digital verteilten Online-Chaos",
+        "start": "2022-04-15T10:00:00+00:00",
+        "end":   "2022-04-18T02:50:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": true,
+                "chat": {
+                    "hashtag": "#divocbb3",
+                    "irc": {
+                        "display": "#divoc @ hackint",
+                        "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#divoc"
+                    },
+                    "twitter": {
+                        "display": "#divocbb3 @ twitter",
+                        "text": "#divocbb3"
+                    }
+                }
+            },
+            "schedule": {
+                "url": "https://pretalx.c3voc.de/divoc-bb3/schedule/export/schedule.xml",
+                "scale": 7
+            },
+            "overviewPage": {
+                "sections": [{
+                    "title": "Live",
+                    "items": [
+                        {"slug": "bb3"}
+                    ]
+                }]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\tby <a href=\"https://di.c3voc.de\">DiVOC Organizers</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            }
+        },
+        "keywords": [
+            "DiVOC",
+            "Hacking",
+            "Chaos Computer Club",
+            "Video",
+            "Music",
+            "Podcast",
+            "Media",
+            "Streaming",
+            "Hacker",
+            "Everywhere",
+            "Bridging Bubbles",
+            "bb3",
+            "Ukraine",
+            "Peace"
+        ],
+        "rooms": [
+            {
+                "name": "Mainstream",
+                "slug": "bb3",
+                "streamId": "csh",
+                "streamingConfig": {
+                    "feedback": true,
+                    "translation": [
+                        {"endpoint": "translated", "label": "Translated"}
+                    ]
+                }
+            }
+        ]
+    }
+}
