@@ -65,7 +65,7 @@ class Conferences
 	}
 
 	public static function getLastConference() {
-		return Conferences::getFinishedConferencesSorted()[0];
+		return @Conferences::getFinishedConferencesSorted()[0];
 	}
 
 	public static function exists($mandator) {
@@ -100,26 +100,67 @@ class Conferences
 	}
 
 	public static function loadConferenceConfig($mandator) {
+
+		// try to find config.json for this conference/mandator in local configs
+		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.json';
+
+		if (file_exists($configfile)) {
+
+			$data = file_get_contents($configfile); 
+			$config = json_decode($data);
+			
+			if(is_null($config)) {
+				throw new ConfigException("Loading $configfile did not return an object. Maybe it's not a real JSON file?" . json_last_error_msg());
+			}
+
+			return new ConferenceJson($config, $mandator);
+		}
+
+
+		// try to find config.php for this conference/mandator in local configs
 		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
-
-		try {
+	
+		if (file_exists($configfile)) {
 			$config = include($configfile);
-		}
-		catch(Exception $e) {
-			throw new NotFoundException();
+
+			if(!is_array($config)) {
+				throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
+			}
+
+			$config = Conferences::migrateTranslationConfiguration($config);
+			return new Conference($config, $mandator);
 		}
 
-		if(!is_array($config)) {
-			throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
-		}
+		// otherwise try to find conference in c3data postgres
+		$query = 'query StreamingConfig($acronym: String!) {
+			conference(acronym: $acronym) {
+				title
+				acronym
+				description
+				keywords
+				organizer
+				startDate
+				endDate
+				streamingConfig 
+				
+				rooms(orderBy: [RANK_ASC, NAME_ASC], filter: {streamId: {isNull: false}}) {
+					nodes {
+						guid
+						name
+						slug
+						streamId
+						streamingConfig
+					}
+				}
+			}
+		}';
+		$data = query_data('conferenceConfig', $query, ['acronym' => $mandator]);
 
-		$config = Conferences::migrateTranslationConfiguration($config);
-
-		return $config;
+		return new ConferenceJson($data, $mandator);
 	}
 
 	public static function getConference($mandator) {
-		return new Conference(Conferences::loadConferenceConfig($mandator), $mandator);
+		return Conferences::loadConferenceConfig($mandator);
 	}
 
 	public static function hasCustomStyles($mandator) {
