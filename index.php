@@ -15,8 +15,10 @@ require_once('lib/Exceptions.php');
 require_once('lib/less.php/Less.php');
 
 require_once('model/ModelBase.php');
+require_once('model/ModelJson.php');
 require_once('model/Conferences.php');
 require_once('model/Conference.php');
+require_once('model/ConferenceJson.php');
 require_once('model/GenericConference.php');
 require_once('model/Feedback.php');
 require_once('model/Schedule.php');
