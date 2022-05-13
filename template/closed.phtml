@@ -7,7 +7,7 @@
 
 	<p>
 		<? if($conference->hasReleases()): ?>
-			Recordings will be released at <a href="<?=h($conference->getReleasesUrl())?>"><?=h($conference->getReleasesUrl())?></a>.
+			Recordings will be released at <a href="<?=h($conference->getReleasesUrl())?>"><?=explode('?', h($conference->getReleasesUrl()))[0]?></a>.
 		<? endif ?>
 
 		<? if($conference->hasRelive()): ?>
