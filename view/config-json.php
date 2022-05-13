@@ -19,8 +19,10 @@ function formatConference($conference) {
 					'embed' => $conference->get('EMBED', false),
 					'relive' => $conference->hasRelive(),
 					'feedback' => $conference->hasFeedback(),
-					'irc' => lowerCaseKeys($conference->get('IRC', false)),
-					'twitter' => lowerCaseKeys($conference->get('TWITTER', false)),
+					'chat' => array(
+						'irc' => lowerCaseKeys($conference->get('IRC', false)),
+						'twitter' => lowerCaseKeys($conference->get('TWITTER', false)),
+					),
 				),
 				'schedule' => lowerCaseKeys($conference->get('SCHEDULE')),
 				'overviewPage' => array(
@@ -56,17 +58,17 @@ function formatRooms($conference) {
 function formatSections($pageConfig) {
 	$struct = [];
 
-	foreach($pageConfig as $sectionTitle => $rooms)
+	foreach($pageConfig as $sectionTitle => $items)
 	{
 		$section = array(
 			'title' => $sectionTitle,
-			'rooms' => [], 
+			'items' => [], 
 		);
 
-		foreach($rooms as $room)
+		foreach($items as $item)
 		{
-			$section['rooms'][] = array(
-				'slug' => $room,
+			$section['items'][] = array(
+				'slug' => $item,
 			);
 		}
 		$struct[] = $section;
