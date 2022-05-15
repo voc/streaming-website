@@ -13,7 +13,7 @@ if [ "$1" != '--without-validation' ]; then
 fi
 
 echo ""
-DEPLOY_BRANCH=`git rev-parse --abbrev-ref HEAD` || "$BRANCH_NAME" 
+DEPLOY_BRANCH=$BRANCH_NAME || `git rev-parse --abbrev-ref HEAD`
 
 echo "On are trying to deploy branch: $DEPLOY_BRANCH…"
 echo ""
