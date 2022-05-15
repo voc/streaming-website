@@ -17,7 +17,11 @@ node {
 
 	stage('deploy') {
 		if (BRANCH == 'staging') {
-			sh('./deploy-staging.sh')
+			sh('./deploy-staging.sh --without-validation')
+			// currentBuild.displayName = "${IMAGE_TAG}_${BUILD_NUMBER}"
+		} else if (BRANCH == 'master') {
+			input('Are you sure?')
+			sh('./deploy.sh --without-validation')
 			// currentBuild.displayName = "${IMAGE_TAG}_${BUILD_NUMBER}"
 		}
 	}
