@@ -185,7 +185,7 @@ $CONFIG['ROOMS'] = array(
 	),
     'blauersalon' => array(
         'DISPLAY' => 'Blauer Salon',
-        'STREAM' => 's3',
+        'STREAM' => 's191',
         'PREVIEW' => true,
 
         'TRANSLATION' => false,
