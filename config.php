@@ -28,7 +28,7 @@ if(@$_SERVER['SERVER_NAME'] == 'localhost')
 {
 	// keine Konfiguration -> BASEURL wird automatisch erraten
 }
-else if($_SERVER['SERVER_NAME'] == 'streaming.test.c3voc.de')
+else if(@$_SERVER['SERVER_NAME'] == 'streaming.test.c3voc.de')
 {
 	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.test.c3voc.de/';
 }
