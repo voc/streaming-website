@@ -20,7 +20,7 @@ then
 fi
 
 # check if we should update schedules, upcoming, etc.
-if [[ ! $(find "configs/upcoming.json" -newermt "8 hours ago") ]]; then
+if [ -z "$(find "configs/upcoming.json" -newermt "8 hours ago")" ]; then
 	echo "Updating schedules…\n"
 	./download.sh
 	echo
