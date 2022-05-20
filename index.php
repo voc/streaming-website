@@ -4,6 +4,7 @@ if(!ini_get('short_open_tag'))
 	die("`short_open_tag = On` is required\n");
 
 $GLOBALS['BASEDIR'] = dirname(__FILE__);
+$GLOBALS['forceopen'] = false;
 chdir($GLOBALS['BASEDIR']);
 
 require_once('config.php');
