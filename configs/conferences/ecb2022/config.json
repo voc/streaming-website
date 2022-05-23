@@ -1,0 +1,52 @@
+{
+  "data": {
+    "conference": {
+      "title": "Building a European Cultural Backbone",
+      "acronym": "ecb2022",
+      "description": "",
+      "keywords": [
+      ],
+      "organizer": "cultural broadcasting archive, Radio FRO & arso",
+      "startDate": "2022-05-23T09:00:00+02:00",
+      "endDate": "2022-04-28T18:00:00+02:00",
+      "streamingConfig": {
+        "features": {
+          "embed": true,
+          "relive": true,
+          "feedback": true,
+          "chat": {
+            "hashtag": "#ecb",
+            "irc": {
+              "display": "#ecb @ freie-radios.de",
+              "url": "https://matrix.to/#/#ecb:freie-radios.de"
+            },
+            "twitter": { "display": "#ecb @ mastodon / twitter", "text": "#ecb" }
+          }
+        },
+        "schedule": {
+          "url": "https://pretalx.c3voc.de/ecb2022/schedule/export/schedule.xml",
+          "scale": 7
+        },
+        "overviewPage": {
+          "sections": [{ "title": "Live", "items": [{ "slug": "stream" }] }]
+        },
+        "html": {
+          "banner": null,
+          "footer": "\n\t\tby <a href=\"https://cba.media/news/labs-conference\">cultural broadcasting archive</a>, <a href=\"https://www.fro.at\">Radio FRO</a> &amp; <a href=\"https://www.fro.at\">arso</a>. Streaming by \n\t\t<a href=\"https://c3voc.de\">C3VOC</a>.\n\t",
+          "not_started": null
+        }
+      },
+      "rooms": {
+        "nodes": [
+          {
+            "guid": "cbb5e8f2-9d58-4b27-99ab-67b9a5be4e60",
+            "name": "Stadtwerkstatt",
+            "slug": "stream",
+            "streamId": "s6",
+            "streamingConfig": {}
+          }
+        ]
+      }
+    }
+  }
+}
