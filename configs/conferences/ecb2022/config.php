@@ -183,7 +183,7 @@ $CONFIG['SCHEDULE'] = array(
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    'ROOMFILTER' => ["Servus.at Lab"],
+    // 'ROOMFILTER' => ["Servus.at Lab"],
 
     /**
      * Skalierung der Programm-Vorschau in Sekunden pro Pixel
@@ -197,7 +197,7 @@ $CONFIG['SCHEDULE'] = array(
      * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
      */
     //SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-03-30') - strtotime(/* Today */ date('Y-m-d')))
-    'SIMULATE_OFFSET' => 0,
+    //'SIMULATE_OFFSET' => 0,
 );
 
 /**
