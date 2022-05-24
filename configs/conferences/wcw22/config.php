@@ -83,7 +83,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.freifunk.net/c/wcw22?sort=date',
+	'RELEASES' => 'https://media.freifunk.net/c/wcw2022?sort=date',
 	//'RELEASES' => 'https://www.youtube.com/playlist?list=PL_AMhvchzBaeIQntCDiVNUUgmRaAzam1V',
 
 	/**
@@ -141,7 +141,7 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Hauptgebäude Raum 002',
+		'DISPLAY' => 'HK7',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -239,7 +239,7 @@ $CONFIG['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => '',
+		'SCHEDULE_NAME' => 'HK7',
 
 		/**
 		 * Feedback anzeigen (boolean)
