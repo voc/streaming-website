@@ -20,8 +20,8 @@ function formatConference($conference) {
 					'relive' => $conference->hasRelive(),
 					'feedback' => $conference->hasFeedback(),
 					'chat' => array(
-						'irc' => lowerCaseKeys($conference->get('IRC', false)),
-						'twitter' => lowerCaseKeys($conference->get('TWITTER', false)),
+						'irc' => lowerCaseKeys($conference->get('IRC', null)),
+						'twitter' => lowerCaseKeys($conference->get('TWITTER', null)),
 					),
 				),
 				'schedule' => lowerCaseKeys($conference->get('SCHEDULE')),
@@ -48,8 +48,8 @@ function formatRooms($conference) {
 		$struct[] = array(
 			'name' => $room->getDisplay(),
 			'slug' => $room->getSlug(),
-			'streamId' => $room->getStream(),
-			'streamingConfig' => lowerCaseKeys($config),
+			'stream' => $room->getStream(),
+			'streamingConfig' => $config ? lowerCaseKeys($config) : null,
 		);
 	}
 	return $struct;
@@ -78,6 +78,9 @@ function formatSections($pageConfig) {
 
 function lowerCaseKeys($config)
 {
+	if (empty($config)) {
+		return null;
+	}
 	return array_map(function($item) {
 		return is_array($item) ? lowerCaseKeys($item) : $item;
 	}, array_change_key_case($config));

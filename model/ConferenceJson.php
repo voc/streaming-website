@@ -5,13 +5,15 @@ class ConferenceJson extends Conference
 	private $start;
 	private $end;
 	private $rooms;
+	private $html;
 
 	public function __construct($json, $mandator)
 	{
 		$c = $json->conference;
 		$this->start = DateTime::createFromFormat('c', @$c->start ?: @$c->startDate);
-		$this->end =   DateTime::createFromFormat('c', @$c->end   ?: @$c->endDate);
-	
+		$this->end   = DateTime::createFromFormat('c', @$c->end   ?: @$c->endDate);
+		$this->html  = @$c->streamingConfig->html ?: [];
+
 		$groups = [];
 		// if ( $c->streamingConfig->overviewPage->sections )
 		foreach(@$c->streamingConfig->overviewPage->sections as $s) {
@@ -36,7 +38,8 @@ class ConferenceJson extends Conference
 				'author' 		=> $c->organizer,
 				'description' 	=> $c->description,
 				'keywords'		=> @implode(', ', $c->keywords),
-			], @get_object_vars($c->streamingConfig) ?: []),
+			], 
+			@get_object_vars($c->streamingConfig) ?: []),
 
 			'rooms' => $this->rooms,
 
@@ -130,4 +133,26 @@ class ConferenceJson extends Conference
 	public function hasFeedback() {
 		return $this->has('FEEDBACK');
 	}
+
+	public function hasBannerHtml() {
+		return array_key_exists('banner', $this->html) && !empty($this->html->banner);
+	}
+	public function getBannerHtml() {
+		return $this->html->banner;
+	}
+
+	public function hasFooterHtml() {
+		return array_key_exists('footer', $this->html) && !empty($this->html->footer);
+	}
+	public function getFooterHtml() {
+		return $this->html->footer;
+	}
+
+	public function hasNotStartedHtml() {
+		return array_key_exists('not_started', $this->html);
+	}
+	public function getNotStartedHtml() {
+		return $this->html->not_started;
+	}
+
 }
