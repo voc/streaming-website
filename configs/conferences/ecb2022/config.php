@@ -135,9 +135,10 @@ $CONFIG['ROOMS'] = array(
      * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
      */
     'stream' => array(
-        'DISPLAY' => 'Stadtwerkstatt',
+        'GUID' => '760b38a1-dc45-4809-9067-5ecb8c6ba27a',
+        'DISPLAY' => 'Wissensturm',
         'WIDE' => true,
-        'STREAM' => 's6',
+        'STREAM' => 's5',
         'PREVIEW' => true,
 
         'TRANSLATION' => false,
@@ -151,7 +152,7 @@ $CONFIG['ROOMS'] = array(
         'MUSIC' => false,
 
         'SCHEDULE' => true,
-        'SCHEDULE_NAME' => 'Servus.at Lab',
+        'SCHEDULE_NAME' => 'Wissensturm',
         'FEEDBACK' => true,
         'SUBTITLES' => false,
         'EMBED' => true,
