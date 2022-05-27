@@ -138,7 +138,7 @@ $CONFIG['ROOMS'] = array(
         'GUID' => '760b38a1-dc45-4809-9067-5ecb8c6ba27a',
         'DISPLAY' => 'Wissensturm',
         'WIDE' => true,
-        'STREAM' => 's5',
+        'STREAM' => 's6',
         'PREVIEW' => true,
 
         'TRANSLATION' => false,
