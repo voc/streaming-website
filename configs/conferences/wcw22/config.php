@@ -49,7 +49,7 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'DESCRIPTION' => 'Das Wireless Community Weekend (WCW) hat 15 Jahre auf der c-base in Berlin und einmal komplett im Cyber stattgefunden. In diesem Jahr nehmen wir einen neuen Anlauf und wollen es vom 27. Mai bis 29. Mai 2022 in Weimar stattfinden lassen.
 
-	Mit Unterstützung durch den Studierendenkonvent der Bauhaus-Universität Weimar und der studentischen Initiative Maschinenraum können wir das WCW im Haus der Studierenden (M18) durchführen.',
+       Mit Unterstützung durch den Studierendenkonvent der Bauhaus-Universität Weimar und der studentischen Initiative Maschinenraum können wir das WCW im Haus der Studierenden (M18) durchführen.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -201,6 +201,8 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'SLIDES' => false,
 		'DASH' => true,
+		'H264_ONLY' => true,
+		'HLS' => true,
 
 		/**
 		 * Audio-Only-Stream verfügbar
