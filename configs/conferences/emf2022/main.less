@@ -1,0 +1,69 @@
+@import "../../../assets/css/_structure.less";
+
+@primary: rgb(144, 204, 214);
+@secondary: rgb(21, 23, 53);
+
+@link-color:               @primary;
+@panel-primary-border:     @primary;
+
+@panel-default-heading-bg: @secondary;
+@panel-default-text:       @primary;
+@panel-bg:                 @secondary;
+@panel-default-border:     @primary;
+
+@text-color:               @primary;
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/configs/conferences/emf2022/raleway.ttf') format('truetype');
+}
+
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    line-height: 1.1;
+    color: @primary;
+}
+
+h1, h2, .h1, .h2  {
+    font-family: 'Raleway';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: @primary;
+}
+
+body.overview .panel-body {
+    min-height: 10px;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(emf.png);
+	background-size: contain;
+}
+
+.navbar-default {
+    font-color: @primary;
+    background: @panel-default-heading-bg;
+}
+
+
+
+footer {
+    position: unset;
+    font-color: @primary;
+    background: none;
+}
+
+body {
+    background-image: url(backgroundtile.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+
+}
