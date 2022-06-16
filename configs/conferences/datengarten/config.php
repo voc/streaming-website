@@ -200,6 +200,7 @@ $CONFIG['ROOMS'] = array(
 
                 /** Wenn aktiviert, wird DASH streaming angeboten */
 		'DASH' => true,
+		'H264_ONLY' => true,
 
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
