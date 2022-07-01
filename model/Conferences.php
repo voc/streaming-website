@@ -143,7 +143,9 @@ class Conferences
 				endDate
 				streamingConfig 
 				
-				rooms(orderBy: [RANK_ASC, NAME_ASC], filter: {streamId: {isNull: false}}) {
+				rooms(orderBy: [RANK_ASC, NAME_ASC]' . ( 
+					false ? ', filter: {streamId: {isNull: false}}' : '' 
+				) . ' ) {
 					nodes {
 						guid
 						name

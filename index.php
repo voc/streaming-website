@@ -159,7 +159,7 @@ try {
 			exit;
 		}
 	}
-	else if(!Conferences::exists($mandator))
+	else if(false && !Conferences::exists($mandator))
 	{
 		// old url OR wrong client OR
 		// -> error

@@ -14,24 +14,32 @@ class ConferenceJson extends Conference
 		$this->end   = DateTime::createFromFormat('c', @$c->end   ?: @$c->endDate);
 		$this->html  = @$c->streamingConfig->html ?: [];
 
-		$groups = [];
-		// if ( $c->streamingConfig->overviewPage->sections )
-		foreach(@$c->streamingConfig->overviewPage->sections as $s) {
-			$groups[@$s->title] = array_map(
-				function($r) { return $r->slug; }, 
-				@$s->items ?: @$s->rooms ?: []
-			);
-		}
-
 		$this->rooms = [];
-		$rooms = @$c->rooms->nodes ?: $c->rooms;
+		$rooms = property_exists($c->rooms, 'nodes') ? @$c->rooms->nodes : $c->rooms;
 		foreach($rooms as $r) {
+			if (!$r) {
+				continue;
+			}
 			$this->rooms[$r->slug] = array_merge(
 				get_object_vars($r), 
 				@get_object_vars($r->streamingConfig) ?: [], 
 				@get_object_vars($r->streamingConfig->chat) ?: []
 			);
 		}
+
+		$groups = [];
+		if ( isset($c->streamingConfig->overviewPage->sections) ) {
+			foreach(@$c->streamingConfig->overviewPage->sections as $s) {
+				$groups[@$s->title] = array_map(
+					function($r) { return $r->slug; }, 
+					@$s->items ?: @$s->rooms ?: []
+				);
+			}
+		}
+		else {
+			$groups['Live'] = array_keys((array) $rooms);
+		}
+
 		parent::__construct([
 			'conference' => array_merge([
 				'title' 		=> $c->title,
@@ -138,21 +146,21 @@ class ConferenceJson extends Conference
 		return array_key_exists('banner', $this->html) && !empty($this->html->banner);
 	}
 	public function getBannerHtml() {
-		return $this->html->banner;
+		return @$this->html->banner;
 	}
 
 	public function hasFooterHtml() {
 		return array_key_exists('footer', $this->html) && !empty($this->html->footer);
 	}
 	public function getFooterHtml() {
-		return $this->html->footer;
+		return @$this->html->footer;
 	}
 
 	public function hasNotStartedHtml() {
 		return array_key_exists('not_started', $this->html);
 	}
 	public function getNotStartedHtml() {
-		return $this->html->not_started;
+		return @$this->html->not_started;
 	}
 
 }
