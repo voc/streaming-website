@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'It&#39;s too peoply',
+	'TITLE' => 'It\'s too peoply',
 
 	/**
 	 * Veranstalter
@@ -113,7 +113,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Workshop Raum',
+			'Workshop',
 		),
 	),
 );
@@ -124,7 +124,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'Workshop Raum' => array(
+	'Raum' => array(
 		'DISPLAY' => '2peoply',
 		'STREAM' => '2peoply',
 		'PREVIEW' => true,
@@ -135,7 +135,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
-		'SCHEDULE' => false,
+		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Workshop Raum',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
