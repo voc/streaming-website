@@ -1,0 +1,45 @@
+@import "../../../assets/css/_structure.less";
+
+@orange: rgba(254, 200, 89, 1);
+@light: rgba(250, 68, 140, 1) ;
+@medium:  rgba(73, 29, 136, 1);;
+@dark: rgba(67, 181, 160, 1) ;
+
+@link-color:            @orange;
+@panel-primary-border:  @orange;
+
+@panel-default-heading-bg: @light;
+@panel-default-text:       @medium;
+
+@text-color: @dark;
+
+@font-face {
+  font-family: sairaregular;
+  src: url('/configs/conferences/mch2022/Saira-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+body {
+        background-image: url("/configs/conferences/mch2022/bg.png");
+        background-repeat: repeat;
+		font-family:'sairaregular' !important;
+}
+
+.nav-tabs.nav-justified {
+ background-color: @light;
+}
+
+.functions-wrap.tab-content {
+ background-color: white;
+}
+
+h1, h2 { color: @medium; }
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(logo.png);
+	background-size: contain;
+}
+
