@@ -184,7 +184,7 @@ $CONFIG['ROOMS'] = array(
          * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
          * als Default-Stream angenommen.
          */
-        //'HD_VIDEO' => true,
+        'HD_VIDEO' => true,
         //'DASH' => true,
 
 		'DASH' => true,
@@ -393,7 +393,7 @@ $CONFIG['ROOMS'] = array(
          * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
          * als Default-Stream angenommen.
          */
-        //'HD_VIDEO' => true,
+        'HD_VIDEO' => true,
         //'DASH' => true,
 
 		'DASH' => true,
@@ -602,7 +602,7 @@ $CONFIG['ROOMS'] = array(
          * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
          * als Default-Stream angenommen.
          */
-        //'HD_VIDEO' => true,
+        'HD_VIDEO' => true,
         //'DASH' => true,
 
 		'DASH' => true,
