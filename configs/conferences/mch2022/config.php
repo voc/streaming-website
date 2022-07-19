@@ -790,7 +790,7 @@ $CONFIG['SCHEDULE'] = array(
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    'ROOMFILTER' => array('Abacus 🧮', 'attery 🔋', 'Clairvoyance 🔮'),
+    'ROOMFILTER' => array('Abacus 🧮', 'Battery 🔋', 'Clairvoyance 🔮'),
 
     /**
      * Skalierung der Programm-Vorschau in Sekunden pro Pixel
