@@ -81,7 +81,7 @@ $CONFIG['CONFERENCE'] = array(
      * Link zu den Recordings
      * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
      */
-    'RELEASES' => 'https://media.ccc.de/b/conferences/mch2022',
+    'RELEASES' => 'https://media.ccc.de/c/MCH2022',
 
     /**
      * Um die interne ReLive-Ansicht zu aktivieren, kann hier ein ReLive-JSON
