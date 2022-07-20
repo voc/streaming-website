@@ -772,7 +772,7 @@ $CONFIG['ROOMS'] = array(
          * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
          * s1 bis s5 durchnummeriert.
          */
-        'STREAM' => 'mch2022-party', // or cam6
+        'STREAM' => 'mch2022party', // or cam6
 
         /**
          * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
