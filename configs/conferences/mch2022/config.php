@@ -323,7 +323,7 @@ $CONFIG['IRC'] = array(
 //     * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
 //     * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
 //     */
-    'DISPLAY' => '#mch2022 @ oftc',
+    'DISPLAY' => '#mch2022-%s @ oftc',
 //
 //    /**
 //     * URL für die IRC-Links.
@@ -334,7 +334,7 @@ $CONFIG['IRC'] = array(
 //     * %s wird durch den urlencodeten Raum-Slug ersetzt.
 //     * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 //     */
-    'URL' => 'ircs://irc.oftc.net/mch2022',
+    'URL' => 'ircs://irc.oftc.net/mch2022-%s',
 );
 
 /**
