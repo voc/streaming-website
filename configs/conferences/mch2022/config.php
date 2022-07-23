@@ -111,7 +111,8 @@ $CONFIG['OVERVIEW'] = array(
       'Battery',
       'Clairvoyance',
 	  'Musicstage',
-	  'EmergentEarth'
+	  'EmergentEarth',
+	  'Muze'
     ),
 
     //'Live Music'  => array(
@@ -227,6 +228,25 @@ $CONFIG['ROOMS'] = array(
 		'TWITTER' => false,
 		'IRC' => false
 	),
+	'Muze' => array(
+        'DISPLAY' => 'HSNL/TkkrLab/Muze',
+        'STREAM' => 'mch2022_muze',
+        'PREVIEW' => true,
+        'TRANSLATION' => false,
+        'SD_VIDEO' => true,
+        'HD_VIDEO' => true,
+        'DASH' => true,
+        'H264_ONLY' => true,
+        'HLS' => true,
+        'SLIDES' => false,
+        'AUDIO' => true,
+        'MUSIC' => false,
+        'SCHEDULE' => true,
+        'FEEDBACK' => true,
+        'EMBED' => true,
+        'TWITTER' => false,
+        'IRC' => false
+     ),
     'lounge' => array(
       'DISPLAY' => 'Lounge',
       'STREAM' => 'a1',
