@@ -125,7 +125,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'aktionshalle' => array(
+	'bornhack1' => array(
 		'DISPLAY' => 'Speakers Tent',
 		'STREAM' => 'bornhack1',
 		'PREVIEW' => true,
@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'clubraum' => array(
+	'bornhack2' => array(
 		'DISPLAY' => 'Other Stuff',
 		'STREAM' => 'bornhack2',
 		'PREVIEW' => true,
