@@ -4,13 +4,13 @@ $upcoming = Upcoming::getNextEvents('/^dgna$/i');
 
 if(count($upcoming) < 1)
 {
-	$DATE = strtotime('1970-01-01 22:00');
+	$DATE = strtotime('1970-01-01 19:30');
 	$TITLE = 'Unknown';
 }
 else
 {
 	$upcoming_event = $upcoming[0];
-	$DATE = strtotime($upcoming_event['start_date']);
+	$DATE = strtotime($upcoming_event['start_date'].' 19:30');
 	$TITLE = $upcoming_event['name'];
 }
 
