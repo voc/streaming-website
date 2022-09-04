@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="http://jugendhackt.de/">Jugend hackt 2022</a> &amp;
+		by <a href="http://jugendhackt.org/">Jugend hackt 2022</a> &amp;
         <a href="https://c3voc.de">C3VOC</a>
 	',
 
