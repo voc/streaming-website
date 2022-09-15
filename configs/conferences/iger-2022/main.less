@@ -1,0 +1,169 @@
+@import "../../../assets/css/_structure.less";
+
+@dark-blue: #151821;
+@white: #fff;
+@yellow: #fff200;
+
+@link-color:               @yellow;
+@panel-primary-border:     @yellow;
+
+@panel-default-heading-bg: @dark-blue;
+@panel-default-text:       @white;
+@panel-bg:                 @dark-blue;
+@panel-default-border:     @yellow;
+
+@text-color:               @white;
+
+@font-face {
+	font-family: "Noto Sans";
+	src: local("Noto Sans"), local("NotoSans-Regular"), url(NotoSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-weight: 700;
+	src: local("Noto Sans Bold"), local("NotoSans-Bold"), url(NotoSans-Bold.ttf);
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-style: italic;
+	src: local("Noto Sans Italic"), local("NotoSans-Italic"), url(NotoSans-Italic.ttf);
+}
+
+* {
+    font-family: 'Noto Sans';
+}
+
+body {
+    background: @dark-blue;
+
+    &.overview .panel-title {
+        font-weight: bold;
+    }
+
+    &.room .tab-content {
+        border-color: @yellow;
+    }
+
+    &.room .tab-content.player-wrap {
+        border: 1px solid @yellow;
+    }
+}
+
+footer {
+    background: none;
+    color: @white;
+    position: unset;
+
+    a {
+        &, &:active, &:focus, &:link, &:visited {
+            color: @yellow;
+        }
+
+        &:hover {
+            color: @yellow;
+            text-decoration: underline;
+        }
+    }
+}
+
+a:not(.btn) {
+    &, &:active, &:focus, &:link, &:visited {
+        color: @yellow;
+    }
+
+    &:hover {
+        color: @yellow;
+        text-decoration: underline;
+
+        .panel-body {
+            text-decoration: underline;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: @white;
+}
+
+.banner {
+    @media screen and (min-width: 768px) {
+        background-image: url(header.svg);
+        background-size: auto 150px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        height: 150px;
+    }
+}
+
+.navbar-default {
+    border-color: @yellow;
+    color: @yellow;
+    background: @dark-blue;
+
+    .about {
+        background: @dark-blue;
+        border-color: @yellow;
+        color: @yellow;
+        transition: background 0.5s, color 0.5s;
+
+        &:hover {
+            background: @yellow;
+            color: @dark-blue;
+        }
+    }
+
+    .navbar-brand {
+        &, &:active, &:focus, &:link, &:visited {
+            color: @yellow;
+        }
+
+        &:hover {
+            color: @yellow;
+            text-decoration: underline;
+        }
+
+        .icon {
+            background-image: url(icon.svg);
+            background-size: contain;
+        }
+    }
+}
+
+.nav-tabs.nav-justified > li {
+    & > a, &.active > a {
+        &, &:active, &:focus, &:link, &:hover, &:visited {
+            background: none;
+            color: @yellow;
+        }
+    }
+
+    &:not(.active) > a {
+        &, &:active, &:focus, &:link, &:visited {
+            border-color: transparent transparent @yellow transparent;
+        }
+
+        &:hover {
+            border-color: @yellow;
+            text-decoration: underline;
+        }
+    }
+
+    &.active > a {
+        &, &:active, &:focus, &:link, &:hover, &:visited {
+            border-color: @yellow @yellow transparent @yellow;
+        }
+    }
+}
+
+.nav-tabs.nav-justified.nav-player > li > a {
+    &, &:active, &:focus, &:link, &:hover, &:visited {
+        border-bottom-color: transparent;
+    }
+}
+
+.panel a:hover {
+    color: @white;
+}
