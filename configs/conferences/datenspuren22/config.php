@@ -145,7 +145,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's4',
+		'STREAM' => 's3',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -187,6 +187,9 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'HD_VIDEO' => true,
 
+		'DASH' => true,
+		'H264_ONLY' => true,
+    'HLS' => true,
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
 		 *
@@ -197,8 +200,6 @@ $CONFIG['ROOMS'] = array(
 		 * Default-Stream angenommen.
 		 */
 		//'SLIDES' => true,
-
-        'DASH' => true,
 
 
 		/**
