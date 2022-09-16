@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Datenspuren Log Down',
+	'DESCRIPTION' => 'Datenspuren Berechnete Welt',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
