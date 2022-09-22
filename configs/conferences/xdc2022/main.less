@@ -1,0 +1,149 @@
+@import "../../../assets/css/_structure.less";
+@brand-primary: #ff5f00;
+@brand-danger:  #ff5f00;
+@brand-success: #fec350;
+
+@panel-primary-border: @brand-primary;
+@panel-default-text:   #ffffff;
+
+//  @navbar-default-color:  #777777;
+//  @navbar-default-bg:     #f8f8f8;
+//
+//  @navbar-default-link-color:       #777;
+//  @navbar-default-link-hover-color: #333;
+
+
+
+
+
+// colors of the schedule ("Fahrplan") widget below the video-player
+//
+// @schedule-now:       @brand-danger;
+// @schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+//  @schedule-border:    lighten(@brand-primary, 50%);
+//
+//  @schedule-room:      darken(@brand-primary, 15%);
+//  @schedule-author:    #444;
+//
+//  @schedule-selected-room: lighten(@brand-success, 10%);
+//
+//  @schedule-daychange:    darken(@brand-primary, 20%);
+//  @schedule-daychange-bg: fade(white, 30%);
+//
+//  @schedule-gap:          darken(@brand-primary, 20%);
+//  @schedule-gap-bg:       fade(white, 30%);
+//
+//  @schedule-pause:        white;
+//  @schedule-pause-bg:     lighten(black, 85%);
+
+
+
+/* Karla font by Jonny Pinhorn, licensed under OFL
+ * https://fonts.google.com/specimen/Karla */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('fonts/Karla-Regular.woff2') format('woff2'),
+        url('fonts/Karla-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('fonts/Karla-Bold.woff2') format('woff2'),
+        url('fonts/Karla-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* JetBrain Mono font licensed under SIL OFL 1.1
+ * https://www.jetbrains.com/lp/mono/ */
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('fonts/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2'),
+        url('fonts/JetBrainsMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Thin.woff2') format('woff2'),
+        url('fonts/JetBrainsMono-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* XDC 2021 styles */
+
+nav .navbar-brand .icon {
+    background-image: url("logo.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    margin-top: -3px;
+}
+
+body {
+    font-family: "Karla", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .font-headline, .navbar-brand {
+    font-family: "JetBrains Mono", monospace !important;
+}
+
+.font-headline {
+  font-family: "JetBrains Mono", sans-serif !important;
+}
+
+.panel-heading {
+    background: rgb(229,76,24);
+    background: linear-gradient(90deg, rgba(229,76,24,1) 0%, rgba(254,195,80,1) 100%);
+    font-weight: bold;
+}
+
+.nav-tabs .active {
+    border-top: rgb(229, 76, 24) 3px solid;
+}
+
+.twitterlink {
+    font-size: 40px !important;
+}
+
+.irclink {
+    font-size: 40px !important;
+    font-family: "JetBrains Mono", monospace;
+    background: rgb(229,76,24);
+    background: linear-gradient(90deg, rgba(229,76,24,1) 0%, rgba(254,195,80,1) 100%);
+    border-color: orange;
+
+}
+
+.irclink:hover, .irclink:focus, .irclink:active {
+    background: rgb(196,57,9);
+    background: linear-gradient(90deg, rgb(196,57,9,1) 0%, rgb(255,176,22) 100%);
+    border-color: orange;
+}
+
+body .schedule .block.gap, body .schedule .block.daychange {
+    background-image: url("gap-light.png") !important;
+}
