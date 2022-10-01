@@ -527,7 +527,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'DOUGLASIE' => array(
 		'DISPLAY' => 'DOUGLASIE',
-		'STREAM' => 's4',
+		'STREAM' => 's6',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
