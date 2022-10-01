@@ -553,7 +553,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'PitchThrive' => array(
 		'DISPLAY' => 'Pitch&Thrive',
-		'STREAM' => 'derpeter',
+		'STREAM' => 's98',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
