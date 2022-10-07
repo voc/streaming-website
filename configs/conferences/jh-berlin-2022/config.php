@@ -76,7 +76,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-    'BANNER_HTML' => '<img src="../configs/conferences/jh-berlin-2022/illustrationen.svg" class="jh-illus"><img src="../configs/conferences/jh-berlin-2022/jh_berlin.svg" class="jh-logo">',
+    'BANNER_HTML' => '<img src="../configs/conferences/jh-berlin-2022/illustrationen.svg" class="jh-illus"><img src="../configs/conferences/jh-berlin-2022/jh_berlin_banner.svg" class="jh-logo">',
 
 	/**
 	 * Link zu den Recordings
