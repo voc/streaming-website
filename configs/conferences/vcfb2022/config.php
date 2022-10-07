@@ -156,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'Medientheater' => array(
 		'DISPLAY' => 'Medientheater',
-		'STREAM' => 's4',
+		'STREAM' => 's1',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
