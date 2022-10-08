@@ -121,7 +121,6 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Medientheater',
 			'Signallabor',
 		),
 	),
@@ -148,27 +147,6 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'Signallabor',
-		'FEEDBACK' => false,
-		'SUBTITLES' => false,
-		'EMBED' => true,
-		'IRC' => false,
-		'TWITTER' => true,
-	),
-	'Medientheater' => array(
-		'DISPLAY' => 'Medientheater',
-		'STREAM' => 's1',
-		'PREVIEW' => true,
-		'TRANSLATION' => true,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'DASH' => true,
-		'H264_ONLY' => true,
-		'HLS' => true,
-		'SLIDES' => false,
-		'AUDIO' => false,
-		'MUSIC' => false,
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Medientheater',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -205,7 +183,6 @@ $CONFIG['SCHEDULE'] = array(
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
 	'ROOMFILTER' => [
-		'Medientheater',
 		'Signallabor',
 	],
 
