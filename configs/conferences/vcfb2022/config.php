@@ -83,7 +83,7 @@ Das Vintage Computing Festival Berlin (VCFB) ist eine Veranstaltung rund um hist
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/vcfb2022',
+	'RELEASES' => 'https://media.ccc.de/c/vcfb22',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
