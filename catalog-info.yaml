@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: streaming-website
+  annotations:
+    github.com/project-slug: voc/streaming-website
+spec:
+  type: other
+  lifecycle: unknown
+  owner: web
