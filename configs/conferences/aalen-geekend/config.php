@@ -122,7 +122,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Saal 1',
+			'Vortragsraum',
 		),
 	),
 );
@@ -133,9 +133,9 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'Saal 1' => array(
-		'DISPLAY' => 'Saal 1',
-		'STREAM' => 's3',
+	'Vortragsraum' => array(
+		'DISPLAY' => 'Vortragsraum',
+		'STREAM' => 'aalend',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
@@ -147,7 +147,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Saal 1',
+		'SCHEDULE_NAME' => 'Vortragsraum',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
