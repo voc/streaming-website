@@ -184,7 +184,7 @@ $CONFIG['SCHEDULE'] = array(
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
 	'ROOMFILTER' => [
-		'Saal 1',
+		'Vortragsraum',
 	],
 
 	/**
