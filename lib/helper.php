@@ -173,6 +173,17 @@ function slugify($text)
 	return $text;
 }
 
+
+/**
+ * From https://stackoverflow.com/a/10252511/319266
+ * @param string $str
+ * @return string
+ */
+function strip_comments($str) {
+	return preg_replace('![ \t]+//.*[ \t]*[\r\n]!', '', $str);
+}
+
+
 function do_download($url, $cache, $return_response = false)
 {
 	$handle = curl_init($url);

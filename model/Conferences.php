@@ -107,7 +107,8 @@ class Conferences
 		if (file_exists($configfile)) {
 
 			$data = file_get_contents($configfile); 
-			$config = json_decode($data);
+			$config = json_decode(strip_comments($data));
+			
 			
 			if(is_null($config)) {
 				throw new ConfigException("Loading $configfile did not return an object. Maybe it's not a real JSON file?" . json_last_error_msg());
