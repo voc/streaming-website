@@ -113,14 +113,23 @@
               {
                 "type": "object",
                 "default": {},
-                "required": ["name", "slug", "streamId", "streamingConfig"],
+                "required": ["name", "slug", "streamId"],
+                "additionalProperties": false,
                 "properties": {
+                  "guid": {
+                    "type": "string",
+                    "format": "uuid",
+                    "title": "Raum GUID",
+                    "description": "(aus Schedule)",
+                    "default": "",
+                    "examples": ["64f358c2-82f2-11ed-b6f2-370ab4c5fdf0"]
+                  },
                   "name": {
                     "type": "string",
                     "title": "Raum Name",
                     "description": "(aus Schedule)",
                     "default": "",
-                    "examples": ["Piscopia"]
+                    "examples": ["Saal 1"]
                   },
                   "slug": {
                     "type": "string",
