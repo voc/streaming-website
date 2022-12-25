@@ -58,7 +58,17 @@
         "streamId": "s4",
         "streamingConfig": {
           "chat": {
-            "hashtag": "#rtc22"
+            "hashtag": "#rtc22",
+            "mastodon": true,
+            "twitter": true,
+            "matrix": {
+              "display": "#rtc22-stream:chat.ccc-p.org",
+              "url": "https://matrix.to/#/#rtc22-stream:chat.ccc-p.org"
+            },
+            "irc": {
+              "display": "#rtc22 @ hackint",
+              "url": "https://webirc.hackint.org/#ircs://irc.hackint.org/#rtc22"
+            }
           }
         }
       },
