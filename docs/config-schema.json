@@ -98,60 +98,59 @@
           "items": {
             "type": "string"
           }
+        },
+        "streamingConfig": {
+          "$ref": "#/definitions/StreamingConfig"
+        },
+        "rooms": {
+          "type": "array",
+          "title": "Räume",
+          "description": "(= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
+          "default": [],
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "default": {},
+                "required": ["name", "slug", "streamId", "streamingConfig"],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "title": "Raum Name",
+                    "description": "(aus Schedule)",
+                    "default": "",
+                    "examples": ["Piscopia"]
+                  },
+                  "slug": {
+                    "type": "string",
+                    "title": "Raum-Slug",
+                    "description": "Wird in den URLs oder im Feedback verwendet",
+                    "default": "",
+                    "examples": ["halla", "vortrag", "piscopia"]
+                  },
+                  "streamId": {
+                    "type": "string",
+                    "title": "Stream ID",
+                    "description": "Der Name des Kanals im VOC Streaming CDN z.B. s1",
+                    "default": "",
+                    "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"]
+                  },
+                  "streamingConfig": {
+                    "$ref": "#/definitions/RoomStreamingConfig"
+                  }
+                }
+              }
+            ]
+          }
         }
       }
-    },
-    "rooms": {
-      "type": "array",
-      "title": "Räume",
-      "description": "(= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
-      "default": [],
-      "additionalItems": true,
-      "items": {
-        "anyOf": [
-          {
-            "type": "object",
-            "default": {},
-            "required": ["name", "slug", "streamId", "streamingConfig"],
-            "properties": {
-              "name": {
-                "type": "string",
-                "title": "Raum Name",
-                "description": "(aus Schedule)",
-                "default": "",
-                "examples": ["Piscopia"]
-              },
-              "slug": {
-                "type": "string",
-                "title": "Raum-Slug",
-                "description": "Wird in den URLs oder im Feedback verwendet",
-                "default": "",
-                "examples": ["halla", "vortrag", "piscopia"]
-              },
-              "streamId": {
-                "type": "string",
-                "title": "Stream ID",
-                "description": "Der Name des Kanals im VOC Streaming CDN z.B. s1",
-                "default": "",
-                "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"]
-              },
-              "streamingConfig": {
-                "$ref": "#/definitions/RoomStreamingConfig"
-              }
-            }
-          }
-        ]
-      }
-    },
-    "streamingConfig": {
-      "$ref": "#/definitions/StreamingConfig"
     }
-  
   },
   "definitions": {
     "Room": {
       "type": "object",
-      "description": "Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
+      "description": "Liste der Räume/Streams/Channels (= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -167,7 +166,7 @@
           "$ref": "#/definitions/RoomStreamingConfig"
         }
       },
-      "required": ["streamId", "name", "slug", "streamingConfig"]
+      "required": ["streamId", "name", "slug"]
     },
     "Features": {
       "type": "object",
@@ -200,7 +199,7 @@
             "hashtag": {
               "type": "string",
               "title": "Hashtag der Konferenz",
-              "examples": ["#36C3", "#divoc-r2r"]
+              "examples": ["#36C3", "#divocr2r"]
             },
             "twitter": {
               "type": ["boolean", "object"]
@@ -209,7 +208,8 @@
               "type": "boolean"
             },
             "matrix": {
-              "type": "boolean"
+              "$ref": "#/definitions/IrcConfig",
+              "type": ["object", "boolean"]
             },
             "irc": {
               "$ref": "#/definitions/IrcConfig",
@@ -239,7 +239,7 @@
       "title": "Konfigurationen",
       "description": "",
       "default": {},
-      "required": ["features", "overviewPage"],
+      "required": ["features"],
       "properties": {
         "schedule": {
           "type": "object",
@@ -321,7 +321,7 @@
           }
         },
         "extraFiles": {
-          "type": "object",
+          "type": ["object", "null"],
           "additionalProperties": true
         }
       }
@@ -335,7 +335,6 @@
         {
           "schedule_name": "Piscopia",
           "display": "Piscopia",
-          "stream": "divocr2r",
           "preview": true,
           "stereo": false,
           "sd_video": true,
@@ -345,7 +344,6 @@
           "audio": true
         }
       ],
-      "required": ["display", "stream", "preview", "slides", "schedule"],
       "properties": {
         "display": {
           "type": "string",
@@ -359,8 +357,8 @@
         },
         "wide": {
           "type": "boolean",
-          "title": "16:9",
-          "description": "",
+          "title": "Breiter Teaser",
+          "description": "Doppelte Breite für die Teaserbox auf der Übersichtsseite",
           "default": true
         },
         "preview": {
@@ -477,21 +475,21 @@
         }
       }
     },
-    "ChatConfig": {
+    "ChatConfig":{
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "irc": {
-
+        "matrix": {
+          "$ref": "#/definitions/IrcConfig"
         },
-        "twitter": {
-
+        "irc": {
+          "$ref": "#/definitions/IrcConfig"
         },
         "mastodon":{
-
+          "$ref": "#/definitions/SocialMediaConfig"
         },
-        "matrix": {
-
+        "twitter": {
+          "$ref": "#/definitions/SocialMediaConfig"
         }
       }
     },
@@ -510,8 +508,8 @@
       },
       "required": ["display", "url"]
     },
-    "TwitterConfig": {
-      "title": "Twitter",
+    "SocialMediaConfig": {
+      "title": "SocialMedia",
       "type": "object",
       "additionalProperties": false,
       "properties": {

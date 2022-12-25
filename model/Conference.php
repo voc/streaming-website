@@ -3,6 +3,7 @@
 class Conference extends ModelBase
 {
 	private $slug;
+	private $schedule;
 
 	public function __construct($config, $slug)
 	{
@@ -161,7 +162,7 @@ class Conference extends ModelBase
 	}
 
 	public function hasFeedback() {
-		return $this->has('FEEDBACK');
+		return $this->has('FEEDBACK') && $this->get('FEEDBACK') !== false;
 	}
 	public function getFeedbackUrl() {
 		return joinpath([$this->getSlug(), 'feedback']).url_params();
@@ -227,7 +228,11 @@ class Conference extends ModelBase
 		return new Feedback($this);
 	}
 	public function getSchedule() {
-		return new Schedule($this);
+		if (!isset($this->schedule)) {
+			return $this->schedule = new Schedule($this);
+		}
+
+		return $this->schedule;
 	}
 	public function getSubtitles() {
 		return new Subtitles($this);

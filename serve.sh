@@ -26,4 +26,4 @@ if [ -z "$(find "configs/upcoming.json" -newermt "8 hours ago")" ]; then
 	echo
 fi
 
-$php_bin -S localhost:$port -d short_open_tag=true index.php
+$php_bin -S localhost:$port -d short_open_tag=true $2 index.php

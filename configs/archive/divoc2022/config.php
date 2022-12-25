@@ -331,7 +331,7 @@ $CONFIG['TWITTER'] = array(
 
 
 
-/**
+/*
 $CONFIG['EXTRA_FILES'] = array(
 	'schedule.xml'  => 'https://pretalx.c3voc.de/divoc-bb3/schedule/export/schedule.xml',
 	'schedule.json' => 'https://pretalx.c3voc.de/divoc-bb3/schedule/export/schedule.json',

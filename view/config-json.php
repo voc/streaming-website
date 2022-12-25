@@ -19,12 +19,14 @@ function formatConference($conference) {
 					'embed' => $conference->get('EMBED', false),
 					'relive' => $conference->hasRelive(),
 					'feedback' => $conference->hasFeedback(),
-					'irc' => lowerCaseKeys($conference->get('IRC', false)),
-					'twitter' => lowerCaseKeys($conference->get('TWITTER', false)),
+					'chat' => array(
+						'irc' => lowerCaseKeys($conference->get('IRC', null)),
+						'twitter' => lowerCaseKeys($conference->get('TWITTER', null)),
+					),
 				),
 				'schedule' => lowerCaseKeys($conference->get('SCHEDULE')),
 				'overviewPage' => array(
-					'sections' => formatSections($conference->get('OVERVIEW.GROUPS')),
+					'sections' => formatSections($conference->get('OVERVIEW.GROUPS', [])),
 				),
 				'html' => array(
 					'banner' => $conference->getBannerHtml(),
@@ -43,11 +45,25 @@ function formatRooms($conference) {
 
 	foreach($conference->getRooms() as $room) {
 		$config = $conference->get('ROOMS.'.$room->getSlug());
+
+		// cleanup nested config from config.json input
+		unset($config['streamingConfig']);
+		unset($config['stream']);
+		unset($config['streamId']);
+		unset($config['guid']);
+		unset($config['name']);
+		unset($config['slug']);
+		foreach ($config['chat'] as $k => $v) {
+			unset($config[$k]);
+		}
+
+
 		$struct[] = array(
-			'name' => $room->getDisplay(),
+			'guid' => $room->getId(),
 			'slug' => $room->getSlug(),
-			'streamId' => $room->getStream(),
-			'streamingConfig' => lowerCaseKeys($config),
+			'name' => $room->get('name') ?: $room->getScheduleName(),
+			'stream' => $room->getStream(),
+			'streamingConfig' => $config ? lowerCaseKeys($config) : null,
 		);
 	}
 	return $struct;
@@ -56,17 +72,17 @@ function formatRooms($conference) {
 function formatSections($pageConfig) {
 	$struct = [];
 
-	foreach($pageConfig as $sectionTitle => $rooms)
+	foreach($pageConfig as $sectionTitle => $items)
 	{
 		$section = array(
 			'title' => $sectionTitle,
-			'rooms' => [], 
+			'items' => [], 
 		);
 
-		foreach($rooms as $room)
+		foreach($items as $item)
 		{
-			$section['rooms'][] = array(
-				'slug' => $room,
+			$section['items'][] = array(
+				'slug' => $item,
 			);
 		}
 		$struct[] = $section;
@@ -76,6 +92,15 @@ function formatSections($pageConfig) {
 
 function lowerCaseKeys($config)
 {
+	if (empty($config)) {
+		return null;
+	}
+
+	// if config is an object, the keys are already in the proper format
+	if (is_object($config)) {
+		return (array) $config;
+	}
+
 	return array_map(function($item) {
 		return is_array($item) ? lowerCaseKeys($item) : $item;
 	}, array_change_key_case($config));
