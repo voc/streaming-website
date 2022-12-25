@@ -111,7 +111,7 @@ class Conferences
 			
 			
 			if(is_null($config)) {
-				throw new ConfigException("Loading $configfile did not return an object. Maybe it's not a real JSON file?" . json_last_error_msg());
+				throw new ConfigException("Loading $configfile did not return an object. Maybe it's not a real JSON file? \n" . json_last_error_msg());
 			}
 
 			return new ConferenceJson($config, $mandator);
@@ -140,12 +140,12 @@ class Conferences
 				description
 				keywords
 				organizer
-				startDate
-				endDate
+				start: startDate
+				end: endDate
 				streamingConfig 
 				
 				rooms(orderBy: [RANK_ASC, NAME_ASC]' . ( 
-					false ? ', filter: {streamId: {isNull: false}}' : '' 
+					true ? ', filter: {streamId: {isNull: false}}' : '' 
 				) . ' ) {
 					nodes {
 						guid
