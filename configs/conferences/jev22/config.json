@@ -46,8 +46,9 @@
         "slug": "fireshonks",
         "streamId": "fireshonks",
         "streamingConfig": {
+          "display_short": "Fireshonks",
           "chat": {
-            // "hashtag": ""
+            "hashtag": "#fireshonks"
           }
         }
       },
@@ -91,7 +92,7 @@
         "name": "WICMP Seminarraum",
         "streamId": "s2",
         "streamingConfig": {
-          // "display": "WICMP: Seminarraum",
+          "display_short": "WICMP",
           "chat": {
             "hashtag": "#WICMP"
           }
@@ -131,8 +132,9 @@
         "name": "xrelog22 - Stream",
         "streamId": "xrelog22",
         "streamingConfig": {
+          "display_short": "xrelog22",
           "chat": {
-            //"hashtag": "",
+            "hashtag": "#xrelog22",
             "matrix": {
               "display": "#xrevent:matrix.org",
               "url": "https://matrix.to/#/#xrevent:matrix.org"
