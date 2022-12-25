@@ -2,6 +2,7 @@
 
 class Room
 {
+	private $guid;
 	private $slug;
 	private $conference;
 	private $talks;
@@ -17,6 +18,7 @@ class Room
 			throw new NotFoundException('Room '.$slug);
 
 		$this->slug = $slug;
+		$this->guid = $this->get('GUID');
 
 		$schedule = $conference->getSchedule();
 		$talksPerRoom = $schedule->getSchedule();
@@ -41,6 +43,10 @@ class Room
 
 	public function getConference() {
 		return $this->conference;
+	}
+
+	public function getId() {
+		return $this->guid;
 	}
 
 	public function getSlug() {

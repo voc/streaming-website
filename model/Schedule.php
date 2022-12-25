@@ -349,12 +349,8 @@ class Schedule
 		$mapping = array();
 		foreach($this->getConference()->get('ROOMS') as $slug => $room)
 		{
-			if(isset($room['SCHEDULE_NAME']))
-				$mapping[ $room['SCHEDULE_NAME'] ] = $slug;
-			else if(isset($room['DISPLAY']))
-				$mapping[ $room['DISPLAY'] ] = $slug;
-			else
-				$mapping[ $slug ] = $slug;
+			$key = @$room['name'] ?: @$room['SCHEDULE_NAME'] ?: @$room['DISPLAY'] ?: $slug; 
+			$this->mapping[$key] = $slug;
 		}
 
 		return $mapping;
