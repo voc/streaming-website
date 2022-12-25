@@ -4,6 +4,7 @@ class Schedule
 {
 	private $conference;
 	private $program;
+	private $mapping = null;
 
 	public function __construct($conference)
 	{
@@ -346,13 +347,14 @@ class Schedule
 
 	public function getScheduleToRoomSlugMapping()
 	{
-		$mapping = array();
-		foreach($this->getConference()->get('ROOMS') as $slug => $room)
-		{
-			$key = @$room['name'] ?: @$room['SCHEDULE_NAME'] ?: @$room['DISPLAY'] ?: $slug; 
-			$this->mapping[$key] = $slug;
+		if (!$this->mapping) {
+			$this->mapping = array();
+			foreach($this->getConference()->get('ROOMS') as $slug => $room)
+			{
+				$key = @$room['name'] ?: @$room['SCHEDULE_NAME'] ?: @$room['DISPLAY'] ?: $slug; 
+				$this->mapping[$key] = $slug;
+			}
 		}
-
-		return $mapping;
+		return $this->mapping;
 	}
 }

@@ -8,7 +8,7 @@
 		<? $rooms = $schedule->getSchedule() ?>
 		<? foreach($rooms as $roomname => $events): ?>
 			<? $scheduleRoom = $schedule->getMappedRoom($roomname) ?>
-			<div class="room <? if(isset($room) && $roomname == $room->getScheduleName()): ?>highlight<? endif ?>" style="width: <?= h($totalWidth) ?>px">
+			<div class="room <? if(isset($room) && ($roomname == $room->getScheduleName() ||  ($scheduleRoom && $scheduleRoom->getId() === $room->getId()))): ?>highlight<? endif ?>" style="width: <?= h($totalWidth) ?>px">
 				<? $fromstart = 0; ?>
 				<? foreach($events as $event): ?>
 					<div
