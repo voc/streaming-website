@@ -13,19 +13,20 @@ class ModelJson
 		return ModelJson::_has($this->config, $keychain);
 	}
 
-	public static function _has($array, $keychain)
+	public static function _has($model, $keychain)
 	{
 		if(!is_array($keychain))
 			$keychain = explode('.', $keychain);
 
 		$key = strtolower($keychain[0]);
-		if(!isset($array[$key]))
+		if(is_array($model) ? !isset($model[$key]) : !isset($model->$key))
 			return false;
 
 		if(count($keychain) == 1)
 			return true;
 
-		return ModelJson::_has($array[$key], array_slice($keychain, 1));
+		$value = is_array($model) ? $model[$key] : $model->$key;
+		return ModelJson::_has($value, array_slice($keychain, 1));
 	}
 
 	public function get($keychain, $default = null)
@@ -33,18 +34,19 @@ class ModelJson
 		return ModelJson::_get($this->config, $keychain, $default);
 	}
 
-	public static function _get($array, $keychain, $default)
+	public static function _get($model, $keychain, $default)
 	{
 		if(!is_array($keychain))
 			$keychain = explode('.', $keychain);
 
 		$key = strtolower($keychain[0]);
-		if(!isset($array[$key]))
+		if (is_array($model) ? !isset($model[$key]) : !isset($model->$key))
 			return $default;
 
+		$value = is_array($model) ? $model[$key] : $model->$key;
 		if(count($keychain) == 1)
-			return $array[$key];
+			return $value;
 
-		return ModelJson::_get($array[$key], array_slice($keychain, 1), $default);
+		return ModelJson::_get($value, array_slice($keychain, 1), $default);
 	}
 }

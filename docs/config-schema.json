@@ -150,7 +150,7 @@
   "definitions": {
     "Room": {
       "type": "object",
-      "description": "Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
+      "description": "Liste der Räume/Streams/Channels (= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -166,7 +166,7 @@
           "$ref": "#/definitions/RoomStreamingConfig"
         }
       },
-      "required": ["streamId", "name", "slug", "streamingConfig"]
+      "required": ["streamId", "name", "slug"]
     },
     "Features": {
       "type": "object",
@@ -208,7 +208,8 @@
               "type": "boolean"
             },
             "matrix": {
-              "type": "boolean"
+              "$ref": "#/definitions/IrcConfig",
+              "type": ["object", "boolean"]
             },
             "irc": {
               "$ref": "#/definitions/IrcConfig",
@@ -238,7 +239,7 @@
       "title": "Konfigurationen",
       "description": "",
       "default": {},
-      "required": ["features", "overviewPage"],
+      "required": ["features"],
       "properties": {
         "schedule": {
           "type": "object",
@@ -356,8 +357,8 @@
         },
         "wide": {
           "type": "boolean",
-          "title": "16:9",
-          "description": "",
+          "title": "Breiter Teaser",
+          "description": "Doppelte Breite für die Teaserbox auf der Übersichtsseite",
           "default": true
         },
         "preview": {
@@ -474,21 +475,21 @@
         }
       }
     },
-    "ChatConfig": {
+    "ChatConfig":{
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "irc": {
-
+        "matrix": {
+          "$ref": "#/definitions/IrcConfig"
         },
-        "twitter": {
-
+        "irc": {
+          "$ref": "#/definitions/IrcConfig"
         },
         "mastodon":{
-
+          "$ref": "#/definitions/SocialMediaConfig"
         },
-        "matrix": {
-
+        "twitter": {
+          "$ref": "#/definitions/SocialMediaConfig"
         }
       }
     },
@@ -507,8 +508,8 @@
       },
       "required": ["display", "url"]
     },
-    "TwitterConfig": {
-      "title": "Twitter",
+    "SocialMediaConfig": {
+      "title": "SocialMedia",
       "type": "object",
       "additionalProperties": false,
       "properties": {

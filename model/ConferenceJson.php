@@ -15,12 +15,13 @@ class ConferenceJson extends Conference
 		$this->html  = @$c->streamingConfig->html ?: [];
 
 		$this->rooms = [];
-		$rooms = property_exists($c->rooms, 'nodes') ? @$c->rooms->nodes : $c->rooms;
+		$rooms = is_array(@$c->rooms) ? $c->rooms : @$c->rooms->nodes;
 		foreach($rooms as $r) {
 			if (!$r) {
 				continue;
 			}
 			$this->rooms[$r->slug] = array_merge(
+				['stream' => $r->streamId],
 				get_object_vars($r), 
 				@get_object_vars($r->streamingConfig) ?: [], 
 				@get_object_vars($r->streamingConfig->chat) ?: []
@@ -37,25 +38,23 @@ class ConferenceJson extends Conference
 			}
 		}
 		else {
-			$groups['Live'] = array_keys((array) $rooms);
+			$groups['Live'] = array_keys((array) $this->rooms);
 		}
 
-		parent::__construct([
-			'conference' => array_merge([
+		parent::__construct(array_merge(@get_object_vars($c->streamingConfig) ?: [], [
+			'conference' => [
 				'title' 		=> $c->title,
 				'author' 		=> $c->organizer,
 				'description' 	=> $c->description,
 				'keywords'		=> @implode(', ', $c->keywords),
 			], 
-			@get_object_vars($c->streamingConfig) ?: []),
-
+			// 'schedule' => (array) $c->streamingConfig->schedule
 			'rooms' => $this->rooms,
-
 			'overview' => [
 				'groups' => $groups
 			]
 
-		], $mandator ?: $c->acronym);
+		]), $mandator ?: $c->acronym);
 	}
 
 	public function has($keychain)
@@ -143,21 +142,21 @@ class ConferenceJson extends Conference
 	}
 
 	public function hasBannerHtml() {
-		return array_key_exists('banner', $this->html) && !empty($this->html->banner);
+		return !empty($this->html->banner);
 	}
 	public function getBannerHtml() {
 		return @$this->html->banner;
 	}
 
 	public function hasFooterHtml() {
-		return array_key_exists('footer', $this->html) && !empty($this->html->footer);
+		return !empty($this->html->footer);
 	}
 	public function getFooterHtml() {
 		return @$this->html->footer;
 	}
 
 	public function hasNotStartedHtml() {
-		return array_key_exists('not_started', $this->html);
+		return !empty($this->html->not_started);
 	}
 	public function getNotStartedHtml() {
 		return @$this->html->not_started;

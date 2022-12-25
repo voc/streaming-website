@@ -73,7 +73,7 @@ class Room
 	}
 
 	public function getScheduleName() {
-		return $this->get('SCHEDULE_NAME', $this->getDisplay());
+		return $this->get('SCHEDULE_NAME') ?: $this->get('name') ?: $this->getDisplay();
 	}
 
 	public function getDisplay() {
@@ -99,7 +99,7 @@ class Room
 	}
 
 	public function hasPreview() {
-		return $this->get('PREVIEW');
+		return $this->get('PREVIEW', true);
 	}
 
 	public function requestsWide() {
@@ -107,7 +107,7 @@ class Room
 	}
 
 	public function hasSchedule() {
-		return $this->get('SCHEDULE') && $this->getConference()->has('SCHEDULE');
+		return $this->get('SCHEDULE', true) && $this->getConference()->has('SCHEDULE');
 	}
 
 	public function hasSubtitles() {
@@ -218,7 +218,7 @@ class Room
 	}
 
 	public function hasDash() {
-		return $this->get('DASH');
+		return $this->get('DASH', true);
 	}
 
 	public function getHLSPlaylistUrl() {
@@ -234,7 +234,7 @@ class Room
 	}
 
 	public function getTranslations() {
-		return $this->get('TRANSLATION');
+		return $this->get('TRANSLATION') ?: [];
 	}
 
 	private function getTranslationEndpoints() {

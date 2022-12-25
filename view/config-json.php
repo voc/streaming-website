@@ -26,7 +26,7 @@ function formatConference($conference) {
 				),
 				'schedule' => lowerCaseKeys($conference->get('SCHEDULE')),
 				'overviewPage' => array(
-					'sections' => formatSections($conference->get('OVERVIEW.GROUPS')),
+					'sections' => formatSections($conference->get('OVERVIEW.GROUPS', [])),
 				),
 				'html' => array(
 					'banner' => $conference->getBannerHtml(),
@@ -45,9 +45,23 @@ function formatRooms($conference) {
 
 	foreach($conference->getRooms() as $room) {
 		$config = $conference->get('ROOMS.'.$room->getSlug());
+
+		// cleanup nested config from config.json input
+		unset($config['streamingConfig']);
+		unset($config['stream']);
+		unset($config['streamId']);
+		unset($config['guid']);
+		unset($config['name']);
+		unset($config['slug']);
+		foreach ($config['chat'] as $k => $v) {
+			unset($config[$k]);
+		}
+
+
 		$struct[] = array(
-			'name' => $room->getDisplay(),
+			'guid' => $room->getId(),
 			'slug' => $room->getSlug(),
+			'name' => $room->get('name') ?: $room->getScheduleName(),
 			'stream' => $room->getStream(),
 			'streamingConfig' => $config ? lowerCaseKeys($config) : null,
 		);
@@ -81,6 +95,12 @@ function lowerCaseKeys($config)
 	if (empty($config)) {
 		return null;
 	}
+
+	// if config is an object, the keys are already in the proper format
+	if (is_object($config)) {
+		return (array) $config;
+	}
+
 	return array_map(function($item) {
 		return is_array($item) ? lowerCaseKeys($item) : $item;
 	}, array_change_key_case($config));
