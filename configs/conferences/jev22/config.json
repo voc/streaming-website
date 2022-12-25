@@ -54,7 +54,7 @@
       {
         "guid": "6f12618c-0f1c-4318-a201-099152f86ac0",
         "name": "RTC-Bühne (Sparti)",
-        "slug": "rtc_sparti",
+        "slug": "rtc",
         "streamId": "s4",
         "streamingConfig": {
           "chat": {
