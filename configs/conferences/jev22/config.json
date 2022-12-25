@@ -58,6 +58,8 @@
         "streamId": "s4",
         "streamingConfig": {
           "chat": {
+            "display": "Reconnect to Chaos",
+            "display_short": "RTC",
             "hashtag": "#rtc22",
             "mastodon": true,
             "twitter": true,
