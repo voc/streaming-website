@@ -24,9 +24,9 @@
 				usort($rooms, function ($r_a, $r_b) {
 					global $upcomingTalksPerRoom;
 					$u_a = $upcomingTalksPerRoom[ $r_a->getSlug() ];
-					$a = @$u_a['current']['special'] ? $u_a['next'] : $u_a['current'];
+					$a = @$u_a['current'] && !@$u_a['current']['special'] ? $u_a['current'] : $u_a['next'];
 					$u_b = $upcomingTalksPerRoom[ $r_b->getSlug() ];
-					$b = @$u_b['current']['special'] ? $u_b['next'] : $u_b['current'];
+					$b =  @$u_b['current'] && !@$u_b['current']['special'] ? $u_b['current'] : $u_b['next'];
 
 					// sort rooms without remaining schedule to end
 					if ( $u_a['next'] === null || $u_b['next'] === null) {
