@@ -141,6 +141,17 @@
             }
           }
         }
+      },
+      {
+        "guid": "3100bf0b-d2c9-43be-8bf4-c083b4239a78",
+        "slug": "ccl",
+        "name": "Curious Community Labs Chaos Experience",
+        "streamId": "s3",
+        "streamingConfig": {
+          "chat": {
+            // "hashtag": "",
+          }
+        }
       }
     ]
   }
