@@ -32,6 +32,10 @@ class Schedule
 		return $this->getConference()->get('SCHEDULE.SIMULATE_OFFSET', 0);
 	}
 
+	public function getDayIndexOffset() {
+		return $this->getConference()->get('SCHEDULE.INDEX_OFFSET', 0);
+	}
+
 	public function getScale() {
 		return floatval($this->getConference()->get('SCHEDULE.SCALE', 7));
 	}
@@ -99,6 +103,7 @@ class Schedule
 
 		$program = array();
 		$rooms = array();
+		$day_idx_offset = $this->getDayIndexOffset();
 
 		// re-calculate day-ends
 		// some schedules have long gaps before the first talk or talks that expand beyond the dayend
@@ -179,7 +184,7 @@ class Schedule
 					$end = new DateTimeImmutable($nextday['start']);
 					$daychange = $this->makeEvent($dayend, $end);
 					$daychange['special'] = 'daychange';
-					$daychange['title'] = 'Daychange from Day '.$dayidx.' to '.($dayidx+1);
+					$daychange['title'] = 'Daychange from Day '.($dayidx+$day_idx_offset).' to '.($dayidx+1+$day_idx_offset);
 					$daychange['duration'] = 3600;
 					$program[$roomName][] = $daychange;
 					continue;
@@ -258,7 +263,7 @@ class Schedule
 					$end = new DateTimeImmutable($schedule->day[$dayidx]['start']);
 					$daychange = $this->makeEvent($dayend, $end);
 					$daychange['special'] = 'daychange';
-					$daychange['title'] = 'Daychange from Day '.$dayidx.' to '.($dayidx+1);
+					$daychange['title'] = 'Daychange from Day '.($dayidx+$day_idx_offset).' to '.($dayidx+1+$day_idx_offset);
 					$daychange['duration'] = 3600;
 					$program[$roomName][] = $daychange;
 				}

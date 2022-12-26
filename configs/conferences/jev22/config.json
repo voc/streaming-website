@@ -31,7 +31,8 @@
       // "overviewPage": {},
       "schedule": {
         "url": "https://data.c3voc.de/jev22/channels.schedule.xml",
-        "scale": 7
+        "scale": 7,
+        "index_offset": -1
       },
       "html": {
         "banner": null,
