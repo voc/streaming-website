@@ -153,6 +153,17 @@
             // "hashtag": "",
           }
         }
+      },
+      {
+        "guid": "7ddef1dc-d3e8-451b-9ea5-3441bfa22e23",
+        "name": "Hackwerk",
+        "slug": "hackwerk",
+        "streamId": "aalend",
+        "streamingConfig": {
+          "display": "Hackwerk",
+          "display_short": "hackwerk",
+          "chat": {}
+        }
       }
     ]
   }
