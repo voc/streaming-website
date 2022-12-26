@@ -41,20 +41,23 @@ class ConferenceJson extends Conference
 			$groups['Live'] = array_keys((array) $this->rooms);
 		}
 
-		parent::__construct(array_merge(@get_object_vars($c->streamingConfig) ?: [], [
-			'conference' => [
-				'title' 		=> $c->title,
-				'author' 		=> $c->organizer,
-				'description' 	=> $c->description,
-				'keywords'		=> @implode(', ', $c->keywords),
-			], 
-			// 'schedule' => (array) $c->streamingConfig->schedule
-			'rooms' => $this->rooms,
-			'overview' => [
-				'groups' => $groups
+		parent::__construct(array_merge(
+			@get_object_vars($c->streamingConfig) ?: [], 
+			@get_object_vars($c->streamingConfig->features) ?: [],
+			[
+				'conference' => [
+					'title' 		=> $c->title,
+					'author' 		=> $c->organizer,
+					'description' 	=> $c->description,
+					'keywords'		=> @implode(', ', $c->keywords),
+				], 
+				// 'schedule' => (array) $c->streamingConfig->schedule
+				'rooms' => $this->rooms,
+				'overview' => [
+					'groups' => $groups
+				]
 			]
-
-		]), $mandator ?: $c->acronym);
+		), $mandator ?: $c->acronym);
 	}
 
 	public function has($keychain)
