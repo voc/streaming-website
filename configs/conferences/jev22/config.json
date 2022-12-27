@@ -16,15 +16,15 @@
         // TODO: Vielleicht in Zukunft doch chat und social trennen?
         "chat": {
           "hashtag": "#jev22",
-          "mastodon": true,
-          "matrix": {
-            "display": "#jev22 @ hackint",
-            "url": "https://matrix.to/#/#jev22:hackint.org"
-          },
-          "irc": {
-            "display": "#jev22 @ hackint",
-            "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#jev22"
-          }
+          "mastodon": true
+          //"matrix": {
+          //  "display": "#jev22 @ hackint",
+          //  "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#jev22"
+          //},
+          //"irc": {
+          //  "display": "#jev22 @ hackint",
+          //  "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#jev22"
+          //},
           //"xxx": { "display": "#jev22", "text": "#jev22" }
         }
       },
