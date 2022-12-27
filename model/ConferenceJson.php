@@ -44,6 +44,7 @@ class ConferenceJson extends Conference
 		parent::__construct(array_merge(
 			@get_object_vars($c->streamingConfig) ?: [], 
 			@get_object_vars($c->streamingConfig->features) ?: [],
+			@get_object_vars($c->streamingConfig->features->chat) ?: [],
 			[
 				'conference' => [
 					'title' 		=> $c->title,

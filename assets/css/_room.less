@@ -59,6 +59,16 @@ body.room {
 						font-size: @jumbo-font-size;
 					}
 
+					&.matrixlink {
+						@matrix: #0dbd8b; // Element-Green
+						.button-variant(white; @matrix; darken(@matrix, 5%););
+					}
+					
+					&.mastodonlink {
+						@mastodon: #563ACC; // Mastodon-Purple
+						.button-variant(white; @mastodon; darken(@mastodon, 5%););
+					}
+
 					&.twitterlink {
 						@twitter: #55ACEE; // Twitter-Blue
 						.button-variant(white; @twitter; darken(@twitter, 5%););

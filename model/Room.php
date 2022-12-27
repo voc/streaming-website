@@ -151,26 +151,63 @@ class Room
 
 	public function getTwitterText() {
 		return sprintf(
-			$this->get('TWITTER_CONFIG.TEXT', $this->getConference()->get('TWITTER.TEXT')),
+			$this->get('TWITTER_CONFIG.TEXT') ?: $this->getConference()->get('TWITTER.TEXT') ?: $this->getHashtag(),
 			$this->getSlug()
+		);
+	}
+
+	public function hasMastodon() {
+		return $this->get('mastodon') && $this->getConference()->has('chat');
+	}
+
+	public function getMastodonUrl() {
+		return sprintf(
+			'https://chaos.social/tags/%s',
+			substr($this->getHashtag(), 1)
+		);
+	}
+
+	public function getHashtag() {
+		return sprintf(
+			$this->get('social.hashtag') ?: $this->get('chat.hashtag') ?: $this->getConference()->get('social.hashtag')  ?: $this->getConference()->get('chat.hashtag'),
+			$this->getSlug()
+		);
+	}
+
+	public function hasMatrix() {
+		return $this->get('chat.matrix') && $this->getConference()->has('chat');
+	}
+
+	public function getMatrixDisplay() {
+		return sprintf(
+			$this->get('chat.matrix.display') ?: $this->getConference()->get('chat.matrix.display'),
+			$this->getSlug()
+		);
+	}
+
+	public function getMatrixUrl() {
+		return sprintf(
+			$this->get('chat.matrix.url') ?: $this->getConference()->get('chat.matrix.url'),
+			rawurlencode($this->getSlug())
 		);
 	}
 
 
 	public function hasIrc() {
-		return $this->get('IRC') && $this->getConference()->has('IRC');
+		$irc = $this->get('IRC');
+		return $this->getConference()->has('IRC') && (is_array($irc) ? count($irc) : $irc);
 	}
 
 	public function getIrcDisplay() {
 		return sprintf(
-			$this->get('IRC_CONFIG.DISPLAY', $this->getConference()->get('IRC.DISPLAY')),
+			$this->get('IRC_CONFIG.DISPLAY') ?: $this->get('irc.display') ?: $this->getConference()->get('IRC.DISPLAY'),
 			$this->getSlug()
 		);
 	}
 
 	public function getIrcUrl() {
 		return sprintf(
-			$this->get('IRC_CONFIG.URL', $this->getConference()->get('IRC.URL')),
+			$this->get('IRC_CONFIG.URL') ?: $this->get('irc.url') ?: $this->getConference()->get('IRC.URL'),
 			rawurlencode($this->getSlug())
 		);
 	}
@@ -187,9 +224,10 @@ class Room
 	}
 
 	public function hasChat() {
-		return $this->hasTwitter() || $this->hasIrc() || $this->hasWebchat();
+		$chat = $this->get('CHAT');
+		return ((is_array($chat) ? count($chat) : $chat) && $this->getConference()->has('CHAT')) 
+			|| $this->hasIrc() || $this->hasWebchat() || $this->hasTwitter();
 	}
-
 
 	public function hasEmbed() {
 		return $this->get('EMBED') && $this->getConference()->get('EMBED');

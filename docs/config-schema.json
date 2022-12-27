@@ -203,19 +203,8 @@
         },
         "chat": {
           "type": "object",
-          "title": "Globale Konfiguration für Chat und Social Media",
+          "title": "Globale Konfiguration für Chat",
           "properties": {
-            "hashtag": {
-              "type": "string",
-              "title": "Hashtag der Konferenz",
-              "examples": ["#36C3", "#divocr2r"]
-            },
-            "twitter": {
-              "type": ["boolean", "object"]
-            },
-            "mastodon":{
-              "type": "boolean"
-            },
             "matrix": {
               "$ref": "#/definitions/IrcConfig",
               "type": ["object", "boolean"]
@@ -239,6 +228,29 @@
               }
             }
           }
+        },
+        "social": {
+          "type": "object",
+          "title": "Globale Konfiguration für Social Media",
+          "properties": {
+            "hashtag": {
+              "type": "string",
+              "title": "Hashtag der Konferenz",
+              "examples": ["#36C3", "#divocr2r"]
+            },
+            "mastodon":{
+              "type": "boolean"
+            },
+            "twitter": {
+              "type": ["boolean", "object"]
+            }
+          },
+          "examples": [
+            {
+              "hashtag": "#37C3",
+              "mastodon": true
+            }
+          ]
         }
       }
     },
@@ -468,6 +480,13 @@
           "description": "Ist diese Option aktiviert, wird ein Chat-Tab mit den jeweiligen Links angezeigt.",
           "default": false,
           "$ref": "#/definitions/ChatConfig"
+        },
+        "social": {
+          "type": ["object"],
+          "title": "Social Media konfigurieren (ebenfalls im Chat-Tab)",
+          "description": "Sind diese Optionen aktiviert, werden im Chat-Tab die jeweiligen Links angezeigt.",
+          "default": false,
+          "$ref": "#/definitions/SocialConfig"
         }
       }
     },
@@ -493,12 +512,6 @@
         },
         "irc": {
           "$ref": "#/definitions/IrcConfig"
-        },
-        "mastodon":{
-          "$ref": "#/definitions/SocialMediaConfig"
-        },
-        "twitter": {
-          "$ref": "#/definitions/SocialMediaConfig"
         }
       }
     },
@@ -518,6 +531,24 @@
       "required": ["display", "url"]
     },
     "SocialMediaConfig": {
+      "type": "object",
+      "title": "Raum-/Streamspezifize Konfiguration für Social Media",
+      "properties": {
+        "hashtag": {
+          "type": "string",
+          "title": "Hashtag des Streams",
+          "examples": ["#36C3", "#divocr2r"]
+        },
+        "mastodon":{
+          "type": "boolean"
+        },
+        "twitter": {
+          "type": ["boolean", "object"],
+          "$ref": "#/definitions/SocialMediaDetailConfig"
+        }
+      }
+    },
+    "SocialMediaDetailConfig": {
       "title": "SocialMedia",
       "type": "object",
       "additionalProperties": false,
