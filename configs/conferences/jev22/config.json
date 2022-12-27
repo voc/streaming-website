@@ -88,6 +88,26 @@
         }
       },
       {
+        "guid": "a24f561b-6f4a-4ee3-87fb-d22fff05f0da",
+        "name": "HIP - Track 1 - Room 5",
+        "slug": "hip1",
+        "streamId": "cbase1",
+        "streamingConfig": {
+          "display": "Hacking in Parallel – Track 1",
+          "display_short": "HIP 1"
+        }
+      },
+      {
+        "guid": "a24f561b-6f4a-4ee3-87fb-d22fff05f0dc",
+        "name": "HIP - Track 2 - Room 2",
+        "slug": "hip2",
+        "streamId": "cbase2",
+        "streamingConfig": {
+          "display": "Hacking in Parallel – Track 2",
+          "display_short": "HIP 2"
+        }
+      },
+      {
         "guid": "99808216-837b-11ed-85fb-6c400891b752",
         "slug": "wicmp",
         "name": "WICMP Seminarraum",
@@ -149,9 +169,7 @@
         "name": "Curious Community Labs Chaos Experience",
         "streamId": "s3",
         "streamingConfig": {
-          "chat": {
-            // "hashtag": "",
-          }
+          "chat": {}
         }
       },
       {
@@ -161,6 +179,35 @@
         "streamId": "aalend",
         "streamingConfig": {
           "chat": {}
+        }
+      },
+      {
+        "guid": "99411f15-7335-4d36-abac-3ff0419ec954",
+        "name": "Winterchaos",
+        "slug": "winterchaos",
+        "streamId": "winterchaos",
+        "streamingConfig": {
+          "display": "Winterchaos (Luzern)",
+          "display_short": "Winterchaos"
+        }
+      },
+      {
+        "slug": "wongress",
+        "name": "KampHack: Wongress (Münster)",
+        "streamId": "wongress",
+        "streamingConfig": {
+          "display_short": "Wongress"
+        }
+      },
+      {
+        "guid": "a6f1969c-8349-4344-9d4e-8b1e1ecd0ecf",
+        "slug": "woodbine",
+        "name": "WoodbineDWeb",
+        "streamId": "woodbine",
+        "streamingConfig": {
+          "display": "RemoteC3 @ Woodbine",
+          "display_short": "Woodbine",
+          "links": ["https://woodbine.nyc/2022/12/dweb-jev/"]
         }
       }
     ]
