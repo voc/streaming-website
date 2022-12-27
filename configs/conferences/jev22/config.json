@@ -160,8 +160,6 @@
         "slug": "hackwerk",
         "streamId": "aalend",
         "streamingConfig": {
-          "display": "Hackwerk",
-          "display_short": "hackwerk",
           "chat": {}
         }
       }
