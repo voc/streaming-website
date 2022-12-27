@@ -134,37 +134,44 @@ class Conferences
 
 		// config option for dynamic lookup feature defined below
 		if (!@$GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) {
-			return false;
+			throw new NotFoundException();;
 		}
 
-		// otherwise try to find conference in c3data postgres
-		$query = 'query StreamingConfig($acronym: String!) {
-			conference(acronym: $acronym) {
-				title
-				acronym
-				description
-				keywords
-				organizer
-				start: startDate
-				end: endDate
-				streamingConfig 
-				
-				rooms(orderBy: [RANK_ASC, NAME_ASC]' . ( 
-					true ? ', filter: {streamId: {isNull: false}}' : '' 
-				) . ' ) {
-					nodes {
-						guid
-						name
-						slug
-						streamId
-						streamingConfig
+		try {
+			// otherwise try to find conference in c3data postgres
+			$query = 'query StreamingConfig($acronym: String!) {
+				conference(acronym: $acronym) {
+					title
+					acronym
+					description
+					keywords
+					organizer
+					start: startDate
+					end: endDate
+					streamingConfig 
+					
+					rooms(orderBy: [RANK_ASC, NAME_ASC]' . ( 
+						true ? ', filter: {streamId: {isNull: false}}' : '' 
+					) . ' ) {
+						nodes {
+							guid
+							name
+							slug
+							streamId
+							streamingConfig
+						}
 					}
 				}
-			}
-		}';
-		$data = query_data('conferenceConfig', $query, ['acronym' => $mandator]);
+			}';
+			$data = query_data('conferenceConfig', $query, ['acronym' => $mandator]);
 
-		return new ConferenceJson($data, $mandator);
+			return new ConferenceJson($data, $mandator);
+		}
+		catch(Exception $e) {
+			throw new NotFoundException();
+		}
+
+		
 	}
 
 	public static function getConference($mandator) {
