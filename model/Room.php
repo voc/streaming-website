@@ -157,7 +157,7 @@ class Room
 	}
 
 	public function hasMastodon() {
-		return $this->get('mastodon') && $this->getConference()->has('chat');
+		return $this->get('social.mastodon') && $this->getConference()->get('social') !== false;
 	}
 
 	public function getMastodonUrl() {
@@ -169,7 +169,7 @@ class Room
 
 	public function getHashtag() {
 		return sprintf(
-			$this->get('social.hashtag') ?: $this->get('chat.hashtag') ?: $this->getConference()->get('social.hashtag')  ?: $this->getConference()->get('chat.hashtag'),
+			$this->get('social.hashtag') ?: $this->getConference()->get('social.hashtag'),
 			$this->getSlug()
 		);
 	}
