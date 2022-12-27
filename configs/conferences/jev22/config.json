@@ -142,6 +142,12 @@
           "social": {
             "hashtag": "#WICMP",
             "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#wicmp-seminarraum:libera.chat",
+              "url": "https://matrix.to/#/#wicmp-seminarraum:libera.chat"
+            }
           }
         }
       },
