@@ -132,6 +132,11 @@ class Conferences
 			return new Conference($config, $mandator);
 		}
 
+		// config option for dynamic lookup feature defined below
+		if (!@$GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) {
+			return false;
+		}
+
 		// otherwise try to find conference in c3data postgres
 		$query = 'query StreamingConfig($acronym: String!) {
 			conference(acronym: $acronym) {

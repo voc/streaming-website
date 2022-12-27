@@ -15,7 +15,7 @@ class ConferenceJson extends Conference
 		$this->html  = @$c->streamingConfig->html ?: [];
 
 		$this->rooms = [];
-		$rooms = is_array(@$c->rooms) ? $c->rooms : @$c->rooms->nodes;
+		$rooms = (is_array(@$c->rooms) ? $c->rooms : @$c->rooms->nodes) ?: [];
 		foreach($rooms as $r) {
 			if (!$r) {
 				continue;

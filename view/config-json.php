@@ -53,15 +53,17 @@ function formatRooms($conference) {
 		unset($config['guid']);
 		unset($config['name']);
 		unset($config['slug']);
-		foreach ($config['chat'] as $k => $v) {
-			unset($config[$k]);
+		if (isset($config['chat'])) {
+			foreach ($config['chat'] as $k => $v) {
+				unset($config[$k]);
+			}
 		}
 
 
 		$struct[] = array(
 			'guid' => $room->getId(),
 			'slug' => $room->getSlug(),
-			'name' => $room->get('name') ?: $room->getScheduleName(),
+			'name' => /*$room->get('name') ?: */ $room->getScheduleName(),
 			'stream' => $room->getStream(),
 			'streamingConfig' => $config ? lowerCaseKeys($config) : null,
 		);

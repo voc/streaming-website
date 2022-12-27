@@ -38,6 +38,12 @@ else
 	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.media.ccc.de/';
 }
 
+/**
+ * Wenn die Konfiguration einer Konferenz/Mandant nicht im Dateisystem gefunden wird:
+ * Soll die Streamingwebseite versuchen diese bei data.c3voc.de per API abzufragen?
+ */
+$GLOBALS['CONFIG']['DYNAMIC_LOOKUP'] = false;
+
 
 /**
  * Konfiguration für den Datei-Download Cronjob
@@ -103,7 +109,10 @@ $GLOBALS['CONFIG']['FEEDBACK'] = array(
  */
 
 $GLOBALS['CONFIG']['ROOM_DEFAULTS'] = array(
-	'WIDE' => true,
+	/**
+	 * Breite Teaser in der Übersichtsseite
+	 */
+	'WIDE' => false,
 
 	/**
 	 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen

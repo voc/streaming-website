@@ -205,9 +205,9 @@ try {
 		'conference_assets' => forceslash($mandator),
 
 		'conference' => $conference,
-		'feedback' => $conference->getFeedback(),
-		'schedule' => $conference->getSchedule(),
-		'subtitles' => $conference->getSubtitles(),
+		'feedback' => $conference ? $conference->getFeedback() : false,
+		'schedule' => $conference ? $conference->getSchedule() : false,
+		'subtitles' => $conference ? $conference->getSubtitles() : false,
 	));
 
 	// ALWAYS AVAILABLE ROUTES
