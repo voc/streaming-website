@@ -2,8 +2,8 @@
 
 class Conference extends ModelBase
 {
-	private $slug;
-	private $schedule;
+	protected $slug;
+	protected $schedule;
 
 	public function __construct($config, $slug)
 	{

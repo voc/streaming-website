@@ -40,6 +40,8 @@ class ConferenceJson extends Conference
 		else {
 			$groups['Live'] = array_keys((array) $this->rooms);
 		}
+		
+		$acronym = $mandator ?: $c->acronym;
 
 		parent::__construct(array_merge(
 			@get_object_vars($c->streamingConfig) ?: [], 
@@ -51,6 +53,9 @@ class ConferenceJson extends Conference
 					'author' 		=> $c->organizer,
 					'description' 	=> $c->description,
 					'keywords'		=> @implode(', ', $c->keywords),
+					// future TODO: change structure
+					"relive_json"	=> @$c->streamingConfig->features->relive !== false ? "https://cdn.c3voc.de/relive/".$acronym."/index.json" : null,
+					"releases"		=> @$c->streamingConfig->features->releases !== false ? "https://media.ccc.de/c/".$acronym : null
 				], 
 				// 'schedule' => (array) $c->streamingConfig->schedule
 				'rooms' => $this->rooms,
@@ -58,7 +63,7 @@ class ConferenceJson extends Conference
 					'groups' => $groups
 				]
 			]
-		), $mandator ?: $c->acronym);
+		), $acronym);
 	}
 
 	public function has($keychain)
