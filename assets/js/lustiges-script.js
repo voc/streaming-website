@@ -146,10 +146,11 @@ $(function() {
 		offset = $('.js-schedule-settings').data('scheduleoffset');
 
 	$schedule.on('mouseenter mouseleave touchstart touchend', function(e) {
+		console.log(e);
 		if(e.type == 'mouseleave' || e.type == 'touchend') {
 			rewindTimeout = setTimeout(function() {
 				scrollLock = false;
-			}, 5000);
+			}, rewindTime);
 		} else {
 			clearTimeout(rewindTimeout);
 			scrollLock = true;

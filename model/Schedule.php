@@ -238,10 +238,13 @@ class Schedule
 
 					// normal talk
 					$talk = $this->makeEvent($start, $end);
+					$talk['guid'] = (string)$event['guid'];
 					$talk['title'] = (string)$event->title;
 					$talk['speaker'] = implode(', ', $personnames);
 					$talk['room_known'] = $this->isRoomMapped($roomName);
 					$talk['optout'] = $this->isOptout($event);
+					$talk['url'] = (string)$event->url;
+
 					$program[$roomName][] = $talk;
 
 					$laststart = $start;
