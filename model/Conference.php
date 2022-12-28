@@ -149,6 +149,9 @@ class Conference extends ModelBase
 	public function getAboutLink() {
 		return joinpath([$this->getSlug(), 'about']).url_params();
 	}
+	public function getScheduleLink() {
+		return joinpath([$this->getSlug(), 'schedule']).url_params();
+	}
 
 	public function hasRelive() {
 		return $this->getRelive()->isEnabled();
