@@ -129,8 +129,8 @@ body .schedule {
 	display: none;
 	position: absolute;
 	z-index: 9;
-	background-color: #f1f1f1;
-	border: 1px solid #d3d3d3;
+	background-color: @schedule-pause-bg;
+	border: 1px solid @schedule-pause;
 	padding: 2px;
 
 	#modal-header {
@@ -138,12 +138,14 @@ body .schedule {
 		cursor: move;
 		z-index: 10;
 		text-align: center;
-		background-color: #2196F3;
-		color: #fff;
+		background-color: @link-color;
+		color: @schedule-pause;
 	}
 
-	#modal-title {
-		text-transform:none
+	#modal-title, #modal-title * {
+		text-transform: none;
+		color: @schedule-pause;
+		;
 	}
 
 	#modal-content {
@@ -153,13 +155,13 @@ body .schedule {
 	}
 
 	#modal-body {
-		max-height: 100%;
-		overflow-x:auto
+		max-height: 400px;
+		overflow-x: auto
 	}
 
 	#modal-data {
 		display: grid;
-		grid: auto/1fr 3fr 1fr 2fr
+		grid: min-content max-content;
 	}
 
 	.modal-close * {
