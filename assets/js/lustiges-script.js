@@ -311,14 +311,17 @@ $(function() {
 // update preview images, show fallback if preview not available
 $(function() {
 	const
-		previewSelector = '.room.has-preview .preview',
+		roomSelector = '.room.has-preview',
+		previewSelector = roomSelector + ' .preview',
 		fallbackPreview = "assets/img/fallback.png";
 
 	$(previewSelector).each(function() {
-		const $preview = $(this);
+		const $preview = $(this),
+			$room = $preview.parents(roomSelector);
 		$preview.data("src",$preview.prop("src"))
 		$preview.on("error", function() {
 			$preview.prop("src", fallbackPreview);
+			$room.addClass('hidden');
 		});
 	});
 
@@ -326,13 +329,16 @@ $(function() {
 		$(previewSelector).each(function() {
 			const
 				$preview = $(this),
+				$room = $preview.parents(roomSelector),
 				$preload = $('<img />'),
 				src = $preview.data('src');
 
 			$preload.on('load', function() {
 				$preview.prop('src', $preload.prop('src'));
+				$room.removeClass('hidden');
 			}).on('error', function() {
 				$preview.prop("src", fallbackPreview);
+				$room.addClass('hidden');
 			}).prop('src', src + '?'+(new Date()).getTime());
 		});
 	}, 1000*60);
