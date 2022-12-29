@@ -299,12 +299,27 @@ $(function() {
 	});
 });
 
-// update teaser images
+// update teaser images, hide/show room depending on teaser image availability
 $(function() {
+	var
+		roomSelector = '.room.has-preview',
+		previewSelector = roomSelector + ' .preview';
+
+	$(previewSelector).each(function() {
+		var
+			$teaser = $(this),
+			$room = $teaser.parents(roomSelector);
+
+		$teaser.on('error', function() {
+			$room.addClass('hidden');
+		});
+	});
+
 	setInterval(function() {
-		$('.room.has-preview .preview').each(function() {
+		$(previewSelector).each(function() {
 			var
 				$teaser = $(this),
+				$room = $teaser.parents(roomSelector),
 				$preload = $('<img />'),
 				src = $teaser.data('src');
 
@@ -315,6 +330,9 @@ $(function() {
 
 			$preload.on('load', function() {
 				$teaser.prop('src', $preload.prop('src'));
+				$room.removeClass('hidden');
+			}).on('error', function() {
+				$room.addClass('hidden');
 			}).prop('src', src + '?'+(new Date()).getTime());
 		});
 	}, 1000*60);
