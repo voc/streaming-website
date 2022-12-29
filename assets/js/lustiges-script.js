@@ -302,7 +302,7 @@ $(function() {
 // update teaser images
 $(function() {
 	setInterval(function() {
-		$('.rooms .lecture .teaser').each(function() {
+		$('.room.has-preview .preview').each(function() {
 			var
 				$teaser = $(this),
 				$preload = $('<img />'),
