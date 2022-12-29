@@ -311,7 +311,7 @@ $(function() {
 // update preview images, show fallback if preview not available
 $(function() {
 	const
-		previewSelector = '.room .preview',
+		previewSelector = '.room.has-preview .preview',
 		fallbackPreview = "assets/img/fallback.png";
 
 	$(previewSelector).each(function() {
@@ -390,7 +390,7 @@ $(function() {
 					audioSrc = ctx.createMediaElementSource(player),
 					analyser = ctx.createAnalyser();
 
-				// we have to connect the MediaElementSource with the analyser 
+				// we have to connect the MediaElementSource with the analyser
 				audioSrc.connect(analyser);
 
 				// we could configure the analyser: e.g. analyser.fftSize (for further infos read the spec)
