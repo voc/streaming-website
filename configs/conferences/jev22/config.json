@@ -227,7 +227,17 @@
         "streamId": "winterchaos",
         "streamingConfig": {
           "display": "Winterchaos (Luzern)",
-          "display_short": "Winterchaos"
+          "display_short": "Winterchaos",
+          "chat": {
+            "matrix": {
+              "display": "#chaos:laborluzern.ch",
+              "url": "https://matrix.to/#/#chaos:laborluzern.ch"
+            },
+            "irc": {
+              "display": "#winterchaos @ irc.libera.chat",
+              "url": "https://web.libera.chat/#winterchaos"
+            }
+          }
         }
       },
       {
