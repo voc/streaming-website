@@ -242,9 +242,10 @@
       },
       {
         "slug": "wongress",
-        "name": "KampHack: Wongress (Münster)",
+        "name": "Warpzone",
         "streamId": "wongress",
         "streamingConfig": {
+          "display": "KampHack: Wongress (Warpzone Münster)",
           "display_short": "Wongress"
         }
       },
