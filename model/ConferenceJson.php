@@ -112,12 +112,8 @@ class ConferenceJson extends Conference
 				return false;
 		}
 
-		if($this->end) {
-			$now = new DateTime('now');
-			return $now >= $this->end;
-		} else {
-			return false;
-		}
+		$now = new DateTime('now');
+		return $now >= $this->end;
 	}
 
 	public function getRooms()
