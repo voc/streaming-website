@@ -313,7 +313,8 @@ $(function() {
 	const
 		roomSelector = '.room.has-preview',
 		previewSelector = roomSelector + ' .preview',
-		fallbackPreview = "assets/img/fallback.png";
+		fallbackPreview = "assets/img/fallback.png",
+		inactiveClass = 'inactive-stream';
 
 	$(previewSelector).each(function() {
 		const $preview = $(this),
@@ -321,7 +322,7 @@ $(function() {
 		$preview.data("src",$preview.prop("src"))
 		$preview.on("error", function() {
 			$preview.prop("src", fallbackPreview);
-			$room.addClass('hidden');
+			$room.addClass(inactiveClass);
 		});
 	});
 
@@ -335,10 +336,10 @@ $(function() {
 
 			$preload.on('load', function() {
 				$preview.prop('src', $preload.prop('src'));
-				$room.removeClass('hidden');
+				$room.removeClass(inactiveClass);
 			}).on('error', function() {
 				$preview.prop("src", fallbackPreview);
-				$room.addClass('hidden');
+				$room.addClass(inactiveClass);
 			}).prop('src', src + '?'+(new Date()).getTime());
 		});
 	}, 1000*60);
