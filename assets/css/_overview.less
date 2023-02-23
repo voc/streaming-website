@@ -115,6 +115,39 @@ body.overview {
 		.panel-body h2 {
 			margin: 0;
 		}
+
+		&.inactive-stream {
+			display: none;
+		}
+	}
+
+	input.show-inactive {
+		display: none;
+	}
+	.show-inactive-toggle {
+		width: ~"calc(100% - 30px)";
+		margin-left: 15px;
+
+		.show-inactive-text {
+			display: inline;
+		}
+		.hide-inactive-text {
+			display: none;
+		}
+	}
+	input[type="checkbox"]:checked.show-inactive {
+		~ .room {
+			display: block;
+		}
+
+		~ .show-inactive-toggle {
+			.show-inactive-text {
+				display: none;
+			}
+			.hide-inactive-text {
+				display: inline;
+			}
+		}
 	}
 
 	.recordings a {

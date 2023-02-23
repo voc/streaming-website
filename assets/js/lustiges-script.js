@@ -303,7 +303,8 @@ $(function() {
 $(function() {
 	var
 		roomSelector = '.room.has-preview',
-		previewSelector = roomSelector + ' .preview';
+		previewSelector = roomSelector + ' .preview',
+		inactiveClass = 'inactive-stream';
 
 	$(previewSelector).each(function() {
 		var
@@ -311,7 +312,7 @@ $(function() {
 			$room = $teaser.parents(roomSelector);
 
 		$teaser.on('error', function() {
-			$room.addClass('hidden');
+			$room.addClass(inactiveClass);
 		});
 	});
 
@@ -330,9 +331,9 @@ $(function() {
 
 			$preload.on('load', function() {
 				$teaser.prop('src', $preload.prop('src'));
-				$room.removeClass('hidden');
+				$room.removeClass(inactiveClass);
 			}).on('error', function() {
-				$room.addClass('hidden');
+				$room.addClass(inactiveClass);
 			}).prop('src', src + '?'+(new Date()).getTime());
 		});
 	}, 1000*60);

@@ -10,6 +10,7 @@
 			</div>
 		<? endif ?>
 		<div class="row room-group room-group-n<?=h($i++)?> room-group-<?=h(slugify($group))?>">
+			<input type="checkbox" class="show-inactive" id="show-inactive-<?=h(slugify($group))?>-toggle" />
 
 			<?
 				/* 
@@ -128,6 +129,11 @@
 					<div class="clearfix"></div>
 				<? endif ?>
 			<? endforeach ?>
+			<label for="show-inactive-<?=h(slugify($group))?>-toggle" class="btn btn-default show-inactive-toggle">
+				<span class="show-inactive-text">Show</span>
+				<span class="hide-inactive-text">Hide</span>
+				inactive streams
+			</label>
 		</div>
 	<? endforeach ?>
 
