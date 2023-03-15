@@ -51,7 +51,7 @@ function closeEventDetails(e) {
 
 var previousTitle = "";
 function showEventDetails(e, data, force = false) {
-	const acronym = "jev22";
+	const acronym = "fossgis2023";
 	if (!force && (data.type || previousTitle == data.title)) {
 		return;
 	}
