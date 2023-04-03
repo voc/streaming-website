@@ -1,0 +1,68 @@
+{
+    "$schema": "../config-schema.json",
+    "conference": {
+        "title": "Chaosradio",
+        "acronym": "chaosradio",
+        "organizer": "CCCB",
+        "description": "Chaosradio (CR) ist eine zweistündige Talk-Sendung, die seit 1995 jeden letzten Donnerstag im Monat gesendet wird ",
+        "keywords": [
+            "Chaosradio",
+            "Chaos Computer Club",
+            "Berlin",
+            "Video",
+            "Media",
+            "Streaming"
+        ],
+        "start": "1970-01-01T19:40:00+00:00",
+        "end": "1970-01-01T22:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": {
+                        "display": "#chaosradio @ freenode",
+                        "url": "irc://irc.freenode.net/chaosradio"
+                    }
+                },
+                "social": {
+                    "hashtag": "#chaosradio",
+                    "mastodon": true,
+                    "twitter": true
+                }
+            },
+            "schedule": {
+                "url": "configs/schedule.xml",
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "html": {
+                "banner": "\n\t\t<h2>Chaosradio #??? – 01. January 1970</h2>\n\t\t<h3>Chaosradio</h3>\n\t",
+                "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "cccb",
+                "name": "Chaosradio #???",
+                "streamId": "chaosradio",
+                "streamingConfig": {
+                    "display": "Chaosradio #???",
+                    "stream": "chaosradio",
+                    "preview": true,
+
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "slides": false,
+                    "audio": true,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true
+                }
+            }
+        ]
+    }
+}

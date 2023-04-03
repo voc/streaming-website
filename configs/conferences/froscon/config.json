@@ -1,0 +1,226 @@
+{
+    "conference": {
+        "title": "FrOSCon 2022",
+        "acronym": "froscon",
+        "organizer": "FrOSCon 2022",
+        "description": "",
+        "keywords": null,
+        "start": "2022-08-20T07:00:00+00:00",
+        "end": "2022-08-21T17:30:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": null
+                }
+            },
+            "schedule": {
+                "url": "https://programm.froscon.de/2022/schedule.xml",
+                "roomfilter": [
+                    "HS 1/2",
+                    "HS3",
+                    "HS4",
+                    "HS7",
+                    "HS8"
+                ],
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Lecture Rooms",
+                        "items": [
+                            {
+                                "slug": "S1"
+                            },
+                            {
+                                "slug": "S2"
+                            },
+                            {
+                                "slug": "S3"
+                            },
+                            {
+                                "slug": "S4"
+                            },
+                            {
+                                "slug": "S6"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\tby <a href=\"http://froscon.de/\">FrOSCon</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "S1",
+                "name": "HS 1/2",
+                "stream": "s1",
+                "streamingConfig": {
+                    "display": "HS 1/2",
+                    "stream": "s1",
+                    "preview": true,
+                    "translation": [
+                        {
+                            "endpoint": "translated",
+                            "label": "Translated"
+                        }
+                    ],
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "HS 1/2",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "S2",
+                "name": "HS7",
+                "stream": "s2",
+                "streamingConfig": {
+                    "display": "HS 7",
+                    "stream": "s2",
+                    "preview": true,
+                    "translation": [
+                        {
+                            "endpoint": "translated",
+                            "label": "Translated"
+                        }
+                    ],
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "HS7",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "S3",
+                "name": "HS3",
+                "stream": "s3",
+                "streamingConfig": {
+                    "display": "HS 3",
+                    "stream": "s3",
+                    "preview": true,
+                    "translation": [
+                        {
+                            "endpoint": "translated",
+                            "label": "Translated"
+                        }
+                    ],
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "HS3",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "S4",
+                "name": "HS4",
+                "stream": "s4",
+                "streamingConfig": {
+                    "display": "HS 4",
+                    "stream": "s4",
+                    "preview": true,
+                    "translation": [
+                        {
+                            "endpoint": "translated",
+                            "label": "Translated"
+                        }
+                    ],
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "HS4",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "S6",
+                "name": "HS8",
+                "stream": "s6",
+                "streamingConfig": {
+                    "display": "HS 8",
+                    "stream": "s6",
+                    "preview": true,
+                    "translation": [
+                        {
+                            "endpoint": "translated",
+                            "label": "Translated"
+                        }
+                    ],
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "HS8",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,224 @@
+{
+    "conference": {
+        "title": "Chemnitzer Linux-Tage 2023",
+        "acronym": "clt23",
+        "organizer": "Chemnitzer Linux-Tage 2023",
+        "description": "",
+        "keywords": null,
+        "start": "2023-03-11T07:00:00+00:00",
+        "end": "2023-03-12T17:15:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": null
+                }
+            },
+            "schedule": {
+                "url": "https://chemnitzer.linux-tage.de/schedule.xml",
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Lecture Rooms",
+                        "items": [
+                            {
+                                "slug": "V1"
+                            },
+                            {
+                                "slug": "V2"
+                            },
+                            {
+                                "slug": "V3"
+                            },
+                            {
+                                "slug": "V4"
+                            },
+                            {
+                                "slug": "V5"
+                            },
+                            {
+                                "slug": "V6"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\tby <a href=\"https://chemnitzer.linux-tage.de/\">Chemnitzer Linux-Tage</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "V1",
+                "name": "V1",
+                "stream": "clt-video-v1",
+                "streamingConfig": {
+                    "display": "V1",
+                    "stream": "clt-video-v1",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "V1",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "V2",
+                "name": "V2",
+                "stream": "clt-video-v2",
+                "streamingConfig": {
+                    "display": "V2",
+                    "stream": "clt-video-v2",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "V2",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "V3",
+                "name": "V3",
+                "stream": "clt-video-v3",
+                "streamingConfig": {
+                    "display": "V3",
+                    "stream": "clt-video-v3",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "V3",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "V4",
+                "name": "V4",
+                "stream": "clt-video-v4",
+                "streamingConfig": {
+                    "display": "V4",
+                    "stream": "clt-video-v4",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "V4",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "V5",
+                "name": "V5",
+                "stream": "clt-video-v5",
+                "streamingConfig": {
+                    "display": "V5",
+                    "stream": "clt-video-v5",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "V5",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "V6",
+                "name": "V6",
+                "stream": "clt-video-v6",
+                "streamingConfig": {
+                    "display": "V6",
+                    "stream": "clt-video-v6",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "V6",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            }
+        ]
+    }
+}

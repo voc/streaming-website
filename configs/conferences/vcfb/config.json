@@ -1,0 +1,90 @@
+{
+    "conference": {
+        "title": "Vintage Computing Festival Berlin 2022",
+        "acronym": "vcfb",
+        "organizer": "c3voc & afra Berlin",
+        "description": "Vintage Computing Festival Berlin (VCFB)\n8. und 9. Oktober 2022\nDas Vintage Computing Festival Berlin (VCFB) ist eine Veranstaltung rund um historische Computer und Rechentechnik. In Ausstellungen, Vorträgen und Workshops präsentieren die Mitwirkenden aus ganz Deutschland und darüber hinaus verschiedene Aspekte des Themas Vintage Computing. Dabei werden nicht nur Retro-Computer ausgestellt, sondern z.B. auch historische Betriebssysteme, Programmiersprachen, Netzwerktechnik sowie Taschenrechner und Rechenmaschinen. Der Großteil der präsentierten Geräte ist funktionsfähig. Das seit 2014 stattfindende VCFB ist stetig gewachsen und konnte 2019 fast 3000 Besucher anlocken. 2020 und 2021 fand das VCFB als Online- bzw. Hybrid-Veranstaltung statt.",
+        "keywords": [
+            "vcfb",
+            "vintage computing",
+            "afra",
+            "berlin"
+        ],
+        "start": "2022-10-08T07:45:00+00:00",
+        "end": "2022-10-09T16:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": {
+                        "display": "#vcfb2022 @vcfberlin on twitter",
+                        "text": "#vcfb2022"
+                    }
+                }
+            },
+            "schedule": {
+                "url": "https://vcfb.de/2022/schedule.xml",
+                "roomfilter": [
+                    "Signallabor"
+                ],
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Lecture Rooms",
+                        "items": [
+                            {
+                                "slug": "Signallabor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "Signallabor",
+                "name": "Signallabor",
+                "stream": "s3",
+                "streamingConfig": {
+                    "display": "Signallabor",
+                    "stream": "s3",
+                    "preview": true,
+                    "translation": [
+                        {
+                            "endpoint": "translated",
+                            "label": "Translated"
+                        }
+                    ],
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Signallabor",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true
+                }
+            }
+        ]
+    }
+}

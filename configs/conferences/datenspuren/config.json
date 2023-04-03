@@ -1,0 +1,83 @@
+{
+    "conference": {
+        "title": "Datenspuren 2022",
+        "acronym": "datenspuren",
+        "organizer": "Datenspuren",
+        "description": "Datenspuren Berechnete Welt",
+        "keywords": [
+            "daten",
+            "spuren"
+        ],
+        "start": "2022-09-16T13:45:00+00:00",
+        "end": "2022-09-18T21:30:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": true,
+                    "twitter": null
+                }
+            },
+            "schedule": {
+                "url": "https://talks.datenspuren.de/ds22/schedule/export/schedule.xml",
+                "roomfilter": [
+                    "Großer Saal"
+                ],
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Lecture Rooms",
+                        "items": [
+                            {
+                                "slug": "gs"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\tby <a href=\"https://datenspuren.de/2022/\">https://datenspuren.de/2022/</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "gs",
+                "name": "Großer Saal",
+                "stream": "s3",
+                "streamingConfig": {
+                    "display": "Saal",
+                    "stream": "s3",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Großer Saal",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "irc_config": {
+                        "display": "Deutscher Perl Workshop@matrix",
+                        "url": "https://matrix.to/#/#GermanPerlWorkshop:matrix.org?via=matrix.org"
+                    },
+                    "twitter": false
+                }
+            }
+        ]
+    }
+}

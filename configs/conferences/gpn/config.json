@@ -1,0 +1,152 @@
+{
+    "conference": {
+        "title": "GPN20",
+        "acronym": "gpn",
+        "organizer": "CCC VOC & Entropia e.V.",
+        "description": "Factory Reset",
+        "keywords": [
+            "GPN20",
+            "Gulaschprogrammiernacht",
+            "CCC",
+            "Karlsruhe",
+            "Livestream"
+        ],
+        "start": "2022-05-19T13:00:00+00:00",
+        "end": "2022-05-22T14:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": {
+                        "display": "#gpn @ hackint",
+                        "url": "https://webirc.hackint.org/#gpn"
+                    },
+                    "twitter": {
+                        "display": "#gpn20 @ mastodon & twitter ",
+                        "text": "#gpn20"
+                    }
+                }
+            },
+            "schedule": {
+                "url": "https://cfp.gulas.ch/gpn20/schedule/export/schedule.xml",
+                "roomfilter": [
+                    "Medientheater",
+                    "Vortragssaal",
+                    "Blauer Salon"
+                ],
+                "scale": 5,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Vortragsräume",
+                        "items": [
+                            {
+                                "slug": "medientheater"
+                            },
+                            {
+                                "slug": "vortragssaal"
+                            },
+                            {
+                                "slug": "blauersalon"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": "<div class=\"gpn20\"></div>",
+                "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://entropia.de/GPN20\">Entropia</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "medientheater",
+                "name": "Medientheater",
+                "stream": "s1",
+                "streamingConfig": {
+                    "display": "Medientheater",
+                    "wide": true,
+                    "stream": "s1",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Medientheater",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true
+                }
+            },
+            {
+                "guid": null,
+                "slug": "vortragssaal",
+                "name": "Vortragssaal",
+                "stream": "s2",
+                "streamingConfig": {
+                    "display": "Vortragssaal",
+                    "stream": "s2",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Vortragssaal",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true
+                }
+            },
+            {
+                "guid": null,
+                "slug": "blauersalon",
+                "name": "Blauer Salon",
+                "stream": "s191",
+                "streamingConfig": {
+                    "display": "Blauer Salon",
+                    "stream": "s191",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Blauer Salon",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true
+                }
+            }
+        ]
+    }
+}

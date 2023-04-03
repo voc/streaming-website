@@ -1,0 +1,152 @@
+{
+    "conference": {
+        "title": "Electromagnetic Field 2022",
+        "acronym": "emf",
+        "organizer": "EMF 2022",
+        "description": "Electromagnetic Field 2022",
+        "keywords": [
+            "EMF22",
+            "EMF 2022",
+            "Electromagnetic field",
+            "EMF",
+            "EMFcamp"
+        ],
+        "start": "2022-06-02T16:00:00+00:00",
+        "end": "2022-06-05T19:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": {
+                        "display": "#emfcamp @ Libera Chat",
+                        "url": "https://web.libera.chat/gamja/#emfcamp"
+                    },
+                    "twitter": {
+                        "display": "#emfcamp @ twitter ",
+                        "text": "#emfcamp"
+                    }
+                }
+            },
+            "schedule": {
+                "url": "https://www.emfcamp.org/schedule/2022.frab",
+                "roomfilter": [
+                    "Stage A",
+                    "Stage B",
+                    "Stage C"
+                ],
+                "scale": 5,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Stages",
+                        "items": [
+                            {
+                                "slug": "stagea"
+                            },
+                            {
+                                "slug": "stageb"
+                            },
+                            {
+                                "slug": "stagec"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": "<div class=\"emf2022\"></div>",
+                "footer": "\n\t\tby <a href=\"https://emfcamp.org\">EMF</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "stagea",
+                "name": "Stage A",
+                "stream": "emf",
+                "streamingConfig": {
+                    "display": "Stage A",
+                    "wide": true,
+                    "stream": "emf",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": false,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Stage A",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": true,
+                    "twitter": true
+                }
+            },
+            {
+                "guid": null,
+                "slug": "stageb",
+                "name": "Stage B",
+                "stream": "emf2",
+                "streamingConfig": {
+                    "display": "Stage B",
+                    "stream": "emf2",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": false,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Stage B",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": true,
+                    "twitter": true
+                }
+            },
+            {
+                "guid": null,
+                "slug": "stagec",
+                "name": "Stage C",
+                "stream": "emf3",
+                "streamingConfig": {
+                    "display": "Stage C",
+                    "stream": "emf3",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": false,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Stage C",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": true,
+                    "twitter": true
+                }
+            }
+        ]
+    }
+}

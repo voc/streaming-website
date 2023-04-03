@@ -1,0 +1,110 @@
+{
+    "conference": {
+        "title": "Podstock",
+        "acronym": "podstock",
+        "organizer": "Podstock",
+        "description": "",
+        "keywords": [
+            "Podstock 2022",
+            "Westfeld",
+            "Podcasts"
+        ],
+        "start": "2022-07-01T17:00:00+00:00",
+        "end": "2022-07-03T11:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": {
+                        "display": "#podstockDE @ twitter",
+                        "text": "#podstockDE"
+                    }
+                }
+            },
+            "schedule": {
+                "url": "https://fahrplan.podstock.de/podstock-2022/schedule/export/schedule.xml",
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Bühnenshows",
+                        "items": [
+                            {
+                                "slug": "aussenbuehne"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Workshopraum",
+                        "items": [
+                            {
+                                "slug": "innenbuehne"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": "\n\t\t<div class=\"container\">\n\t\t\t<h2>#podstockDE</h2>\n\t\t</div>\n\t",
+                "footer": "\n\t\tby <a href=\"https://www.podstock.de\">Podstock</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "aussenbuehne",
+                "name": "Außenbühne",
+                "stream": "s5",
+                "streamingConfig": {
+                    "display": "Außenbühne",
+                    "stream": "s5",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "slides": true,
+                    "audio": true,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Außenbühne",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true
+                }
+            },
+            {
+                "guid": null,
+                "slug": "innenbuehne",
+                "name": "Innenbühne",
+                "stream": "s6",
+                "streamingConfig": {
+                    "display": "Innenbühne",
+                    "stream": "s6",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "slides": true,
+                    "audio": true,
+                    "schedule": true,
+                    "schedule_name": "Innenbühne",
+                    "feedback": true,
+                    "embed": true,
+                    "twitter": true
+                }
+            }
+        ]
+    }
+}

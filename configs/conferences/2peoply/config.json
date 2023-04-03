@@ -1,0 +1,73 @@
+{
+    "conference": {
+        "title": "It's too peoply",
+        "acronym": "2peoply",
+        "organizer": "haecksen, fem, r3s",
+        "description": "",
+        "keywords": [
+            "2peoply"
+        ],
+        "start": "2022-07-15T18:00:00+00:00",
+        "end": "2022-07-17T22:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": false,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": null
+                }
+            },
+            "schedule": {
+                "url": "https://pretalx.freifunktag.de/its-too-peoply-2022/schedule/export/schedule.xml",
+                "scale": 7
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Lecture Rooms",
+                        "items": [
+                            {
+                                "slug": "Workshop"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\tby <a href=\"https://haecksen.org/\">haecksen</a>, <a href=\"https://fem.tu-ilmenau.de/\">fem</a>, <a href=\"https://r3s.nrw/\">R3S</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "Workshop",
+                "name": "Workshop Raum",
+                "stream": "2peoply",
+                "streamingConfig": {
+                    "display": "2peoply",
+                    "stream": "2peoply",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Workshop Raum",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "conference": {
+        "title": "Unknown",
+        "acronym": "openchaos",
+        "organizer": "C4",
+        "description": "Das OpenChaos ist die monatliche Vortragsveranstaltung des Chaos Computer Club Cologne.",
+        "keywords": [
+            "OpenChaos",
+            "Chaos Computer Club",
+            "Köln"
+        ],
+        "start": "1970-01-01T20:30:00+00:00",
+        "end": "1970-01-02T01:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": false,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": null
+                }
+            },
+            "schedule": null,
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "",
+                        "items": [
+                            {
+                                "slug": "c4"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": "\n\t\t<h2>OpenChaos – 01. January 1970</h2>\n\t\t<h3>Unknown</h3>\n\t\t<img src=\"../configs/conferences/openchaos/c4-logo_transparent.svg\" class=\"c4logo\">\n\t",
+                "footer": "\n\t\tby <a href=\"https://koeln.ccc.de\">Chaos Computer Club Cologne e.V</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "c4",
+                "name": "C4 Plenarsaal",
+                "stream": "s97",
+                "streamingConfig": {
+                    "display": "C4 Plenarsaal",
+                    "stream": "s97",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "slides": true,
+                    "audio": true,
+                    "music": false,
+                    "schedule": false,
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            }
+        ]
+    }
+}

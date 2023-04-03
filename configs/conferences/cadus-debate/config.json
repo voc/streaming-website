@@ -1,0 +1,80 @@
+{
+    "conference": {
+        "title": "Debate 27: MedEvac - Medical Evacuation in Ukraine and beyond",
+        "acronym": "cadus-debate",
+        "organizer": "",
+        "description": "The concept of MedEvac has been historically proven to be a functional relief mechanism in medical emergencies, natural disasters, crisis situations and wars. However, it is usually a very costly, risky mission that requires the deployment of highly trained staff, impeccable operational plans as well as flawless communication and teamwork.\n\nToday we are going to speak with Michail Liontiris, part of the CADUS Ukraine Emergency Response Team, about what MedEvac is basically about, its roots, its challenges and how they can be potentially overcome. Last but not least, we will debate on the ethical considerations of a MedEvac project: How do I perceive myself when saving patients and injured people? Who am I supposed to take and who am I supposed to leave behind? What are the limits of my capacities? How much am I allowed to risk my team’s and my own safety to carry out a mission successfully?\n\nDienstag 12.07.2022\nStart 20:30\n\nStream\nhttps://streaming.media.ccc.de/cadus-debate\n\nChat\nhttps://webirc.hackint.org/#irc://irc.hackint.org/#debate\n\nSprache: Englisch\n\nDEBATE zum Nachschauen:\nhttps://media.ccc.de/c/cadusdebate\n\nWas ist Debate?\nUns ist es wichtig, nicht nur dort Hilfe zu leisten wo sie dringend gebraucht wird, sondern auch, die humanitäre Praxis immer wieder kritisch zu reflektieren. Deshalb laden wir jeden ersten Donnerstag im Monat um 20 Uhr zu Vortrag und Diskussion über ein aktuelles Thema der humanitären Hilfe ein.\n\nAbboniere den Debate-Newsletter: https://lists.idash.org/cgi-bin/mailman/listinfo/announcement-cadus\n",
+        "keywords": [
+            "CADUS",
+            "Debate",
+            "Humanitarian",
+            "Aid"
+        ],
+        "start": "2022-07-12T18:15:00+00:00",
+        "end": "2022-07-12T21:15:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": {
+                        "display": "#debate @ hackint",
+                        "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#debate"
+                    },
+                    "twitter": {
+                        "display": "#CADUSDebate @ twitter",
+                        "text": "#CADUSDebate"
+                    }
+                }
+            },
+            "schedule": null,
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Lecture rooms",
+                        "items": [
+                            {
+                                "slug": "stream"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": "<div class=\"logo\"></div>",
+                "footer": "\n\t\tby <a href=\"https://cadus.org\">CADUS</a> with friendly support from the <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "stream",
+                "name": "CADUS Debate Humanitarian Aid!",
+                "stream": "debate",
+                "streamingConfig": {
+                    "display": "CADUS Debate Humanitarian Aid!",
+                    "stream": "debate",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "h264_only": true,
+                    "slides": false,
+                    "dash": true,
+                    "audio": true,
+                    "music": false,
+                    "schedule": false,
+                    "schedule_name": "",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": true,
+                    "twitter": true
+                }
+            }
+        ]
+    }
+}

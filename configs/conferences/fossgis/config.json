@@ -1,0 +1,191 @@
+{
+    "conference": {
+        "title": "FOSSGIS-Konferenz 2023",
+        "acronym": "fossgis",
+        "organizer": "FOSSGIS e.V.",
+        "description": "Die FOSSGIS-Konferenz ist die deutschsprachige Konferenz zu Open-Source-GIS und OpenStreetMap. Sie findet vom 15. bis 18. März 2023 in Berlin und im Netz statt.",
+        "keywords": [
+            "FOSSGIS2023",
+            "OpenStreetMap",
+            "GIS",
+            "OpenSource",
+            "Geo"
+        ],
+        "start": "2023-03-15T07:00:00+00:00",
+        "end": "2023-03-18T17:00:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": true
+                }
+            },
+            "schedule": {
+                "url": "https://pretalx.com/fossgis2023/schedule/export/schedule.xml",
+                "roomfilter": [
+                    "Hörsaal 1 (0115)",
+                    "Hörsaal 2 (0110)",
+                    "Hörsaal 3 (0119)",
+                    "Hörsaal 4, Demosession (0313)"
+                ],
+                "scale": 4
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Live",
+                        "items": [
+                            {
+                                "slug": "hoersaal1"
+                            },
+                            {
+                                "slug": "hoersaal2"
+                            },
+                            {
+                                "slug": "hoersaal3"
+                            },
+                            {
+                                "slug": "demosession"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\t<a href=\"https://www.fossgis-konferenz.de/2023/\">FOSSGIS-Konferenz 2023</a>\n\t\tby <a href=\"https://www.fossgis.de/\">FOSSGIS e.V</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "hoersaal1",
+                "name": "Hörsaal 1 (0115)",
+                "stream": "s1",
+                "streamingConfig": {
+                    "display": "Hörsaal 1 (0115)",
+                    "stream": "s1",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Hörsaal 1 (0115)",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true,
+                    "twitter_config": {
+                        "display": "#fossgis2023 @ twitter/mastodon",
+                        "text": "#fossgis2023"
+                    }
+                }
+            },
+            {
+                "guid": null,
+                "slug": "hoersaal2",
+                "name": "Hörsaal 2 (0110)",
+                "stream": "s2",
+                "streamingConfig": {
+                    "display": "Hörsaal 2 (0110)",
+                    "stream": "s2",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Hörsaal 2 (0110)",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true,
+                    "twitter_config": {
+                        "display": "#fossgis2023 @ twitter/mastodon",
+                        "text": "#fossgis2023"
+                    }
+                }
+            },
+            {
+                "guid": null,
+                "slug": "hoersaal3",
+                "name": "Hörsaal 3 (0119)",
+                "stream": "s3",
+                "streamingConfig": {
+                    "display": "Hörsaal 3 (0119)",
+                    "stream": "s3",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Hörsaal 3 (0119)",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true,
+                    "twitter_config": {
+                        "display": "#fossgis2023 @ twitter/mastodon",
+                        "text": "#fossgis2023"
+                    }
+                }
+            },
+            {
+                "guid": null,
+                "slug": "demosession",
+                "name": "Hörsaal 4, Demosession (0313)",
+                "stream": "s4",
+                "streamingConfig": {
+                    "display": "Hörsaal 4, Demosession (0313)",
+                    "stream": "s4",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "audio": true,
+                    "slides": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "Hörsaal 4, Demosession (0313)",
+                    "feedback": true,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": true,
+                    "twitter_config": {
+                        "display": "#fossgis2023 @ twitter/mastodon",
+                        "text": "#fossgis2023"
+                    }
+                }
+            }
+        ]
+    }
+}
