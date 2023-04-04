@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Unknown",
         "acronym": "datengarten",
@@ -48,31 +49,24 @@
             },
             "html": {
                 "banner": "\n\t\t<h2>Datengarten #??? – 01. January 1970</h2>\n\t\t<h3>Unknown</h3>\n\t",
-                "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V</a> &amp;<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "cccb",
                 "name": "Saal23",
-                "stream": "s23",
+                "streamId": "s23",
                 "streamingConfig": {
                     "display": "Datengarten #???",
                     "stream": "s23",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "h264_only": true,
                     "slides": false,
                     "audio": true,
                     "music": false,
                     "schedule": true,
-                    "schedule_name": "Saal23",
                     "feedback": false,
                     "subtitles": false,
                     "embed": true,

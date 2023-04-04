@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../docs/config-schema.json",
+  "$schema": "../config-schema.json",
   "conference": {
     "title": "Dezentrale Jahresendveranstaltungen",
     "acronym": "jev22",
@@ -38,7 +38,7 @@
       },
       "html": {
         "banner": null,
-        "footer": "\n\t\tby <a href=\"https://events.ccc.de\">Decentralized Organizers</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+        "footer": "\n\t\tby <a href=\"https://events.ccc.de\">Decentralized Organizers</a> &<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
         "not_started": null
       }
     },
@@ -158,8 +158,8 @@
         "streamId": "s1",
         "streamingConfig": {
           "display": "Freiraum Vortrag 1: Ahlam",
-          "display_short": "Ahlam",  
-          "chat": {
+          "display_short": "Ahlam",
+          "social": {
             "hashtag": "#22f3",
             "mastodon": true
           }
@@ -173,7 +173,7 @@
         "streamingConfig": {
           "display": "Freiraum Vortrag 2: Bhavani",
           "display_short": "Bhavani",
-          "chat": {
+          "social": {
             "hashtag": "#22f3",
             "mastodon": true
           }

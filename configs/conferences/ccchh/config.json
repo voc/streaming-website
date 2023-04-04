@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Tag des offenen Hackspace @ CCCHH",
         "acronym": "ccchh",
@@ -35,22 +36,19 @@
             },
             "html": {
                 "banner": "<div class=\"logo\"></div>",
-                "footer": "\n\t\tby <a href=\"https://hamburg.ccc.de\">CCC Hamburg</a> &amp;<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://hamburg.ccc.de\">CCC Hamburg</a> &amp;<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "main",
                 "name": "Großer Raum",
-                "stream": "s1",
+                "streamId": "s1",
                 "streamingConfig": {
                     "display": "Großer Raum",
                     "stream": "s1",
-                    "preview": true,
-                    "translation": null,
+
                     "dash": true,
                     "h264_only": true,
                     "sd_video": true,
@@ -59,9 +57,7 @@
                     "audio": true,
                     "music": false,
                     "schedule": true,
-                    "schedule_name": "Großer Raum",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": true,
                     "irc_config": {

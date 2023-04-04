@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Podstock",
         "acronym": "podstock",
@@ -51,31 +52,24 @@
             },
             "html": {
                 "banner": "\n\t\t<div class=\"container\">\n\t\t\t<h2>#podstockDE</h2>\n\t\t</div>\n\t",
-                "footer": "\n\t\tby <a href=\"https://www.podstock.de\">Podstock</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://www.podstock.de\">Podstock</a> &amp;<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "aussenbuehne",
                 "name": "Außenbühne",
-                "stream": "s5",
+                "streamId": "s5",
                 "streamingConfig": {
                     "display": "Außenbühne",
                     "stream": "s5",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "h264_only": true,
                     "slides": true,
                     "audio": true,
                     "music": false,
                     "schedule": true,
-                    "schedule_name": "Außenbühne",
                     "feedback": true,
                     "subtitles": false,
                     "embed": true,
@@ -87,19 +81,14 @@
                 "guid": null,
                 "slug": "innenbuehne",
                 "name": "Innenbühne",
-                "stream": "s6",
+                "streamId": "s6",
                 "streamingConfig": {
                     "display": "Innenbühne",
                     "stream": "s6",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "slides": true,
                     "audio": true,
                     "schedule": true,
-                    "schedule_name": "Innenbühne",
                     "feedback": true,
                     "embed": true,
                     "twitter": true

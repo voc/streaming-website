@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Debate 27: MedEvac - Medical Evacuation in Ukraine and beyond",
         "acronym": "cadus-debate",
@@ -43,22 +44,19 @@
             },
             "html": {
                 "banner": "<div class=\"logo\"></div>",
-                "footer": "\n\t\tby <a href=\"https://cadus.org\">CADUS</a> with friendly support from the <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://cadus.org\">CADUS</a> with friendly support from the <a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "stream",
                 "name": "CADUS Debate Humanitarian Aid!",
-                "stream": "debate",
+                "streamId": "debate",
                 "streamingConfig": {
                     "display": "CADUS Debate Humanitarian Aid!",
                     "stream": "debate",
-                    "preview": true,
-                    "translation": null,
+
                     "sd_video": true,
                     "hd_video": true,
                     "h264_only": true,
@@ -67,9 +65,7 @@
                     "audio": true,
                     "music": false,
                     "schedule": false,
-                    "schedule_name": "",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": true,
                     "twitter": true

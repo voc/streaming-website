@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Netzpolitischer Abend",
         "acronym": "netzabend",
@@ -36,22 +37,19 @@
             },
             "html": {
                 "banner": null,
-                "footer": "\n\t\t<a href=\"https://netzpolitischer-abend.ch/\">Netzpolitischer Abend</a> der <a href=\"https://www.digitale-gesellschaft.ch/\">Digitalen Gesellschaft</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "<a href=\"https://netzpolitischer-abend.ch/\">Netzpolitischer Abend</a> der <a href=\"https://www.digitale-gesellschaft.ch/\">Digitalen Gesellschaft</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "netzabend",
                 "name": "Netzabend",
-                "stream": "netzabend",
+                "streamId": "netzabend",
                 "streamingConfig": {
                     "display": "Netzabend",
                     "stream": "netzabend",
-                    "preview": true,
-                    "translation": null,
+
                     "sd_video": true,
                     "hd_video": true,
                     "h264_only": true,

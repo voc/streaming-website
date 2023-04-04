@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Winterkongress 2023",
         "acronym": "winterkongress2023",
@@ -41,34 +42,23 @@
             },
             "html": {
                 "banner": "<div class=\"logo\"></div>",
-                "footer": "\n\t\tWinterkongress by <a href=\"https://digitale-gesellschaft.ch/\">Digitale Gesellschaft</a> | Streaming by <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tWinterkongress by <a href=\"https://digitale-gesellschaft.ch/\">Digitale Gesellschaft</a> | Streaming by <a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "weissersaal",
                 "name": "Weisser Saal",
-                "stream": "winterkongress1",
+                "streamId": "winterkongress1",
                 "streamingConfig": {
                     "display": "Weisser Saal",
                     "stream": "winterkongress1",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "Weisser Saal",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": false,
                     "twitter": false
@@ -78,24 +68,15 @@
                 "guid": null,
                 "slug": "blauersaal",
                 "name": "Blauer Saal",
-                "stream": "winterkongress2",
+                "streamId": "winterkongress2",
                 "streamingConfig": {
                     "display": "Blauer Saal",
                     "stream": "winterkongress2",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "Blauer Saal",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": false,
                     "twitter": false
@@ -105,24 +86,14 @@
                 "guid": null,
                 "slug": "gelbersaal",
                 "name": "Gelber Saal",
-                "stream": "winterkongress3",
+                "streamId": "winterkongress3",
                 "streamingConfig": {
                     "display": "Gelber Saal",
                     "stream": "winterkongress3",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "Gelber Saal",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": false,
                     "twitter": false

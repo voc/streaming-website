@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "It's too peoply",
         "acronym": "2peoply",
@@ -37,32 +38,21 @@
             },
             "html": {
                 "banner": null,
-                "footer": "\n\t\tby <a href=\"https://haecksen.org/\">haecksen</a>, <a href=\"https://fem.tu-ilmenau.de/\">fem</a>, <a href=\"https://r3s.nrw/\">R3S</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://haecksen.org/\">haecksen</a>, <a href=\"https://fem.tu-ilmenau.de/\">fem</a>, <a href=\"https://r3s.nrw/\">R3S</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "Workshop",
                 "name": "Workshop Raum",
-                "stream": "2peoply",
+                "streamId": "2peoply",
                 "streamingConfig": {
                     "display": "2peoply",
                     "stream": "2peoply",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
+
                     "schedule": true,
-                    "schedule_name": "Workshop Raum",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": false,
                     "twitter": false

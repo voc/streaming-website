@@ -39,7 +39,7 @@
             },
             "html": {
                 "banner": "\n\t\t<h2>Chaosradio #??? – 01. January 1970</h2>\n\t\t<h3>Chaosradio</h3>\n\t",
-                "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+                "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V</a> &amp;<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
             }
         },
         "rooms": [
@@ -51,11 +51,7 @@
                 "streamingConfig": {
                     "display": "Chaosradio #???",
                     "stream": "chaosradio",
-                    "preview": true,
 
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
                     "slides": false,
                     "audio": true,
                     "embed": true,

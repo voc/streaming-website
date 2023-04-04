@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "q2",
         "acronym": "q2",
@@ -37,37 +38,26 @@
             },
             "html": {
                 "banner": "<div class=\"logo\"></div>",
-                "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "q2",
                 "name": "q2",
-                "stream": "q2",
+                "streamId": "q2",
                 "streamingConfig": {
                     "display": "q2",
                     "stream": "q2",
-                    "preview": true,
                     "translation": [
                         {
                             "endpoint": "translated",
                             "label": "Translated"
                         }
                     ],
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": false,
-                    "schedule_name": "q2",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": false,
                     "twitter": false

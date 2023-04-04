@@ -47,11 +47,6 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	/** 'DESCRIPTION' => 'Vintage Computing Festival Berlin (VCFB)
-8. und 9. Oktober 2022
-Das Vintage Computing Festival Berlin (VCFB) ist eine Veranstaltung rund um historische Computer und Rechentechnik. In Ausstellungen, Vorträgen und Workshops präsentieren die Mitwirkenden aus ganz Deutschland und darüber hinaus verschiedene Aspekte des Themas Vintage Computing. Dabei werden nicht nur Retro-Computer ausgestellt, sondern z.B. auch historische Betriebssysteme, Programmiersprachen, Netzwerktechnik sowie Taschenrechner und Rechenmaschinen. Der Großteil der präsentierten Geräte ist funktionsfähig. Das seit 2014 stattfindende VCFB ist stetig gewachsen und konnte 2019 fast 3000 Besucher anlocken. 2020 und 2021 fand das VCFB als Online- bzw. Hybrid-Veranstaltung statt.',
-	 */
-
 	/**
 	 * Schlüsselwortliste, Kommasepariert
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher

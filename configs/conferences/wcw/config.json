@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Wireless Community Weekend",
         "acronym": "wcw",
@@ -44,22 +45,19 @@
             },
             "html": {
                 "banner": "<div class=\"logo\"></div>",
-                "footer": "\n\t\tby <a href=\"https://freifunk.net\">freifunk.net</a> with friendly support from the <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://freifunk.net\">freifunk.net</a> with friendly support from the <a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "stream",
                 "name": "Hauptgebäude Raum 002",
-                "stream": "ffwcw",
+                "streamId": "ffwcw",
                 "streamingConfig": {
                     "display": "Hauptgebäude Raum 002",
                     "stream": "ffwcw",
-                    "preview": true,
-                    "translation": null,
+
                     "sd_video": true,
                     "hd_video": true,
                     "slides": false,
@@ -69,9 +67,7 @@
                     "audio": false,
                     "music": false,
                     "schedule": true,
-                    "schedule_name": "",
                     "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": true,
                     "twitter": true

@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Unknown",
         "acronym": "openchaos",
@@ -36,31 +37,21 @@
             },
             "html": {
                 "banner": "\n\t\t<h2>OpenChaos – 01. January 1970</h2>\n\t\t<h3>Unknown</h3>\n\t\t<img src=\"../configs/conferences/openchaos/c4-logo_transparent.svg\" class=\"c4logo\">\n\t",
-                "footer": "\n\t\tby <a href=\"https://koeln.ccc.de\">Chaos Computer Club Cologne e.V</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://koeln.ccc.de\">Chaos Computer Club Cologne e.V</a> &amp;<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "c4",
                 "name": "C4 Plenarsaal",
-                "stream": "s97",
+                "streamId": "s97",
                 "streamingConfig": {
                     "display": "C4 Plenarsaal",
                     "stream": "s97",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "slides": true,
                     "audio": true,
-                    "music": false,
-                    "schedule": false,
-                    "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": false,
                     "twitter": false

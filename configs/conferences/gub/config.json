@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Gespräch unter Bäumen",
         "acronym": "gub",
@@ -37,36 +38,28 @@
             },
             "html": {
                 "banner": null,
-                "footer": "\n                streamed by <a href=\"https://c3voc.de\">C3VOC</a>.\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n                streamed by <a href=\"https://c3voc.de\">C3VOC</a>.\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "xhain",
                 "name": "Vortrag",
-                "stream": "xHain",
+                "streamId": "xHain",
                 "streamingConfig": {
                     "display": "xHain",
                     "stream": "xHain",
-                    "translation": null,
+
                     "sd_video": true,
                     "hd_video": true,
                     "h264_only": true,
                     "dash": true,
-                    "audio": true,
-                    "slides": false,
-                    "music": false,
-                    "feedback": false,
-                    "subtitles": false,
                     "embed": true,
                     "irc": false,
                     "twitter": false,
                     "schedule": false,
-                    "schedule_name": "Vortrag"
-                }
+                                    }
             }
         ]
     }

@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "Electromagnetic Field 2022",
         "acronym": "emf",
@@ -59,35 +60,27 @@
             },
             "html": {
                 "banner": "<div class=\"emf2022\"></div>",
-                "footer": "\n\t\tby <a href=\"https://emfcamp.org\">EMF</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"https://emfcamp.org\">EMF</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "stagea",
                 "name": "Stage A",
-                "stream": "emf",
+                "streamId": "emf",
                 "streamingConfig": {
                     "display": "Stage A",
                     "wide": true,
                     "stream": "emf",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "h264_only": true,
                     "hls": true,
                     "audio": false,
                     "slides": false,
                     "music": false,
                     "schedule": true,
-                    "schedule_name": "Stage A",
                     "feedback": true,
-                    "subtitles": false,
                     "embed": true,
                     "irc": true,
                     "twitter": true
@@ -97,24 +90,18 @@
                 "guid": null,
                 "slug": "stageb",
                 "name": "Stage B",
-                "stream": "emf2",
+                "streamId": "emf2",
                 "streamingConfig": {
                     "display": "Stage B",
                     "stream": "emf2",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "h264_only": true,
                     "hls": true,
                     "audio": false,
                     "slides": false,
                     "music": false,
                     "schedule": true,
-                    "schedule_name": "Stage B",
                     "feedback": true,
-                    "subtitles": false,
                     "embed": true,
                     "irc": true,
                     "twitter": true
@@ -124,24 +111,18 @@
                 "guid": null,
                 "slug": "stagec",
                 "name": "Stage C",
-                "stream": "emf3",
+                "streamId": "emf3",
                 "streamingConfig": {
                     "display": "Stage C",
                     "stream": "emf3",
-                    "preview": true,
-                    "translation": null,
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
+
                     "h264_only": true,
                     "hls": true,
                     "audio": false,
                     "slides": false,
                     "music": false,
                     "schedule": true,
-                    "schedule_name": "Stage C",
                     "feedback": true,
-                    "subtitles": false,
                     "embed": true,
                     "irc": true,
                     "twitter": true

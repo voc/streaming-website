@@ -1,4 +1,5 @@
 {
+    "$schema": "../config-schema.json",
     "conference": {
         "title": "FrOSCon 2022",
         "acronym": "froscon",
@@ -55,37 +56,27 @@
             },
             "html": {
                 "banner": null,
-                "footer": "\n\t\tby <a href=\"http://froscon.de/\">FrOSCon</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
-                "not_started": null
-            },
-            "extraFiles": null
+                "footer": "\n\t\tby <a href=\"http://froscon.de/\">FrOSCon</a> &amp;<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+            }
         },
         "rooms": [
             {
                 "guid": null,
                 "slug": "S1",
                 "name": "HS 1/2",
-                "stream": "s1",
+                "streamId": "s1",
                 "streamingConfig": {
                     "display": "HS 1/2",
                     "stream": "s1",
-                    "preview": true,
                     "translation": [
                         {
                             "endpoint": "translated",
                             "label": "Translated"
                         }
                     ],
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "HS 1/2",
                     "feedback": false,
                     "subtitles": false,
                     "embed": true,
@@ -97,27 +88,19 @@
                 "guid": null,
                 "slug": "S2",
                 "name": "HS7",
-                "stream": "s2",
+                "streamId": "s2",
                 "streamingConfig": {
                     "display": "HS 7",
                     "stream": "s2",
-                    "preview": true,
                     "translation": [
                         {
                             "endpoint": "translated",
                             "label": "Translated"
                         }
                     ],
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "HS7",
                     "feedback": false,
                     "subtitles": false,
                     "embed": true,
@@ -129,27 +112,19 @@
                 "guid": null,
                 "slug": "S3",
                 "name": "HS3",
-                "stream": "s3",
+                "streamId": "s3",
                 "streamingConfig": {
                     "display": "HS 3",
                     "stream": "s3",
-                    "preview": true,
                     "translation": [
                         {
                             "endpoint": "translated",
                             "label": "Translated"
                         }
                     ],
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "HS3",
                     "feedback": false,
                     "subtitles": false,
                     "embed": true,
@@ -161,27 +136,19 @@
                 "guid": null,
                 "slug": "S4",
                 "name": "HS4",
-                "stream": "s4",
+                "streamId": "s4",
                 "streamingConfig": {
                     "display": "HS 4",
                     "stream": "s4",
-                    "preview": true,
                     "translation": [
                         {
                             "endpoint": "translated",
                             "label": "Translated"
                         }
                     ],
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "HS4",
                     "feedback": false,
                     "subtitles": false,
                     "embed": true,
@@ -193,27 +160,19 @@
                 "guid": null,
                 "slug": "S6",
                 "name": "HS8",
-                "stream": "s6",
+                "streamId": "s6",
                 "streamingConfig": {
                     "display": "HS 8",
                     "stream": "s6",
-                    "preview": true,
                     "translation": [
                         {
                             "endpoint": "translated",
                             "label": "Translated"
                         }
                     ],
-                    "sd_video": true,
-                    "hd_video": true,
-                    "dash": true,
                     "h264_only": true,
                     "hls": true,
-                    "slides": false,
-                    "audio": false,
-                    "music": false,
                     "schedule": true,
-                    "schedule_name": "HS8",
                     "feedback": false,
                     "subtitles": false,
                     "embed": true,
