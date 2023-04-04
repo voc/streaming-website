@@ -64,7 +64,7 @@ function formatRooms($conference) {
 			'guid' => $room->getId(),
 			'slug' => $room->getSlug(),
 			'name' => /*$room->get('name') ?: */ $room->getScheduleName(),
-			'stream' => $room->getStream(),
+			'streamId' => $room->getStream(),
 			'streamingConfig' => $config ? lowerCaseKeys($config) : null,
 		);
 	}
@@ -101,6 +101,10 @@ function lowerCaseKeys($config)
 	// if config is an object, the keys are already in the proper format
 	if (is_object($config)) {
 		return (array) $config;
+	}
+
+	if (is_bool($config)) {
+		return $config;
 	}
 
 	return array_map(function($item) {

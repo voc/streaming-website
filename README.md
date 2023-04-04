@@ -51,9 +51,10 @@ Die Seite kann für mehrere parallel laufende Konferenzen gleichzeitig verwendet
 werden. Jede Konferenz wird über einen Ordner unterhalb von
 [configs/conferences](configs/conferences) konfiguriert. In diesen Ordnern können
 jeweils folgende Dateien abgelegt werden, welche das Verhalten bzw. die Gestaltung
-der jeweiligen Konferenzseite bestimmen, im Folgendem am :
+der jeweiligen Konferenzseite bestimmen, im Folgendem am:
 
-  - [config.php](configs/conferences/nixcon15/config.php) – steuert das Verhalten der gesamten Konferenzseite. Diese ist ausführlich dokumentiert und sollte sich selbst erklären.
+  - [config.json](configs/conferences/jev22/config.json) – steuert das Verhalten der gesamten Konferenzseite. Dein Editor sollte dir über das referenzierte JSON Schema die einzelnen Felder erklären – die meisten Feature-Flags pro Raum oder auch die OverviewPage Config sind nicht mehr notwendig, da inzwischen die Defaults entsprechend angepasst wurden.
+  - [config.php](configs/conferences/nixcon15/config.php) – steuert das Verhalten der gesamten Konferenzseite wenn keine `config.json` existiert. Inzwischen Deprecated – bitte am besten direkt config.json verwenden.
   - [main.less](configs/conferences/nixcon15/main.less) – steuert die Gestaltung der Konferenzseite.
   - weitere Assets wie `.png` oder `.svg`-Dateien, die aus der `main.less` heraus referenziert werden können.
 

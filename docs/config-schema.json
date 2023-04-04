@@ -117,7 +117,7 @@
                 "additionalProperties": false,
                 "properties": {
                   "guid": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "uuid",
                     "title": "Raum GUID",
                     "description": "(aus Schedule)",
@@ -326,7 +326,7 @@
               "description": "Sollte üblicherweise nur Inline-Elemente enthalten. Wird diese Zeile gelassen, wird die Standard-Attribuierung für (c3voc.de) verwendet",
               "default": null,
               "examples": [
-                "by <a href=\"https://di.c3voc.de\">DiVOC Organizers</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+                "by <a href=\"https://di.c3voc.de\">DiVOC Organizers</a> &<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
               ]
             },
             "not_started": {
@@ -349,13 +349,12 @@
     },
     "RoomStreamingConfig": {
       "type": "object",
+      "additionalProperties": false,
       "title": "RoomStreamingConfig",
       "description": "",
-      "default": {},
       "examples": [
         {
-          "schedule_name": "Piscopia",
-          "display": "Piscopia",
+                    "display": "Piscopia",
           "preview": true,
           "stereo": false,
           "sd_video": true,
@@ -444,8 +443,7 @@
           "description": "Wenn diese Option deaktivert wird der Raum nicht im Fahrplan gesucht und auch auf der Startseite findet keine Darstellung statt. Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren des globalen Flags deaktiviert werden.",
           "default": true
         },
-        "schedule_name": {
-          "type": "string",
+                  "type": "string",
           "title": "Name des Raums im Fahrplan",
           "description": "Wenn dieses Feld ignoriert wird der Raum-Display-Name verwendet",
           "examples": ["Piscopia"]
@@ -486,7 +484,7 @@
           "title": "Social Media konfigurieren (ebenfalls im Chat-Tab)",
           "description": "Sind diese Optionen aktiviert, werden im Chat-Tab die jeweiligen Links angezeigt.",
           "default": false,
-          "$ref": "#/definitions/SocialConfig"
+          "$ref": "#/definitions/SocialMediaConfig"
         }
       }
     },
@@ -516,19 +514,25 @@
       }
     },
     "IrcConfig": {
-      "title": "IRC",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "display": {
-          "type": "string"
+      "$anyOf": [
+        {
+          "type": "boolean"
         },
-        "url": {
-          "type": "string",
-          "format": "uri"
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "display": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": ["display", "url"]
         }
-      },
-      "required": ["display", "url"]
+      ]
     },
     "SocialMediaConfig": {
       "type": "object",
@@ -565,7 +569,7 @@
     "Page": {
       "type": "object",
       "title": "Konfiguration der Stream-Übersicht auf der Startseite",
-      "description": "",
+      "description": "Wenn hier nichts angegeben ist, wird die Startseite automatisch aus der Raumliste generiert",
       "default": {},
       "required": ["sections"],
       "properties": {
