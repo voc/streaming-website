@@ -1,6 +1,7 @@
 #!/bin/sh
 
 php_bin=""
+host=localhost
 port=8000
 
 for try_bin in php8 php7 php
@@ -14,7 +15,11 @@ done
 
 echo "Using PHP: $php_bin"
 
-if [ -n "$1" ]
+if [ -n "$2" ]
+then
+	host=$1
+	port=$2
+elif [ -n "$1" ]
 then
 	port=$1
 fi
@@ -26,4 +31,4 @@ if [ -z "$(find "configs/upcoming.json" -newermt "8 hours ago")" ]; then
 	echo
 fi
 
-$php_bin -S localhost:$port -d short_open_tag=true $2 index.php
+$php_bin -S $host:$port -d short_open_tag=true $3 index.php

@@ -28,7 +28,7 @@ Unterstützt wird PHP ab 5.4.
 Wer lieber Docker mag, kann auch folgende Zeile verwenden:
 
 ```sh
-docker run -it -p 8000:8000 -v "$PWD":/app -w /app php:7-cli -S 0.0.0.0:8000 -d short_open_tag=true index.php
+docker run -it -p 8000:8000 -v "$PWD":/app -w /app php:7-cli ./serve.sh 0.0.0.0 8000
 ```
 
 ### Abhängigkeiten
