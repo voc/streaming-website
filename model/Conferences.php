@@ -100,27 +100,34 @@ class Conferences
 	}
 
 	public static function loadConferenceConfig($mandator) {
+		$folder = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator);
+
+		if (!file_exists($folder)) {
+			$folder = preg_replace('/[0-9]+$\//', '/', $folder);
+		}
 
 		// try to find config.json for this conference/mandator in local configs
-		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.json';
+		$configfile = $folder.'config.json';
 
 		if (file_exists($configfile)) {
+			try {
+				$data = file_get_contents($configfile);
+				$config = json_decode(strip_comments($data));
 
-			$data = file_get_contents($configfile); 
-			$config = json_decode(strip_comments($data));
-			
-			
-			if(is_null($config)) {
-				throw new ConfigException("Loading $configfile did not return an object. Maybe it's not a real JSON file? \n" . json_last_error_msg());
+				if(is_null($config)) {
+					throw new ConfigException("Loading $configfile did not return an object. Maybe it's not a real JSON file? \n" . json_last_error_msg());
+				}
+
+				return new ConferenceJson($config, $mandator);
 			}
-
-			return new ConferenceJson($config, $mandator);
+			catch(Exception $e) {
+			}
 		}
 
 
 		// try to find config.php for this conference/mandator in local configs
-		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
-	
+		$configfile = $folder.'config.php';
+
 		if (file_exists($configfile)) {
 			$config = include($configfile);
 
@@ -134,7 +141,7 @@ class Conferences
 
 		// config option for dynamic lookup feature defined below
 		if (!@$GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) {
-			throw new NotFoundException();;
+			throw new NotFoundException();
 		}
 
 		try {
@@ -148,10 +155,10 @@ class Conferences
 					organizer
 					start: startDate
 					end: endDate
-					streamingConfig 
-					
-					rooms(orderBy: [RANK_ASC, NAME_ASC]' . ( 
-						true ? ', filter: {streamId: {isNull: false}}' : '' 
+					streamingConfig
+
+					rooms(orderBy: [RANK_ASC, NAME_ASC]' . (
+						true ? ', filter: {streamId: {isNull: false}}' : ''
 					) . ' ) {
 						nodes {
 							guid
