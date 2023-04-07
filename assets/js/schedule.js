@@ -49,9 +49,9 @@ function closeEventDetails(e) {
 	window.scrollLock = false;
 }
 
+const acronym = window.location.pathname.split('/')[1];
 var previousTitle = "";
 function showEventDetails(e, data, force = false) {
-	const acronym = "jev22";
 	if (!force && (data.type || previousTitle == data.title)) {
 		return;
 	}
@@ -62,7 +62,7 @@ function showEventDetails(e, data, force = false) {
 	}
 
 	document.getElementById("modal-title").innerHTML =
-		data.title + ('subtitle' in data && `<br/><small>${data.subtitle || ''}`);
+		data.title + ('subtitle' in data ? `<br/><small>${data.subtitle || ''}` : '');
 	document.getElementById("modal-data").innerHTML = `
 	<dt>Origin:</dt>
 	<dd><a class="a" href="${data.url}" alt="Details" target="_blank">${data.url}</a></dd>
@@ -85,8 +85,8 @@ function showEventDetails(e, data, force = false) {
 	}
 	window.scrollLock = true;
 	previousTitle = data.title;
-	// fetch additional data
-	if (!force) {
+	// fetch additional data, currently disabled till we have a global config parameter
+	if (false && !force) {
 		fetchAdditionalData(data);
 	}
 }
