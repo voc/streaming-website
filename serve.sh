@@ -4,7 +4,7 @@ php_bin=""
 host=localhost
 port=8000
 
-for try_bin in /usr/bin/php7.4 php7 php
+for try_bin in php74 php7.4 php7 php
 do
 	php_bin=$(command -v $try_bin)
 	if [ -n "$php_bin" ]
@@ -27,7 +27,7 @@ fi
 # check if we should update schedules, upcoming, etc.
 if [ -z "$(find "configs/upcoming.json" -newermt "8 hours ago")" ]; then
 	echo "Updating schedules…\n"
-	./download.sh
+	$php_bin -d short_open_tag=true index.php download
 	echo
 fi
 
