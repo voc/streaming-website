@@ -4,7 +4,7 @@ php_bin=""
 host=localhost
 port=8000
 
-for try_bin in php8 php7 php
+for try_bin in /usr/bin/php7.4 php7 php
 do
 	php_bin=$(command -v $try_bin)
 	if [ -n "$php_bin" ]

@@ -113,8 +113,8 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
-		'Sääle' => array(
-			'K2', 
+		'Säle' => array(
+			'k2', 
 		),
 	),
 );
@@ -125,7 +125,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'K2' => array(
+	'k2' => array(
 		'DISPLAY' => 'K2 Rahel Liebeschütz-Plaut',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
