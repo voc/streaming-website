@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2022-05-18 09:45"),
+	'STARTS_AT' => strtotime("2023-05-23 09:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2022-05-18 12:45"),
+	'ENDS_AT' => strtotime("2023-05-23 12:45"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Veröffentlichung des Grundrechte-Reports 2022 – Zur Lage der Bürger- und Menschenrechte in Deutschland',
+	'TITLE' => 'Veröffentlichung des Grundrechte-Reports 2023 – Zur Lage der Bürger- und Menschenrechte in Deutschland',
 
 	/**
 	 * Veranstalter
@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	/**'RELEASES' => 'https://media.ccc.de/c/gpw2022',**/
+	/**'RELEASES' => 'https://media.ccc.de/c/gpw2023',**/
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -97,7 +97,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	/**'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/gpw2022/index.json',**/
+	/**'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/gpw2023/index.json',**/
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
