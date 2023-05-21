@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'grundrechte22',
+			'grundrechte23',
 		),
 	),
 );
@@ -135,18 +135,18 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'grundrechte22' => array(
+	'grundrechte23' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Veröffentlichung des Grundrechte-Reports 2022',
+		'DISPLAY' => 'Veröffentlichung des Grundrechte-Reports 2023',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'grundrechte22',
+		'STREAM' => 'grundrechte23',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
