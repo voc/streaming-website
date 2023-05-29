@@ -2,6 +2,8 @@
 
 class Overview
 {
+	public $conference;
+
 	public function __construct(Conference $conference)
 	{
 		$this->conference = $conference;

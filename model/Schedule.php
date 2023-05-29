@@ -54,7 +54,8 @@ class Schedule
 
 	public function getMappedRoom($scheduleRoom) {
 		$mapping = $this->getScheduleToRoomSlugMapping();
-		return $this->getConference()->getRoomIfExists( @$mapping[$scheduleRoom] );
+		$room = isset($mapping[$scheduleRoom]) ? $mapping[$scheduleRoom] : "";
+		return $this->getConference()->getRoomIfExists( $room );
 	}
 
 	public function getScheduleDisplayTime($basetime = null)
@@ -68,12 +69,16 @@ class Schedule
 
 	private function fetchSchedule()
 	{
-		$schedule = @file_get_contents($this->getScheduleCache());
-
-		if(!$schedule)
+		try {
+			$schedule = file_get_contents($this->getScheduleCache());
+	
+			if(!$schedule)
+				return null;
+	
+			return simplexml_load_string($schedule);
+		} catch (ErrorException $e) {
 			return null;
-
-		return simplexml_load_string($schedule);
+		}
 	}
 
 	public function getRoomSchedule($roomName, $roomGuid) {

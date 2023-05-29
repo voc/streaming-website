@@ -4748,6 +4748,7 @@ class Less_Tree_Call extends Less_Tree{
     protected $index;
     protected $currentFileInfo;
     public $type = 'Call';
+		public $parensInOp;
 
 	public function __construct($name, $args, $index, $currentFileInfo = null ){
 		$this->name = $name;
@@ -5291,6 +5292,7 @@ class Less_Tree_Dimension extends Less_Tree{
 	public $value;
 	public $unit;
 	public $type = 'Dimension';
+	public $parensInOp;
 
     public function __construct($value, $unit = null){
         $this->value = floatval($value);
@@ -5497,6 +5499,8 @@ class Less_Tree_Directive extends Less_Tree{
 	public $currentFileInfo;
 	public $debugInfo;
 	public $type = 'Directive';
+	public $parensInOp;
+	public $allExtends;
 
 	public function __construct($name, $value, $rules, $index = null, $currentFileInfo = null, $debugInfo = null ){
 		$this->name = $name;
@@ -6224,6 +6228,7 @@ class Less_Tree_Media extends Less_Tree{
 	public $currentFileInfo;
 	public $isReferenced;
 	public $type = 'Media';
+	public $allExtends;
 
 	public function __construct($value = array(), $features = array(), $index = null, $currentFileInfo = null ){
 
@@ -6478,6 +6483,7 @@ class Less_Tree_Operation extends Less_Tree{
 	public $operands;
 	public $isSpaced;
 	public $type = 'Operation';
+	public $parensInOp;
 
 	/**
 	 * @param string $op
@@ -6669,6 +6675,7 @@ class Less_Tree_Rule extends Less_Tree{
 	public $variable;
 	public $currentFileInfo;
 	public $type = 'Rule';
+	public $extendOnEveryPath;
 
 	/**
 	 * @param string $important
@@ -6795,6 +6802,7 @@ class Less_Tree_Ruleset extends Less_Tree{
 	public $originalRuleset;
 
 	public $first_oelements;
+	public $extendOnEveryPath;
 
 	public function SetRulesetIndex(){
 		$this->ruleset_id = Less_Parser::$next_id++;
@@ -7951,6 +7959,7 @@ class Less_Tree_Variable extends Less_Tree{
 	public $currentFileInfo;
 	public $evaluating = false;
 	public $type = 'Variable';
+	public $parensInOp;
 
     /**
      * @param string $name

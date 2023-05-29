@@ -36,6 +36,9 @@ function joinpath($parts)
 
 function forceslash($url)
 {
+	if ($url == NULL) {
+		$url = "";
+	}
 	$url =  rtrim($url, '/');
 	if(strlen($url) > 0)
 		$url .= '/';

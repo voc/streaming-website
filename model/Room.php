@@ -50,12 +50,20 @@ class Room
 	}
 
 	public function getSlug() {
-		return $this->slug;
+		if ($this->slug != NULL) {
+			return $this->slug;
+		} else {
+			return "";
+		}
 	}
 
 	private function get($key, $fallbackValue = null) {
 		$keychain = 'ROOMS.'.$this->getSlug().'.'.$key;
-		return $this->conference->get($keychain, $fallbackValue ?: @$GLOBALS['CONFIG']['ROOM_DEFAULTS'][$key]);
+		$fallback = null;
+		if (isset($GLOBALS['CONFIG']['ROOM_DEFAULTS'][$key])) {
+			$fallback = $GLOBALS['CONFIG']['ROOM_DEFAULTS'][$key];
+		}
+		return $this->conference->get($keychain, $fallbackValue ?: $fallback);
 	}
 
 	private function has($key) {
