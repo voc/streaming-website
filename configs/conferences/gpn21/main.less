@@ -1,0 +1,49 @@
+@import "../../../assets/css/_structure.less";
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/configs/conferences/gpn21/Roboto-Regular.ttf') format('truetype');
+}
+
+@panel-default-border: #000;
+@nav-tabs-border-color: #000;
+@nav-tabs-active-link-hover-border-color: #000;
+@nav-tabs-justified-link-border-color: #000;
+
+body {
+    font-family: 'Roboto';
+}
+
+.logo {
+    width: 40%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+nav .navbar-brand .icon {
+    background-image: url(dip8-clean.svg);
+    background-size: contain;
+}
+
+.gpn21 {
+    background-image: url(dip8-clean.svg);
+    background-repeat: no-repeat;
+    background-size: 320px 320px;
+
+    position: fixed;
+    left: 10px;
+    bottom: 70px;
+
+    width: 320px;
+    height: 320px;
+
+    z-index: -100;
+
+    @media (max-width: @screen-sm-min) {
+        display: none;
+    }
+}
