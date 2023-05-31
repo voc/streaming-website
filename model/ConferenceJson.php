@@ -10,8 +10,8 @@ class ConferenceJson extends Conference
 	public function __construct($json, $mandator)
 	{
 		$c = $json->conference;
-		$this->start = DateTime::createFromFormat('c', @$c->start ?: @$c->startDate);
-		$this->end   = DateTime::createFromFormat('c', @$c->end   ?: @$c->endDate);
+		$this->start = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->start);
+		$this->end   = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->end);
 		$this->html  = @$c->streamingConfig->html ?: [];
 
 		$this->rooms = [];
@@ -76,19 +76,6 @@ class ConferenceJson extends Conference
 		return ModelJson::_get($this->config, $keychain, $default);
 	}
 
-	/*
-	public function getTitle() {
-		return $this->data->conference->title;
-	}
-
-	public function hasAuthor() {
-		return !empty($this->data->conference->organizer);
-	}
-	public function getAuthor() {
-		return $this->data->conference->organizer ?: '';
-	}
-	*/
-
 	public function startsAt() {
 		return $this->start;
 	}
@@ -97,23 +84,26 @@ class ConferenceJson extends Conference
 		return $this->end;
 	}
 
+	public function hasBegun() {
+		// on the preview-domain all conferences are always open
+		if($this->isPreviewEnabled())
+			return true;
+
+		$now = new DateTime('now');
+		return $now >= $this->start;
+	}
+
 	public function hasEnded() {
 		// on the preview-domain no conference ever ends
 		if($this->isPreviewEnabled())
 			return false;
 
-		if($this->has('CONFERENCE.CLOSED')) {
-			$closed = $this->get('CONFERENCE.CLOSED');
-
-			if($closed == "after" || $closed === true)
-				return true;
-			else if($closed == "running" || $closed == "before" ||
-				$closed === false)
-				return false;
-		}
-
 		$now = new DateTime('now');
 		return $now >= $this->end;
+	}
+
+	public function isUnlisted() {
+		return false; // not supported by json schema
 	}
 
 	public function getRooms()
