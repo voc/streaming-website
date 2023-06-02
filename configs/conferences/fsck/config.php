@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'fsck',
+		'STREAM' => 'fsck23',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
