@@ -19,7 +19,7 @@
 .background() {
     background-image: url(dip8-clean-margins.svg), url(dip8-clean-margins.svg);
     background-size: 10%;
-    background-position: 0 0, 240px 240px;
+    background-position: top 0px right 0px, top 5vi right 5vi;
     background-scale: space;
 }
 
@@ -62,7 +62,8 @@ body.room {
 }
 
 .talk {
-    width: max-content;
+    width: 100%;
+    min-width: 320px;
 }
 
 .panel {
@@ -108,6 +109,15 @@ body.room {
         & > * {
             .hoverable();
         }
+    }
+}
+
+.room > * > .panel > .panel-body {
+    display: flex;
+    flex-wrap: wrap;
+    & > .program-schedule {
+        flex-basis: min-content;
+        flex-grow: 1;
     }
 }
 
