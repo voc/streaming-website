@@ -1,19 +1,138 @@
+// vim: ts=4 sw=4 et
 @import "../../../assets/css/_structure.less";
 
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url('/configs/conferences/gpn21/Roboto-Regular.ttf') format('truetype');
+    src: local('Roboto'), url('/configs/conferences/gpn21/Roboto-Regular.ttf') format('truetype');
 }
 
-@panel-default-border: #000;
+@orange: #ea5b0c;
+@panel-color: #eee;
+@panel-default-border: transparent;
 @nav-tabs-border-color: #000;
 @nav-tabs-active-link-hover-border-color: #000;
 @nav-tabs-justified-link-border-color: #000;
 
+
+.background() {
+    background-image: url(dip8-clean-margins.svg), url(dip8-clean-margins.svg);
+    background-size: 10%;
+    background-position: 0 0, 240px 240px;
+    background-scale: space;
+}
+
 body {
     font-family: 'Roboto';
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+body > .container {
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+
+.hls {
+    padding-bottom: 20px;
+    background-color: white;
+    height: 100%;
+}
+
+body.room {
+    background-color: @panel-color;
+}
+
+.flex-root() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.room-group {
+    .flex-root();
+}
+
+.room-medientheater {
+    width: 100%;
+}
+
+.room-vortragssaal, .room-blauersalon {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.talk {
+    width: max-content;
+}
+
+.panel {
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.panel > *, .panel {
+    border-radius: 0 !important;
+}
+
+
+.panel-heading {
+    border-bottom: #666 1px solid !important;
+    background-color: fade(@panel-color, 80%) !important;
+}
+
+.panel-title {
+    font-weight: bold;
+    font-size: large;
+}
+
+.panel-body {
+    background: fade(@panel-color, 60%);
+
+}
+
+.hoverable() {
+    padding: 15px;
+    border: 1px solid;
+    transition: 200ms ease-in-out all;
+    border-color: transparent;
+    color: @orange;
+    &:hover {
+        border-color: unset;
+    }
+}
+
+.panel-primary {
+    border: 0px;
+    & > .panel-body {
+        padding: 0px;
+        & > * {
+            .hoverable();
+        }
+    }
+}
+
+a {
+    color: @orange;
+}
+
+h2 {
+    & > span {
+        padding: 10px !important;
+        font-weight: bold;
+        font-size: x-large;
+    }
+}
+
+.col-sm-6 {
+    width: max-content;
+    height: max-content;
+    & > .panel > .panel-body > a {
+        font-size: x-large;
+    }
+}
+
+.recordings {
+    .flex-root();
 }
 
 .logo {
@@ -29,21 +148,53 @@ nav .navbar-brand .icon {
     background-size: contain;
 }
 
+nav {
+    border-bottom: #666 solid 1px !important;
+    background-color: fade(white, 80%) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    color: #333 !important;
+}
+
+.btn {
+    .hoverable();
+    padding: 10px;
+}
+.btn-primary {
+    color: white;
+    background-color: @orange !important;
+    border: transparent;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .gpn21 {
-    background-image: url(dip8-clean.svg);
-    background-repeat: no-repeat;
-    background-size: 320px 320px;
-
+    animation: fadein 1s;
     position: fixed;
-    left: 10px;
-    bottom: 70px;
-
-    width: 320px;
-    height: 320px;
-
+    .background();
+    filter: opacity(30%) brightness(2) contrast(0.2) saturate(80%);
+    width: 100%;
+    height: 100%;
     z-index: -100;
-
-    @media (max-width: @screen-sm-min) {
-        display: none;
+}
+.preview-warning {
+    transition: 10s ease-in-out all;
+    backdrop-filter: blur(10px);
+    opacity: 0.7;
+    padding: 1ch .5ch .5ch 1ch !important;
+    border-top-left-radius: 2ch;
+    font-weight: bold;
+    width: min-content;
+    height: max-content;
+    user-select: none;
+    pointer-events:hover;
+    &:hover {
+        opacity: 0.2;
+        transition: 300ms ease-in-out all;
     }
 }
