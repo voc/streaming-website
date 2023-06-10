@@ -49,6 +49,15 @@
       },
       {
         "guid": "",
+        "name": "Medientheater High Quality",
+        "slug": "demoscene",
+        "streamId": "demoscene",
+        "streamingConfig": {
+          "chat": {}
+        }
+      },
+      {
+        "guid": "",
         "name": "Vortragssaal",
         "slug": "vortragssaal",
         "streamId": "s3",
