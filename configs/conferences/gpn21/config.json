@@ -49,9 +49,27 @@
       },
       {
         "guid": "",
+        "name": "Medientheater High Quality",
+        "slug": "demoscene",
+        "streamId": "demoscene",
+        "streamingConfig": {
+          "chat": {}
+        }
+      },
+      {
+        "guid": "",
         "name": "Vortragssaal",
         "slug": "vortragssaal",
         "streamId": "s3",
+        "streamingConfig": {
+          "chat": {}
+        }
+      },
+      {
+        "guid": "",
+        "name": "Blauer Salon",
+        "slug": "blauersalon",
+        "streamId": "s5",
         "streamingConfig": {
           "chat": {}
         }
