@@ -147,7 +147,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => true,
+		'SCHEDULE' => false,
 		'SCHEDULE_NAME' => 'Great Hall, Salle de spectacles, St-Imier',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
@@ -168,7 +168,7 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'MUSIC' => false,
 
-		'SCHEDULE' => true,
+		'SCHEDULE' => false,
 		'SCHEDULE_NAME' => 'Hybrid room, Salle du Conseil de Ville, St-Imier',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
