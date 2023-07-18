@@ -20,7 +20,7 @@ class Conference extends ModelBase
 	}
 
 	public function isPreviewEnabled() {
-		if(@$GLOBALS['forceopen'])
+		if(isset($GLOBALS['forceopen']) && $GLOBALS['forceopen'])
 			return true;
 
 		if($this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['SERVER_NAME']))

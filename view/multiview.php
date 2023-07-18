@@ -5,5 +5,5 @@ echo $tpl->render(array(
 	'title' => 'Stream-Übersicht',
 
 	'rooms' => $conference->getRooms(),
-	'selection' => @$_GET['selection'],
+	'selection' => isset($_GET['selection']) ? $_GET['selection'] : "",
 ));

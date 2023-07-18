@@ -65,7 +65,8 @@ class Conferences
 	}
 
 	public static function getLastConference() {
-		return @Conferences::getFinishedConferencesSorted()[0];
+		$conferences = Conferences::getFinishedConferencesSorted();
+		return isset($conferences[0]) ? $conferences[0] : null;
 	}
 
 	public static function exists($mandator) {
@@ -133,7 +134,7 @@ class Conferences
 		}
 
 		// config option for dynamic lookup feature defined below
-		if (!@$GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) {
+		if (isset($GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) && !$GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) {
 			throw new NotFoundException();;
 		}
 

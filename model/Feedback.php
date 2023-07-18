@@ -10,9 +10,10 @@ class Feedback
 	}
 
 	private function get($key) {
+		$global_feedback_elem = isset($GLOBALS['CONFIG']['FEEDBACK'][$key]) ? $GLOBALS['CONFIG']['FEEDBACK'][$key] : "";
 		return $this->conference->has(['FEEDBACK', $key])
 			? $this->conference->get(['FEEDBACK', $key])
-			: @$GLOBALS['CONFIG']['FEEDBACK'][$key];
+			: $global_feedback_elem;
 	}
 
 	public function getConference() {

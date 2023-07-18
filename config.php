@@ -24,11 +24,11 @@ $GLOBALS['CONFIG']['PREVIEW_DOMAIN'] = 'xlocalhost';
  * Protokollfreie URLs (welche, die mit // beginnen), werden automatisch mit dem korrekten Protokoll ergänzt.
  * In diesem Fall wird auch ein SSL-Umschalt-Button im Header angezeigt
  */
-if(@$_SERVER['SERVER_NAME'] == 'localhost' || @$_SERVER['SERVER_NAME'] == '0.0.0.0')
+if(isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '0.0.0.0'))
 {
 	// keine Konfiguration -> BASEURL wird automatisch erraten
 }
-else if(@$_SERVER['SERVER_NAME'] == 'streaming.test.c3voc.de')
+else if(isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'streaming.test.c3voc.de'))
 {
 	$GLOBALS['CONFIG']['BASEURL'] = '//streaming.test.c3voc.de/';
 }
@@ -104,7 +104,7 @@ $GLOBALS['CONFIG']['FEEDBACK'] = array(
 /**
  * Konfiguration der Room-Defaults
  *
- * Falls in der Raum-Konfiguration innerhalb der Konferenz für diese Keys nichts definiert ist, 
+ * Falls in der Raum-Konfiguration innerhalb der Konferenz für diese Keys nichts definiert ist,
  * fällt das System auf diese Werte zurück.
  */
 

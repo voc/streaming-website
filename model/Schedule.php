@@ -364,7 +364,15 @@ class Schedule
 			$this->mapping = array();
 			foreach($this->getConference()->get('ROOMS') as $slug => $room)
 			{
-				$key = @$room['name'] ?: @$room['SCHEDULE_NAME'] ?: @$room['DISPLAY'] ?: $slug; 
+				// json has 'name', config.php has 'SCHEDULE_NAME' and 'DISPLAY'
+				$key = $slug;
+				if (isset($room['name'])) {
+					$key = $room['name'];
+				} elseif ($room['SCHEDULE_NAME']) {
+					$key = $room['SCHEDULE_NAME'];
+				} elseif ($room['DISPLAY']) {
+					$key = $room['DISPLAY'];
+				}
 				$this->mapping[$key] = $slug;
 			}
 		}

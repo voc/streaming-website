@@ -52,11 +52,11 @@ if(isset($argv) && isset($argv[1]))
 try {
 	if(isset($_GET['htaccess']))
 	{
-		$route = @$_GET['route'];
+		$route = isset($_GET['route']) ? $_GET['route'] : "";
 	}
 	elseif(isset($_SERVER["REQUEST_URI"]))
 	{
-		$route = ltrim(@$_SERVER["REQUEST_URI"], '/');
+		$route = ltrim($_SERVER["REQUEST_URI"], '/');
 
 		// serve static
 		if($route != '' && file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$route))
@@ -87,11 +87,12 @@ try {
 		'conference' => new GenericConference(),
 	));
 
-	if(isset($GLOBALS['CONFIG']['BASEURL']) && startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
+	if(isset($GLOBALS['CONFIG']['BASEURL']) && startswith('//', $GLOBALS['CONFIG']['BASEURL']))
 	{
+		$mandator = isset($GLOBALS['MANDATOR']) ? $GLOBALS['MANDATOR'] : "";
 		$tpl->set(array(
-			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route).url_params(),
-			'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route).url_params(),
+			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).$mandator).forceslash($route).url_params(),
+			'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).$mandator).forceslash($route).url_params(),
 		));
 	}
 
