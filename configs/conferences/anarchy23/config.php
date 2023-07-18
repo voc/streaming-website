@@ -188,23 +188,23 @@ $CONFIG['EMBED'] = true;
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-$CONFIG['SCHEDULE'] = array(
+//$CONFIG['SCHEDULE'] = array(
     /**
      * URL zum Fahrplan-XML
      */
-    'URL' => 'https://organize.anarchy2023.org/schedule.xml',
+    //'URL' => 'https://organize.anarchy2023.org/schedule.xml',
 
     /**
      * Nur die angegebenen Räume aus dem Fahrplan beachten
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    'ROOMFILTER' => ['Great Hall, Salle de spectacles, St-Imier', 'Hybrid room, Salle du Conseil de Ville, St-Imier'],
+    //'ROOMFILTER' => ['Great Hall, Salle de spectacles, St-Imier', 'Hybrid room, Salle du Conseil de Ville, St-Imier'],
 
     /**
      * Skalierung der Programm-Vorschau in Sekunden pro Pixel
      */
-    'SCALE' => 5,
+    //'SCALE' => 5,
 
     /**
      * Simuliere das Verhalten als wäre die Konferenz bereits heute
@@ -213,8 +213,8 @@ $CONFIG['SCHEDULE'] = array(
      * Konferenz-Datum 2014-12-29 auf den heutigen Tag 2015-02-24 verschoben ist.
      */
     //SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-03-30') - strtotime(/* Today */ date('Y-m-d')))
-    'SIMULATE_OFFSET' => 0,
-);
+    //'SIMULATE_OFFSET' => 0,
+//);
 
 // $CONFIG['Mastodon'] = array ()
 
