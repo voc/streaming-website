@@ -114,7 +114,7 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
 			'bornhack1',
-			'bornhack2'
+			'bornhack2',
 			'bornhack3',
 		),
 	),
