@@ -1,15 +1,11 @@
 @import "../../../assets/css/_structure.less";
 
-/* noto-sans-regular - latin */
+/* BeonRegular */
 @font-face {
-  font-family: 'BeonRegular';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/configs/conferences/camp2023/Beon-Regular_EG.otf');
-  src: local('Beon Regular'), local('BeonRegular'),
-       url('/configs/conferences/camp2023/Beon-Regular_EG.otf') format("opentype")
+    font-family: 'BeonRegular';
+    src: url('/configs/conferences/camp2023/Beon-Regular_EG.otf');
+    src: url('/configs/conferences/camp2023/Beon-Regular_EG.otf') format("opentype")
 }
-
 
 // conference specific styles here
 @pw-color:     #FB48C4;
@@ -63,11 +59,11 @@ body {
 	background-size: contain;
 	padding: @navbar-height 0;
 	color: @body-text;
-	font-family: "Noto Sans",Arial,sans-serif;
+	font-family: "BeonRegular",Arial,sans-serif;
 }
 
 h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
-	font-family: "Noto Sans",Arial,sans-serif;
+	font-family: "BeonRegular",Arial,sans-serif;
 	font-weight: bold;
 }
 
