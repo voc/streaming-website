@@ -78,7 +78,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 //'BANNER_HTML' => '<div class="logo"></div>',
+	'BANNER_HTML' => '<img src="/configs/conferences/camp2023/logo.svg" class="logo">',
 
 	/**
 	 * Link zu den Recordings
