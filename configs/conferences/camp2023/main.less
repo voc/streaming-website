@@ -36,11 +36,24 @@
 
 // @navbar-height:         70px;
 
-@navbar-default-bg:     @bg-orange;
-@navbar-default-border: @bg-orange;
+@navbar-default-bg:     @pw-color;
+@navbar-default-border: @pw-color;
 
-@navbar-default-link-color: @pw-color;
+@navbar-default-link-color: @bg-orange;
 //@navbar-default-link-hover-color: @link-hover-color;
+
+.logo {
+    width: 40%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(logo.svg);
+	background-size: contain;
+}
 
 body {
 	//background-image: url("/configs/conferences/fossgis2023/assets/bg.svg");
