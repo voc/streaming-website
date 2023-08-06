@@ -78,7 +78,34 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<img src="/configs/conferences/camp2023/logo.svg" class="logo">',
+	'BANNER_HTML' => '
+	<div class="container">
+		<div class="row group group-marktplatz">
+			<div class="col-xs-12">
+				<h2><span>Marktplatz</span></h2>
+			</div>
+		</div>
+
+		<div class="row room-group room-group-n0 room-group-marktplatz">
+			<div class="room room-marktplatz clearfix wide col-xs-12">
+				<a href="https://link-to-stream">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<span class="roomtitle regular">Marktplatz</span>
+								<span class="roomtitle short">Marktplatz</span>
+							</div>
+						</div>
+
+						<div class="panel-body">		
+							<img class="preview" src="http://cdn.c3voc.de/thumbnail/s6/thumb.jpeg" alt="Marktplatz" width="213" height="120">
+						</div>
+					</div>
+				</a>
+			</div
+		</div>
+	</div>
+	',
 
 	/**
 	 * Link zu den Recordings
@@ -119,7 +146,6 @@ $CONFIG['OVERVIEW'] = array(
 			'c3voctv'
         ),
         'Content' => array(
-			'marktplatz',
 			'bits',
 			'digital',
 			'milliways',
@@ -150,27 +176,6 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 		'SCHEDULE' => false,
 		'SCHEDULE_NAME' => 'C3VOC.TV',
-		'FEEDBACK' => true,
-		'SUBTITLES' => false,
-		'EMBED' => true,
-		'IRC' => true,
-		'TWITTER' => true,
-	),
-	'marktplatz' => array(
-		'DISPLAY' => 'Marktplatz',
-		'STREAM' => 's1',
-		'PREVIEW' => true,
-		'TRANSLATION' => true,
-		'SD_VIDEO' => true,
-		'HD_VIDEO' => true,
-		'DASH' => true,
-		'H264_ONLY' => true,
-    	'HLS' => true,
-		'SLIDES' => false,
-		'AUDIO' => false,
-		'MUSIC' => false,
-		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Marktplatz',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
