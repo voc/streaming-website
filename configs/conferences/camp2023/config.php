@@ -88,7 +88,7 @@ $CONFIG['CONFERENCE'] = array(
 
 		<div class="row room-group room-group-n0 room-group-marktplatz">
 			<div class="room room-marktplatz clearfix wide col-xs-12">
-				<a href="https://link-to-stream">
+				<a href="https://broadcast.fem.tu-ilmenau.de/events/cccamp23/">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<div class="panel-title">
@@ -98,7 +98,7 @@ $CONFIG['CONFERENCE'] = array(
 						</div>
 
 						<div class="panel-body">		
-							<img class="preview" src="http://cdn.c3voc.de/thumbnail/s6/thumb.jpeg" alt="Marktplatz" width="213" height="120">
+							<img class="preview" src="http://cdn.c3voc.de/thumbnail/s1/thumb.jpeg" alt="Marktplatz" width="213" height="120">
 						</div>
 					</div>
 				</a>
