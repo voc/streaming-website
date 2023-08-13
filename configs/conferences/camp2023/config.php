@@ -174,8 +174,8 @@ $CONFIG['ROOMS'] = array(
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
-		'SCHEDULE' => false,
-		'SCHEDULE_NAME' => 'C3VOC.TV',
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'C3VOC.tv',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -393,14 +393,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://pretalx.c3voc.de/camp2023/schedule/export/schedule.xml',
+	'URL' => 'http://data.c3voc.de/camp2023/channels.schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-  'ROOMFILTER' => array('Marktplatz', 'Bits & Bäume', 'Digitalcourage', 'Milliways', 'N:O:R:T:x', 'Jugend hackt'),
+  'ROOMFILTER' => array('Marktplatz', 'Bits & Bäume', 'Digitalcourage', 'Milliways', 'N:O:R:T:x', 'Jugend hackt', 'C3VOC.tv'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
