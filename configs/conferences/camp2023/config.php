@@ -267,7 +267,7 @@ $CONFIG['ROOMS'] = array(
 		'TWITTER' => true,
 	),
 	'jh' => array(
-		'DISPLAY' => 'Jugend hackt',
+		'DISPLAY' => 'Jugend Village',
 		'STREAM' => 's191',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -280,7 +280,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Jugend hackt',
+		'SCHEDULE_NAME' => 'Jugend Village',
 		'FEEDBACK' => true,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -400,7 +400,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-  'ROOMFILTER' => array('Marktplatz', 'Bits & Bäume', 'Digitalcourage', 'Milliways', 'N:O:R:T:x', 'Jugend hackt', 'C3VOC.tv'),
+  'ROOMFILTER' => array('Marktplatz', 'Bits & Bäume', 'Digitalcourage', 'Milliways', 'N:O:R:T:x', 'Jugend Village', 'C3VOC.tv'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
