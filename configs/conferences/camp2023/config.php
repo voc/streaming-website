@@ -98,7 +98,7 @@ $CONFIG['CONFERENCE'] = array(
 						</div>
 
 						<div class="panel-body">
-							<img class="preview" src="http://cdn.c3voc.de/thumbnail/q1/thumb.jpeg" alt="Marktplatz" width="213" height="120">
+							<img class="preview" src="http://cdn.c3voc.de/thumbnail/s1/thumb.jpeg" alt="Marktplatz" width="213" height="120">
 						</div>
 					</div>
 				</a>
