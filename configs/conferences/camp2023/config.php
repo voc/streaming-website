@@ -206,8 +206,8 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'IRC' => true,
 		'IRC_CONFIG' => array(
-            'DISPLAY' => 'Matrix: #camp2023 @ events.ccc.de',
-            'URL' => 'https://matrix.to/#/#camp2023:events.ccc.de',
+            'DISPLAY' => 'Matrix: #camp2023-bitsundbaeume @ events.ccc.de',
+            'URL' => 'https://matrix.to/#/#camp2023-bitsundbaeume:events.ccc.de',
         ),
 		'TWITTER' => true,
 	),
