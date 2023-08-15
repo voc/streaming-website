@@ -142,6 +142,9 @@ $CONFIG['OVERVIEW'] = array(
 	 * sonst werden sie nicht angezeigt.
 	 */
 	'GROUPS' => array(
+		'Marktplatz Slides' => array(
+			'marktplatzslides'
+		),
 		'C3VOC.TV' => array(
 			'c3voctv'
         ),
@@ -161,6 +164,33 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
+	'marktpltzslides' => array(
+         'DISPLAY' => 'Marktplatz Slides',
+         'STREAM' => 's1',
+         'PREVIEW' => true,
+         'TRANSLATION' => false,
+         'SD_VIDEO' => false,
+         'HD_VIDEO' => false,
+         'DASH' => false,
+         'H264_ONLY' => false,
+         'HLS' => false,
+         'SLIDES' => true,
+         'AUDIO' => false,
+         'MUSIC' => false,
+         'SCHEDULE' => true,
+         'SCHEDULE_NAME' => 'Marktplatz',
+         'FEEDBACK' => true,
+         'SUBTITLES' => false,
+         'EMBED' => true,
+         'IRC' => true,
+         'IRC_CONFIG' => array(
+             'DISPLAY' => 'Matrix: #camp2023-marktplatz @ events.ccc.de',
+             'URL' => 'https://matrix.to/#/#camp2023-marktplatz:events.ccc.de',
+         ),
+         'TWITTER' => true,
+     ),
+
+
 	'c3voctv' => array(
 		'DISPLAY' => 'C3VOC.TV',
 		'STREAM' => 's6',
