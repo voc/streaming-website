@@ -188,10 +188,12 @@ $CONFIG['ROOMS'] = array(
              'URL' => 'https://matrix.to/#/#camp2023-marktplatz:events.ccc.de',
          ),
          'TWITTER' => true,
+         'TWITTER_CONFIG' => array(
+             'DISPLAY' => '#CCCamp23marktplatz @ fediverse',
+	 	 ),
      ),
 
-
-	'c3voctv' => array(
+      'c3voctv' => array(
 		'DISPLAY' => 'C3VOC.TV',
 		'STREAM' => 's6',
 		'PREVIEW' => true,
@@ -215,6 +217,9 @@ $CONFIG['ROOMS'] = array(
 			'URL' => 'https://matrix.to/#/#camp2023-c3voctv:events.ccc.de',
 		),
 		'TWITTER' => true,
+        'TWITTER_CONFIG' => array(
+            'DISPLAY' => '#c3voctv @ fediverse',
+	    ),
 	),
 	'bits' => array(
 		'DISPLAY' => 'Bits & Bäume',
@@ -240,6 +245,9 @@ $CONFIG['ROOMS'] = array(
             'URL' => 'https://matrix.to/#/#camp2023-bitsundbaeume:events.ccc.de',
         ),
 		'TWITTER' => true,
+        'TWITTER_CONFIG' => array(
+            'DISPLAY' => '#bitsundbaeume @ fediverse',
+	    ),
 	),
 	'digital' => array(
 		'DISPLAY' => 'Digitalcourage',
@@ -265,6 +273,9 @@ $CONFIG['ROOMS'] = array(
             'URL' => 'https://matrix.to/#/#camp2023-digitalcourage:events.ccc.de',
         ),
 		'TWITTER' => true,
+        'TWITTER_CONFIG' => array(
+            'DISPLAY' => '#CCCamp23digitalcourage @ fediverse',
+	    ),
 	),
 	'milliways' => array(
 		'DISPLAY' => 'Milliways',
@@ -290,6 +301,9 @@ $CONFIG['ROOMS'] = array(
             'URL' => 'https://matrix.to/#/#camp2023-milliways:events.ccc.de',
         ),
 		'TWITTER' => true,
+        'TWITTER_CONFIG' => array(
+            'DISPLAY' => '#CCCamp23milliways @ fediverse',
+	    ),
 	),
 	'nortx' => array(
 		'DISPLAY' => 'N:O:R:T:x',
@@ -315,6 +329,9 @@ $CONFIG['ROOMS'] = array(
             'URL' => 'https://matrix.to/#/#camp2023-nortx:events.ccc.de',
         ),
 		'TWITTER' => true,
+        'TWITTER_CONFIG' => array(
+            'DISPLAY' => '#CCCamp23nortx @ fediverse',
+	    ),
 	),
 	'jh' => array(
 		'DISPLAY' => 'Jugend Village',
@@ -340,6 +357,9 @@ $CONFIG['ROOMS'] = array(
             'URL' => 'https://matrix.to/#/#camp2023-jugendhackt:events.ccc.de',
         ),
 		'TWITTER' => true,
+        'TWITTER_CONFIG' => array(
+            'DISPLAY' => '#jugendhackt @ fediverse',
+	    ),
 	),
 );
 
