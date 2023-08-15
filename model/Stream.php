@@ -138,6 +138,10 @@ class Stream
 			$selection = $this->getSelection();
 		}
 
+		if($selection == 'slides') {
+			return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getRoom()->getStream()).'/Slides.m3u8']);
+		}
+
 		switch($proto)
 		{
 			case 'hls':
