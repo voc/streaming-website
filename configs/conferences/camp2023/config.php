@@ -180,6 +180,10 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
+		'IRC_CONFIG' => array(
+			'DISPLAY' => 'Matrix: #camp2023-c3voctv @ events.ccc.de',
+			'URL' => 'https://matrix.to/#/#camp2023-c3voctv:events.ccc.de',
+		),
 		'TWITTER' => true,
 	),
 	'bits' => array(
@@ -201,6 +205,10 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
+		'IRC_CONFIG' => array(
+            'DISPLAY' => 'Matrix: #camp2023 @ events.ccc.de',
+            'URL' => 'https://matrix.to/#/#camp2023:events.ccc.de',
+        ),
 		'TWITTER' => true,
 	),
 	'digital' => array(
@@ -222,6 +230,10 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
+		'IRC_CONFIG' => array(
+            'DISPLAY' => 'Matrix: #camp2023-digitalcourage @ events.ccc.de',
+            'URL' => 'https://matrix.to/#/#camp2023-digitalcourage:events.ccc.de',
+        ),
 		'TWITTER' => true,
 	),
 	'milliways' => array(
@@ -243,6 +255,10 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
+		'IRC_CONFIG' => array(
+            'DISPLAY' => 'Matrix: #camp2023-milliways @ events.ccc.de',
+            'URL' => 'https://matrix.to/#/#camp2023-milliways:events.ccc.de',
+        ),
 		'TWITTER' => true,
 	),
 	'nortx' => array(
@@ -264,6 +280,10 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
+		'IRC_CONFIG' => array(
+            'DISPLAY' => 'Matrix: #camp2023-nortx @ events.ccc.de',
+            'URL' => 'https://matrix.to/#/#camp2023-nortx:events.ccc.de',
+        ),
 		'TWITTER' => true,
 	),
 	'jh' => array(
@@ -285,6 +305,10 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => true,
+		'IRC_CONFIG' => array(
+            'DISPLAY' => 'Matrix: #camp2023-jugendhackt @ events.ccc.de',
+            'URL' => 'https://matrix.to/#/#camp2023-jugendhackt:events.ccc.de',
+        ),
 		'TWITTER' => true,
 	),
 );
