@@ -164,7 +164,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'marktpltzslides' => array(
+	'marktplatzslides' => array(
          'DISPLAY' => 'Marktplatz Slides',
          'STREAM' => 's1',
          'PREVIEW' => true,
