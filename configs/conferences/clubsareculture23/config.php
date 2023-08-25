@@ -270,6 +270,6 @@ $CONFIG['EMBED'] = true;
      * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
      */
 //    'URL' => 'https://webirc.hackint.org/#irc://irc.hackint.org/#debate',
-);
+//);
 
 return $CONFIG;
