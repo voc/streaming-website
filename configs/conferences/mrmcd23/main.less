@@ -1,0 +1,126 @@
+@import "../../../assets/css/_structure.less";
+
+/* jura-regular - latin */
+@font-face {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Jura Regular'), local('Jura-Regular'),
+       url('jura-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('jura-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* jura-300 - latin */
+@font-face {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Jura Light'), local('Jura-Light'),
+       url('jura-v10-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('jura-v10-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* jura-700 - latin */
+@font-face {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Jura Bold'), local('Jura-Bold'),
+       url('jura-v10-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('jura-v10-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+@gelb: #f9cd00;
+@white: #ffffff;
+@light-blue: #47acda;
+@blue: #094762;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #000000;
+
+
+@brand-primary: @light-blue;
+@well-bg: @dark;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: @dark;
+@panel-default-text: @light-blue;
+@panel-bg: @dark;
+
+
+body {
+	background-color: @dark;
+	color: @grey-light;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+.outer-div {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+}
+
+.mrmcd23 {
+	background-image: url(title.svg);
+	background-repeat: no-repeat;
+	background-size: 880px 315px;
+
+	margin: 0 auto;
+
+	width: 880px;
+	height: 315px;
+
+	opacity: 1;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+.mrmcd-title {
+	width: 300px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.mrmcd-title1 {
+	font-size: 48px;
+	font-weight: bold;
+	font-family: Jura, "Open Sans", Helvetica, Arial, sans-serif;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-top: 2px solid white;
+}
+
+.mrmcd-title2 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: Jura, "Open Sans", Helvetica, Arial, sans-serif;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	text-align: center;
+	border-bottom: 2px solid white;
+}
+
+.mrmcd-title3 {
+	font-size: 18px;
+	font-weight: bold;
+	font-family: Jura, "Open Sans", Helvetica, Arial, sans-serif;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	text-align: center;
+}
