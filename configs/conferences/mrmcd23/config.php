@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2023-09-01 17:20"),
+	'STARTS_AT' => strtotime("2023-09-01 17:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2023-09-03 16:00"),
+	'ENDS_AT' => strtotime("2023-09-03 18:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -77,7 +77,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 //	'BANNER_HTML' => '<img src="../configs/conferences/jh-hh-2019/Banner_JH-Hamburg-2019.svg" class="jhhh">',
-	'BANNER_HTML' => '<div class="outer-div"><div class="mrmcd23"><div class="mrmcd-title"><div class="mrmcd-title1">MRMCD2019</div><div class="mrmcd-title2">GESELLSCHAFTSSPIELE</div><div class=mrmcd-title3>13.-15. September 2019<br />S2|02 - TU Darmstadt</div></div></div>',
+	'BANNER_HTML' => '<img class="outer-div" src="../configs/conferences/mrmcd23/banner.png">',
 
 	/**
 	 * Link zu den Recordings
@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'C205 - Gehirnwäscher', 'C120 - Arkanraum'
+			'brainwasher', 'arkanraum'
 		),
 	),
 );
@@ -132,410 +132,47 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	/**
-	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
-	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
-	 */
-	'C205 - Gehirnwäscher' => array(
-		/**
-		 * Angezeige-Name
-		 */
-		'DISPLAY' => 'Brainwasher',
-
-		/**
-		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
-		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
-		 * s1 bis s5 durchnummeriert.
-		 */
+	'brainwasher' => array(
+		'DISPLAY' => 'C205 - Gehirnwäscher',
 		'STREAM' => 's3',
-
-		/**
-		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
-		 * Damit das funktioniert muss der entsprechende runit-Task auf dem
-		 * CDN-Quell-Host (live.ber) laufen.
-		 */
 		'PREVIEW' => true,
-
-		/**
-		 * Übersetzungstonspur aktivieren
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden nur
-		 * die native-Streams verwendet, andernfalls wird native und translated
-		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
-		 */
 		'TRANSLATION' => false,
-
-
-        /** Wenn aktiviert, wird DASH streaming angeboten */
-        'DASH' => true,
-
-		/**
-		 * SD-Video-Stream (1024×576) verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein SD-Video
-		 * angeboten. Wird auch HD_VIDEO auf false gesetzt oder auskommentiert ist, wird
-		 * für diesen Raum überhaupt kein Video angeboten.
-		 *
-		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
-		 * als Default-Stream angenommen.
-		 */
 		'SD_VIDEO' => true,
-
-		/**
-		 * HD-Video-Stream (1920×1080) verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein HD-Video
-		 * angeboten. Wird auch SD_VIDEO auf false gesetzt oder auskommentiert ist, wird
-		 * für diesen Raum überhaupt kein Video angeboten.
-		 *
-		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
-		 * als Default-Stream angenommen.
-		 */
 		'HD_VIDEO' => true,
-
-		/**
-		 * Slide-Only-Stream (1024×576) verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Slide-Only-
-		 * Stream angeboten. Für diesen Raum wird dann keim Slides-Tab angeboten.
-		 *
-		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
-		 * Default-Stream angenommen.
-		 */
-		'SLIDES' => true,
-
-		/**
-		 * Audio-Only-Stream verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Audio-Only-
-		 * Stream angeboten. Für diesen Raum wird dann keim Audio-Tab angeboten.
-		 *
-		 * In diesem Fall wird, sofern aktiviert, Musik als Default-Stream angenommen.
-		 */
-		'AUDIO' => true,
-
-		/**
-		 * Musik-Stream verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Musik-Stream
-		 * angeboten. Für diesen Raum wird dann keim Musik-Tab angeboten.
-		 *
-		 * Ist kein einziger Stream angebote, wird statt der Stream-Seite ein 404-Fehler
-		 * angezeigt.
-		 */
+		'DASH' => true,
+		'H264_ONLY' => true,
+        'HLS' => true,
+		'SLIDES' => false,
+		'AUDIO' => false,
 		'MUSIC' => false,
-
-		/**
-		 * Fahrplan-Ansicht auf der Raum-Seite aktivieren (boolean)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird der Raum nicht im Fahrplan gesucht und auch auf der Startseite
-		 * findet keine Darstellung statt.
-		 *
-		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
-		 */
 		'SCHEDULE' => true,
-
-		/**
-		 * Name des Raums im Fahrplan
-		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
-		 */
 		'SCHEDULE_NAME' => 'C205 - Gehirnwäscher',
-
-		/**
-		 * Feedback anzeigen (boolean)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * taucht der Raum auch im globalen Feedback-Formular nicht auf.
-		 *
-		 * Ebenso können alle Feedback-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['FEEDBACK']-Blocks deaktiviert werden
-		 */
 		'FEEDBACK' => false,
-
-		/**
-		 * Subtitles-Player aktivieren (boolean)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird der Subtitles-Button und die damit verbundenen Funktionen deaktiviert.
-		 *
-		 * Ebenso können alle Subtitles-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['SUBTITLES']-Blocks deaktiviert werden
-		 */
 		'SUBTITLES' => false,
-
-		/**
-		 * Embed-Form aktivieren (boolean)
-		 *
-		 * Ist dieses Feld auf true gesetzt, wird ein Embed-Tab unter dem Video
-		 * angezeigt. Darüber kann der Player als iframe eingebunden werden.
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird kein Embed-Tab angeboten und die URL zum Einbetten existiert nicht.
-		 *
-		 * Ebenso können alle Embedding-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['EMBED']-Blocks deaktiviert werden
-		 */
 		'EMBED' => true,
-
-		/**
-		 * IRC-Link aktivieren (boolean)
-		 *
-		 * Solange Twitter oder IRC aktiviert ist, wird ein "Chat"-Tab mit den
-		 * jeweiligen Links angezeigt.
-		 *
-		 * Ist dieses Feld auf true gesetzt, wird ein irc://-Link angezeigt.
-		 * WebIrc wird nach dem Congress nicht mehr unterstützt ;)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird kein IRC-Link angezeigt
-		 *
-		 * Ebenso können alle IRC-Links durch auskommentieren
-		 * des globalen $CONFIG['IRC']-Blocks deaktiviert werden
-		 */
 		'IRC' => false,
-
-		/**
-		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
-		* globalen $CONFIG['IRC'] Block überschrieben werden.
-		*
-		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
-		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
-		*/
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#31C3-hall-1 @ hackint',
-			'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-1',
-		),
-
-
-		/**
-		 * Twitter-Link aktivieren (boolean)
-		 *
-		 * Ist dieses Feld auf true gesetzt, wird ein Link zu Twitter angezeigt.
-		 *
-		 * Solange Twitter oder IRC aktiviert ist, wird ein "Chat"-Tab mit den
-		 * jeweiligen Links angezeigt.
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird kein Twitter-Link angezeigt
-		 *
-		 * Ebenso können alle Twitter-Links durch auskommentieren
-		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
-		 **/
 		'TWITTER' => false,
-
-		/**
-		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
-		* globalen $CONFIG['TWITTER'] Block überschrieben werden.
-		*
-		* Der globale $CONFIG['TWITTER']-Block muss trotzdem existieren,
-		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
-		*/
-		'TWITTER_CONFIG' => array(
-			'DISPLAY' => '#mrmcd23 @ twitter',
-			'TEXT'    => '#mrmcd23',
-		),
 	),
-	'C120 - Arkanraum' => array(
-		/**
-		 * Angezeige-Name
-		 */
-		'DISPLAY' => 'Arcane room',
-
-		/**
-		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
-		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
-		 * s1 bis s5 durchnummeriert.
-		 */
-		'STREAM' => 's4',
-
-		/**
-		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
-		 * Damit das funktioniert muss der entsprechende runit-Task auf dem
-		 * CDN-Quell-Host (live.ber) laufen.
-		 */
+	'arkanraum' => array(
+		'DISPLAY' => 'C120 - Arkanraum',
+		'STREAM' => 's3',
 		'PREVIEW' => true,
-
-		/**
-		 * Übersetzungstonspur aktivieren
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist werden nur
-		 * die native-Streams verwendet, andernfalls wird native und translated
-		 * angeboten und auch für beide Tonspuren eine Player-Seite angezeigt.
-		 */
 		'TRANSLATION' => false,
-
-
-        /** Wenn aktiviert, wird DASH streaming angeboten */
-        'DASH' => true,
-
-		/**
-		 * SD-Video-Stream (1024×576) verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein SD-Video
-		 * angeboten. Wird auch HD_VIDEO auf false gesetzt oder auskommentiert ist, wird
-		 * für diesen Raum überhaupt kein Video angeboten.
-		 *
-		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
-		 * als Default-Stream angenommen.
-		 */
 		'SD_VIDEO' => true,
-
-		/**
-		 * HD-Video-Stream (1920×1080) verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein HD-Video
-		 * angeboten. Wird auch SD_VIDEO auf false gesetzt oder auskommentiert ist, wird
-		 * für diesen Raum überhaupt kein Video angeboten.
-		 *
-		 * In diesem Fall wird, sofern jeweils aktiviert, Slides, Audio und zuletzt Musik
-		 * als Default-Stream angenommen.
-		 */
 		'HD_VIDEO' => true,
-
-		/**
-		 * Slide-Only-Stream (1024×576) verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Slide-Only-
-		 * Stream angeboten. Für diesen Raum wird dann keim Slides-Tab angeboten.
-		 *
-		 * In diesem Fall wird, sofern jeweils aktiviert, Audio und zuletzt Musik als
-		 * Default-Stream angenommen.
-		 */
-		'SLIDES' => true,
-
-		/**
-		 * Audio-Only-Stream verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Audio-Only-
-		 * Stream angeboten. Für diesen Raum wird dann keim Audio-Tab angeboten.
-		 *
-		 * In diesem Fall wird, sofern aktiviert, Musik als Default-Stream angenommen.
-		 */
-		'AUDIO' => true,
-
-		/**
-		 * Musik-Stream verfügbar
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Musik-Stream
-		 * angeboten. Für diesen Raum wird dann keim Musik-Tab angeboten.
-		 *
-		 * Ist kein einziger Stream angebote, wird statt der Stream-Seite ein 404-Fehler
-		 * angezeigt.
-		 */
+		'DASH' => true,
+		'H264_ONLY' => true,
+        'HLS' => true,
+		'SLIDES' => false,
+		'AUDIO' => false,
 		'MUSIC' => false,
-
-		/**
-		 * Fahrplan-Ansicht auf der Raum-Seite aktivieren (boolean)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird der Raum nicht im Fahrplan gesucht und auch auf der Startseite
-		 * findet keine Darstellung statt.
-		 *
-		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
-		 */
 		'SCHEDULE' => true,
-
-		/**
-		 * Name des Raums im Fahrplan
-		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
-		 */
 		'SCHEDULE_NAME' => 'C120 - Arkanraum',
-
-		/**
-		 * Feedback anzeigen (boolean)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * taucht der Raum auch im globalen Feedback-Formular nicht auf.
-		 *
-		 * Ebenso können alle Feedback-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['FEEDBACK']-Blocks deaktiviert werden
-		 */
 		'FEEDBACK' => false,
-
-		/**
-		 * Subtitles-Player aktivieren (boolean)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird der Subtitles-Button und die damit verbundenen Funktionen deaktiviert.
-		 *
-		 * Ebenso können alle Subtitles-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['SUBTITLES']-Blocks deaktiviert werden
-		 */
 		'SUBTITLES' => false,
-
-		/**
-		 * Embed-Form aktivieren (boolean)
-		 *
-		 * Ist dieses Feld auf true gesetzt, wird ein Embed-Tab unter dem Video
-		 * angezeigt. Darüber kann der Player als iframe eingebunden werden.
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird kein Embed-Tab angeboten und die URL zum Einbetten existiert nicht.
-		 *
-		 * Ebenso können alle Embedding-Funktionialitäten durch auskommentieren
-		 * des globalen $CONFIG['EMBED']-Blocks deaktiviert werden
-		 */
 		'EMBED' => true,
-
-		/**
-		 * IRC-Link aktivieren (boolean)
-		 *
-		 * Solange Twitter oder IRC aktiviert ist, wird ein "Chat"-Tab mit den
-		 * jeweiligen Links angezeigt.
-		 *
-		 * Ist dieses Feld auf true gesetzt, wird ein irc://-Link angezeigt.
-		 * WebIrc wird nach dem Congress nicht mehr unterstützt ;)
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird kein IRC-Link angezeigt
-		 *
-		 * Ebenso können alle IRC-Links durch auskommentieren
-		 * des globalen $CONFIG['IRC']-Blocks deaktiviert werden
-		 */
 		'IRC' => false,
-
-		/**
-		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
-		* globalen $CONFIG['IRC'] Block überschrieben werden.
-		*
-		* Der globale $CONFIG['IRC']-Block muss trotzdem existieren,
-		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
-		*/
-		'IRC_CONFIG' => array(
-			'DISPLAY' => '#31C3-hall-1 @ hackint',
-			'URL'     => 'irc://irc.hackint.eu:6667/31C3-hall-1',
-		),
-
-
-		/**
-		 * Twitter-Link aktivieren (boolean)
-		 *
-		 * Ist dieses Feld auf true gesetzt, wird ein Link zu Twitter angezeigt.
-		 *
-		 * Solange Twitter oder IRC aktiviert ist, wird ein "Chat"-Tab mit den
-		 * jeweiligen Links angezeigt.
-		 *
-		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
-		 * wird kein Twitter-Link angezeigt
-		 *
-		 * Ebenso können alle Twitter-Links durch auskommentieren
-		 * des globalen $CONFIG['TWITTER']-Blocks deaktiviert werden
-		 **/
 		'TWITTER' => false,
-
-		/**
-		* Mit dem Angaben in diesem Block können die Vorgaben aus dem
-		* globalen $CONFIG['TWITTER'] Block überschrieben werden.
-		*
-		* Der globale $CONFIG['TWITTER']-Block muss trotzdem existieren,
-		* da sonst überhaupt kein IRC-Link erzeugt wird. (ggf. einfach `= true` setzen)
-		*/
-		'TWITTER_CONFIG' => array( 'DISPLAY' => '#mrmcd23 @ twitter',
-			'TEXT'    => '#mrmcd23',
-		),
 	),
 
 );
