@@ -155,7 +155,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'arkanraum' => array(
 		'DISPLAY' => 'C120 - Arkanraum',
-		'STREAM' => 's3',
+		'STREAM' => 's4',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
