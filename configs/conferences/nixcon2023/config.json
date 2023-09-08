@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "NixCon 2023",
+    "acronym": "nixcon2023",
+    "description": "",
+    "keywords": [],
+    "organizer": "",
+    "start": "2023-09-08T09:30:00+02:00",
+    "end": "2023-09-10T15:30:00+02:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": false,
+        "releases": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#nixcon23",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": {
+            "display": "#nixcon:nixos.org",
+            "url": "https://matrix.to/#/#nixcon:nixos.org"
+          }
+        }
+      },
+      // "overviewPage": {},
+      "schedule": {
+        "url": "https://talks.nixcon.org/nixcon-2023/schedule/export/schedule.xml",
+        "scale": 7,
+        "index_offset": -1
+      },
+      "html": {
+        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://nixos.org\">NixCon Organizers</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "",
+        "name": "Hörsaal",
+        "slug": "hoersaal",
+        "streamId": "s3",
+        "streamingConfig": {
+          "chat": {}
+        }
+      }
+    ]
+  }
+}
