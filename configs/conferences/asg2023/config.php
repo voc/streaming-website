@@ -132,7 +132,7 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
   	'mainhall' => array(
-  		'DISPLAY' => 'Main hall',
+  		'DISPLAY' => 'Main Hall',
   		'STREAM' => 's1',
   		'PREVIEW' => true,
   
@@ -151,7 +151,7 @@ $CONFIG['ROOMS'] = array(
   		'SUBTITLES' => false,
   		'EMBED' => true,
   		'IRC' => false,
-  		'TWITTER' => true,
+  		'TWITTER' => false,
   	),
 
   	'dome' => array(
@@ -174,7 +174,7 @@ $CONFIG['ROOMS'] = array(
   		'SUBTITLES' => false,
   		'EMBED' => true,
   		'IRC' => false,
-  		'TWITTER' => true,
+  		'TWITTER' => false,
   	),
 );
 
