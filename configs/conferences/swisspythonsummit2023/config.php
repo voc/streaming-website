@@ -122,7 +122,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'weissersaal' => array(
+	'Aula' => array(
 		'DISPLAY' => 'Aula',
 		'STREAM' => 'swisspythonsummit1',
 		'PREVIEW' => true,
