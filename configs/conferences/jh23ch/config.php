@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 's1',
+		'STREAM' => 'jugendhackt',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -235,7 +235,7 @@ $CONFIG['ROOMS'] = array(
 		 * Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren
 		 * des globalen $CONFIG['SCHEDULE']-Blocks deaktiviert werden
 		 */
-		'SCHEDULE' => true,
+		'SCHEDULE' => false,
 
 		/**
 		 * Name des Raums im Fahrplan
