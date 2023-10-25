@@ -24,7 +24,7 @@ $GLOBALS['CONFIG']['PREVIEW_DOMAIN'] = 'xlocalhost';
  * Protokollfreie URLs (welche, die mit // beginnen), werden automatisch mit dem korrekten Protokoll ergänzt.
  * In diesem Fall wird auch ein SSL-Umschalt-Button im Header angezeigt
  */
-if(@$_SERVER['SERVER_NAME'] == 'localhost')
+if(@$_SERVER['SERVER_NAME'] == 'localhost' || @$_SERVER['SERVER_NAME'] == '0.0.0.0')
 {
 	// keine Konfiguration -> BASEURL wird automatisch erraten
 }

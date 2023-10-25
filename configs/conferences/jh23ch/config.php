@@ -344,7 +344,7 @@ $CONFIG['ROOMS'] = array(
  * Wird diese Zeile auskommentiert oder auf False gesetzt, werden alle
  * Embedding-Funktionen deaktiviert.
  */
-$CONFIG['EMBED'] = false;
+$CONFIG['EMBED'] = true;
 
 /**
  * Konfigurationen zum Konferenz-Fahrplan

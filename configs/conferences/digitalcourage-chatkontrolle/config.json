@@ -1,0 +1,33 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "#ChatkontrolleSTOPPEN! – Online-Diskussionsveranstaltung mit Europaabgeordneten",
+    "acronym": "digitalcourage-chatkontrolle",
+    "description": "",
+    "keywords": [],
+    "organizer": "Digitalcourage",
+    "start": "2023-10-24T16:00:00+02:00",
+    "end": "2023-10-24T20:00:00+02:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": false,
+        "releases": false,
+        "feedback": false
+      },
+      // "overviewPage": {},
+      "html": {
+        "footer": "\n\t\tby <a href=\"https://digitalcourage.de\">Digitalcourage e.V.</a>, supported by <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "",
+        "name": "Stream",
+        "slug": "digitalcourage",
+        "streamId": "digitalcourage"
+      }
+    ]
+  }
+}
