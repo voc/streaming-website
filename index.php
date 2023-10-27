@@ -58,8 +58,14 @@ try {
 	{
 		$route = ltrim($_SERVER["REQUEST_URI"], '/');
 
+		// trim query params from file names
+		$filepath = $_SERVER["DOCUMENT_ROOT"].'/'.$route;
+		if (strpos($filepath, "?")) {
+			$filepath = substr($filepath, 0, strpos($filepath, "?"));
+		}
+
 		// serve static
-		if($route != '' && file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$route))
+		if($route != '' && is_file($filepath))
 		{
 			return false;
 		}
