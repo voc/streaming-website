@@ -1,0 +1,80 @@
+@import "../../../assets/css/_structure.less";
+
+/* BeonRegular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/configs/conferences/godotcon2023/font.ttf') format('truetype');
+}
+
+@link-color:            #78E5F6;
+@panel-bg:              #445aa1;
+@well-bg:               @panel-bg;
+@panel-primary-border:  #445aa1;
+@panel-default-heading-bg: #EFF1F5;
+@panel-default-text:    #EFF1F5;
+
+@navbar-default-link-color: #FFFFFF;
+
+@nav-link-hover-bg:     #000000;
+
+@navbar-default-bg:     #3D8FCC;
+
+// conference specific styles here
+
+body {
+	background-color: #333F67;
+	color: #EFF1F5;
+	font-family: "Montserrat",Arial,sans-serif;
+}
+
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: "Montserrat",Arial,sans-serif;
+	font-weight: bold;
+}
+
+.banner {
+	color: #e22129;
+
+	h2 {
+		font-weight: normal;
+	}
+}
+
+.navbar-default {
+	background: #3D8FCC;
+	background: linear-gradient(180deg, rgba(47,117,168,1) 0%, rgba(61,143,204,1) 100%);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.navbar-brand {
+	// color: transparent !important;
+	height: 50px;
+	background-image: url('logo_color.svg');
+	background-repeat: no-repeat;
+	background-size: auto 42px;
+	background-position: 3px 3px;
+	padding-left: 60px;
+	font-size: 20px;
+	color: #EFF1F5 !important;
+	.icon {
+		display: none !important;
+	}
+}
+
+.btn-default {
+    color: #EFF1F5;
+    background-color: #F57389;
+    border-color: #F57389;
+}
+
+footer {
+	color: #EFF1F5;
+}
+
+footer a {
+	color: @link-color;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: #78E5F6;
+}
