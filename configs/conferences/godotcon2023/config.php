@@ -16,9 +16,11 @@ $CONFIG['CONFERENCE'] = array(
 
 $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
-		'Live' => array(
+		'Talks' => array(
 			'redmond',
-			'newyork',
+			'newyork'
+		),
+		'Atrium' +> array(
 			'atrium'
 		),
 	),
@@ -43,71 +45,71 @@ $CONFIG['ROOMS'] = array(
 		'EMBED' => true,
 		'SUBTITLES' => false,
 		'IRC' => true,
-        'IRC_CONFIG' => array(
-            'DISPLAY' => 'Webchat',
-            'URL' => 'Webchat URL',
-         ),
-         'TWITTER' => true,
-         'TWITTER_CONFIG' => array(
-             'DISPLAY' => '#godotcon2023',
+        	'IRC_CONFIG' => array(
+            		'DISPLAY' => 'Webchat',
+            		'URL' => 'Webchat URL',
+         	),
+         	'TWITTER' => true,
+         	'TWITTER_CONFIG' => array(
+             		'DISPLAY' => '#godotcon2023',
 	 	 ),
 	),
 
 	'newyork' => array(
-         'DISPLAY' => 'Track 2',
-         'STREAM' => 's3',
-         'PREVIEW' => true,
-         'TRANSLATION' => false,
-         'SD_VIDEO' => true,
-         'HD_VIDEO' => true,
-         'H264_ONLY' => true,
-         'DASH' => true,
-         'AUDIO' => false,
-         'SLIDES' => false,
-         'MUSIC' => false,
-         'SCHEDULE' => true,
-         'SCHEDULE_NAME' => 'New York',
-         'FEEDBACK' => false,
-         'EMBED' => true,
-         'SUBTITLES' => false,
-         'IRC' => true,
-         'IRC_CONFIG' => array(
-             'DISPLAY' => 'Webchat',
-             'URL' => 'Webchat URL',
-          ),
-          'TWITTER' => true,
-          'TWITTER_CONFIG' => array(
-              'DISPLAY' => '#godotcon2023',
-          ),
+        	'DISPLAY' => 'Track 2',
+         	'STREAM' => 's3',
+         	'PREVIEW' => true,
+         	'TRANSLATION' => false,
+         	'SD_VIDEO' => true,
+         	'HD_VIDEO' => true,
+         	'H264_ONLY' => true,
+         	'DASH' => true,
+         	'AUDIO' => false,
+         	'SLIDES' => false,
+         	'MUSIC' => false,
+         	'SCHEDULE' => true,
+         	'SCHEDULE_NAME' => 'New York',
+         	'FEEDBACK' => false,
+         	'EMBED' => true,
+         	'SUBTITLES' => false,
+         	'IRC' => true,
+         	'IRC_CONFIG' => array(
+             		'DISPLAY' => 'Webchat',
+             		'URL' => 'Webchat URL',
+          	),
+          	'TWITTER' => true,
+          	'TWITTER_CONFIG' => array(
+              		'DISPLAY' => '#godotcon2023',
+          	),
      ),
 
 	'atrium' => array(
-	 'WIDE' => true,
-         'DISPLAY' => 'Atrium',
-         'STREAM' => 's4',
-         'PREVIEW' => true,
-         'TRANSLATION' => false,
-         'SD_VIDEO' => true,
-         'HD_VIDEO' => true,
-         'H264_ONLY' => true,
-         'DASH' => true,
-         'AUDIO' => false,
-         'SLIDES' => false,
-         'MUSIC' => false,
-         'SCHEDULE' => true,
-         'SCHEDULE_NAME' => 'Redmond',
-         'FEEDBACK' => false,
-         'EMBED' => true,
-         'SUBTITLES' => false,
-         'IRC' => true,
-         'IRC_CONFIG' => array(
-             'DISPLAY' => 'Webchat',
-             'URL' => 'Webchat URL',
-          ),
-          'TWITTER' => true,
-          'TWITTER_CONFIG' => array(
-              'DISPLAY' => '#godotcon2023',
-          ),
+		'WIDE' => true,
+         	'DISPLAY' => 'Atrium',
+         	'STREAM' => 's4',
+         	'PREVIEW' => true,
+         	'TRANSLATION' => false,
+         	'SD_VIDEO' => true,
+         	'HD_VIDEO' => true,
+         	'H264_ONLY' => true,
+         	'DASH' => true,
+         	'AUDIO' => false,
+         	'SLIDES' => false,
+         	'MUSIC' => false,
+         	'SCHEDULE' => true,
+         	'SCHEDULE_NAME' => 'Atrium',
+         	'FEEDBACK' => false,
+         	'EMBED' => true,
+         	'SUBTITLES' => false,
+         	'IRC' => true,
+         	'IRC_CONFIG' => array(
+             		'DISPLAY' => 'Webchat',
+             		'URL' => 'Webchat URL',
+          	),
+          	'TWITTER' => true,
+          	'TWITTER_CONFIG' => array(
+              		'DISPLAY' => '#godotcon2023',
+          	),
      ),
 );
 
