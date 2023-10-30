@@ -82,6 +82,7 @@ $CONFIG['ROOMS'] = array(
      ),
 
 	'atrium' => array(
+	 'WIDE' => true,
          'DISPLAY' => 'Atrium',
          'STREAM' => 's4',
          'PREVIEW' => true,
@@ -125,7 +126,6 @@ $CONFIG['SCHEDULE'] = array(
 	'URL' => 'https://pretalx.c3voc.de/godotcon2023/schedule/export/schedule.xml',
 	'ROOMFILTER' => array('Atrium', 'New York', 'Redmond'),
 	'SCALE' => 7,
-	'SIMULATE_OFFSET' => 0,
 );
 
 return $CONFIG;
