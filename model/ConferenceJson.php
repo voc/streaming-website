@@ -12,26 +12,32 @@ class ConferenceJson extends Conference
 		$c = $json->conference;
 		$this->start = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->start);
 		$this->end   = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->end);
-		$this->html  = @$c->streamingConfig->html ?: [];
+		$this->html  = isset($c->streamingConfig->html) ? $c->streamingConfig->html : [];
 
 		$this->rooms = [];
-		$rooms = (is_array(@$c->rooms) ? $c->rooms : @$c->rooms->nodes) ?: [];
+		if (isset($c->rooms)) {
+			if (is_array($c->rooms)) {
+				$rooms = $c->rooms;
+			} else {
+				$rooms = isset($c->rooms->nodes) ? $c->rooms->nodes : [];
+			}
+		}
 		foreach($rooms as $r) {
 			if (!$r) {
 				continue;
 			}
 			$this->rooms[$r->slug] = array_merge(
 				['stream' => $r->streamId],
-				get_object_vars($r), 
-				@get_object_vars($r->streamingConfig) ?: [], 
-				@get_object_vars($r->streamingConfig->chat) ?: []
+				get_object_vars($r),
+				(isset($r->streamingConfig) ? get_object_vars($r->streamingConfig) : []),
+				(isset($r->streamingConfig->chat) ? get_object_vars($r->streamingConfig->chat) : [])
 			);
 		}
 
 		$groups = [];
 		if ( isset($c->streamingConfig->overviewPage->sections) ) {
-			foreach(@$c->streamingConfig->overviewPage->sections as $s) {
-				$groups[@$s->title] = array_map(
+			foreach($c->streamingConfig->overviewPage->sections as $s) {
+				$groups[$s->title] = array_map(
 					function($r) { return $r->slug; }, 
 					@$s->items ?: @$s->rooms ?: []
 				);
@@ -44,15 +50,15 @@ class ConferenceJson extends Conference
 		$acronym = $mandator ?: $c->acronym;
 
 		parent::__construct(array_merge(
-			@get_object_vars($c->streamingConfig) ?: [], 
-			@get_object_vars($c->streamingConfig->features) ?: [],
-			@get_object_vars($c->streamingConfig->features->chat) ?: [],
+			isset($c->streamingConfig) ? get_object_vars($c->streamingConfig) : [],
+			isset($c->streamingConfig->features) ? get_object_vars($c->streamingConfig->features) : [],
+			isset($c->streamingConfig->features->chat) ? get_object_vars($c->streamingConfig->features->chat) : [],
 			[
 				'conference' => [
 					'title' 		=> $c->title,
 					'author' 		=> $c->organizer,
 					'description' 	=> $c->description,
-					'keywords'		=> @implode(', ', $c->keywords),
+					'keywords'		=> is_array($c->keywords) ? implode(', ', $c->keywords) : "",
 					// future TODO: change structure
 					"relive_json"	=> @$c->streamingConfig->features->relive !== false ? "https://cdn.c3voc.de/relive/".$acronym."/index.json" : null,
 					"releases"		=> @$c->streamingConfig->features->releases !== false ? "https://media.ccc.de/c/".$acronym : null
@@ -140,21 +146,21 @@ class ConferenceJson extends Conference
 		return !empty($this->html->banner);
 	}
 	public function getBannerHtml() {
-		return @$this->html->banner;
+		return isset($this->html->banner) ? $this->html->banner : "";
 	}
 
 	public function hasFooterHtml() {
 		return !empty($this->html->footer);
 	}
 	public function getFooterHtml() {
-		return @$this->html->footer;
+		return isset($this->html->footer) ? $this->html->footer : "";
 	}
 
 	public function hasNotStartedHtml() {
 		return !empty($this->html->not_started);
 	}
 	public function getNotStartedHtml() {
-		return @$this->html->not_started;
+		return isset($this->html->not_started) ? $this->html->not_started : "";
 	}
 
 }

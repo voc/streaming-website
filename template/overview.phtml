@@ -104,14 +104,15 @@
 									$upcoming = @$upcomingTalksPerRoom[ $room->getSlug() ] ?: [];
 									// echo var_dump($upcoming);
 									$current = @$upcoming['current'];
-									$next = @$upcoming['next']; ?>
+									$next = @$upcoming['next'];
+									$next_is_special = isset($next['special']) ? $next['special'] : false; ?>
 									<div class="program-schedule">
 										<? if($current && !@$current['special']): ?>
 										<div class="talk current-talk" title="<?=h(@$current['title'] ?: 'none') ?>">
 											<strong>Now (since <?=date('G:i', @$current['start']) ?>):</strong><br/>
 											<span class="t"><?=h(@$current['title'] ?: 'none') ?></span>
 										</div>
-										<? endif; if($next && !@$next['special']): ?>
+										<? endif; if($next && !$next_is_special): ?>
 										<div class="talk next-talk" title="<?=h(@$next['title'] ?: 'none') ?>">
 											<strong>Next (<?=date('G:i', @$next['start']) ?>):</strong><br/>
 											<span class="t"><?=h(@$next['title'] ?: 'none') ?></span>

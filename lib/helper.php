@@ -36,6 +36,9 @@ function joinpath($parts)
 
 function forceslash($url)
 {
+	if ($url == NULL) {
+		$url = "";
+	}
 	$url =  rtrim($url, '/');
 	if(strlen($url) > 0)
 		$url .= '/';
@@ -241,8 +244,20 @@ function query_data($operation, $query, $variables = [], $assoc = false, $cache 
 	if (is_null($r)) {
 		throw new NotFoundException();
 	}
-
+	
 	// TODO: add error handling?
 	// TODO: should we return the cached value, when we did not get an answer? 
-	return $assoc ? @$r['data'] : @$r->data;
+	if ($assoc) {
+		if (isset($r['data'])) {
+			return $r['data'];
+		} else {
+			throw new NotFoundException();
+		}
+	} else {
+		if (isset($r->data)) {
+			return $r->data;
+		} else {
+			throw new NotFoundException();
+		}
+	}
 }

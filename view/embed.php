@@ -28,5 +28,5 @@ echo $tpl->render(array(
 	'room' => $room,
 	'stream' => $stream,
 
-	'autoplay' => @$_GET['autoplay'],
+	'autoplay' => isset($_GET['autoplay']) ? $_GET['autoplay'] : false,
 ));

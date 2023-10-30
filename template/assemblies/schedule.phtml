@@ -25,8 +25,13 @@
 			<div class="room <? if(isset($room) && ($roomname == $room->getScheduleName() ||  ($scheduleRoom && $scheduleRoom->getId() === $room->getId()))): ?>highlight<? endif ?>" style="width: <?= h($totalWidth) ?>px">
 				<? $fromstart = 0; ?>
 				<? foreach($events as $event): ?>
+					<? $special = isset($event['special']) ? $event['special'] : ''; ?>
+					<? $event_is_optout = isset($event['optout']) ? $event['optout'] : false; ?>
+					<? $event_guid = isset($event['guid']) ? $event['guid'] : ''; ?>
+					<? $event_url = isset($event['url']) ? $event['url'] : ''; ?>
+					<? $event_title = isset($event['title']) ? $event['title'] : ''; ?>
 					<div
-						class="block <?=h(@$event['special'] ?: 'event')?> <?=h((@$event['optout']) ? 'optout' : '')?>"
+						class="block <?=h($special ?: 'event')?> <?=h($event_is_optout ? 'optout' : '')?>"
 						style="width: <?=h(round($event['duration'] / $schedule->getScale()))?>px; left: <?=h(round($fromstart / $schedule->getScale()))?>px"
 						data-start="<?=intval($event['start'])?>"
 						data-end="<?=intval($event['end'])?>"
@@ -42,21 +47,21 @@
 										href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>"
 								<? endif ?>
 								title="Switch to <?=h($scheduleRoom->getDisplay())?>"
-								onmouseover="showEventDetails(event, {title:'<?=@$event['title']?>', guid:'<?=@$event['guid']?>', url:'<?=@$event['url']?>', type:'<?=@$event['special']?>'})"
+								onmouseover="showEventDetails(event, {title:'<?=$event_title?>', guid:'<?=$event_guid?>', url:'<?=$event_url?>', type:'<?=@$special?>'})"
 							>
 						<? else: ?>
 							<div class="inner">
 						<? endif ?>
 
-							<? if(@$event['special'] == 'daychange'): ?>
+							<? if(@$special == 'daychange'): ?>
 
 							<h3><?=h($event['title'])?></h3>
 
-							<? elseif(@$event['special'] == 'gap'): ?>
+							<? elseif(@$special == 'gap'): ?>
 
 								<!--h3>Gap</h3-->
 
-							<? elseif(@$event['special'] == 'pause'): ?>
+							<? elseif(@$special == 'pause'): ?>
 
 								<h3><?=h($event['title'])?></h3>
 
@@ -70,7 +75,7 @@
 									</h4>
 								<? endif ?>
 								<h3 title="<?=$event['title']?>">
-									<?=h($event['title'])?><? if (@$event['optout']): ?><i> (no recording)</i><? endif ?>
+									<?=h($event['title'])?><? if ($event_is_optout): ?><i> (no recording)</i><? endif ?>
 								</h3>
 								<? if(! empty(trim($event['speaker']))): ?>
 									<h5>by&nbsp;<?=h($event['speaker'])?></h5>

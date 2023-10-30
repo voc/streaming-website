@@ -2,6 +2,11 @@
 
 class Stream
 {
+	public $room;
+	public $selection;
+	public $language;
+	public $translation_label;
+
 	public function __construct(Room $room, $selection, $language, $translation_label = null)
 	{
 		$this->room = $room;

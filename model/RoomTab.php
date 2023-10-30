@@ -2,6 +2,9 @@
 
 class RoomTab
 {
+	public $room;
+	public $tab;
+
 	public function __construct(Room $room, $tab)
 	{
 		$this->room = $room;

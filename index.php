@@ -52,14 +52,20 @@ if(isset($argv) && isset($argv[1]))
 try {
 	if(isset($_GET['htaccess']))
 	{
-		$route = @$_GET['route'];
+		$route = isset($_GET['route']) ? $_GET['route'] : "";
 	}
 	elseif(isset($_SERVER["REQUEST_URI"]))
 	{
-		$route = ltrim(@$_SERVER["REQUEST_URI"], '/');
+		$route = ltrim($_SERVER["REQUEST_URI"], '/');
+
+		// trim query params from file names
+		$filepath = $_SERVER["DOCUMENT_ROOT"].'/'.$route;
+		if (strpos($filepath, "?")) {
+			$filepath = substr($filepath, 0, strpos($filepath, "?"));
+		}
 
 		// serve static
-		if($route != '' && file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$route))
+		if($route != '' && is_file($filepath))
 		{
 			return false;
 		}
@@ -87,11 +93,12 @@ try {
 		'conference' => new GenericConference(),
 	));
 
-	if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
+	if(isset($GLOBALS['CONFIG']['BASEURL']) && startswith('//', $GLOBALS['CONFIG']['BASEURL']))
 	{
+		$mandator = isset($GLOBALS['MANDATOR']) ? $GLOBALS['MANDATOR'] : "";
 		$tpl->set(array(
-			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route).url_params(),
-			'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route).url_params(),
+			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).$mandator).forceslash($route).url_params(),
+			'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).$mandator).forceslash($route).url_params(),
 		));
 	}
 
@@ -128,7 +135,7 @@ try {
 		exit;
 	}
 
-	@list($mandator, $route) = explode('/', $route, 2);
+	list($mandator, $route) = array_pad(explode('/', $route, 2), 2, "");
 	if(!$mandator)
 	{
 		// root requested
