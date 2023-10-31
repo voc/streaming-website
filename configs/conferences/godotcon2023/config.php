@@ -47,11 +47,11 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => true,
         	'IRC_CONFIG' => array(
             		'DISPLAY' => '#godotcon-track1 @ Discord',
-            		'URL' => 'Discord URL',
+            		'URL' => 'https://discord.gg/eNcJ9GSAPM',
          	),
          	'TWITTER' => true,
          	'TWITTER_CONFIG' => array(
-             		'DISPLAY' => '#godotcon2023',
+             		'DISPLAY' => '#godotcon',
 	 	 ),
 	),
 
@@ -75,11 +75,11 @@ $CONFIG['ROOMS'] = array(
          	'IRC' => true,
          	'IRC_CONFIG' => array(
              		'DISPLAY' => '#godotcon-track2 @ Discord',
-             		'URL' => 'Discord URL',
+             		'URL' => 'https://discord.gg/Wp94A4W38s',
           	),
           	'TWITTER' => true,
           	'TWITTER_CONFIG' => array(
-              		'DISPLAY' => '#godotcon2023',
+              		'DISPLAY' => '#godotcon',
           	),
      ),
 
@@ -104,11 +104,11 @@ $CONFIG['ROOMS'] = array(
          	'IRC' => true,
          	'IRC_CONFIG' => array(
              		'DISPLAY' => '#godotcon-main @ Discord',
-             		'URL' => 'Discord URL',
+             		'URL' => 'https://discord.gg/hRrbenVXuG',
           	),
           	'TWITTER' => true,
           	'TWITTER_CONFIG' => array(
-              		'DISPLAY' => '#godotcon2023',
+              		'DISPLAY' => '#godotcon',
           	),
      ),
 );
@@ -116,12 +116,12 @@ $CONFIG['ROOMS'] = array(
 $CONFIG['EMBED'] = true;
 $CONFIG['IRC'] = array(
 	'DISPLAY' => '#godotcon-main @ Discord',
-	'URL' => 'Discord URL',
+	'URL' => 'https://discord.gg/hRrbenVXuG',
 );
 
 $CONFIG['TWITTER'] = array(
-	'DISPLAY' => '#godotcon2023',
-	'TEXT' => '#godotcon2023',
+	'DISPLAY' => '#godotcon',
+	'TEXT' => '#godotcon',
 );
 
 $CONFIG['SCHEDULE'] = array(
