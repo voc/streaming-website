@@ -46,8 +46,8 @@ $CONFIG['ROOMS'] = array(
 		'SUBTITLES' => false,
 		'IRC' => true,
         	'IRC_CONFIG' => array(
-            		'DISPLAY' => 'Webchat',
-            		'URL' => 'Webchat URL',
+            		'DISPLAY' => '#godotcon-track1 @ Discord',
+            		'URL' => 'Discord URL',
          	),
          	'TWITTER' => true,
          	'TWITTER_CONFIG' => array(
@@ -74,8 +74,8 @@ $CONFIG['ROOMS'] = array(
          	'SUBTITLES' => false,
          	'IRC' => true,
          	'IRC_CONFIG' => array(
-             		'DISPLAY' => 'Webchat',
-             		'URL' => 'Webchat URL',
+             		'DISPLAY' => '#godotcon-track2 @ Discord',
+             		'URL' => 'Discord URL',
           	),
           	'TWITTER' => true,
           	'TWITTER_CONFIG' => array(
@@ -103,8 +103,8 @@ $CONFIG['ROOMS'] = array(
          	'SUBTITLES' => false,
          	'IRC' => true,
          	'IRC_CONFIG' => array(
-             		'DISPLAY' => 'Webchat',
-             		'URL' => 'Webchat URL',
+             		'DISPLAY' => '#godotcon-main @ Discord',
+             		'URL' => 'Discord URL',
           	),
           	'TWITTER' => true,
           	'TWITTER_CONFIG' => array(
@@ -115,8 +115,8 @@ $CONFIG['ROOMS'] = array(
 
 $CONFIG['EMBED'] = true;
 $CONFIG['IRC'] = array(
-	'DISPLAY' => 'Webchat',
-	'URL' => 'Webchat URL',
+	'DISPLAY' => '#godotcon-main @ Discord',
+	'URL' => 'Discord URL',
 );
 
 $CONFIG['TWITTER'] = array(
