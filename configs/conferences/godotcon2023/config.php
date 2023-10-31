@@ -18,10 +18,10 @@ $CONFIG['OVERVIEW'] = array(
 	'GROUPS' => array(
 		'Talks' => array(
 			'redmond',
-			'newyork'
+			'newyork',
 		),
-		'Atrium' +> array(
-			'atrium'
+		'Atrium' => array(
+			'atrium',
 		),
 	),
 );
