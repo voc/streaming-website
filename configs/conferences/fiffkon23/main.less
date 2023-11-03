@@ -1,0 +1,67 @@
+@import "../../../assets/css/_structure.less";
+
+@gelb: #f9cd00;
+@white: #ffffff;
+@light-blue: #283a82;
+@blue: #094762;
+@grey-lighter: #cccccc;
+@grey-darker: #aaaaaa;
+@grey-light: #eeeeee;
+@dark: #010101;
+
+
+@brand-primary: @light-blue;
+@well-bg: @dark;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: @dark;
+@panel-default-text: @light-blue;
+@panel-bg: @dark;
+
+
+@font-face {
+  font-family: 'OxygenMono-Regular';
+  src: url('/configs/conferences/fiffkon23/OxygenMono-Regular.ttf') format('truetype');
+}
+
+body {
+	background-color: @dark;
+	color: @grey-light;
+    font-family: "OxygenMono-Regular", Arial, sans-serif;
+}
+a {
+    color: @grey-light;
+}
+
+a:hover, a:focus {
+    color: @grey-darker;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+.panel-default > .panel-heading {
+    color: @white;
+    background-color: @light-blue
+}
+
+.outer-div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+body .schedule .block h5 {
+    color: @grey-light;
+}
+
+
+body .schedule .block h4 {
+    color: @grey-light;
+}
+
+
