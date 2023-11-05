@@ -133,7 +133,7 @@ $CONFIG['OVERVIEW'] = array(
  */
 $CONFIG['ROOMS'] = array(
 	'aula' => array(
-		'DISPLAY' => 'Aula',
+		'DISPLAY' => 'Aula (3. OG)',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Aula',
+		'SCHEDULE_NAME' => 'Aula (3. OG)',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -182,7 +182,7 @@ $CONFIG['SCHEDULE'] = array(
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('Aula','Raum Ostkreuz'),
+        'ROOMFILTER' => array('Aula (3. OG)','Raum Ostkreuz (1. OG)'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
