@@ -1,0 +1,85 @@
+@import "../../../assets/css/_structure.less";
+
+@blue: #3141F5;
+@red: #CD4D47;
+@green: #9DFC75;
+@cyan: #7AFBFD;
+@magenta: #CD46F7;
+@yellow: #F6F688;
+
+@white: #ffffff;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #242424;
+
+
+@brand-primary: @blue;
+@well-bg: @dark;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: @dark;
+@panel-default-text: @blue;
+@panel-bg: @dark;
+
+
+body {
+	background-color: @dark;
+	color: @grey-light;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+.outer-div {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+
+.congress {
+	background-image: url(37c3-logo-full.svg);
+	background-repeat: no-repeat;
+	background-size: 160px 780px;
+
+	position: fixed;
+	left: 10px;
+	//bottom: 100px;
+
+	width: 160px;
+	height: 780px;
+
+	opacity: 1;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+.congress-motto {
+	background-image: url(37c3-logo-full.svg);
+	background-repeat: no-repeat;
+	background-size: 116px 780px;
+
+	position: fixed;
+	right: 10px;
+	//bottom: 100px;
+
+	width: 116px;
+	height: 780px;
+
+	opacity: 1;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}

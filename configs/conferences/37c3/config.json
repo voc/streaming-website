@@ -1,0 +1,187 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "37C3: Unlocked",
+    "acronym": "37c3",
+    "description": "Live streaming from the 37th Chaos Communication Congress",
+    "keywords": [
+      "37C3", "Chaos Computer Club", "Video", "Media", "Streaming", "Hacker"
+    ],
+    "organizer": "CCC",
+    "start": "2023-12-27T00:00:00+01:00",
+    "end": "2023-12-31T00:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#37C3",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": true,
+          "matrix": true
+        }
+      },
+      // "overviewPage": {},
+      "schedule": {
+        "url": "http://fahrplan.events.ccc.de/congress/2023/fahrplan/schedule.xml",
+        //"url": "https://data.c3voc.de/37c3/channels.schedule.xml",
+        "scale": 7,
+        //"index_offset": -1
+      },
+      "html": {
+        "banner": "<div class=\"congress\"></div><div class=\"congress-motto\"></div>",
+        "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V.</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "ba692ba3-421b-5371-8309-60acc34a3c05",
+        "name": "Saal 1",
+        "slug": "eins",
+        "streamId": "s1",
+        "streamingConfig": {
+          "wide": true,
+          // "display": "Saal 1",
+          // "display_short": "1",
+          "social": {
+            "hashtag": "#37C3eins",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#37C3-hall-1:hackint.org",
+              "url": "https://matrix.to/#/#37C3-hall-1:hackint.org"
+            },
+            "irc": {
+              "display": "#37C3-hall-1 @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-1"
+            }
+          }
+        }
+      },
+      {
+        "guid": "7202df07-050c-552f-8318-992f94e40ef0",
+        "name": "Saal Grace",
+        "slug": "grace",
+        "streamId": "s2",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#37C3grace",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#37C3-hall-grace:hackint.org",
+              "url": "https://matrix.to/#/#37C3-hall-grace:hackint.org"
+            },
+            "irc": {
+              "display": "#37C3-hall-grace @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-grace"
+            }
+          }
+        }
+      },
+      {
+        "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
+        "name": "Saal Zuse",
+        "slug": "zuse",
+        "streamId": "s3",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#37C3zuse",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#37C3-hall-zuse:hackint.org",
+              "url": "https://matrix.to/#/#37C3-hall-zuse:hackint.org"
+            },
+            "irc": {
+              "display": "#37C3-hall-zuse @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-zuse"
+            }
+          }
+        }
+      },
+      {
+        "guid": "TODO",
+        "name": "Self-organized Sessions / Lighting Talks",
+        "slug": "sos-lt",
+        "streamId": "s4",
+        "streamingConfig": {
+          "display_short": "SoS/LT",
+          "social": {
+            "hashtag": "#37C3sos #37C3lt",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#37C3-hall-TODO:hackint.org",
+              "url": "https://matrix.to/#/#37C3-hall-TODO:hackint.org"
+            },
+            "irc": {
+              "display": "#37C3-hall-TODO @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-TODO"
+            }
+          }
+        }
+      },
+      {
+        "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
+        "name": "Sendezentrum",
+        "slug": "sendezentrum",
+        "streamId": "s5",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#37C3sz",
+            "mastodon": true
+          },
+          "chat": {
+            "irc": false,
+            "matrix": {
+              "display": "#37C3sz:matrix.org",
+              "url": "https://matrix.to/#/#37C3sz:matrix.org"
+            }
+          }
+        }
+      },
+      {
+        "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
+        "name": "Test",
+        "slug": "test",
+        "streamId": "muc1",
+        "streamingConfig": {
+          "schedule": false
+        }
+      },
+      {
+        "guid": "1fbd67f1-46a2-4162-bbcc-2cf0e2dce944",
+        "name": "Fireshonks",
+        "slug": "fireshonks",
+        "streamId": "fireshonks",
+        "streamingConfig": {
+          "display": "Fireshonks-Stream",
+          "display_short": "Fireshonks",
+          "social": {
+            "hashtag": "#fireshonks",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#fireshonks23:hackint.org",
+              "url": "https://matrix.to/#/#fireshonks23:hackint.org"
+            },
+            "irc": {
+              "display": "#fireshonks23 @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#fireshonks23"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

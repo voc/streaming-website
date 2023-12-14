@@ -354,7 +354,7 @@
       "description": "",
       "examples": [
         {
-                    "display": "Piscopia",
+          "display": "Piscopia",
           "preview": true,
           "stereo": false,
           "sd_video": true,
@@ -442,11 +442,6 @@
           "title": "Fahrplan-Ansicht auf der Raum-Seite aktivieren",
           "description": "Wenn diese Option deaktivert wird der Raum nicht im Fahrplan gesucht und auch auf der Startseite findet keine Darstellung statt. Ebenso können alle Fahrplan-Funktionialitäten durch auskommentieren des globalen Flags deaktiviert werden.",
           "default": true
-        },
-                  "type": "string",
-          "title": "Name des Raums im Fahrplan",
-          "description": "Wenn dieses Feld ignoriert wird der Raum-Display-Name verwendet",
-          "examples": ["Piscopia"]
         },
         "feedback": {
           "type": "boolean",
