@@ -26,10 +26,10 @@
       },
       // "overviewPage": {},
       "schedule": {
-        "url": "http://fahrplan.events.ccc.de/congress/2023/fahrplan/schedule.xml",
+        "url": "https://fahrplan.events.ccc.de/congress/2023/fahrplan/schedule.xml",
         //"url": "https://data.c3voc.de/37c3/channels.schedule.xml",
-        "scale": 7,
-        //"index_offset": -1
+        //"index_offset": -1,
+        "scale": 7
       },
       "html": {
         "banner": "<div class=\"congress\"></div><div class=\"congress-motto\"></div>",

@@ -21,11 +21,15 @@
 @panel-default-heading-bg: @dark;
 @panel-default-text: @blue;
 @panel-bg: @dark;
+@schedule-bg: @dark;
+@schedule-selected-room: @cyan;
+@schedule-now-bg: @red;
 
 
 body {
-	background-color: @dark;
+	background-color: black;
 	color: @grey-light;
+	padding-top: 75px;
 }
 
 .overview .panel-title {
@@ -43,17 +47,34 @@ body {
 	}
 }
 
+nav {
+	height:75px;
+}
+nav .button-wrapper.navbar-right {
+	margin-top: 12px;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(37c3-logo-full.svg);
+	background-size: 100px 100px;
+	width: 100px;
+	height: 100px;
+	margin-top: -25px;
+}
+nav .navbar-brand {
+	color: transparent !important;
+}
 
 .congress {
-	background-image: url(37c3-logo-full.svg);
+	background-image: url(37c3-key-visual.svg);
 	background-repeat: no-repeat;
-	background-size: 160px 780px;
+	background-size: 400px 600px;
 
 	position: fixed;
-	left: 10px;
+	left: -50px;
 	//bottom: 100px;
 
-	width: 160px;
+	width: 400px;
 	height: 780px;
 
 	opacity: 1;
