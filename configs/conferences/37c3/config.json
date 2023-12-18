@@ -120,12 +120,12 @@
           },
           "chat": {
             "matrix": {
-              "display": "#37c3-hall-TODO:events.ccc.de",
-              "url": "https://matrix.to/#/#37c3-hall-TODO:events.ccc.de"
+              "display": "#37c3-hall-e:events.ccc.de",
+              "url": "https://matrix.to/#/#37c3-hall-e:events.ccc.de"
             },
             "irc": {
-              "display": "#37c3-hall-TODO @ hackint",
-              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37c3-hall-TODO"
+              "display": "#37c3-hall-e @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37c3-hall-e"
             }
           }
         }
