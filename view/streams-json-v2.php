@@ -108,8 +108,9 @@ foreach (Conferences::getActiveConferences() as $conference)
 			}
 
 			$roomstruct[] = array(
+				'guid' => $room->getId(),
 				'slug' => $room->getSlug(),
-				'schedulename' => $room->getScheduleName(),
+				'schedulename' => $room->getScheduleName(), // deprecated, use guid instead
 				'thumb' => $room->getThumb(),
 				'poster' => $room->getPoster(),
 				'link' => forceslash(baseurl()).$room->getLink(),
