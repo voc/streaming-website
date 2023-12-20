@@ -53,12 +53,12 @@
           },
           "chat": {
             "matrix": {
-              "display": "#37C3-hall-1:hackint.org",
-              "url": "https://matrix.to/#/#37C3-hall-1:hackint.org"
+              "display": "#37c3-hall-1:events.ccc.de",
+              "url": "https://matrix.to/#/#37c3-hall-1:events.ccc.de"
             },
             "irc": {
-              "display": "#37C3-hall-1 @ hackint",
-              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-1"
+              "display": "#37c3-hall-1 @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37c3-hall-1"
             }
           }
         }
@@ -75,12 +75,12 @@
           },
           "chat": {
             "matrix": {
-              "display": "#37C3-hall-grace:hackint.org",
-              "url": "https://matrix.to/#/#37C3-hall-grace:hackint.org"
+              "display": "#37c3-hall-grace:events.ccc.de",
+              "url": "https://matrix.to/#/#37c3-hall-grace:events.ccc.de"
             },
             "irc": {
-              "display": "#37C3-hall-grace @ hackint",
-              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-grace"
+              "display": "#37c3-hall-grace @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37c3-hall-grace"
             }
           }
         }
@@ -97,12 +97,12 @@
           },
           "chat": {
             "matrix": {
-              "display": "#37C3-hall-zuse:hackint.org",
-              "url": "https://matrix.to/#/#37C3-hall-zuse:hackint.org"
+              "display": "#37c3-hall-zuse:events.ccc.de",
+              "url": "https://matrix.to/#/#37c3-hall-zuse:events.ccc.de"
             },
             "irc": {
-              "display": "#37C3-hall-zuse @ hackint",
-              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-zuse"
+              "display": "#37c3-hall-zuse @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37c3-hall-zuse"
             }
           }
         }
@@ -120,12 +120,12 @@
           },
           "chat": {
             "matrix": {
-              "display": "#37C3-hall-TODO:hackint.org",
-              "url": "https://matrix.to/#/#37C3-hall-TODO:hackint.org"
+              "display": "#37c3-hall-e:events.ccc.de",
+              "url": "https://matrix.to/#/#37c3-hall-e:events.ccc.de"
             },
             "irc": {
-              "display": "#37C3-hall-TODO @ hackint",
-              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37C3-hall-TODO"
+              "display": "#37c3-hall-e @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37c3-hall-e"
             }
           }
         }
