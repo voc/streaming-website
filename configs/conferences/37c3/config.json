@@ -172,8 +172,8 @@
           },
           "chat": {
             "matrix": {
-              "display": "#fireshonks23:events.ccc.de",
-              "url": "https://matrix.to/#/#fireshonks23:events.ccc.de"
+              "display": "#fireshonks23:hackint.org",
+              "url": "https://matrix.to/#/#fireshonks23:hackint.org"
             },
             "irc": {
               "display": "#fireshonks23 @ hackint",
