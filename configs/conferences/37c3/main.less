@@ -26,10 +26,23 @@
 @schedule-now-bg: @red;
 
 
+@font-face {
+    font-family: 'Mona Sans';
+    src: font-url('../../../assets/fonts/Mona-Sans.woff2') format('woff2');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'VCR OCD Faux';
+    src: font-url('../../../assets/fonts/VCROCDFaux.woff2') format('woff2'), font-url('../../../assets/fonts/VCROCDFaux.woff') format('woff'), font-url('../../../assets/fonts/VCROCDFaux.ttf') format('truetype');
+    font-weight: normal;
+}
+
 body {
 	background-color: black;
 	color: @grey-light;
 	padding-top: 75px;
+	font-family: 'Mona Sans';
+	letter-spacing: -0.01em;
 }
 
 .overview .panel-title {
