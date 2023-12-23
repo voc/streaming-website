@@ -17,7 +17,7 @@
 @brand-primary: @blue;
 @well-bg: @dark;
 @navbar-default-bg: @grey-lighter;
-@btn-default-bg: @grey-light;
+@btn-default-bg: @cyan;
 @panel-default-heading-bg: @dark;
 @panel-default-text: @blue;
 @panel-bg: @dark;
@@ -103,4 +103,52 @@ nav .navbar-brand {
 	@media (max-width: @screen-sm-min) {
 		display: none;
 	}
+}
+
+.btn {
+  font-family: 'VCR OCD Faux';
+  letter-spacing: -0.01em;
+}
+
+.navbar .btn.btn-default, body.page-start .search .btn {
+  background-color: #29FFFF;
+  border-color: #29FFFF;
+  color: #202020;
+}
+
+.btn-primary, .btn-default {
+  background-color: #2D42FF;
+  border-color: #2D42FF;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover, .btn-default:hover {
+  background-color: #0B1575;
+  border-color: #0B1575;
+  color: #FFFFFF;
+}
+
+.btn-primary.active, .btn-default.active {
+  background-color: #29FFFF;
+  border-color: #29FFFF;
+  color: #202020;
+}
+
+.navbar .btn.btn-default:hover, body.page-start .search .btn:hover,
+.btn-primary.active:hover, .btn-default.active:hover {
+  background-color: #006B6B;
+  border-color: #006B6B;
+  color: #D9D9D9
+}
+
+.t {
+    color: #F6F675;
+}
+
+.panel-title, .panel-body a {
+    color: #70FF53;
+}
+
+h2 {
+    color: #DE37FF;
 }
