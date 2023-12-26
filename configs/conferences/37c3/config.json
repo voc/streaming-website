@@ -108,7 +108,7 @@
         }
       },
       {
-        "guid": "TODO",
+          "guid": "10e6a40c-3b85-4df0-9731-af511d818fad",
         "name": "Self-organized Sessions / Lighting Talks",
         "slug": "sos-lt",
         "streamId": "s4",
@@ -147,15 +147,6 @@
               "url": "https://matrix.to/#/#37C3sz:matrix.org"
             }
           }
-        }
-      },
-      {
-        "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
-        "name": "Test",
-        "slug": "test",
-        "streamId": "muc1",
-        "streamingConfig": {
-          "schedule": false
         }
       },
       {
