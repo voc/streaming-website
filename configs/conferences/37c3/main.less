@@ -1,11 +1,11 @@
 @import "../../../assets/css/_structure.less";
 
-@blue: #3141F5;
-@red: #CD4D47;
-@green: #9DFC75;
-@cyan: #7AFBFD;
-@magenta: #CD46F7;
-@yellow: #F6F688;
+@blue: #2D42FF;
+@red: #DE4040;
+@green: #79FF5E;
+@cyan: #29FFFF;
+@magenta: #DE37FF;
+@yellow: #F6F675;
 
 @white: #ffffff;
 @grey-lighter: #333333;
@@ -14,93 +14,316 @@
 @dark: #242424;
 
 
-@brand-primary: @blue;
+@brand-primary: @magenta;
 @well-bg: @dark;
 @navbar-default-bg: @grey-lighter;
-@btn-default-bg: @grey-light;
+@btn-default-bg: @cyan;
 @panel-default-heading-bg: @dark;
 @panel-default-text: @blue;
 @panel-bg: @dark;
 @schedule-bg: @dark;
-@schedule-selected-room: @cyan;
+@schedule-selected-room: #006b6b;
 @schedule-now-bg: @red;
 
+@font-face {
+    font-family: 'Gabriella';
+    /*src: url('GabriellaHeavy.otf');*/
+    src: url('GabriellaHeavy.woff2') format('woff2');
+    font-weight: heavy;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mona Sans';
+    src: url('Mona-Sans.woff2') format('woff2');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'VCR OCD Faux';
+    src: url('VCROCDFaux.woff2') format('woff2'), url('VCROCDFaux.woff') format('woff'), url('VCROCDFaux.ttf') format('truetype');
+    font-weight: normal;
+}
 
 body {
-	background-color: black;
-	color: @grey-light;
-	padding-top: 75px;
+    background-color: black;
+    color: @grey-light;
+    padding-top: 75px;
+    font-family: 'Mona Sans';
+    letter-spacing: -0.01em;
 }
 
 .overview .panel-title {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .outer-div {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 
-	@media (max-width: @screen-sm-min) {
-		display: none;
-	}
+    @media (max-width: @screen-sm-min) {
+	display: none;
+    }
 }
 
 nav {
-	height:75px;
+    height:75px;
 }
 nav .button-wrapper.navbar-right {
-	margin-top: 12px;
+    margin-top: 12px;
 }
 
 nav .navbar-brand .icon {
-	background-image: url(37c3-logo-full.svg);
-	background-size: 100px 100px;
-	width: 100px;
-	height: 100px;
-	margin-top: -25px;
+    background-image: url(37c3-logo-full.svg);
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    margin-top: -25px;
 }
 nav .navbar-brand {
-	color: transparent !important;
+    color: transparent !important;
 }
 
 .congress {
-	background-image: url(37c3-key-visual.svg);
-	background-repeat: no-repeat;
-	background-size: 400px 600px;
+    background-image: url(37c3-key-visual.jpg);
+    background-repeat: no-repeat;
 
-	position: fixed;
-	left: -50px;
-	//bottom: 100px;
+    position: fixed;
+    //bottom: 100px;
 
-	width: 400px;
-	height: 780px;
+    width: 400px;
+    height: 780px;
 
-	opacity: 1;
-	z-index: -100;
+    opacity: 1;
+    z-index: -100;
 
-	@media (max-width: @screen-sm-min) {
-		display: none;
-	}
+    @media (max-width: @screen-sm-min) {
+	display: none;
+    }
 }
 
 .congress-motto {
-	background-image: url(37c3-logo-full.svg);
-	background-repeat: no-repeat;
-	background-size: 116px 780px;
+    /*background-image: url(37c3-logo-full.svg);
+    background-repeat: no-repeat;
+    background-size: 116px 780px;*/
 
-	position: fixed;
-	right: 10px;
-	//bottom: 100px;
+    position: fixed;
+    right: 10px;
+    //bottom: 100px;
 
-	width: 116px;
-	height: 780px;
+    width: 116px;
+    height: 780px;
 
-	opacity: 1;
-	z-index: -100;
+    opacity: 1;
+    z-index: -100;
 
-	@media (max-width: @screen-sm-min) {
-		display: none;
+    @media (max-width: @screen-sm-min) {
+	display: none;
+    }
+}
+
+.btn {
+    font-family: 'VCR OCD Faux';
+    letter-spacing: -0.01em;
+}
+
+.navbar .btn.btn-default, body.page-start .search .btn {
+    background-color: #29FFFF;
+    border-color: #29FFFF;
+    color: #202020;
+}
+
+.btn-primary, .btn-default {
+    background-color: #29FFFF;
+    border-color: #29FFFF;
+    color: #202020;
+}
+
+ul.nav li {
+	background-color: #006b6b;
+	border-color: #006b6b;
+	color: #202020;
+}
+
+ul.nav li.active {
+    background-color: #29FFFF;
+    border-color: #29FFFF;
+    color: #202020;
+}
+
+
+.btn-primary:hover, .btn-default:hover, ul.nav li:hover {
+    background-color: #006b6b;
+    border-color: #006b6b;
+    color: #FFFFFF;
+}
+
+.btn-primary.active, .btn-default.active {
+    background-color: #29FFFF;
+    border-color: #29FFFF;
+    color: #202020;
+}
+
+.navbar .btn.btn-default:hover, body.page-start .search .btn:hover,
+.btn-primary.active:hover, .btn-default.active:hover {
+    background-color: #006B6B;
+    border-color: #006B6B;
+    color: #D9D9D9
+}
+
+.form-group {
+    input, textarea, select {
+	background-color: #202020;
+	border: 2px solid #29FFFF;
+	color: #ffffff;
+    }
+
+    input[type='submit'] {
+	background-color: #29FFFF;
+	border-color: #29FFFF;
+	color: #202020;
+    }
+    input[type='submit']:hover {
+	background-color: #006B6B;
+	border-color: #006B6B;
+	color: #D9D9D9
+    }
+
+    /* TODO - breaks alignment */
+    input[type='checkbox'] {
+	background-color: #202020;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	width: 14px !important;
+	height: 14px !important;
+	margin: 5px;
+	margin-left: -20px;
+	outline: 1px solid #29FFFF;
+	box-shadow: none;
+	font-size: 0.8em;
+	text-align: center;
+	line-height: 1em;
+    }
+    input[type='checkbox']:checked:after {
+	content: '✔';
+	color: #d9d9d9;
+    }
+
+    input[type='checkbox']:checked {
+	background-color: #006B6B;
+    }
+
+}
+
+.roomtitle {
+    font-family: 'VCR OCD Faux';
+    font-size: 1.3em;
+    color: @green;
+}
+
+.panel-default {
+	border-color: @blue;
+   .panel-heading {
+	a {
+	    color: #7a7a7a;
 	}
+	background-color: #0b1575;
+	border-color: @blue; /* override bottom border */
+	color: #7a7a7a;
+    }
+    .panel-body {
+	background-color: #202020;
+	color: @yellow;
+    }
+}
+.recordings a {
+    font-family: 'VCR OCD Faux';
+}
+
+.t {
+    color: #F6F675;
+}
+
+a {
+    color: #70FF53;
+}
+a:hover {
+    color: #3b8d18;
+}
+
+h1 {
+    color: #DE37FF;
+    font-family: 'Gabriella';
+    transform: scale(1, 1.62);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5em;
+}
+
+.group-live h2 {
+    color: #DE37FF;
+    font-family: 'Gabriella';
+    transform: scale(1, 1.62);
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-family: 'Mona Sans';
+    letter-spacing: -0.01em;
+    font-weight: bold;
+    border-bottom: #0B1575 1px;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'VCR OCD Faux';
+    letter-spacing: -0.01em;
+    border-bottom: #0B1575 1px;
+}
+
+.nav-tabs.nav-justified > li > a {
+    color: #202020;
+}
+
+.schedule {
+    border-color: #0b1575 !important;
+}
+.schedule {
+    .block {
+	h3 {
+	    font-size: 1.2em !important;
+	    padding-bottom: 0.1em;
+	    margin-bottom: 0;
+	}
+	h4 {
+	    color: #d9d9d9 !important;
+	}
+	h5 {
+	    color: #de37ff !important;
+	}
+	border: 1px solid #0b1575 !important;
+    }
+    .block:nth-child(2n) {
+	background-color: #202020;
+    }
+    .block:nth-child(2n+1) {
+	/*background-color: #0B1575;*/
+    }
+
+    .block.pause, .block.optout {
+	background-color: #202020 !important;
+	background-image: linear-gradient(45deg, #757501ff 25%, transparent 25%, transparent 50%, #757501ff 50%, #757501ff 75%, transparent 75%, transparent) !important;
+    }
+    .block.gap {
+	background-color: #006b6b !important;
+    }
+}
+#schedule-event-detail-popover #modal-body {
+	background-color: #202020;
+	color: #ffffff;
+}
+
+#schedule-event-detail-popover {
+    background-color: @red;
+    border-color: #561010;
 }
