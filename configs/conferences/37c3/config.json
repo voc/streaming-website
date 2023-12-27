@@ -44,7 +44,7 @@
         "slug": "eins",
         "streamId": "s1",
         "streamingConfig": {
-          "wide": true,
+          // "wide": true,
           // "display": "Saal 1",
           // "display_short": "1",
           "social": {
@@ -108,11 +108,12 @@
         }
       },
       {
-          "guid": "10e6a40c-3b85-4df0-9731-af511d818fad",
-        "name": "Self-organized Sessions / Lightning Talks",
+        "guid": "10e6a40c-3b85-4df0-9731-af511d818fad",
+        "name": "Saal E",
         "slug": "sos-lt",
         "streamId": "s4",
         "streamingConfig": {
+          "display": "Self-organized Sessions / Lightning Talks",
           "display_short": "SoS/LT",
           "social": {
             "hashtag": "#37C3sos #37C3lt",
@@ -132,10 +133,11 @@
       },
       {
         "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
-        "name": "Sendezentrum",
+        "name": "Sendezentrum Stage (Saal F)",
         "slug": "sendezentrum",
         "streamId": "s5",
         "streamingConfig": {
+          "display": "Sendezentrum",
           "social": {
             "hashtag": "#37C3sz",
             "mastodon": true
