@@ -47,7 +47,7 @@
 										href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>"
 								<? endif ?>
 								title="Switch to <?=h($scheduleRoom->getDisplay())?>"
-								onmouseover="showEventDetails(event, {title:'<?=$event_title?>', guid:'<?=$event_guid?>', url:'<?=$event_url?>', type:'<?=@$special?>'})"
+								onmouseover="showEventDetails(event, {title:'<?=str_replace(array('\\', '"'), array('\\\\', '\\x22'), $event_title)?>', guid:'<?=$event_guid?>', url:'<?=$event_url?>', type:'<?=@$special?>'})"
 							>
 						<? else: ?>
 							<div class="inner">
