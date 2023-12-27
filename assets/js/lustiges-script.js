@@ -299,12 +299,28 @@ $(function() {
 	});
 });
 
-// update teaser images
+// update teaser images, hide/show room depending on teaser image availability
 $(function() {
+	var
+		roomSelector = '.room.has-preview',
+		previewSelector = roomSelector + ' .preview',
+		inactiveClass = 'inactive-stream';
+
+	$(previewSelector).each(function() {
+		var
+			$teaser = $(this),
+			$room = $teaser.parents(roomSelector);
+
+		$teaser.on('error', function() {
+			$room.addClass(inactiveClass);
+		});
+	});
+
 	setInterval(function() {
-		$('.rooms .lecture .teaser').each(function() {
+		$(previewSelector).each(function() {
 			var
 				$teaser = $(this),
+				$room = $teaser.parents(roomSelector),
 				$preload = $('<img />'),
 				src = $teaser.data('src');
 
@@ -315,6 +331,9 @@ $(function() {
 
 			$preload.on('load', function() {
 				$teaser.prop('src', $preload.prop('src'));
+				$room.removeClass(inactiveClass);
+			}).on('error', function() {
+				$room.addClass(inactiveClass);
 			}).prop('src', src + '?'+(new Date()).getTime());
 		});
 	}, 1000*60);
