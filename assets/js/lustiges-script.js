@@ -299,22 +299,31 @@ $(function() {
 	});
 });
 
-// update teaser images
+// update preview images, show fallback if preview not available
 $(function() {
-	setInterval(function() {
-		$('.rooms .lecture .teaser').each(function() {
-			var
-				$teaser = $(this),
-				$preload = $('<img />'),
-				src = $teaser.data('src');
+	const
+		previewSelector = '.room .preview',
+		fallbackPreview = "assets/img/fallback.png";
 
-			if(!src) {
-				src = $teaser.prop('src');
-				$teaser.data('src', src);
-			}
+	$(previewSelector).each(function() {
+		const $preview = $(this);
+		$preview.data("src",$preview.prop("src"))
+		$preview.on("error", function() {
+			$preview.prop("src", fallbackPreview);
+		});
+	});
+
+	setInterval(function() {
+		$(previewSelector).each(function() {
+			const
+				$preview = $(this),
+				$preload = $('<img />'),
+				src = $preview.data('src');
 
 			$preload.on('load', function() {
-				$teaser.prop('src', $preload.prop('src'));
+				$preview.prop('src', $preload.prop('src'));
+			}).on('error', function() {
+				$preview.prop("src", fallbackPreview);
 			}).prop('src', src + '?'+(new Date()).getTime());
 		});
 	}, 1000*60);
