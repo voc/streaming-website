@@ -1,10 +1,7 @@
 <?php
 
-$upcoming = new Upcoming();
-$upcoming_events = $upcoming->getNextEvents();
-$upcoming_ocs = array_values(array_filter($upcoming_events, function($event) {
-	return preg_match('/^events:oc[0-9]+[a-z]+$/i', $event['short_name']);
-}));
+$upcoming_ocs = Upcoming::getNextEvents('/^oc[0-9]+[a-z]+$/i');
+
 if(count($upcoming_ocs) < 1)
 {
 	$EPISODE = '???';

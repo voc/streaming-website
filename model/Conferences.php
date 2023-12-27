@@ -65,7 +65,8 @@ class Conferences
 	}
 
 	public static function getLastConference() {
-		return Conferences::getFinishedConferencesSorted()[0];
+		$conferences = Conferences::getFinishedConferencesSorted();
+		return isset($conferences[0]) ? $conferences[0] : null;
 	}
 
 	public static function exists($mandator) {
@@ -100,20 +101,82 @@ class Conferences
 	}
 
 	public static function loadConferenceConfig($mandator) {
-		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
-		$config = include($configfile);
 
-		if(!is_array($config)) {
-			throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
+		// try to find config.json for this conference/mandator in local configs
+		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.json';
+
+		if (file_exists($configfile)) {
+
+			$data = file_get_contents($configfile); 
+			$config = json_decode(strip_comments($data));
+			
+			
+			if(is_null($config)) {
+				throw new ConfigException("Loading $configfile did not return an object. Maybe it's not a real JSON file? \n" . json_last_error_msg());
+			}
+
+			return new ConferenceJson($config, $mandator);
 		}
 
-		$config = Conferences::migrateTranslationConfiguration($config);
 
-		return $config;
+		// try to find config.php for this conference/mandator in local configs
+		$configfile = forceslash(Conferences::MANDATOR_DIR).forceslash($mandator).'config.php';
+	
+		if (file_exists($configfile)) {
+			$config = include($configfile);
+
+			if(!is_array($config)) {
+				throw new ConfigException("Loading $configfile did not return an array. Maybe it's missing a return-statement?");
+			}
+
+			$config = Conferences::migrateTranslationConfiguration($config);
+			return new Conference($config, $mandator);
+		}
+
+		// config option for dynamic lookup feature defined below
+		if (isset($GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) && !$GLOBALS['CONFIG']['DYNAMIC_LOOKUP']) {
+			throw new NotFoundException();;
+		}
+
+		try {
+			// otherwise try to find conference in c3data postgres
+			$query = 'query StreamingConfig($acronym: String!) {
+				conference(acronym: $acronym) {
+					title
+					acronym
+					description
+					keywords
+					organizer
+					start: startDate
+					end: endDate
+					streamingConfig 
+					
+					rooms(orderBy: [RANK_ASC, NAME_ASC]' . ( 
+						true ? ', filter: {streamId: {isNull: false}}' : '' 
+					) . ' ) {
+						nodes {
+							guid
+							name
+							slug
+							streamId
+							streamingConfig
+						}
+					}
+				}
+			}';
+			$data = query_data('conferenceConfig', $query, ['acronym' => $mandator]);
+
+			return new ConferenceJson($data, $mandator);
+		}
+		catch(Exception $e) {
+			throw new NotFoundException();
+		}
+
+		
 	}
 
 	public static function getConference($mandator) {
-		return new Conference(Conferences::loadConferenceConfig($mandator), $mandator);
+		return Conferences::loadConferenceConfig($mandator);
 	}
 
 	public static function hasCustomStyles($mandator) {

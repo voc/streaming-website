@@ -13,7 +13,7 @@
 @jumbo-line-height:  45px;
 
 @schedule-now:       @brand-danger;
-@schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+@schedule-now-bg:    fade(lighten(@brand-danger, 5%), 50%);
 @schedule-border:    lighten(@brand-primary, 50%);
 
 @schedule-room:      darken(@brand-primary, 15%);
@@ -55,9 +55,13 @@ nav {
 		}
 	}
 
-	.navbar-time {
+	.button-wrapper.navbar-right {
+		margin-right: 0;
+	}
+
+	.button-wrapper > .navbar-time {
 		line-height: 27px;
-		padding: 25px 15px;
+		color: inherit;
 	}
 
 	.button-wrapper > .btn {

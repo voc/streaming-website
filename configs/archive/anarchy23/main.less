@@ -1,0 +1,45 @@
+@import "../../../assets/css/_structure.less";
+
+@orange: #a00000;
+@light: #b30000;
+@medium: #800000;
+@dark: #300000;
+
+@link-color:            @orange;
+@panel-primary-border:  @orange;
+
+@panel-default-heading-bg: @light;
+@panel-default-text:       @medium;
+
+@text-color: @dark;
+
+h1 { color: @medium; }
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(anarchy_900_900.png);
+	background-size: contain;
+}
+
+.anarchy23 {
+	background-image: url(anarchy_900_900.png);
+	background-repeat: no-repeat;
+	background-size: 194px 240px;
+
+	position: fixed;
+	left: 10px;
+	bottom: 40px;
+
+	width: 194px;
+	height: 240px;
+
+	opacity: 0.4;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}

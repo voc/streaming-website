@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-for cmd in find xargs php git; do
-	command -v $cmd >/dev/null 2>&1 || { echo >&2 "I require $cmd but it's not installed.  Aborting."; exit 1; }
-done
+if [ "$1" != '--without-validation' ]; then
+	for cmd in find xargs php git; do
+		command -v $cmd >/dev/null 2>&1 || { echo >&2 "I require $cmd but it's not installed.  Aborting."; exit 1; }
+	done
 
-
-find . -name "*.php" | grep -v archive | xargs -n1 php -l
-if [ $? -ne 0 ]; then
-	echo "not deploying b0rken code ;)"
-	exit 1
+	find . -name "*.php" | grep -v archive | xargs -n1 php -l
+	if [ $? -ne 0 ]; then
+		echo "not deploying b0rken code ;)"
+		exit 1
+	fi
 fi
 
 echo ""
@@ -44,7 +45,7 @@ if [ "x$DEPLOY_BRANCH" != "xmaster" ]; then
 	echo ""
 fi
 
-for host in lb.dus.c3voc.de lb.alb.c3voc.de lb.dort.c3voc.de lb.wob.c3voc.de rc3-edge-1.lan.c3voc.de rc3-edge-2.lan.c3voc.de; do
+for host in lb.alb.c3voc.de lb.dort.c3voc.de lb.wob.c3voc.de; do
 echo "deploying to $host"
 ssh voc@$host 'sudo sh' << EOT
 cd /srv/nginx/streaming-website

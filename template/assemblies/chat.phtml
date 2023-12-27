@@ -12,7 +12,25 @@
 	</div>
 <? endif ?>
 
-<? if($room->hasTwitter($room)): ?>
+<? if($room->hasMatrix()): ?>
+	<div>
+		<a class="btn btn-primary matrixlink" href="<?=h($room->getMatrixUrl())?>" target="_blank">
+			<span class="fa fa-comment"></span> <?=h($room->getMatrixDisplay())?>
+		</a>
+	</div>
+<? endif ?>
+
+
+<? if($room->hasMastodon()): ?>
+	<div>
+		<a class="btn mastodonlink" href="<?=h($room->getMastodonUrl())?>" target="_blank">
+			<span class="fa fa-globe"></span> <?=h($room->getHashtag())?>
+		</a>
+	</div>
+<? endif ?>
+
+
+<? if($room->hasTwitter()): ?>
 	<div>
 		<a class="btn twitterlink" href="<?=h($room->getTwitterUrl())?>" target="_blank">
 			<span class="fa fa-twitter"></span> <?=h($room->getTwitterDisplay())?>

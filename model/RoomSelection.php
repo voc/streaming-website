@@ -2,6 +2,9 @@
 
 class RoomSelection
 {
+	public $room;
+	public $selection;
+
 	public function __construct(Room $room, $selection)
 	{
 		$this->room = $room;

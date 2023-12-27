@@ -2,7 +2,8 @@
 
 class Conference extends ModelBase
 {
-	private $slug;
+	protected $slug;
+	protected $schedule;
 
 	public function __construct($config, $slug)
 	{
@@ -19,7 +20,7 @@ class Conference extends ModelBase
 	}
 
 	public function isPreviewEnabled() {
-		if(@$GLOBALS['forceopen'])
+		if(isset($GLOBALS['forceopen']) && $GLOBALS['forceopen'])
 			return true;
 
 		if($this->has('PREVIEW_DOMAIN') && ($this->get('PREVIEW_DOMAIN') == $_SERVER['SERVER_NAME']))
@@ -148,6 +149,9 @@ class Conference extends ModelBase
 	public function getAboutLink() {
 		return joinpath([$this->getSlug(), 'about']).url_params();
 	}
+	public function getScheduleLink() {
+		return joinpath([$this->getSlug(), 'schedule']).url_params();
+	}
 
 	public function hasRelive() {
 		return $this->getRelive()->isEnabled();
@@ -161,7 +165,7 @@ class Conference extends ModelBase
 	}
 
 	public function hasFeedback() {
-		return $this->has('FEEDBACK');
+		return $this->has('FEEDBACK') && $this->get('FEEDBACK') !== false;
 	}
 	public function getFeedbackUrl() {
 		return joinpath([$this->getSlug(), 'feedback']).url_params();
@@ -227,7 +231,11 @@ class Conference extends ModelBase
 		return new Feedback($this);
 	}
 	public function getSchedule() {
-		return new Schedule($this);
+		if (!isset($this->schedule)) {
+			return $this->schedule = new Schedule($this);
+		}
+
+		return $this->schedule;
 	}
 	public function getSubtitles() {
 		return new Subtitles($this);

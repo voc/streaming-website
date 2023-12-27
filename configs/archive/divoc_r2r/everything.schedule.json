@@ -1,0 +1,2281 @@
+{
+  "schedule": {
+    "version": "0.11; wiki 1.0",
+    "base_url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/schedule/",
+    "conference": {
+      "acronym": "divoc-reboot-to-respawn-2021",
+      "title": "DiVOC - Reboot to Respawn",
+      "start": "2021-04-02",
+      "end": "2021-04-05",
+      "daysCount": 4,
+      "timeslot_duration": "00:05",
+      "days": [
+        {
+          "index": 1,
+          "date": "2021-04-02",
+          "day_start": "2021-04-02T04:00:00+02:00",
+          "day_end": "2021-04-03T03:59:00+02:00",
+          "rooms": {
+            "Piscopia": [
+              {
+                "id": 33,
+                "guid": "13f65e09-37ea-5475-b396-f09e52baf295",
+                "logo": "",
+                "date": "2021-04-02T10:00:00+02:00",
+                "start": "10:00",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-33-opening",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/38PPT7/",
+                "title": "Opening",
+                "subtitle": "",
+                "track": "Other",
+                "type": "Talk/Performance (10 minutes + Q&A)",
+                "language": "de",
+                "abstract": "Im Opening erz\u00e4hlen wir euch, was euch in den n\u00e4chsten Tagen alles an spannenden Vortr\u00e4gen und sonstigen Veranstaltungen erwartet. Schaut doch neben dem Vortrags-Schedule auch schonmal rein in die Self-Organised Sessions, die Assemblies, die Welt; schaut vorbei beim Infodesk, beim Eventphone und vielem mehr: \r\n\r\nhttps://di.c3voc.de/r2r:start",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 10,
+                    "code": "XSD93A",
+                    "public_name": "hexchen",
+                    "biography": "Ein kleines hexchen, das manchmal komisches Zeug mit Computern anstellt.",
+                    "answers": []
+                  },
+                  {
+                    "id": 5,
+                    "code": "TLL3ZJ",
+                    "public_name": "NicKira",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 29,
+                "guid": "5aab553a-a5f2-53e3-b78d-e954d446b905",
+                "logo": "",
+                "date": "2021-04-02T10:15:00+02:00",
+                "start": "10:15",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-29-zur-psychoanalyse-der-klimakrise",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/HTBUVL/",
+                "title": "Zur Psychoanalyse der Klimakrise",
+                "subtitle": "",
+                "track": "Politics",
+                "type": "Talk/Performance (10 minutes + Q&A)",
+                "language": "de",
+                "abstract": "Wie reagieren wir auf die Klimakrise? Und wie auf andere Krisen, zum Beispiel Corona? Und wie gewichten wir das in der \u00d6ffentlichkeit? Und warum weichen wir bei unserer Gewichtung derart von den Fakten ab?",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 12,
+                    "code": "HD7TYC",
+                    "public_name": "Andr\u00e9",
+                    "biography": "alter wei\u00dfer CIS Mann, alt-68er, der mit dem Hut \u2026",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 44,
+                "guid": "79a5a373-4f34-5f06-b264-13f5d0edc2d3",
+                "logo": "",
+                "date": "2021-04-02T11:20:00+02:00",
+                "start": "11:20",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-44-datenschutz-wildlife",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KWWQLB/",
+                "title": "Datenschutz Wildlife",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Achtung Datenschutz! Jetzt wird es wild. Begleitet uns auf einer Safari durch den wilden Dschungel der Umsetzungen. Nix f\u00fcr schwache Nerven.",
+                "description": "Bei der Umsetzung von Datenschutzma\u00dfnahmen kennt die Kreativit\u00e4t keine Grenzen. Aber ist auch alles was m\u00f6glich ist auch sinnvoll? Wir pr\u00e4sentieren ein Best-of dieser Umsetzungen und lassen euch abstimmen: Ist das noch Datenschutz, ist es Kunst oder kann es weg.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 43,
+                    "code": "7NGZ9Q",
+                    "public_name": "C_ristina",
+                    "biography": "Geekfem Haeckse, IT-SiBe, Datenschutz, Cryptoparty",
+                    "answers": []
+                  },
+                  {
+                    "id": 66,
+                    "code": "TWGEXD",
+                    "public_name": "Katrin",
+                    "biography": "Katrin ist Rechtsanw\u00e4ltin und T\u00dcV-zertifizierte Datenschutzbeauftragte. Sie begleitet KMU und Vereine bei der Umsetzung der DSGVO. Sie ist au\u00dferdem Schatzmeisterin des Cyborgs e. V. und b\u00e4ckt gern Kanelbullar.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 6,
+                "guid": "17f499e5-a7a6-5a89-9656-43f8b92a4192",
+                "logo": "",
+                "date": "2021-04-02T12:30:00+02:00",
+                "start": "12:30",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-6-solving-problems-of-the-anthropocene-the-tricky-the-hard-and-the-impossible",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/CZLMKG/",
+                "title": "Solving problems of the Anthropocene -- The tricky, the hard and the impossible",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "The Anthropocene brings with it a frighteningly wide range of environmental crises -- climate change, ocean acidification, pollution, rising extinction rates and risks of zoonotic pandemics, just to name a few. We speak about these as if they were tied together, but it is actually rather hard to say how exactly this is. \r\n\r\nIn this talk, I will analyse some aspects of the Anthropocene with regard to their \"problematicness\", just as programmers might think through the problem definition, necessary assumptions and Big-O notation before even starting to write a single line of code. In this, I will try to give a broad overview of attempts to model the environmental crises of the Anthropocene. I will argue that some of these are essentially solved; but \"solved\" as in \"chess is solved\"; although we know that our computer can give us a definitive way of winning, we still play it. For others, however, the scientific state-of-the-art can only point to a path towards a solution. Furthermore, some of the things we think about as problems are actually more like ongoing catastrophes: No action will make them go away, there is no solution in a strict sense; rather we have to live with them in such a way as to contain their criticalness. This assessment will make it clear that we urgently need to rethink the relationship between us and our environment in the Anthropocene since this will determine which aspects of the Anthropocene are problematic, catastrophic or even apocalyptic.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 17,
+                    "code": "P98X7B",
+                    "public_name": "Theodor Sperlea",
+                    "biography": "I am a microbiologist that somehow turned into a computer scientist, currently finishing a PhD project working on the bacterial ecology in lakes. I tried to solve all my problems using machine learning, but... yeah.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 39,
+                "guid": "9f0aafea-a00e-58a4-9ae4-afbd285179f5",
+                "logo": "",
+                "date": "2021-04-02T15:20:00+02:00",
+                "start": "15:20",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-39-workadventure-selbst-betreiben-ein-serviervorschlag",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KBURYL/",
+                "title": "Workadventure selbst betreiben: Ein Serviervorschlag",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (10 minutes + Q&A)",
+                "language": "de",
+                "abstract": "Die rC3 und die \"world\" haben viele mit Congress-Entzugserscheinungen zur\u00fcckgelassen. Der Talk bietet eine Einstiegshilfe zum Aufsetzten und Betreiben einer eigenen Instanz der rC3 world.",
+                "description": "Die rC3 und die \"world\" haben viele mit Congress-Entzugserscheinungen zur\u00fcckgelassen. Der Gedanke liegt nahe, eine eigene Instanz der Pixel-Welt betreiben zu wollen. Aber wo f\u00e4ngt man an? Was braucht es, um so einen Server bereitzustellen? Wie wird der Kram \u00fcberhaupt aufgesetzt? Die Dokumentation f\u00fcr WorkAdventure ist noch d\u00fcnn und die Leute, die man fragen kann, sind rar.\r\n\r\nIn diesem Vortrag soll eine Einstiegshilfe zum Aufsetzen und Betreiben einer solchen WorkAdventure-Instanz geliefert werden. Ziel ist es, mit minimalen Aufwand einen Server einzurichten, der eine WorkAdventure-Installation bereitstellt. Hierf\u00fcr wird eine Blanko-Debian-VM mithilfe von Ansible automatisch mit einer Grundkonfiguration sowie WorkAdventure samt Konfiguration bespielt. Dies erm\u00f6glicht es euch, eigens entworfene oder \u00f6ffentlich zug\u00e4ngliche Welt-Designs auszuliefern. Den Treffen in der 16-Bit Pixel-Welt steht dann nichts mehr im Weg.\r\n\r\nTech-Stack:\r\n* Debian  \r\n* Ansible  \r\n* Docker  \r\n* Docker-Compose   \r\n\r\nVorkentnnisse:\r\nSowohl Linux als auch Ansible sind in Grundz\u00fcgen bekannt.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 57,
+                    "code": "9XR9MW",
+                    "public_name": "devnope",
+                    "biography": "Ich bin Operator im Bereich Linux/Unix.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 38,
+                "guid": "0c689302-81cb-5158-b4a5-f3f858c00014",
+                "logo": "",
+                "date": "2021-04-02T16:00:00+02:00",
+                "start": "16:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-38-falsche-hackathon-versprechen-warum-digitalisierung-nachhaltigere-anstze-braucht-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MF8A7V/",
+                "title": "Falsche Hackathon-Versprechen: Warum Digitalisierung nachhaltigere Ans\u00e4tze braucht.",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Nach dem \"WirVsVirus\"-Hackathon der Bundesregierung verbreitet sich die Idee, dass Hackathons unsere Welt retten k\u00f6nnen, immer weiter. Ganz so einfach ist das nicht. Ein Vortrag \u00fcber Sinn und Zweck von Hackathons, gesellschaftliche Ver\u00e4nderung, Digital-Hypes und diskriminierende Strukturen \u2013 und wie wir es besser machen k\u00f6nnten.",
+                "description": "Der Talk zeigt, warum die Erwartung, dass Hackathons Probleme l\u00f6sen k\u00f6nnten, schlichtweg falsch und sogar gef\u00e4hrlich ist. Der Vortrag liefert Erkl\u00e4rungsans\u00e4tze, wie Hackathons zu oberfl\u00e4chlichen und strukturell ausschlie\u00dfenden Veranstaltungen werden \u2013 und wie falsche Vorstellungen und wirtschaftliche oder politische Interessen dazu beitragen.\r\n\r\nAlso sind Hackathons immer b\u00f6se? \u2013 Nein!\r\n\r\nWir hacken sehr gerne und wir hacken sehr viel. Nat\u00fcrlich freut es uns, wenn wir uns zusammensetzen k\u00f6nnen, gemeinsam spinnen, ausprobieren, lernen \u2013 und sich auch noch jemand um die Rahmenbedingungen wie Essen k\u00fcmmert. Umso sch\u00f6ner, wenn dabei auch noch ein lauff\u00e4higes Ergebnis rauskommt. Aber Hackathons alleine k\u00f6nnen eben keine Probleme l\u00f6sen.\r\n\r\nIm Rahmen von Code for Germany haben wir verschiedene Erfahrungen und Perspektiven aus Zivilgesellschaft und Verwaltung zusammengetragen und einen \"Hackathon-Leitfaden\" geschrieben \u2013 der vor allem zeigt, unter welchen eng gesteckten Rahmenbedingungen ein Hackathon erfolgreich sein kann ([Link zum GitHub-Repo](https://github.com/okfde/hackathon-leitfaden)). Die Kernideen werden unter anderem im Vortrag vorgestellt, wir freuen uns aber vor allem \u00fcber noch mehr Gedanken dazu und nat\u00fcrlich Pull Requests.\r\n\r\nVor allem will der Vortrag helfen bei der Entscheidung: Soll ich bei einem Hackathon teilnehmen? Was erwarte ich davon und wie gro\u00df ist die Chance, dass diese Erwartungen auch erf\u00fcllt werden?",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 56,
+                    "code": "NURJX3",
+                    "public_name": "joliyea",
+                    "biography": "Julia hat w\u00e4hrend ihres Soziologie-Studiums viel Zeit bei Jugend hackt, Code for Germany und in diversen Hackspaces verbracht \u2013 und deshalb auch f\u00fcr ihren Masterabschluss zu feministischen Hackspaces geforscht. Jetzt studiert sie nochmal Informatik und arbeitet als Journalistin \u2013 in Zukunft dann als Volont\u00e4rin bei einer gro\u00dfen \u00f6fffentlich-rechtlichen Anstalt.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 10,
+                "guid": "dbad5360-1c44-544f-97de-6d03ce56e854",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/XHNSYF/HFF_Logo_o6EvLoQ.png",
+                "date": "2021-04-02T17:10:00+02:00",
+                "start": "17:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-10-hardware-for-future-mit-ausrangierter-hardware-helfen",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/XHNSYF/",
+                "title": "Hardware For Future: Mit ausrangierter Hardware helfen",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Jedes Jahr werden viele Computer entsorgt, obwohl sie noch funktionieren. Eine andere Realit\u00e4t ist auch, dass es Menschen gibt, die sich keinen Computer leisten k\u00f6nnen. Gerade Sch\u00fclern aus \u00f6konomisch benachteiligten Haushalten wird der Start in die digitale Welt erschwert.\r\n\r\nIm Leipziger Hackspace dezentrale e. V. wurde das Hardware For Future-Projekt im Fr\u00fchjahr 2020 gegr\u00fcndet. In ehrenamtlicher Arbeit werden Computer aufbereitet, Linux bildet dabei die Basis. Mit Hilfe von zahlreichen Spenden konnten im vergangenen Jahr bereits mehrere hundert Rechner an Bed\u00fcrftige ausgegeben werden.\r\n\r\nEs werden Einblicke in die Arbeit des Projekts geben, darunter einen Abriss der Geschichte, einen \u00dcberblick wie Menschen an einen Computer kommen, sowie Details zur technischen Realisierung mittels FAI, Clonezilla und Ansible. Weiter soll es um die Erfahrungen in der Sammlung von Hardware, der Zusammenarbeit mit \u00f6ffentlichen Stellen und um die kleinen \u00dcberraschungen eines solchen Projekts gehen.\r\n\r\nDer Vortrag richtet sich nicht nur an Menschen, die ein \u00e4hnliches Projekt umsetzen wollen, sondern auch an Mitarbeiter und Firmen, die sich eine sinnvollere Nutzung ihrer ausgedienten Hardware vorstellen k\u00f6nnen.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 28,
+                    "code": "SLXDTF",
+                    "public_name": "katzenparadoxon",
+                    "biography": "Located in Leipzig @ dezentrale e.V.",
+                    "answers": []
+                  },
+                  {
+                    "id": 29,
+                    "code": "RSSJBD",
+                    "public_name": "Pr\u00e4torianer",
+                    "biography": "@praetorianer_de\r\n* dezentrale.space\r\n*employeesforfuture.org \r\n*hardwareforfuture.de\r\n*links-gr\u00fcn-versifftes Leipzig",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 45,
+                "guid": "25d2dc19-c07c-5e0f-b9a7-41bab1e2e8be",
+                "logo": "",
+                "date": "2021-04-02T18:20:00+02:00",
+                "start": "18:20",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-45-c3-news-show-die-1-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/FBTQ8F/",
+                "title": "C3 News Show, die 1.",
+                "subtitle": "",
+                "track": "Other",
+                "type": "C3 News Show",
+                "language": "en",
+                "abstract": "C3 News Show",
+                "description": "Herald News Show",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 86,
+                    "code": "VCVN33",
+                    "public_name": "C3 news show",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 20,
+                "guid": "5dd12867-47f8-57c3-8196-5c288dd0a1a8",
+                "logo": "",
+                "date": "2021-04-02T20:00:00+02:00",
+                "start": "20:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-20-reclaim-your-face-biometrische-massenberwachung-und-wie-wir-uns-dagegen-wehren-knnen",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SNX9YV/",
+                "title": "Reclaim your Face! Biometrische Massen\u00fcberwachung und wie wir uns dagegen wehren k\u00f6nnen",
+                "subtitle": "",
+                "track": "Politics",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Biometrische \u00dcberwachung ist bei uns angekommen. Staatliche Akteure begn\u00fcgen sich noch mit Feldtests und Aufr\u00fcstung. Private Akteure wie pimeyes und Clearview AI werten l\u00e4ngst unsere biometrischen Daten aus und legen unsere Gesichter in Datenbanken ab.\r\n\r\nWir zeigen Euch, wo noch in Deutschland und Europa heute schon biometrische \u00dcberwachungstechnologien eingesetzt werden.\r\n\r\nWenn wir jetzt nichts tun, werden wir bald auf jedem Schritt und nicht nur bei jedem Klick erfasst und \u00fcberwacht. Daher haben wir im Februar eine Europ\u00e4ische B\u00fcrgerinitiative f\u00fcr ein Verbot biometrischer Massen\u00fcberwachung gestartet. Wir stellen die Initiative kurz vor, zeigen, wie ihr selbst aktiv werden k\u00f6nnt und was wir f\u00fcr die n\u00e4chsten Monate geplant haben.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 40,
+                    "code": "GYVPAZ",
+                    "public_name": "Vik",
+                    "biography": "Datenschutz, Elektropunk und Datenschutzelektropunk",
+                    "answers": []
+                  },
+                  {
+                    "id": 41,
+                    "code": "UZTVSX",
+                    "public_name": "kantorkel",
+                    "biography": ".",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 54,
+                "guid": "3d813605-ad39-5edf-88bb-3410aed8a5dd",
+                "logo": "",
+                "date": "2021-04-02T21:00:00+02:00",
+                "start": "21:00",
+                "duration": "02:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-54-all-creatures-welcome",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/ZJYNWZ/",
+                "title": "All Creatures Welcome",
+                "subtitle": "",
+                "track": "Arts & Culture",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "All Creatures Welcome zeichnet ein utopisches Bild der Gesellschaft im digitalen Zeitalter. Begleitet vom Appell \u201cuse hacking as a mindset\u201d, taucht die Zuschauer*in in ein dokumentarisches Abenteuerspiel ein und erkundet die Welt der digitalen Communities bei den Veranstaltungen des Chaos Computer Clubs, Europas gr\u00f6\u00dfte Hackervereinigung.",
+                "description": "Wir zeigen den Film. Im Anschlu\u00df gibt es eine Q&A mit Sandra und weiteren Menschen.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 87,
+                    "code": "BFD973",
+                    "public_name": "Filmgizmo",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 57,
+                "guid": "98b1839a-2e8c-58ab-9ff8-046c69c395a1",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/ZNX78X/bridges_logo_mit_roboto-2_nR4cUdr.png",
+                "date": "2021-04-02T23:30:00+02:00",
+                "start": "23:30",
+                "duration": "00:30",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-57-bridges-musik-verbindet",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/ZNX78X/",
+                "title": "Bridges - Musik verbindet",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 30min",
+                "language": "en",
+                "abstract": "Bridges bringt Musiker*innen mit und ohne Flucht- und Migrationshintergrund zusammen. Dadurch werden aus Fremden Freund*innen. Bridges \u2013 Musik verbindet engagiert sich f\u00fcr einen musikalischen Dialog, der gepr\u00e4gt ist durch die unterschiedlichen kulturellen Hintergr\u00fcnde der Musiker*innen.",
+                "description": "K\u00fcnstlerin: Eleanna Pitsikaki, Kanun\r\nTitel: Sweet breeze von Eleanna Pitsikaki, komponiert 2017\r\n\r\nK\u00fcnstlerin: Johanna-Leonore Dahlhoff, Fl\u00f6te\r\nTitel: Saturday Afternoon Improvisation\r\n\r\nK\u00fcnstler: Hesham Hamra, Oud\r\nMusiktitel: Bint al shalabiya, \u00dcsk\u00fcdara, Ja Hnayna Firuz\r\n\r\nK\u00fcnstlerin: Enkhtuya Jambalrdorj, Pferdekopfgeige und mongolischer Untertongesang\r\nTitel: Heimweh\r\n\r\nK\u00fcnstler: Andr\u00e9s Rosales, E-Gitarre\r\nTitel: Montagmittag Improvisation",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 51,
+                "guid": "364ff48c-13f5-5d6d-b862-03becaa64a08",
+                "logo": "",
+                "date": "2021-04-03T00:00:00+02:00",
+                "start": "00:00",
+                "duration": "02:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-51-spiegeleule",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/NFLFCH/",
+                "title": "spiegeleule",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "de",
+                "abstract": "Gute Musik und schlechter Humor.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 77,
+                    "code": "PZJXAR",
+                    "public_name": "spiegeleule",
+                    "biography": "spiegeleule",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 56,
+                "guid": "84a9dc8a-2782-5c56-a2ef-99d49a9133a0",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/LFCPLS/IMG_6259_HzIVlop.jpg",
+                "date": "2021-04-03T02:00:00+02:00",
+                "start": "02:00",
+                "duration": "02:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-56-triankel",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/LFCPLS/",
+                "title": "Triankel",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "de",
+                "abstract": "Seitdem Ingo denken kann widmet er seine Ohren der Musik, \u00fcberwiegend elektronischer Natur. Mit zehn experimentierte er mit ersten Mixtapes auf Kassetten, mit 16 kam der erste Mixer dazu.\r\n\r\nDie Entwicklungen digitaler Soundbearbeitung und -manipulation am Computer lockten ihn 2013 zum Mixen zur\u00fcck. Er entdeckt immer ausgefeiltere M\u00f6glichkeiten, sich musikalisch auszudr\u00fccken und l\u00e4sst als \u201eTriankel\u201c alle Musikbegeisterten daran teil haben.\r\nMitlerweile spielt Triankel auf diversen Festivals und Parties, die er zum Teil auch selbst organisiert, und auf zahlreichen weiteren Veranstaltungen.",
+                "description": "Seine Musik spielt technisch gesehen zwischen einem DJ Set und einem LiveAct, da er nicht einfach nur die St\u00fccke in reiner Abfolge arrangiert, sondern die Elemente auf all seinen Decks zu einem neuen Gesamtwerk verbindet. Er vermischt Weltmusikalische Kl\u00e4nge und Ges\u00e4nge mit treibenden elektronischen Beats und l\u00e4sst diese Elemente regelrecht miteinander verschmelzen.\r\n\r\nSo erschafft er in jedem seiner Sets eine musikalisch abwechslungsreiche Reise und holt die H\u00f6renden und Tanzenden immer wieder mit sanft verspielten und gleichzeitig dramatisch ineinander verwobenen Kl\u00e4ngen ab und tr\u00e4gt sie mit geschlossenen Augen und einem breiten L\u00e4cheln auf den Lippen gemeinsam zur Ekstase.",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 89,
+                    "code": "SP9MZU",
+                    "public_name": "Triankel",
+                    "biography": "Da ich jetzt auch nicht genau wei\u00df, welche Buddelkastengeschichte ich nun auspacken soll, oder ob euch Geschichten von meinen Urlauben interessieren, w\u00fcrde ich einfach mal bei der Musik bleiben. Diese kann allerdings auch sehr gut f\u00fcr sich selbst sprechen. \r\nEinfach mal durchklicken und reinh\u00f6ren...\r\ntriankel.com\r\n\r\nfalls es dennoch fragen gibt, bitte einfach mailen:\r\ncontact@triankel.com",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }
+            ],
+            "Self-organized": [
+              {
+                "id": 265289,
+                "guid": "a26528f9-0661-5d19-8011-0c0b67be1cfa",
+                "date": "2021-04-02T10:30:00+02:00",
+                "start": "10:30",
+                "duration": "0:30",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1000-howto_divoc",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "HowTo DiVOC",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Kurze Ideensammlung, wie eins das DiVOC am besten genie\u00dfen kann",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "Piko"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Awesome Ada",
+                    "title": "Awesome Ada"
+                  }
+                ]
+              },
+              {
+                "id": 214141,
+                "guid": "d214c141-7531-56f4-921a-bff649177072",
+                "date": "2021-04-02T14:00:00+02:00",
+                "start": "14:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1002-ama_informatikstudium",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "AMA Informatikstudium",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "AMA zum Informatikstudiumm f\u00fcr Sch\u00fclerinnen",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "Khalessi"
+                  },
+                  {
+                    "id": 0,
+                    "public_name": "Skadi"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Awesome Ada",
+                    "title": "Awesome Ada"
+                  }
+                ]
+              },
+              {
+                "id": 971076,
+                "guid": "9a7c1bcb-07b6-5e95-914f-c17c6dcddccd",
+                "date": "2021-04-02T14:30:00+02:00",
+                "start": "14:30",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1003-hackers_against_climate_change_session",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "hackers against climate change session",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "hackers against climate change"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "hacc Mumble",
+                    "title": "hacc Mumble"
+                  }
+                ]
+              },
+              {
+                "id": 996641,
+                "guid": "9c96641a-0493-57b1-a996-954a6d719cb0",
+                "date": "2021-04-02T17:00:00+02:00",
+                "start": "17:00",
+                "duration": "2:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1005-hackertours_museum",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Hackertours: Museum",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Wir gehen zusammen in ein Museum.",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "Piko"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "https://mumble.c3pb.de",
+                    "title": "https://mumble.c3pb.de"
+                  },
+                  {
+                    "url": "Raum Haecksen",
+                    "title": "Raum Haecksen"
+                  }
+                ]
+              },
+              {
+                "id": 388465,
+                "guid": "388edf4a-bb6d-588b-bb85-2cdfa4d629b4",
+                "date": "2021-04-02T18:00:00+02:00",
+                "start": "18:00",
+                "duration": "2:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1006-hardware_for_future",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Hardware for Future",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Mit ausrangierter Hardware helfen\nErfahrungsaustausch nach einem Jahr Rechneraufbereitung und -Ausgabe",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "katzenparadoxon"
+                  },
+                  {
+                    "id": 0,
+                    "public_name": "Pr\u00e4torianer"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "BBB dezentrale",
+                    "title": "BBB dezentrale"
+                  }
+                ]
+              }
+            ],
+            "Workshops": [
+              {
+                "id": 964986,
+                "guid": "964986bd-bd0b-51e8-981a-7d3cb2cb6e69",
+                "date": "2021-04-02T11:00:00+02:00",
+                "start": "11:00",
+                "duration": "1:00",
+                "room": "Workshops",
+                "slug": "divoc-r2r-1001-obs_workshop_fuer_anfaengerinnen",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "OBS Workshop f\u00fcr Anf\u00e4ngerInnen",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Mit OBS l\u00e4sst sich sehr einfach das Bild der eigenen Webcam ver\u00e4ndern. Ihr lernt wie ihr Bilder und Animationen hinzuf\u00fcgen und auch euren Hintergrund (zumindest rudiment\u00e4r) ausblenden k\u00f6nnt.",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "waldwesen"
+                  },
+                  {
+                    "id": 0,
+                    "public_name": "MoniKa"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Magic Margaret",
+                    "title": "Magic Margaret"
+                  }
+                ]
+              },
+              {
+                "id": 373737,
+                "guid": "373f73eb-73ea-59f2-9b21-0c972dee1035",
+                "date": "2021-04-02T15:00:00+02:00",
+                "start": "15:00",
+                "duration": "1:00",
+                "room": "Workshops",
+                "slug": "divoc-r2r-1004-digispark_workshop",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Digispark Workshop",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Einf\u00fchrung in den Einsatz vom Digispark, optimal w\u00e4re: 1. Arduino Software vorinstalliert, 2. der Digispark",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "Caro"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Genuine Grace",
+                    "title": "Genuine Grace"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "date": "2021-04-03",
+          "day_start": "2021-04-03T04:00:00+02:00",
+          "day_end": "2021-04-04T03:59:00+02:00",
+          "rooms": {
+            "Piscopia": [
+              {
+                "id": 18,
+                "guid": "ccdcc57d-8c43-5c3a-85b4-b6d21c4b33b8",
+                "logo": "",
+                "date": "2021-04-03T04:00:00+02:00",
+                "start": "04:00",
+                "duration": "02:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-18-avocadoom-tech-bis-das-house-zusammenbricht",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/CQ9WRF/",
+                "title": "avocadoom - Tech bis das House zusammenbricht",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "de",
+                "abstract": "Hey, ich bin avocadoom vom CCC-Darmstadt und neben dem ganzen gehacke lege ich ab und zu hobbym\u00e4\u00dfig House auf. \u00dcber tropische Kl\u00e4nge bis hin zu industriellem Geh\u00e4mmer ist f\u00fcr alle Ohren etwas dabei. Kurz gesagt, es gibt Tech, bis das House zusammenbricht.\r\n\r\nEin paar fr\u00fchere Sets von mir gibt es unter: https://www.mixcloud.com/avocadoom/",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 38,
+                    "code": "9W39WY",
+                    "public_name": "avocadoom",
+                    "biography": "Hey, ich bin avocadoom vom CCC-Darmstadt. Zurzeit studiere ich Informatik an der Technischen Universit\u00e4t Darmstadt. Hobbym\u00e4\u00dfig bin ich neben viel Kram mit IT auch im musikalischen Bereich unterwegs. Sowohl als DJ als auch als Schlagzeuger oder Hornist. Wenn ich nicht gerade auflegen findet man mich ab und zu auch mal als VJ auf kleineren Festivals oder \u00e4hnlichen Veranstaltungen.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 11,
+                "guid": "6ec40acc-2ad2-5651-959f-354905993a6e",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/9X9SLG/TitlePicture_IPv6_remote-Netzwerk_faCWNGx.png",
+                "date": "2021-04-03T10:00:00+02:00",
+                "start": "10:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-11-entfernte-maschine-verbinden-mit-ipv6",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9X9SLG/",
+                "title": "Entfernte Maschine verbinden mit IPv6",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Eine praktische Anwendung des IPv6 Internets, um Verbindung zu entfernten Maschinen aufzunehmen, ohne Software, ohne \"Fummel und Gemurkse\" dazu einfache Grundlagen zu IPv6-Adressen.",
+                "description": "Vorgestellt wird eine praktische Anwendung des IPv6 Internets, um eine Verbindung zu entfernten Maschinen aufzunehmen. Das geschieht nur per IPv6 aber ohne (zus\u00e4tzliche) Software, ohne VPN und (fast) ohne Hilfsmittel.  Dabei werden einfache Grundlagen zum Adressaufbau in IPv6 vorgestellt. \r\nEine Work-in-progress-Kopie ist im Internet erreichbar unter \r\nhttps://www.schweinekraftland.de/Home_Network_access_IPv6/Home_Network_access_IPv6_HTML/img0.html   Zur geistigen Vorbereitung empfehle ich den Podcast \"Anna-Lena Baecker RFCE014: IPv6\" mit Clemens Schrimpe  \r\nhttps://requestforcomments.de/archives/412\r\nRFCs zum Thema IPv6 \u00dcbersicht in \r\nhttps://tools.ietf.org/wg/v6ops/\r\nKochbuch: \r\nhttp://mutant21.onastroidst6krpn.onion/schweinekraftland/Home_Network_access_IPv6/Home_Network_access_IPv6.htm\r\nhttps://schweinekraftland.de/Home_Network_access_IPv6/Home_Network_access_IPv6.htm\r\nIPv6 links:\r\ndancing Turtle http://[2001:200:dff:fff1:216:3eff:feb1:44d7]/\r\nhttps://test.schrimpe.de/\r\nhttps://www.ipv6.bieringer.de/",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 16,
+                    "code": "FXUYQK",
+                    "public_name": "mutant",
+                    "biography": "Chaospott Essen. Naturwissenschaftler, Kaufmann, Techniker, Autodidakt.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 37,
+                "guid": "f5e49e15-d388-5606-b4ef-84cf0e7f535c",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/FYYMHS/Caroline_Murgue_and_Seung_Jung_DUKrGNE.png",
+                "date": "2021-04-03T11:10:00+02:00",
+                "start": "11:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-37-hacking-the-dmz-the-border-between-the-two-koreas-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/FYYMHS/",
+                "title": "Hacking the DMZ (the border between the two Koreas)",
+                "subtitle": "",
+                "track": "Arts & Culture",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "Since 1953, the DMZ (Korean Demilitarized Zone) separates Korea into two countries. Unique biodiversity has grown between landmines to become a curious lab for researchers interested in Life and Earth sciences, heavy industry, armament, and technology. On the diplomatic scene, the DMZ is the home of the Joint Security Area, a strategic hotspot for international negotiations in East Asia, commanded by a Western nation, the USA. To be reunited the two Koreas need the U.S President's approval. The North and the South are ready for it, but the external American validation is still pending. Not only will it end the war, but it will also produce a better way to tackle the climate crisis in this part of the world.\r\n\r\nIndeed, one current project between South Korea and North Korea is to jointly invest in the construction of railways, a clean means of transportation that will reduce pollution caused by air and sea freight forwarding. However, this project is perceived as a threat for neighboring countries because trains would probably increase the economic power of Korea in East Asia. The Japanese government influenced the former American President, Trump, to not sign the reunification, against the will of Koreans. \r\n\r\nTo hack the DMZ, we have used art and social science. First, in a reverse engineering way, we managed to gather historical, biological, political, technological data with art projects depicting the Cold War border. Then, we interviewed Japanese, Chinese, Taiwanese tech artists and curators on their knowledge of the DMZ. It uncovered historical political tensions between their country and Korea, that remain in social discourses through generations. Finally, by studying how Western countries view North Korea and South Korea, we came to the point to destroy silly stereotypes. Behind Kim Jong Un, North Korean Hackers, South Korean Gamers, or BTS Army, there are thoughtful projects aimed to handle environmental and social challenges but delayed by external political influences, and the balance of power on the international scene. \r\n\r\nThe best way to hack the DMZ is not technical, but intellectual. It starts in the human mind with knowledge of this Cold War border, the actual Korean culture, and the international relations in East Asia.",
+                "description": "Caroline Murgue is a Franco-Korean Anthropologist and an Artist who graduated from Chelsea College of Arts in London and EHESS in Paris. She also studied International Relations at the Institute of Political Science in Lyon. Driven by critical and creative thinking, her philosophy is to make our lives a work of art in an all tech society. \r\nAs an Artist, Caroline has been working on a project to uncover with sounds and visuals the political genealogy of the DMZ, the border between the two Koreas.\r\nAs an Anthropologist and researcher on the systems of computer thinking, she lectured on AI/Data ethics at the MIT, Google, Microsoft. She founded the Touch Symposium, to spark the conversation between tech professionals and philosophers. She\u2019s a member of the Hacker collective, cDc.\r\n\r\n\r\nSeung Jung is a Korean artist who graduated from Art School in 2006 (ENSAPC - \u00e9cole nationale sup\u00e9rieure d'art de Paris-Cergy). He lives and works in Seoul and his work used to focus on the system of contemporary capitalistic society through various mediums such as installation or digital art.\r\nSince 2016, Seung has attempted a new challenge of experimental artworks by engaging science and engineering theories. He obtained a second master degree at Seoul Media Institute of Technology and has developed a new concept with his thesis: Refraction of Data.\r\nHis works of art have been featured in Korean eye, Saatchi gallery, London; Busan biennale, Korea; Plastic Garden, East bridge (798), Beijing; New Romance (Korea-Australia exchange); MMCA Seoul; Transfer K-NRW, Bonn, Germany; ACC residency showcase, Gwangju, Korea; Davinci creative 2019, Seoul, etc. He attended different residency programs abroad to share his experience: ArtOMI, New York, USA; TAV, Taipei, Taiwan, etc.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 55,
+                    "code": "XHJENZ",
+                    "public_name": "Caroline Murgue",
+                    "biography": "Caroline Murgue is a Franco-Korean Anthropologist and an Artist who graduated from Chelsea College of Arts in London and EHESS in Paris. She also studied International Relations at the Institute of Political Science in Lyon. Driven by critical and creative thinking, her philosophy is to make our lives a work of art in an all tech society. \r\nAs an Artist, Caroline has been working on a project to uncover with sounds and visuals the political genealogy of the DMZ, the border between the two Koreas.\r\nAs an Anthropologist and researcher on the systems of computer thinking, she lectured on AI/Data ethics at the MIT, Google, Microsoft. She founded the Touch Symposium, to spark the conversation between tech professionals and philosophers. She\u2019s a member of the Hacker collective, cDc.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 25,
+                "guid": "a18948d8-236b-5ca8-87d7-befe7d1c3c3c",
+                "logo": "",
+                "date": "2021-04-03T12:20:00+02:00",
+                "start": "12:20",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-25-state-of-eventfahrplan-2021",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9E8ZNZ/",
+                "title": "State of EventFahrplan 2021",
+                "subtitle": "",
+                "track": "Other",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "Let's have a retrospective of what happened in the EventFahrplan project in the last months and what is planned.",
+                "description": "[EventFahrplan](https://github.com/EventFahrplan/EventFahrplan) is the project behind a couple of apps for Android which you might already have used at Remote Chaos Experience (rC3), Chaos Communication Congress (3xC3), Chaos Communication Camp, [DiVOC](https://play.google.com/store/apps/details?id=info.metadude.android.divoc.schedule), MRMCD, FrOSCon, GPN, Datenspuren, FIfFKon, FOSDEM, FOSSGIS and other events.\r\n\r\nIn this talk you will get to know not only the details of the programming work but also all the other topics which require time and engagement to run this project such as translation, design, documentation, advertisement, outreach, communication with users.\r\n\r\nCurrently, the project is run by one person with occasional - but very welcome - contributions in the form of code reviews, translation, pull requests or just time to discuss ideas. There is essential no financial backing for the project - all work is done in personal spare time. A few people are giving money via [GitHub Sponsors](https://github.com/sponsors/johnjohndoe) - thank you!\r\n\r\nAfter this talk and Q&A you will have solid understanding of how you can contribute to the project, shape its future or finance its development.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 47,
+                    "code": "3VHUTM",
+                    "public_name": "tbsprs",
+                    "biography": "I am the maintainer of the [EventFahrplan](https://github.com/EventFahrplan/EventFahrplan) project for Android. I love opensource. I am a big open data enthusiast and part of the [Code for Germany lab in Berlin](https://codefor.de/berlin/).",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 7,
+                "guid": "28904449-d357-566f-97ef-86ade89f9395",
+                "logo": "",
+                "date": "2021-04-03T15:00:00+02:00",
+                "start": "15:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-7-failed-inklusion-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MHNXMW/",
+                "title": "failed: [Inklusion]",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Menschen mit Behinderungen haben ein in Deutschland anerkanntes Menschenrecht auf Inklusion. Dass das hier immer noch nicht funktioniert, ist vielen nicht bewusst - was auch an zu wenig Kontrolle durch die Medien liegt. Woran das wohl liegen mag?",
+                "description": "In seinem Vortrag \"failed: [Empathy]\" hat betalars aufzeigen wollen, wie Unterschiede in den Gedanken- und Gef\u00fchlswelten zu autistischen Menschen Medienschaffende davon abhalten diese gut zu repr\u00e4sentieren. So entstehen Darstellungen, die Vorurteile bekr\u00e4ftigen, wegen denen autistische Menschen von gesellschaftlicher Teilhabe ausgeschlossen werden.\r\n\r\nIn der urspr\u00fcnglich wohlwollend und allm\u00e4hlich ver\u00e4rgert kritischen Auseinandersetung mit dem ZDF ist klar geworden: eigentlich sind die entmenschlichenden Darstellungen einer autistischen Figur nur ein Symptom eines noch viel gr\u00f6\u00dferen Problems:\r\n\r\nDas ZDF setzt wie fast alle anderen Medienunternehmen auch das Grundrecht auf Inklusion nicht um.\r\n\r\nWie der Status von Inklusion in den Medien ist, wo es gut funktioniert, was ihr als Betroffene und Allys unternehmen k\u00f6nnt und, warum sich das ZDF, als wichtiger Partner der \"Aktion Mensch\"  eigentlich genauso anstellt, wie alle anderen auch, beleuchtet mein Talk.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 26,
+                    "code": "FMTJSV",
+                    "public_name": "betalars",
+                    "biography": "Hi, ich bin ein queerer, autistischer Hacker und 3D-Artist. Ich t\u00fcftel in der Orga rum und besch\u00e4ftige mich viel mit Medienethik.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 19,
+                "guid": "ff642b9a-d92b-5f28-9ef3-553699743a10",
+                "logo": "",
+                "date": "2021-04-03T16:10:00+02:00",
+                "start": "16:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-19-hands-on-tutorials-mit-virtuellen-desktops-in-der-cloud",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/KDHE87/",
+                "title": "Hands-On Tutorials mit Virtuellen Desktops in der Cloud",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Vortr\u00e4ge \u00fcber spannende Themen im Netz zu halten oder selber anzuschauen ist toll. Dinge gemeinsam zu entdecken und auszuprobieren macht aber oft noch mehr Spa\u00df. In diesem Vortrag werdet ihr erfahren, wie Hands-On Tutorials mit 10-15 Teilnehmern auch auf Online Veranstaltungen wie der Reboot to Respawn durchgef\u00fchrt werden k\u00f6nnen: Mit virtuellen Linux Desktops in der Cloud und anderen Open Source Tools. \r\n\r\nIm Vortrag werde ich zeigen, wie mit Cloud basierten Desktops jedem Teilnehmer eine vorkonfigurierte und identische Umgebung f\u00fcr eine Hands-On Session zur Verf\u00fcgung gestellt werden kann und somit alle sofort startbereit sind. Hat ein Teilnehmer Probleme w\u00e4hrend des Tutorials, kann der Organisator sich jederzeit auf den Desktop jedes Teilnehmers dazuschalten, 'sehen' wo das Problem liegt, und weiterhelfen. Da die Desktops in der Cloud sind, macht es dann auch technisch keinen Unterschied mehr, ob sich die Teilnehmer im gleichen Raum befinden oder sich an unterschiedlichen Orten f\u00fcr den gemeinsamen 'Spa\u00df am Ger\u00e4t' virtuell zusammenfinden.\r\n\r\nTechnische Details gibt es auch schon vor dem Vortrag hier: https://blog.wirelessmoves.com/2021/01/running-ubuntu-20-04-with-a-gui-in-the-cloud.html",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 39,
+                    "code": "KPM8HK",
+                    "public_name": "heurekus",
+                    "biography": "Nerd in den weiten des Internets.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 22,
+                "guid": "f8697974-8e7b-5627-87e1-6fd40c49b9a3",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/LQ8JFE/gynstuhl_HYm4zrS.jpg",
+                "date": "2021-04-03T17:20:00+02:00",
+                "start": "17:20",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-22-gynformation-bringt-gynkologische-selbstbestimmung-ins-netz",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/LQ8JFE/",
+                "title": "Gynformation bringt gyn\u00e4kologische Selbstbestimmung ins Netz",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Wir berichten \u00fcber die Entstehung des Kollektivs, von der Idee zur Umsetzung und warum wir finden, dass es gerade im Bereich der Gyn\u00e4kologie kollektiven Empowerments bedarf und warum eine trans-inklusive, queer-feministische, antirassistische und antiableistische Haltung dabei so wichtig ist.\r\nZentral f\u00fcr unsere Arbeit ist das Verst\u00e4ndnis als Kollektiv. Schon beim ersten Treffen haben wir gemerkt, dass wir ganz unterschiedliche Kompetenzen mitbringen, die das Projekt voranbringen und wir unglaublich viel voneinander lernen k\u00f6nnen. In unserem Panel wollen wir Einblick in unsere Arbeit geben und erz\u00e4hlen, welche Themen uns in den letzten 1,5 Jahren besonders besch\u00e4ftigt haben.\r\nDen Code f\u00fcr die Web-Plattform entwickeln wir St\u00fcck f\u00fcr St\u00fcck weiter. Dabei ist f\u00fcr uns wichtig dass sich unsere Haltung auch im Code wiederfindet, wir gemeinsam Entscheidungen zur Technik treffen, selbstbestimmt damit umgehen und datensparsam arbeiten. Auch diesen Aspekt wollen wir diskutieren.",
+                "description": "Gynformation ist ein queer-feministisches Kollektiv, das sich aus Patient*innen-Perspektive f\u00fcr Selbstbestimmung bei gyn\u00e4kologischen Behandlungen einsetzt.\r\nAuf unserer Webseite entsteht auf Basis von Patient*innen-Empfehlungen ein bundesweites Verzeichnis von gyn\u00e4kologisch behandelnden Personen, die diskriminierungsfrei arbeiten, ein Bewusstsein f\u00fcr Konsens bei der Behandlung haben und Informationen und Raum f\u00fcr selbstbestimmte Entscheidungen geben. So finden sich in unserem Verzeichnis zum Beispiel Informationen dar\u00fcber ob Praxisr\u00e4ume barrierefrei sind, ob trans Personen in einer Praxis sensiblen Umgang erfahren oder ob Schwangerschaftsabbr\u00fcche angeboten werden. \r\nNeben dem Empfehlungsverzeichnis entsteht eine Sammlung von inhaltlichen Ressourcen, die Ansto\u00df geben wollen, sich Wissen \u00fcber Gyn\u00e4kologie und den eigenen K\u00f6rper anzueignen.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 43,
+                    "code": "7NGZ9Q",
+                    "public_name": "C_ristina",
+                    "biography": "Geekfem Haeckse, IT-SiBe, Datenschutz, Cryptoparty",
+                    "answers": []
+                  },
+                  {
+                    "id": 75,
+                    "code": "PMLGLR",
+                    "public_name": "Kollektiv f\u00fcr gyn\u00e4kologische Selbstbestimmung",
+                    "biography": "Wir sind eine Gruppe queer-feministischer Aktivist*innen, die aus Patient*innen-Perspektive f\u00fcr Selbstbestimmung im Kontext gyn\u00e4kologischer Behandlungen eintreten.\r\n\r\n\r\nWir k\u00e4mpfen einerseits um das Informationsrecht zum Thema Schwangerschaftsabbruch \u2013 dies ist ein wesentlicher Grund f\u00fcr unsere Initiative. Denn wir brauchen nicht nur einfach zug\u00e4ngliche und \u00fcbersichtliche Informationen dar\u00fcber, wer Abbr\u00fcche anbietet, sondern auch dar\u00fcber, mit welcher Methode und zu welchem Preis die Behandlung durchgef\u00fchrt wird und ob ein respektvoller und umsichtiger Umgang zu erwarten ist. Das gleiche gilt aber auch f\u00fcr andere gyn\u00e4kologische Behandlungen, die teilweise zu unterschiedlichen Preisen angeboten werden, die bestimmten Personengruppen schwer zug\u00e4nglich sind oder manchmal sogar verweigert werden, oder \u00fcber die nicht vorurteilsfrei beraten wird.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 46,
+                "guid": "71137166-c6c2-56ef-a6b3-cc2113cf8963",
+                "logo": "",
+                "date": "2021-04-03T18:30:00+02:00",
+                "start": "18:30",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-46-c3-news-show-die-2-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/WZTGVU/",
+                "title": "C3 News Show, die 2.",
+                "subtitle": "",
+                "track": "Other",
+                "type": "C3 News Show",
+                "language": "en",
+                "abstract": "C3 News Show",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 86,
+                    "code": "VCVN33",
+                    "public_name": "C3 news show",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 14,
+                "guid": "8e6a716a-07e3-525f-a0c8-7e87cc297402",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/TBWCCJ/heyalter-cyan_6NnPhGf.jpg",
+                "date": "2021-04-03T20:00:00+02:00",
+                "start": "20:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-14-hey-alter-alte-rechner-fr-junge-leute-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/TBWCCJ/",
+                "title": "HEY, ALTER! Alte Rechner f\u00fcr Junge Leute!",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Abgeschrieben, aussortiert und weggestellt. Funktionieren aber noch: Laptops, Computer oder Tablets. Genau die werden dringend gebraucht \u2013 von Sch\u00fclerinnen und Sch\u00fclern, die keinen eigenen Rechner haben. Gemeinsam mit Partnern, Unterst\u00fctzern und Spendern sorgen wir daf\u00fcr, dass sie einen bekommen. Damit am Ende alle einen haben. Wir sammeln diese alten Rechner bei Unternehmen, Institutionen und von privaten Haushalten, machen sie fit und verteilen sie an Sch\u00fclerinnen und Sch\u00fcler, die bislang nicht oder nur eingeschr\u00e4nkt an e-Learning oder Homeschooling teilnehmen konnten. So wird Kindern und Jugendlichen zu mehr Chancengleichheit verholfen. Das ist die Idee von HEY, ALTER! Alte Rechner f\u00fcr junge Leute. Ganz einfach.",
+                "description": "Corona hat die Schw\u00e4chen und Vers\u00e4umnisse der Digitalisierung in Deutschland \u2013 nicht nur in der Bildung \u2013 voll und ganz ans Licht gebracht. Es mangelt an allem: Infrastruktur, Bandbreite, aber auch Wissen und Erfahrung fehlen. Und am schmerzlichsten fehlt es denen die bereits wenig haben. In Braunschweig entstand daher aus einer einmaligen Aktion, die eine Hand voll bed\u00fcrftige Sch\u00fcler mit Ger\u00e4ten aus Unternehmensbest\u00e4nden versorgt hat, die Idee zu HEY ALTER!\r\n\r\nHEY, ALTER! hat es sich zur Aufgabe gemacht die abgeschriebenen und aussortierten Ger\u00e4te aus Firmen einzusammeln, fit zu machen und an Sch\u00fcler*innen auszugeben die diese dringend ben\u00f6tigen \u2013 ohne gro\u00dfe B\u00fcrokratie. Auf diese Weise gibt HEY, ALTER! den alten Ger\u00e4ten, die sonst verschrottet worden w\u00e4ren, ein zweites Leben. Wir vermeiden so Tonnen von Elektroschrott und tragen zu einem nachhaltigeren Umgang mit der Hardware der Firmen bei. Den Sch\u00fclern verhelfen diese Ger\u00e4te zu mehr Teilhabe und Chancengleichheit die mit dem Distanzunterricht jetzt mehr als sonst bedroht ist. \r\n\r\nHEY, ALTER! Gibt es nun schon in knapp 20 St\u00e4dten und Kreisen quer durch Deutschland und es werden mit rasanter Geschwindigkeit immer mehr! Und das ist kein Wunder, denn das Konzept von HEY, ALTER! ist eine Art \u201csoziales Franchise\u201d. Dies macht es neuen lokalen Initiativen einfach das Konzept zu \u00fcbernehmen und lokal zu implementieren. Innerhalb eines Tages k\u00f6nnen alle Zug\u00e4nge und Infos bereit gestellt werden die eine neue Initiative ben\u00f6tigt um zu starten! HEY, ALTER! ist eine gesch\u00fctzte Marke die den lokalen Initiativen kostenlos zur Nutzung bereitgestellt wird. Diese Marke macht gerade quer durch Deutschland von sich Reden. Das macht es f\u00fcr Unternehmen unglaublich attraktiv eine Spende an uns mit unserem Logo und Fotos zu bewerben. Social-Media-Posts der Spenden und Berichte in Zeitung, Radio und Fernsehen verhelfen den Spendern zu mehr Reichweite. F\u00fcr die Spender ist dies eine kostenlose Werbung mit sozialem Engagement eine Win-Win-Situation f\u00fcr Unternehmen, die Umwelt, die Schulen, aber vor allem f\u00fcr die Sch\u00fcler*innen. \r\n\r\nIn unserem Talk geben wir Euch Einblicke in unsere Arbeitsabl\u00e4ufe und zeigen, wie mit sozialem Franchising gute Ideen schnell und einfach verbreitet werden k\u00f6nnen.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 33,
+                    "code": "QN8WS8",
+                    "public_name": "Daniel Marks",
+                    "biography": "Hat die lokale HEY, ALTER! Initiative in Solingen mit gegr\u00fcndet und arbeitet als Cloud Architect.",
+                    "answers": []
+                  },
+                  {
+                    "id": 34,
+                    "code": "PQFL7S",
+                    "public_name": "Lukas Tyburzy",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 1,
+                "guid": "6b36f107-b08d-5bc9-8c3e-80b7638e2d91",
+                "logo": "",
+                "date": "2021-04-03T21:10:00+02:00",
+                "start": "21:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-1-emoji-domains-and-how-wonderfully-broken-they-are",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/3MXRDE/",
+                "title": "Emoji domains and how wonderfully broken they are",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "Did you know that you can get a domain that contains an emoji?  \r\nWell, technically speaking you can't because domains only allow a very limited character set.  \r\n \r\nHowever, there is a workaround to that called Punycode.  \r\nYou can encode non-supported characters to punycode and allow people to visit your site by entering those characters in their URL bar -the browser will take care of encoding them.\r\n\r\nSounds good, doesn't it?  \r\nWell, unicode is more complex than one would think; especially the parts around emoji are.  \r\nThat means encoding those characters isn't easy and a lot goes wrong.\r\n\r\nI want to showcase some ways in that emoji/ punycode domains are broken, how you can have fun with them and why you should actually just avoid them for anything you want to use productively.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 15,
+                    "code": "DMUDXQ",
+                    "public_name": "dysphoricUnicorn",
+                    "biography": "I'm a full stack developer with a morbid curiosity about brokenness in the technology we use every day.\r\n\r\nWhen I'm not tinkering with that kind of stuff, I try to make the web more accessible by building accessible web sites and telling others how to do that.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 35,
+                "guid": "6ad9fa99-5336-5d4e-8edd-1b9da3fbb47a",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/DGRKMU/s2m-03-500_cm3aiKT.png",
+                "date": "2021-04-03T22:15:00+02:00",
+                "start": "22:15",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-35-das-netz-als-inspirationsquelle-fr-kunst-werke-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DGRKMU/",
+                "title": "Das Netz als Inspirationsquelle f\u00fcr Kunst(werke)",
+                "subtitle": "",
+                "track": "Arts & Culture",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "ZLDKM - Zwei Leute, die Kunst machen. Im Zuge der COVID-19-Pandemie setzten sie sich in einen virtuellen Thinktank und \u00fcberlegten wie (neue) Kunst mit den gegebenen Einschr\u00e4nkungen einer globalen Pandemie entstehen kann. Aus den ersten \u00dcberlegungen entstand ein Generator, der sich vom Internet inspirieren l\u00e4sst und Kunstwerke schafft. Idee, Konzept, Umsetzung und Ergebnisse sind Inhalt des Vortrages.",
+                "description": "ZLDKM- Zwei Leute, die Kunst machen. Sie begegneten sich 2002 auf dem 19C3 im Haus am K\u00f6llnischen Park in Berlin und blieben seit dem in Kontakt, arbeiteten zusammen, setzten Projekte um und sie machen Kunst. Bis heute. Durch die Einschr\u00e4nkungen der COVID-19-Pandemie war eine Zusammenarbeit im alten Ma\u00dfe nicht m\u00f6glich, also setzten sie sich in einen virtuellen Thinktank und \u00fcberlegten. Etwas Neues sollte entstehen, als Intervention und als Test, ob es m\u00f6glich ist, mit den gegebenen Einschr\u00e4nkungen Kunst zu schaffen, kreativ zu sein, neue Ideen und Innovationen zu entwickeln. Im Fokus steht die Kunst als unbedingtes Ergebnis. Weniger das wer und das wie. Kunst als Motor der Ver\u00e4nderung, Kunst als Inspiration, Kunst als Spiegel. Kunst als \u00dcberbr\u00fcckungshilfe, die kein versteckter Kredit ist, den wir in der Zukunft teuer bezahlen m\u00fcssen, sondern Kunst als echte Investition f\u00fcr eine Zukunft in der wir leben wollen.\r\n\r\nAus den ersten \u00dcberlegungen entstand Software die zum Beispiel aus unerw\u00fcnschter E-Mail Werbung (Spam) oder aus Netzwerkverkehr (Portscans), der Zeit und statistischen Daten eines virtualisierten Computers im Internet, Kunstwerke im Piet Mondrian Stil generiert. Warum Piet Mondrian? Mondrian geh\u00f6rte mit seinem sp\u00e4teren Werk zu den Begr\u00fcndern der abstrakten Malerei. Die streng geometrischen Gem\u00e4lde wurden oft in Kunst, Architektur, Mode, Werbung und Popul\u00e4rkultur zitiert. Die orthogonale Bildstruktur mit den schwarzen Linien und den Prim\u00e4rfarben Rot, Gelb und Blau sowie den Nicht-Farben Schwarz, Wei\u00df und Grau tauchten in Mondrians Bildern ab etwa 1921 auf. 100 Jahre sp\u00e4ter nehmen wir diese Art der Komposition auf und experimentieren damit. Mondrians Werke wurden durch ihn, sein Umfeld oder seine Wahrnehmung inspiriert. Wie gro\u00df welche Fl\u00e4che wird oder welche Farbe bzw. Nicht-Farbe eine Fl\u00e4che bekommt, wurde durch ihn bewusst oder unbewusst entschieden. Seine Kompositionen hingen von Faktoren ab, die uns nicht bekannt sind und die Mondrian selbst vielleicht auch nicht bekannt waren. Wir versuchen nun das Internet, als Inspirationsquelle einzusetzen und die Werke so entstehen zu lassen.\r\n\r\nIn dem Vortrag wollen wir die Idee, das Konzept, die Umsetzung und erste Ergebnisse zeigen.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 53,
+                    "code": "L787A8",
+                    "public_name": "ST (ZLDKM)",
+                    "biography": "ST ist K\u00fcnstler. Er hat eine Ausbildung zum Energieelektroniker absolviert, Informatik, Physik, generalistisches Management sowie bildende Kunst studiert und arbeitet neben seinen Kunstprojekten freiberuflich als Agile Coach, Scrum Master, Datenschutzbeauftragter oder IT-Manager.\r\n\r\nSeit 2000 treibt er sich im Umfeld des Chaos Computer Club und den entsprechenden Veranstaltungen herum. Er ist Mitgr\u00fcnder der BlinkenArea und seit 2003 Teil des Eventphone Teams.",
+                    "answers": []
+                  },
+                  {
+                    "id": 54,
+                    "code": "LXGWZW",
+                    "public_name": "Stefan (ZLDKM)",
+                    "biography": "Stefan ist Technik-Enthusiast. Er hat Informatik und Elektrotechnik studiert und eine Medienfassade entwickelt. Unter anderem durch Blinkenlights ist er von der Technik auch zur Kunst gekommen und hat an Ausstellungen der K\u00fcnstlergruppe BBM mitgearbeitet.\r\n\r\nSeit 2000 treibt er sich im Umfeld des Chaos Computer Club und den entsprechenden Veranstaltungen herum. Dort hat er schon ein paar Vortr\u00e4ge und Workshops gehalten, z.B. zu den Themen USB, Mikrocontroller, L\u00f6ten und Lichtkunst.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 52,
+                "guid": "82d9b80d-b741-5616-9b1a-90ac34d34523",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/7EDPBT/LENNI_L8Q7Mik.jpg",
+                "date": "2021-04-03T23:00:00+02:00",
+                "start": "23:00",
+                "duration": "01:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-52-leni",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/7EDPBT/",
+                "title": "LENI",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "de",
+                "abstract": "LENI",
+                "description": "Treibende Basslines shakern ausgelassen mit Percussions. Sanfte Vocals liebkosen mit sch\u00f6nen Melodien. Ungef\u00e4hr so kann man LENI\u2019s Stil beschreiben. Vielleicht ist es aber auch doch noch viel mehr als das? \r\nEins steht fest - im Downtempo f\u00fchlt sie sich angekommen.\r\nSo richtig Zuhause ist LENI in Leipzig, wo sie am liebsten mit ihrer [\u0254st\u02c8\u025bnd]-Crew unterwegs ist. \r\nDie Liebe zur elektronischen Musik und die Verbindung in die Szene waren schon immer da. Also kein Wunder, dass sie auch selbst leidenschaftlich gerne hinter den Decks steht und mit ihrem Sound verzaubert.\r\n\r\nhttps://soundcloud.com/lenilow",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 80,
+                    "code": "Y3LFFF",
+                    "public_name": "LENI",
+                    "biography": "Treibende Basslines shakern ausgelassen mit Percussions. Sanfte Vocals liebkosen mit sch\u00f6nen Melodien. Ungef\u00e4hr so kann man LENI\u2019s Stil beschreiben. Vielleicht ist es aber auch doch noch viel mehr als das? \r\nEins steht fest - im Downtempo f\u00fchlt sie sich angekommen.\r\nSo richtig Zuhause ist LENI in Leipzig, wo sie am liebsten mit ihrer [\u0254st\u02c8\u025bnd]-Crew unterwegs ist. \r\nDie Liebe zur elektronischen Musik und die Verbindung in die Szene waren schon immer da. Also kein Wunder, dass sie auch selbst leidenschaftlich gerne hinter den Decks steht.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 49,
+                "guid": "8767290c-3d68-5c56-ad7e-e6158d496123",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/VRTJHA/4916_1087719708461_6369179_n_T8oHu3q.jpg",
+                "date": "2021-04-04T00:00:00+02:00",
+                "start": "00:00",
+                "duration": "02:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-49-radical-ambient-inferno-w-maya-dj",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/VRTJHA/",
+                "title": "Radical Ambient Inferno w/ Maya DJ",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "en",
+                "abstract": "Maya ist DJ, Film- und Fotok\u00fcnstlerin. Ihre musikalischen Wurzeln liegen irgendwo zwischen Disco und Punk. Die musikalische Sozialisation begann in den 70er Jahren im Plattenladen ihres Vater. Sie lebt und arbeitet seit 1989 in Frankfurt am Main und fing zu dieser Zeit auch mit dem Auflegen an. Seit 1996 ist sie Sendungsmacherin bei Radio X und dort auch Bookerin fu\u0308r die x-fade Dj Night bei Radio X.\r\n\r\nIhr musikalisches Spektrum ist weit gef\u00e4chert. Es reicht von Ambient, Elektro, House, Disco, Hip Hop, Trip Hop, Electonica, Filmmusik und Scores bis hin zu poppigem Kitschquatsch. Auch gut zu erahnen anhand einiger Titel ihrer Radiosendungen: \u201eMUSIC FOR FILMS\u201c, \u201eThe Art Of Quiet Fighting\u201c, \u201eRadical Ambient Inferno\u201d, \u201eMaya\u2019s Super Scientific Playroom\u201c, \u201eHirsch & Stille \u2013 Discokrach\u201c und \u201eWas ist Ambient?\u201c.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 71,
+                    "code": "RSWEMW",
+                    "public_name": "Antje-Maya Hirsch",
+                    "biography": "Maya ist DJ, Film- und Fotok\u00fcnstlerin. Ihre musikalischen Wurzeln liegen irgendwo zwischen Disco und Punk. Die musikalische Sozialisation begann in den 70er Jahren im Plattenladen ihres Vater. Sie lebt und arbeitet seit 1989 in Frankfurt am Main und fing zu dieser Zeit auch mit dem Auflegen an. Seit 1996 ist sie Sendungsmacherin bei Radio X und dort auch Bookerin f\u00fcr die x-fade DJ Night.\r\n\r\nIhr musikalisches Spektrum ist weit gef\u00e4chert. Es reicht von Ambient, Elektro, House, Disco, Hip Hop, Trip Hop, Electonica, Filmmusik und Scores bis hin zu poppigem Kitschquatsch. Auch gut zu erahnen anhand einiger Titel ihrer Radiosendungen: \u201eMUSIC FOR FILMS\u201c, \u201eThe Art Of Quiet Fighting\u201c, \u201eRadical Ambient Inferno\u201d, \u201eMaya\u2019s Super Scientific Playroom\u201c, \u201eHirsch & Stille \u2013 Discokrach\u201c und \u201eWas ist Ambient?\u201c.\r\n\r\nIhre Wirkungsst\u00e4tten sind unz\u00e4hlige Clubs, Bars, Raves, Galerien, Museen, Shops, Openings und vieles mehr. Hier ein kleiner alphabetischer Auszug: Berghain (Berlin), Deutsches Filmmuseum (Frankfurt), Dorian Gray (Frankfurt), Galerie Neu (Berlin), Gaskessel (Biel), Grodoonia (Z\u00fcrich), Institut f\u00fcr vergleichende Irrelevanz (Frankfurt), Ostklub (Frankfurt), Ultraschall (M\u00fcnchen), Reitschule (Bern), Robert Johnson (Offenbach), Schauspiel (Frankfurt), Schirn Kunsthalle (Frankfurt), Stammheim (Kassel), Tresor (Berlin), Ultraschall (M\u00fcnchen), WMF (Berlin), XS (Frankfurt), Yachtklub (Frankfurt)\u2026",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 50,
+                "guid": "812229e5-f2c3-54f4-89f6-d8ace06a81fd",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/DMREWM/LadyBird_aka_C.J.Parker_Bild1_JbWTdsB.jpg",
+                "date": "2021-04-04T02:00:00+02:00",
+                "start": "02:00",
+                "duration": "01:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-50-dj-ladybird",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DMREWM/",
+                "title": "DJ LadyBird",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "de",
+                "abstract": "\"Floor Play - Pleasure Taste\"",
+                "description": "DJ LadyBird:\r\nBorn in Vienna / Austria in the 80ies LadyBird grew up with Jungle, Drum\u00b4n Bass and 2Step on the one hand and on the other hand was influenced by the vienna downtempo style from Kruder & Dorfmeister. In early 2000 her student job was DJing and she continued djing on radio shows. On a trip to London in the early 2000 she was exposed to the UK Dance Music - since then she is hooked on Dance- and House Music. Since 2009 she is influenced by the Berlin Club scene and actually spotted on House, LofiHouse, TechHouse, Bass, Garage with a lot of Soul and Funk inside!\r\nBe curious!!",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 73,
+                    "code": "KMJDRD",
+                    "public_name": "DJ LadyBird",
+                    "biography": "https://soundcloud.com/lady_bird_music\r\nhttps://www.mixcloud.com/Lady_Bird/",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }
+            ],
+            "Self-organized": [
+              {
+                "id": 183366,
+                "guid": "a1f8c3ac-3669-57b3-96e7-daa9139a8cca",
+                "date": "2021-04-03T13:10:00+02:00",
+                "start": "13:10",
+                "duration": "0:30",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1007-state_of_eventfahrplan_2021_q_a",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "State of EventFahrplan 2021 Q&A",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Question and answers session shortly after the talk. The link to the virtual room will be posted early enough here.",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "tbsprs"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9E8ZNZ/",
+                    "title": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/9E8ZNZ/"
+                  }
+                ]
+              },
+              {
+                "id": 800853,
+                "guid": "8008ae53-a371-50c5-9125-960be68a1455",
+                "date": "2021-04-03T14:00:00+02:00",
+                "start": "14:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1008-haccer_seeks",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "haccer seeks",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "hackers against climate change"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "hacc Mumble",
+                    "title": "hacc Mumble"
+                  }
+                ]
+              },
+              {
+                "id": 755955,
+                "guid": "a7ca5dfb-a59f-5f53-8c57-be854cc773b5",
+                "date": "2021-04-03T14:00:00+02:00",
+                "start": "14:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1009-einfuehrung_in_bootstrap",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Einf\u00fchrung in Bootstrap",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Einf\u00fchrung in Frontend Layout mit Bootstrap",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "C_ristina"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Magic Margaret",
+                    "title": "Magic Margaret"
+                  }
+                ]
+              },
+              {
+                "id": 575351,
+                "guid": "b5753511-7ebe-5c32-9814-b1d5595f68aa",
+                "date": "2021-04-03T16:00:00+02:00",
+                "start": "16:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1010-rust_gamedev_engel_simulator",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Rust Gamedev: Engel Simulator",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Wir zeigen unser Spiel, was wir mit Rust und WebAssembly f\u00fcr den rC3 gebaut haben. Kurze Einf\u00fchrung mit anschlie\u00dfender Hack-Session, in der wir gemeinsam das Spiel erweitern.",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "rahix"
+                  },
+                  {
+                    "id": 0,
+                    "public_name": "Anon"
+                  },
+                  {
+                    "id": 0,
+                    "public_name": "neosam"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "https://engel-simulator.club",
+                    "title": "https://engel-simulator.club"
+                  },
+                  {
+                    "url": "Jitsi TBA",
+                    "title": "Jitsi TBA"
+                  }
+                ]
+              },
+              {
+                "id": 651237,
+                "guid": "65fd12a3-d703-5a2a-9bd9-9142d214511c",
+                "date": "2021-04-03T17:00:00+02:00",
+                "start": "17:00",
+                "duration": "2:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1011-smd_soldering_ticks_tricks",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "SMD Soldering Ticks & Tricks",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Ein Live-Stream bei dem ich ein paar Reworking Tricks zeige. Also Bauteile ausl\u00f6ten und wieder einl\u00f6ten. Dazu Infos zum Prozess, Werkzeugen und Hilfsmittel. Interaktiv mit Q&A, ich hab viele Boards da anhand derer ich was zeigen kann.\nIch werde live eine defekten USB-Port an einem Bluetooth-Lautsprecher tauschen. Incl. allem Versagen",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "cpresser"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "BBB Raum",
+                    "title": "BBB Raum"
+                  }
+                ]
+              },
+              {
+                "id": 189271,
+                "guid": "1e89f271-df39-51b6-8616-fbea87bfb0dc",
+                "date": "2021-04-03T19:00:00+02:00",
+                "start": "19:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1012-mobilfunk_q_a_2",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Mobilfunk Q&A 2",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "F\u00fcr viele ist Mobilfunk eine Blackbox mit Empfangsbalken. Hier k\u00f6nnt ihr alle eure Fragen zum Thema Mobilfunk loswerden. Spontane Diskussionen zu allen relevanten Themen sind auch Willkommen!",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "LTE_Max"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Westwoodlabs Mumble",
+                    "title": "Westwoodlabs Mumble"
+                  }
+                ]
+              },
+              {
+                "id": 405168,
+                "guid": "40c5d168-bdc9-53a5-b9c6-45fa7fc2a922",
+                "date": "2021-04-03T19:00:00+02:00",
+                "start": "19:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1013-austausch_zu_adhs",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Austausch zu ADHS",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Austausch von FNTI-Betroffenen mit ADHS.",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "tonihds"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Awesome Ada",
+                    "title": "Awesome Ada"
+                  }
+                ]
+              },
+              {
+                "id": 603237,
+                "guid": "603e2ecb-3795-53c6-9f94-0b9f4527b3fc",
+                "date": "2021-04-03T20:30:00+02:00",
+                "start": "20:30",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1014-feministischer_buchclub_fuer_maenner_und_alle_anderen",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Feministischer Buchclub f\u00fcr M\u00e4nner und alle anderen",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Wir reden \u00fcber Literatur, Filme etc., die wir erkenntnisreich finden. Bringt eure eigenen Tipps mit!",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "xian"
+                  },
+                  {
+                    "id": 0,
+                    "public_name": "melzai"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "BBB",
+                    "title": "BBB"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 3,
+          "date": "2021-04-04",
+          "day_start": "2021-04-04T04:00:00+02:00",
+          "day_end": "2021-04-05T03:59:00+02:00",
+          "rooms": {
+            "Piscopia": [
+              {
+                "id": 36,
+                "guid": "7c267ebb-a45b-5a64-ae01-6227c5dd2c9f",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/GSDGXP/logga-reko-cirkel_kJXJkX5.jpg",
+                "date": "2021-04-04T10:20:00+02:00",
+                "start": "10:20",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-36-reko-lets-reboot-agriculture",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/GSDGXP/",
+                "title": "Reko, lets reboot agriculture",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (10 minutes + Q&A)",
+                "language": "en",
+                "abstract": "Do you know where your food is coming from? Who grew your cucumber, how much space did the chickens have? How can we support rural arrears? Make changes so it is possible to live and work on the countryside while also ensuring food security and a sustainable reboot for agriculture? Challenging the big food factories and supporting biodiversity? The skandinvian grass root movement reko has some answers and hopes to inspirate. A short story of how to spark change to a small rural community.",
+                "description": "Reko circles \r\nThe idea came from Finland where the first circles have existed since 2013. Reko means rej\u00e4l konsumption which translates to real consumption. The idea is to bring together producers and consumers for food and raw products. Directly without hands in the middle. Locally produced, bought by the people that will eat it. Meeting each other for the exchange of products. Reko supports values like local food production, combined with trust, a passion for exciting ingredients and a love for small scale production. The circles are open for everyone. Through direct contact between consumers and producers a reliability is built. Consumers can ask detailed questions about the ways their food is produced. They get a different level of appreciation really knowing where it is coming from.It makes them able to buy products that are not available in stores and getting products as fresh as possible. Small scale producers can play along with their strengths like educating about their products, trying out new things and handling overproduction better. \r\nHow does it work in practice? \r\nI heard about the Reko movement in 2018. I lived in the countryside outside a small town. A place not known for sustainable change or innovation. But I had heard about some small farms that had been started, exploring more sustainable ways of farming. Though these spots existed there was a connection missing with the small town and the people living there. So together with a neighbour we started Reko Ring H\u00f6rby.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 45,
+                    "code": "ZYYSF8",
+                    "public_name": "Julia Westberg",
+                    "biography": "I\u00b4m a environmental scientist. Living on the countryside in the south of Sweden. \r\nI am passionate about change and connecting people.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 4,
+                "guid": "632e0463-348e-5654-930a-c88654d0f386",
+                "logo": "",
+                "date": "2021-04-04T11:10:00+02:00",
+                "start": "11:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-4-repair-for-future",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SMHXFD/",
+                "title": "Repair for Future",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Wie wir in Pandemiezeiten weiter gemeinsam reparieren",
+                "description": "Die Repair-Caf\u00e9-Szene wurde auf ihrem H\u00f6hepunkt des gesellschaftlichen Interesses von der Covid-Pandemie kalt erwischt. Schnell er\u00f6ffneten jedoch einige lokale Gruppen Online-Reparatursprechstunden. Bei einer bundesweiten Schwerpunktwoche Anfang Februar fanden sie unter reger Beteiligung aus dem Netzwerk Reparatur-Initiativen ihren bisherigen H\u00f6hepunkt.\r\nAuch die EU wartet mit einigen vielversprechenden Neuerungen auf.\r\nIch gebe einen \u00dcberblick zu Erfahrungen und Grenzen von virtuellen Repair-Caf\u00e9s und die aktuellen politischen Entwicklungen zum Thema Reparierbarkeit.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 21,
+                    "code": "8QFSVB",
+                    "public_name": "Andreas Frisch",
+                    "biography": "Andreas aka \"Fraxinas\" in the FOSS world, graduated from the University of Applied Sciences in Aschaffenburg with a degree in electrical engineering and information technology. Specialized in Embedded Linux, GStreamer Multimedia Programming and Streaming. Regular speaker at Conferences across the world. Founding Member of Aschaffenburg's Repair Caf\u00e9 and regular TV appearance as the \"Repairfox\" in Germany's ARD Buffet. Passionately tinkering in the Schaffenburg Hacker/Makerspace. LGBT Youth activist, musician and Japanese learner.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 24,
+                "guid": "7cebadd7-93a3-5519-b7b5-247d63a1024e",
+                "logo": "",
+                "date": "2021-04-04T12:20:00+02:00",
+                "start": "12:20",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-24-hydrogen-beyond-the-hype",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/3ASR88/",
+                "title": "Hydrogen beyond the hype",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "Hydrogen is a crucial piece of a future climate neutral industry and lately gained a lot of attention. The talk will separate hype from real need for the smallest molecule and we will look at why will likely see hydrogen-based steel plants in the future, but hydrogen-based cars and heaters will play a minor role at best .",
+                "description": "The EU recently published a Hydrogen roadmap, many countries, Germany included, have their own hydrogen strategies. Many hydrogen-based pilot projects have been announced lately. Behind the push for hydrogen is a mixture of lobbying interests - primarily by the natural gas industry - and real concern about decarbonizing certain industries.\r\n\r\nThe talk will give an overview on hydrogen and the current hype. Today hydrogen is usually produced with natural gas, but in the future green hydrogen made with renewable energy and electrolysis will hopefully take its place. There is an emerging consensus that hydrogen will play its role in certain areas like the steel and chemical industry, but it is not the climate panacea that some think it is. We will also detour to some of the molecules that can be made from hydrogen and learn why future ships may run on Ammonia.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 30,
+                    "code": "MFULFE",
+                    "public_name": "Hanno B\u00f6ck",
+                    "biography": "Hanno is a Journalist and IT security professional. He has been giving talks on previous CCC events on a variety of topics.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 2,
+                "guid": "bf1a5215-b6fe-5008-ae88-3d56e6883d3a",
+                "logo": "",
+                "date": "2021-04-04T15:00:00+02:00",
+                "start": "15:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-2-dark-patterns-what-they-are-and-what-having-to-implement-them-says-about-your-job",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/JLXJDB/",
+                "title": "Dark patterns - What they are and what having to implement them says about your job",
+                "subtitle": "",
+                "track": "Economy",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "If you use the web regularly, you probably keep running into sites that seem to be built to be _unusable_.  \r\nThinking that it's better to assume incompetence than malevolence (and because you don't really have much of a choice) you disregard that thought and continue on with using the site.\r\n\r\nHowever, sometimes people actually do act malevolently and often times building a bad user experience can lead to larger profits: People who abandon their attempt to cancel some subscription, accept to receive newsletters and store whatever tracking cookies one throws at them, simply because they are too tired from having to navigate the other options, end up being seen as more \"valuable\" customers.\r\n\r\nIn this talk I want to have a look at those dark patterns from the perspective of both an end user and a developer who's had to implement them to pay their rent.  \r\nI want to show you how to find dark patterns (so you can complain about them, if you're able to, which might lead to their removal) and why a job where you're asked to build them is probably not worth keeping.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 15,
+                    "code": "DMUDXQ",
+                    "public_name": "dysphoricUnicorn",
+                    "biography": "I'm a full stack developer with a morbid curiosity about brokenness in the technology we use every day.\r\n\r\nWhen I'm not tinkering with that kind of stuff, I try to make the web more accessible by building accessible web sites and telling others how to do that.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 3,
+                "guid": "003a6991-cf07-52ea-887e-0bce02fa734b",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/RXZV33/Bildschirmfoto_2021-02-01_um_13.53.47_M74O1PV.png",
+                "date": "2021-04-04T16:10:00+02:00",
+                "start": "16:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-3-shenzhen-i-o-irl-an-open-source-educational-electronics-puzzle-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/RXZV33/",
+                "title": "Shenzhen I/O IRL - an open source educational electronics puzzle.",
+                "subtitle": "",
+                "track": "Technology",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "An electronics learning kit based on the pseudo-assembler language and simplified electronics of the \"Shenzhen I/O\" puzzle game by Zachtronics (http://www.zachtronics.com/shenzhen-io). Built with the cheapest microcontroller china has to offer.",
+                "description": "This is currently work in progress. \r\n\r\nI implemented an interpreter for the Shenzhen I/O pseudo-assembler language and an implementation of the \"Simple I/O\" and \"XBus\" pins on the ultra-cheap 8bit Padauk PFS173 microcontroller (3000 words of flash memory, 256bytes of RAM).\r\n\r\nThe kit consists of a GUI application for programming the microcontrollers and a circuit board. The board connects to any PC via USB and  has 2 emulated \"MC5000\" microcontrollers and different peripherals like buttons, a seven segment display, a buzzer etc. that can be connected via jumper wires. Users have to solve tasks by connecting the components with jumper wires and programm the microcontrollers with up to 14 lines of pseudo-assembly language.\r\n\r\nEverything is based on open source (Compiler toolchain, GUI and electronics) and is intended to be used a gamified platform for learning basic electronics and programming skills.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 18,
+                    "code": "NVZPPK",
+                    "public_name": "Rick Pannen",
+                    "biography": "I've been developing electronic products and writing low level code for 15 years. Sometimes for money - always for fun.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 13,
+                "guid": "ca112a9c-3e80-5690-9f2f-dcd1edd16023",
+                "logo": "",
+                "date": "2021-04-04T17:20:00+02:00",
+                "start": "17:20",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-13--wir-bruchten-mal-ein-krankes-kind-zum-filmen-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/8FDKVL/",
+                "title": "\u00bbWir br\u00e4uchten mal ein krankes Kind zum Filmen\u00ab",
+                "subtitle": "",
+                "track": "Other",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Die Darstellung von minderj\u00e4hrigen Patienten in dem Medien ist mitunter hochproblematisch. Es ist vermutlich l\u00e4ngst nicht\r\nf\u00fcr jedes Kind angenehm, wenn es mit seiner\r\nErkrankung derart \u00f6ffentlich vorgef\u00fchrt wird. Be-\r\nsonders heikel ist zu bewerten, dass nicht das\r\nKind, sondern dessen Eltern zustimmen, und\r\ndass sich die Einstellung zur ver\u00f6ffentlichung pers\u00f6n-\r\nlicher Daten im Laufe des Lebens \u00e4ndern kann.\r\nDas Internet bewahrt indes alles in einer Art\r\numfassendem Medienlangzeitged\u00e4chtnis. Moder-\r\nne KI-gest\u00fctzte Gesichtserkennungssoftware in\r\nForm von Apps erm\u00f6glicht es inzwischen jedem\r\nLaien, Menschen anhand von Fotos im Internet\r\nzu identifizieren. Praktisch alle, die danach su-\r\nchen, k\u00f6nnen sich jetzt und k\u00fcnftig auf diese\r\nWeise Informationen \u00fcber andere beschaffen,\r\nauch Informationen \u00fcber deren Krankheitszu-\r\nstand. Dar\u00fcber sollten Eltern und Kinder aufge-\r\nkl\u00e4rt werden, insbesondere von Kinder\u00e4rzten, die\r\nvon Journalisten um geeignete Kinderdar-\r\nsteller gebeten werden.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 32,
+                    "code": "B9Y9PA",
+                    "public_name": "Martina Lenzen-Schulte",
+                    "biography": "Ich bin Medizinjournalistin und arbeite als Redakteurin beim Deutschen \u00c4rzteblatt. Ich habe Jura, Philosophie und Medizin in Freiburg, M\u00fcnchen und an der Hadassah-Universit\u00e4t in Jerusalem studiert.\r\n\r\nNach meiner Approbation als \u00c4rztin entdeckte ich den Medizin-Journalismus. Neben meiner T\u00e4tigkeit als Fachredakteurin und Buchautorin (Ratgeber: 99 verbl\u00fcffende Tatsachen \u2013 Impfungen bei Thieme; Zwangskrankheiten im Beck-Verlag) schreibe ich f\u00fcr Publikumsmedien (Zeitungen und Journale wie z.B. Frankfurter Allgemeine Zeitung, EMMA, \u2026). Bei der Internet-Plattform Medscape Deutschland habe ich Erfahrung im Online-Journalismus gesammelt.\r\n\r\nIch bin au\u00dferdem Gutachterin beim Mediendoktor, einem Projekt der Universit\u00e4t Dortmund zur Bewertung von Beitr\u00e4gen aus Presse, Funk und Fernsehen. Als Mediencoach vermittle ich in Seminaren, wie der Medizinjournalismus tickt und welche Plattformen relevant sind. Schlie\u00dflich geh\u00f6re ich zum Herausgeberteam des gesellschaftskritischen Referenz-Verlages in Frankfurt. Zu meinen Hauptinteressen z\u00e4hlen die Geburts- und Reproduktionsmedizin. Insbesondere zahlreiche Anfragen und Beratungen von Leserinnen, die mich aufgrund meiner Artikel kontaktiert haben, machten mir klar, dass das kritische Fragen rund um die Geburt immer noch ein Tabu ist. Hier m\u00f6chte ich aus diesem Grund dazu Informationen zur Verf\u00fcgung stellen, die sonst selten an die \u00d6ffentlichkeit kommen.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 47,
+                "guid": "950df2a7-092e-5494-89c9-2468bbb21ce0",
+                "logo": "",
+                "date": "2021-04-04T18:30:00+02:00",
+                "start": "18:30",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-47-c3-news-show-die-3-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/E7CZPY/",
+                "title": "C3 News Show, die 3.",
+                "subtitle": "",
+                "track": "Other",
+                "type": "C3 News Show",
+                "language": "en",
+                "abstract": "C3 News Show",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 86,
+                    "code": "VCVN33",
+                    "public_name": "C3 news show",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 30,
+                "guid": "f92160ac-a379-5d27-a1ad-559dd67fecc9",
+                "logo": "",
+                "date": "2021-04-04T20:00:00+02:00",
+                "start": "20:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-30-astronomy-and-the-climate-crisis",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SPDXA3/",
+                "title": "Astronomy and the climate crisis",
+                "subtitle": "",
+                "track": "Arts & Culture",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "Astronomical factors play no role in the current anthropogenic climate crisis, but astronomy can nevertheless help to solve it. If astronomers manage to reduce their own carbon footprint, we can become role models for demanding realistic change and continue to collaborate globally. More importantly, astronomy can convey a sense of uniqueness of our planet, a feeling of global citizenship and awe for the wonders of the universe. Awe triggers empathy and may thus help to convince the public of the necessary actions to avoid climate breakdown.",
+                "description": "Astronomy is a dirty business, at least in terms of its carbon footprint. Frequent, long-distance flights, the operation of observatories at remote locations, as well as the execution of CPU-intensive simulations lead to per-capita greenhouse gas emission significantly larger than those of the general population. Fortunately, inexpensive solutions, that would significantly reduce our carbon footprint immediately, are available. In this talk, I will break down the typical emissions from astronomical research and argue that we should reduce our own emissions significantly and become role models for demanding realistic change while we continue to collaborate globally. Perhaps more importantly, astronomers can convey awe for the wonders of the universe, a sense of the uniqueness of our planet, and a feeling of global citizenship -- the most important ingredients to provoke a feeling of urgency about the climate crisis, that ideally leads to climate action.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 49,
+                    "code": "Q989NH",
+                    "public_name": "Leonard Burtscher",
+                    "biography": "Dr. Leonard Burtscher, PhD (2011) on mid-infrared interferometry of active galaxies at the Max-Planck-Institute for Astronomy Heidelberg, 2012-2016 postdoc at Max-Planck-Institute for extraterrestrial physics, Garching (Germany); since 2017 permanent staff scientist at Leiden Observatory, The Netherlands, and Calibration Scientist for the instrument project ELT/METIS; founding member of the global Astronomers for Planet Earth movement, co-chair of the European Astronomical Society's working group on sustainability in astronomy.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 43,
+                "guid": "6d4ddc0b-97d4-5696-ac3b-3cb5af5161b9",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/EKWBXY/donchichote_Ym28Nt0.jpg",
+                "date": "2021-04-04T21:10:00+02:00",
+                "start": "21:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-43-sancho-panzas-gesucht-erlebnisberichte-aus-der-ffentlichen-it-infrastruktur",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/EKWBXY/",
+                "title": "Sancho Panzas gesucht: Erlebnisberichte aus der \u00f6ffentlichen IT-Infrastruktur",
+                "subtitle": "",
+                "track": "Politics",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Das Scheitern \u00f6ffentlicher IT-Infrastruktur ist kein Zufall, es hat System.\r\n\r\nAusgehend von den bekannten gescheiterten Digitalprojekten soll dargestellt werden wie diese bei Befolgen der Hackerethik h\u00e4tten abgewendet werden k\u00f6nnen.\r\n\r\nDieser Vortrag soll der Beginn einer gemeinsamen Sammlung von Lessons Learned von, f\u00fcr und mit der Community und interessierten Menschen sein.",
+                "description": "Ziele wie Dezentralit\u00e4t, Datensparsamkeit, Selbstbestimmung der User oder das erstrittene Digitale Grundrecht auf Integrit\u00e4t und Vertraulichkeit informationstechnischer Systeme werden regelm\u00e4\u00dfig mi\u00dfachtet und die Folgen sind bekannt: Vom abgek\u00fcndigten digitalen Personalausweis  \u00fcber die die Gesundheitskarte bis hin zum Gesamt-Architektur der digitalen Verwaltung mit DeMail, OZG und RegModG. Bei Digitalprojekten sich keine Gedanken \u00fcber die technische Umsetzung zu machen, ist wie die Behauptung, der Strom kommt aus der Steckdose. Dabei haben Technikfolgen  erhebliche Auswirkungen auf die Bev\u00f6lkerung. Ob wir von kleinen, dezentralen Systemen versorgt werden oder von einzelnen Gro\u00dfanlagen abh\u00e4ngig sind, deren Komplexit\u00e4t und Hersteller wir werden kontrollieren noch steuern k\u00f6nnen.\r\n\r\nW\u00e4hrend die Politik \"neue Begriffe\" wie Digitale Souver\u00e4nit\u00e4t, Datenhoheit, Cybersecurity und Datenethik erfindet, haben sich die Herausforderungen kaum ge\u00e4ndert.\r\n\r\nWir wollen aufzeigen, wie ein befolgen von entsprechenden Grundprinzipien - wie u.a. der Hackerethik - oft ein solches Scheitern verhindert  h\u00e4tten und wie der Staat es wieder und wieder geschafft hat, Projekte in  einen fubar-Zustand zu versetzen.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 61,
+                    "code": "PPQXT7",
+                    "public_name": "Little Detritus",
+                    "biography": "Quantuminfo guy, trying to save the world. Likes layer 9 problems. Exilbayer, Europ\u00e4er, Freifunka, Geraffel - kurz: immer noch nicht ganz erwachsen. he/him",
+                    "answers": []
+                  },
+                  {
+                    "id": 65,
+                    "code": "VCYM8X",
+                    "public_name": "Martin Tschirsich",
+                    "biography": null,
+                    "answers": []
+                  },
+                  {
+                    "id": 59,
+                    "code": "BSCTSW",
+                    "public_name": "md",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 15,
+                "guid": "9d6ee571-9967-589e-8f32-9c2e41353413",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/8YDCXL/Bildschirmfoto_2021-02-06_um_06.00.32_nu4qp4Y.png",
+                "date": "2021-04-04T22:20:00+02:00",
+                "start": "22:20",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-15-einohm-computergeisttheorie",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/8YDCXL/",
+                "title": "EinOhm Computergeisttheorie",
+                "subtitle": "",
+                "track": "Arts & Culture",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Einf\u00fchrung in die Computergeisttheorie #cmt von ThomasFankhauser.ch",
+                "description": "Digitale Kunstarbeit als Live-Performance\r\n\r\nIm Selbstexperiment schenke ich dem Computer meine Daten, um mehr \u00fcber uns zu erfahren.\r\n\r\n\r\nHaben Computer bereits Bewusstsein?\r\nJa, klar.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 35,
+                    "code": "R8ZH37",
+                    "public_name": "Thomas Fankhauser",
+                    "biography": "EinOhm.com\r\nforum.milchundhonig.org\r\nThomasFankhauser.ch",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 55,
+                "guid": "689bdd21-e651-5795-b9df-e072fc0ab262",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/XJTEDB/Chip_Hits_the_Fan_2016_872_Vd2TNia.jpg",
+                "date": "2021-04-04T23:00:00+02:00",
+                "start": "23:00",
+                "duration": "01:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-55-triac-supermelodic-gameboytechno-hybrid-chiptune",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/XJTEDB/",
+                "title": "TRIAC - Supermelodic Gameboytechno & Hybrid Chiptune",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "en",
+                "abstract": "One hour of ecstatic, fast and hard electronic music, largely created on the original 1995 nintendo gameboy classic by german chiptune musician TRIAC",
+                "description": "Since 2009, TRIAC has been making music with Gameboys. The acoustic products of his endeavours are generally called CHIPTUNE, i.e. music from the sound chips of old game consoles. Stylistically, TRIAC's sounds are somewhere between synthwave, techno and hardcore, but prefer to not be pigeonholed.\r\nFor over 10 yeras TRIAC has been on the road, both nationally and internationally on more than 100 gigs in various locations. From the pancake bistro to the concert hall, from London to Cyprus - in every city a dance-mad crowd was able to discover that Gameboys can do much more than just play games.\r\nOn meanwhile 9 published albums and EPs one can convince oneself of the sound spectrum of the old grey console, that has not yet come into age at all.\r\nWith fast, good-humored and well danceable beats from the soundchips of the Nintendo Gameboys TRIAC conjures a grin on the face of everyone who gets themselves involved!",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 88,
+                    "code": "AUYVTJ",
+                    "public_name": "TRIAC",
+                    "biography": "During the day I work as an ordinary engineering researcher, but at night I become a fierce GAMEBOY MUSICIAN!",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 21,
+                "guid": "395be6c5-8b04-5891-81aa-0d6091170c63",
+                "logo": "",
+                "date": "2021-04-05T00:00:00+02:00",
+                "start": "00:00",
+                "duration": "02:00",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-21-rte-remotetranceexperience-dj-vj-set-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/DPAPVP/",
+                "title": "RTE: RemoteTranceExperience (Dj/Vj Set)",
+                "subtitle": "",
+                "track": "Music",
+                "type": "Music 120min",
+                "language": "en",
+                "abstract": "Fulminantes DJ und VJ Spektakel im Livestream aus Berlin bei dem sich Micha und Vik einmal durch die Trancebretter der 90er und 2000er Jahre spielen und clx und Generation G\u00e4steliste eure Beamer \u00fcberfallen",
+                "description": "DJ Team: zement micha & Vik (Retox x Systemabsturz)\r\nVJ Team: clx & Generation G\u00e4steliste\r\n\r\nLinks:\r\n\r\nzement micha: https://soundcloud.com/user_zement1000\r\nVik: https://soundcloud.com/systemabsturz/\r\nclx & Generation G\u00e4steliste: https://www.youtube.com/v/GecMZVIASI4",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 40,
+                    "code": "GYVPAZ",
+                    "public_name": "Vik",
+                    "biography": "Datenschutz, Elektropunk und Datenschutzelektropunk",
+                    "answers": []
+                  },
+                  {
+                    "id": 42,
+                    "code": "ESQDSP",
+                    "public_name": "@sondala | Generation G\u00e4steliste",
+                    "biography": "Generation G\u00e4steliste\r\nKollektiv f\u00fcr (nicht)gegenst\u00e4ndliche Laufbilder",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }
+            ],
+            "Self-organized": [
+              {
+                "id": 536730,
+                "guid": "5367e304-85c1-5f8c-b51e-9f884142bb93",
+                "date": "2021-04-04T11:00:00+02:00",
+                "start": "11:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1015-programmiersprachen_fuer_anfaenger_innen",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Programmiersprachen (f\u00fcr Anf\u00e4nger*innen)",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Warum gibt es so viele Programmiersprachen? Welche sind die wichtigsten und welche eignet sich f\u00fcr was? Wo kommen diese Sprachen her? Wie unterscheiden sie sich und wie kommt es, dass Computer sie verstehen?",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "zitro"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Magic Margaret",
+                    "title": "Magic Margaret"
+                  }
+                ]
+              },
+              {
+                "id": 506866,
+                "guid": "5bc06dfa-e866-5829-8be5-12c4dc6de32d",
+                "date": "2021-04-04T15:00:00+02:00",
+                "start": "15:00",
+                "duration": "1:30",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1016-moin_mehrere_orte_im_norden",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "MOiN (Mehrere Orte im Norden)",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Spaces treffen sich um Wahlpr\u00fcfsteine (und weiteres?) f\u00fcr die BTW21 zu besprechen",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "BBB"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Pad",
+                    "title": "Pad"
+                  }
+                ]
+              },
+              {
+                "id": 345779,
+                "guid": "345f779d-2e0f-5cff-8899-319475120a5b",
+                "date": "2021-04-04T17:00:00+02:00",
+                "start": "17:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1019-nix_gelernt_beim_klimaschutz",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "nix gelernt beim Klimaschutz",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "hackers against climate change"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "hacc Mumble",
+                    "title": "hacc Mumble"
+                  }
+                ]
+              },
+              {
+                "id": 387936,
+                "guid": "3c8f7a93-b6f4-544b-8f3b-272e5ef8c25f",
+                "date": "2021-04-04T18:00:00+02:00",
+                "start": "18:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1020-beatboxen",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Beatboxen",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Hier gibt es erste Beatbox-Kl\u00e4nge und \u201eKatzen putzen\u201c - das Hello World der Vocal Percussion!",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "neya"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Awesome Ada",
+                    "title": "Awesome Ada"
+                  }
+                ]
+              },
+              {
+                "id": 798451,
+                "guid": "fb7dc984-51af-5640-a95c-d4fbdf3c0b25",
+                "date": "2021-04-04T19:00:00+02:00",
+                "start": "19:00",
+                "duration": "1:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1021-climate_neutral_industry_q_a",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Climate-neutral Industry Q&A",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "hackers against climate change"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "hacc Mumble",
+                    "title": "hacc Mumble"
+                  }
+                ]
+              },
+              {
+                "id": 260792,
+                "guid": "260f792b-517c-58fb-b47f-9673a7ebed57",
+                "date": "2021-04-04T19:00:00+02:00",
+                "start": "19:00",
+                "duration": "2:00",
+                "room": "Self-organized",
+                "slug": "divoc-r2r-1022-velomobile",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Velomobile",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "TW"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "TBD",
+                    "title": "TBD"
+                  }
+                ]
+              }
+            ],
+            "Workshops": [
+              {
+                "id": 372936,
+                "guid": "fd3bdc72-c936-58a0-8aac-0b28e9493e8f",
+                "date": "2021-04-04T15:00:00+02:00",
+                "start": "15:00",
+                "duration": "3:00",
+                "room": "Workshops",
+                "slug": "divoc-r2r-1017-bluetooth_le_in_micropython_auf_der_card10_badge",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Bluetooth LE in MicroPython (auf der card10 badge)",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "Endlich! Eines der am meisten gefragten Features in der card10 firmware is da: Ein BLE API f\u00fcr MicroPython.  In dieser Session zeigen wir, wie es geht und was damit m\u00f6glich ist.  Danach sind wir gespannt, was ihr damit macht! (Workshop)\nF\u00fcr alle nicht card10-logen:  Gerne k\u00f6nnt ihr auch mit anderer BLE + MicroPython f\u00e4higen Hardware Teil haben, zum Beispiel ESP32.",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "card10 homepage"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Jitsi Session",
+                    "title": "Jitsi Session"
+                  }
+                ]
+              },
+              {
+                "id": 343691,
+                "guid": "de343b6e-a912-59d6-9e2f-1fc1cfd5f3d3",
+                "date": "2021-04-04T15:00:00+02:00",
+                "start": "15:00",
+                "duration": "1:00",
+                "room": "Workshops",
+                "slug": "divoc-r2r-1018-keine_angst_vor_der_kommandozeile_workshop_fnti_only",
+                "url": "https://di.c3voc.de/sessions-liste",
+                "title": "Keine Angst vor der Kommandozeile Workshop [FNTI only]",
+                "subtitle": "",
+                "track": "Workshop",
+                "type": "Workshop",
+                "language": "de",
+                "abstract": "",
+                "description": "",
+                "persons": [
+                  {
+                    "id": 0,
+                    "public_name": "joliyea"
+                  }
+                ],
+                "links": [
+                  {
+                    "url": "Magic Margaret",
+                    "title": "Magic Margaret"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 4,
+          "date": "2021-04-05",
+          "day_start": "2021-04-05T04:00:00+02:00",
+          "day_end": "2021-04-06T03:59:00+02:00",
+          "rooms": {
+            "Piscopia": [
+              {
+                "id": 41,
+                "guid": "32497f3a-a17a-5f35-9df1-d8b5e28db7e6",
+                "logo": "",
+                "date": "2021-04-05T10:00:00+02:00",
+                "start": "10:00",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-41-lokale-resilienz-glckliche-gengsamkeit",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/HK9QBY/",
+                "title": "Lokale Resilienz & gl\u00fcckliche Gen\u00fcgsamkeit",
+                "subtitle": "",
+                "track": "Society",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Was wir zu einem zufriedenen (\u00dcber-)leben brauchen und wenn ja woher und wie \u00fcberhaupt?\r\n\r\nMit der Verkn\u00fcpfung dreier Ideen m\u00f6chte ich Hoffnung und Lust wecken selbst mitzumachen und eine Idee einer lebenswerten Stadtgesellschaft zeichnen. Am eigenen Lebensort. Gl\u00fcckliche Gen\u00fcgsamkeit (Suffizienz), lokale, selbst betriebene Infrastrukturen & Versorgung und sozialer Austausch von Ressourcen, Wissen und Erfahrungen. \r\nWir k\u00f6nnten einen wahnsinnig gro\u00dfen Anteil unseres allt\u00e4glichen und nicht allt\u00e4glichen Bedarfs in r\u00e4umlich viel kleineren Zusammenh\u00e4ngen erzeugen und verteilen als wir es heute tun. Diesen Vorschlag den die new economics foundation 2009 beschreibt und der sich in vielen Ideen wie z.B dem Konzept der Transition Towns wiederfindet, k\u00f6nnen wir nutzen. Verbunden mit gegenseitigem Austausch von Erfahrungen, Selbstorganisation und einer Landwirtschaft und Beschaffung und Einsatz von Ressourcen, die nicht gegen unsere Lebensgrundlagen arbeitet, sondern mit ihnen, kann sich eine Stadtgemeinschaft oder Region unabh\u00e4ngiger machen von \u00fcberregionalen Krisen oder Katastrophen; sich im Austausch mit anderen unterst\u00fctzen und der Natur und unseren Lebensgrundlagen dienen.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 63,
+                    "code": "ZTKMKB",
+                    "public_name": "Timm",
+                    "biography": "Ich habe Massivholzm\u00f6belbau gelernt bin also Schreiner und habe einen Bachelor in Architektur und studiere schon seit l\u00e4ngerer Zeit im Master Architektur. Ich habe in Zimmereien auf Baustellen gearbeitet und bin zur Zeit nebenbei mit wenigen Stunden in einem Verkehrsplanungsb\u00fcro f\u00fcr Fu\u00df- Rad- und \u00d6PNVerkehr.\r\nIch interessiere mich schon immer f\u00fcr \u00f6kologische Aspekte des Wirtschaftens und gesellschaftlichen Zusammenlebens, z.B. (wirklich) \u00f6kologischer Bauformen und -stoffe oder ob wir nicht einfach gar nicht mehr bauen sollten. Mich besch\u00e4ftig sehr das Wachstumsparadigma unserer Gesellschaft und alternative Modelle, sowie gesellschaftliche, soziale und psychologische Komponenten die damit verkn\u00fcpft sind. Auch die Versorgung und Infrastruktur unserer St\u00e4dte und somit bspw. die Landwirtschaft und Wasserversorgung und die \u00f6kologischen Implikationen sind die Dinge die mich daran vorrangig interessieren. In erster Linie gucke ich da aus der Disziplin der Architektur und des St\u00e4dtebaus drauf. \r\nEinfach ausgedr\u00fcckt: die soziale und physische (r\u00e4umliche) Organisation unseres Zusammenlebens ist das was mich interessiert. Mir macht es spass an der Schnittstelle zu sein zwischen entwerfen, konstruieren, sozialer / kollektiver Zusammenarbeit und daraus Dinge hervorzubringen, die gemeinschaftlich mit unseren Lebensgrundlagen funktionieren und sie nicht zerst\u00f6ren.\r\n\r\nIch bin auf der Suche, das angesammelte Wissen mal gezielt zu kanalisieren und in einem fruchtbaren Umfeld anzubringen, um Gelegenheiten f\u00fcr eine produktive Anwendung zu finden und st\u00e4rker in den Austausch mit \u00e4hnlich Gesinnten und Interessierten zu kommen. \r\n\r\nF\u00fcr einen Austausch zu den Themen habe ich diese Mailingliste eingerichtet:\r\nhttps://lists.posteo.de/listinfo/sufficiency\r\n\r\nMails an mich:\r\ntimte at posteo de",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 26,
+                "guid": "f7be36a7-b257-55e3-ba65-565b88495962",
+                "logo": "",
+                "date": "2021-04-05T11:10:00+02:00",
+                "start": "11:10",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-26-sustain-sustainability-index-for-artificial-intelligence",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/NBCJKN/",
+                "title": "SustAIn: Sustainability Index for Artificial Intelligence",
+                "subtitle": "",
+                "track": "Politics",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "en",
+                "abstract": "Will algorithms solve the problem of climate change? Unlikely. But more data lets us monitor the earth, optimize solar panels, and generally understand problems. But is it sustainable? What about the click workers that do the magic behind shiny AI toys? And don't data centers use a lot of energy, too? Is there a way to measure a sustainability score for automated decision making that won't burn the planet, create a livable society for all humans and still won't make us poor? We're working on it. Let's talk!",
+                "description": "SustAIn is a project by AlgorithmWatch, DAI-Labor TU Berlin, and I\u00d6W Intitut f\u00fcr \u00f6kologische Wirtschaftsforschung, funded by the Federal ministry of environment in Germany.\r\n\r\nWith the SustAIn project, we will explore the sustainability impact of AI technologies and systems and work out their potential for our world \u2013 for example, through less resource consumption, fair working conditions or sustainable consumption. Our approach to sustainability is based on the 3 Nested Dependencies Model, which prioritizes the environmental, social, and economic pillars of sustainability. Sustainable economic development can only take place in a socially just society and both are dependent on the protection of planetary boundaries. In addition, SustAIn draws on the 17 Sustainable Development Goals (SDGs) adopted by the UN member states in 2015.\r\n\r\nTo encourage public and policy debates on the topic, we will create a sustainability index for AI systems to serve as a rating system. With our Sustainable AI Labs, we will work with developers to create guidelines for sustainable AI development and come up with policy recommendations.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 48,
+                    "code": "XS3DF3",
+                    "public_name": "Jens Ohlig",
+                    "biography": "Jens Ohlig is a project manager for SustAIn at the Berlin-based NGO AlgorithmWatch. He cares about Open Data, Free Knowledge, and hackspaces.",
+                    "answers": []
+                  },
+                  {
+                    "id": 82,
+                    "code": "8FPYV7",
+                    "public_name": "Friederike Rohde",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 48,
+                "guid": "7ba79002-6c4b-56f7-ac7d-04a017324fae",
+                "logo": "",
+                "date": "2021-04-05T12:20:00+02:00",
+                "start": "12:20",
+                "duration": "00:15",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-48-c3-news-show-die-4-",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/VWM3YT/",
+                "title": "C3 News Show, die 4.",
+                "subtitle": "",
+                "track": "Other",
+                "type": "C3 News Show",
+                "language": "en",
+                "abstract": "C3 News Show",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 86,
+                    "code": "VCVN33",
+                    "public_name": "C3 news show",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 9,
+                "guid": "d0978ecc-f2c1-5e28-90c1-bd9df6e7ec9a",
+                "logo": "",
+                "date": "2021-04-05T14:00:00+02:00",
+                "start": "14:00",
+                "duration": "01:55",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-9-lightning-talks",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/MFDUG3/",
+                "title": "Lightning Talks",
+                "subtitle": "",
+                "track": "Other",
+                "type": "Lightning Talks",
+                "language": "de",
+                "abstract": "Lightning Talks sind kurze Vortr\u00e4ge die alle DiVOC-Teilnehmenden halten k\u00f6nnen, zu Themen die euch so interessieren. Slides sind m\u00f6glich aber nicht verpflichtend.",
+                "description": "Da k\u00f6nnt ihr eure Lightning Talks eintragen: https://di.c3voc.de/r2r:lightning-talks",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 6,
+                    "code": "VPQUTW",
+                    "public_name": "BenjaminWand",
+                    "biography": "prototyper and generalist",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 12,
+                "guid": "2020281c-ea93-582f-8216-ca09842de823",
+                "logo": "/media/divoc-reboot-to-respawn-2021/submissions/SLXEWL/pexels-markus-spiske-3991795_fJK8E74.jpg",
+                "date": "2021-04-05T16:20:00+02:00",
+                "start": "16:20",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-12-kritische-infrastrukturen-in-pandemie-zeiten",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/SLXEWL/",
+                "title": "Kritische Infrastrukturen in Pandemie-Zeiten",
+                "subtitle": "",
+                "track": "Economy",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Wer ist in Pandemiezeiten eigentlich genau KRITIS-Betreiber und wie gehen die Betreiber mit der Pandemie und den damit Verbundenen Problemen f\u00fcr sie um?\r\nWas bedeutet eine Krise in der Krise?\r\nUnd wie machen KRITIS Betreiber Krisen- und Pandemieplanung?\r\nAber was uns wirklich antreibt: Was hat das alles mit Nudeln und Toilettenpapier auf sich?\r\nEin Blick hinter die KRITISchen Kulissen...",
+                "description": "In diesem Vortrag geht es darum, \r\n* wie sich einordnen l\u00e4sst, wer in Corona Pandemie Zeiten KRITIS-Betreiber ist und auf welcher gesetzlichen Grundlage das basiert,\r\n* welche Ma\u00dfnahmen KRITIS-Betreiber ergreifen um die Versorgung der Bev\u00f6lkerung in Krisenlagen wie in einer Pandemie sicherzustellen und\r\n* welche Herausforderungen KRITIS-Betreiber dabei stemmen m\u00fcssen\r\nAngesichts der aktuellen und immer noch anhaltenden Corona-Krise stehen die Betreiber Kritischer Infrastrukturen im besonderen Fokus der Berichterstattung. Die Bev\u00f6lkerung stellt fest, was Kritische Infrastrukturen sind und wie verletzlich diese in Krisenzeiten sein k\u00f6nnen. \u00c4ngste kommen auf, dass die Versorgungslage bedroht ist.\r\nAber sind KRITIS-Betreiber tats\u00e4chlich schlecht in einer Pandemie aufgestellt? Welche Ma\u00dfnahmen wenden diese eigentlich in Krisenlagen an, um die Versorgung der Bev\u00f6lkerung mit Strom, Wasser, Internet und Mobilfunk oder auch Nahrung in einer weltweiten Krise sicherzustellen? Und welch besonderen Herausforderungen m\u00fcssen diese dabei stemmen, weil die Krisenlage nicht dem normalen Betriebsmodus entspricht?",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 31,
+                    "code": "3LU3US",
+                    "public_name": "HonkHase",
+                    "biography": "Manuel (HonkHase) Atug\r\nHead of Business Development bei der HiSolutions AG\r\n\r\nDiplom-Informatiker & Master of Science in Applied IT Security & Ingenieur\r\n\r\nHonkHase ist seit \u00fcber 23 Jahren in der Informationssicherheit t\u00e4tig und befasst sich mit den Themen KRITIS, Hackback, Ethik und Katastrophenschutz\r\n\r\nSeit ~23 Jahren Aktiv in einigen Vereinen:\r\nChaos Computer Club, Chaos Computer Club Cologne, c-base, Digitale Kultur, ISACA, GI, FifF, GFF, Freie Software Freunde, European Society for Digital Souvereignty, Deutsches Komitee Katastrophenvorsorge, Geraffel Core Member\r\n\r\nVorstand des Cyber Security Cluster Bonn & Gr\u00fcnder und Sprecher der unabh\u00e4ngigen Arbeitsgruppe Kritische Infrastrukturen (AG KRITIS).",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 34,
+                "guid": "9b02fe77-41fe-5544-a2ee-6a5dc81ddeb8",
+                "logo": "",
+                "date": "2021-04-05T17:30:00+02:00",
+                "start": "17:30",
+                "duration": "00:45",
+                "room": "Piscopia",
+                "slug": "divoc-reboot-to-respawn-2021-34-infrastructure-review-closing",
+                "url": "https://pretalx.c3voc.de/divoc-reboot-to-respawn-2021/talk/PSARJW/",
+                "title": "Infrastructure-Review + Closing",
+                "subtitle": "",
+                "track": "Other",
+                "type": "Talk/Performance (30 minutes plus Q&A)",
+                "language": "de",
+                "abstract": "Platzhalter f\u00fcrs Closing",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 10,
+                    "code": "XSD93A",
+                    "public_name": "hexchen",
+                    "biography": "Ein kleines hexchen, das manchmal komisches Zeug mit Computern anstellt.",
+                    "answers": []
+                  },
+                  {
+                    "id": 5,
+                    "code": "TLL3ZJ",
+                    "public_name": "NicKira",
+                    "biography": null,
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

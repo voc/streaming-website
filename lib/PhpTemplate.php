@@ -13,10 +13,12 @@ if(!function_exists('h'))
 class PhpTemplate
 {
 	private $data = array();
+	public $file;
 
 	public function __construct($file)
 	{
 		$this->file = $file;
+		$this->data["naked"] = false;
 	}
 
 	public function set($___data = array())

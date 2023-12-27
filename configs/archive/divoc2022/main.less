@@ -1,0 +1,169 @@
+@import "../../../assets/css/_structure.less";
+
+@divoc-bg-black: #030714;
+@divoc-bg-color: #241B2B;
+@divoc-bg-blue: #0d1727;
+
+@divoc-gradient-start: @divoc-bg-black;
+@divoc-gradient-stop: #0a2b34;
+
+@divoc-white: #ffebd8;
+@divoc-green: #62c1a6;
+@divoc-blue: #5253ff;
+@divoc-violet: #a74db7;
+
+/*
+ * variables for general style less
+ */
+@brand-primary: @divoc-violet;
+@text-color: @divoc-white;
+
+@link-color: @brand-primary;
+@link-hover-color: darken(@link-color, 15%);
+
+@navbar-default-color: @text-color;
+@navbar-default-bg: @divoc-bg-color;
+
+@navbar-default-link-color: @text-color;
+@navbar-default-link-hover-color: #333;
+
+// @schedule-now: @brand-danger;
+// @schedule-now-bg: fade(lighten(@brand-danger, 5%), 60%);
+// @schedule-border: lighten(@brand-primary, 50%);
+
+// @schedule-room: darken(@brand-primary, 15%);
+// @schedule-author: #444;
+
+// @schedule-selected-room: lighten(@brand-success, 10%);
+
+// @schedule-daychange: darken(@brand-primary, 20%);
+// @schedule-daychange-bg: fade(white, 30%);
+
+// @schedule-gap: darken(@brand-primary, 20%);
+// @schedule-gap-bg: fade(white, 30%);
+
+// @schedule-pause: white;
+// @schedule-pause-bg: lighten(black, 85%);
+
+
+
+/*
+ * General styling
+ */
+body {
+  background-image: linear-gradient(@divoc-gradient-start, @divoc-gradient-stop);
+  background-color: @divoc-gradient-start;
+  background-attachment: fixed;
+  color: white;
+  padding: @navbar-height 0;
+
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 100;
+  font-style: normal;
+  src: url("Ubuntu.eot");
+  src: url("Ubuntu.eot?#iefix") format("embedded-opentype"),
+    url("Ubuntu.otf") format("opentype"), url("Ubuntu.svg") format("svg"),
+    url("Ubuntu.ttf") format("ttf"), url("Ubuntu.woff") format("woff"),
+    url("Ubuntu.woff2") format("woff2");
+}
+
+/*
+ * Navbar
+ */
+@default-icon-size: 27px;
+@icon-size: 43px;
+
+nav .navbar-brand .icon {
+  background-image: url(winkebunny.svg);
+  background-size: @icon-size;
+  width: @icon-size;
+  height: @icon-size;
+  margin-top: (@default-icon-size - @icon-size)/2;
+  margin-bottom: (@default-icon-size - @icon-size)/2;
+}
+
+/* fix time being displayed as a column */
+.navbar-text {
+  float: none;
+}
+
+/*
+ * release/ relive buttons
+ */
+.panel-primary .panel-body {
+  border-color: @divoc-violet;
+  background-color: @divoc-violet;
+}
+
+.panel-primary .panel-body>a {
+  color: @divoc-bg-black;
+}
+
+/*
+ * overview page - streams overview
+ */
+.panel-default {
+  border-color: @brand-primary;
+}
+
+.panel-default {
+  background-color: @divoc-bg-blue;
+}
+
+.panel-default>.panel-heading {
+  color: @text-color;
+  background-color: @divoc-gradient-start;
+  border-color: @brand-primary;
+}
+
+/*
+ * stream page - nav tabs
+ */
+body.room .nav-tabs.nav-justified a {
+  border-bottom-color: @brand-primary;
+}
+
+body.room .nav-tabs>li.active>a {
+  border-color: @brand-primary;
+  background-color: @divoc-green;
+  color: @divoc-bg-black;
+}
+
+body.room .nav-tabs>li.active>a:hover,
+body.room .nav-tabs>li.active>a:focus {
+  border-color: @brand-primary;
+  background-color: @divoc-green;
+  color: @divoc-bg-black;
+}
+
+body.room .nav-tabs>li>a:hover,
+body.room .nav-tabs>li>a:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: @divoc-green;
+  color: @divoc-bg-black;
+}
+
+/*
+ * stream page - player and functions cards
+ */
+body.room .player-wrap,
+body.room .functions-wrap {
+  border-left: 1px solid @brand-primary;
+  border-bottom: 1px solid @brand-primary;
+  border-right: 1px solid @brand-primary;
+}
+
+/*
+ * stream page - formats buttons
+ */
+.functions-wrap .btn-default {
+  background-color: @divoc-bg-color;
+  border-color: @divoc-bg-black;
+  color: @divoc-white;
+}

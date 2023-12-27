@@ -1,0 +1,35 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: streaming-website
+  annotations:
+    github.com/project-slug: voc/streaming-website
+spec:
+  type: website
+  lifecycle: production
+  owner: web
+  providesApis:
+    - streaming-website-api
+  links:
+    - title: prod instance
+      url: https://streaming.media.ccc.de
+    - title: test instance
+      url: https://streaming.test.c3voc.de
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: streaming-website-api
+  description: |
+    Unter der URL http://streaming.media.ccc.de/streams/v2.json bietet die Streaming-Webseite eine Übersicht über alle konfigurierten Räume und Streams in einem maschinenlesbaren Format an. Dieses kann z.B. genutzt werden, um in den diversen Anwendungen, die sich rund um das Konferenzgeschehen entwickelt haben, Player und Links zu Liveübertragungen anzubieten.  annotations:
+  github.com/project-slug: voc/voctoweb
+  links:
+    - title: docs
+      url: https://github.com/voc/streaming-website#json-api
+spec:
+  type: openapi
+  lifecycle: production
+  owner: web
+  definition: |
+    {}

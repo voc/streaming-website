@@ -1,10 +1,6 @@
 <?php
 
-$upcoming = new Upcoming();
-$upcoming_events = $upcoming->getNextEvents();
-$upcoming_crs = array_values(array_filter($upcoming_events, function($event) {
-	return preg_match('/^events:cr[0-9]+$/i', $event['short_name']);
-}));
+$upcoming_crs = Upcoming::getNextEvents('/^cr[0-9]+$/i');
 
 if(count($upcoming_crs) < 1)
 {
@@ -16,7 +12,7 @@ if(count($upcoming_crs) < 1)
 else
 {
 	$upcoming_cr = $upcoming_crs[0];
-	preg_match('/^events:cr([0-9]+)$/i', $upcoming_cr['short_name'], $m);
+	preg_match('/^cr([0-9]+)$/i', $upcoming_cr['slug'], $m);
 
 	$EPISODE = intval($m[1]);
 	$DATE = strtotime($upcoming_cr['start_date'].' 21:00');

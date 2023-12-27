@@ -4,6 +4,7 @@ if(!ini_get('short_open_tag'))
 	die("`short_open_tag = On` is required\n");
 
 $GLOBALS['BASEDIR'] = dirname(__FILE__);
+$GLOBALS['forceopen'] = false;
 chdir($GLOBALS['BASEDIR']);
 
 require_once('config.php');
@@ -14,8 +15,10 @@ require_once('lib/Exceptions.php');
 require_once('lib/less.php/Less.php');
 
 require_once('model/ModelBase.php');
+require_once('model/ModelJson.php');
 require_once('model/Conferences.php');
 require_once('model/Conference.php');
+require_once('model/ConferenceJson.php');
 require_once('model/GenericConference.php');
 require_once('model/Feedback.php');
 require_once('model/Schedule.php');
@@ -49,14 +52,20 @@ if(isset($argv) && isset($argv[1]))
 try {
 	if(isset($_GET['htaccess']))
 	{
-		$route = @$_GET['route'];
+		$route = isset($_GET['route']) ? $_GET['route'] : "";
 	}
 	elseif(isset($_SERVER["REQUEST_URI"]))
 	{
-		$route = ltrim(@$_SERVER["REQUEST_URI"], '/');
+		$route = ltrim($_SERVER["REQUEST_URI"], '/');
+
+		// trim query params from file names
+		$filepath = $_SERVER["DOCUMENT_ROOT"].'/'.$route;
+		if (strpos($filepath, "?")) {
+			$filepath = substr($filepath, 0, strpos($filepath, "?"));
+		}
 
 		// serve static
-		if($route != '' && file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$route))
+		if($route != '' && is_file($filepath))
 		{
 			return false;
 		}
@@ -84,11 +93,12 @@ try {
 		'conference' => new GenericConference(),
 	));
 
-	if(startswith('//', @$GLOBALS['CONFIG']['BASEURL']))
+	if(isset($GLOBALS['CONFIG']['BASEURL']) && startswith('//', $GLOBALS['CONFIG']['BASEURL']))
 	{
+		$mandator = isset($GLOBALS['MANDATOR']) ? $GLOBALS['MANDATOR'] : "";
 		$tpl->set(array(
-			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route).url_params(),
-			'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).@$GLOBALS['MANDATOR']).forceslash($route).url_params(),
+			'httpsurl' => forceslash(forceslash('https:'.$GLOBALS['CONFIG']['BASEURL']).$mandator).forceslash($route).url_params(),
+			'httpurl' =>  forceslash(forceslash('http:'. $GLOBALS['CONFIG']['BASEURL']).$mandator).forceslash($route).url_params(),
 		));
 	}
 
@@ -125,7 +135,7 @@ try {
 		exit;
 	}
 
-	@list($mandator, $route) = explode('/', $route, 2);
+	list($mandator, $route) = array_pad(explode('/', $route, 2), 2, "");
 	if(!$mandator)
 	{
 		// root requested
@@ -156,7 +166,7 @@ try {
 			exit;
 		}
 	}
-	else if(!Conferences::exists($mandator))
+	else if(false && !Conferences::exists($mandator))
 	{
 		// old url OR wrong client OR
 		// -> error
@@ -202,9 +212,9 @@ try {
 		'conference_assets' => forceslash($mandator),
 
 		'conference' => $conference,
-		'feedback' => $conference->getFeedback(),
-		'schedule' => $conference->getSchedule(),
-		'subtitles' => $conference->getSubtitles(),
+		'feedback' => $conference ? $conference->getFeedback() : false,
+		'schedule' => $conference ? $conference->getSchedule() : false,
+		'subtitles' => $conference ? $conference->getSubtitles() : false,
 	));
 
 	// ALWAYS AVAILABLE ROUTES

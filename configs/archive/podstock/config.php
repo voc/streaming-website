@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2019-06-07 19:00"),
+	'STARTS_AT' => strtotime("2022-07-01 19:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2019-06-10 14:00"),
+	'ENDS_AT' => strtotime("2022-07-03 13:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -54,7 +54,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'Podstock 2019, Westfeld, Podcasts',
+	'KEYWORDS' => 'Podstock 2022, Westfeld, Podcasts',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/podstock2019/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/podstock2022/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -196,6 +196,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 
 		'DASH' => true,
+		'H264_ONLY' => true,
 
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
@@ -399,7 +400,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://fahrplan.podstock.de/podstock2019/schedule/export/schedule.xml',
+	'URL' => 'https://fahrplan.podstock.de/podstock-2022/schedule/export/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten

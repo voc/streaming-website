@@ -1,0 +1,79 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "GPN21",
+    "acronym": "gpn21",
+    "description": "ch(ea|i)p alternatives",
+    "keywords": [],
+    "organizer": "",
+    "start": "2023-06-08T14:30:00+02:00",
+    "end": "2023-06-11T15:30:00+02:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "releases": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#gpn21",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": {
+            "display": "#gpn:entropia.de",
+            "url": "https://matrix.to/#/#gpn:entropia.de"
+          }
+        }
+      },
+      // "overviewPage": {},
+      "schedule": {
+        "url": "https://cfp.gulas.ch/gpn21/schedule/export/schedule.xml",
+        "scale": 7,
+        "index_offset": -1
+      },
+      "html": {
+        "banner": "<div class=\"gpn21\"></div>",
+        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://entropia.de/GPN20\">Entropia</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "",
+        "name": "Medientheater",
+        "slug": "medientheater",
+        "streamId": "s1",
+        "streamingConfig": {
+          "chat": {}
+        }
+      },
+      {
+        "guid": "",
+        "name": "Medientheater High Quality",
+        "slug": "demoscene",
+        "streamId": "demoscene",
+        "streamingConfig": {
+          "chat": {}
+        }
+      },
+      {
+        "guid": "",
+        "name": "Vortragssaal",
+        "slug": "vortragssaal",
+        "streamId": "s3",
+        "streamingConfig": {
+          "chat": {}
+        }
+      },
+      {
+        "guid": "",
+        "name": "Blauer Salon",
+        "slug": "blauersalon",
+        "streamId": "s5",
+        "streamingConfig": {
+          "chat": {}
+        }
+      }
+    ]
+  }
+}

@@ -3,6 +3,8 @@
 class Schedule
 {
 	private $conference;
+	private $program;
+	private $mapping = null;
 
 	public function __construct($conference)
 	{
@@ -30,6 +32,10 @@ class Schedule
 		return $this->getConference()->get('SCHEDULE.SIMULATE_OFFSET', 0);
 	}
 
+	public function getDayIndexOffset() {
+		return $this->getConference()->get('SCHEDULE.INDEX_OFFSET', 0);
+	}
+
 	public function getScale() {
 		return floatval($this->getConference()->get('SCHEDULE.SCALE', 7));
 	}
@@ -48,7 +54,8 @@ class Schedule
 
 	public function getMappedRoom($scheduleRoom) {
 		$mapping = $this->getScheduleToRoomSlugMapping();
-		return $this->getConference()->getRoomIfExists( @$mapping[$scheduleRoom] );
+		$room = isset($mapping[$scheduleRoom]) ? $mapping[$scheduleRoom] : "";
+		return $this->getConference()->getRoomIfExists( $room );
 	}
 
 	public function getScheduleDisplayTime($basetime = null)
@@ -62,16 +69,35 @@ class Schedule
 
 	private function fetchSchedule()
 	{
-		$schedule = @file_get_contents($this->getScheduleCache());
-
-		if(!$schedule)
+		try {
+			$schedule = file_get_contents($this->getScheduleCache());
+	
+			if(!$schedule)
+				return null;
+	
+			return simplexml_load_string($schedule);
+		} catch (ErrorException $e) {
 			return null;
+		}
+	}
 
-		return simplexml_load_string($schedule);
+	public function getRoomSchedule($roomName, $roomGuid) {
+
+		// build program, if not realy set
+		if (!isset($this->program)) {
+			$this->getSchedule();
+		}
+
+		return $this->program[$roomName];
 	}
 
 	public function getSchedule()
 	{
+		// reusue already computed schedule, if set.
+		if (isset($this->program)) {
+			return $this->program;
+		}
+
 		// download schedule-xml
 		$schedule = $this->fetchSchedule();
 
@@ -82,6 +108,7 @@ class Schedule
 
 		$program = array();
 		$rooms = array();
+		$day_idx_offset = $this->getDayIndexOffset();
 
 		// re-calculate day-ends
 		// some schedules have long gaps before the first talk or talks that expand beyond the dayend
@@ -162,7 +189,7 @@ class Schedule
 					$end = new DateTimeImmutable($nextday['start']);
 					$daychange = $this->makeEvent($dayend, $end);
 					$daychange['special'] = 'daychange';
-					$daychange['title'] = 'Daychange from Day '.$dayidx.' to '.($dayidx+1);
+					$daychange['title'] = 'Daychange from Day '.($dayidx+$day_idx_offset).' to '.($dayidx+1+$day_idx_offset);
 					$daychange['duration'] = 3600;
 					$program[$roomName][] = $daychange;
 					continue;
@@ -216,10 +243,13 @@ class Schedule
 
 					// normal talk
 					$talk = $this->makeEvent($start, $end);
+					$talk['guid'] = (string)$event['guid'];
 					$talk['title'] = (string)$event->title;
 					$talk['speaker'] = implode(', ', $personnames);
 					$talk['room_known'] = $this->isRoomMapped($roomName);
 					$talk['optout'] = $this->isOptout($event);
+					$talk['url'] = (string)$event->url;
+
 					$program[$roomName][] = $talk;
 
 					$laststart = $start;
@@ -241,7 +271,7 @@ class Schedule
 					$end = new DateTimeImmutable($schedule->day[$dayidx]['start']);
 					$daychange = $this->makeEvent($dayend, $end);
 					$daychange['special'] = 'daychange';
-					$daychange['title'] = 'Daychange from Day '.$dayidx.' to '.($dayidx+1);
+					$daychange['title'] = 'Daychange from Day '.($dayidx+$day_idx_offset).' to '.($dayidx+1+$day_idx_offset);
 					$daychange['duration'] = 3600;
 					$program[$roomName][] = $daychange;
 				}
@@ -267,8 +297,9 @@ class Schedule
 				return array_search($a, $roomfilter) - array_search($b, $roomfilter);
 			});
 		}
+		$this->program = $program;
 
-		return $program;
+		return $this->program;
 	}
 
 	private function makeEvent(DateTimeImmutable $from, DateTimeImmutable $to): array {
@@ -329,17 +360,22 @@ class Schedule
 
 	public function getScheduleToRoomSlugMapping()
 	{
-		$mapping = array();
-		foreach($this->getConference()->get('ROOMS') as $slug => $room)
-		{
-			if(isset($room['SCHEDULE_NAME']))
-				$mapping[ $room['SCHEDULE_NAME'] ] = $slug;
-			else if(isset($room['DISPLAY']))
-				$mapping[ $room['DISPLAY'] ] = $slug;
-			else
-				$mapping[ $slug ] = $slug;
+		if (!$this->mapping) {
+			$this->mapping = array();
+			foreach($this->getConference()->get('ROOMS') as $slug => $room)
+			{
+				// json has 'name', config.php has 'SCHEDULE_NAME' and 'DISPLAY'
+				$key = $slug;
+				if (isset($room['name'])) {
+					$key = $room['name'];
+				} elseif ($room['SCHEDULE_NAME']) {
+					$key = $room['SCHEDULE_NAME'];
+				} elseif ($room['DISPLAY']) {
+					$key = $room['DISPLAY'];
+				}
+				$this->mapping[$key] = $slug;
+			}
 		}
-
-		return $mapping;
+		return $this->mapping;
 	}
 }

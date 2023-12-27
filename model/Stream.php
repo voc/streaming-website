@@ -2,6 +2,11 @@
 
 class Stream
 {
+	public $room;
+	public $selection;
+	public $language;
+	public $translation_label;
+
 	public function __construct(Room $room, $selection, $language, $translation_label = null)
 	{
 		$this->room = $room;
@@ -136,6 +141,10 @@ class Stream
 	{
 		if (!$selection) {
 			$selection = $this->getSelection();
+		}
+
+		if($selection == 'slides') {
+			return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getRoom()->getStream()).'/Slides.m3u8']);
 		}
 
 		switch($proto)

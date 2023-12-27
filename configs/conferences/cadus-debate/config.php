@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2021-11-04 19:45"),
+	'STARTS_AT' => strtotime("2022-07-12 20:15"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2021-11-04 23:00"),
+	'ENDS_AT' => strtotime("2022-07-12 23:15"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Debate 24: Über die Tiefen des Bergbaus: Mining, Menschen & Umwelt',
+	'TITLE' => 'Debate 27: MedEvac - Medical Evacuation in Ukraine and beyond',
 	
 	/**
 	 * Veranstalter
@@ -47,19 +47,12 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'DESCRIPTION' => 'Was bedeutet der Bedarf an Rohstoffen der Industrieländer für die Regionen im Globalen Süden, 
-	in denen sie gewonnen werden? In diesem Debate spricht Johanna Sydow von der NGO Germanwatch mit uns über 
-	Arbeitsverhältnisse, gesundheitliche Auswirkungen und Umweltschäden im Kontext von Mining. Und auch darüber, 
-	was das mit uns selbst zu tun hat: vor allem im IT-Bereich ist der Bedarf an bestimmten, durch Bergbau im 
-	Globalen Süden gewonnen Rohstoffen groß.
+	'DESCRIPTION' => 'The concept of MedEvac has been historically proven to be a functional relief mechanism in medical emergencies, natural disasters, crisis situations and wars. However, it is usually a very costly, risky mission that requires the deployment of highly trained staff, impeccable operational plans as well as flawless communication and teamwork.
 
-	Wie wehren sich Betroffene gegen die Folgen des Bergbaus, welche aktuellen Entwicklungen gibt es auf der 
-	politischen Ebene, und wie können wir uns selbst verantwortungsbewusst verhalten?	
-	
-Wie immer seid ihr herzlich eingeladen, per Chat mitzudiskutieren.
+Today we are going to speak with Michail Liontiris, part of the CADUS Ukraine Emergency Response Team, about what MedEvac is basically about, its roots, its challenges and how they can be potentially overcome. Last but not least, we will debate on the ethical considerations of a MedEvac project: How do I perceive myself when saving patients and injured people? Who am I supposed to take and who am I supposed to leave behind? What are the limits of my capacities? How much am I allowed to risk my team’s and my own safety to carry out a mission successfully?
 
-Donnerstag 04.11.2021
-Start 20:00
+Dienstag 12.07.2022
+Start 20:30
 
 Stream
 https://streaming.media.ccc.de/cadus-debate
@@ -67,7 +60,7 @@ https://streaming.media.ccc.de/cadus-debate
 Chat
 https://webirc.hackint.org/#irc://irc.hackint.org/#debate
 
-Sprache: Deutsch
+Sprache: Englisch
 
 DEBATE zum Nachschauen:
 https://media.ccc.de/c/cadusdebate
@@ -216,7 +209,10 @@ $CONFIG['ROOMS'] = array(
 		 * als Default-Stream angenommen.
 		 */
 		'HD_VIDEO' => true,
-
+		/** 
+		 * H264 ONLY  
+		 */
+		'H264_ONLY' => true,
 		/**
 		 * Slide-Only-Stream (1024×576) verfügbar
 		 *

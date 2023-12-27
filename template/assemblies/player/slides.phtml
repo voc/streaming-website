@@ -1,17 +1,7 @@
-<div style="max-width: <?=h($stream->getVideoWidth())?>px; max-height: <?=h($stream->getVideoHeight())?>px;" class="video-wrap">
-	<video
-		autoplay="autoplay"
-		preload="auto"
-		width="<?=h($stream->getVideoWidth())?>"
-		height="<?=h($stream->getVideoHeight())?>"
-		style="width: 100%; height: 100%;"
-		class="mejs"
-	>
-		<source
-			data-plugin-type="native"
-			src="<?=h($stream->getSlidesUrl('hls'))?>"
-			title="h.264 (HLS)"
-			type="application/vnd.apple.mpegURL"
-		/>
-	</video>
-</div>
+<!-- Use voc-player per default, TODO: implement preferred language feature -->
+<div class="video-wrap"
+	data-voc-player
+	data-stream="<?=h($stream->getSlidesUrl('hls'))?>"
+	data-poster="<?=h($stream->getPoster())?>"
+	data-audio-only="true"
+></div>

@@ -1,0 +1,198 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+
+
+// conference specific styles here
+@pw-color:     black;
+@bg-cyan:       #00a6de;
+
+@body-text:     @pw-color;
+
+@overview-color: @pw-color;
+
+@darker-grey:   #52575b;
+@dark-grey:     lighten(@darker-grey, 10%);
+@light-grey:    lighten(@darker-grey, 20%);
+@lighter-grey:  lighten(@darker-grey, 30%);
+
+
+// often configured values (and their defaults):
+//
+@brand-primary:         @darker-grey;
+@text-color:            @body-text;
+
+@link-color:            @body-text;
+@link-hover-color:      @lighter-grey;
+
+// @navbar-height:         70px;
+
+@navbar-default-bg:     @light-grey;
+@navbar-default-border: @light-grey;
+
+@navbar-default-link-color: @pw-color;
+@navbar-default-link-hover-color: @link-hover-color;
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/configs/conferences/jh23ffm/SourceSansPro-Regular.ttf.woff2') format('woff2');
+}
+
+body {
+	background-image: url("/configs/conferences/jh23ffm/bg.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	padding: @navbar-height 0;
+	font-family: "Source Sans Pro","Noto Sans",Arial,sans-serif;
+    font-size: 16px
+}
+
+h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-weight: bold;
+}
+
+.group-live {
+	margin-top: 60px;
+}
+
+.room {
+	h1 {
+		font-weight: bold;
+		margin: 40px 0 20px 0;
+		color: @bg-cyan;
+	}
+}
+
+.overview, .relive {
+	h1, h2 {
+		font-weight: bold;
+
+		margin: 40px 0 20px 0;
+		color: @bg-cyan;
+    }
+}
+
+.room, .recordings, .recording {
+    a, a:hover {
+        text-decoration: none;
+        color: @overview-color;
+    }
+
+    .panel {
+        //background: none;
+        background-color: @lighter-grey;
+        border: 1px solid @dark-grey;
+
+        &:hover {
+            text-decoration: none;
+            background-color: @dark-grey;
+        }
+
+        .panel-title {
+            font-size: 25px;
+            color: @overview-color;
+        }
+
+        .panel-primary {
+            background-color: @lighter-grey;
+            border-color: @lighter-grey;
+            color: @overview-color;
+            a {
+                color: @overview-color;
+            }
+        }
+
+        .panel-heading {
+            background: none;
+            display: block !important;
+            font-weight: bold;
+            padding: 8px 15px;
+            a {
+                color: @overview-color;
+            }
+        }
+
+    }
+}
+
+.overview .room-group-live-music .room .panel .panel-body {
+	margin-bottom: 0;
+}
+
+.well a {
+	color: @dark-grey;
+	text-decoration: underline;
+}
+.alert {
+	a {
+		text-decoration: underline;
+	}
+	&.alert-success a {
+		color: @state-success-text;
+	}
+	&.alert-info a {
+		color: @state-info-text;
+	}
+	&.alert-warning a {
+		color: @state-warning-text;
+	}
+	&.alert-danger a {
+		color: @state-danger-text;
+	}
+}
+
+body.multiview .cell {
+	color: black;
+}
+
+.closed .about a {
+	text-decoration: underline;
+	color: @brand-primary;
+}
+
+.schedule .block.pause {
+	color: black !important;
+}
+
+
+footer {
+    background-color: @darker-grey;
+	color: lightgrey;
+}
+
+.nav-tabs.nav-justified > .active > a{
+    border: 1px solid @dark-grey;
+    background-color: white;
+} 
+
+.nav-tabs > li.active > a {
+    color: @pw-color
+}
+.nav-tabs > li > a {
+    background-color: white;
+} 
+
+body.room .tab-content {
+	background-color: @lighter-grey;
+	border-left: 1px solid @dark-grey;
+	border-bottom: 1px solid @dark-grey;
+	border-right: 1px solid @dark-grey;
+}
+
+
+img.jh-logo {
+	height: 130px;
+	position: absolute;
+	top: 55px;
+	left: 10px;
+	z-index: -100;
+}
+
+img.jh-illus {
+	height: 100px;
+	position: absolute;
+	top: 70px;
+	right: 10px;
+	z-index: -100;
+}
