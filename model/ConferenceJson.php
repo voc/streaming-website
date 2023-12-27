@@ -49,7 +49,7 @@ class ConferenceJson extends Conference
 		
 		$acronym = $mandator ?: $c->acronym;
 
-		parent::__construct(array_merge(
+		$config = array_merge(
 			isset($c->streamingConfig) ? get_object_vars($c->streamingConfig) : [],
 			isset($c->streamingConfig->features) ? get_object_vars($c->streamingConfig->features) : [],
 			isset($c->streamingConfig->features->chat) ? get_object_vars($c->streamingConfig->features->chat) : [],
@@ -60,8 +60,8 @@ class ConferenceJson extends Conference
 					'description' 	=> $c->description,
 					'keywords'		=> is_array($c->keywords) ? implode(', ', $c->keywords) : "",
 					// future TODO: change structure
-					"relive_json"	=> @$c->streamingConfig->features->relive !== false ? "https://cdn.c3voc.de/relive/".$acronym."/index.json" : null,
-					"releases"		=> @$c->streamingConfig->features->releases !== false ? "https://media.ccc.de/c/".$acronym : null
+					"relive_json"	=> "https://cdn.c3voc.de/relive/".$acronym."/index.json",
+					"releases"		=> "https://media.ccc.de/c/".$acronym,
 				], 
 				// 'schedule' => (array) $c->streamingConfig->schedule
 				'rooms' => $this->rooms,
@@ -69,7 +69,19 @@ class ConferenceJson extends Conference
 					'groups' => $groups
 				]
 			]
-		), $acronym);
+		);
+
+		// disable relive button
+		if (isset($c->streamingConfig->features->relive) && $c->streamingConfig->features->relive === false) {
+			$config['conference']['relive_json'] = null;
+		}
+
+		// disable releases button
+		if (isset($c->streamingConfig->features->releases) && $c->streamingConfig->features->releases === false) {
+			$config['conference']['releases'] = null;
+		}
+
+		parent::__construct($config, $acronym);
 	}
 
 	public function has($keychain)
