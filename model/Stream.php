@@ -204,7 +204,7 @@ class Stream
 		switch($proto)
 		{
 			case 'hls':
-				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls/'.rawurlencode($this->getRoom()->getStream()).'/segment_'.rawurlencode(ucfirst($this->getLanguage())).'.m3u8']);
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls/'.rawurlencode($this->getRoom()->getStream()).'/'.rawurlencode(ucfirst($this->getLanguage())).'.m3u8']);
 		}
 
 		return null;
