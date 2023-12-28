@@ -1,3 +1,6 @@
+const h = HtmlSanitizer.SanitizeHtml
+
+let previousTitle = "";
 function dragElement(elmnt) {
 	var pos1 = 0,
 		pos2 = 0,
@@ -41,16 +44,18 @@ function dragElement(elmnt) {
 		// stop moving when mouse button is released:
 		document.onmouseup = null;
 		document.onmousemove = null;
+		previousTitle = "";
 	}
 }
 
 function closeEventDetails(e) {
-	document.getElementById('schedule-event-detail-popover').style.display = 'none'; 
+	document.getElementById("schedule-event-detail-popover").style.display =
+		"none";
 	window.scrollLock = false;
 }
 
-const acronym = window.location.pathname.split('/')[1];
-var previousTitle = "";
+const acronym = window.location.pathname.split("/")[1];
+
 function showEventDetails(e, data, force = false) {
 	if (!force && (data.type || previousTitle == data.title)) {
 		return;
@@ -62,21 +67,28 @@ function showEventDetails(e, data, force = false) {
 	}
 
 	document.getElementById("modal-title").innerHTML =
-		data.title + ('subtitle' in data ? `<br/><small>${data.subtitle || ''}` : '');
+		h(data.title) +
+		("subtitle" in data ? `<br/><small>${h(data.subtitle || "")}` : "");
 	document.getElementById("modal-data").innerHTML = `
 	<dt>Origin:</dt>
-	<dd><a class="a" href="${data.url}" alt="Details" target="_blank">${data.url}</a></dd>
+	<dd><a class="a" href="${encodeURI(
+		data.url
+	)}" alt="Details" target="_blank">${h(data.url)}</a></dd>
 	
 	<dt>Video:</dt>
 	<dd>
-		<a class="a" href="/${acronym}/relive/${data.guid}" title="relive" target="_blank">relive</a>
-		<a class="a" href="https://media.ccc.de/v/${data.guid}" title="recording" target="_blank">recording</a>
+		<a class="a" href="/${encodeURIComponent(acronym)}/relive/${encodeURIComponent(
+		data.guid
+	)}" title="relive" target="_blank">relive</a>
+		<a class="a" href="https://media.ccc.de/v/${encodeURIComponent(
+			data.guid
+		)}" title="recording" target="_blank">recording</a>
 	</dd>
 	`;
 	text = document.getElementById("modal-text");
 	text.innerHTML = `
-	<p>${data.abstract || ""}</p>
-	<p>${(data.description || "").replace("\n\n", "<br/><br/>")}</p>
+	<p>${h(data.abstract || "")}</p>
+	<p>${h(data.description || "").replace("\n\n", "<br/><br/>")}</p>
 	`;
 
 	popover.style.display = "block";

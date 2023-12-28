@@ -25,11 +25,11 @@
 			<div class="room <? if(isset($room) && ($roomname == $room->getScheduleName() ||  ($scheduleRoom && $scheduleRoom->getId() === $room->getId()))): ?>highlight<? endif ?>" style="width: <?= h($totalWidth) ?>px">
 				<? $fromstart = 0; ?>
 				<? foreach($events as $event): ?>
-					<? $special = isset($event['special']) ? $event['special'] : ''; ?>
-					<? $event_is_optout = isset($event['optout']) ? $event['optout'] : false; ?>
-					<? $event_guid = isset($event['guid']) ? $event['guid'] : ''; ?>
-					<? $event_url = isset($event['url']) ? $event['url'] : ''; ?>
-					<? $event_title = isset($event['title']) ? $event['title'] : ''; ?>
+					<? $special = $event['special'] ?? ''; ?>
+					<? $event_is_optout = $event['optout'] ?? false; ?>
+					<? $event_guid = $event['guid'] ?? ''; ?>
+					<? $event_url = $event['url'] ?? ''; ?>
+					<? $json_event_title = str_replace(array('\\', '"', "'"), array('\\\\', '\\x22', '\\x27'), $event['title'] ?? ''); ?>
 					<div
 						class="block <?=h($special ?: 'event')?> <?=h($event_is_optout ? 'optout' : '')?>"
 						style="width: <?=h(round($event['duration'] / $schedule->getScale()))?>px; left: <?=h(round($fromstart / $schedule->getScale()))?>px"
@@ -47,21 +47,21 @@
 										href="<?=h($scheduleRoom->createTabObject()->getLink($roomname))?>"
 								<? endif ?>
 								title="Switch to <?=h($scheduleRoom->getDisplay())?>"
-								onmouseover="showEventDetails(event, {title:'<?=str_replace(array('\\', '"', "'"), array('\\\\', '\\x22', '\\x27'), $event_title)?>', guid:'<?=$event_guid?>', url:'<?=$event_url?>', type:'<?=@$special?>'})"
+								onmouseover="showEventDetails(event, {title:'<?=$json_event_title?>', guid:'<?=$event_guid?>', url:'<?=$event_url?>', type:'<?=$special?>'})"
 							>
 						<? else: ?>
 							<div class="inner">
 						<? endif ?>
 
-							<? if(@$special == 'daychange'): ?>
+							<? if($special == 'daychange'): ?>
 
 							<h3><?=h($event['title'])?></h3>
 
-							<? elseif(@$special == 'gap'): ?>
+							<? elseif($special == 'gap'): ?>
 
 								<!--h3>Gap</h3-->
 
-							<? elseif(@$special == 'pause'): ?>
+							<? elseif($special == 'pause'): ?>
 
 								<h3><?=h($event['title'])?></h3>
 
@@ -74,7 +74,7 @@
 										<?=h($scheduleRoom ? $scheduleRoom->getDisplayShort() : $roomname) ?>
 									</h4>
 								<? endif ?>
-								<h3 title="<?=$event['title']?>">
+								<h3 title="<?=$json_event_title?>">
 									<?=h($event['title'])?><? if ($event_is_optout): ?><i> (no recording)</i><? endif ?>
 								</h3>
 								<? if(! empty(trim($event['speaker']))): ?>
