@@ -1,7 +1,7 @@
 <!-- Use voc-player per default, TODO: implement preferred language feature -->
 <div class="video-wrap"
 	data-voc-player
-	data-stream="<?=h($stream->getAudioUrl('hls'))?>"
+	data-source="<?=h($stream->getAudioUrl('hls'))?>"
 	data-poster="<?=h($stream->getPoster())?>"
 	data-audio-only="true"
 ></div>
