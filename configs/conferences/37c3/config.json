@@ -51,6 +51,9 @@
               },
               {
                 "slug": "fireshonks"
+              },
+              {
+                "slug": "infobeamer"
               }
             ]
           }
@@ -203,6 +206,22 @@
               "display": "#shonks23 @ hackint",
               "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#shonks23"
             }
+          }
+        }
+      },
+      {
+        "guid": "ff13477b-07c6-4df9-aee7-4a2aadc59102",
+        "name": "Info Beamer",
+        "slug": "infobeamer",
+        "streamId": "s6",
+        "streamingConfig": {
+          "display": "Info Beamer",
+          "social": {
+            "mastodon": false
+          },
+          "chat": {
+            "irc": false,
+            "matrix": false
           }
         }
       }
