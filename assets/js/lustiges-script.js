@@ -112,7 +112,7 @@ $(function() {
 $(function() {
 	// activate tab via hash and default to video
 	function setTabToHash() {
-		var activeTab = $('.nav-tabs a[href=' + window.location.hash + ']').tab('show');
+		$(`.nav-tabs a[href="${window.location.hash}"]`).tab('show');
 	}
 
 	// change hash on tab change
@@ -120,7 +120,7 @@ $(function() {
 		window.location.hash = e.target.hash;
 	});
 
-	// adjust tabs when hash changes
+	// // adjust tabs when hash changes
 	$(window).on('hashchange', setTabToHash).trigger('hashchange');
 });
 
