@@ -46,8 +46,8 @@ class ConferenceJson extends Conference
 		else {
 			$groups['Live'] = array_keys((array) $this->rooms);
 		}
-		
-		$acronym = $mandator ?: $c->acronym;
+
+		$acronym = $c->acronym ?: $mandator;
 
 		$config = array_merge(
 			isset($c->streamingConfig) ? get_object_vars($c->streamingConfig) : [],
@@ -62,7 +62,7 @@ class ConferenceJson extends Conference
 					// future TODO: change structure
 					"relive_json"	=> "https://cdn.c3voc.de/relive/".$acronym."/index.json",
 					"releases"		=> "https://media.ccc.de/c/".$acronym,
-				], 
+				],
 				// 'schedule' => (array) $c->streamingConfig->schedule
 				'rooms' => $this->rooms,
 				'overview' => [
@@ -81,7 +81,7 @@ class ConferenceJson extends Conference
 			$config['conference']['releases'] = null;
 		}
 
-		parent::__construct($config, $acronym);
+		parent::__construct($config, $mandator);
 	}
 
 	public function has($keychain)
