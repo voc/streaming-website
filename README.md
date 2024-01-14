@@ -14,14 +14,12 @@ Gegebenheiten und die Gestaltung der Konferenz angepasst werden können.
 Während der Entwicklung kann der eingebaute PHP-Webserver verwendet werden:
 ```sh
 $ ./serve.sh
-PHP 7.0.4-7ubuntu2.1 Development Server started at Mon Jun 20 22:40:17 2016
-Listening on http://localhost:8000
-Document root is /home/peter/VOC/streaming-website
+[Thu Jan  1 13:37:42 1970] PHP 8.2.7 Development Server (http://localhost:8000) started
 Press Ctrl-C to quit.
 …
 ```
 
-Unterstützt wird PHP ab 5.4.
+Unterstützt wird PHP ab 7.4.
 
 ### Docker
 
@@ -34,9 +32,9 @@ docker run -it -p 8000:8000 -v "$PWD":/app -w /app php:7-cli ./serve.sh 0.0.0.0 
 ### Abhängigkeiten
 
 ```sh
-apt install php7.0-curl php7.0-xml
+apt install php8.2 php8.2-curl php8.2-xml
 # - or -
-apt install php-curl php-xml
+apt install php php-curl php-xml
 ```
 
 #### Dateidownload testen
