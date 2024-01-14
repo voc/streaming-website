@@ -15,6 +15,10 @@ class Conference extends ModelBase
 		return $this->slug;
 	}
 
+	public function getAcronym() {
+		return $this->get('CONFERENCE.ACRONYM', $this->slug);
+	}
+
 	public function getTitle() {
 		return $this->get('CONFERENCE.TITLE', 'C3VOC');
 	}
