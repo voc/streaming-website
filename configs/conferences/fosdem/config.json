@@ -1,0 +1,312 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "FOSDEM 2024",
+    "acronym": "fosdem-2024",
+    "description": "Live streaming FOSDEM – a two-day event organised by volunteers to promote the widespread use of free and open source software.",
+    "keywords": [
+      "FOSDEM 2024",
+      "ULB (Université Libre de Bruxelles)",
+      "Video",
+      "Media",
+      "Streaming",
+      "Brussels"
+    ],
+    "organizer": "FOSDEM community",
+    "start": "2024-02-03T00:08:00+01:00",
+    "end": "2024-02-04T19:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": false,
+        "audio": false,
+        "preview": false,
+        "social": {
+          "hashtag": "#FOSDEM",
+          "mastodon": true
+        },
+        "chat": {
+          "matrix": {
+            "display": "#%s:fosdem.org",
+            "url": "https://matrix.to/#/#%s:fosdem.org?web-instance[element.io]=chat.fosdem.org"
+          }
+        }
+      },
+      "overviewPage": {},
+      "schedule": {
+        "url": "https://fosdem.org/2024/schedule/xml",
+        "scale": 3
+      },
+      "cdn": {
+        "url": "https://stream.fosdem.org/",
+        "hls_playlist_url": "https://stream.fosdem.org/{streamId}.m3u8",
+        "preview_url": "feedback.json"
+      },
+      "html": {
+        "banner": "<div class=\"congress\"></div><div class=\"congress-motto\"></div>",
+        "footer": "\n\t\tby <a href=\"https://fosdem.org\"FOSDEM</a>",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "slug": "janson",
+        "guid": "9cfcd4b7-00cc-463a-9420-5cb2509f6311",
+        "name": "Janson",
+        "capacity": 1415,
+        "streamingConfig": {
+          "wide": true
+        }
+      },
+      //{
+      //  "slug": "j1106",
+      //  "guid": "4dea7296-f708-40ec-90ad-5ce13b294046",
+      //  "name": "J.1.106",
+      //  "capacity": 70
+      //},
+      {
+        "slug": "k1105",
+        "guid": "fca01a38-61d3-4969-a607-028175284dd0",
+        "name": "K.1.105 (La Fontaine)",
+        "capacity": 805
+      },
+      {
+        "slug": "k3201",
+        "guid": "0412edb7-be60-4212-b8ec-e01b750d9856",
+        "name": "K.3.201",
+        "capacity": 80
+      },
+      {
+        "slug": "k3401",
+        "guid": "bfb77706-1ae9-4bbb-ae73-11fee40f6277",
+        "name": "K.3.401",
+        "capacity": 80
+      },
+      {
+        "slug": "k4201",
+        "guid": "32f27f54-ffb8-4f78-9ce4-30469f0e6500",
+        "name": "K.4.201",
+        "capacity": 80
+      },
+      {
+        "slug": "k4401",
+        "guid": "e22fe813-b5bf-44c5-91e3-3168216b0848",
+        "name": "K.4.401",
+        "capacity": 80
+      },
+      {
+        "slug": "k4601",
+        "guid": "3ebe9d23-4a3b-497e-aebe-36d149f182e2",
+        "name": "K.4.601",
+        "capacity": 80
+      },
+      {
+        "slug": "h1301",
+        "guid": "d72c0c06-68fe-49dd-bf7c-c3bc90b707f2",
+        "name": "H.1301 (Cornil)",
+        "capacity": 189
+      },
+      {
+        "slug": "h1302",
+        "guid": "9e06f35d-bab7-4369-b178-cbe85fe16f02",
+        "name": "H.1302 (Depage)",
+        "capacity": 206
+      },
+      {
+        "slug": "h1308",
+        "guid": "ff8bf847-3ab1-4bd5-b7e4-55388a2c5830",
+        "name": "H.1308 (Rolin)",
+        "capacity": 148
+      },
+      {
+        "slug": "h1309",
+        "guid": "e6893716-cf6f-40e5-b297-64da52a657aa",
+        "name": "H.1309 (Van Rijn)",
+        "capacity": 146
+      },
+      //{
+      //  "slug": "h2111",
+      //  "guid": "bcee8be4-449f-4d34-a90f-5abefb7e99d9",
+      //  "name": "H.2111",
+      //  "capacity": 40
+      //},
+      {
+        "slug": "h2213",
+        "guid": "5de072de-82d2-43c2-b226-65df371c71fb",
+        "name": "H.2213",
+        "capacity": 100
+      },
+      {
+        "slug": "h2214",
+        "guid": "e4007c74-1546-4352-b5c8-da3253470852",
+        "name": "H.2214",
+        "capacity": 100
+      },
+      {
+        "slug": "h2215",
+        "guid": "f08e9325-cd4c-458c-925a-0f76c69117bd",
+        "name": "H.2215 (Ferrer)",
+        "capacity": 288
+      },
+      {
+        "slug": "h3242",
+        "guid": "3f98e04d-969a-46d4-89ef-f56512cdcb72",
+        "name": "H.3242",
+        "capacity": 56
+      },
+      {
+        "slug": "h3244",
+        "guid": "7154e047-7142-4475-b42f-0102443c8e71",
+        "name": "H.3244",
+        "capacity": 56
+      },
+      {
+        "slug": "aw1120",
+        "guid": "7154e047-7142-4475-b42f-0102443c8e71",
+        "name": "AW1.120",
+        "capacity": 74
+      },
+      {
+        "slug": "aw1121",
+        "guid": "7401cdb5-74d6-4f00-bed2-66a3390f9897",
+        "name": "AW1.121",
+        "capacity": 82
+      },
+      {
+        "slug": "aw1125",
+        "guid": "9704879b-4a50-40cc-bb97-72c489db2d7d",
+        "name": "AW1.125",
+        "capacity": 76
+      },
+      {
+        "slug": "aw1126",
+        "guid": "d7469fef-807a-4d70-b2d1-71c21874c579",
+        "name": "AW1.126",
+        "capacity": 82
+      },
+      {
+        "slug": "ua2114",
+        "guid": "c9a491f1-79a7-4273-a103-531becfe82e3",
+        "name": "UA2.114 (Baudoux)",
+        "capacity": 207
+      },
+      {
+        "slug": "ua2118",
+        "guid": "e2f10069-e020-4a6a-970f-f1150bfee139",
+        "name": "UA2.118 (Henriot)",
+        "capacity": 246
+      },
+      {
+        "slug": "ua2220",
+        "guid": "7d3c8539-a57c-4745-8a88-89fc22fb2dbe",
+        "name": "UA2.220 (Guillissen)",
+        "capacity": 292
+      },
+      {
+        "slug": "ub2147",
+        "guid": "9dfe8253-23c5-458e-bb7c-9ee14fe73af2",
+        "name": "UB2.147",
+        "capacity": 91
+      },
+      {
+        "slug": "ub2252a",
+        "guid": "51701d48-d08c-4f61-a98f-787d23253ef9",
+        "name": "UB2.252A (Lameere)",
+        "capacity": 532
+      },
+      {
+        "slug": "ub4132",
+        "guid": "3b420851-7f86-45c2-b11d-f7009b46ea62",
+        "name": "UB4.132",
+        "capacity": 96
+      },
+      //{
+      //  "slug": "ub4136",
+      //  "guid": "61fa3c6c-c4b6-459f-885f-c99a17fcd1fc",
+      //  "name": "UB4.136",
+      //  "capacity": 96
+      //},
+      //{
+      //  "slug": "ub4228",
+      //  "guid": "6eccf24e-5abc-400d-a8ec-a7d838a7ec88",
+      //  "name": "UB4.228",
+      //  "capacity": 47
+      //},
+      {
+        "slug": "ub5132",
+        "guid": "04ed27ac-01d1-4a36-9ec7-8772b303154c",
+        "name": "UB5.132",
+        "capacity": 306
+      },
+      {
+        "slug": "ub5230",
+        "guid": "e12cc0a3-e6eb-4bb2-b586-af8c82b29cbe",
+        "name": "UB5.230",
+        "capacity": 192
+      },
+      {
+        "slug": "ud2120",
+        "guid": "4cbf69f4-c3fb-4661-8b61-13929239f970",
+        "name": "UD2.120 (Chavanne)",
+        "capacity": 446
+      },
+      {
+        "slug": "ud2218a",
+        "guid": "bbb4e6d2-e29d-44a0-bbfb-e3ebe5cb43f2",
+        "name": "UD2.218A",
+        "capacity": 363
+      },
+      //{
+      //  "slug": "ud2110",
+      //  "guid": "8250bbec-b308-425f-bc90-6131548ab3f9",
+      //  "name": "UD2.110",
+      //  "capacity": 50
+      //},
+      {
+        "slug": "ud2208",
+        "guid": "1da9d2da-a0a1-4f07-9a57-8997fc47c7b1",
+        "name": "UD2.208 (Decroly)",
+        "capacity": 174
+      },
+      // Examples from 37C3
+      {
+        "slug": "granville",
+        "guid": "7202df07-050c-552f-8318-992f94e40ef0",
+        "name": "Saal Granville",
+        "streamId": "muc1",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#37C3granville",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#37c3-hall-granville:events.ccc.de",
+              "url": "https://matrix.to/#/#37c3-hall-granville:events.ccc.de"
+            },
+            "irc": {
+              "display": "#37c3-hall-granville @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#37c3-hall-granville"
+            }
+          }
+        }
+      },
+      {
+        "slug": "infobeamer",
+        "guid": "ff13477b-07c6-4df9-aee7-4a2aadc59102",
+        "name": "Info Beamer",
+        "streamId": "s6",
+        "streamingConfig": {
+          "display": "Info Beamer",
+          "social": {
+            "mastodon": false
+          },
+          "chat": {
+            "irc": false,
+            "matrix": false
+          }
+        }
+      }
+    ]
+  }
+}
