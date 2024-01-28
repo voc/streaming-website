@@ -71,10 +71,16 @@ class Room
 	}
 
 	public function getThumb() {
+		if ($this->conference->has('cdn.thumbnail_url')) {
+			return str_replace('{streamId}', $this->getStream(), $this->conference->get('cdn.thumbnail_url'));
+		}
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getStream(), 'thumb.jpeg']);
 	}
 
 	public function getPoster() {
+		if ($this->conference->has('cdn.poster_url')) {
+			return str_replace('{streamId}', $this->getStream(), $this->conference->get('cdn.poster_url'));
+		}
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getStream(), 'poster.jpeg']);
 	}
 
@@ -258,7 +264,7 @@ class Room
 	}
 
 	public function hasAudio() {
-		return $this->get('AUDIO');
+		return $this->get('AUDIO') && $this->getConference()->get('AUDIO') !== FALSE;
 	}
 
 	public function hasSlides() {
@@ -273,11 +279,21 @@ class Room
 		return $this->get('DASH', true);
 	}
 
+	public function hasCustomStreamingUrl() {
+		return $this->conference->has('cdn.hls_playlist_url');
+	}
+
 	public function getHLSPlaylistUrl() {
+		if ($this->conference->has('cdn.hls_playlist_url')) {
+			return str_replace('{streamId}', rawurlencode($this->getStream()), $this->conference->get('cdn.hls_playlist_url'));
+		}
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getStream()).'/native_hd.m3u8']);
 	}
 
 	public function getDashManifestUrl() {
+		if ($this->conference->has('cdn.dash_manifest_url')) {
+			return str_replace('{streamId}', rawurlencode($this->getStream()), $this->conference->get('cdn.dash_manifest_url'));
+		}
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'dash', rawurlencode($this->getStream()).'/manifest.mpd']);
 	}
 
@@ -315,7 +331,7 @@ class Room
 		return count($this->getTranslations()) > 0;
 	}
 
-	public function  isValidLanguage($language) {
+	public function isValidLanguage($language) {
 		return ($language === 'native' || $this->isTranslationEndpoint($language));
 	}
 

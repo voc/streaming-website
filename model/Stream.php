@@ -150,6 +150,9 @@ class Stream
 		switch($proto)
 		{
 			case 'hls':
+				if ($this->getRoom()->getConference()->has('cdn.hls_playlist_url')) {
+					return str_replace('{streamId}', $this->getRoom()->getStream(), $this->getRoom()->getConference()->get('cdn.hls_playlist_url'));
+				}
 				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getRoom()->getStream()).'/'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
 		}
 
@@ -261,6 +264,9 @@ class Stream
 		);
 	}
 	public function getPoster() {
+		if ($this->room->getConference()->has('cdn.poster_url')) {
+			return str_replace('{streamId}', $this->getRoom()->getStream(), $this->room->getConference()->get('cdn.poster_url'));
+		}
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'thumbnail', $this->getRoom()->getStream(), 'poster.jpeg']);
 	}
 }

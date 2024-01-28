@@ -53,6 +53,8 @@ function formatRooms($conference) {
 		unset($config['guid']);
 		unset($config['name']);
 		unset($config['slug']);
+		unset($config['capacity']);
+
 		if (isset($config['chat'])) {
 			foreach ($config['chat'] as $k => $v) {
 				unset($config[$k]);

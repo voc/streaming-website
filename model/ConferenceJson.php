@@ -26,8 +26,9 @@ class ConferenceJson extends Conference
 			if (!$r) {
 				continue;
 			}
+			$streamId = isset($r->streamId) ? $r->streamId : $r->slug;
 			$this->rooms[$r->slug] = array_merge(
-				['stream' => $r->streamId],
+				['stream' => $streamId],
 				get_object_vars($r),
 				(isset($r->streamingConfig) ? get_object_vars($r->streamingConfig) : []),
 				(isset($r->streamingConfig->chat) ? get_object_vars($r->streamingConfig->chat) : [])
@@ -38,7 +39,7 @@ class ConferenceJson extends Conference
 		if ( isset($c->streamingConfig->overviewPage->sections) ) {
 			foreach($c->streamingConfig->overviewPage->sections as $s) {
 				$groups[$s->title] = array_map(
-					function($r) { return $r->slug; }, 
+					function($r) { return $r->slug; },
 					@$s->items ?: @$s->rooms ?: []
 				);
 			}
