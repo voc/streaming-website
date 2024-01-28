@@ -368,9 +368,9 @@ class Schedule
 				$key = $slug;
 				if (isset($room['name'])) {
 					$key = $room['name'];
-				} elseif ($room['SCHEDULE_NAME']) {
+				} elseif (isset($room['SCHEDULE_NAME'])) {
 					$key = $room['SCHEDULE_NAME'];
-				} elseif ($room['DISPLAY']) {
+				} elseif (isset($room['DISPLAY'])) {
 					$key = $room['DISPLAY'];
 				}
 				$this->mapping[$key] = $slug;

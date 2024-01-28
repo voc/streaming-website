@@ -145,6 +145,9 @@
                     "default": "",
                     "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"]
                   },
+                  "capacity": {
+                    "type": ["integer", "null"]
+                  },
                   "streamingConfig": {
                     "$ref": "#/definitions/RoomStreamingConfig"
                   }
