@@ -107,7 +107,13 @@
 									$current = @$upcoming['current'];
 									$next = @$upcoming['next'];
 									$current_is_special = $current['special'] ?? false;
-									$next_is_special = $next['special'] ?? false; ?>
+									$next_is_special = $next['special'] ?? false;
+
+									if($conference->get('show_track_in_overview')):
+								?>
+										<h5 class="track"><?=h( @$current['track'] ?: @$next['track']) ?></h5>
+								<? endif ?>
+
 									<div class="program-schedule">
 										<? if($current && !$current_is_special): ?>
 										<div class="talk current-talk" title="<?=h(@$current['title'] ?: 'none') ?>">
