@@ -32,9 +32,9 @@
             "display": "#%s:fosdem.org",
             "url": "https://matrix.to/#/#%s:fosdem.org?web-instance[element.io]=chat.fosdem.org"
           }
-        }
         },
         "hide_rooms_without_talks": true,
+        "show_track_in_overview": true
       },
       "overviewPage": {},
       "schedule": {

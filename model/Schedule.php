@@ -244,6 +244,7 @@ class Schedule
 					// normal talk
 					$talk = $this->makeEvent($start, $end);
 					$talk['guid'] = (string)$event['guid'];
+					$talk['track'] = (string)$event->track;
 					$talk['title'] = (string)$event->title;
 					$talk['speaker'] = implode(', ', $personnames);
 					$talk['room_known'] = $this->isRoomMapped($roomName);
