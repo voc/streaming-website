@@ -36,7 +36,113 @@
         "hide_rooms_without_talks": true,
         "show_track_in_overview": true
       },
-      "overviewPage": {},
+      "overviewPage": {
+        "sections": [
+          {
+            "title": "Main track & Lighting Talks & BOF",
+            "items": [
+              {
+                "slug": "janson"
+              },
+              {
+                "slug": "k1105"
+              },
+              {
+                "slug": "h2215"
+              },
+              {
+                "slug": "aw1121"
+              }
+            ]
+          },
+          {
+            "title": "Dev rooms",
+            "items": [
+              {
+                "slug": "k3201"
+              },
+              {
+                "slug": "k3401"
+              },
+              {
+                "slug": "k4201"
+              },
+              {
+                "slug": "k4401"
+              },
+              {
+                "slug": "k4601"
+              },
+              {
+                "slug": "h1301"
+              },
+              {
+                "slug": "h1302"
+              },
+              {
+                "slug": "h1308"
+              },
+              {
+                "slug": "h1309"
+              },
+              {
+                "slug": "h2213"
+              },
+              {
+                "slug": "h2214"
+              },
+              {
+                "slug": "h3242"
+              },
+              {
+                "slug": "h3244"
+              },
+              {
+                "slug": "aw1120"
+              },
+              {
+                "slug": "aw1125"
+              },
+              {
+                "slug": "aw1126"
+              },
+              {
+                "slug": "ua2114"
+              },
+              {
+                "slug": "ua2118"
+              },
+              {
+                "slug": "ua2220"
+              },
+              {
+                "slug": "ub2147"
+              },
+              {
+                "slug": "ub2252a"
+              },
+              {
+                "slug": "ub4132"
+              },
+              {
+                "slug": "ub5132"
+              },
+              {
+                "slug": "ub5230"
+              },
+              {
+                "slug": "ud2120"
+              },
+              {
+                "slug": "ud2218a"
+              },
+              {
+                "slug": "ud2208"
+              }
+            ]
+          }
+        ]
+      },
       "schedule": {
         "url": "https://fosdem.org/2024/schedule/xml",
         "scale": 3
@@ -61,7 +167,7 @@
         "name": "Janson",
         "capacity": 1415,
         "streamingConfig": {
-          "wide": true,
+          // "wide": true,
           "social": {
             "mastodon": true
           },
