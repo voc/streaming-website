@@ -1,0 +1,33 @@
+@import "../../../assets/css/_structure.less";
+
+/*
+@brand-primary: @magenta;
+@well-bg: @dark;
+@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @cyan;
+@panel-default-heading-bg: @dark;
+@panel-default-text: @blue;
+@panel-bg: @dark;
+@schedule-bg: @dark;
+@schedule-selected-room: #006b6b;
+@schedule-now-bg: fade(@red, 40%);
+*/
+
+clappr-watermark {
+	z-index: -1000;
+	display: none !important;
+}
+
+@media (min-width: 1200px) {
+	.overview {
+		.container {
+			width: 100%;
+		}
+	}
+}
+
+body .schedule {
+	.room, 	.block {
+		height: 130px;
+	}
+}
