@@ -23,6 +23,11 @@ class Conference extends ModelBase
 		return $this->get('CONFERENCE.TITLE', 'C3VOC');
 	}
 
+	// only releavnt for new style config.json
+	public function getStreamingConfig() {
+		return null;
+	}
+
 	public function isPreviewEnabled() {
 		if(isset($GLOBALS['forceopen']) && $GLOBALS['forceopen'])
 			return true;
