@@ -12,14 +12,15 @@
 		<div class="row room-group room-group-n<?=h($i++)?> room-group-<?=h(slugify($group))?>">
 
 			<?
-				/* 
 				// remove rooms without talks
-				$rooms = array_filter($rooms, function($r) {
-					global $upcomingTalksPerRoom;
-					$upcoming = @$upcomingTalksPerRoom[ $r->getSlug() ];
-					return isset($upcoming['next']);
-				}); */
-				$count = count($rooms); 
+				if ($conference->get('hide_rooms_without_talks')) {
+					$rooms = array_filter($rooms, function($r) {
+						global $upcomingTalksPerRoom;
+						$upcoming = @$upcomingTalksPerRoom[ $r->getSlug() ];
+						return isset($upcoming['next']);
+					});
+				}
+				$count = count($rooms);
 				$idx = 0;
 				usort($rooms, function ($r_a, $r_b) {
 					global $upcomingTalksPerRoom;
