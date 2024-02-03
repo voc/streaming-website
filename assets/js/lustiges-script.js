@@ -33,6 +33,14 @@ $(function() {
 	});
 
 	var $player = $('.video-wrap[data-voc-player]');
+
+	// skip forward to scheduled beginning of the talk at
+	var prerecord_seconds = 900;
+	if (window.config && window.config.features && window.config.features.relive && window.config.features.relive.prerecord) {
+		prerecord = window.config.features.relive.prerecord;
+	}
+
+
 	if ($player.length > 0) {
 		var config = {
 			parent: $player.get(0),
@@ -59,7 +67,7 @@ $(function() {
 						// skip forward to scheduled beginning of the talk at
 						// ~ 0:14:30  (30 sec offset, if speaker starts on time)
 						} else if (playback.getPlaybackType() == 'vod') {
-							player.seek(15 * 60);
+							player.seek(prerecord_seconds);
 						}
 					});
 				}

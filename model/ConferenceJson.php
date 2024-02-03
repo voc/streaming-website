@@ -5,6 +5,7 @@ class ConferenceJson extends Conference
 	private $start;
 	private $end;
 	private $rooms;
+	private $streamingConfig;
 	private $html;
 
 	public function __construct($json, $mandator)
@@ -13,7 +14,7 @@ class ConferenceJson extends Conference
 		$this->start = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->start);
 		$this->end   = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->end);
 		$this->html  = isset($c->streamingConfig->html) ? $c->streamingConfig->html : [];
-
+		$this->streamingConfig = $c->streamingConfig;
 		$this->rooms = [];
 		if (isset($c->rooms)) {
 			if (is_array($c->rooms)) {
@@ -123,6 +124,10 @@ class ConferenceJson extends Conference
 
 	public function isUnlisted() {
 		return false; // not supported by json schema
+	}
+
+	public function getStreamingConfig() {
+		return $this->streamingConfig;
 	}
 
 	public function getRooms()
