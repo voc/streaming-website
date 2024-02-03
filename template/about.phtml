@@ -1,5 +1,15 @@
 <div class="container about">
 	<h1>About the Live-Streams and Recordings</h1>
+
+	<? if($conference->has('html.about')): ?>
+
+		<?=$conference->get('html.about')?>
+
+	<? else: ?>
+		<p>
+			<a href="<?=h($conference->getReliveUrl())?>">ReLive</a> is the platform for recordings of events like this. It is operated by the Chaos Computer Club Video Operation Center.
+		</p>
+
 	<p>
 		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> is organized and performed by the <a href="https://c3voc.de">Chaos Computer Club Video Operation Center</a>.
 	</p>
@@ -49,6 +59,8 @@
 		cannot guarantee that (for example) their network infrastructure will
 		comply to this policy.
 	</p>
+
+	<? endif ?>
 
 	<h2>Imprint</h2>
 	<p>Please see <a href="//ccc.de/de/imprint">ccc.de</a>.</p>
