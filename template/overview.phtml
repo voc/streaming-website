@@ -39,7 +39,7 @@
 				foreach($rooms as $room): 
 					$is_wide = 0;
 					/* when the count is odd and this is the last item - make it full width */
-					if (($count % 2 == 1) && ($idx == $count - 1)) {
+					if (false && ($count % 2 == 1) && ($idx == $count - 1)) {
 						$is_wide = 1;
 					}
 					elseif ($room->requestsWide()) {
@@ -63,7 +63,8 @@
 						col-xs-12
 					<? else: ?>
 						narrow
-						col-md-6
+						col-md-4
+						col-lg-2
 					<? endif ?>
 
 					<? if($room->hasPreview()): ?>
