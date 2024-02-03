@@ -1,6 +1,8 @@
 const h = HtmlSanitizer.SanitizeHtml
 
 let previousTitle = "";
+let lastClose = new Date().getTime();
+
 function dragElement(elmnt) {
 	var pos1 = 0,
 		pos2 = 0,
@@ -52,12 +54,13 @@ function closeEventDetails(e) {
 	document.getElementById("schedule-event-detail-popover").style.display =
 		"none";
 	window.scrollLock = false;
+	lastClose = new Date().getTime();
 }
 
 const acronym = window.location.pathname.split("/")[1];
 
 function showEventDetails(e, data, force = false) {
-	if (!force && (data.type || previousTitle == data.title)) {
+	if (!force && (data.type || previousTitle == data.title || lastClose > new Date().getTime() - 5000) ){
 		return;
 	}
 	let popover = document.getElementById("schedule-event-detail-popover");
