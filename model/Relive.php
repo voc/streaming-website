@@ -52,6 +52,7 @@ class Relive
 
 		usort($talks, function($a, $b) {
 			// first, make sure that live talks are always on top
+			/*
 			if($a['status'] == 'live' && $b['status'] != 'live') {
 				return -1;
 			}
@@ -62,6 +63,7 @@ class Relive
 				// sort live talks by room
 				return strcmp($a['room'], $b['room']);
 			}
+			*/
 
 			// all other talks get sorted by their start time
 			// sorting the most recent talks to the top
