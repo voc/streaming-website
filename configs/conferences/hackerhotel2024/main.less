@@ -1,0 +1,70 @@
+@import "../../../assets/css/_structure.less";
+
+@brand-primary:         #eeee23;
+@text-color:            #aaaaaa;
+@background:            #1a1a1a;
+
+@link-color:            @brand-primary;
+@panel-bg:              #222222;
+@well-bg:               @panel-bg;
+
+@panel-default-border:  #000000;
+@panel-primary-border:  #000000;
+
+@navbar-default-color:  #aaaaaa;
+@navbar-default-bg:     #333333;
+@navbar-default-link-color:       #aaa;
+@navbar-default-link-hover-color: #ccc;
+
+@footer-default-color:            #aaaaaa;
+@footer-default-bg:               #333333;
+@footer-default-link-color:       #FFFFFF;
+@footer-default-link-hover-color: #CCCCCC;
+
+// darker nav tabs:
+
+@nav-link-hover-bg: #262626; // nav-tabs-link-hover-bg gibts nicht... :/
+@nav-tabs-active-link-hover-bg: #333;
+@nav-tabs-active-link-hover-color: @brand-primary;
+
+@custom-nav-border-color: @text-color;
+@nav-tabs-link-hover-border-color: #888; // slightly darker border
+
+@nav-tabs-border-color:                       @custom-nav-border-color;
+@nav-tabs-active-link-hover-border-color:     @custom-nav-border-color;
+@nav-tabs-justified-link-border-color:        @custom-nav-border-color;
+@nav-tabs-justified-active-link-border-color: @custom-nav-border-color;
+
+body.room {
+	.tab-content {
+		border-left:   1px solid @custom-nav-border-color;
+		border-bottom: 1px solid @custom-nav-border-color;
+		border-right:  1px solid @custom-nav-border-color;
+	}
+}
+
+// end darker nav tabs
+
+
+body {
+	h1 {
+		color: @brand-primary;
+	}
+}
+
+.banner {
+	text-align: center;
+	color: @brand-primary;
+}
+
+body {
+	background-color: @background;
+}
+
+img.hackerhotellogo {
+	width: 200px;
+	position: absolute;
+	top: 70px;
+	right: 20px;
+	z-index: -100;
+}
