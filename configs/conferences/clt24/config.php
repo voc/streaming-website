@@ -127,7 +127,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'V1' => array(
 		'DISPLAY' => 'V1',
-		'STREAM' => 'clt-video-v1',
+		'STREAM' => 'cltvideov1',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
@@ -148,7 +148,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'V2' => array(
 		'DISPLAY' => 'V2',
-		'STREAM' => 'clt-video-v2',
+		'STREAM' => 'cltvideov2',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
@@ -169,7 +169,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'V3' => array(
 		'DISPLAY' => 'V3',
-		'STREAM' => 'clt-video-v3',
+		'STREAM' => 'cltvideov3',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
@@ -190,7 +190,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'V4' => array(
 		'DISPLAY' => 'V4',
-		'STREAM' => 'clt-video-v4',
+		'STREAM' => 'cltvideov4',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
@@ -211,7 +211,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'V5' => array(
 		'DISPLAY' => 'V5',
-		'STREAM' => 'clt-video-v5',
+		'STREAM' => 'cltvideov5',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
@@ -232,7 +232,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'V6' => array(
 		'DISPLAY' => 'V6',
-		'STREAM' => 'clt-video-v6',
+		'STREAM' => 'cltvideov6',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
@@ -245,6 +245,27 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 		'SCHEDULE' => true,
 		'SCHEDULE_NAME' => 'V6',
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => false,
+	),
+	'V7' => array(
+		'DISPLAY' => 'V7',
+		'STREAM' => 'cltvideov7',
+		'PREVIEW' => true,
+		'TRANSLATION' => false,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'DASH' => true,
+		'H264_ONLY' => true,
+    'HLS' => true,
+		'SLIDES' => false,
+		'AUDIO' => false,
+		'MUSIC' => false,
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'V7',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -287,7 +308,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-	//'ROOMFILTER' => array('V1', 'V2', 'V3', 'V4', 'V5', 'V6'),
+	//'ROOMFILTER' => array('V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
