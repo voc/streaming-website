@@ -16,22 +16,22 @@
 
 
 // conference specific styles here
-@pw-color:     #AAAAAA;
+@pw-color:     #000;
 @bg-orange:       #ee7f00;
+@bg-main:       white;
 
 @body-text:     @pw-color;
 
-@overview-color: @pw-color;
+@overview-color: @darker-grey;
 
 @darker-grey:   rgba(16,16,15,.9);
 @dark-grey:     lighten(@darker-grey, 10%);
-@light-grey:    lighten(@darker-grey, 20%);
-@lighter-grey:  lighten(@darker-grey, 30%);
-
+@light-grey:    lighten(@darker-grey, 30%);
+@lighter-grey:  lighten(@darker-grey, 40%);
 
 // often configured values (and their defaults):
 //
-@brand-primary:         @darker-grey;
+@brand-primary:         @bg-main;
 @text-color:            @body-text;
 
 @link-color:            @body-text;
@@ -40,7 +40,7 @@
 
 // @navbar-height:         70px;
 
-@navbar-default-bg:     @bg-orange;
+@navbar-default-bg:     @bg-main;
 @navbar-default-border: @bg-orange;
 
 @navbar-default-link-color: @pw-color;
@@ -96,18 +96,18 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 		}
 
 		.panel {
-			//background: none;
-			background-color: @darker-grey;
-			border: 1px solid @bg-orange;
+			border-color: @bg-orange;
+			border-width: 5px 0 0 0;
+			border-style: solid;
+			border-radius: 1px;
 
 			&:hover {
 				text-decoration: none;
-			    background-color: @dark-grey;
-
+			    background-color: @lighter-grey;
 			}
 
 			.panel-title {
-				color: @overview-color;
+				color: @bg-main;
 				font-size: 18px;
 			}
 
@@ -123,6 +123,8 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 			.panel-heading {
 				background: none;
 				border: none;
+				border-radius: 0 !important;
+				background-color: @darker-grey;
 
 				display: block !important;
 
@@ -130,10 +132,12 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 				font-weight: bold;
 
 				padding: 8px 15px;
+			}
 
-				a {
-					color: @overview-color;
-				}
+			.panel-body {
+				border-style: solid;
+				border-color: @lighter-grey;
+				border-width: 0 1px 1px 1px;
 			}
 
 		}
@@ -203,18 +207,20 @@ footer {
 .nav-tabs > li > a {
 	//border-radius: 0 !important;
 	background-color: @darker-grey;
-	border: 1px solid @bg-orange;
+	border-color: @bg-orange;
+	border-width: 5px 0 0 0 !important;
+	border-radius: 1px !important;
 	&:hover {
 		background-color: @dark-grey;
 		text-decoration: none;
+		border-color: @bg-orange;
+		color: @bg-main !important;
 	}
 }
 
 body.room .tab-content {
 	background-color: @lighter-grey;
-	border-left: 1px solid @bg-orange;
-	border-bottom: 1px solid @bg-orange;
-	border-right: 1px solid @bg-orange;
+	border: none;
 }
 
 @media (max-width: 768px)
@@ -231,4 +237,39 @@ body.room .tab-content {
 	.banner {
 		margin-top: 60px;
 	}
+}
+
+nav, .navbar-default, .navbar-brand {
+	color: @bg-orange !important;
+}
+
+.navbar-fixed-top {
+	border-width: 0 0 5px;
+}
+
+.nav-tabs > li.active > a {
+	background-color: @bg-orange !important;
+	color: @darker-grey;
+}
+
+.nav-tabs.nav-justified > .active > a {
+	border-color: @bg-orange !important;
+}
+
+.nav-player a {
+	color: @bg-main !important;
+}
+.nav-tabs > li > a {
+	color: @bg-main;
+}
+
+// extra rules to make schedule things not be white-on-white
+body .schedule .block h4 {
+	color: @dark-grey;
+}
+body .schedule .block.daychange {
+	color: @dark-grey;
+}
+body .schedule .block.pause, body .schedule .block.optout {
+	color: @dark-grey;
 }
