@@ -11,6 +11,7 @@
     "streamingConfig": {
       "features": {
         "embed": true,
+        "relive": true,
         "audio": false,
         "sd_video": false,
         "social": {
