@@ -25,7 +25,6 @@
           }
         }
       },
-      // "overviewPage": {},
       "schedule": {
         "url": "https://talks.nixcon.org/nixcon-2023/schedule/export/schedule.xml",
         "scale": 7,

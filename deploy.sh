@@ -1,52 +1,55 @@
 #!/usr/bin/env bash
 
 if [ "$1" != '--without-validation' ]; then
-	for cmd in find xargs php git; do
-		command -v $cmd >/dev/null 2>&1 || { echo >&2 "I require $cmd but it's not installed.  Aborting."; exit 1; }
-	done
+    for cmd in find xargs php git; do
+        command -v $cmd >/dev/null 2>&1 || { echo >&2 "I require $cmd but it's not installed.  Aborting."; exit 1; }
+    done
 
-	find . -name "*.php" | grep -v archive | xargs -n1 php -l
-	if [ $? -ne 0 ]; then
-		echo "not deploying b0rken code ;)"
-		exit 1
-	fi
+    find . -name "*.php" | grep -v archive | xargs -n1 php -l
+    find configs/conferences/ -name "*.json" | xargs -n1 python -m json.tool > /dev/null
+    if [ $? -ne 0 ]; then
+        echo "not deploying b0rken code ;)"
+        exit 1
+    fi
 fi
 
-echo ""
+echo
 DEPLOY_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
 # Fetch all remotes so we know what's actually on there. This is helpful
 # if people have configured gitolite and github.
 git fetch --all
 
+echo
+
 if [ `git rev-parse --verify origin/$DEPLOY_BRANCH` != `git rev-parse --verify $DEPLOY_BRANCH` ]; then
-	echo "You have commits on the $DEPLOY_BRANCH branch not pushed to origin yet. They would not be deployed."
-	echo "do you still which to deploy what's already in the repo? then type yes"
-	read -p "" input
-	if [ "x$input" != "xyes" ]; then
-		exit 2
-	fi
-	echo ""
+    echo "You have commits on the $DEPLOY_BRANCH branch not pushed to origin yet. They would not be deployed."
+    echo "do you still which to deploy what's already in the repo? then type yes"
+    read -p "" input
+    if [ "x$input" != "xyes" ]; then
+        exit 2
+    fi
+    echo ""
 fi
 
 if ! (git diff --exit-code >/dev/null && git diff --cached --exit-code >/dev/null); then
-	echo "You have uncomitted changes. They would not be deployed."
-	echo "do you still which to deploy what's already in the repo? then type yes"
-	read -p "" input
-	if [ "x$input" != "xyes" ]; then
-		exit 2
-	fi
-	echo ""
+    echo "You have uncomitted changes. They would not be deployed."
+    echo "do you still which to deploy what's already in the repo? then type yes"
+    read -p "" input
+    if [ "x$input" != "xyes" ]; then
+        exit 2
+    fi
+    echo ""
 fi
 
 if [ "x$DEPLOY_BRANCH" != "xmaster" ]; then
-	echo "You're currently on branch $DEPLOY_BRANCH."
-	echo "Are you sure you want to deploy that branch (and not master)? then type yes"
-	read -p "" input
-	if [ "x$input" != "xyes" ]; then
-		exit 2
-	fi
-	echo ""
+    echo "You're currently on branch $DEPLOY_BRANCH."
+    echo "Are you sure you want to deploy that branch (and not master)? then type yes"
+    read -p "" input
+    if [ "x$input" != "xyes" ]; then
+        exit 2
+    fi
+    echo ""
 fi
 
 for host in lb.alb.c3voc.de lb.dort.c3voc.de lb.wob.c3voc.de; do
