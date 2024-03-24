@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 if [ "$1" != '--without-validation' ]; then
-    for cmd in find xargs php git; do
+    for cmd in find xargs php git python3; do
         command -v $cmd >/dev/null 2>&1 || { echo >&2 "I require $cmd but it's not installed.  Aborting."; exit 1; }
     done
 
     find . -name "*.php" | grep -v archive | xargs -n1 php -l
-    find configs/conferences/ -name "*.json" | xargs -n1 python -m json.tool > /dev/null
+    find configs/conferences/ -name "*.json" | xargs -n1 python3 -m json.tool > /dev/null
     if [ $? -ne 0 ]; then
         echo "not deploying b0rken code ;)"
         exit 1
