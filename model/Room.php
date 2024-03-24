@@ -141,7 +141,7 @@ class Room
 	}
 
 	public function hasFeedback() {
-		return $this->get('FEEDBACK') && $this->getConference()->has('FEEDBACK');
+		return $this->get('FEEDBACK') && $this->getConference()->hasFeedback();
 	}
 
 
