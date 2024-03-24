@@ -157,7 +157,7 @@ class ConferenceJson extends Conference
 	}
 
 	public function hasFeedback() {
-		return $this->has('FEEDBACK');
+		return isset($this->streamingConfig->features->relive) ? $this->streamingConfig->features->relive : false;
 	}
 
 	public function hasBannerHtml() {
