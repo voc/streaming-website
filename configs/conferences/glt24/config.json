@@ -1,4 +1,5 @@
 {
+    "$schema": "../../../docs/config-schema.json",
     "conference": {
         "title": "Grazer Linuxtage 2024",
         "acronym": "glt24",
