@@ -1,0 +1,81 @@
+{
+    "conference": {
+        "title": "Grazer Linuxtage 2024",
+        "acronym": "glt24",
+        "organizer": "Verein zur Förderung freier Soft- und Hardware",
+        "description": "Grazer Linuxtage 2024",
+        "keywords": [
+            "Linuxtage",
+            "Linux",
+            "2024",
+            "Video",
+            "Media",
+            "Streaming",
+            "Graz"
+        ],
+        "start": "2024-04-05T08:00:00+01:00",
+        "end": "2024-04-06T19:30:00+01:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "social": {
+                    "hashtag": "#glt24",
+                    "mastodon": true
+                }
+            },
+            "schedule": {
+                "url": "https://pretalx.linuxtage.at/glt24/schedule/export/schedule.xml",
+                "roomfilter": [
+                    "HS i1",
+                    "HS i2",
+                    "HS i7"
+                ],
+                "scale": 3,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Vortragsräume",
+                        "items": [
+                            {
+                                "slug": "i1"
+                            },
+                            {
+                                "slug": "i2"
+                            },
+                            {
+                                "slug": "i7"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "footer": "by <a href=\"https://c3voc.de\">C3VOC</a>"
+            }
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "i1",
+                "name": "HS i1",
+                "streamId": "s2"
+            },
+            {
+                "guid": null,
+                "slug": "i2",
+                "name": "HS i2",
+                "streamId": "s3"
+            },
+            {
+                "guid": null,
+                "slug": "i7",
+                "name": "HS i7",
+                "streamId": "s5"
+            }
+        ]
+    }
+}
