@@ -15,6 +15,10 @@ fi
 echo ""
 DEPLOY_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
+# Fetch all remotes so we know what's actually on there. This is helpful
+# if people have configured gitolite and github.
+git fetch --all
+
 if [ `git rev-parse --verify origin/$DEPLOY_BRANCH` != `git rev-parse --verify $DEPLOY_BRANCH` ]; then
 	echo "You have commits on the $DEPLOY_BRANCH branch not pushed to origin yet. They would not be deployed."
 	echo "do you still which to deploy what's already in the repo? then type yes"
