@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .tab-content > .tab-pane {
-    background-color: #120B17;
+    background-color: #120B17C0;
 }
 
 .nav-tabs > li > a {
@@ -67,12 +67,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .nav-tabs > li:hover > a,
 .nav-tabs > li.active > a {
     border-color: #311944 !important;
-    border-bottom-color: #ddd !important;
+    border-bottom-color: #2C292A !important;
 }
 
 .nav-tabs.nav-functions > li:hover > a,
 .nav-tabs.nav-functions > li.active > a {
-    border-color: #ddd !important;
+    border-color: #2C292A !important;
     border-bottom-color: #020128 !important;
 }
 
@@ -99,4 +99,20 @@ body.room .player-wrap {
 
 .container.about {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.room .tab-content {
+	border-left: 1px solid #2C292A;
+	border-bottom: 1px solid #2C292A;
+	border-right: 1px solid #2C292A;
+}
+
+.nav-tabs.nav-functions > li > a {
+	transition-duration: 0.2s;
+	border: 1px solid #2C292A;
+}
+
+.nav-tabs.nav-functions > li:hover > a, .nav-tabs.nav-functions > li.active > a {
+	border-color: #F5958B !important;
+	border-bottom-color: #2C292A !important;
 }
