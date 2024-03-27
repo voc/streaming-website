@@ -120,6 +120,9 @@ $CONFIG['OVERVIEW'] = array(
 		),
 		'Seminars' => array(
 			'revisionextras'
+		),
+		'Main Stream (Backup)' => array(
+			'revisionbackup'
 		)
 	),
 );
@@ -145,7 +148,7 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Revision',
+		'SCHEDULE_NAME' => 'Main Hall',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -171,7 +174,33 @@ $CONFIG['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Revision Extras',
+		'SCHEDULE_NAME' => 'Seminars',
+		'FEEDBACK' => false,
+		'SUBTITLES' => false,
+		'EMBED' => true,
+		'IRC' => false,
+		'TWITTER' => false,
+		'TWITTER_CONFIG' => array(
+			'DISPLAY' => '#revision @ twitter/mastodon',
+			'TEXT'    => '#revision',
+		),
+	),
+	'revisionbackups' => array(
+		'DISPLAY' => 'Revision Main Stream (Backup)',
+		'STREAM' => 's1',
+		'PREVIEW' => true,
+
+		'TRANSLATION' => false,
+		'SD_VIDEO' => true,
+		'HD_VIDEO' => true,
+		'H264_ONLY' => true,
+		'DASH' => true,
+		'AUDIO' => false,
+		'SLIDES' => false,
+		'MUSIC' => false,
+
+		'SCHEDULE' => true,
+		'SCHEDULE_NAME' => 'Main Hall',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
@@ -191,38 +220,38 @@ $CONFIG['ROOMS'] = array(
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
-// $CONFIG['SCHEDULE'] = array(
-// 	/**
-// 	 * URL zum Fahrplan-XML
-// 	 *
-// 	 * Diese URL muss immer verfügbar sein, sonst könnte die Programm-Ansicht
-// 	 * aufhören zu funktionieren. Üblicherweise wird diese daher Datei über
-// 	 * das Script configs/download.sh heruntergeladen, welches von einem
-// 	 * Cronjob regelmäßig getriggert wird.
-// 	 */
-//   'URL' => 'https://bats.science/revision-schedule.xml',
-// 
-// 	/**
-// 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
-// 	 *
-// 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-// 	 */
-// 	'ROOMFILTER' => array('Revision'),
-// 
-// 	/**
-// 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
-// 	 */
-// 	'SCALE' => 6,
-// 
-// 	/**
-// 	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
-// 	 *
-// 	 * Diese folgende Beispiel-Zeile Simuliert, dass das
-// 	 * Konferenz-Datum 2016-12-29 auf den heutigen Tag 2016-02-24 verschoben ist.
-// 	 */
-// 	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-10-23 11:00') - strtotime(/* Today */ date('Y-m-d')),
-// 	//'SIMULATE_OFFSET' => 0,
-// );
+$CONFIG['SCHEDULE'] = array(
+	/**
+	 * URL zum Fahrplan-XML
+	 *
+	 * Diese URL muss immer verfügbar sein, sonst könnte die Programm-Ansicht
+	 * aufhören zu funktionieren. Üblicherweise wird diese daher Datei über
+	 * das Script configs/download.sh heruntergeladen, welches von einem
+	 * Cronjob regelmäßig getriggert wird.
+	 */
+  'URL' => 'https://pretalx.c3voc.de/revision2024/schedule/export/schedule.xml',
+
+	/**
+	 * Nur die angegebenen Räume aus dem Fahrplan beachten
+	 *
+	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 */
+	// 'ROOMFILTER' => array('Revision'),
+
+	/**
+	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
+	 */
+	'SCALE' => 6,
+
+	/**
+	 * Simuliere das Verhalten als wäre die Konferenz bereits heute
+	 *
+	 * Diese folgende Beispiel-Zeile Simuliert, dass das
+	 * Konferenz-Datum 2016-12-29 auf den heutigen Tag 2016-02-24 verschoben ist.
+	 */
+	//'SIMULATE_OFFSET' => strtotime(/* Conference-Date */ '2018-10-23 11:00') - strtotime(/* Today */ date('Y-m-d')),
+	//'SIMULATE_OFFSET' => 0,
+);
 
 
 /**
