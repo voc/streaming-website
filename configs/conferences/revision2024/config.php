@@ -1,9 +1,9 @@
 <?php
 
 
-$CONFIG['PLAYER'] = array(
-	'VERSION' => 'player-revision.js',
-);
+// $CONFIG['PLAYER'] = array(
+// 	'VERSION' => 'player-revision.js',
+// );
 
 $CONFIG['CONFERENCE'] = array(
 	/**
