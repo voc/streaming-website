@@ -185,7 +185,7 @@ $CONFIG['ROOMS'] = array(
 			'TEXT'    => '#revision',
 		),
 	),
-	'revisionbackups' => array(
+	'revisionbackup' => array(
 		'DISPLAY' => 'Revision Main Stream (Backup)',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
