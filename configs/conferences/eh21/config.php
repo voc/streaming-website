@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-    'TITLE' => 'easterhegg 2024 – rabbit prototyping',
+    'TITLE' => 'easterhegg 2024',
 
 	/**
 	 * Veranstalter
@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-//	'DESCRIPTION' => '<img src="./configs/conferences/jh-hh-2019/Icon_JH-Hamburg-2019.svg" class="iconjh">',
+    'DESCRIPTION' => 'easterhegg 2024 – rabbit prototyping',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
