@@ -1,0 +1,167 @@
+@import "../../../assets/css/_structure.less";
+@gelb: #f9cd00;
+@white: #ffffff;
+@light-blue: #ed0f67;
+@blue: #094762;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #555;
+
+
+@brand-primary: @white;
+@well-bg: @dark;
+//@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: #000;
+@panel-default-text: @white;
+@panel-bg: @dark;
+
+
+/* FreeMono */
+@font-face {
+  font-family: 'FreeMono';
+  src: url('/configs/conferences/eh21/woff/FreeMono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeMono';
+  src: url('/configs/conferences/eh21/woff/FreeMonoBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeMono';
+  src: url('/configs/conferences/eh21/woff/FreeMonoOblique.woff') format('woff');
+  font-weight: normal;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'FreeMono';
+  src: url('/configs/conferences/eh21/woff/FreeMonoBoldOblique.woff') format('woff');
+  font-weight: bold;
+  font-style: oblique;
+}
+
+/* FreeSans */
+@font-face {
+  font-family: 'FreeSans';
+  src: url('/configs/conferences/eh21/woff/FreeSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: url('/configs/conferences/eh21/woff/FreeSansBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: url('/configs/conferences/eh21/woff/FreeSansOblique.woff') format('woff');
+  font-weight: normal;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: url('/configs/conferences/eh21/woff/FreeSansBoldOblique.woff') format('woff');
+  font-weight: bold;
+  font-style: oblique;
+}
+
+/* FreeSerif */
+@font-face {
+  font-family: '/configs/conferences/eh21/woff/FreeSerif';
+  src: url('FreeSerif.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '/configs/conferences/eh21/woff/FreeSerif';
+  src: url('FreeSerifBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '/configs/conferences/eh21/woff/FreeSerif';
+  src: url('FreeSerifItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: '/configs/conferences/eh21/woff/FreeSerif';
+  src: url('FreeSerifBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+body {
+	background-color: @dark;
+	color: @white;
+    font: normal 150% 'freesans',sans-serif;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+.outer-div, figure {
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+.panel {
+    background-color: black;
+}
+
+h1 {
+    font: bold 405% "freemono", monospace;
+}
+
+h2 {
+    font: bold 400% "freemono", monospace;
+}
+
+h3, div.panel-title{
+    font: bold 250% "freemono", monospace;
+}
+
+
+.schedule .block.pause {
+    color: black !important;
+}
+
+#schedule-event-detail-popover {
+    color: black !important;
+    h3 {
+        font: bold 150% "freemono", monospace;
+        color: black !important;
+    }
+}
+
+
+.schedule {
+    a {
+        color: @grey-darker;
+    }
+
+    a:hover {
+        color: @grey-lighter;
+    }
+}
