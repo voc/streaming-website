@@ -86,7 +86,7 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	'RELEASES' => 'https://media.ccc.de/c/eh21',
 
-
+	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
