@@ -35,7 +35,7 @@ $(function() {
 	var $player = $('.video-wrap[data-voc-player]');
 
 	// skip forward to scheduled beginning of the talk at
-	var prerecord_seconds = 300; // 900
+	var prerecord_seconds = 900;
 	// TODO find out why this does not work...;
 	if (window.config && window.config.features && window.config.features.relive && window.config.features.relive.prerecord) {
 		prerecord = window.config.features.relive.prerecord;
