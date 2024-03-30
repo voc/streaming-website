@@ -156,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'bitmarckplatz' => array(
 		'DISPLAY' => 'Bitmarckplatz - D003',
-		'STREAM' => 's3',
+		'STREAM' => 's5',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
