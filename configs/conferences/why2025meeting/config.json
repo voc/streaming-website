@@ -3,6 +3,7 @@
     "conference": {
         "title": "WHY2025 meeting",
         "acronym": "why2025meeting",
+        "keywords": null,
         "organizer": "IFCAT",
         "description": "WHY2025 Orga Meeting",
         "start": "2024-04-06T14:30:00+01:00",
