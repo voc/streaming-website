@@ -1,19 +1,25 @@
 @import "../../../assets/css/_structure.less";
 
-@orange: #580070;
-@light: rgba(143,0,181,0.1);
-@medium: #410053;
-@dark: #1f0027;
+@orange: #8b6d48;
+@light: rgba(197,133,57,0.1);
+@medium: #ff0000;
+@dark: #3d2912;
 
 @link-color:            @orange;
 @panel-primary-border:  @orange;
 
+@panel-bg: white;
 @panel-default-heading-bg: @light;
-@panel-default-text:       @medium;
+@panel-default-text:       @dark;
 
 @text-color: @dark;
+body {
+	background-image: linear-gradient(to bottom right, #eeba7b, #dd9640);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
-h1 { color: @medium; }
+h1 { color: @dark; }
 
 .overview .panel-title {
 	font-weight: bold;
@@ -24,8 +30,12 @@ nav .navbar-brand .icon {
 	background-size: contain;
 }
 
+.tab-content > .active {
+    background: white;
+}
+
 .glt24 {
-	background-image: url(steirertux.png);
+    background-image: url(steirertux.png);
 	background-repeat: no-repeat;
 	background-size: 194px 240px;
 
