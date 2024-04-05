@@ -94,7 +94,7 @@
           }
         },
         "keywords" :{
-          "type":"array",
+          "type": ["array", "null"],
           "items": {
             "type": "string"
           }
@@ -190,7 +190,13 @@
           "type": "boolean",
           "title": "Relive aktiv",
           "description": "Wird diese Option deaktivert, wird die UI für temporäre Mitschnitte nicht angezeigt",
-          "default": false
+          "default": true
+        },
+        "recordings": {
+          "type": "boolean",
+          "title": "Recordings Button aktiv",
+          "description": "Wird diese Option deaktivert, wird in der UI der Button 'Releases' nicht angezeigt",
+          "default": true
         },
         "embed": {
           "type": "boolean",
@@ -276,7 +282,8 @@
               "description": "Diese URL muss immer verfügbar sein, sonst können kann die Programm-Ansicht aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein externer HTTP-Cache vorgeschaltet werden.",
               "default": "",
               "examples": [
-                "https://data.c3voc.de/divoc/everything.schedule.xml"
+                "https://pretalx.c3voc.de/camp2023/schedule/export/schedule.xml",
+                "https://data.c3voc.de/eh21/everything.schedule.xml"
               ]
             },
             "scale": {
@@ -355,18 +362,6 @@
       "additionalProperties": false,
       "title": "RoomStreamingConfig",
       "description": "",
-      "examples": [
-        {
-          "display": "Piscopia",
-          "preview": true,
-          "stereo": false,
-          "sd_video": true,
-          "hd_video": true,
-          "slides": false,
-          "dash": true,
-          "audio": true
-        }
-      ],
       "properties": {
         "display": {
           "type": "string",
