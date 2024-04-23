@@ -5,7 +5,6 @@
         "acronym": "suselabs24",
         "organizer": "SUSE",
         "description": "SUSE Labs Conference 2024",
-	"releases": "",
         "keywords": [
             "SUSE",
             "SUSE Labs",
@@ -20,6 +19,7 @@
             "features": {
                 "embed": true,
                 "relive": false,
+                "releases": false,
                 "feedback": false,
                 "social": {
                     "hashtag": "#suselabs24",
