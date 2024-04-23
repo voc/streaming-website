@@ -1,0 +1,71 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "title": "SUSE Labs Conference 2024",
+        "acronym": "suselabs24",
+        "organizer": "SUSE",
+        "description": "SUSE Labs Conference 2024",
+        "keywords": [
+            "SUSE",
+            "SUSE Labs",
+            "2024",
+            "Video",
+            "Media",
+            "Streaming"
+        ],
+        "start": "2024-04-23T07:00:00+02:00",
+        "end": "2024-04-25T19:30:00+02:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": false,
+                "feedback": false,
+                "social": {
+                    "hashtag": "#suselabs24",
+                    "mastodon": false
+                }
+            },
+            "schedule": {
+                "url": "",
+                "roomfilter": [
+                    "Platanus",
+                    "Sophora"
+                ],
+                "scale": 2,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Rooms",
+                        "items": [
+                            {
+                                "slug": "Platanus"
+                            },
+                            {
+                                "slug": "Sophora"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "footer": "by <a href=\"https://c3voc.de\">C3VOC</a>"
+            }
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "platanus",
+                "name": "Platanus",
+                "streamId": "suselabs24s1"
+            },
+            {
+                "guid": null,
+                "slug": "sophora",
+                "name": "Sophora",
+                "streamId": "suselabs24s2"
+            }
+        ]
+    }
+}
