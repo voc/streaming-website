@@ -40,10 +40,10 @@
                         "title": "Rooms",
                         "items": [
                             {
-                                "slug": "Platanus"
+                                "slug": "platanus"
                             },
                             {
-                                "slug": "Sophora"
+                                "slug": "sophora"
                             }
                         ]
                     }
