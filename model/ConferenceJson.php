@@ -11,8 +11,8 @@ class ConferenceJson extends Conference
 	public function __construct($json, $mandator)
 	{
 		$c = $json->conference;
-		$this->start = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->start);
-		$this->end   = DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->end);
+		$this->start = isset($c->start) ? DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->start) : null;
+		$this->end   = isset($c->end)   ? DateTime::createFromFormat(DateTimeInterface::ISO8601, $c->end) : null;
 		$this->html  = isset($c->streamingConfig->html) ? $c->streamingConfig->html : [];
 		$this->streamingConfig = $c->streamingConfig;
 		$this->rooms = [];
@@ -106,7 +106,7 @@ class ConferenceJson extends Conference
 
 	public function hasBegun() {
 		// on the preview-domain all conferences are always open
-		if($this->isPreviewEnabled())
+		if($this->isPreviewEnabled() || empty($this->start))
 			return true;
 
 		$now = new DateTime('now');
@@ -115,7 +115,7 @@ class ConferenceJson extends Conference
 
 	public function hasEnded() {
 		// on the preview-domain no conference ever ends
-		if($this->isPreviewEnabled())
+		if($this->isPreviewEnabled() || empty($this->end))
 			return false;
 
 		$now = new DateTime('now');
@@ -123,7 +123,7 @@ class ConferenceJson extends Conference
 	}
 
 	public function isUnlisted() {
-		return false; // not supported by json schema
+		return empty($this->start) || empty($this->end);
 	}
 
 	public function getStreamingConfig() {
