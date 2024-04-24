@@ -1,0 +1,30 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "eGovernment Podcast",
+    "acronym": "egovpod",
+    "description": "",
+    "keywords": [],
+    "organizer": "Torsten Frenzel",
+    "streamingConfig": {
+      "features": {
+        "embed": false,
+        "relive": false,
+        "social": {
+          "hashtag": "#egovpod",
+          "mastodon": true
+        }
+      },
+      "html": {
+        "footer_": ""
+      }
+    },
+    "rooms": [
+      {
+        "slug": "live",
+        "name": "Live",
+        "streamId": "egovpod-live"
+      }
+    ]
+  }
+}
