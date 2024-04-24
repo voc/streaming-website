@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "eGovernment Podcast",
+    "acronym": "egovpod",
+    "description": "",
+    "keywords": [],
+    "organizer": "Torsten Frenzel",
+    "streamingConfig": {
+      "features": {
+        "embed": false,
+        "relive": false,
+        "releases": false,
+        "social": {
+          "hashtag": "#egovpod",
+          "mastodon": true
+        }
+      },
+      "html": {
+        "footer": "by <a href=\"https://egovernment-podcast.com/event/egovernment-podcast-it-planungsrats-fragestunde/\">eGovernment Podcast</a>"
+      }
+    },
+    "rooms": [
+      {
+        "slug": "live",
+        "name": "Live",
+        "streamId": "egovpod-live"
+      }
+    ]
+  }
+}
