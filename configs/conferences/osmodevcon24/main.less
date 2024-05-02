@@ -1,0 +1,31 @@
+@import "../../../assets/css/_structure.less";
+
+@darkgreen: #0d322b;
+@light: #0ba9a0;
+@medium: #3f3f3f;
+@dark: #000000;
+
+@link-color:            @darkgreen;
+@panel-primary-border:  @darkgreen;
+
+@panel-bg: white;
+@panel-default-heading-bg: @light;
+@panel-default-text:       @dark;
+
+@text-color: @dark;
+body {
+	background-image: linear-gradient(to bottom right, #0ba9a0, #0d322b);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1 { color: @dark; }
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(logo.png);
+	background-size: contain;
+}
