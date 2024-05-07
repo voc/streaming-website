@@ -6,15 +6,22 @@ on:
     branches: [ master ]
 
 jobs:
-  lint-and-mirror:
+  linter:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
     - name: PHP Lint
       uses: michaelw90/PHP-Lint@2.1.0
+
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Mirror to VOC gitolite
       uses: pixta-dev/repository-mirroring-action@v1.1.1
