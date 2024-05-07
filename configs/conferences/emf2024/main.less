@@ -1,0 +1,77 @@
+@import "../../../assets/css/_structure.less";
+
+@blue: #2EADD9;
+@pink: #F55089;
+@orange: #F77F02;
+@yellow: #F9E200;
+@dark-green: #213018;
+@mid-green: #528329;
+@pale-green: #AFC944;
+
+@white: #ffffff;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #242424;
+
+
+@brand-primary: @pale-green;
+@well-bg: @dark-green;
+@navbar-default-bg: @dark-green;
+@navbar-default-link-color: @grey-light;
+@navbar-default-link-hover-color: @white;
+// @state-warning-bg: lighten(@yellow, 25%);
+// @state-info-bg: lighten(@blue, 25%);
+
+@btn-default-bg: @pale-green;
+@panel-default-heading-bg: @dark-green;
+@panel-default-text: @white;
+@panel-bg: @dark-green;
+@schedule-bg: @dark;
+@schedule-now-bg: fade(@dark-green, 40%);
+
+@navbar-h: 100px;
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-VF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: @dark-green;
+    color: @white;
+    padding-top: @navbar-h;
+    font-family: 'Raleway';
+}
+
+
+nav {
+    height: @navbar-h;
+    background: url(header-2.png) left center/60%;
+}
+
+.btn-default {
+    border-color: @dark-green;
+}
+
+nav .navbar-brand .icon {
+    background-image: url(emf2024-logo-dark.svg);
+    background-size: 50px calc(@navbar-h - 25);
+    width: 50px;
+    height: calc(@navbar-h - 25);
+    margin-top: -25px;
+}
+
+.nav.navbar-right.button-wrapper {
+    margin-top: 3px;
+}
+
+.navbar-brand {
+    color: @white !important;
+}
+
+nav .container {
+    margin-top: 22px;
+}
