@@ -19,7 +19,14 @@
         },
         "acronym": {
           "title": "Acronym",
-          "description": "VOC Kürzel für die Konferenz, falls nicht bekannt bitte nicht selbst ausdenken sondern nachfragen. Wird in den URLs als Slug für die Konferenz verwendet.",
+          "description": "VOC Kürzel für die Konferenz, falls nicht bekannt bitte nicht selbst ausdenken sondern nachfragen. Wird in den URLs als Slug für die Konferenz verwendet. Identisch mit Verzeichnisname, wenn nicht anders ausgemacht.",
+          "type": "string",
+          "examples": ["36c3", "rc3", "divoc-ptt"],
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "media_slug": {
+          "title": "Acronym auf media.ccc.de",
+          "description": "Falls das Acronym auf streaming.media.ccc.de und media.ccc.de unterschiedlich ist, kann es hier für media.ccc.de überschrieben werden.",
           "type": "string",
           "examples": ["36c3", "rc3", "divoc-ptt"],
           "pattern": "^[a-z0-9_-]+$"
@@ -78,7 +85,7 @@
           "type": "string",
           "examples": ["Europe/Amsterdam", "Europe/Berlin"],
           "default": "Europe/Amsterdam",
-          "pattern": "^[A-Z][a-z+]/[A-Z][a-z+]$"
+          "pattern": "^([A-Z][a-z+]/[A-Z][a-z+]|UTC)$"
         },
         "colors": {
           "type": "object",
