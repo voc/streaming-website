@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2023-05-23 09:45"),
+	'STARTS_AT' => strtotime("2023-05-22 10:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Veröffentlichung des Grundrechte-Reports 2023 – Zur Lage der Bürger- und Menschenrechte in Deutschland',
+	'TITLE' => 'Veröffentlichung des Grundrechte-Reports 2024 – Zur Lage der Bürger- und Menschenrechte in Deutschland',
 
 	/**
 	 * Veranstalter
@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'grundrechte23',
+			'grundrechte24',
 		),
 	),
 );
@@ -139,14 +139,14 @@ $CONFIG['ROOMS'] = array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Veröffentlichung des Grundrechte-Reports 2023',
+		'DISPLAY' => 'Veröffentlichung des Grundrechte-Reports 2024',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'grundrechte23',
+		'STREAM' => 'grundrechte24',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
