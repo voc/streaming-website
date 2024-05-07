@@ -49,7 +49,7 @@ class ConferenceJson extends Conference
 			$groups['Live'] = array_keys((array) $this->rooms);
 		}
 
-		$acronym = $c->acronym ?: $mandator;
+		$acronym = isset($c->acronym) ? $c->acronym : $mandator;
 
 		$config = array_merge(
 			isset($c->streamingConfig) ? get_object_vars($c->streamingConfig) : [],
@@ -61,7 +61,7 @@ class ConferenceJson extends Conference
 					'title' 		=> $c->title,
 					'author' 		=> $c->organizer,
 					'description' 	=> $c->description,
-					'keywords'		=> is_array($c->keywords) ? implode(', ', $c->keywords) : "",
+					'keywords'		=> isset($c->keywords) ? (is_array($c->keywords) ? implode(', ', $c->keywords) : "") : "",
 					// future TODO: change structure
 					"relive_json"	=> "https://cdn.c3voc.de/relive/".$acronym."/index.json",
 					"releases"		=> "https://media.ccc.de/c/".$acronym,

@@ -1,10 +1,8 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "acronym": "jugendhackt",
     "description": "Jugend hackt Live Streaming, 2024 edition",
     "end": "2024-06-20T18:00:00+02:00",
-    "keywords": [],
     "organizer": "Jugend hackt",
     "start": "2024-05-18T12:00:00+02:00",
     "title": "Jugend hackt Frankfurt am Main 2024",
