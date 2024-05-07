@@ -8,7 +8,7 @@
   "properties": {
     "conference": {
       "type": "object",
-      "required": ["title", "acronym"],
+      "required": ["title"],
       "additionalProperties": false,
       "properties": {
         "title": {
