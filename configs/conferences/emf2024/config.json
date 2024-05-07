@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "Electromagnetic Field 2024",
+    "acronym": "emf2024",
+    "description": "Live streaming from Electromagnetic Field 2024",
+    "keywords": [
+      "EMF", "EMF2024", "EMF24", "Electromagnetic Field", "Streaming", "Hacker"
+    ],
+    "organizer": "EMF",
+    "start": "2024-05-30T00:00:00+01:00",
+    "end": "2024-06-02T00:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#EMF2024",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": false,
+          "matrix": false
+        }
+      },
+      "overviewPage": {
+        "sections": [
+          {
+            "title": "Stages",
+            "items": [
+              {
+                "slug": "stagea"
+              },
+              {
+                "slug": "stageb"
+              },
+              {
+                "slug": "stagec"
+              }
+            ]
+          }
+        ]
+      },
+      "schedule": {
+        "url": "https://www.emfcamp.org/schedule/2024.frab",
+        "scale": 7
+      },
+      "html": {
+        "footer": "\n\t\tby <a href=\"https://emfcamp.org\">EMF Video Team</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "0EFBB39E-FDBA-454B-8957-4D41E5C90309",
+        "name": "Stage A",
+        "slug": "stagea",
+        "streamId": "emf_stagea",
+        "streamingConfig": {
+          "wide": true,
+          "social": {
+            "hashtag": "#EMF2024",
+            "mastodon": true
+          }
+        }
+      },
+      {
+        "guid": "579340C0-E8EE-4384-838D-89633A1B43EB",
+        "name": "Stage B",
+        "slug": "stageb",
+        "streamId": "emf_stageb",
+        "streamingConfig": {
+          "wide": true,
+          "social": {
+            "hashtag": "#EMF2024",
+            "mastodon": true
+          }
+        }
+      },
+      {
+        "guid": "DEF1DBC7-3DDD-4C1F-BAE4-14362D05B557",
+        "name": "Stage C",
+        "slug": "stagec",
+        "streamId": "emf_stagec",
+        "streamingConfig": {
+          "wide": true,
+          "social": {
+            "hashtag": "#EMF2024",
+            "mastodon": true
+          }
+        }
+      }
+    ]
+  }
+}
