@@ -16,6 +16,8 @@ class ConferenceJson extends Conference
 		$this->html  = isset($c->streamingConfig->html) ? $c->streamingConfig->html : [];
 		$this->streamingConfig = $c->streamingConfig;
 		$this->rooms = [];
+		$acronym = isset($c->acronym) ? $c->acronym : $mandator;
+
 		if (isset($c->rooms)) {
 			if (is_array($c->rooms)) {
 				$rooms = $c->rooms;
@@ -23,6 +25,7 @@ class ConferenceJson extends Conference
 				$rooms = isset($c->rooms->nodes) ? $c->rooms->nodes : [];
 			}
 		}
+
 		foreach($rooms as $r) {
 			if (!$r) {
 				continue;
@@ -49,7 +52,14 @@ class ConferenceJson extends Conference
 			$groups['Live'] = array_keys((array) $this->rooms);
 		}
 
-		$acronym = isset($c->acronym) ? $c->acronym : $mandator;
+		$media_slug = isset($c->media_slug) ? $c->media_slug : $acronym;
+		$relive = [];
+		if (isset($c->streamingConfig->features->relive) && $c->streamingConfig->features->relive) {
+			// TODO make configurable
+			$relive = [
+				"relive_json" => "https://cdn.c3voc.de/relive/".$acronym."/index.json"
+			];
+		}
 
 		$config = array_merge(
 			isset($c->streamingConfig) ? get_object_vars($c->streamingConfig) : [],
@@ -57,15 +67,16 @@ class ConferenceJson extends Conference
 			isset($c->streamingConfig->features->chat) ? get_object_vars($c->streamingConfig->features->chat) : [],
 			isset($c->streamingConfig->features->embed) ? get_object_vars($c->streamingConfig->embed) : ['embed' => true],
 			[
-				'conference' => [
-					'title' 		=> $c->title,
-					'author' 		=> $c->organizer,
-					'description' 	=> $c->description,
-					'keywords'		=> isset($c->keywords) ? (is_array($c->keywords) ? implode(', ', $c->keywords) : "") : "",
-					// future TODO: change structure
-					"relive_json"	=> "https://cdn.c3voc.de/relive/".$acronym."/index.json",
-					"releases"		=> "https://media.ccc.de/c/".$acronym,
-				],
+				'conference' => array_merge(
+					$relive,
+					[
+						'title' 		=> $c->title,
+						'author' 		=> $c->organizer,
+						'description' 	=> $c->description,
+						'keywords'		=> isset($c->keywords) ? (is_array($c->keywords) ? implode(', ', $c->keywords) : "") : "",
+						"releases"		=> "https://media.ccc.de/c/".$media_slug,
+					],
+				),
 				// 'schedule' => (array) $c->streamingConfig->schedule
 				'rooms' => $this->rooms,
 				'overview' => [

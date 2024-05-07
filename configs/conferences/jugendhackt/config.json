@@ -3,14 +3,14 @@
   "conference": {
     "description": "Jugend hackt Live Streaming, 2024 edition",
     "end": "2024-06-20T18:00:00+02:00",
+    "media_slug": "jh24",
     "organizer": "Jugend hackt",
     "start": "2024-05-18T12:00:00+02:00",
     "title": "Jugend hackt Frankfurt am Main 2024",
     "streamingConfig": {
       "html": {
         "footer": "by <a href='http://jugendhackt.de/'>Jugend hackt 2024</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
-        "banner": "<img src='/configs/conferences/jugendhackt/illustrationen.svg' class='jh-illus'>",
-        "not_started": null
+        "banner": "<img src='/configs/conferences/jugendhackt/illustrationen.svg' class='jh-illus'>"
       }
     },
     "rooms": [
