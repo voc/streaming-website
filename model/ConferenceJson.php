@@ -65,7 +65,7 @@ class ConferenceJson extends Conference
 			isset($c->streamingConfig) ? get_object_vars($c->streamingConfig) : [],
 			isset($c->streamingConfig->features) ? get_object_vars($c->streamingConfig->features) : [],
 			isset($c->streamingConfig->features->chat) ? get_object_vars($c->streamingConfig->features->chat) : [],
-			isset($c->streamingConfig->features->embed) ? get_object_vars($c->streamingConfig->embed) : ['embed' => true],
+			['embed' => isset($c->streamingConfig->features->embed) ? $c->streamingConfig->features->embed : true],
 			[
 				'conference' => array_merge(
 					$relive,
