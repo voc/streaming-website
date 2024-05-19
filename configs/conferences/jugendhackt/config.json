@@ -15,7 +15,7 @@
     },
     "rooms": [
       {
-        "name": "Auditorium",
+        "name": "Ada",
         "slug": "saal",
         "streamId": "s96"
       }
