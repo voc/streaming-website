@@ -77,7 +77,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 //	'BANNER_HTML' => '<img src="../configs/conferences/jh-hh-2019/Banner_JH-Hamburg-2019.svg" class="jhhh">',
-    'BANNER_HTML' => '<div class="header_logo"><div class="outer_logo"><div class="top_logo"> GPN-22 </div><div class="below_logo">~~~~~~~~</div></div></div>',
+    'BANNER_HTML' => '<div class="header_logo"><div class="outer_logo"><div class="top_logo"> GPN-22</div><div class="below_logo">.~.~.~.~.~.~.~.~</div></div></div>',
 
 	/**
 	 * Link zu den Recordings
