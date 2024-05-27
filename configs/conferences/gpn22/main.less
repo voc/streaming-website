@@ -1,0 +1,127 @@
+@import "../../../assets/css/_structure.less";
+@gelb: #f9cd00;
+@white: #ffffff;
+@light-blue: #ed0f67;
+@blue: #094762;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #2a2a2a;
+
+
+@brand-primary: @white;
+@well-bg: @dark;
+//@navbar-default-bg: @grey-lighter;
+@btn-default-bg: @grey-light;
+@panel-default-heading-bg: #000;
+@panel-default-text: @white;
+@panel-bg: @dark;
+
+@font-face {
+    font-family: 'DSEG-14';
+    src:  url('/configs/conferences/gpn22/woff/DSEG14Modern-Regular.woff2') format('woff2'), url('/configs/conferences/gpn22/woff/DSEG14Modern-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Oxanium */
+@font-face {
+  font-family: 'Oxanium';
+  src: url('/configs/conferences/gpn22/ttf/Oxanium-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('/configs/conferences/gpn22/ttf/Oxanium-Bold.ttf') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+body {
+	background-color: @dark;
+	color: @white;
+    font: normal 150% 'Oxanium',sans-serif;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+.outer-div, figure {
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+.panel {
+    background-color: black;
+}
+
+h1 {
+    font: bold 405% 'Oxanium',sans-serif;
+}
+
+h2 {
+    font: bold 400% 'Oxanium',sans-serif;
+}
+
+h3, div.panel-title{
+    font: bold 250% 'Oxanium',sans-serif;
+}
+
+
+.schedule .block.pause {
+    color: black !important;
+}
+
+#schedule-event-detail-popover {
+    color: black !important;
+    h3 {
+        font: bold 150% "freemono", monospace;
+        color: black !important;
+    }
+}
+
+
+.schedule {
+    a {
+        color: @grey-darker;
+    }
+
+    a:hover {
+        color: @grey-lighter;
+    }
+}
+.header_logo {
+    margin: 5em auto;
+    padding: 2em;
+    background-color: #1a3330;
+    box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+}
+.outer_logo {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+    font-size: 100px;
+    font-family: 'DSEG-14';
+}
+.outer_logo > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+.outer_logo .below_logo {
+    z-index: 1;
+    color: #294c4a;
+}
+.outer_logo .top_logo {
+    z-index: 2;
+    color: #00feb5;
+    text-shadow:0px 0px 20px #00feb5, 0px 0px 20px #294c4a;
+}
