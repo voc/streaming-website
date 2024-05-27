@@ -110,7 +110,16 @@ function get_file_cache($conference, $filename)
 
 function download_for_conference($what, $conference, $url, $cache)
 {
-	$info = parse_url($url);
+    if(!isset($url))
+    {
+		stderr(
+			'  !! %s url for conference %s is not set',
+			$what,
+			$conference->getSlug(),
+        );
+        return false;
+    }
+    $info = parse_url($url);
 	if(!isset($info['scheme']) || !isset($info['host']))
 	{
 		stderr(
