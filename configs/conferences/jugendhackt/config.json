@@ -15,9 +15,9 @@
     },
     "rooms": [
       {
-        "name": "Zürich",
+        "name": "Rhein-Neckar",
         "slug": "saal",
-        "streamId": "jugendhackt"
+        "streamId": "s96"
       }
     ]
   }
