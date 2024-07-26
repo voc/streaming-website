@@ -48,7 +48,6 @@ $CONFIG['CONFERENCE'] = array(
 	 * <meta>-Tag generiert.
 	 */
 	'DESCRIPTION' => 'Das Hackwerk Aalen veranstaltet vom 26.07.24-28.07.24 in Aalen, auf der schönen Ostalb die FAT24 mit dem Motto „3 Tage 3 Byte“. Diese führt die „Geekends“-Veranstaltungen (2022 und 2023) weiter und ist damit das 3. größere Event des Hackwerk Aalens. Geplant sind drei spannende Tage, die vor allem für spannende Vorträge und Gespräche mit alten und neuen Wesen aus der Chaos-Welt geführt werden können. Natürlich gibt es auch wieder ein großes Hackcenter.',
-	
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -76,7 +75,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	'BANNER_HTML' => '<img src=fat_logo_banner_wide.png>',
+	'BANNER_HTML' => '<center><img src=../configs/conferences/fat24/fat_logo_banner_wide.png></center>',
 
 	/**
 	 * Link zu den Recordings
