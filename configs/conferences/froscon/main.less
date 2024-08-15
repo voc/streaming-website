@@ -1,0 +1,101 @@
+@import "../../../assets/css/_structure.less";
+
+@blue: #493fa0;
+@greyish: #b5b5b5;
+
+@link-color:               @blue;
+@panel-primary-border:     @blue;
+
+@panel-default-heading-bg: @greyish;
+@panel-default-text:       @blue;
+@panel-bg:                 @greyish;
+@panel-default-border:     @blue;
+
+@text-color:               @blue;
+
+@font-face {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/configs/conferences/froscon/Exo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/configs/conferences/froscon/OpenSans-Regular.ttf') format('truetype');
+}
+
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    line-height: 1.1;
+    color: @blue;
+}
+
+
+h1, h2, .h1, .h2  {
+    font-family: 'Exo';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #fff;
+}
+
+body.overview .panel-body {
+    min-height: 10px;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(froscon.svg);
+	background-size: contain;
+    width: 150px;
+}
+
+.navbar-default {
+    font-color: @blue;
+    background: @panel-default-heading-bg;
+}
+
+.froscon {
+	background-image: url(cloudsandbirbs.svg);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: bottom center;
+    background-attachment: fixed;
+
+    position: fixed; 
+    bottom: 0%;
+    width: 100%; 
+	height: 100%;
+
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+body.room .tab-content {
+    background-color: @greyish;
+}
+
+footer {
+    position: unset;
+    font-color: @blue;
+    background: none;
+}
+
+body {
+    font-family: 'Open-Sans';
+    //background-image: url(background.svg);
+    background-image: linear-gradient(180deg, #493fa0, #80cdeb);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover; 
+    background-attachment: fixed;
+
+}

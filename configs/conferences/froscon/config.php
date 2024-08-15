@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2023-08-05 09:00"),
+	'STARTS_AT' => strtotime("2024-08-17 08:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2023-08-06 19:00"),
+	'ENDS_AT' => strtotime("2024-08-18 19:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,14 +33,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'FrOSCon 2023',
+	'TITLE' => 'FrOSCon 19',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'FrOSCon 2023',
+	'AUTHOR' => 'FrOSCon 2024',
 
 	/**
 	 * Beschreibungstext
@@ -76,7 +76,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 //'BANNER_HTML' => '<div class="logo"></div>',
+	 'BANNER_HTML' => '<div class="froscon"></div>',
 
 	/**
 	 * Link zu den Recordings
@@ -91,7 +91,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/froscon2023/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/froscon2024/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -114,7 +114,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'S1', 'S2', 'S3', 'S4', 'S5', 'S6'
+			'HS1', 'HS3', 'HS4', 'HS5', 'HS7', 'HS8'
 		),
 	),
 );
@@ -125,7 +125,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'S1' => array(
+	'HS1' => array(
 		'DISPLAY' => 'HS 1/2',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
@@ -139,16 +139,16 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HS1',
+		'SCHEDULE_NAME' => 'HS1/2',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'S3' => array(
+	'HS3' => array(
 		'DISPLAY' => 'HS 3',
-		'STREAM' => 's3',
+		'STREAM' => 's97',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -167,7 +167,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'S4' => array(
+	'HS4' => array(
 		'DISPLAY' => 'HS 4',
 		'STREAM' => 's4',
 		'PREVIEW' => true,
@@ -188,9 +188,9 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'S6' => array(
-		'DISPLAY' => 'HS 6',
-		'STREAM' => 's6',
+	'HS5' => array(
+		'DISPLAY' => 'HS 5',
+		'STREAM' => 's5',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -202,14 +202,14 @@ $CONFIG['ROOMS'] = array(
 		'AUDIO' => false,
 		'MUSIC' => false,
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'HS6',
+		'SCHEDULE_NAME' => 'HS5',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'S2' => array(
+	'HS7' => array(
 		'DISPLAY' => 'HS 7',
 		'STREAM' => 's2',
 		'PREVIEW' => true,
@@ -230,9 +230,9 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'S5' => array(
+	'HS8' => array(
 		'DISPLAY' => 'HS 8',
-		'STREAM' => 's5',
+		'STREAM' => 's3',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -280,14 +280,14 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://bats.science/froscon2023/schedule.xml',
+	'URL' => 'https://programm.froscon.org/2024/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-  'ROOMFILTER' => array('HS1', 'HS3', 'HS4', 'HS6', 'HS7', 'HS8'),
+  'ROOMFILTER' => array('HS1/2', 'HS3', 'HS4', 'HS5', 'HS7', 'HS8'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
