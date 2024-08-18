@@ -6,9 +6,14 @@
 		<?=$conference->get('html.about')?>
 
 	<? else: ?>
-		<p>
-			<a href="<?=h($conference->getReliveUrl())?>">ReLive</a> is the platform for recordings of events like this. It is operated by the Chaos Computer Club Video Operation Center.
-		</p>
+	<p>
+		<? if ($conference->hasRelive()): ?>
+			<a href="<?=h($conference->getReliveUrl())?>">ReLive</a>
+		<? else: ?>
+			<a href="<?=h($conference->getReleasesUrl())?>">media.ccc.de</a>
+		<? endif; ?>
+		is the platform for recordings of events like this. It is operated by the Chaos Computer Club Video Operation Center.
+	</p>
 
 	<p>
 		Lecture recording and streaming at <strong><?=h($conference->getTitle())?></strong> is organized and performed by the <a href="https://c3voc.de">Chaos Computer Club Video Operation Center</a>.
