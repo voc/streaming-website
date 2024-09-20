@@ -1,8 +1,8 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "description": "Datenspuren 204 - Was nun, was tun?",
-    "media_slug": "ds24",
+    "description": "Datenspuren 2024 - Was nun, was tun?",
+    "media_slug": "DS2024",
     "organizer": "c3d2",
     "start": "2024-09-20T17:30:00+02:00",
     "end": "2024-09-22T18:30:00+02:00",
@@ -10,27 +10,39 @@
     "streamingConfig": {
       "html": {
         "footer": "by <a href='http://datenspuren.de/'>Datenspuren</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
-        "banner": "<img src='https://datenspuren.de/2024/assets/datenspuren.jpg' alt=''>"
+        "banner": "<img src='/configs/conferences/ds24/datenspuren.jpg' alt=''>"
+      },
+      "schedule": {
+        "url": "https://talks.datenspuren.de/ds24/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Henny Brenner Saal",
+          "Kleiner Saal",
+          "Kabinett"
+        ]
       }
     },
     "rooms": [
       {
         "name": "Henny Brenner Saal",
         "slug": "saal1",
-        "streamId": "s3"
+        "streamId": "s3",
+        "guid": "cbb6a003-6fcf-54b8-bc0b-b10e0be02f56",
+        "streamingConfig": {
+          "wide": true
+        }
       },
       {
         "name": "Kleiner Saal",
         "slug": "saa12",
-        "streamId": "s5"
+        "streamId": "s5",
+        "guid": "d9edd2f7-49c4-563a-960c-ab384c1a2bc8"
       },
       {
         "name": "Kabinet",
         "slug": "saal2",
-        "streamId": "s4"
+        "streamId": "s4",
+        "guid": "f63a9ad5-2404-5803-a76c-0c64dba28e6e"
       }
-
-
     ]
   }
 }
