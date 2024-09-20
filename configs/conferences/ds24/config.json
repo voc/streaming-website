@@ -1,0 +1,36 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "Datenspuren 204 - Was nun, was tun?",
+    "media_slug": "ds24",
+    "organizer": "c3d2",
+    "start": "2024-09-20T17:30:00+02:00",
+    "end": "2024-09-22T18:30:00+02:00",
+    "title": "Datenspuren",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='http://datenspuren.de/'>Datenspuren</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "banner": "<img src='https://datenspuren.de/2024/assets/datenspuren.jpg' alt=''>"
+      }
+    },
+    "rooms": [
+      {
+        "name": "Henny Brenner Saal",
+        "slug": "saal1",
+        "streamId": "s3"
+      },
+      {
+        "name": "Kleiner Saal",
+        "slug": "saa12,
+        "streamId": "s5"
+      },
+      {
+        "name": "Kabinet",
+        "slug": "saal2",
+        "streamId": "s4"
+      }
+
+
+    ]
+  }
+}
