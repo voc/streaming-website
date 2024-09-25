@@ -133,7 +133,7 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
   	'mainhall' => array(
   		'DISPLAY' => 'Main Hall',
-  		'STREAM' => 's1',
+  		'STREAM' => 's2',
   		'PREVIEW' => true,
 
   		'TRANSLATION' => false,
@@ -156,7 +156,7 @@ $CONFIG['ROOMS'] = array(
 
   	'dome' => array(
   		'DISPLAY' => 'Dome',
-  		'STREAM' => 's2',
+  		'STREAM' => 's6',
   		'PREVIEW' => true,
 
   		'TRANSLATION' => false,
