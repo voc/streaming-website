@@ -79,8 +79,17 @@ $CONFIG["CONFERENCE"] = [
      * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
      */
     //	'BANNER_HTML' => '<img src="../configs/conferences/jh-hh-2019/Banner_JH-Hamburg-2019.svg" class="jhhh">',
-    "BANNER_HTML" =>
-        '<img class="outer-div" src="../configs/conferences/mrmcd23/banner.png">',
+    "BANNER_HTML" => '
+            <div class="banner container">
+                <div class="banner-content">
+                    <span class="banner-content-name">MRMCD 2024</span>
+                    <h1>
+                        Land in Sicht?
+                    </h1>
+                    <span class="banner-content-date">3. bis 6.10.2024 TU Darmstadt</span>
+                </div>
+            </div>
+        ',
 
     /**
      * Link zu den Recordings
