@@ -1,4 +1,5 @@
 @import "../../../assets/css/_structure.less";
+@import "fonts.less";
 
 @gelb: #f9cd00;
 @white: #ffffff;
@@ -9,32 +10,58 @@
 @grey-light: #c1c1c1;
 @dark: #242424;
 
+@meer: #95D1EA;
+@meerSchattenDunkel: #5384AB;
+@meerSchattenHell: #6AB9DA;
+@shadowDark: #405785;
+@shadowDarkContrastLight: #373E72;
+@shadowDarkContrast: #2D365D;
+@grau: #59727;
 
-@brand-primary: @light-blue;
-@well-bg: @dark;
+@brand-primary: @meerSchattenDunkel;
+@well-bg: @meerSchattenHell;
 @navbar-default-bg: @grey-lighter;
 @btn-default-bg: @grey-light;
-@panel-default-heading-bg: @dark;
+@panel-default-heading-bg: @meerSchattenHell;
 @panel-default-text: @light-blue;
-@panel-bg: @dark;
+@panel-bg: @meerSchattenHell;
 
+@font-family-heading: Rubik Mono One, sans-serif;
+@font-family-body: Rubik, sans-serif;
+
+body::before {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuZGV2L3N2Z2pzIiB2aWV3Qm94PSIwIDAgNzAwIDcwMCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIG9wYWNpdHk9IjAuNzkiPjxkZWZzPjxmaWx0ZXIgaWQ9Im5ubm9pc2UtZmlsdGVyIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHByaW1pdGl2ZVVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJsaW5lYXJSR0IiPgoJPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjIiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjE1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlc3VsdD0idHVyYnVsZW5jZSI+PC9mZVR1cmJ1bGVuY2U+Cgk8ZmVTcGVjdWxhckxpZ2h0aW5nIHN1cmZhY2VTY2FsZT0iOSIgc3BlY3VsYXJDb25zdGFudD0iMyIgc3BlY3VsYXJFeHBvbmVudD0iMjAiIGxpZ2h0aW5nLWNvbG9yPSIjYzRkYWUyIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGluPSJ0dXJidWxlbmNlIiByZXN1bHQ9InNwZWN1bGFyTGlnaHRpbmciPgogICAgCQk8ZmVEaXN0YW50TGlnaHQgYXppbXV0aD0iMyIgZWxldmF0aW9uPSI5MSI+PC9mZURpc3RhbnRMaWdodD4KICAJPC9mZVNwZWN1bGFyTGlnaHRpbmc+CiAgCjwvZmlsdGVyPjwvZGVmcz48cmVjdCB3aWR0aD0iNzAwIiBoZWlnaHQ9IjcwMCIgZmlsbD0iIzk1ZDFlYTAwIj48L3JlY3Q+PHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9IiNjNGRhZTIiIGZpbHRlcj0idXJsKCNubm5vaXNlLWZpbHRlcikiPjwvcmVjdD48L3N2Zz4=");
+    pointer-events: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @shadowDark;
+    font-family: @font-family-heading;
+}
 
 body {
-	background-color: @dark;
-	color: @grey-light;
+    font-family: @font-family-body;
+	background-color: @meer;
+	color: @grau;
 }
 
-.overview .panel-title {
-	font-weight: bold;
+body > div.container {
+    position: relative;
+    z-index: 2;
 }
 
-.outer-div {
-      display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-	@media (max-width: @screen-sm-min) {
-		display: none;
-	}
+.panel-default > .panel-heading {
+    font-family: @font-family-heading;
+    color: @shadowDark;
 }
 
+.panel {
+    border-radius: 10px;
+}
