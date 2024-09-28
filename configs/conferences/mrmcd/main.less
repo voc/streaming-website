@@ -91,3 +91,168 @@ body > div.container {
         color: rgb(89, 114, 122);
     }
 }
+
+.nav-tabs.nav-justified {
+    li:first-child a {
+        border-top-left-radius: 8px;
+        &:hover {
+            border-top-left-radius: 8px;
+        }
+    }
+    li:last-child a {
+        border-top-right-radius: 8px;
+        &:hover {
+            border-top-right-radius: 8px;
+        }
+    }
+    li.active:first-child a {
+        border-top-left-radius: 8px;
+    }
+    li.active:last-child a {
+        border-top-right-radius: 8px;
+    }
+
+    li a {
+        color: white;
+        font-size: 1.125em;
+        font-weight: bold;
+        background: linear-gradient(
+            to bottom,
+            darken(@meerSchattenDunkel, 20%),
+            darken(@meerSchattenHell, 20%)
+        );
+        border-radius: 0;
+        border: none;
+        &:hover {
+            color: white;
+            background: linear-gradient(
+                to bottom,
+                darken(@meerSchattenDunkel, 10%),
+                darken(@meerSchattenHell, 10%)
+            );
+            border: none;
+        }
+    }
+    li.active a {
+        color: white;
+        border-radius: 0;
+        background: linear-gradient(
+            to bottom,
+            @meerSchattenDunkel,
+            @meerSchattenHell
+        );
+        border: none;
+    }
+}
+
+body .schedule .block {
+    background-color: @shadowDark;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    padding: 0.05em;
+    border: 1px solid @meer;
+    &.pause, &.daychange {
+        background-color: @shadowDarkContrast;
+    }
+    &.optout {
+        background-color: @shadowDark;
+        background-image: linear-gradient(45deg,
+            rgba(255, 0, 0, 0.3) 25%, transparent 25%, transparent 50%,
+            rgba(255, 0, 0, 0.3) 50%,
+            rgba(255, 0, 0, 0.3) 75%, transparent 75%, transparent);
+        h1, h2, h3, h4, h5, h6 {
+            color: fade(white, 80%);
+        };
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
+    h4, h5 {
+        font-size: 1.25em;
+        font-family: @font-family-body;
+    }
+    h5 {
+        margin-top: 0.1em;
+    }
+    h3 {
+        font-size: 1.25em;
+    }
+    &.pause .inner, &.daychange .inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            font-family: @font-family-body;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-wrap: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    &.event {
+        h4 {
+            text-wrap: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        h3 {
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+        }
+    }
+}
+
+body .schedule .now .overlay {
+    background-color: fade(@shadowDarkContrast, 50%);
+    border-right: 2px solid white;
+}
+
+body .schedule .now .label {
+    // make text vertical
+    color: white;
+    width: max-content;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 1em;
+    font-family: @font-family-body;
+    transform: translateX(-100%);
+}
+
+.tab-pane {
+    background-color: @meerSchattenHell;
+}
+
+.nav-tabs.nav-justified > li > a {
+    border: none;
+}
+
+.tab-pane, .tab-pane.active {
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+body.room .tab-content {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.panel-heading {
+    background-color: @meerSchattenHell;
+    color: @light-blue;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: none;
+}
+
+.panel {
+    border: none;
+}
