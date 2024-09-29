@@ -29,6 +29,10 @@
 @font-family-heading: Rubik Mono One, sans-serif;
 @font-family-body: Rubik, sans-serif;
 
+body {
+    font-size: 16px;
+}
+
 body::before {
     position: fixed;
     content: "";
@@ -39,6 +43,28 @@ body::before {
     z-index: 1;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuZGV2L3N2Z2pzIiB2aWV3Qm94PSIwIDAgNzAwIDcwMCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIG9wYWNpdHk9IjAuNzkiPjxkZWZzPjxmaWx0ZXIgaWQ9Im5ubm9pc2UtZmlsdGVyIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHByaW1pdGl2ZVVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJsaW5lYXJSR0IiPgoJPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjIiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjE1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlc3VsdD0idHVyYnVsZW5jZSI+PC9mZVR1cmJ1bGVuY2U+Cgk8ZmVTcGVjdWxhckxpZ2h0aW5nIHN1cmZhY2VTY2FsZT0iOSIgc3BlY3VsYXJDb25zdGFudD0iMyIgc3BlY3VsYXJFeHBvbmVudD0iMjAiIGxpZ2h0aW5nLWNvbG9yPSIjYzRkYWUyIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGluPSJ0dXJidWxlbmNlIiByZXN1bHQ9InNwZWN1bGFyTGlnaHRpbmciPgogICAgCQk8ZmVEaXN0YW50TGlnaHQgYXppbXV0aD0iMyIgZWxldmF0aW9uPSI5MSI+PC9mZURpc3RhbnRMaWdodD4KICAJPC9mZVNwZWN1bGFyTGlnaHRpbmc+CiAgCjwvZmlsdGVyPjwvZGVmcz48cmVjdCB3aWR0aD0iNzAwIiBoZWlnaHQ9IjcwMCIgZmlsbD0iIzk1ZDFlYTAwIj48L3JlY3Q+PHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9IiNjNGRhZTIiIGZpbHRlcj0idXJsKCNubm5vaXNlLWZpbHRlcikiPjwvcmVjdD48L3N2Zz4=");
     pointer-events: none;
+}
+
+.overview, .room {
+    background-image: url('/configs/conferences/mrmcd/img/bg.svg');
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    &::after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -5;
+        background-image: url('/configs/conferences/mrmcd/img/insel.svg');
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: right -400px top -300px;
+        background-attachment: fixed;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,7 +85,11 @@ body > div.container {
 
 .panel-default > .panel-heading {
     font-family: @font-family-heading;
-    color: @shadowDark;
+    color: @shadowDarkContrastLight;
+}
+
+.panel-title {
+    font-size: 1.25em;
 }
 
 .panel {
@@ -67,27 +97,38 @@ body > div.container {
 }
 
 .banner-content {
-    margin-top: 2.5%;
+    margin-top: calc(4 * 16px);
+    margin-bottom: calc(2 * 16px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: -10;
+    background: radial-gradient(
+        ellipse at center,
+        @meer 0%,
+        transparent 80%
+    );
     h1 {
         font-size: 3em;
         margin: 0;
+        line-height: 1em;
         margin-bottom: .3em;
+        text-align: center;
     }
     .banner-content-name {
-        font-weight: bold;
+        font-weight: 600;
         font-size: 1.875em;
-        line-height: 2.25em;
+        line-height: 1em;
         margin-bottom: .3em;
         color: rgb(89, 114, 122);
+        margin-bottom: 24px;
     }
     .banner-content-date {
+        margin-top: 10px;
         font-weight: bold;
         font-size: 1.5em;
-        line-height: 2em;
+        line-height: 1em;
         color: rgb(89, 114, 122);
     }
 }
@@ -98,7 +139,7 @@ body > div.container {
         &:hover {
             border-top-left-radius: 8px;
         }
-    }
+          }
     li:last-child a {
         border-top-right-radius: 8px;
         &:hover {
@@ -142,6 +183,14 @@ body > div.container {
             @meerSchattenHell
         );
         border: none;
+        &:hover {
+            border: none;
+            background: linear-gradient(
+                to bottom,
+                lighten(@meerSchattenDunkel, 10%),
+                @meerSchattenHell
+            );
+        }
     }
 }
 
@@ -227,6 +276,9 @@ body .schedule .now .label {
 
 .tab-pane {
     background-color: @meerSchattenHell;
+    h1, h2, h3, h4, h5, h6 {
+        color: @shadowDarkContrastLight;
+    }
 }
 
 .nav-tabs.nav-justified > li > a {
@@ -246,13 +298,80 @@ body.room .tab-content {
 }
 
 .panel-heading {
-    background-color: @meerSchattenHell;
+    background-color: transparent;
     color: @light-blue;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border: none;
 }
 
+.panel-body a {
+    color: @shadowDarkContrastLight;
+}
+
+.panel-default > .panel-heading {
+    background-color: transparent;
+}
+
 .panel {
+    background-color: @meerSchattenHell;
     border: none;
+    transition: all 0.3s;
+    &:hover {
+        transition: all 0.3s;
+        background-color: @meerSchattenDunkel;
+        .panel-heading {
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    }
+}
+
+body.room .functions-wrap #switcher .btn-group {
+    background: linear-gradient(
+        to bottom right,
+        darken(@meerSchattenDunkel, 10%),
+        darken(@meerSchattenHell, 10%)
+    );
+    border-radius: 4px;
+    .btn, .btn-default {
+        background: none;
+        border: none;
+        color: white;
+    }
+    .btn-default:hover {
+        background-color: fade(white, 20%);
+    }
+    .btn.btn-primary {
+        background-color: fade(black, 20%);
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.form-control {
+    background-color: @shadowDark;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.form-control[readonly] {
+    background-color: @shadowDarkContrast;
+}
+
+.form-group label {
+    color: @shadowDarkContrast;
+}
+
+.headline {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+body.room .player-wrap {
+    margin-bottom: 5rem;
 }
