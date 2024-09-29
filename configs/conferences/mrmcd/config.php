@@ -228,14 +228,14 @@ $CONFIG["SCHEDULE"] = [
      * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
      * externer HTTP-Cache vorgeschaltet werden.
      */
-    "URL" => "https://talks.mrmcd.net/2023/schedule/export/schedule.xml",
+    "URL" => "https://talks.mrmcd.net/2024/schedule/export/schedule.xml",
 
     /**
      * Nur die angegebenen Räume aus dem Fahrplan beachten
      *
      * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
      */
-    "ROOMFILTER" => ["C205 - Gehirnwäscher", "C120 - Arkanraum"],
+    "ROOMFILTER" => ["C205 - Ocean Starr", "C120 - Rainbow Warrior", "B002 - Trockendock"],
 
     /**
      * Skalierung der Programm-Vorschau in Sekunden pro Pixel
