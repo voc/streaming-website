@@ -184,7 +184,7 @@ $CONFIG["ROOMS"] = [
         "IRC" => false,
         "TWITTER" => false,
     ],
-    "trockendock" => [
+/**    "trockendock" => [
         "DISPLAY" => "B002 - Trockendock",
         // TODO: VOC
         "STREAM" => "s5",
@@ -205,7 +205,7 @@ $CONFIG["ROOMS"] = [
         "EMBED" => true,
         "IRC" => false,
         "TWITTER" => false,
-    ],
+], */
 ];
 
 /**
