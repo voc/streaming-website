@@ -4,9 +4,9 @@
     "description": "Jugend hackt Live Streaming, 2024 edition",
     "media_slug": "jh24",
     "organizer": "Jugend hackt",
-    "start": "2024-09-20T13:00:00+02:00",
-    "end": "2024-09-22T18:00:00+02:00",
-    "title": "Jugend hackt Hamburg 2024",
+    "start": "2024-10-03T14:00:00+02:00",
+    "end": "2024-10-04T20:00:00+02:00",
+    "title": "Jugend hackt Berlin 2024",
     "streamingConfig": {
       "html": {
         "footer": "by <a href='http://jugendhackt.de/'>Jugend hackt 2024</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
@@ -15,9 +15,9 @@
     },
     "rooms": [
       {
-        "name": "Betahaus Hamburg",
+        "name": "Jugendkulturzentrum Königsstadt",
         "slug": "saal",
-        "streamId": "s1"
+        "streamId": "s6"
       }
     ]
   }
