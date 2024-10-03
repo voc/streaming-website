@@ -195,7 +195,7 @@ body > div.container {
 }
 
 body .schedule .block {
-    background-color: @shadowDark;
+    background-color: @shadowDarkContrast;
     border-radius: 10px;
     margin-bottom: 1em;
     font-size: 1rem;
@@ -204,8 +204,9 @@ body .schedule .block {
     &.pause, &.daychange {
         background-color: @shadowDarkContrast;
     }
+    
     &.optout {
-        background-color: @shadowDark;
+        background-color: @shadowDarkContrast;
         background-image: linear-gradient(45deg,
             rgba(255, 0, 0, 0.3) 25%, transparent 25%, transparent 50%,
             rgba(255, 0, 0, 0.3) 50%,
@@ -255,6 +256,15 @@ body .schedule .block {
             -webkit-line-clamp: 2;
             line-clamp: 2;
         }
+    }
+}
+
+body .schedule .room.highlight .block {
+    &.daychange {
+        background-color: @shadowDarkContrast;
+    }
+    &.pause {
+        background-color: @shadowDarkContrast;
     }
 }
 
@@ -320,6 +330,9 @@ body.room .tab-content {
     &:hover {
         transition: all 0.3s;
         background-color: @meerSchattenDunkel;
+        .program-schedule {
+            color: white;
+        }
         .panel-heading {
             color: white;
         }
@@ -374,4 +387,12 @@ body.room .functions-wrap #switcher .btn-group {
 
 body.room .player-wrap {
     margin-bottom: 5rem;
+}
+
+.program-schedule {
+    color: @shadowDarkContrast;
+}
+
+body .schedule .room.highlight .block {
+    background-color: @shadowDark;
 }
