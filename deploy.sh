@@ -7,7 +7,13 @@ if [ "$1" != '--without-validation' ]; then
 
     find . -name "*.php" | grep -v archive | xargs -n1 php -l
     if [ $? -ne 0 ]; then
-        echo "not deploying b0rken code ;)"
+        echo "not deploying b0rken php code ;)"
+        exit 1
+    fi
+
+    find configs/conferences/ -name "*.json" | xargs -n1 python3 -m json.tool > /dev/null
+    if [ $? -ne 0 ]; then
+        echo "not deploying b0rken json configs ;)"
         exit 1
     fi
     echo
