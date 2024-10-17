@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2023-10-07 10:00"),
+	'STARTS_AT' => strtotime("2024-10-19 10:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2023-10-08 20:00"),
+	'ENDS_AT' => strtotime("2023-10-20 16:10"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -26,14 +26,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Der Boolean true ist aus Abwärtskompatibilitätsgründen äquivalent zu 'after'. False ist äquivalent
 	 * zu 'running'.
 	 */
-	'CLOSED' => 'after',
+	// 'CLOSED' => 'after',
 
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Sonoj Convention 2023',
+	'TITLE' => 'Sonoj Convention 2024',
 
 	/**
 	 * Veranstalter
@@ -85,7 +85,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/sonoj2023',
+	'RELEASES' => 'https://media.ccc.de/c/sonoj2024',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -167,6 +167,37 @@ $CONFIG['ROOMS'] = array(
 $CONFIG['EMBED'] = true;
 
 /**
+ * Globale Konfiguration der IRC-Links.
+ *
+ * Wird dieser Block auskommentiert, werden keine IRC-Links mehr erzeugt. Sollen die
+ * IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem
+ * existieren sein. ggf. einfach auf true setzen:
+ *
+ *   $CONFIG['IRC'] = true
+ */
+$CONFIG['IRC'] = array(
+	/**
+	 * Anzeigetext für die IRC-Links.
+	 *
+	 * %s wird durch den Raum-Slug ersetzt.
+	 * Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der
+	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
+	 */
+	'DISPLAY' => '#sonoj @ Libera.Chat',
+
+	/**
+	 * URL für die IRC-Links.
+	 * Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem
+	 * WebIrc-Provider wie z.B. 'https://kiwiirc.com/client/irc.hackint.eu/#33C3-%s'
+	 * verwendet werden.
+	 *
+	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
+	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
+	 */
+	'URL' => 'ircs://irc.libera.chat:6697/%23sonoj',
+);
+
+/**
  * Konfigurationen zum Konferenz-Fahrplan
  * Wird dieser Block auskommentiert, werden alle Fahrplan-Bezogenen Features deaktiviert
  */
@@ -178,7 +209,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'http://tura-home.de/p/sj23-schedule.xml',
+	'URL' => 'http://tura-home.de/p/sj24-schedule.xml',
 
         /**
          * Nur die angegebenen Räume aus dem Fahrplan beachten
