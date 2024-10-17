@@ -1,0 +1,190 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "38C3: Illegal Instructions",
+    "acronym": "38C3",
+    "description": "Live streaming from the 38th Chaos Communication Congress",
+    "keywords": [
+      "38C3", "Chaos Computer Club", "Video", "Media", "Streaming", "Hacker"
+    ],
+    "organizer": "CCC",
+    "start": "2024-12-27T00:00:00+01:00",
+    "end": "2024-12-31T00:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#38C3",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": true,
+          "matrix": true
+        }
+      },
+      "overviewPage": {
+        "sections": [
+          {
+            "title": "Main halls",
+            "items": [
+              {
+                "slug": "eins"
+              },
+              {
+                "slug": "granville"
+              },
+              {
+                "slug": "zuse"
+              }
+            ]
+          },
+          {
+            "title": "Community stages",
+            "items": [
+              {
+                "slug": "foo"
+              },
+              {
+                "slug": "bar"
+              }
+            ]
+          },
+          {
+            "title": "Other",
+            "items": [
+              {
+                "slug": "sos-lt"
+              },
+              {
+                "slug": "sendezentrum"
+              },
+              {
+                "slug": "infobeamer"
+              }
+            ]
+          }
+        ]
+      },
+      "schedule": {
+        "url": "https://fahrplan.events.ccc.de/congress/2024/fahrplan/schedule.xml",
+        //"url": "https://data.c3voc.de/38C3/channels.schedule.xml",
+        //"index_offset": -1,
+        "scale": 7
+      },
+      "html": {
+        "banner": "<div class=\"congress\"></div><div class=\"congress-motto\"></div>",
+        "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V.</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "ba692ba3-421b-5371-8309-60acc34a3c05",
+        "name": "Saal 1",
+        "slug": "eins",
+        "streamId": "s1",
+        "streamingConfig": {
+          "wide": true,
+          // "display": "Saal 1",
+          // "display_short": "1",
+          "social": {
+            "hashtag": "#38C3eins",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#38C3-hall-1:events.ccc.de",
+              "url": "https://matrix.to/#/#38C3-hall-1:events.ccc.de"
+            },
+            "irc": {
+              "display": "#38C3-hall-1 @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#38C3-hall-1"
+            }
+          }
+        }
+      },
+      {
+        "guid": "7202df07-050c-552f-8318-992f94e40ef0",
+        "name": "Saal Granville",
+        "slug": "granville",
+        "streamId": "s2",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#38C3granville",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#38C3-hall-granville:events.ccc.de",
+              "url": "https://matrix.to/#/#38C3-hall-granville:events.ccc.de"
+            },
+            "irc": {
+              "display": "#38C3-hall-granville @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#38C3-hall-granville"
+            }
+          }
+        }
+      },
+      {
+        "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
+        "name": "Saal Zuse",
+        "slug": "zuse",
+        "streamId": "s3",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#38C3zuse",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#38C3-hall-zuse:events.ccc.de",
+              "url": "https://matrix.to/#/#38C3-hall-zuse:events.ccc.de"
+            },
+            "irc": {
+              "display": "#38C3-hall-zuse @ hackint",
+              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#38C3-hall-zuse"
+            }
+          }
+        }
+      },
+      {
+        "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
+        "name": "Sendezentrum Stage (Saal F)",
+        "slug": "sendezentrum",
+        "streamId": "s5",
+        "streamingConfig": {
+          "display": "Sendezentrum",
+          "social": {
+            "hashtag": "#38C3sz",
+            "mastodon": true
+          },
+          "chat": {
+            "irc": false,
+            "matrix": {
+              "display": "#38C3sz:matrix.org",
+              "url": "https://matrix.to/#/#38C3sz:matrix.org"
+            }
+          }
+        }
+      },
+      {
+        "guid": "ff13477b-07c6-4df9-aee7-4a2aadc59102",
+        "name": "Info Beamer",
+        "slug": "infobeamer",
+        "streamId": "s6",
+        "streamingConfig": {
+          "display": "Info Beamer",
+          "social": {
+            "mastodon": false
+          },
+          "chat": {
+            "irc": false,
+            "matrix": false
+          }
+        }
+      }
+    ]
+  }
+}
