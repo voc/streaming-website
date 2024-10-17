@@ -31,7 +31,7 @@ $CONFIG['CONFERENCE'] = array(
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
@@ -198,7 +198,7 @@ $CONFIG['ROOMS'] = array(
 		 */
 		'HD_VIDEO' => true,
 
-                /** Wenn aktiviert, wird DASH streaming angeboten */
+		/** Wenn aktiviert, wird DASH streaming angeboten */
 		'DASH' => true,
 		'H264_ONLY' => true,
 
