@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "SUBSCRIBE 11",
+    "acronym": "subscribe11",
+    "organizer": "Das Sendezentrum",
+    "description": "Die SUBSCRIBE ist die deutschsprachige Konferenz für Podcaster/innen und alle Freunde des Sendens und Empfangens.",
+    "keywords": [
+      "Podlove",
+      "Podcaster",
+      "Workshop",
+      "Berlin",
+      "Video",
+      "Media",
+      "Streaming",
+      "Podcasting",
+      "Podcasterei"
+    ],
+    "start": "2024-10-18T14:00:00+00:00",
+    "end": "2024-10-20T16:30:00+00:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#SUBSCRIBE11",
+          "mastodon": true
+        },
+        "chat": {
+          "matrix": true
+        }
+      },
+      "schedule": {
+        "url": "https://pretalx.c3voc.de/subscribe11/schedule/export/schedule.xml",
+        "scale": 7,
+        "simulate_offset": 0
+      },
+      "overviewPage": {
+        "sections": [
+          {
+            "title": "Konferenz",
+            "items": [
+              {
+                "slug": "grosser_saal"
+              }
+            ]
+          },
+          {
+            "title": "Workshops",
+            "items": [
+              {
+                "slug": "raum6"
+              },
+              {
+                "slug": "raum4"
+              }
+            ]
+          }
+        ]
+      },
+      "html": {
+        "banner": "<div class=\"container\">\n\t\t\t<h2>Berlin, 18. - 20. Oktober 2024 – #subscribe11</h2>\n\t\t</div>\n\t",
+        "footer": "by <a href=\"http://das-sendezentrum.de\">Sendezentrum</a> &amp;\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "647ED754-8401-4BAF-86D8-6259C5579709",
+        "slug": "grosser_saal",
+        "name": "Großer Saal",
+        "streamId": "s6",
+        "streamingConfig": {
+          "wide": true,
+          // "display": "Saal 1",
+          "social": {
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#subscribe11:matrix.org",
+              "url": "https://matrix.to/#/#subscribe11:matrix.org"
+            }
+          }
+        }
+      },
+      {
+        "guid": "647ED754-8401-4BAF-86D8-6259C5579710",
+        "name": "Raum 6",
+        "slug": "raum6",
+        "streamId": "s2",
+        "streamingConfig": {
+          "social": {
+            "mastodon": true
+          }
+        }
+      }
+    ]
+  }
+}
