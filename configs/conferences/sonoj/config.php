@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2023-10-20 16:10"),
+	'ENDS_AT' => strtotime("2024-10-20 16:10"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -152,7 +152,7 @@ $CONFIG['ROOMS'] = array(
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => true,
-		'IRC' => false,
+		'IRC' => true,
 		'TWITTER' => false,
 	),
 
@@ -194,7 +194,7 @@ $CONFIG['IRC'] = array(
 	 * %s wird durch den urlencodeten Raum-Slug ersetzt.
 	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
 	 */
-	'URL' => 'ircs://irc.libera.chat:6697/%23sonoj',
+	'URL' => 'ircs://irc.libera.chat:6697/#sonoj',
 );
 
 /**
