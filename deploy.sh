@@ -6,9 +6,19 @@ if [ "$1" != '--without-validation' ]; then
     done
 
     find . -name "*.php" | grep -v archive | xargs -n1 php -l
-    find configs/conferences/ -name "*.json" | xargs -n1 python3 -m json.tool > /dev/null
     if [ $? -ne 0 ]; then
         echo "not deploying b0rken code ;)"
+        exit 1
+    fi
+    echo
+    find configs/conferences/ -name "*.json" | xargs -n1 python3 -m json.tool > /dev/null
+    if [ $? -ne 0 ] && [ "$1" != '--ignore-json-validation' ]; then
+        echo
+        echo -e "not deploying possibly invalid config.json files, checking again in verbose mode:\r\n"
+        find configs/conferences -name "*.json" | while read file; do
+            echo " Checking $file"
+            sed '/^\s*\/\//d' "$file" | python3 -m json.tool > /dev/null || echo -e "  Error in $file\\n"
+        done
         exit 1
     fi
 fi

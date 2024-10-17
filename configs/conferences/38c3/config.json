@@ -69,8 +69,7 @@
       },
       "schedule": {
         "url": "https://fahrplan.events.ccc.de/congress/2024/fahrplan/schedule.xml",
-        //"url": "https://data.c3voc.de/38C3/channels.schedule.xml",
-        //"index_offset": -1,
+        "index_offset": 0,
         "scale": 7
       },
       "html": {
@@ -87,8 +86,6 @@
         "streamId": "s1",
         "streamingConfig": {
           "wide": true,
-          // "display": "Saal 1",
-          // "display_short": "1",
           "social": {
             "hashtag": "#38C3eins",
             "mastodon": true

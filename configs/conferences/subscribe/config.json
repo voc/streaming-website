@@ -73,7 +73,6 @@
         "streamId": "s6",
         "streamingConfig": {
           "wide": true,
-          // "display": "Saal 1",
           "social": {
             "mastodon": true
           },
