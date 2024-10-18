@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2023-10-14 9:45"),
+	'STARTS_AT' => strtotime("2024-10-19 9:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2023-10-15 18:00"),
+	'ENDS_AT' => strtotime("2024-10-20 18:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,14 +33,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Vintage Computing Festival Berlin 2023',
+	'TITLE' => 'Vintage Computing Festival Berlin 2024',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'c3voc & afra Berlin',
+	'AUTHOR' => 'C3VOC & VCFB e. V.',
 
 	/**
 	 * Beschreibungstext
@@ -55,7 +55,7 @@ Das Vintage Computing Festival Berlin (VCFB) ist eine Veranstaltung rund um hist
 	 * Wird für den <meta name="keywords">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'KEYWORDS' => 'vcfb, vintage computing, afra, berlin',
+	'KEYWORDS' => 'vcfb, vintage computing, berlin',
 
 	/**
 	 * HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)
@@ -82,7 +82,7 @@ Das Vintage Computing Festival Berlin (VCFB) ist eine Veranstaltung rund um hist
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/vcfb23',
+	'RELEASES' => 'https://media.ccc.de/c/vcfb24',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Medientheater',
+			'G001',
 		),
 	),
 );
@@ -131,8 +131,8 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'Medientheater' => array(
-		'DISPLAY' => 'Medientheater',
+	'G001' => array(
+		'DISPLAY' => 'G001',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
@@ -174,7 +174,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://vcfb.de/2023/schedule.xml',
+	'URL' => 'https://vcfb.de/2024/schedule.xml',
 
 	/**
 	* Nur die angegebenen Räume aus dem Fahrplan beachten
@@ -182,7 +182,7 @@ $CONFIG['SCHEDULE'] = array(
 	* Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	*/
 	'ROOMFILTER' => [
-		'Medientheater',
+		'G001',
 	],
 
 	/**
@@ -209,24 +209,7 @@ $CONFIG['SCHEDULE'] = array(
  *
  *   $CONFIG['TWITTER'] = true
  */
-$CONFIG['TWITTER'] = array(
-	/**
-	 * Anzeigetext für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Ist eine weitere Anpassung erfoderlich, kann ein TWITTER_CONFIG-Block in der
-	 * Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden.
-	 */
-	'DISPLAY' => '#vcfb2022 @vcfberlin on twitter',
-
-	/**
-	 * Vorgabe-Tweet-Text für die Twitter-Links.
-	 *
-	 * %s wird durch den Raum-Slug ersetzt.
-	 * Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.
-	 */
-	'TEXT' => '#vcfb2022',
-);
+#$CONFIG['TWITTER'] = false;
 
 
 return $CONFIG;
