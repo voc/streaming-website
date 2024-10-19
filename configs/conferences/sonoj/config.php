@@ -100,7 +100,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	// 'RELIVE_JSON' => 'configs/conferences/jh-hh-2019/vod.json',
+	'RELIVE_JSON' => 'http://relive.c3voc.de/relive/sonoj2024/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
