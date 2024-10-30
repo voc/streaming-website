@@ -14,7 +14,7 @@ else
 	preg_match('/^dg([0-9]+)$/i', $upcoming_dg['slug'], $m);
 
 	$EPISODE = intval($m[1]);
-	$DATE = strtotime($upcoming_dg['start_date'].' 20:00');
+	$DATE = strtotime($upcoming_dg['start_date'].' 19:30');
 	$TITLE = $upcoming_dg['name'];
 }
 
