@@ -1,0 +1,63 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "title": "Hackoween 24",
+        "acronym": "hackoween",
+        "organizer": "Chaosdorf",
+        "description": "Hackoween 24",
+        "media_slug": "hackoween24",
+        "keywords": [
+            "Hackoween",
+            "Chaosdorf",
+            "2024",
+            "Video",
+            "Media",
+            "Streaming",
+            "Düsseldorf"
+        ],
+        "start": "2024-11-01T08:00:00+01:00",
+        "end": "2024-11-03T19:30:00+01:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "social": {
+                    "hashtag": "#hackoween",
+                    "mastodon": true
+                }
+            },
+            "schedule": {
+                "url": "https://talks.hackoween.de/hackoween-2024/schedule/export/schedule.xml",
+                "roomfilter": [
+                    "Hackcenter"
+                ],
+                "scale": 3,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Vortragsräume",
+                        "items": [
+                            {
+                                "slug": "hackcenter"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "footer": "by <a href=\"https://chaosdorf.de/\">Chaosdorf</a> &amp; <a href=\"https://c3voc.de\">C3VOC</a>"
+            }
+        },
+        "rooms": [
+            {
+                "guid": "69e2dcc1-7f90-5d60-bf0b-455ac4d51cec",
+                "slug": "hackcenter",
+                "name": "Hackcenter",
+                "streamId": "hackoween"
+            }
+        ]
+    }
+}
