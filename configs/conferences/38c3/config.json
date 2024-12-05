@@ -27,36 +27,33 @@
       "overviewPage": {
         "sections": [
           {
-            "title": "Main halls",
+            "title": "Main Halls",
             "items": [
               {
                 "slug": "eins"
               },
               {
-                "slug": "granville"
+                "slug": "glitch"
               },
               {
-                "slug": "zuse"
+                "slug": "zigzag"
               }
             ]
           },
           {
-            "title": "Community stages",
+            "title": "Community Stages",
             "items": [
               {
-                "slug": "foo"
+                "slug": "huff"
               },
               {
-                "slug": "bar"
+                "slug": "yell"
               }
             ]
           },
           {
             "title": "Other",
             "items": [
-              {
-                "slug": "sos-lt"
-              },
               {
                 "slug": "sendezentrum"
               },
@@ -104,44 +101,88 @@
       },
       {
         "guid": "7202df07-050c-552f-8318-992f94e40ef0",
-        "name": "Saal Granville",
-        "slug": "granville",
+        "name": "Saal GLITCH",
+        "slug": "glitch",
         "streamId": "s2",
         "streamingConfig": {
           "social": {
-            "hashtag": "#38C3granville",
+            "hashtag": "#38C3glitch",
             "mastodon": true
           },
           "chat": {
             "matrix": {
-              "display": "#38C3-hall-granville:events.ccc.de",
-              "url": "https://matrix.to/#/#38C3-hall-granville:events.ccc.de"
+              "display": "#38C3-hall-glitch:events.ccc.de",
+              "url": "https://matrix.to/#/#38C3-hall-glitch:events.ccc.de"
             },
             "irc": {
-              "display": "#38C3-hall-granville @ hackint",
-              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#38C3-hall-granville"
+              "display": "#38C3-hall-glitch @ hackint",
+              "url": "https://chat.hackint.org/?join=38C3-hall-glitch"
             }
           }
         }
       },
       {
         "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
-        "name": "Saal Zuse",
-        "slug": "zuse",
+        "name": "Saal ZIGZAG",
+        "slug": "zigzag",
         "streamId": "s3",
         "streamingConfig": {
           "social": {
-            "hashtag": "#38C3zuse",
+            "hashtag": "#38C3zigzag",
             "mastodon": true
           },
           "chat": {
             "matrix": {
-              "display": "#38C3-hall-zuse:events.ccc.de",
-              "url": "https://matrix.to/#/#38C3-hall-zuse:events.ccc.de"
+              "display": "#38C3-hall-zigzag:events.ccc.de",
+              "url": "https://matrix.to/#/#38C3-hall-zigzag:events.ccc.de"
             },
             "irc": {
-              "display": "#38C3-hall-zuse @ hackint",
-              "url": "https://webirc.hackint.org/#irc://irc.hackint.org/#38C3-hall-zuse"
+              "display": "#38C3-hall-zigzag @ hackint",
+              "url": "https://chat.hackint.org/?join=38C3-hall-zigzag"
+            }
+          }
+        }
+      },
+      {
+        "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
+        "name": "Saal HUFF",
+        "slug": "huff",
+        "streamId": "s4",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#38C3huff",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#38C3-hall-huff:events.ccc.de",
+              "url": "https://matrix.to/#/#38C3-hall-huff:events.ccc.de"
+            },
+            "irc": {
+              "display": "#38C3-hall-huff @ hackint",
+              "url": "https://chat.hackint.org/?join=38C3-hall-huff"
+            }
+          }
+        }
+      },
+      {
+        "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
+        "name": "Saal YELL",
+        "slug": "yell",
+        "streamId": "s5",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#38C3yell",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#38C3-hall-yell:events.ccc.de",
+              "url": "https://matrix.to/#/#38C3-hall-yell:events.ccc.de"
+            },
+            "irc": {
+              "display": "#38C3-hall-yell @ hackint",
+              "url": "https://chat.hackint.org/?join=38C3-hall-yell"
             }
           }
         }
@@ -150,7 +191,7 @@
         "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
         "name": "Sendezentrum Stage (Saal F)",
         "slug": "sendezentrum",
-        "streamId": "s5",
+        "streamId": "s6",
         "streamingConfig": {
           "display": "Sendezentrum",
           "social": {
@@ -168,11 +209,11 @@
       },
       {
         "guid": "ff13477b-07c6-4df9-aee7-4a2aadc59102",
-        "name": "Info Beamer",
+        "name": "info-beamer",
         "slug": "infobeamer",
-        "streamId": "s6",
+        "streamId": "s96",
         "streamingConfig": {
-          "display": "Info Beamer",
+          "display": "info-beamer",
           "social": {
             "mastodon": false
           },
