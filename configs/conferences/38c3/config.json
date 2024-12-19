@@ -65,7 +65,7 @@
         ]
       },
       "schedule": {
-        "url": "https://fahrplan.events.ccc.de/congress/2024/fahrplan/schedule.xml",
+        "url": "https://api.events.ccc.de/congress/2024/assembly/6840c453-af5c-413c-8127-adcbdcd98e9e/schedule.xml",
         "index_offset": 0,
         "scale": 7
       },
