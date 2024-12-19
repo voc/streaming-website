@@ -2,7 +2,7 @@
   "$schema": "../../../docs/config-schema.json",
   "conference": {
     "title": "38C3: Illegal Instructions",
-    "acronym": "38C3",
+    "acronym": "38c3",
     "description": "Live streaming from the 38th Chaos Communication Congress",
     "keywords": [
       "38C3", "Chaos Computer Club", "Video", "Media", "Streaming", "Hacker"
@@ -65,7 +65,7 @@
         ]
       },
       "schedule": {
-        "url": "https://fahrplan.events.ccc.de/congress/2024/fahrplan/schedule.xml",
+        "url": "https://api.events.ccc.de/congress/2024/assembly/6840c453-af5c-413c-8127-adcbdcd98e9e/schedule.xml",
         "index_offset": 0,
         "scale": 7
       },
