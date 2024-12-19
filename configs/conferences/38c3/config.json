@@ -2,7 +2,7 @@
   "$schema": "../../../docs/config-schema.json",
   "conference": {
     "title": "38C3: Illegal Instructions",
-    "acronym": "38C3",
+    "acronym": "38c3",
     "description": "Live streaming from the 38th Chaos Communication Congress",
     "keywords": [
       "38C3", "Chaos Computer Club", "Video", "Media", "Streaming", "Hacker"
