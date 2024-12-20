@@ -84,12 +84,12 @@ body {
 
 .container {
     border-radius: 4px 4px 4px 4px;
-    border: 1px solid @acc-dark-purple;
-    background-color: @acc-dark-aubergine;
+    border: 1px solid @acc-aubergine;
+    background-color: @super-dark-pink;
 }
 
-.navbar .container {
-    background-color: @super-dark-pink !important;
+.container:not(.hls) {
+    :is(ul, ol, p) a { text-decoration: underline; }
 }
 
 .outer-div {
@@ -169,7 +169,7 @@ nav {
 .navbar .btn.btn-default, body.page-start .search .btn {
     background-color: @coral-red;
     border-color: @acc-aubergine;
-    color: @pearl-white;
+    color: @super-dark-pink;
 }
 
 ul.nav {
@@ -185,7 +185,7 @@ ul.nav {
 	background-color: @coral-red;
 	a {
 	    background-color: @coral-red !important;
-	    color: @acc-dark-aubergine !important;
+	    color: @acc-aubergine !important;
 	    border: 0px none !important;
 	    border-radius: 4px 4px 0 0;
 	}
@@ -195,20 +195,20 @@ ul.nav {
 .btn-primary, .btn-default {
     background-color: @coral-red;
     border-color: @acc-aubergine;
-    color: @acc-aubergine;
+    color: @super-dark-pink;
 }
 
 .btn-primary:hover, .btn-default:hover, ul.nav li:hover {
     background-color: @coral-red;
     border-color: @acc-aubergine;
-    color: @acc-aubergine;
+    color: @acc-periwinkle;
 }
 
 .btn-primary.active, .btn-default.active {
     background-color: @coral-red;
     //border-color: @acc-dark-aubergine;
-    border: 1px solid @acc-dark-aubergine !important;
-    color: @acc-dark-aubergine;
+    border: 1px solid @acc-aubergine !important;
+    color: @super-dark-pink;
 }
 
 .navbar .btn.btn-default:hover, body.page-start .search .btn:hover,
@@ -258,13 +258,13 @@ ul.nav {
 	content: '✔';
 	background-color: @coral-red;
 	outline: 1px solid @coral-red;
-	color: @pearl-white;
+	color: @super-dark-pink;
     }
 
     input[type='checkbox']:checked {
 	background-color: @coral-red;
 	outline: 1px solid @coral-red;
-	color: @pearl-white;
+	color: @super-dark-pink;
     }
 
 }
@@ -330,13 +330,13 @@ a:hover {
 
 h1 {
     font-family: 'Space Grotesk';
-    font-weight: regular;
+    font-weight: normal;
     color: @coral-red;
 }
 
 h2, h3, h4, h5, h6 {
     font-family: 'Uncut Sans';
-    font-weight: regular;
+    font-weight: normal;
     color: @coral-red;
 }
 
@@ -346,13 +346,13 @@ h2, h3, h4, h5, h6 {
 }
 
 .nav-tabs.nav-justified > li > a:hover {
-    color: @acc-dark-aubergine;
+    color: @super-dark-pink;
     background-color: @coral-red;
     border: 1px solid @coral-red;
 }
 
 .schedule {
-    border-color: @acc-dark-aubergine !important;
+    //border-color: @acc-dark-aubergine !important;
     .block {
 	h3 {
 	    font-size: 1.2em !important;
@@ -367,28 +367,43 @@ h2, h3, h4, h5, h6 {
 	}
 	border: 1px solid @acc-dark-aubergine !important;
     }
+
     .block:nth-child(2n) {
 	background-color: @acc-dark-aubergine;
     }
+
     .block:nth-child(2n+1) {
 	background-color: @super-dark-pink;
     }
 
     .block.pause, .block.optout {
-	background-color: @acc-dark-aubergine !important;
-	background-image: linear-gradient(45deg, @acc-aubergine 25%, transparent 25%, transparent 50%, @acc-aubergine 50%, @acc-aubergine 75%, transparent 75%, transparent) !important;
+	background-color: @super-dark-pink !important;
+	background-image: linear-gradient(45deg, @acc-dark-aubergine 25%, transparent 25%, transparent 50%, @acc-dark-aubergine 50%, @acc-dark-aubergine 75%, transparent 75%, transparent) !important;
     }
     .block.gap {
-	background-color: @acc-dark-aubergine !important;
+	background-color: @super-dark-pink !important;
+	//background-color: @acc-dark-aubergine 50% !important;
     }
 }
 
-#schedule-event-detail-popover #modal-body {
+#schedule-event-detail-popover{
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid @acc-aubergine;
     background-color: @super-dark-pink;
-    color: @pearl-white;
-}
+    #modal-header {
+	border-bottom: 1px solid @acc-aubergine;
+	background-color: @super-dark-pink !important;
+    }
 
-#schedule-event-detail-popover {
-    // TODO NENENE
-    background-color: @coral-red;
+    #modal-body {
+	margin: 1em;
+	a { text-decoration: underline; }
+	hr { display: none; }
+    }
+
+    #modal-title {
+	color: @coral-red;
+	font-family: 'Uncut Sans';
+	font-weight: normal;
+    }
 }
