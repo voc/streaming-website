@@ -271,20 +271,16 @@ ul.nav {
 
 .schedule .block {
     h3 {
+	color: @pearl-white !important;
+    }
+
+    h5 {
 	color: @acc-amethyst !important;
     }
 
     h4 {
 	color: @coral-red !important;
     }
-
-    h5 {
-	color: @pearl-white !important;
-    }
-}
-
-.schedule .block.pause h3 {
-    color: @coral-red !important;
 }
 
 .room .tab-content {
@@ -380,9 +376,21 @@ h2, h3, h4, h5, h6 {
 	background-color: @super-dark-pink !important;
 	background-image: linear-gradient(45deg, @acc-dark-aubergine 25%, transparent 25%, transparent 50%, @acc-dark-aubergine 50%, @acc-dark-aubergine 75%, transparent 75%, transparent) !important;
     }
+
+    .block.pause h3 {
+	color: @coral-red !important;
+    }
+
     .block.gap {
 	background-color: @super-dark-pink !important;
 	//background-color: @acc-dark-aubergine 50% !important;
+    }
+
+    .block.daychange {
+	background-color: @super-dark-pink !important;
+	h3 {
+	    color: @coral-red !important;
+	}
     }
 }
 
