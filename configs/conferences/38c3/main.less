@@ -78,17 +78,21 @@ body {
     font-family: 'Uncut Sans';
 }
 
-.overview .panel-title {
-    font-weight: bold;
+.overview {
+    .panel-title { font-weight: bold; }
+    .roomtitle { color: @coral-red; }
+    .talk span { color: @acc-periwinkle; }
 }
 
-.container, .alert {
+.container {
     border-radius: 4px 4px 4px 4px;
     border: 1px solid @acc-aubergine;
     background-color: @super-dark-pink;
-    color: @acc-periwinkle;
 }
 
+.alert {
+    color: @acc-periwinkle;
+}
 
 .container:not(.hls) {
     :is(ul, ol, p) a { text-decoration: underline; }
