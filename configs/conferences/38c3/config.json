@@ -68,7 +68,7 @@
         ]
       },
       "schedule": {
-        "url": "https://api.events.ccc.de/congress/2024/assembly/6840c453-af5c-413c-8127-adcbdcd98e9e/schedule.xml",
+        "url": "https://api.events.ccc.de/congress/2024/schedule.xml?room.tags=voc",
         "index_offset": 0,
         "scale": 7
       },
