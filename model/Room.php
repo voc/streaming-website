@@ -239,8 +239,8 @@ class Room
 
 	public function hasChat() {
 		$chat = $this->get('CHAT');
-		return ((is_array($chat) ? count($chat) : $chat) && $this->getConference()->has('CHAT')) 
-			|| $this->hasIrc() || $this->hasWebchat() || $this->hasTwitter();
+		return (is_array($chat) ? count($chat) : $chat) &&
+			($this->hasIrc() || $this->hasWebchat() || $this->hasTwitter());
 	}
 
 	public function hasEmbed() {
@@ -254,7 +254,7 @@ class Room
 	public function getInfo() {
 		return $this->get('INFO');
 	}
-	
+
 	public function hasSdVideo() {
 		return $this->get('SD_VIDEO');
 	}

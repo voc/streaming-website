@@ -21,8 +21,10 @@ function formatConference($conference) {
 					'feedback' => $conference->hasFeedback(),
 					'chat' => array(
 						'irc' => lowerCaseKeys($conference->get('IRC', null)),
-						'twitter' => lowerCaseKeys($conference->get('TWITTER', null)),
 					),
+					'social' => array(
+						'twitter' => lowerCaseKeys($conference->get('TWITTER', null)),
+					)
 				),
 				'schedule' => lowerCaseKeys($conference->get('SCHEDULE')),
 				'overviewPage' => array(
@@ -80,7 +82,7 @@ function formatSections($pageConfig) {
 	{
 		$section = array(
 			'title' => $sectionTitle,
-			'items' => [], 
+			'items' => [],
 		);
 
 		foreach($items as $item)
@@ -90,7 +92,7 @@ function formatSections($pageConfig) {
 			);
 		}
 		$struct[] = $section;
-	}	
+	}
 	return $struct;
 }
 
