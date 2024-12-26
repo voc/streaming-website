@@ -59,6 +59,9 @@
               },
               {
                 "slug": "infobeamer"
+              },
+              {
+                "slug": "waschkatzen"
               }
             ]
           }
@@ -222,6 +225,23 @@
             "irc": false,
             "matrix": false
           }
+        }
+      },
+      {
+        "guid": "69cf4b1d-df31-4a84-8376-3e9cba59b9b8",
+        "name": "Waschkatzen",
+        "slug": "waschkatzen",
+        "streamId": "waschkatzen",
+        "streamingConfig": {
+          "display": "Waschkatzen",
+          "social": {
+            "mastodon": false
+          },
+          "chat": {
+            "irc": false,
+            "matrix": false
+          },
+          "schedule": false
         }
       }
     ]
