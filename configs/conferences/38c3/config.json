@@ -147,7 +147,7 @@
         "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
         "name": "Stage HUFF",
         "slug": "huff",
-        "streamId": "s4",
+        "streamId": "s6",
         "streamingConfig": {
           "social": {
             "hashtag": "#38C3huff",
@@ -191,7 +191,7 @@
         "guid": "9001b61b-b1f1-5bcd-89fd-135ed5e43e19",
         "name": "Saal X 07",
         "slug": "sendezentrum",
-        "streamId": "s6",
+        "streamId": "s4",
         "streamingConfig": {
           "display": "Sendezentrum Stage (Saal X 07)",
           "display_short": "Sendezentrum",
