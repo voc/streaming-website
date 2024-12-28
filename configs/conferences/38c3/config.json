@@ -155,12 +155,12 @@
           },
           "chat": {
             "matrix": {
-              "display": "#38c3-hall-huff:events.ccc.de",
-              "url": "https://matrix.to/#/#38c3-hall-huff:events.ccc.de"
+              "display": "#38c3-stage-huff:events.ccc.de",
+              "url": "https://matrix.to/#/#38c3-stage-huff:events.ccc.de"
             },
             "irc": {
-              "display": "#38c3-hall-huff @ hackint",
-              "url": "https://chat.hackint.org/?join=38c3-hall-huff"
+              "display": "#38c3-stage-huff @ hackint",
+              "url": "https://chat.hackint.org/?join=38c3-stage-huff"
             }
           }
         }
@@ -177,12 +177,12 @@
           },
           "chat": {
             "matrix": {
-              "display": "#38c3-hall-yell:events.ccc.de",
-              "url": "https://matrix.to/#/#38c3-hall-yell:events.ccc.de"
+              "display": "#38c3-stage-yell:events.ccc.de",
+              "url": "https://matrix.to/#/#38c3-stage-yell:events.ccc.de"
             },
             "irc": {
-              "display": "#38c3-hall-yell @ hackint",
-              "url": "https://chat.hackint.org/?join=38c3-hall-yell"
+              "display": "#38c3-stage-yell @ hackint",
+              "url": "https://chat.hackint.org/?join=38c3-stage-yell"
             }
           }
         }
