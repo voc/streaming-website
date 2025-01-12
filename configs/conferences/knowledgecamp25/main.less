@@ -1,0 +1,42 @@
+@import "../../../assets/css/_structure.less";
+
+@darkblue: #161650;
+@light: #5f5fd3;
+@medium: #2c2ca0;
+@dark: #0b0b28;
+
+@link-color:            @darkblue;
+@panel-primary-border:  @darkblue;
+
+@panel-bg: white;
+@panel-default-heading-bg: @light;
+@panel-default-text:       @dark;
+
+@text-color: @dark;
+body {
+	background-image: linear-gradient(to bottom right, #161650, #5f5fd3);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1 { color: @dark; }
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+        background-image: url(knowledgecamp.svg);
+        margin-top: -1.5em;
+        background-size: 100px 100px;
+        width: 100px;
+        height: 100px;
+}
+
+img.knowledgecamplogo {
+	height: 100px;
+	position: absolute;
+	top: 70px;
+	right: 10px;
+	z-index: -100;
+}
