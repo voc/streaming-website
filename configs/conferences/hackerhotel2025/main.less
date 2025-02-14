@@ -1,0 +1,140 @@
+@import "../../../assets/css/_structure.less";
+
+@brand-primary:         #eeee23;
+@text-color:            #cccccc;
+@background:            #1a1a1a;
+
+@link-color:            @brand-primary;
+@panel-bg:              #222222;
+@well-bg:               @panel-bg;
+
+@panel-default-border:  #000000;
+@panel-primary-border:  #000000;
+@panel-primary-heading-bg:      @brand-primary;
+@panel-default-heading-bg:    @brand-primary;
+@panel-primary-text:    @background;
+@panel-default-text:    @background;
+
+@navbar-default-color:  @text-color;
+@navbar-default-bg:     #333333;
+@navbar-default-link-color:       @brand-primary;
+@navbar-default-link-hover-color: darken(@navbar-default-link-color, 15%);
+
+@footer-default-color:            @text-color;
+@footer-default-bg:               #333333;
+@footer-default-link-color:       #FFFFFF;
+@footer-default-link-hover-color: #CCCCCC;
+
+// darker nav tabs:
+
+@nav-link-hover-bg: #262626; // nav-tabs-link-hover-bg gibts nicht... :/
+@nav-tabs-active-link-hover-bg: #333;
+@nav-tabs-active-link-hover-color: @brand-primary;
+
+@custom-nav-border-color: @text-color;
+@nav-tabs-link-hover-border-color: #888; // slightly darker border
+
+@nav-tabs-border-color:                       @custom-nav-border-color;
+@nav-tabs-active-link-hover-border-color:     @custom-nav-border-color;
+@nav-tabs-justified-link-border-color:        @custom-nav-border-color;
+@nav-tabs-justified-active-link-border-color: @custom-nav-border-color;
+
+body.room {
+	.tab-content {
+		border-left:   1px solid @custom-nav-border-color;
+		border-bottom: 1px solid @custom-nav-border-color;
+		border-right:  1px solid @custom-nav-border-color;
+	}
+}
+
+// end darker nav tabs
+
+
+body {
+	h1 {
+		color: @brand-primary;
+	}
+}
+
+.banner {
+	text-align: center;
+	color: @brand-primary;
+}
+
+body {
+	background-color: @background;
+}
+
+img.hackerhotellogo {
+	width: 400px;
+}
+
+
+// Schedule
+@schedule-now: #f73f39;
+@schedule-room: @text-color;
+@schedule-selected-room: @brand-primary;
+@schedule-now-bg: darken(@brand-primary, 30%);
+
+body .schedule {
+
+	.room.highlight {
+		color: @background;
+		
+		a {
+			color: @background;
+		}
+
+		.block h4 {
+			color: @background;
+		}
+	}
+
+	.block {
+		a {
+			color: @text-color;
+		}
+
+		&.pause, &.optout {
+			color: @background;
+			background-image: linear-gradient(45deg, rgba(0, 0, 0, .20) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .20) 50%, rgba(0, 0, 0, .20) 75%, transparent 75%, transparent);
+		
+			a {
+				color: @background;
+			}
+
+		    h4 {
+				color: @background;
+			}
+		}
+	}
+}
+
+#schedule-event-detail-popover{
+    border-radius: 10px;
+    background-color: #666;
+
+	#modal-header {
+		border-radius: 8px 8px 0px 0px;
+	}
+
+    #modal-title {
+	    // border-bottom: 1px solid @acc-aubergine;
+	    // background-color: @super-dark-pink !important;
+		color: @background;
+    }
+
+    #modal-body {
+		margin: 1em;
+		a { text-decoration: underline; }
+		hr { display: none; }
+    }
+
+    #modal-title {
+		// color: @coral-red;
+    }
+
+	button.close {
+		color: #666;
+	}
+}
