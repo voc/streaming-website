@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "WICMP 10₍₂₎",
+    "acronym": "wicmp10",
+    "description": "Live streaming from the 10₍₂₎th WICMP",
+    "keywords": [
+      "Video", "Media", "Streaming", "Hacker", "Erlangen"
+    ],
+    "organizer": "Bits'n'Bugs",
+    "start": "2025-02-28T15:00:00+01:00",
+    "end": "2025-03-02T20:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#wicmp",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": false,
+          "matrix": false
+        }
+      },
+      "schedule": {
+        "url": "https://cfp.zam.haus/wicmp-2025/schedule/export/schedule.xml",
+        "index_offset": 0,
+        "scale": 7
+      },
+      "html": {
+        "banner": "<div class=\"congress\"></div><div class=\"congress-motto\"></div>",
+        "footer": "\n\t\tby <a href=\"https://erlangen.ccc.de\">Bits'n'Bugs e.V.</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+        "not_started": "<h1>WICMP 10₍₂₎ has not started yet</h1><p>Live streams will be available here once it has started. Please check back later.\nIn the meantime, all infos are <a href='https://w.icmp.camp'>here</a></p>"
+      }
+    },
+    "rooms": [
+      {
+        "guid": "102f7a44-b34e-57eb-88fb-e4395a5a276e",
+        "name": "Raum Wireshårk",
+        "slug": "wireshark",
+        "streamId": "s2",
+        "streamingConfig": {
+          "wide": true,
+          "social": {
+            "hashtag": "#wicmp",
+            "mastodon": true
+          },
+          "chat": {
+            "irc": false
+          }
+        }
+      }
+    ]
+  }
+}
