@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "FOSSGIS-Konferenz 2025",
+    "acronym": "fossgis2025",
+    "description": "Die FOSSGIS-Konferenz ist die deutschsprachige Konferenz zu Open-Source-GIS und OpenStreetMap. Sie findet vom 26. bis 29. März 2025 in Münster und im Netz statt.",
+    "keywords": [ "FOSSGIS 2025", "OpenStreetMap", "GIS", "OpenSource", "Geo" ],
+    "organizer": "FOSSGIS e.V.",
+    "start": "2025-03-26T00:08:00+01:00",
+    "end": "2025-03-29T16:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "audio": false,
+        "sd_video": false,
+        "social": {
+          "hashtag": "#fossgis2025",
+          "mastodon": true
+        }
+      },
+      "overviewPage": {},
+      "schedule": {
+        "url": "https://pretalx.com/fossgis2025/schedule/export/schedule.xml",
+        "scale": 3
+      },
+      "html": {
+        "footer": "<a href=\"https://www.fossgis-konferenz.de/2025/\">FOSSGIS-Konferenz 2025</a> by <a href=\"https://www.fossgis.de/\">FOSSGIS e.V</a> &amp; <a href=\"https://c3voc.de\">C3VOC</a>"
+      }
+    },
+    "rooms": [
+      {
+        "slug": "hs1",
+        "guid": "849b7717-17b1-5880-b4a5-adc2dcbd12d6",
+        "name": "HS1 (Aula)",
+        "streamId": "s2"
+      },
+      {
+        "slug": "hs2",
+        "guid": "e8909de4-27ae-5480-a037-b4ba01bac420",
+        "name": "HS 2 (S10)",
+        "streamId": "s3"
+      },
+      {
+        "slug": "hs3",
+        "guid": "ae37f52b-1c4c-5e50-b778-d077d7b92830",
+        "name": "HS3 (S1)",
+        "streamId": "s4"
+      },
+      {
+        "slug": "hs4",
+        "guid": "2e2c482e-d975-5af3-b26a-5a7f157c3feb",
+        "name": "HS4 (S2)",
+        "streamId": "s5"
+      }
+    ]
+  }
+}
