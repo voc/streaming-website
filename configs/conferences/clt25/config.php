@@ -62,8 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="https://chemnitzer.linux-tage.de/">Chemnitzer Linux-Tage</a> &amp;
-		<a href="https://c3voc.de">C3VOC</a>
+		by <a href="https://chemnitzer.linux-tage.de/">Chemnitzer Linux-Tage</a>, <a href="https://www.tu-chemnitz.de/informatik/mi/index.md">Professur Medieninformatik</a> &amp; <a href="https://c3voc.de">C3VOC</a>
 	',
 
 	/**
