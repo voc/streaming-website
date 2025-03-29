@@ -34,24 +34,6 @@
         "guid": "849b7717-17b1-5880-b4a5-adc2dcbd12d6",
         "name": "HS1 (Aula)",
         "streamId": "s2"
-      },
-      {
-        "slug": "hs2",
-        "guid": "e8909de4-27ae-5480-a037-b4ba01bac420",
-        "name": "HS2 (S10)",
-        "streamId": "s3"
-      },
-      {
-        "slug": "hs3",
-        "guid": "ae37f52b-1c4c-5e50-b778-d077d7b92830",
-        "name": "HS3 (S1)",
-        "streamId": "s4"
-      },
-      {
-        "slug": "hs4",
-        "guid": "2e2c482e-d975-5af3-b26a-5a7f157c3feb",
-        "name": "HS4 (S2)",
-        "streamId": "s5"
       }
     ]
   }
