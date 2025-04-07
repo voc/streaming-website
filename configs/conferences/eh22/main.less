@@ -1,0 +1,66 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+@light-fg-color:       #0c011f;
+@light-bg-main:        #f2f0f5;
+@light-bg-shade1:      #d1c6e0;
+@light-bg-shade2:      #b2a0cb;
+@light-bg-shade3:      #957eb5;
+@light-bg-shade4:      #7a60a0;
+@light-text-shade1:    #26114b;
+@light-text-shade2:    #371f60;
+@light-text-shade3:    #4b3176;
+@light-text-shade4:    #61468b;
+@light-accent-purple:  #6c366c;
+
+@dark-fg-color:        #f2f0f5;
+@dark-bg-main:         #0c011f;
+@dark-bg-shade1:       #180736;
+@dark-bg-shade2:       #26114B;
+@dark-bg-shade3:       #371F60;
+@dark-bg-shade4:       #4B3176;
+@dark-text-shade1:     #b2a0cb;
+@dark-text-shade2:     #957eb5;
+@dark-text-shade3:     #7a60a0;
+@dark-text-shade4:     #61468b;
+@dark-accent-purple:   #d381f7;
+
+// often configured values
+//
+@brand-primary:                   @dark-accent-purple;
+@text-color:                      @dark-fg-color;
+@body-bg:                         @dark-bg-main;
+
+@link-color:                      @brand-primary;
+@link-hover-color:                darken(@link-color, 15%);
+
+@navbar-default-color:            @dark-text-shade1;
+@navbar-default-bg:               @dark-bg-shade3;
+@navbar-default-link-color:       @dark-text-shade1;
+@navbar-default-link-hover-color: @dark-accent-purple;
+
+@panel-bg:                        @dark-bg-shade1;
+@panel-default-border:            @dark-bg-shade2;
+@panel-default-text:              @dark-text-shade1;
+@panel-default-heading-bg:        @dark-bg-shade3;
+@panel-default-border:            @dark-text-shade4;
+
+// colors of the schedule ("Fahrplan") widget below the video-player
+//
+//  @schedule-now:       @brand-danger;
+//  @schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+//  @schedule-border:    lighten(@brand-primary, 50%);
+//
+//  @schedule-room:      darken(@brand-primary, 15%);
+//  @schedule-author:    #444;
+//
+//  @schedule-selected-room: lighten(@brand-success, 10%);
+//
+//  @schedule-daychange:    darken(@brand-primary, 20%);
+//  @schedule-daychange-bg: fade(white, 30%);
+//
+//  @schedule-gap:          darken(@brand-primary, 20%);
+//  @schedule-gap-bg:       fade(white, 30%);
+//
+//  @schedule-pause:        white;
+//  @schedule-pause-bg:     lighten(black, 85%);
