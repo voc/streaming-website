@@ -1,23 +1,23 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "description": "Jugend hackt Live Streaming, 2024 edition",
-    "media_slug": "jh24",
+    "description": "Jugend hackt Live Streaming, 2025 edition",
+    "media_slug": "jh25",
     "organizer": "Jugend hackt",
-    "start": "2024-10-11T12:00:00+02:00",
-    "end": "2024-10-13T18:00:00+02:00",
-    "title": "Jugend hackt Luzern 2024",
+    "start": "2025-04-11T12:00:00+02:00",
+    "end": "2025-04-13T18:00:00+02:00",
+    "title": "Jugend hackt Dresden 2025",
     "streamingConfig": {
       "html": {
-        "footer": "by <a href='http://jugendhackt.de/'>Jugend hackt 2024</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "footer": "by <a href='http://jugendhackt.de/'>Jugend hackt 2025</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
         "banner": "<img src='/configs/conferences/jugendhackt/illustrationen.svg' class='jh-illus'>"
       }
     },
     "rooms": [
       {
-        "name": "Tüftelwerk",
+        "name": "Auditorium",
         "slug": "saal",
-        "streamId": "jugendhackt"
+        "streamId": "s1"
       }
     ]
   }

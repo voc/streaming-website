@@ -1,0 +1,39 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "description": "Das 22. Easterhegg, Ostern 2025 auf Kampnagel",
+        "media_slug": "eh22",
+        "organizer": "CCC Hansestadt Hamburg e.V.",
+        "start": "2025-04-18T14:00:00+02:00",
+        "end": "2025-04-21T16:00:00+02:00",
+        "title": "Easterhegg 2025: Unhandled Eggception",
+        "streamingConfig": {
+            "html": {
+                "footer": "by <a href='http://hamburg.ccc.de/'>CCC Hamburg</a> &amp; <a href='https://c3voc.de'>C3VOC</a>"
+            },
+            "schedule": {
+                "url": "https://cfp.eh22.easterhegg.eu/eh22/schedule/export/schedule.xml",
+                "scale": 7,
+                "roomfilter": [
+                    "K2 Talk"
+                ]
+            },
+            "features": {
+                "embed": true,
+                "feedback": true,
+                "social": {
+                    "hashtag": "#eh22",
+                    "mastodon": true
+                }
+            }
+        },
+        "rooms": [
+            {
+                "name": "K2 Vortrag",
+                "slug": "k2",
+                "streamId": "s1",
+                "guid": "7436ee4a-4f22-5299-bd96-35ee5e0e865a"
+            }
+        ]
+    }
+}
