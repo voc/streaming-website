@@ -1,0 +1,92 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "title": "Grazer Linuxtage 2025",
+        "acronym": "glt25",
+        "organizer": "Verein zur Förderung freier Soft- und Hardware",
+        "description": "Grazer Linuxtage 2025",
+        "keywords": [
+            "Linuxtage",
+            "Linux",
+            "2025",
+            "Video",
+            "Media",
+            "Streaming",
+            "Graz"
+        ],
+        "start": "2025-04-25T08:00:00+02:00",
+        "end": "2025-04-26T19:30:00+02:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "social": {
+                    "hashtag": "#glt25",
+                    "mastodon": true
+                }
+            },
+            "schedule": {
+                "url": "https://pretalx.linuxtage.at/glt25/schedule/export/schedule.xml",
+                "roomfilter": [
+                    "HS i1",
+                    "HS i2",
+                    "HS i7",
+                    "HS i13"
+                ],
+                "scale": 3,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Vortragsräume",
+                        "items": [
+                            {
+                                "slug": "i1"
+                            },
+                            {
+                                "slug": "i2"
+                            },
+                            {
+                                "slug": "i7"
+                            },
+                            {
+                                "slug": "i13"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "footer": "by <a href=\"https://c3voc.de\">C3VOC</a>"
+            }
+        },
+        "rooms": [
+            {
+                "guid": "8517d910-48fc-513b-895f-2999a175a79c",
+                "slug": "i1",
+                "name": "HS i1",
+                "streamId": "s3"
+            },
+            {
+                "guid": "eb5b1b73-c4e5-5ee7-83bb-0f87d0573b4f",
+                "slug": "i2",
+                "name": "HS i2",
+                "streamId": "s4"
+            },
+            {
+                "guid": "96ae1c26-7bc2-5c61-8d72-40e54770d9b1",
+                "slug": "i7",
+                "name": "HS i7",
+                "streamId": "s5"
+            },
+            {
+                "guid": "0904cf39-f74f-5c55-914e-ae32e2105715",
+                "slug": "i13",
+                "name": "HS i13",
+                "streamId": "s28"
+            }
+        ]
+    }
+}
