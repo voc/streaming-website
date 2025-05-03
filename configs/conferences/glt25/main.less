@@ -1,0 +1,57 @@
+@import "../../../assets/css/_structure.less";
+
+@orange: #8b6d48;
+@light: rgba(168,211,151,0.2);
+@medium: #ff0000;
+@dark: #455b40;
+@bright: #dcedd5;
+
+@link-color:            @dark;
+@panel-primary-border:  @dark;
+
+@panel-bg: white;
+@panel-default-heading-bg: @light;
+@panel-default-text:       @dark;
+
+@text-color: white;
+body {
+	background-image: url(bg-plain.svg), linear-gradient(to bottom right, #93bf88, #627f5b);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1 { color: white; }
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(steirertux.png);
+	background-size: contain;
+}
+
+.tab-content > .active {
+    background: white;
+}
+
+.glt25 {
+    background-image: url(steirertux.png);
+	background-repeat: no-repeat;
+	background-size: 194px 240px;
+
+	position: fixed;
+	left: 10px;
+	bottom: 40px;
+
+	width: 194px;
+	height: 240px;
+
+	opacity: 0.4;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
