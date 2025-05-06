@@ -121,7 +121,6 @@ $CONFIG['OVERVIEW'] = array(
 );
 
 
-
 /**
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
