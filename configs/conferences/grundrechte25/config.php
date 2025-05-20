@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2024-05-22 10:45"),
+	'STARTS_AT' => strtotime("2025-05-21 10:45"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2024-05-22 12:45"),
+	'ENDS_AT' => strtotime("2025-05-21 12:45"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'Veröffentlichung des Grundrechte-Reports 2024 – Zur Lage der Bürger- und Menschenrechte in Deutschland',
+	'TITLE' => 'Veröffentlichung des Grundrechte-Reports 2025 – Zur Lage der Bürger- und Menschenrechte in Deutschland',
 
 	/**
 	 * Veranstalter
@@ -120,7 +120,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'grundrechte24',
+			'grundrechte25',
 		),
 	),
 );
@@ -135,18 +135,18 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'grundrechte24' => array(
+	'grundrechte25' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Veröffentlichung des Grundrechte-Reports 2024',
+		'DISPLAY' => 'Veröffentlichung des Grundrechte-Reports 2025',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
 		 * Event-Case in welchem Raum aufgebaut wird und wird üblicherweise von
 		 * s1 bis s5 durchnummeriert.
 		 */
-		'STREAM' => 'grundrechte24',
+		'STREAM' => 'grundrechte25',
 
 		/**
 		 * Stream-Vorschaubildchen auf der Übersichtsseite anzeigen
@@ -165,7 +165,7 @@ $CONFIG['ROOMS'] = array(
 		'TRANSLATION' => false,
 
 		/**
-		 * SD-Video-Stream (1024×576) verfügbar
+		 * SD-Video-Stream (1025×576) verfügbar
 		 *
 		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein SD-Video
 		 * angeboten. Wird auch HD_VIDEO auf false gesetzt oder auskommentiert ist, wird
@@ -189,7 +189,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 
 		/**
-		 * Slide-Only-Stream (1024×576) verfügbar
+		 * Slide-Only-Stream (1025×576) verfügbar
 		 *
 		 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist ẃird kein Slide-Only-
 		 * Stream angeboten. Für diesen Raum wird dann keim Slides-Tab angeboten.
