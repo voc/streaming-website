@@ -47,7 +47,7 @@ $CONFIG['ROOMS'] = array(
 $CONFIG['EMBED'] = true;
 
 $CONFIG['SCHEDULE'] = array(
-	'URL' => 'https://pretalx.c3voc.de/lgm25-upstream/schedule/export/schedule.xml',
+	'URL' => 'https://pretalx.c3voc.de/lgm25-upstream-2025/schedule/export/schedule.xml',
 	'SCALE' => 7,
 	'SIMULATE_OFFSET' => 0,
 );
