@@ -6,7 +6,7 @@ $CONFIG['CONFERENCE'] = array(
     'TITLE' => 'Libre Graphics Meeting 2025',
     'AUTHOR' => 'Libre Graphics Meeting',
     'FOOTER_HTML' => '
-      by <a href="https://https://libregraphicsmeeting.org/2025/">Libre Graphics Meeting</a>,
+      by <a href="https://libregraphicsmeeting.org/2025/">Libre Graphics Meeting</a>,
         <a href="https://chaoswest.tv">Chaos-West TV</a> &amp;
         <a href="https://c3voc.de">C3VOC</a>
       ',
