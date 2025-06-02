@@ -34,7 +34,7 @@
         "slug": "dorfkonsum",
         "guid": "9255a389-706b-58ef-b2cb-5d8b41b4b4a1",
         "name": "Dorfkonsum",
-        "streamId": "s1",
+        "streamId": "battlemesh",
         "streamingConfig": {
           "chat": {
             "matrix": {
