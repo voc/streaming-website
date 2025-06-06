@@ -31,9 +31,9 @@
     },
     "rooms": [
       {
-        "slug": "dorfkonsum",
-        "guid": "9255a389-706b-58ef-b2cb-5d8b41b4b4a1",
-        "name": "Dorfkonsum",
+        "slug": "rautenkranz",
+        "guid": "2937345d-e9be-51b9-bdd8-c96a7e3bb550",
+        "name": "Zum Rautenkranz",
         "streamId": "battlemesh",
         "streamingConfig": {
           "chat": {
