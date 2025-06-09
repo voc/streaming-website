@@ -21,7 +21,7 @@ open("background.json", "w").write(json.dumps(new))
 
 new['enableBackground'] = False
 new['enableGrain'] = False
-new['width'] = new['squareSize'] * 28
+new['width'] = new['squareSize'] * 31
 new['height'] = new['squareSize'] * 8
 
 for k, v in logo.items():
