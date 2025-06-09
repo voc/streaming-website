@@ -76,7 +76,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-    'BANNER_HTML' => '<div class="header_logo"><div class="outer_logo"><div class="top_logo"><img src="../configs/conferences/gpn23/GPN23-Banner.png" /></div></div></div>',
+    'BANNER_HTML' => '<div class="header_logo"><div class="outer_logo"><div class="top_logo"><img src="../configs/conferences/gpn23/logo/foreground.svg" /></div></div></div>',
 
 	/**
 	 * Link zu den Recordings
