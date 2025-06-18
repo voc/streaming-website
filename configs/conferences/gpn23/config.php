@@ -33,7 +33,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-    'TITLE' => '23. Gulaschprogrammiernacht',
+	 'TITLE' => '23. Gulaschprogrammiernacht',
 
 	/**
 	 * Veranstalter
@@ -47,7 +47,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird für den <meta name="description">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-    'DESCRIPTION' => 'Vier Tage lang erwarten euch Hacken, Gulasch, Vorträge, Tschunk, Workshops, Lounge, Mate und Spaß am Gerät.',
+	 'DESCRIPTION' => 'Vier Tage lang erwarten euch Hacken, Gulasch, Vorträge, Tschunk, Workshops, Lounge, Mate und Spaß am Gerät.',
 
 	/**
 	 * Schlüsselwortliste, Kommasepariert
@@ -76,7 +76,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-    'BANNER_HTML' => '<div class="header_logo"><div class="outer_logo"><div class="top_logo"><img src="../configs/conferences/gpn23/logo/foreground.svg" /></div></div></div>',
+	 'BANNER_HTML' => '<div class="header_logo"><div class="outer_logo"><div class="top_logo"><img src="../configs/conferences/gpn23/logo/foreground.svg" /></div></div></div>',
 
 	/**
 	 * Link zu den Recordings
@@ -133,14 +133,14 @@ $CONFIG['OVERVIEW'] = array(
 $CONFIG['ROOMS'] = array(
 	'medientheater' => array(
 		'DISPLAY' => "ZKM Medientheater",
-		'STREAM' => 's1',
+		'STREAM' => 's94',
 		'PREVIEW' => true,
 		'TRANSLATION' => false,
 		'SD_VIDEO' => true,
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-        'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -161,7 +161,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-        'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -182,7 +182,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-        'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
