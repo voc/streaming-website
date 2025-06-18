@@ -1,0 +1,48 @@
+@import "../../../assets/css/_structure.less";
+
+// conference specific styles here
+@fg-color:        #f8f9fa;
+@bg-main:         #001c21;
+@accent-red:      #F06060;
+@accent-orange:   #F3B560;
+@accent-greenblue:#8DBEB2;
+
+
+// often configured values
+//
+@brand-primary:                   @accent-red;
+@text-color:                      @fg-color;
+@body-bg:                         @bg-main;
+
+@link-color:                      @brand-primary;
+@link-hover-color:                darken(@link-color, 5%);
+
+@navbar-default-color:            @accent-red;
+@navbar-default-bg:               @fg-color;
+@navbar-default-link-color:       @link-color;
+@navbar-default-link-hover-color: @link-hover-color;
+
+@panel-bg:                        @fg-color;
+@panel-default-text:              @accent-red;
+@panel-default-heading-bg:        darken(@panel-bg, 5%);
+@panel-default-border:            darken(@panel-default-heading-bg, 5%);
+
+// colors of the schedule ("Fahrplan") widget below the video-player
+//
+//  @schedule-now:       @brand-danger;
+//  @schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+//  @schedule-border:    lighten(@brand-primary, 50%);
+//
+//  @schedule-room:      darken(@brand-primary, 15%);
+//  @schedule-author:    #444;
+//
+//  @schedule-selected-room: lighten(@brand-success, 10%);
+//
+//  @schedule-daychange:    darken(@brand-primary, 20%);
+//  @schedule-daychange-bg: fade(white, 30%);
+//
+//  @schedule-gap:          darken(@brand-primary, 20%);
+//  @schedule-gap-bg:       fade(white, 30%);
+//
+//  @schedule-pause:        white;
+//  @schedule-pause-bg:     lighten(black, 85%);
