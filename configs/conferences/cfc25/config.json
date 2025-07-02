@@ -21,24 +21,21 @@
         }
       },
       "schedule": {
-        "url": "https://pretalx.c3voc.de/chaos-feminist-convention-2025/schedule.xml",
-        "scale": 7
+        "url": "https://pretalx.c3voc.de/chaos-feminist-convention-2025/schedule.xml?lang=de",
+        "scale": 7,
+        "roomfilter": ["Saal"]
       },
       "html": {
-        "banner": "<div class='container'><img src='/configs/conferences/cfc25/logo.png'></div>",
+        "banner": "<div class=\"header_logo\"><div class=\"outer_logo\"><div class=\"top_logo\"><img src=\"/configs/conferences/cfc25/logo.png\" /></div></div></div>",
         "footer": "<a href=\"https://events.haecksen.org/cfc25/\">Chaos Feminist Convention</a> by <a href=\"https://haecksen.org\">Haecksen</a> | Streaming by <a href=\"https://c3voc.de\">C3VOC</a>"
       }
     },
     "rooms": [
       {
-        "slug": "hall",
+        "slug": "saal",
         "guid": "cb623eda-8cb9-5732-8671-fc14eab614df",
-        "name": "Hall",
-        "streamId": "cfc25",
-        "streamingConfig": {
-          "chat": {
-          }
-        }
+        "name": "Saal",
+        "streamId": "cfc25"
       }
     ]
   }
