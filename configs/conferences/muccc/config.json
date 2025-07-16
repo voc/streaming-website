@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "muCCC",
+    "acronym": "muccc",
+    "description": "",
+    "keywords": [],
+    "organizer": "muCCC e.V.",
+    "streamingConfig": {
+      "features": {
+        "embed": false,
+        "relive": false,
+        "releases": true,
+        "social": {
+          "hashtag": "#muccc #hackfriday",
+          "mastodon": true
+        }
+      },
+      "html": {
+        "footer": "by <a href=\"https://muc.ccc.de\">Chaos Computer Club München e.V.</a> &amp; <a href=\"https://c3voc.de\">C3VOC</a>"
+      }
+    },
+    "rooms": [
+      {
+        "slug": "hauptraum",
+        "name": "Hack!Friday",
+        "streamId": "muc1"
+      }
+    ]
+  }
+}
