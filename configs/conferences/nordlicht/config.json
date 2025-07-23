@@ -9,6 +9,9 @@
     "streamingConfig": {
       "html": {
         "footer": "by <a href='https://nordlicht.demoparty.info'>Nordlicht Demoparty</a>, streaming by <a href='https://c3voc.de'>C3VOC</a>"
+      },
+      "features": {
+        "releases": false
       }
     },
     "rooms": [
