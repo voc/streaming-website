@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "Nordlicht Demoparty 2025",
+    "organizer": "Nordlicht Organizers",
+    "start": "2025-07-25T14:00:00+02:00",
+    "end": "2025-07-27T12:00:00+02:00",
+    "title": "Nordlicht",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='https://nordlicht.demoparty.info'>Nordlicht Demoparty</a>, streaming by <a href='https://c3voc.de'>C3VOC</a>",
+      },
+    },
+    "rooms": [
+      {
+        "name": "Main Hall",
+        "slug": "nordlicht",
+        "streamId": "nordlicht"
+      }
+    ]
+  }
+}
