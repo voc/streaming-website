@@ -8,8 +8,8 @@
     "title": "Nordlicht",
     "streamingConfig": {
       "html": {
-        "footer": "by <a href='https://nordlicht.demoparty.info'>Nordlicht Demoparty</a>, streaming by <a href='https://c3voc.de'>C3VOC</a>",
-      },
+        "footer": "by <a href='https://nordlicht.demoparty.info'>Nordlicht Demoparty</a>, streaming by <a href='https://c3voc.de'>C3VOC</a>"
+      }
     },
     "rooms": [
       {
