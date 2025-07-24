@@ -23,7 +23,7 @@ $CONFIG['OVERVIEW'] = array(
 
 $CONFIG['ROOMS'] = array(
   'stage1' => array(
-    'DISPLAY' => 'Stage 1 (EG)',
+    'DISPLAY' => 'Bühne 1 (EG)',
     'STREAM' => 'cwtv',
     'PREVIEW' => true,
     'TRANSLATION' => false,
@@ -35,7 +35,7 @@ $CONFIG['ROOMS'] = array(
     'AUDIO' => true,
     'MUSIC' => false,
     'SCHEDULE' => true,
-    'SCHEDULE_NAME' => 'Stage 1 (EG)',
+    'SCHEDULE_NAME' => 'Bühne 1 (EG)',
     'FEEDBACK' => false,
     'SUBTITLES' => false,
     'EMBED' => true,
