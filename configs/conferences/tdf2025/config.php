@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 $CONFIG['OVERVIEW'] = array(
   'GROUPS' => array(
     'Lecture Rooms' => array(
-      'main',
+      'stage1',
     ),
   ),
 );
