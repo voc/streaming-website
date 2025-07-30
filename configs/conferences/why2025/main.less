@@ -17,7 +17,7 @@
 @dark: @color-blue;
 @bright: @color-yellow;
 
-@link-color:            @dark;
+@link-color:            @color-pink;
 @panel-primary-border:  @dark;
 
 @panel-bg: white;
@@ -25,6 +25,15 @@
 @panel-default-text:       @color-yellow;
 
 @text-color: white;
+
+/* Beon */
+@font-face {
+    font-family: 'beon';
+    src: url('/configs/conferences/why2025/ttf/beon.regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-image: url(4k_starry_background_crop.svg), linear-gradient(to bottom right, #0a0613, #5f35b4);
     background-size: cover;
@@ -39,10 +48,146 @@ h1 { color: white; }
 }
 
 nav .navbar-brand .icon {
-    background-image: url(WHY2025_logo_black_300.png);
+    background-image: url(logos/WHY2025_logo_black_300.png);
     background-size: contain;
 }
 
 .tab-content > .active {
     background: white;
+}
+
+// Header mixin translation
+.header-mixin() {
+  font-family: 'beon', sans-serif;
+  position: relative;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 1px @color-yellow;
+  text-shadow:
+    0 0 10px fade(@color-yellow, 80%),
+    0 0 20px fade(@color-yellow, 50%);
+}
+
+// Target the h2 elements directly
+.group h2,
+.recordings h2 {
+  // Apply the outer border styles to a ::before pseudo-element
+  position: relative;
+  margin: 2.35em 2em;
+  padding: 8px;
+  border: 4px solid @color-lightblue;
+  border-radius: 30px;
+  box-shadow: 0 0 20px @color-lightblue;
+
+  // Apply the inner container styles
+  > span {
+    display: block;
+    position: relative;
+    border: 4px solid @color-pink;
+    border-radius: 18px;
+    padding: 0.5em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 0 20px @color-pink, 0 0 20px @color-pink;
+    backdrop-filter: blur(30px);
+
+    // Apply the header text styles
+    .header-mixin();
+    font-size: 5em;
+    color: @color-yellow;
+  }
+}
+
+// Header styling
+.outer_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.top_logo {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+}
+
+.top_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// Media Queries for responsive font sizes
+@media (max-width: 575.98px) {
+  .group h2,
+  .recordings h2 {
+    margin: 1em 0.8em;
+    > span {
+      font-size: 1.75em;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .group h2 > span,
+  .recordings h2 > span {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .group h2 > span,
+  .recordings h2 > span {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .group h2 > span,
+  .recordings h2 > span {
+    font-size: 3.75em;
+  }
+}
+
+// Panel styling
+.panel-body {
+  color: @color-lightblue;
+}
+
+.panel-body a,
+.panel-body a:link {
+  color: @color-pink;
+  font-weight: bold;
+}
+
+.panel-body a:hover,
+.panel-body a:focus {
+  color: lighten(@color-pink, 15%);
+}
+
+a:hover .panel,
+a:focus .panel {
+  box-shadow: 0 0 10px fade(@color-pink, 80%), 0 0 20px fade(@color-pink, 50%);
+  transition: box-shadow .15s ease-in-out;
+}
+
+.panel {
+  background-color: fade(#000, 87%);
+  border-radius: 10px;
+  border-color: transparent;
+}
+
+.panel-default > .panel-heading {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.panel-title {
+  .header-mixin();
+  font-size: 2em;
+}
+
+.scrollable {
+  overflow-y: auto;
 }

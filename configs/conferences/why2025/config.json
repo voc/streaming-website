@@ -55,6 +55,7 @@
                 ]
             },
             "html": {
+                "banner": "<div class=\"header_logo\"><div class=\"outer_logo\"><div class=\"top_logo\"><img src=\"../configs/conferences/why2025/logos/WHY2025_logo.png\" /></div></div></div>",
                 "footer": "by <a href=\"https://c3voc.de\">C3VOC</a> &amp; <a href=\"https://wiki.why2025.org/Team:Productiehuis\">Team Productiehuis</a>"
             }
         },
