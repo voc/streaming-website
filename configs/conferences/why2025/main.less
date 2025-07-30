@@ -53,19 +53,19 @@ nav .navbar-brand .icon {
 }
 
 .tab-content > .active {
-    background: white;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 // Header mixin translation
-.header-mixin() {
+.header-mixin(@stroke-color: @color-yellow) {
   font-family: 'beon', sans-serif;
   position: relative;
   font-weight: 500;
   color: transparent;
-  -webkit-text-stroke: 1px @color-yellow;
+  -webkit-text-stroke: 1px @stroke-color;
   text-shadow:
-    0 0 10px fade(@color-yellow, 80%),
-    0 0 20px fade(@color-yellow, 50%);
+    0 0 10px fade(@stroke-color, 80%),
+    0 0 20px fade(@stroke-color, 50%);
 }
 
 // Target the h2 elements directly
@@ -118,11 +118,16 @@ nav .navbar-brand .icon {
 
 // Media Queries for responsive font sizes
 @media (max-width: 575.98px) {
+  .top_logo {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
   .group h2,
   .recordings h2 {
     margin: 1em 0.8em;
     > span {
-      font-size: 1.75em;
+      font-size: 1.4em;
     }
   }
 }
@@ -190,4 +195,158 @@ a:focus .panel {
 
 .scrollable {
   overflow-y: auto;
+}
+
+//
+// Schedule
+//
+@schedule-border:        fade(@color-lightblue, 50%);
+@schedule-selected-room: fade(@color-pink, 25%);
+@schedule-now-bg:        @color-yellow;
+@schedule-now:           @color-blue;
+@schedule-room:          @color-yellow;
+@schedule-author:        @color-lightblue;
+@schedule-pause-bg:      fade(#000, 50%);
+@schedule-pause:         white;
+@schedule-gap-bg:        transparent;
+@schedule-daychange-bg:  transparent;
+
+#schedule {
+   background: rgba(0, 0, 0, 0.6);
+}
+
+.schedule .room .block.event {
+  background-color: fade(@color-blue, 50%);
+  color: white;
+
+  &:hover {
+    background-color: fade(@color-pink, 50%);
+    border-color: @color-pink;
+  }
+}
+
+#schedule-event-detail-popover {
+  background-color: fade(#000, 95%) !important;
+  border-radius: 10px;
+  border: 2px solid @color-lightblue !important;
+  box-shadow: 0 0 20px @color-lightblue;
+  padding: 15px;
+
+  #modal-header {
+    background-color: transparent !important;
+    border: none !important;
+
+    .close {
+        color: @color-pink !important;
+        opacity: 0.9;
+        text-shadow: 0 0 5px @color-red;
+
+        &:hover {
+            opacity: 1;
+            color: lighten(@color-pink, 10%) !important;
+        }
+    }
+  }
+
+  #modal-title,
+  #modal-title * {
+    .header-mixin();
+    font-size: 2em;
+    margin-top: 0;
+  }
+
+  #modal-body {
+    color: @color-lightblue;
+
+    a, a:link, a:visited {
+        color: @color-pink;
+        font-weight: bold;
+    }
+    a:hover, a:focus {
+        color: lighten(@color-pink, 15%);
+    }
+  }
+
+  hr {
+    border-top: 1px solid fade(@color-lightblue, 50%);
+    border-bottom: 0;
+  }
+}
+
+//
+// Navigation Tabs
+//
+
+.nav-tabs {
+    border-bottom: 0;
+
+    > li {
+        margin-bottom: -1px;
+
+        > a {
+            border-radius: 10px 10px 0 0;
+            border: 1px solid @color-blue;
+            margin-right: 5px;
+            background-color: fade(@color-blue, 40%);
+            font-size: 1.5em;
+            .header-mixin(@color-lightblue);
+            -webkit-text-stroke-width: 0.5px;
+
+            &:hover {
+                border-color: @color-pink;
+                background-color: fade(@color-pink, 40%);
+                .header-mixin(white);
+            }
+        }
+
+        &.active > a,
+        &.active > a:hover,
+        &.active > a:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid @color-lightblue;
+            border-bottom-color: transparent;
+            .header-mixin(@color-yellow);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.6);
+                border-color: @color-lightblue;
+                border-bottom-color: transparent;
+                .header-mixin(@color-yellow);
+            }
+        }
+    }
+
+    &.nav-justified {
+        > li > a,
+        > li > a:hover,
+        > li > a:focus {
+            border: 1px solid @color-blue;
+            border-radius: 10px 10px 0 0;
+        }
+
+        > li > a:hover {
+            border-color: @color-pink;
+        }
+
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus {
+            border-color: @color-lightblue;
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+//
+// Override _room.less styles for tab content
+//
+body.room {
+    // This media query matches the one in _room.less
+    @media (min-width: 768px) { // Corresponds to @screen-sm-min
+        .tab-content {
+            border: 1px solid @color-lightblue;
+            border-top: 0;
+            border-radius: 0 0 10px 10px;
+        }
+    }
 }
