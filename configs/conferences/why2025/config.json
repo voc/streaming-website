@@ -1,0 +1,88 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "title": "WHY 2025",
+        "acronym": "why2025",
+        "organizer": "Stichting IFCAT",
+        "description": "What Hackers Yearn",
+        "keywords": [
+            "WHY",
+            "2025",
+            "camp"
+        ],
+        "start": "2025-08-07T16:00:00+02:00",
+        "end": "2025-08-12T17:30:00+02:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "social": {
+                    "hashtag": "#why2025",
+                    "mastodon": true
+                }
+            },
+            "schedule": {
+                "url": "https://program.why2025.org/why2025/schedule/export/schedule.xml",
+                "roomfilter": [
+                    "Andromeda",
+                    "Brachium",
+                    "Cassiopeia",
+                    "Delphinus"
+                ],
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Stages",
+                        "items": [
+                            {
+                                "slug": "andromeda"
+                            },
+                            {
+                                "slug": "brachium"
+                            },
+                            {
+                                "slug": "cassiopeia"
+                            },
+                            {
+                                "slug": "delphinus"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "footer": "by <a href=\"https://c3voc.de\">C3VOC</a> &amp; <a href=\"https://wiki.why2025.org/Team:Productiehuis\">Team Productiehuis</a>"
+            }
+        },
+        "rooms": [
+            {
+                "guid": "d046f302-efcc-5cea-b2e4-e4f4f8a9c6ba",
+                "slug": "andromeda",
+                "name": "Andromeda",
+                "streamId": "s1"
+            },
+            {
+                "guid": "25593d36-9931-5732-ad11-30590e097400",
+                "slug": "brachium",
+                "name": "Brachium",
+                "streamId": "s2"
+            },
+            {
+                "guid": "297e6ee2-da82-5d43-9b79-d4b0493b8a3a",
+                "slug": "cassiopeia",
+                "name": "Cassiopeia",
+                "streamId": "s3"
+            },
+            {
+                "guid": "fec936b1-677b-5651-ab21-30727f668d08",
+                "slug": "delphinus",
+                "name": "Delphinus",
+                "streamId": "s4"
+            }
+        ]
+    }
+}
