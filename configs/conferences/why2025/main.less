@@ -320,6 +320,7 @@ a:focus .panel {
         > li > a:hover,
         > li > a:focus {
             border: 1px solid @color-blue;
+            border-bottom-color: @color-lightblue;
             border-radius: 10px 10px 0 0;
         }
 
@@ -348,4 +349,89 @@ body.room {
             border-radius: 0 0 10px 10px;
         }
     }
+}
+
+//
+// Embed Form Styling
+//
+.embed-form .embed-form {
+    border-radius: 10px;
+    padding: 20px;
+    
+    // Clearfix to contain floated children
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+
+    h3 {
+        .header-mixin(@color-lightblue);
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        color: @color-lightblue;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .form-control {
+        background-color: fade(@color-blue, 30%);
+        border: 1px solid @color-lightblue;
+        color: white;
+        border-radius: 5px;
+
+        &:focus {
+            border-color: @color-pink;
+            box-shadow: 0 0 5px fade(@color-pink, 50%);
+            background-color: fade(@color-blue, 40%);
+        }
+
+        &[readonly] {
+            background-color: fade(@color-blue, 20%);
+            color: @color-yellow;
+        }
+    }
+
+    .checkbox {
+        margin-top: 10px;
+
+        label {
+            color: @color-lightblue;
+            cursor: pointer;
+
+            input[type="checkbox"] {
+                margin-right: 8px;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+//
+// Tab Panel Styling
+//
+.tab-pane {
+    border-radius: 0 0 10px 10px;
+}
+
+//
+// Tab Panel Headers
+//
+#embed h3,
+#formats h3,
+.directlinks h3 {
+    .header-mixin(@color-yellow);
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
