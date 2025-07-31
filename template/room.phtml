@@ -8,7 +8,8 @@
 	<ul class="nav nav-player nav-tabs nav-justified">
 		<? foreach($room->getTabs() as $tab): ?>
 			<li
-				<? if($tab->getTab() == $stream->getTab()): ?>class="active"<? endif ?>
+			    <? // The video tab can also be hls, so we need to check for that too ?>
+				<? if($tab->getTab() == $stream->getTab() || ($tab->getTab() == 'dash' && $stream->getTab() == 'hls')): ?>class="active"<? endif ?>
 			>
 				<a href="<?=h($tab->getLink())?>">
 					<?=h($tab->getDisplay())?>
