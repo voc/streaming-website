@@ -436,6 +436,162 @@ body.room {
 }
 
 //
+// Direct Links Button Styling
+//
+.directlinks {
+    .btn-group {
+        margin-bottom: 15px;
+        box-shadow: 0 0 10px fade(@color-lightblue, 30%);
+        border-radius: 8px;
+        overflow: hidden;
+
+        .btn {
+            border: 1px solid @color-lightblue;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            height: 38px;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // Disabled primary buttons (labels/formats)
+            &.btn-primary[disabled] {
+                background: linear-gradient(135deg, 
+                    fade(@color-blue, 80%) 0%, 
+                    fade(@color-purple, 70%) 100%);
+                color: @color-yellow;
+                border-color: @color-lightblue;
+                .header-mixin(@color-yellow);
+                -webkit-text-stroke-width: 0.3px;
+                font-size: 0.9em;
+                box-shadow: inset 0 0 10px fade(@color-blue, 50%);
+            }
+
+            // Active default buttons (clickable links)
+            &.btn-default {
+                background: linear-gradient(135deg, 
+                    fade(@color-blue, 40%) 0%, 
+                    fade(#000, 80%) 100%);
+                color: @color-lightblue;
+                border-color: @color-lightblue;
+                backdrop-filter: blur(10px);
+
+                &:hover,
+                &:focus {
+                    background: linear-gradient(135deg, 
+                        fade(@color-pink, 60%) 0%, 
+                        fade(@color-purple, 70%) 100%);
+                    color: white;
+                    border-color: @color-pink;
+                    box-shadow: 
+                        0 0 15px fade(@color-pink, 60%),
+                        inset 0 0 10px fade(@color-pink, 30%);
+                    text-shadow: 0 0 8px @color-pink;
+                }
+
+                &:active {
+                    box-shadow: 
+                        0 0 10px fade(@color-pink, 40%),
+                        inset 0 0 15px fade(@color-pink, 50%);
+                }
+            }
+
+            // Icon styling within buttons
+            .fa {
+                margin-right: 6px;
+                font-size: 1.1em;
+                filter: drop-shadow(0 0 3px currentColor);
+                
+                // Specific icon colors for better visual distinction
+                &.fa-video-camera {
+                    color: @color-red;
+                }
+                
+                &.fa-volume-up {
+                    color: @color-yellow;
+                }
+                
+                &.fa-picture-o {
+                    color: @color-lightblue;
+                }
+                
+                &.fa-music {
+                    color: @color-pink;
+                }
+                
+                &.fa-flag-o,
+                &.fa-flag {
+                    color: @color-yellow;
+                }
+                
+                &.fa-flask {
+                    color: @color-purple;
+                }
+            }
+        }
+
+        // Remove default Bootstrap button borders between grouped buttons
+        .btn + .btn {
+            margin-left: 0;
+        }
+
+        // First button (disabled) rounded left
+        .btn:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        // Last button rounded right  
+        .btn:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        // Middle buttons (if any) have no border radius
+        .btn:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+    }
+
+    // Row spacing
+    .row {
+        margin-bottom: 20px;
+    }
+}
+
+// Responsive adjustments for directlinks buttons
+@media (max-width: 575.98px) {
+    .directlinks {
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+
+            .btn {
+                border-radius: 0 !important;
+                margin-bottom: -1px;
+                height: 42px;
+
+                &:first-child {
+                    border-top-left-radius: 8px !important;
+                    border-top-right-radius: 8px !important;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: 8px !important;
+                    border-bottom-right-radius: 8px !important;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+//
 // Page Headline Styling
 //
 .headline {
