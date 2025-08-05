@@ -199,36 +199,59 @@ a:focus .panel {
 //
 // Schedule
 //
-@schedule-border:        fade(@color-lightblue, 50%);
-@schedule-selected-room: fade(@color-pink, 25%);
+@schedule-border:        fade(@color-lightblue, 70%);
+@schedule-selected-room: fade(@color-pink, 20%);
 @schedule-now-bg:        @color-yellow;
 @schedule-now:           @color-blue;
 @schedule-room:          @color-yellow;
 @schedule-author:        @color-lightblue;
-@schedule-pause-bg:      fade(#000, 50%);
+@schedule-pause-bg:      fade(#000, 75%);
 @schedule-pause:         white;
-@schedule-gap-bg:        transparent;
-@schedule-daychange-bg:  transparent;
+@schedule-gap-bg:        fade(#000, 30%);
+@schedule-daychange-bg:  fade(#000, 40%);
 
 #schedule {
-   background: rgba(0, 0, 0, 0.6);
+   background: rgba(0, 0, 0, 0.85);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .schedule .room .block.event {
-  background-color: fade(@color-blue, 50%);
+  background-color: fade(@color-blue, 80%);
   color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 
   &:hover {
-    background-color: fade(@color-pink, 50%);
-    border-color: @color-pink;
+    background-color: fade(@color-purple, 80%);
+    border-color: @color-purple;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 15px fade(@color-purple, 40%);
+  }
+}
+
+// Swap h3 and h4 colors in schedule (excluding pause blocks)
+body .schedule .block:not(.pause):not(.optout) {
+  h3 {
+    color: @color-yellow;
+  }
+  
+  h4 {
+    color: @color-pink;
+  }
+}
+
+// Pause blocks keep pink h3
+body .schedule .block.pause,
+body .schedule .block.optout {
+  h3 {
+    color: @color-pink;
   }
 }
 
 #schedule-event-detail-popover {
-  background-color: fade(#000, 95%) !important;
+  background-color: fade(#000, 98%) !important;
   border-radius: 10px;
   border: 2px solid @color-lightblue !important;
-  box-shadow: 0 0 20px @color-lightblue;
+  box-shadow: 0 0 20px @color-lightblue, 0 4px 12px rgba(0, 0, 0, 0.8);
   padding: 15px;
 
   #modal-header {
