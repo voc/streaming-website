@@ -2,7 +2,7 @@
     "$schema": "../../../docs/config-schema.json",
     "conference": {
         "title": "WHY 2025",
-        "acronym": "why2025",
+        "acronym": "WHY2025",
         "organizer": "Stichting IFCAT",
         "description": "What Hackers Yearn",
         "keywords": [
