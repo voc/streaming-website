@@ -28,7 +28,8 @@
                     "Andromeda",
                     "Brachium",
                     "Cassiopeia",
-                    "Delphinus"
+                    "Delphinus",
+                    "Party Stage"
                 ],
                 "scale": 7,
                 "simulate_offset": 0
@@ -49,6 +50,14 @@
                             },
                             {
                                 "slug": "delphinus"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Party Stage",
+                        "items": [
+                            {
+                                "slug": "party-stage"
                             }
                         ]
                     }
@@ -83,6 +92,12 @@
                 "slug": "delphinus",
                 "name": "Delphinus",
                 "streamId": "s4"
+            },
+            {
+                "guid": "561b70ba-f1d5-5f92-bcde-7f056905df90",
+                "slug": "party-stage",
+                "name": "Party Stage",
+                "streamId": "s94"
             }
         ]
     }
