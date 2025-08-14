@@ -62,7 +62,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
 	'FOOTER_HTML' => '
-		by <a href="http://froscon.de/">FrOSCon</a> &amp;
+		by <a href="https://froscon.org/">FrOSCon</a> &amp;
 		<a href="https://c3voc.de">C3VOC</a>
 	',
 
@@ -134,7 +134,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-    'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -155,7 +155,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-    'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -176,7 +176,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-    'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -197,7 +197,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-    'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -218,7 +218,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-    'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -239,7 +239,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-    'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -260,7 +260,7 @@ $CONFIG['ROOMS'] = array(
 		'HD_VIDEO' => true,
 		'DASH' => true,
 		'H264_ONLY' => true,
-    'HLS' => true,
+		'HLS' => true,
 		'SLIDES' => false,
 		'AUDIO' => false,
 		'MUSIC' => false,
@@ -308,7 +308,7 @@ $CONFIG['SCHEDULE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
 	 */
-  'ROOMFILTER' => array('HS 1/2', 'HS 3', 'HS 4', 'HS 5', 'HS 6', 'HS 7', 'HS 8'),
+	'ROOMFILTER' => array('HS 1/2', 'HS 3', 'HS 4', 'HS 5', 'HS 6', 'HS 7', 'HS 8'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel

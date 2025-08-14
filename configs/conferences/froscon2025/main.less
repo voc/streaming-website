@@ -1,44 +1,52 @@
 @import "../../../assets/css/_structure.less";
 
-@blue: #493fa0;
-@greyish: #b5b5b5;
+@blue-bg-light: #313495;
+@blue-bg-dark: #202257;
+@green-light: #daffc7;
+@green-lightest: #effafb;
 
-@link-color:               @blue;
-@panel-primary-border:     @blue;
+@link-color:                @green-light;
+@link-color-focus:          @green-lightest;
+@panel-primary-border:      @green-light;
 
-@panel-default-heading-bg: @greyish;
-@panel-default-text:       @blue;
-@panel-bg:                 @greyish;
-@panel-default-border:     @blue;
+@panel-default-heading-bg:  @blue-bg-dark;
+@panel-default-text:        @green-light;
+@panel-bg:                  @blue-bg-dark;
+@panel-default-border:      @green-light;
 
-@text-color:               @blue;
+@text-color:                @green-lightest;
+@text-color-highlight:      @green-light;
+@text-color-dark:           black;
+@text-shadow-color:         @blue-bg-dark;
 
 @font-face {
     font-family: 'Exo';
     font-style: normal;
     font-weight: 400;
-    src: url('/configs/conferences/froscon/Exo.ttf') format('truetype');
+    src: url('/configs/conferences/froscon2025/Exo.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Open-Sans';
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('/configs/conferences/froscon/OpenSans-Regular.ttf') format('truetype');
+    src: url('/configs/conferences/froscon2025/OpenSans-Regular.ttf') format('truetype');
 }
 
 h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
     line-height: 1.1;
-    color: @blue;
+    color: @text-color;
+    text-shadow: @text-shadow-color 0 0 3px;
 }
 
 
 h1, h2, .h1, .h2  {
-    font-family: 'Exo';
+    font-family: Exo, sans-serif;
     font-size: 64px;
     font-weight: 400;
     line-height: 1.1;
-    color: #fff;
+    color: @text-color-highlight;
+    text-shadow: @text-shadow-color 0 0 5px;
 }
 
 body.overview .panel-body {
@@ -49,21 +57,54 @@ body.overview .panel-body {
 	font-weight: bold;
 }
 
-nav .navbar-brand .icon {
-	background-image: url(froscon.svg);
-	background-size: contain;
-    width: 150px;
+a {
+    color: @link-color;
 }
 
-.navbar-default {
-    font-color: @blue;
+a:hover, a:focus {
+    color: @link-color-focus;
+}
+
+nav.navbar .navbar-brand {
+    line-height: 18px;
+    color: @text-color-highlight;
+}
+
+nav.navbar .navbar-brand a {
+    color: @link-color;
+}
+
+nav.navbar.navbar-default .navbar-brand:hover, nav.navbar.navbar-default .navbar-brand:focus {
+    color: @link-color-focus;
+}
+
+nav.navbar .button-wrapper > .navbar-time {
+    line-height: 18px;
+}
+
+nav.navbar .navbar-brand .icon {
+	background-image: url(froscon20.svg);
+	background-size: contain;
+    width: 180px;
+    margin-top: -5px;
+}
+
+nav.navbar.navbar-default {
+    color: @text-color-highlight;
     background: @panel-default-heading-bg;
 }
 
+.nav-tabs > li.active > a {
+    color: @text-color-dark;
+}
+
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+    color: @text-color-dark;
+}
+
 .froscon {
-	background-image: url(cloudsandbirbs.svg);
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
     background-position: bottom center;
     background-attachment: fixed;
 
@@ -79,23 +120,27 @@ nav .navbar-brand .icon {
 	}
 }
 
-body.room .tab-content {
-    background-color: @greyish;
-}
+//body.room .tab-content {
+//    background-color: @strahlend;
+//}
 
 footer {
     position: unset;
-    font-color: @blue;
+    color: @text-color-highlight;
+    text-shadow: @text-shadow-color 0 0 3px;
     background: none;
 }
 
-body {
-    font-family: 'Open-Sans';
-    //background-image: url(background.svg);
-    background-image: linear-gradient(180deg, #493fa0, #80cdeb);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: cover; 
-    background-attachment: fixed;
+footer a {
+    color: @link-color;
+}
 
+footer a:hover, footer a:focus {
+    color: @link-color-focus;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(202deg, @blue-bg-light 12%,@blue-bg-dark 88%) fixed, @blue-bg-light;
 }
