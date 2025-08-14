@@ -66,6 +66,8 @@ a:hover, a:focus {
 }
 
 nav.navbar .navbar-brand {
+    height: 51px;
+    padding-left: 20px;
     line-height: 18px;
     color: @text-color-highlight;
 }
@@ -92,6 +94,34 @@ nav.navbar .navbar-brand .icon {
 nav.navbar.navbar-default {
     color: @text-color-highlight;
     background: @panel-default-heading-bg;
+    border-bottom-color: #04a4e8;
+    border-bottom-width: 3px;
+}
+
+@media(min-width: 1780px) {
+    nav.navbar.navbar-default {
+        margin: 0 300px;
+    }
+
+    nav.navbar.navbar-default:before {
+        position: absolute;
+        top: 19px;
+        left: -300px;
+        width: 300px;
+        height: 64px;
+        content: " ";
+        background: url(styleelem-left.svg) left top no-repeat;
+    }
+
+    nav.navbar.navbar-default:after {
+        position: absolute;
+        top: 19px;
+        right: -300px;
+        width: 300px;
+        height: 64px;
+        content: " ";
+        background: url(styleelem-right.svg) right top no-repeat;
+    }
 }
 
 .nav-tabs > li.active > a {
@@ -142,5 +172,5 @@ footer a:hover, footer a:focus {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    background: linear-gradient(202deg, @blue-bg-light 12%,@blue-bg-dark 88%) fixed, @blue-bg-light;
+    background: 0 51px linear-gradient(202deg, @blue-bg-light 12%,@blue-bg-dark 88%) fixed no-repeat, @blue-bg-dark;
 }
