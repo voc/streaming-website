@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	//'RELEASES' => 'https://youtube.com/...',
+	'RELEASES' => 'https://media.ccc.de/c/froscon2025',
 
 	/**
 	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne
