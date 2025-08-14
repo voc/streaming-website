@@ -1,0 +1,134 @@
+@import "../../../assets/css/_structure.less";
+
+@primary: color('#fec931');
+@secondary: color('#b53feb');
+@text: color('#111');
+@bg: darken(@primary, 10%);
+@transwhite: rgba(1, 1, 1, 0);
+
+body, footer {
+    color: @text;
+    background: @primary;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.navbar {
+	background: @transwhite !important;
+	border-color: @transwhite !important;
+}
+
+.navbar-default .navbar-brand {
+	color: @transwhite !important;
+	.icon {
+		background: url(logo-simplified.svg) no-repeat left/contain !important;
+		width: 200px !important;
+	}
+}
+
+body {
+    background: transparent;
+    background: url(background.jpg) no-repeat bottom center/cover fixed;
+    background-size: cover;
+}
+
+a, footer a {
+    color: @text;
+}
+
+a:hover, a:active, a:focus {
+    color: @secondary;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: @text;
+}
+
+.panel {
+    background-color: #FFF;
+}
+
+.panel-default {
+	border-color: #2C292A;
+	transition-duration: 0.2s;
+}
+.panel-default:hover {
+	border-color: @primary !important;
+}
+
+.tab-content > .tab-pane {
+    background-color: fadeout(@text, 80%);
+}
+
+.nav-tabs > li > a {
+    background-color: fadeout(@text, 20%);
+	color: @bg;
+}
+
+.nav-tabs > li:hover > a {
+	background-color: fadeout(@bg, 20%);
+    color: @text;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active:hover > a {
+    background-color: fadeout(@bg, 20%);
+    color: @text;
+}
+
+.nav-tabs > li:hover > a,
+.nav-tabs > li.active > a {
+    border-color: #311944 !important;
+    border-bottom-color: #2C292A !important;
+}
+
+.nav-tabs.nav-functions > li:hover > a,
+.nav-tabs.nav-functions > li.active > a {
+    border-color: #2C292A !important;
+    border-bottom-color: #020128 !important;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+nav .navbar-brand .icon {
+	background-image: url("../../../assets/img/voctocat.svg") !important;
+}
+
+nav .navbar-time {
+    display: none;
+}
+
+ul.nav-player {
+    display: none;
+}
+
+body.room .player-wrap {
+    border: none;
+}
+
+.container.about {
+    background-color: @primary;
+	color: @text;
+}
+
+body.room .tab-content {
+	border-left: 1px solid #2C292A;
+	border-bottom: 1px solid #2C292A;
+	border-right: 1px solid #2C292A;
+}
+
+.nav-tabs.nav-functions > li > a {
+	transition-duration: 0.2s;
+	border: 1px solid #2C292A;
+}
+
+.nav-tabs.nav-functions > li:hover > a {
+	border-color: @primary !important;
+	border-bottom-color: #2C292A !important;
+}
