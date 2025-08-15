@@ -253,7 +253,7 @@ $CONFIG['ROOMS'] = array(
 	),
 	'HS8' => array(
 		'DISPLAY' => 'HS 8',
-		'STREAM' => 's97',
+		'STREAM' => 's41',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
