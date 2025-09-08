@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "MRMCD 2025",
+    "acronym": "mrmcd2025",
+    "media_slug": "mrmcd2025",
+    "description": "Live streaming from the NixCon 2025",
+    "keywords": ["MRMCD"],
+    "organizer": "MRMCD e.V.",
+    "start": "2025-09-05T09:30:00+02:00",
+    "end": "2025-09-07T17:30:00+02:00",
+    "time_zone_name": "Europe/Berlin",
+    "streamingConfig": {
+      "features": {
+        "relive": true,
+        "embed": true,
+        "feedback": false,
+        "releases": true,
+        "social": {
+          "hashtag": "#nixcon25",
+          "mastodon": true
+        },
+        "chat": {
+          "matrix": {
+            "display": "#nixcon:matrix.org",
+            "url": "https://matrix.to/#/#nixcon:matrix.org"
+          }
+        }
+      },
+      "schedule": {
+        "url": "https://talks.mrmcd.net/2025/schedule/export/schedule.xml",
+        "scale": 7,
+        "index_offset": -1
+      },
+      "html": {
+        "banner": null,
+        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://2025.mrmcd.net/\">MRMCD e.V.</a>\n\t",
+        "not_started": null
+      },
+      "overviewPage": null,
+      "extraFiles": null
+    },
+    "rooms": [
+      {
+        "guid": "8bb4bf55-beed-5b14-b83f-5f53edf3d8de",
+        "name": "C205 - FOIA arena",
+        "slug": "c205",
+        "streamId": "mrmcd1",
+        "streamingConfig": {
+          "display": "C205 - FOIA arena",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      },
+      {
+        "guid": "13fbdc77-cdb1-548b-a49b-df80d85a7108",
+        "name": "C120 - Art. 15 GDPR",
+        "slug": "c120",
+        "streamId": "mrmcd2",
+        "streamingConfig": {
+          "display": "C120 - Art. 15 GDPR",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      },
+      {
+        "guid": "a0c9533a-dd14-588d-ab74-63d33a229fc9",
+        "name": "C110 - Brief enquiry",
+        "slug": "c110",
+        "streamId": "mrmcd3",
+        "streamingConfig": {
+          "display": "C110 - Brief enquiry",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      }
+    ]
+  }
+}
