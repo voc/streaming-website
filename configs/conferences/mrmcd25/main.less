@@ -17,7 +17,7 @@ a {
 
 .navbar {
 	background-color: @background-color;
-	border-color: darken(@background-color, 10%);
+	border-bottom: 5px dashed @text-color !important;
 }
 
 footer {
@@ -39,8 +39,8 @@ h1 {
     font-size: 5rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: black;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    color: @background-color;
+    text-shadow: -1px -1px 0 @text-color, 1px -1px 0 @text-color, -1px 1px 0 @text-color, 1px 1px 0 @text-color;
     z-index: -9;
 }
 
@@ -56,7 +56,8 @@ ul.nav.nav-player.nav-tabs.nav-justified > li.active > a,
 }
 
 ul.nav.nav-player.nav-tabs.nav-justified > li > a,
-.nav-tabs > li > a {
+.nav-tabs > li > a,
+.panel-default > .panel-heading {
 	background-color: rgba(30, 30, 30, 0.2);
 	border: none;
 	backdrop-filter: blur(4px);
@@ -80,6 +81,37 @@ ul.nav.nav-player.nav-tabs.nav-justified > li > a,
 	color: @text-color !important;
 }
 
+.panel-title {
+	text-transform: uppercase;
+	}
+
+.row.recordings h2,
+row.group-live h2 {
+	position: relative;
+	padding-top: 1rem;
+}
+
+.row.recordings h2 span,
+.row.group-live h2 span {
+	position: absolute;
+    left: -1rem;
+    margin-top: -3rem;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @background-color;
+    text-shadow: -1px -1px 0 @text-color, 1px -1px 0 @text-color, -1px 1px 0 @text-color, 1px 1px 0 @text-color;
+    z-index: -9;
+}
+
+h3 {
+	color: @text-color;
+}
+
+.block.pause {
+	background-color: darken(@background-color, 10%) !important;
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: @background-color-dark;
@@ -88,9 +120,13 @@ ul.nav.nav-player.nav-tabs.nav-justified > li > a,
 	a {
 		color: darken(@text-color-dark, 20%);
 	}
+	h1 {
+	    color: @background-color-dark;
+	    text-shadow: -1px -1px 0 @text-color-dark, 1px -1px 0 @text-color-dark, -1px 1px 0 @text-color-dark, 1px 1px 0 @text-color-dark;
+	}
 	.navbar {
 		background-color: @background-color-dark;
-		border-bottom: 5px dashed rgba(217, 217, 217, 1);
+		border-bottom: 5px dashed rgba(217,217,217,1) !important;
 	}
 	.icon {
 		filter: invert(1);
@@ -109,9 +145,80 @@ ul.nav.nav-player.nav-tabs.nav-justified > li > a,
 	.nav-tabs > li > a {
 		background-color: rgba(30, 30, 30, 0.2);
 		color: darken(@text-color-dark, 20%);
+		&:hover {
+			background-color: rgba(100, 100, 100, 0.2);
+			color: @text-color-dark;
+		}
 	}
 	ul.nav.nav-player.nav-tabs.nav-justified > li.active > a,
 	.nav-tabs > li.active > a {
 		color: @text-color-dark;
+		&:hover {
+			background-color: rgba(100, 100, 100, 0.4);
+			color: @text-color-dark;
+			color: none;
+		}
+	}
+	.panel {
+		background-color: lighten(@background-color-dark, 10%);
+		color: @text-color-dark;
+	}
+	.panel-title {
+		color: @text-color-dark;
+	}
+	.row.recordings h2 span,
+	.row.group-live h2 span {
+		  color: @background-color-dark;
+		  text-shadow: -1px -1px 0 @text-color-dark, 1px -1px 0 @text-color-dark, -1px 1px 0 @text-color-dark, 1px 1px 0 @text-color-dark;
+	}
+
+	.block {
+		background-color: lighten(@background-color-dark, 2%) !important;
+		color: @text-color-dark !important;
+		border-color: darken(@text-color-dark, 50%) !important;
+		&.event {
+			background-color: lighten(@background-color-dark, 10%) !important;
+		}
+		&.pause {
+			background-color: lighten(@background-color-dark, 2%) !important;
+			background-image:
+				linear-gradient(
+					45deg,
+					lighten(@background-color-dark, 10%) 25%,
+					transparent 25%,
+					transparent 50%,
+					lighten(@background-color-dark, 10%) 50%,
+					lighten(@background-color-dark, 10%) 75%,
+					transparent 75%,
+					transparent) !important;
+		}
+		&.optout {
+			background-image:
+				linear-gradient(
+					45deg,
+					rgb(50, 0, 0) 25%,
+					transparent 25%,
+					transparent 50%,
+					rgb(50, 0, 0) 50%,
+					rgb(50, 0, 0) 75%,
+					transparent 75%,
+					transparent) !important;
+		}
+		&.daychange {
+			background-color: darken(@background-color-dark, 10%) !important;
+			color: lighten(@text-color-dark, 20%) !important;
+		}
+	}
+
+	h3 {
+		color: darken(@text-color-dark, 5%) !important;
+	}
+
+	h4 {
+		color: rgba(200, 255, 255, 1) !important;
+	}
+
+	h5 {
+		color: darken(@text-color-dark, 8%) !important;
 	}
 }
