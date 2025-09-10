@@ -7,43 +7,59 @@
 @text-color-dark: #eee;
 
 @font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 100 900;
-  font-stretch: normal;
-  src: url("/configs/conferences/mrmcd25/fonts/inter-italic-100-900-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  font-display: swap;
+	font-family: "Inter";
+	font-style: italic;
+	font-weight: 100 900;
+	font-stretch: normal;
+	src: url("/configs/conferences/mrmcd25/fonts/inter-italic-100-900-latin-ext.woff2")
+		format("woff2");
+	unicode-range:
+		U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+		U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+		U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 100 900;
-  font-stretch: normal;
-  src: url("/configs/conferences/mrmcd25/fonts/inter-italic-100-900-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  font-display: swap;
+	font-family: "Inter";
+	font-style: italic;
+	font-weight: 100 900;
+	font-stretch: normal;
+	src: url("/configs/conferences/mrmcd25/fonts/inter-italic-100-900-latin.woff2")
+		format("woff2");
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+		U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-stretch: normal;
-  src: url("/configs/conferences/mrmcd25/fonts/inter-normal-100-900-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  font-display: swap;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 100 900;
+	font-stretch: normal;
+	src: url("/configs/conferences/mrmcd25/fonts/inter-normal-100-900-latin-ext.woff2")
+		format("woff2");
+	unicode-range:
+		U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+		U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+		U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-stretch: normal;
-  src: url("/configs/conferences/mrmcd25/fonts/inter-normal-100-900-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  font-display: swap;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 100 900;
+	font-stretch: normal;
+	src: url("/configs/conferences/mrmcd25/fonts/inter-normal-100-900-latin.woff2")
+		format("woff2");
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+		U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+	font-display: swap;
 }
 
 body {
@@ -52,7 +68,12 @@ body {
 	color: @text-color;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: "Inter", "Noto Sans", Arial, sans-serif;
 }
 
@@ -66,7 +87,7 @@ a {
 }
 
 footer {
- 	background-color: @background-color !important;
+	background-color: @background-color !important;
 	border-top: 5px dashed rgba(0, 0, 0, 0.1);
 	color: @text-color;
 }
@@ -85,14 +106,18 @@ footer {
 
 h1 {
 	position: absolute;
-    left: -1rem;
-    margin-top: -3rem;
-    font-size: 5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: @background-color;
-    text-shadow: -1px -1px 0 @text-color, 1px -1px 0 @text-color, -1px 1px 0 @text-color, 1px 1px 0 @text-color;
-    z-index: -9;
+	left: -1rem;
+	margin-top: -3rem;
+	font-size: 5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: @background-color;
+	text-shadow:
+		-1px -1px 0 @text-color,
+		1px -1px 0 @text-color,
+		-1px 1px 0 @text-color,
+		1px 1px 0 @text-color;
+	z-index: -9;
 }
 
 .nav-tabs.nav-justified > .active > a {
@@ -134,7 +159,7 @@ ul.nav.nav-player.nav-tabs.nav-justified > li > a,
 
 .panel-title {
 	text-transform: uppercase;
-	}
+}
 
 .row.recordings h2,
 row.group-live h2 {
@@ -145,14 +170,18 @@ row.group-live h2 {
 .row.recordings h2 span,
 .row.group-live h2 span {
 	position: absolute;
-    left: -1rem;
-    margin-top: -3rem;
-    font-size: 5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: @background-color;
-    text-shadow: -1px -1px 0 @text-color, 1px -1px 0 @text-color, -1px 1px 0 @text-color, 1px 1px 0 @text-color;
-    z-index: -9;
+	left: -1rem;
+	margin-top: -3rem;
+	font-size: 5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: @background-color;
+	text-shadow:
+		-1px -1px 0 @text-color,
+		1px -1px 0 @text-color,
+		-1px 1px 0 @text-color,
+		1px 1px 0 @text-color;
+	z-index: -9;
 }
 
 h3 {
@@ -172,12 +201,16 @@ h3 {
 		color: darken(@text-color-dark, 20%);
 	}
 	h1 {
-	    color: @background-color-dark;
-	    text-shadow: -1px -1px 0 @text-color-dark, 1px -1px 0 @text-color-dark, -1px 1px 0 @text-color-dark, 1px 1px 0 @text-color-dark;
+		color: @background-color-dark;
+		text-shadow:
+			-1px -1px 0 @text-color-dark,
+			1px -1px 0 @text-color-dark,
+			-1px 1px 0 @text-color-dark,
+			1px 1px 0 @text-color-dark;
 	}
 	.navbar {
 		background-color: @background-color-dark;
-		border-bottom: 5px dashed rgba(217,217,217,1) !important;
+		border-bottom: 5px dashed rgba(217, 217, 217, 1) !important;
 	}
 	.icon {
 		filter: invert(1);
@@ -187,7 +220,7 @@ h3 {
 		color: @text-color-dark !important;
 	}
 	footer {
-	 	background-color: @background-color-dark !important;
+		background-color: @background-color-dark !important;
 		border-top: 5px dashed rgba(217, 217, 217, 1);
 		color: @text-color-dark;
 		a {
@@ -221,8 +254,12 @@ h3 {
 	}
 	.row.recordings h2 span,
 	.row.group-live h2 span {
-		  color: @background-color-dark;
-		  text-shadow: -1px -1px 0 @text-color-dark, 1px -1px 0 @text-color-dark, -1px 1px 0 @text-color-dark, 1px 1px 0 @text-color-dark;
+		color: @background-color-dark;
+		text-shadow:
+			-1px -1px 0 @text-color-dark,
+			1px -1px 0 @text-color-dark,
+			-1px 1px 0 @text-color-dark,
+			1px 1px 0 @text-color-dark;
 	}
 
 	.block {
@@ -234,28 +271,28 @@ h3 {
 		}
 		&.pause {
 			background-color: lighten(@background-color-dark, 2%) !important;
-			background-image:
-				linear-gradient(
-					45deg,
-					lighten(@background-color-dark, 10%) 25%,
-					transparent 25%,
-					transparent 50%,
-					lighten(@background-color-dark, 10%) 50%,
-					lighten(@background-color-dark, 10%) 75%,
-					transparent 75%,
-					transparent) !important;
+			background-image: linear-gradient(
+				45deg,
+				lighten(@background-color-dark, 10%) 25%,
+				transparent 25%,
+				transparent 50%,
+				lighten(@background-color-dark, 10%) 50%,
+				lighten(@background-color-dark, 10%) 75%,
+				transparent 75%,
+				transparent
+			) !important;
 		}
 		&.optout {
-			background-image:
-				linear-gradient(
-					45deg,
-					rgb(50, 0, 0) 25%,
-					transparent 25%,
-					transparent 50%,
-					rgb(50, 0, 0) 50%,
-					rgb(50, 0, 0) 75%,
-					transparent 75%,
-					transparent) !important;
+			background-image: linear-gradient(
+				45deg,
+				rgb(50, 0, 0) 25%,
+				transparent 25%,
+				transparent 50%,
+				rgb(50, 0, 0) 50%,
+				rgb(50, 0, 0) 75%,
+				transparent 75%,
+				transparent
+			) !important;
 		}
 		&.daychange {
 			background-color: darken(@background-color-dark, 10%) !important;
