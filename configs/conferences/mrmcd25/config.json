@@ -2,8 +2,6 @@
   "$schema": "../../../docs/config-schema.json",
   "conference": {
     "title": "MRMCD 2025",
-    "acronym": "mrmcd2025",
-    "media_slug": "mrmcd2025",
     "description": "VOLLE TRANSPARENZ",
     "keywords": ["MRMCD"],
     "organizer": "MRMCD e.V.",
