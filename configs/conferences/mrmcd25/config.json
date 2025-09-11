@@ -38,13 +38,13 @@
             "title": "Stages",
             "items": [
               {
-                "slug": "foia"
+                "slug": "26-c205-foia-arena"
               },
               {
-                "slug": "gdpr"
+                "slug": "27-c120-art-15-gdpr"
               },
               {
-                "slug": "brief"
+                "slug": "30-c110-brief-enquiry"
               }
             ]
           }
@@ -58,19 +58,19 @@
     "rooms": [
       {
         "guid": "8bb4bf55-beed-5b14-b83f-5f53edf3d8de",
-        "slug": "foia",
+        "slug": "26-c205-foia-arena",
         "name": "C205 - FOIA arena",
         "streamId": "s3"
       },
       {
         "guid": "13fbdc77-cdb1-548b-a49b-df80d85a7108",
-        "slug": "gdpr",
+        "slug": "27-c120-art-15-gdpr",
         "name": "C120 - Art. 15 GDPR",
         "streamId": "s4"
       },
       {
         "guid": "a0c9533a-dd14-588d-ab74-63d33a229fc9",
-        "slug": "brief",
+        "slug": "30-c110-brief-enquiry",
         "name": "C110 - Brief enquiry",
         "streamId": "s5"
       }
