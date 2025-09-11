@@ -4,11 +4,11 @@
     "title": "MRMCD 2025",
     "acronym": "mrmcd2025",
     "media_slug": "mrmcd2025",
-    "description": "Live streaming from the NixCon 2025",
+    "description": "VOLLE TRANSPARENZ",
     "keywords": ["MRMCD"],
     "organizer": "MRMCD e.V.",
-    "start": "2025-09-05T09:30:00+02:00",
-    "end": "2025-09-07T17:30:00+02:00",
+    "start": "2025-09-12T14:30:00+02:00",
+    "end": "2025-09-14T17:30:00+02:00",
     "streamingConfig": {
       "features": {
         "relive": true,
