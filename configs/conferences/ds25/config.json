@@ -2,7 +2,7 @@
   "$schema": "../../../docs/config-schema.json",
   "conference": {
     "description": "Datenspuren 2025 - Under Construction!",
-    "media_slug": "ds25",
+    "media_slug": "DS2025",
     "organizer": "c3d2",
     "start": "2025-09-19T16:00:00+02:00",
     "end": "2025-09-22T03:59:00+02:00",
