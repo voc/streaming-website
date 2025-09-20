@@ -19,6 +19,9 @@
           "Kleiner Saal",
           "Kabinett"
         ]
+      },
+      "features": {
+        "relive": true
       }
     },
     "rooms": [
