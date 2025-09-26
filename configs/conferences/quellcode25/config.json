@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "Quellcode 2.0",
+    "media_slug": "quellcode25",
+    "organizer": "0x90.space",
+    "start": "2025-09-26T18:00:00+02:00",
+    "end": "2025-09-29T20:59:00+02:00",
+    "title": "Quellcode 2.0",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='https://quellcode.0x90.space/'>QueIIcode</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "banner": "<img src='https://static.media.ccc.de/media/conferences/quellcode/2025/image.png' alt=''>"
+      },
+      "schedule": {
+        "url": "https://pretalx.0x90.space/quellcode-2/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Vortragsraum"
+        ]
+      },
+      "features": {
+        "relive": false
+      }
+    },
+    "rooms": [
+      {
+        "name": "Vortragsraum",
+        "slug": "vortrag",
+        "streamId": "s3",
+        "guid": "27733d3f-fba4-54d5-a71c-cbde17c8628b",
+        "streamingConfig": {
+          "wide": true
+        }
+      }
+    ]
+  }
+}
