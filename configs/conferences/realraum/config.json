@@ -1,7 +1,7 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "description": "r3talks",
+    "description": "Live streaming of r3talks",
     "media_slug": "realraum",
     "organizer": "realraum",
     "start": "2025-09-25T16:00:00+02:00",
@@ -18,6 +18,12 @@
         "social": {
           "hashtag": "#r3talks",
           "mastodon": true
+        },
+        "chat": {
+          "irc": {
+            "display": "realraum IRC",
+            "url": "https://webchat.oftc.net/?channels=realraum"
+          }
         }
       }
     },
