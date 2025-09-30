@@ -21,10 +21,10 @@ else
 	else
 		$EPISODE = intval($m[1]);
 
-	$START_TIME = $upcoming_talk['start_time'] ?? '19:30';
+	$START_TIME = $upcoming_talk['start_time'] ?? '12:00';
 	$START_DATE = strtotime($upcoming_talk['start_date'].' '.$START_TIME);
 
-	$END_TIME = $upcoming_talk['end_time'] ?? '21:00';
+	$END_TIME = $upcoming_talk['end_time'] ?? '22:00';
 	$END_DATE = strtotime($upcoming_talk['end_date'].' '.$END_TIME);
 
 	$TITLE = $upcoming_talk['name'];
