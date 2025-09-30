@@ -36,7 +36,7 @@
       {
         "name": "Galerie",
         "slug": "galerie",
-        "streamId": "s5",
+        "streamId": "s4",
         "guid": "0500fc3c-e1ea-56b6-a071-b35a98c3aa01",
         "streamingConfig": {
           "wide": true
