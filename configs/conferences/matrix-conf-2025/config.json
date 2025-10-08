@@ -10,7 +10,7 @@
     "streamingConfig": {
       "html": {
         "footer": "by <a href='https://conference.matrix.org/'>Matrix Conference</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
-        "banner": "<img src='https://conference.matrix.org/_astro/logo-pattern.CqfA9NDa_1YLutN.svg' alt=''>"
+        "banner": "<img src='https://conference.matrix.org/_astro/logo-pattern.CqfA9NDa_1YLutN.svg' alt='' width='220px'>"
       },
       "schedule": {
         "url": "https://cfp.2025.matrix.org/matrix-conf-2025/schedule/export/schedule.xml",
@@ -40,7 +40,7 @@
         "streamId": "s5",
         "guid": "a21f9718-631b-5a96-a6fc-593d0c512f0f",
         "streamingConfig": {
-          "wide": true
+          "wide": false
         }
       },
       {
@@ -49,7 +49,7 @@
         "streamId": "s6",
         "guid": "67a75af5-dd1a-5bcc-8d4b-115185267b0f",
         "streamingConfig": {
-          "wide": true
+          "wide": false
         }
       }
     ]
