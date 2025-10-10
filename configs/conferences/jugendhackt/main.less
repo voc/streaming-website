@@ -1,11 +1,21 @@
 @import "../../../assets/css/_structure.less";
 
-// conference specific styles here
-
+// accent/ brand colors of the different cities
+@accent-softblue:       #00a6de;  // Jugend hackt Logo
+@accent-softgreen:      #00b48d;  // Hamburg, MV
+@accent-softorange:     #f3971b;  // Dresden
+@accent-softpurple:     #51509d;  // Frankfurt
+@accent-softred:        #e6414a;  // Halle
+@accent-deepblue:       #00498c;  // Berlin
+@accent-deepgreen:      #4cad37;  // AT/Linz
+@accent-deeporange:     #ea680c;  // Rhein-Neckar, München, Ulm
+@accent-deeppurple:     #4c2582;  // Köln
+@accent-deepred:        #e52420;  // CH/Zürich
+@accent-pink:           #e95197;  // kein Event
 
 // conference specific styles here
 @pw-color:     black;
-@bg-cyan:       #00a6de;
+@accent:       @accent-softgreen;  // change to your city here
 
 @body-text:     @pw-color;
 
@@ -60,7 +70,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 	h1 {
 		font-weight: bold;
 		margin: 40px 0 20px 0;
-		color: @bg-cyan;
+		color: @accent;
 	}
 }
 
@@ -69,7 +79,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 		font-weight: bold;
 
 		margin: 40px 0 20px 0;
-		color: @bg-cyan;
+		color: @accent;
     }
 }
 
