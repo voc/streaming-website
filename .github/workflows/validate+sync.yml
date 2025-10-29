@@ -19,7 +19,7 @@ jobs:
 
     - name: Check for any changed config.json files
       id: check-for-changed-configs
-      uses: tj-actions/changed-files@v41
+      uses: tj-actions/changed-files@v46
       with:
         files: |
           configs/conferences/**/config.json
