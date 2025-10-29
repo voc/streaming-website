@@ -30,7 +30,6 @@ jobs:
       with:
         schema: docs/config-schema.json
         files: configs/conferences/**/config.json 
-        options: --strict=false
 
   mirror:
     runs-on: ubuntu-latest
