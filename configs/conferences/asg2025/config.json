@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "All Systems Go! 2025",
+    "media_slug": "asg2025",
+    "organizer": "All Systems Go",
+    "start": "2025-09-30T09:00:00+02:00",
+    "end": "2025-10-01T18:15:00+02:00",
+    "title": "All Systems Go! 2025",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='https://all-systems-go.io/'>All Systems Go</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "banner": "<img src='https://static.media.ccc.de/media/events/all_systems_go/2025/logo.png' alt=''>"
+      },
+      "schedule": {
+        "url": "https://cfp.all-systems-go.io/all-systems-go-2025/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Loft",
+          "Galerie"
+        ]
+      },
+      "features": {
+        "relive": true
+      }
+    },
+    "rooms": [
+      {
+        "name": "Loft",
+        "slug": "loft",
+        "streamId": "s5",
+        "guid": "468ff729-e9c4-5f5b-8baf-e45b6892b72f",
+        "streamingConfig": {
+          "wide": true
+        }
+      },
+      {
+        "name": "Galerie",
+        "slug": "galerie",
+        "streamId": "s4",
+        "guid": "0500fc3c-e1ea-56b6-a071-b35a98c3aa01",
+        "streamingConfig": {
+          "wide": true
+        }
+      }
+    ]
+  }
+}

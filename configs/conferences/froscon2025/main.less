@@ -1,0 +1,203 @@
+@import "../../../assets/css/_structure.less";
+
+@blue-bg-light: #313495;
+@blue-bg-dark: #202257;
+@green-light: #daffc7;
+@green-lightest: #effafb;
+
+@link-color:                @green-light;
+@link-color-focus:          @green-lightest;
+@panel-primary-border:      @green-light;
+
+@panel-default-heading-bg:  @blue-bg-dark;
+@panel-default-text:        @green-light;
+@panel-bg:                  @blue-bg-dark;
+@panel-default-border:      @green-light;
+
+@text-color:                @green-lightest;
+@text-color-highlight:      @green-light;
+@text-color-dark:           black;
+@text-shadow-color:         @blue-bg-dark;
+
+@font-face {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/configs/conferences/froscon2025/Exo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/configs/conferences/froscon2025/OpenSans-Regular.ttf') format('truetype');
+}
+
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    line-height: 1.1;
+    color: @text-color;
+    text-shadow: @text-shadow-color 0 0 3px;
+}
+
+h1, h2, .h1, .h2  {
+    font-family: Exo, sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: @text-color-highlight;
+    text-shadow: @text-shadow-color 0 0 5px;
+}
+
+body.overview .panel-body {
+    min-height: 10px;
+}
+
+.overview .panel-title {
+    font-weight: bold;
+}
+
+a {
+    color: @link-color;
+
+    &:hover, &:focus {
+        color: @link-color-focus;
+    }
+}
+
+#schedule {
+    #schedule-event-detail-popover {
+        color: @text-color-dark;
+
+        a {
+            color: @blue-bg-dark;
+        }
+
+        a:hover, a:focus {
+            color: @text-color-dark;
+        }
+
+
+        #modal-header {
+            background-color: @blue-bg-dark;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2 .h3, .h4, .h5, .h6 {
+        color: @text-color-dark;
+        text-shadow: none;
+    }
+}
+
+nav.navbar {
+    .navbar-brand {
+        height: 51px;
+        padding-left: 20px;
+        line-height: 18px;
+        color: @text-color-highlight;
+
+        a {
+            color: @link-color;
+        }
+
+        // not in/on "a" by design..
+        &:hover, &:focus {
+            color: @link-color-focus;
+        }
+
+        .icon {
+            background-image: url(froscon20.svg);
+            background-size: contain;
+            width: 180px;
+            margin-top: -5px;
+        }
+    }
+
+    .button-wrapper > .navbar-time {
+        line-height: 18px;
+    }
+
+    &.navbar-default {
+        color: @text-color-highlight;
+        background: @panel-default-heading-bg;
+        border-bottom-color: #04a4e8;
+        border-bottom-width: 3px;
+    }
+}
+
+@media(min-width: 1780px) {
+    nav.navbar.navbar-default {
+        margin: 0 300px;
+    }
+
+    nav.navbar.navbar-default:before {
+        position: absolute;
+        top: 19px;
+        left: -300px;
+        width: 300px;
+        height: 64px;
+        content: " ";
+        background: url(styleelem-left.svg) left top no-repeat;
+    }
+
+    nav.navbar.navbar-default:after {
+        position: absolute;
+        top: 19px;
+        right: -300px;
+        width: 300px;
+        height: 64px;
+        content: " ";
+        background: url(styleelem-right.svg) right top no-repeat;
+    }
+}
+
+.nav-tabs > li.active > a {
+    color: @text-color-dark;
+}
+
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+    color: @text-color-dark;
+}
+
+.froscon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    background-attachment: fixed;
+
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+
+    z-index: -100;
+
+    @media (max-width: @screen-sm-min) {
+        display: none;
+    }
+}
+
+//body.room .tab-content {
+//    background-color: @strahlend;
+//}
+
+footer {
+    position: unset;
+    color: @text-color-highlight;
+    text-shadow: @text-shadow-color 0 0 3px;
+    background: none;
+
+    a {
+        color: @link-color;
+
+        &:hover, &:focus {
+            color: @link-color-focus;
+        }
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: 0 51px linear-gradient(202deg, @blue-bg-light 12%,@blue-bg-dark 88%) fixed no-repeat, @blue-bg-dark;
+}
+

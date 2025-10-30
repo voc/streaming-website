@@ -541,7 +541,7 @@
     },
     "SocialMediaConfig": {
       "type": "object",
-      "title": "Raum-/Streamspezifize Konfiguration für Social Media",
+      "title": "Raum-/Streamspezifische Konfiguration für Social Media",
       "properties": {
         "hashtag": {
           "type": "string",

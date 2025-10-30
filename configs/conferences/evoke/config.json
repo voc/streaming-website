@@ -1,0 +1,39 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "Evoke 2025",
+    "acronym": "evoke26",
+    "description": "Evoke is an annual demoparty and takes place from August 15th to 17th 2025 at AbenteuerHallenKALK in Cologne, Germany. Hang out with sceners and take part in a wide variety of creative competitions.",
+    "keywords": [],
+    "organizer": "Evoke Orga",
+    "start": "2025-08-15T16:00:00+02:00",
+    "end": "2025-08-17T16:00:00+02:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "releases": false,
+        "feedback": false,
+        "social": {
+          "hashtag": "#evoke",
+          "mastodon": true
+        }
+      },
+      "schedule": {
+        "url": "https://pretalx.c3voc.de/evoke26/schedule/export/schedule.xml",
+        "scale": 12,
+        "index_offset": -1
+      },
+      "html": {
+        "footer": "\n\t\tby <a href=\"https://2025.evoke.eu\">Evoke Organizers</a>\n\t"
+      }
+    },
+    "rooms": [
+      {
+        "name": "Main Stage",
+        "slug": "evoke",
+        "streamId": "evoke"
+      }
+    ]
+  }
+}

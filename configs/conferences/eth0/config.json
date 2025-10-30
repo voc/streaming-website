@@ -1,0 +1,40 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "eth0:2025 Autumn",
+    "acronym": "eth0_2025",
+    "description": "",
+    "keywords": [],
+    "organizer": "eth0 Orga",
+    "start": "2025-10-31T17:00:00+01:00",
+    "end": "2025-11-02T20:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": false,
+        "feedback": false,
+        "social": {
+          "hashtag": "#eth0",
+          "mastodon": true
+        }
+      },
+      "html": {
+        "footer": "\n\t\tby <a href=\"https://wiki.eth0.nl/index.php/Eth0:2025_Autumn\">eth0 Organizers</a>\n\t"
+      },
+      "schedule": {
+        "url": "https://codeberg.org/eth0/schedule/raw/branch/main/2025-autumn/schedule.xml"
+      }
+    },
+    "rooms": [
+      {
+        "name": "Main Stage",
+        "slug": "canteen",
+        "streamId": "eth0",
+        "streamingConfig": {
+          "slides": false,
+          "schedule": false
+        }
+      }
+    ]
+  }
+}

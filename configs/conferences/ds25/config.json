@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "Datenspuren 2025 - Under Construction!",
+    "media_slug": "DS2025",
+    "organizer": "c3d2",
+    "start": "2025-09-19T16:00:00+02:00",
+    "end": "2025-09-22T03:59:00+02:00",
+    "title": "Datenspuren 2025",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='http://datenspuren.de/'>Datenspuren</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "banner": "<img src='/configs/conferences/ds25/datenspuren.jpg' alt=''>"
+      },
+      "schedule": {
+        "url": "https://talks.datenspuren.de/ds25/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Henny-Brenner-Saal",
+          "Kleiner Saal",
+          "Kabinett"
+        ]
+      },
+      "features": {
+        "relive": true
+      }
+    },
+    "rooms": [
+      {
+        "name": "Henny-Brenner-Saal",
+        "slug": "saal3",
+        "streamId": "s3",
+        "guid": "fd11814d-89f2-51f5-8a82-f037358bef72",
+        "streamingConfig": {
+          "wide": true
+        }
+      },
+      {
+        "name": "Kleiner Saal",
+        "slug": "saal4",
+        "streamId": "s4",
+        "guid": "c27cfdad-d892-5eb4-810e-262985ddd0c7"
+      },
+      {
+        "name": "Kabinett",
+        "slug": "saal5",
+        "streamId": "s5",
+        "guid": "5a1a14a0-eddd-5a70-8055-0fc0b137d352"
+      }
+    ]
+  }
+}

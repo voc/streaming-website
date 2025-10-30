@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "Matrix Conference 2025",
+    "media_slug": "matrix-conf-2025",
+    "organizer": "Matrix Conference",
+    "start": "2025-10-16T09:00:00+02:00",
+    "end": "2025-10-18T19:00:00+02:00",
+    "title": "Matrix Conference 2025",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='https://conference.matrix.org/'>Matrix Conference</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "banner": "<img src='https://conference.matrix.org/_astro/logo-pattern.CqfA9NDa_1YLutN.svg' alt='' width='220px'>"
+      },
+      "schedule": {
+        "url": "https://cfp.2025.matrix.org/matrix-conf-2025/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Ada Byron",
+          "Alan Turing",
+          "Lynn Conway"
+        ]
+      },
+      "features": {
+        "relive": true
+      }
+    },
+    "rooms": [
+      {
+        "name": "Ada Byron",
+        "slug": "byron",
+        "streamId": "s3",
+        "guid": "27ed83f2-677f-50de-8c84-b5512a5a174e",
+        "streamingConfig": {
+          "wide": true
+        }
+      },
+      {
+        "name": "Alan Turing",
+        "slug": "turing",
+        "streamId": "s5",
+        "guid": "a21f9718-631b-5a96-a6fc-593d0c512f0f",
+        "streamingConfig": {
+          "wide": false
+        }
+      },
+      {
+        "name": "Lynn Conway",
+        "slug": "conway",
+        "streamId": "s6",
+        "guid": "67a75af5-dd1a-5bcc-8d4b-115185267b0f",
+        "streamingConfig": {
+          "wide": false
+        }
+      }
+    ]
+  }
+}

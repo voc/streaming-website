@@ -1,0 +1,199 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "39C3: Illegal Instructions",
+    "acronym": "39c3",
+    "description": "Live streaming from the 39th Chaos Communication Congress",
+    "keywords": [
+      "39C3", "Chaos Computer Club", "Video", "Media", "Streaming", "Hacker"
+    ],
+    "organizer": "CCC",
+    "start": "2025-12-27T10:00:00+01:00",
+    "end": "2025-12-30T18:20:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "feedback": true,
+        "social": {
+          "hashtag": "#39C3",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": true,
+          "matrix": true
+        }
+      },
+      "overviewPage": {
+        "sections": [
+          {
+            "title": "Main Halls",
+            "items": [
+              {
+                "slug": "eins"
+              },
+              {
+                "slug": "ground"
+              },
+              {
+                "slug": "zero"
+              },
+              {
+                "slug": "fuse"
+              }
+            ]
+          },
+          {
+            "title": "Other",
+            "items": [
+              {
+                "slug": "sendezentrum"
+              },
+              {
+                "slug": "infobeamer"
+              }
+            ]
+          }
+        ]
+      },
+      "schedule": {
+        "url": "https://api.events.ccc.de/congress/2025/schedule.xml?room.tags=voc",
+        "index_offset": 0,
+        "scale": 7
+      },
+      "html": {
+        "banner": "<div class=\"congress\"></div><div class=\"congress-motto\"></div>",
+        "footer": "\n\t\tby <a href=\"https://ccc.de\">Chaos Computer Club e.V.</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+        "not_started": null
+      }
+    },
+    "rooms": [
+      {
+        "guid": "ba692ba3-421b-5371-8309-60acc34a3c05",
+        "name": "Saal One",
+        "slug": "one",
+        "streamId": "s1",
+        "streamingConfig": {
+          "wide": true,
+          "social": {
+            "hashtag": "#39C3one",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#39c3-hall-one:events.ccc.de",
+              "url": "https://matrix.to/#/#39c3-hall-one:events.ccc.de"
+            },
+            "irc": {
+              "display": "#39c3-hall-one @ hackint",
+              "url": "https://chat.hackint.org/?join=39c3-hall-one"
+            }
+          }
+        }
+      },
+      {
+        "guid": "7202df07-050c-552f-8318-992f94e40ef0",
+        "name": "Saal Ground",
+        "slug": "ground",
+        "streamId": "s2",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#39C3ground",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#39c3-hall-ground:events.ccc.de",
+              "url": "https://matrix.to/#/#39c3-hall-ground:events.ccc.de"
+            },
+            "irc": {
+              "display": "#39c3-hall-ground @ hackint",
+              "url": "https://chat.hackint.org/?join=39c3-hall-ground"
+            }
+          }
+        }
+      },
+      {
+        "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
+        "name": "Saal Zero",
+        "slug": "zero",
+        "streamId": "s3",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#39C3zero",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#39c3-hall-zero:events.ccc.de",
+              "url": "https://matrix.to/#/#39c3-hall-zero:events.ccc.de"
+            },
+            "irc": {
+              "display": "#39c3-hall-zero @ hackint",
+              "url": "https://chat.hackint.org/?join=39c3-hall-zero"
+            }
+          }
+        }
+      },
+      {
+        "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
+        "name": "Saal Fuse",
+        "slug": "fuse",
+        "streamId": "s4",
+        "streamingConfig": {
+          "social": {
+            "hashtag": "#39C3fuse",
+            "mastodon": true
+          },
+          "chat": {
+            "matrix": {
+              "display": "#39c3-hall-fuse:events.ccc.de",
+              "url": "https://matrix.to/#/#39c3-hall-fuse:events.ccc.de"
+            },
+            "irc": {
+              "display": "#39c3-hall-fuse @ hackint",
+              "url": "https://chat.hackint.org/?join=39c3-hall-fuse"
+            }
+          }
+        }
+      },
+      {
+        "guid": "9001b61b-b1f1-5bcd-89fd-135ed5e43e19",
+        "name": "Saal X 07",
+        "slug": "sendezentrum",
+        "streamId": "s5",
+        "streamingConfig": {
+          "display": "Sendezentrum Stage (Saal X 07)",
+          "display_short": "Sendezentrum",
+          "social": {
+            "hashtag": "#39C3sz",
+            "mastodon": true
+          },
+          "chat": {
+            "irc": false,
+            "matrix": {
+              "display": "#sendezentrum39c3:matrix.org",
+              "url": "https://matrix.to/#/#sendezentrum39c3:matrix.org"
+            }
+          }
+        }
+      },
+      {
+        "guid": "ff13477b-07c6-4df9-aee7-4a2aadc59102",
+        "name": "info-beamer",
+        "slug": "infobeamer",
+        "streamId": "s96",
+        "streamingConfig": {
+          "display": "info-beamer",
+          "social": {
+            "mastodon": false
+          },
+          "chat": {
+            "irc": false,
+            "matrix": false
+          }
+        }
+      }
+    ]
+  }
+}
