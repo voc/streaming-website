@@ -20,12 +20,15 @@
       },
       "html": {
         "footer": "\n\t\tby <a href=\"https://wiki.eth0.nl/index.php/Eth0:2025_Autumn\">eth0 Organizers</a>\n\t"
+      },
+      "schedule": {
+        "url": "https://codeberg.org/eth0/schedule/raw/branch/main/2025-autumn/schedule.xml"
       }
     },
     "rooms": [
       {
         "name": "Main Stage",
-        "slug": "main",
+        "slug": "canteen",
         "streamId": "eth0",
         "streamingConfig": {
           "slides": false,
