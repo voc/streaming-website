@@ -281,11 +281,11 @@ class Room
 
 	public static function clientQualifiesForLowLatency()
 	{
-		$IPV6_RANGE = '2001:67c:20a1:';         // Club-Event Range
+		$IPV6_RANGE = '2001:67c:20a1:';         // Club event range
 		$IPV4_RANGES = [
-			['94.45.224.0', '94.45.255.255'],   // Club-Event Range
-			['151.219.0.0', '151.219.255.255'], // Temporary RIPE Assignment
-			['10.0.0.0', '10.255.255.255']     // Local network
+			['94.45.224.0', '94.45.255.255'],   // Club event range
+			['151.219.0.0', '151.219.255.255'], // Temporary RIPE assignment
+			['10.0.0.0', '10.255.255.255']      // Local network
 		];
 		$ip = $_SERVER['REMOTE_ADDR'];
 
