@@ -54,6 +54,9 @@ class RoomSelection
 			
 			case 'hls':
 				return 'HLS';
+			
+			case 'hlsll':
+				return 'Low-Latency HLS';
 
 			default:
 				return ucfirst($this->getSelection());

@@ -325,7 +325,7 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^([^/]+)/(hd|sd|audio|slides|video|hls|dash)$@', $route, $m))
+	else if(preg_match('@^([^/]+)/(hd|sd|audio|slides|video|hls|hlsll|dash)$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
@@ -335,7 +335,7 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^([^/]+)/(hd|sd|audio|slides|video|hls|dash)/i18n/([^/]+)$@', $route, $m))
+	else if(preg_match('@^([^/]+)/(hd|sd|audio|slides|video|hls|hlsll|dash)/i18n/([^/]+)$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
@@ -345,7 +345,7 @@ try {
 		require('view/room.php');
 	}
 
-	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|hls|slides|dash)/(native|stereo|[^/]+)(/no-autoplay)?$@', $route, $m))
+	else if(preg_match('@^embed/([^/]+)/(hd|sd|audio|hls|hlsll|slides|dash)/(native|stereo|[^/]+)(/no-autoplay)?$@', $route, $m))
 	{
 		$_GET = array(
 			'room' => $m[1],
