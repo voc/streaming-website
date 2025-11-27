@@ -122,6 +122,12 @@ try {
 		exit;
 	}
 
+	else if($route == 'streams/v3.json')
+	{
+		require('view/streams-json-v3.php');
+		exit;
+	}
+
 	else if($route == 'config.json')
 	{
 		require('view/config-json.php');
