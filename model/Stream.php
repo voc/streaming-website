@@ -49,6 +49,7 @@ class Stream
 				return array(1024, 576);
 
 			case 'slides':
+			case 'hlsll':
 			case 'hd':
 				return array(1920, 1080);
 
@@ -114,6 +115,9 @@ class Stream
 					$display .= 'DASH';
 					break;
 				}
+			case 'hlsll':
+				$display .= 'LL';
+				break;
 			default:
 				$display .= ucfirst($this->getSelection());
 				break;
@@ -154,6 +158,11 @@ class Stream
 					return str_replace('{streamId}', $this->getRoom()->getStream(), $this->getRoom()->getConference()->get('cdn.hls_playlist_url'));
 				}
 				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getRoom()->getStream()).'/'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
+			case 'hlsll':
+				if ($this->getRoom()->getConference()->has('cdn.hlsll_playlist_url')) {
+					return str_replace('{streamId}', $this->getRoom()->getStream(), $this->getRoom()->getConference()->get('cdn.hlsll_playlist_url'));
+				}
+				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hlsll', rawurlencode($this->getRoom()->getStream()).'/'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
 		}
 
 		return null;
@@ -175,8 +184,15 @@ class Stream
 
 		return null;
 	}
-	public static function getVideoProtos()
+	public static function getVideoProtos($ipRanges)
 	{
+		if ($this->getRoom()->clientQualifiesForLowLatency($ipRanges)) {
+			return array(
+				'hlsll' => 'HLS Low-Latency',
+				'hls' => 'HLS',
+			);
+		}
+
 		return array(
 			'hls' => 'HLS',
 		);
@@ -198,7 +214,9 @@ class Stream
 	}
 	public static function getSlidesProtos()
 	{
-		return Stream::getVideoProtos();
+		return array(
+			'hls' => 'HLS',
+		);
 	}
 
 
