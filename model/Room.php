@@ -279,8 +279,41 @@ class Room
 		return $this->get('DASH', true);
 	}
 
-	public function hasCustomStreamingUrl() {
+	public static function clientQualifiesForLowLatency()
+	{
+		$IPV6_RANGE = '2001:67c:20a1:';         // Club-Event Range
+		$IPV4_RANGES = [
+			['94.45.224.0', '94.45.255.255'],   // Club-Event Range
+			['151.219.0.0', '151.219.255.255'], // Temporary RIPE Assignment
+			['10.0.0.0', '10.255.255.255']     // Local network
+		];
+		$ip = $_SERVER['REMOTE_ADDR'];
+
+		if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+			return (strpos($ip, $IPV6_RANGE) === 0);
+		}
+
+		if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+			$longIp = ip2long($ip);
+			foreach ($IPV4_RANGES as $range) {
+				if ($longIp >= ip2long($range[0]) && $longIp <= ip2long($range[1])) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	public function hasHdLowLatencyVideo() {
+		return $this->get('HD_LL_VIDEO', true) && self::clientQualifiesForLowLatency();
+	}
+
+	public function hasCustomHLSStreamingUrl() {
 		return $this->conference->has('cdn.hls_playlist_url');
+	}
+
+	public function hasCustomHLSLLStreamingUrl() {
+		return $this->conference->has('cdn.hlsll_playlist_url');
 	}
 
 	public function getHLSPlaylistUrl() {
@@ -288,6 +321,13 @@ class Room
 			return str_replace('{streamId}', rawurlencode($this->getStream()), $this->conference->get('cdn.hls_playlist_url'));
 		}
 		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hls', rawurlencode($this->getStream()).'/native_hd.m3u8']);
+	}
+
+	public function getHLSLLPlaylistUrl() {
+		if ($this->conference->has('cdn.hlsll_playlist_url')) {
+			return str_replace('{streamId}', rawurlencode($this->getStream()), $this->conference->get('cdn.hlsll_playlist_url'));
+		}
+		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hlsll', rawurlencode($this->getStream()).'/native_hd.m3u8']);
 	}
 
 	public function getDashManifestUrl() {
@@ -344,6 +384,9 @@ class Room
 			else
 				$selections[] = 'dash';
 
+		if($this->hasHdLowLatencyVideo())
+			$selections[] = 'hlsll';
+
 		if($this->hasAudio())
 			$selections[] = 'audio';
 
@@ -366,6 +409,9 @@ class Room
 		$tabs = array();
 		if($this->hasDash())
 			$tabs[] = 'dash';
+
+		if($this->hasHdLowLatencyVideo())
+			$tabs[] = 'hlsll';
 
 		if($this->hasAudio())
 			$tabs[] = 'audio';
