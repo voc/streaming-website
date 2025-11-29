@@ -1,0 +1,36 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "News-Infographics-Analytics-Maps",
+    "organizer": "Deutsche Gesellschaft für Katographie e.V.",
+    "start": "2026-01-15T08:30:00+02:00",
+    "end": "2026-01-15T18:00:00+02:00",
+    "title": "News-Infographics-Analytics-Maps 2026",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='https://www.news-infographics-analytics-maps.media/'>News-Infographics-Analytics-Maps</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "banner": ""
+      },
+      "schedule": {
+        "url": "https://pretalx.news-infographics-analytics-maps.media/2026/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Wilhelm-von-Humboldt-Saal"
+        ]
+      },
+      "features": {
+        "relive": true
+      }
+    },
+    "rooms": [
+      {
+        "name": "Wilhelm-von-Humboldt-Saal",
+        "slug": "Wilhelm-von-Humboldt-Saal",
+        "streamId": "niam2026",
+        "guid": "7060c4f8-5065-5095-b64f-b60d63b5c67",
+        "streamingConfig": {
+          "wide": true
+        }
+      }
+    ]
+  }
+}
