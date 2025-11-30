@@ -1,11 +1,7 @@
 <div class="video-wrap"
 	data-voc-player
 	data-h264-only="<?=h($room->h264Only())?>"
-	<? if(!$room->hasCustomHLSStreamingUrl()): ?>
-	data-stream="<?=h($room->getStream())?>"
-	<? else: ?>
-	data-source="<?=h($room->getHLSPlaylistUrl())?>"
-	<? endif ?>
+	data-source="<?=h($room->getHLSLLPlaylistUrl())?>"
 	data-poster="<?=h($stream->getPoster())?>"
 	data-preferred-language="<?=($stream->getLanguage())?>"
 ></div>

@@ -369,6 +369,7 @@
           "stereo": false,
           "sd_video": true,
           "hd_video": true,
+          "hd_ll_video": true,
           "slides": false,
           "dash": true,
           "audio": true
@@ -422,6 +423,12 @@
           "title": "HD",
           "description": "Wenn dieses Flag deaktiviert wird kein HD-Video (1920×1080) angeboten. Wird auch SD-Video und DASH deaktivert, wird für diesen Raum überhaupt kein Video angeboten. In diesem Fall wird Slides, Audio und zuletzt Musik als Default-Stream angenommen – sofern aktiviert.",
           "default": true
+        },
+        "hd_ll_video": {
+          "type": "boolean",
+          "title": "HD (Low-Latency)",
+          "description": "Wenn dieses Flag aktiviert ist und User aus dem Club-Event-Netzwerk (2001:67c:20a1::/48, 94.45.224.0/19) oder temporären Assignment der RIPE (151.219.0.0/16) zugreifen, wird ein Low-Latency HD-Stream (1920x1080) angeboten.",
+          "default": false
         },
         "sd_video": {
           "type": "boolean",
