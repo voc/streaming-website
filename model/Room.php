@@ -279,33 +279,78 @@ class Room
 		return $this->get('DASH', true);
 	}
 
-	public static function clientQualifiesForLowLatency()
+	public function clientQualifiesForLowLatency()
 	{
-		$IPV6_RANGE = '2001:67c:20a1:';         // Club event range
-		$IPV4_RANGES = [
-			['94.45.224.0', '94.45.255.255'],   // Club event range
-			['151.219.0.0', '151.219.255.255'], // Temporary RIPE assignment
-			['10.0.0.0', '10.255.255.255']      // Local network
-		];
-		$ip = $_SERVER['REMOTE_ADDR'];
-
-		if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-			return (strpos($ip, $IPV6_RANGE) === 0);
+		$ipRanges = $this->get('HD_LL_IP_RANGES', array());
+		
+		if (empty($ipRanges)) {
+			return false;
 		}
+		$clientIp = $_SERVER['REMOTE_ADDR'];
 
-		if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-			$longIp = ip2long($ip);
-			foreach ($IPV4_RANGES as $range) {
-				if ($longIp >= ip2long($range[0]) && $longIp <= ip2long($range[1])) {
+		if (filter_var($clientIp, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+			$ipv6Ranges = array_filter(
+				$ipRanges,
+				function ($range) {
+					return strpos($range, ':') !== false;
+				}
+			);
+
+			foreach ($ipv6Ranges as $cidrnet) {
+				list($net, $maskbits) = explode('/', $cidrnet);
+				$net = inet_pton($net);
+				$binarynet = inet_to_bits($net);
+
+				$ip = inet_pton($clientIp);
+				$binaryip = inet_to_bits($ip);
+
+				$ip_net_bits = substr($binaryip, 0, $maskbits);
+				$net_bits = substr($binarynet, 0, $maskbits);
+
+				if ($ip_net_bits === $net_bits) {
 					return true;
 				}
 			}
 		}
+		
+		if (filter_var($clientIp, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+			$ipv4Ranges = array_filter(
+				$ipRanges,
+				function ($range) {
+					return strpos($range, ':') === false;
+				}
+			);
+
+			$ipv4RangesLong = array_map(
+				function ($range) {
+					if (strpos($range, '/') !== false) {
+						list($subnet, $mask) = explode('/', $range);
+						$mask = 0xFFFFFFFF << (32 - (int)$mask);
+						$subnet_long = ip2long($subnet) & $mask;
+						$from = $subnet_long;
+						$to = $subnet_long | (~$mask & 0xFFFFFFFF);
+						return array($from, $to);
+					} else {
+						$ip_long = ip2long($range);
+						return array($ip_long, $ip_long);
+					}
+				},
+				$ipv4Ranges
+			);
+
+			$longClientIp = ip2long($clientIp);
+			foreach ($ipv4RangesLong as $range) {
+				if ($longClientIp >= $range[0] && $longClientIp <= $range[1]) {
+					return true;
+				}
+			}
+		}
+
 		return false;
 	}
 
 	public function hasHdLowLatencyVideo() {
-		return $this->get('HD_LL_VIDEO', true) && self::clientQualifiesForLowLatency();
+		return $this->get('HD_LL_VIDEO', true) && $this->clientQualifiesForLowLatency();
 	}
 
 	public function hasCustomHLSStreamingUrl() {

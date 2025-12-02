@@ -427,8 +427,22 @@
         "hd_ll_video": {
           "type": "boolean",
           "title": "HD (Low-Latency)",
-          "description": "Wenn dieses Flag aktiviert ist und User aus dem Club-Event-Netzwerk (2001:67c:20a1::/48, 94.45.224.0/19) oder temporären Assignment der RIPE (151.219.0.0/16) zugreifen, wird ein Low-Latency HD-Stream (1920x1080) angeboten.",
+          "description": "Wenn dieses Flag aktiviert ist und Clients aus den IP-Ranges in `hd_ll_ip_ranges` connecten, wird ein Low-Latency HD-Stream (1920x1080) angeboten.",
           "default": false
+        },
+        "hd_ll_ip_ranges": {
+          "type": "array",
+          "title": "IP-Ranges für Low-Latency Streams",
+          "description": "Wenn hier IP-Ranges im CIDR-Format angegeben sind, `hd_ll_video` `true` ist und Clients aus diesen IP-Ranges connecten, wird ein Low-Latency Streams angeboten.",
+          "default": [],
+          "items": {
+            "type": "string",
+            "examples": [
+              "2001:67c:20a1::/48",
+              "94.45.224.0/19",
+              "151.219.0.0/16"
+            ]
+          }
         },
         "sd_video": {
           "type": "boolean",
