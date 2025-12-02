@@ -49,6 +49,9 @@ class RoomTab
 			case 'dash':
 				return 'Video';
 
+			case 'hlsll':
+				return 'Low-Latency Video (Experimental)';
+
 			default:
 				return ucfirst($tab);
 		}

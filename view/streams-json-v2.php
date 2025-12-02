@@ -39,7 +39,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 				switch($stream->getPlayerType())
 				{
 					case 'video':
-						foreach ($stream->getVideoProtos() as $proto => $display)
+						foreach (array("hls" => "HLS") as $proto => $display)
 						{
 							$urls[$proto] = array(
 								'display' => $display,
