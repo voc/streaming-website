@@ -90,14 +90,14 @@ see [deploy.sh](deploy.sh) bzw. https://c3voc.de/wiki/software:streamingwebsite
 
 ## JSON-API
 
-Unter der URL [http://streaming.media.ccc.de/streams/v3.json](http://streaming.media.ccc.de/streams/v3.json) bietet die
+Unter der URL [http://streaming.media.ccc.de/streams/v2.json](http://streaming.media.ccc.de/streams/v2.json) bietet die
 Streaming-Webseite eine Übersicht über alle konfigurierten Räume und Streams in
 einem maschinenlesbaren Format an. Dieses kann z.B. genutzt werden, um in den
 diversen Anwendungen, die sich rund um das Konferenzgeschehen entwickelt haben,
 Player und Links zu Liveübertragungen anzubieten.
 
 Wie die URL vermuten lässt, ist die API versioniert. Dies bedeutet, dass in
-der `v3.json` keine Felder *entfernt werden* oder ihre *Bedeutung ändern* – es
+der `v2.json` keine Felder *entfernt werden* oder ihre *Bedeutung ändern* – es
 können aber durchaus *neue Felder* hinzukommen. Eine formalere Spezifikation
 des JSON-Formats ist tbd. Ein Beispiel kann [hier
 betrachtet](https://gist.github.com/MaZderMind/a91f242efb2f446a2237d4596896efd6) werden.
