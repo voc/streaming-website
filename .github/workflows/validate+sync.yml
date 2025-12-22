@@ -31,21 +31,21 @@ jobs:
         schema: docs/config-schema.json
         files: configs/conferences/**/config.json 
 
-  mirror:
-    runs-on: ubuntu-latest
-    if: ${{ github.ref != 'refs/heads/master' || (github.event_name == 'push' && contains(github.event.head_commit.message, 'Merge pull request')) }}
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+  # mirror:
+  #   runs-on: ubuntu-latest
+  #   if: ${{ github.ref != 'refs/heads/master' || (github.event_name == 'push' && contains(github.event.head_commit.message, 'Merge pull request')) }}
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #     with:
+  #       fetch-depth: 0
 
-    - name: Mirror to VOC gitolite
-      env: 
-        secrets_available:  ${{ secrets.SSH_PRIVATE_KEY }} != ''
-      if: ${{ env.secrets_available }}
-      uses: pixta-dev/repository-mirroring-action@v1.1.1
-      with:
-        target_repo_url:
-          git@git.c3voc.de:streaming-website.git
-        ssh_private_key:
-          ${{ secrets.SSH_PRIVATE_KEY }}
+  #   - name: Mirror to VOC gitolite
+  #     env: 
+  #       secrets_available:  ${{ secrets.SSH_PRIVATE_KEY }} != ''
+  #     if: ${{ env.secrets_available }}
+  #     uses: pixta-dev/repository-mirroring-action@v1.1.1
+  #     with:
+  #       target_repo_url:
+  #         git@git.c3voc.de:streaming-website.git
+  #       ssh_private_key:
+  #         ${{ secrets.SSH_PRIVATE_KEY }}
