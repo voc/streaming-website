@@ -21,7 +21,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 				switch($stream->getPlayerType())
 				{
 					case 'video':
-						foreach (array("hls" => "HLS") as $proto => $display)
+						foreach ($stream->getVideoProtos() as $proto => $display)
 						{
 							$urls[$proto] = array(
 								'display' => $display,

@@ -239,7 +239,7 @@ class Room
 
 	public function hasChat() {
 		$chat = $this->get('CHAT');
-		return ((is_array($chat) ? count($chat) : $chat) && $this->getConference()->has('CHAT')) 
+		return ((is_array($chat) ? count($chat) : $chat) && $this->getConference()->has('CHAT'))
 			|| $this->hasIrc() || $this->hasWebchat() || $this->hasTwitter();
 	}
 
@@ -254,7 +254,7 @@ class Room
 	public function getInfo() {
 		return $this->get('INFO');
 	}
-	
+
 	public function hasSdVideo() {
 		return $this->get('SD_VIDEO');
 	}
@@ -279,80 +279,6 @@ class Room
 		return $this->get('DASH', true);
 	}
 
-	public function clientQualifiesForLowLatency()
-	{
-		$ipRanges = $this->get('HD_LL_IP_RANGES', array());
-		
-		if (empty($ipRanges)) {
-			return false;
-		}
-		$clientIp = $_SERVER['REMOTE_ADDR'];
-
-		if (filter_var($clientIp, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-			$ipv6Ranges = array_filter(
-				$ipRanges,
-				function ($range) {
-					return strpos($range, ':') !== false;
-				}
-			);
-
-			foreach ($ipv6Ranges as $cidrnet) {
-				list($net, $maskbits) = explode('/', $cidrnet);
-				$net = inet_pton($net);
-				$binarynet = inet_to_bits($net);
-
-				$ip = inet_pton($clientIp);
-				$binaryip = inet_to_bits($ip);
-
-				$ip_net_bits = substr($binaryip, 0, $maskbits);
-				$net_bits = substr($binarynet, 0, $maskbits);
-
-				if ($ip_net_bits === $net_bits) {
-					return true;
-				}
-			}
-		}
-		
-		if (filter_var($clientIp, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-			$ipv4Ranges = array_filter(
-				$ipRanges,
-				function ($range) {
-					return strpos($range, ':') === false;
-				}
-			);
-
-			$ipv4RangesLong = array_map(
-				function ($range) {
-					if (strpos($range, '/') !== false) {
-						list($subnet, $mask) = explode('/', $range);
-						$mask = 0xFFFFFFFF << (32 - (int)$mask);
-						$subnet_long = ip2long($subnet) & $mask;
-						$from = $subnet_long;
-						$to = $subnet_long | (~$mask & 0xFFFFFFFF);
-						return array($from, $to);
-					} else {
-						$ip_long = ip2long($range);
-						return array($ip_long, $ip_long);
-					}
-				},
-				$ipv4Ranges
-			);
-
-			$longClientIp = ip2long($clientIp);
-			foreach ($ipv4RangesLong as $range) {
-				if ($longClientIp >= $range[0] && $longClientIp <= $range[1]) {
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
-
-	public function hasHdLowLatencyVideo() {
-		return $this->get('HD_LL_VIDEO', true) && $this->clientQualifiesForLowLatency();
-	}
-
 	public function hasCustomHLSStreamingUrl() {
 		return $this->conference->has('cdn.hls_playlist_url');
 	}
@@ -372,7 +298,7 @@ class Room
 		if ($this->conference->has('cdn.hlsll_playlist_url')) {
 			return str_replace('{streamId}', rawurlencode($this->getStream()), $this->conference->get('cdn.hlsll_playlist_url'));
 		}
-		return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hlsll', rawurlencode($this->getStream()).'/native_hd.m3u8']);
+		return proto().'://'.joinpath(['livell.event.c3voc.de', 'hlsll', rawurlencode($this->getStream()).'/index.m3u8']);
 	}
 
 	public function getDashManifestUrl() {
@@ -429,9 +355,6 @@ class Room
 			else
 				$selections[] = 'dash';
 
-		if($this->hasHdLowLatencyVideo())
-			$selections[] = 'hlsll';
-
 		if($this->hasAudio())
 			$selections[] = 'audio';
 
@@ -455,9 +378,6 @@ class Room
 		if($this->hasDash())
 			$tabs[] = 'dash';
 
-		if($this->hasHdLowLatencyVideo())
-			$tabs[] = 'hlsll';
-
 		if($this->hasAudio())
 			$tabs[] = 'audio';
 
@@ -466,6 +386,10 @@ class Room
 
 		if($this->hasSlides())
 			$tabs[] = 'slides';
+
+		# hlsll is selected clientside, always offer as alternative
+		if(count($tabs) > 0)
+			$tabs[] = 'hlsll';
 
 		return $tabs;
 	}
@@ -545,6 +469,9 @@ class Room
 	{
 		if($selection == 'video') $selection = 'hd';
 		$selections = $this->getSelectionNames();
+
+		if($selection == 'hlsll')
+			$selections[] = 'hlsll';
 
 		if(count($selections) == 0)
 			throw new NotFoundException('No Streams activated');

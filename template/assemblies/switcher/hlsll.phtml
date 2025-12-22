@@ -2,56 +2,19 @@
 
 	<div class="directlinks">
 		<? $proto = "hlsll"; $display ="HLS - Low Latency"; $res = "hd" ?>
-		<h3>Direct links (<?=h($display)?>)</h3>
+		<h4>Direct links (<?=h($display)?>)</h4>
 		<div class="row">
-			<? $selection = $room->createSelectionObject($res) ?>
+			<? $selection = $room->createSelectionObject() ?>
 			<? $switcherstream = $room->createStreamObject($res) ?>
-			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-				<div class="btn-group" role="group" title="<?=h($switcherstream->getVideoTech($proto))?>">
-					<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
-					<? if($room->hasTranslation()): ?>
-
-						<a href="<?=h($room->createStreamObject($res, 'native')->getVideoUrl($proto))?>" class="btn btn-default">
-							<span class="fa fa-flag-o"></span>
-							Native
-						</a>
-						<? foreach($room->getTranslations() as $translation): ?>
-							<a href="<?=h($room->createStreamObject($res, $translation['endpoint'])->getVideoUrl($proto))?>" class="btn btn-default">
-								<span class="fa fa-flag"></span>
-								<?=h(ucfirst($translation['label']))?>
-							</a>
-						<? endforeach ?>
-
-					<? else: ?>
-
-						<a href="<?=h($switcherstream->getVideoUrl($proto))?>" class="btn btn-default">
-							<span class="fa fa-video-camera"></span>
-							Video
-						</a>
-
-					<? endif ?>
-				</div>
-			</div>
-		</div>
-	</div>
-							
-	<? if(!$room->h264Only()): ?>
-	<div class="directlinks">
-		<h3>Direct link to DASH-Manifest</h3>
-
-		<div class="row">
-			<div class="col-lg-3 col-md-4 col-lg-5 col-xs-12">
-
-				<div class="btn-group" role="group" title="<?=h($switcherstream->getVideoTech("dash"))?>">
-					<div class="btn btn-primary" disabled>DASH</div>
-					<a href="<?=h($room->getDashManifestUrl())?>" target="_blank" class="btn btn-default">
-						<span class="fa fa-flask"></span>
-						Manifest
+			<div class="btn-group" role="group" title="<?=h($selection->getDisplay())?>">
+				<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
+				<div class="btn">
+					<a href="<?=h($switcherstream->getVideoUrl($proto))?>" class="btn btn-default">
+						<span class="fa fa-video-camera"></span>
+						Video
 					</a>
 				</div>
-
 			</div>
 		</div>
 	</div>
-	<? endif ?>
 </div>

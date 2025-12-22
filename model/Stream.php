@@ -184,15 +184,8 @@ class Stream
 
 		return null;
 	}
-	public static function getVideoProtos($ipRanges)
+	public static function getVideoProtos()
 	{
-		if ($this->getRoom()->clientQualifiesForLowLatency($ipRanges)) {
-			return array(
-				'hlsll' => 'HLS Low-Latency',
-				'hls' => 'HLS',
-			);
-		}
-
 		return array(
 			'hls' => 'HLS',
 		);
@@ -214,9 +207,7 @@ class Stream
 	}
 	public static function getSlidesProtos()
 	{
-		return array(
-			'hls' => 'HLS',
-		);
+		return Stream::getVideoProtos();
 	}
 
 
