@@ -1,7 +1,7 @@
 #!/bin/sh
 host=localhost
 port=8000
-docker_image="php:7.4-apache"
+docker_image="php:8.4-apache"
 
 if [ -n "$2" ]
 then
