@@ -1,0 +1,132 @@
+@import "fa/font-awesome.less";
+@import "_bootstrap-selection.less";
+@import "lib/datepicker3.less";
+@import "_mejs_hacks.less";
+@import "_footer.less";
+
+@img: '../img';
+
+@grid-float-breakpoint:     @screen-xs-min;
+
+@jumbo-font-size:    52px;
+@jumbo-font-size-xs: 2.5em;
+@jumbo-line-height:  45px;
+
+@schedule-now:       @brand-danger;
+@schedule-now-bg:    fade(lighten(@brand-danger, 5%), 50%);
+@schedule-border:    lighten(@brand-primary, 50%);
+
+@schedule-room:      darken(@brand-primary, 15%);
+@schedule-author:    #444;
+
+@schedule-selected-room: lighten(@brand-success, 10%);
+
+@schedule-daychange:    darken(@brand-primary, 20%);
+@schedule-daychange-bg: fade(white, 30%);
+
+@schedule-gap:          darken(@brand-primary, 20%);
+@schedule-gap-bg:       fade(white, 30%);
+
+@schedule-pause:        white;
+@schedule-pause-bg:     #ededed;
+
+
+// website configuration styles
+
+nav {
+	.navbar-brand {
+		line-height: 27px;
+
+		.icon {
+			background-repeat: no-repeat;
+			background-image: url("@{img}/voctocat.svg");
+			background-size: 27px 27px;
+
+			float: left;
+			display: block;
+			width: 27px;
+			height: 27px;
+			margin-right: @padding-base-horizontal;
+		}
+
+		.icon when (luma(@navbar-default-bg) > 50%) {
+			background-image: url("@{img}/voctocat-inverse.svg");
+			background-size: 27px 27px;
+		}
+	}
+
+	.button-wrapper.navbar-right {
+		margin-right: 0;
+	}
+
+	.button-wrapper > .navbar-time {
+		line-height: 27px;
+		color: inherit;
+	}
+
+	.button-wrapper > .btn {
+		width: 40px;
+	}
+	.button-wrapper > .btn-ssl {
+		width: auto;
+	}
+}
+
+.preview-warning {
+	position: fixed;
+	z-index: 2000;
+	bottom: 0;
+	right: 0;
+
+	width: 190px;
+	height: 100px;
+	border-top-left-radius: 60px;
+
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+
+	padding-left: 10px;
+	padding-top: 9px;
+
+	cursor: default;
+
+	background: red;
+	color: white;
+
+	&:hover {
+		opacity: 0.25;
+	}
+}
+
+body {
+	padding: 50px 0;
+
+	@media (max-width: @grid-float-breakpoint) {
+		padding: 120px 0 30px 0;
+	}
+}
+
+
+@media (max-width: @screen-sm-min) {
+	nav {
+		position: absolute !important;
+	}
+
+	footer {
+		display: none;
+	}
+}
+
+@import "_error.less";
+@import "_overview.less";
+@import "_room.less";
+@import "_schedule.less";
+@import "_relive.less";
+@import "_multiview.less";
+@import "_closed.less";
+@import "_embed.less";
+@import "_feedback.less";
+@import "_allconferences.less";
+@import "_subtitles.less";
+@import "_voc_player.less";

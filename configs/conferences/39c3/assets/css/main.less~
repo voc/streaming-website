@@ -1,0 +1,414 @@
+//@import "../../../assets/css/_structure.less";
+@import "_structure.less";
+
+@font-face {
+	font-family: 'KarioDuplexVar';
+	src: url('assets/fonts/KarioVar-Roman.ttf') format('truetype');
+	src: url('assets/fonts/KarioVar-Roman.woff') format('woff');
+	src: url('assets/fonts/KarioVar-Roman.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'OfficerSans';
+	src: url('assets/fonts/OfficerSansWeb-Regular.woff') format('woff');
+	src: url('assets/fonts/OfficerSansWeb-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'OfficerSans';
+	font-weight: bold;
+	font-style: italic;
+	src: url('assets/fonts/OfficerSansWeb-BoldItalic.woff') format('woff');
+	src: url('assets/fonts/OfficerSansWeb-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'OfficerSans';
+	font-weight: bold;
+	src: url('assets/fonts/OfficerSansWeb-Bold.woff') format('woff');
+	src: url('assets/fonts/OfficerSansWeb-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'OfficerSans';
+	font-style: italic;
+	src: url('assets/fonts/OfficerSansWeb-RegularItalic.woff') format('woff');
+	src: url('assets/fonts/OfficerSansWeb-RegularItalic.woff2') format('woff2');
+}
+
+@color-dark: #141414;
+@color-background: @color-dark;
+@color-neutral: #faf5f5;
+@color-primary: #00ff00;
+@color-secondary: #9673ff;
+@color-additional-01: #ff3719;
+@color-additional-02: #66f2ff;
+
+@color-primary-tint-01: #009900;
+@color-primary-tint-02: #00be00;
+@color-primary-tint-03: #00d300;
+@color-primary-tint-04: #00ea00;
+@color-primary-tint-05: #a3ff90;
+@color-primary-tint-06: #ccffbe;
+@color-primary-tint-07: #ebffe5;
+
+@color-secondary-tint-01: #4d2eed;
+@color-secondary-tint-02: #5c33f4;
+@color-secondary-tint-03: #7952fe;
+@color-secondary-tint-04: #b69dfe;
+@color-secondary-tint-05: #d4c4fe;
+@color-secondary-tint-06: #efe7ff;
+
+@jumbotron-padding-y: 3rem;
+
+// often configured values (and their defaults):
+@brand-primary:         @color-primary;
+@body-bg:               @color-dark;
+@text-color:            @color-primary-tint-06;
+
+@link-color:            @color-primary-tint-04;
+@link-hover-color:      @color-primary-tint-03;
+
+@btn-default-color:     @color-primary-tint-04;
+@btn-default-bg:        @color-dark;
+@btn-default-border:    @color-primary-tint-02;
+
+@panel-default-text:    @color-primary;
+@panel-default-heading-bg:   @color-dark;
+@panel-bg:               @color-dark;
+
+@navbar-height:         70px;
+@navbar-default-bg:     transparent;
+@navbar-default-border: transparent;
+
+// colors of the schedule ("Fahrplan") widget below the video-player
+//
+//  @schedule-now:       @brand-danger;
+//  @schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
+//  @schedule-border:    lighten(@brand-primary, 50%);
+//
+//  @schedule-room:      darken(@brand-primary, 15%);
+//  @schedule-author:    #444;
+//
+//  @schedule-selected-room: lighten(@brand-success, 10%);
+//
+//  @schedule-daychange:    darken(@brand-primary, 20%);
+//  @schedule-daychange-bg: fade(white, 30%);
+//
+//  @schedule-gap:          darken(@brand-primary, 20%);
+//  @schedule-gap-bg:       fade(white, 30%);
+//
+//  @schedule-pause:        white;
+//  @schedule-pause-bg:     lighten(black, 85%);
+
+html[data-theme="dark"] {
+		@color-background: #faf5f5;
+		@color-background-tint-01: #dad5d5;
+		@text-color: #141414;
+
+		background-color: @color-background;
+		color: @text-color;
+}
+body {
+  font-family: 'OfficerSans', sans;
+}
+
+h1 {
+  color: @color-primary;
+  font-family: 'KarioDuplexVar';
+  font-weight: 100;
+}
+
+h2 {
+  font-family: 'KarioDuplexVar';
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-family: 'KarioDuplexVar';
+  font-weight: 100;
+  color: @color-primary;
+}
+
+h4 {
+  font-family: 'KarioDuplexVar';
+  font-weight: 100;
+  font-size: 1.75rem;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: @color-primary;
+}
+
+a:active {
+  color: @color-dark;
+}
+
+
+.jumbotron {
+  padding-top: @jumbotron-padding-y;
+  padding-bottom: @jumbotron-padding-y/2;
+  margin-bottom: 0;
+  color: @text-color;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: @jumbotron-padding-y * 2;
+    padding-bottom: @jumbotron-padding-y;
+  }
+}
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-family: 'KarioDuplexVar';
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 50rem;
+}
+
+.logo {
+	margin-right: auto;
+  	margin-left: auto;
+}
+
+.logo > h1 {
+	font-size: 11.3vw;
+	line-height: 1;
+}
+
+.logo > #line1 {
+	font-size: 13vw;
+}
+
+//@media (min-width: 576px) {
+//	.logo {
+//	}
+//
+//	.logo > h1 {
+//		font-size: 4.1rem;
+//		line-height: 1;
+//	}
+//
+//	.logo > #line1 {
+//	font-size: 4.7rem;
+//	}
+//}
+
+// bootstrap md 
+//@media (min-width: 768px) {
+//	.logo {
+//	}
+//
+//	.logo > h1 {
+//		font-size: 5rem;
+//		line-height: 1;
+//	}
+//
+//	.logo > #line1 {
+//	font-size: 5.7rem;
+//	}
+//}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.bg-theme {
+  background-color: @color-background;
+  color: @text-color;
+}
+
+.panel {
+    border: 0;
+  background-color: @color-background;
+  color: @text-color;
+  fill: @color-primary;
+ 
+}
+@nav-tabs-border-color:                     @color-primary;
+@nav-tabs-link-hover-border-color:          @color-primary;
+@nav-tabs-active-link-hover-bg:             @color-dark;
+@nav-tabs-active-link-hover-color:          @color-primary-tint-01;
+@nav-tabs-active-link-hover-border-color:   @color-primary;
+@nav-tabs-justified-link-border-color:            @color-primary;
+@nav-tabs-justified-active-link-border-color:     @color-primary;
+@border-radius-base: 0;
+
+//ul.nav-tabs {
+//  background-color: @color-primary;
+//  color: @text-color;
+//}
+
+.panel:hover {
+  //border: 1px solid @color-primary;
+  background-color: @color-primary !important;
+  color: @color-dark;
+  fill: transparent;
+}
+
+.panel:active {
+  border: 1px solid @color-background;
+  background-color: @color-primary !important;
+  color: @color-dark;
+  fill: @color-dark;
+}
+
+.panel-heading {
+  //border: 1px solid @color-primary;
+  //background-color: @color-primary !important;
+  //color: @color-dark !important;
+  display: grid;
+  border: none;
+  border-radius: 0;
+  grid-template-columns: auto 1.75rem;
+  font-family: 'KarioDuplexVar';
+  font-weight: 100;
+  font-size: 3em;
+  color: @color-primary;
+  margin-left: 0;
+}
+
+.panel-title {
+  margin-left: 0;
+  font-kerning: none;
+  animation: font_weight_wave 2s ease-in-out 0s infinite alternate both;
+}
+
+.panel-heading > svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.panel-heading > h4 {
+  line-height: 1; 
+}
+
+::selection {
+	background-color: @color-secondary;
+	color: @color-background;
+}
+
+@keyframes box_shadow_wave {
+	0% {
+		box-shadow: -1px -1px 0px 0px @color-primary inset;
+	}
+	25% {
+		box-shadow: 1px -1px 0px 0px @color-primary inset;
+	}
+	50% {
+		box-shadow: 1px 1px 0px 0px @color-primary inset;
+	}
+	75% {
+		box-shadow: -1px 1px 0px 0px @color-primary inset;
+	}
+	100%{
+		box-shadow: -1px -1px 0px 0px @color-primary inset;
+	}
+}
+
+.panel-body {
+  animation:box_shadow_wave ease-in-out 4s infinite;
+  height: 100%;
+  border: 1px solid @color-primary;
+  border-radius: 0;
+}
+
+@keyframes opacity_wave {
+	0% {
+		opacity: 50%;
+	}
+	50% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 50%;
+	}
+}
+
+.panel-heading > svg {
+	animation:opacity_wave ease-in-out 4s infinite;
+}
+
+@keyframes font_weight_wave {
+  from {
+    font-weight: 10;
+  }
+  to {
+    font-weight: 100;
+  }
+}
+
+.animated span {
+  font-kerning: none;
+  animation: font_weight_wave 2s ease-in-out 0s infinite alternate both;
+}
+
+.animated span:nth-child(1) { animation-delay: -0.1s; }
+.animated span:nth-child(2) { animation-delay: -0.2s; }
+.animated span:nth-child(3) { animation-delay: -0.3s; }
+.animated span:nth-child(4) { animation-delay: -0.4s; }
+.animated span:nth-child(5) { animation-delay: -0.5s; }
+.animated span:nth-child(6) { animation-delay: -0.6s; }
+.animated span:nth-child(7) { animation-delay: -0.7s; }
+.animated span:nth-child(8) { animation-delay: -0.8s; }
+.animated span:nth-child(9) { animation-delay: -0.9s; }
+.animated span:nth-child(10) { animation-delay: -1.0s; }
+.animated span:nth-child(11) { animation-delay: -1.1s; }
+.animated span:nth-child(12) { animation-delay: -1.2s; }
+.animated span:nth-child(13) { animation-delay: -1.3s; }
+.animated span:nth-child(14) { animation-delay: -1.4s; }
+.animated span:nth-child(15) { animation-delay: -1.5s; }
+.animated span:nth-child(16) { animation-delay: -1.6s; }
+.animated span:nth-child(17) { animation-delay: -1.7s; }
+.animated span:nth-child(18) { animation-delay: -1.8s; }
+.animated span:nth-child(19) { animation-delay: -1.9s; }
+.animated span:nth-child(20) { animation-delay: -2.0s; }
+.animated span:nth-child(21) { animation-delay: -2.1s; }
+.animated span:nth-child(22) { animation-delay: -2.2s; }
+.animated span:nth-child(23) { animation-delay: -2.3s; }
+.animated span:nth-child(24) { animation-delay: -2.4s; }
+.animated span:nth-child(25) { animation-delay: -2.5s; }
+.animated span:nth-child(26) { animation-delay: -2.6s; }
+.animated span:nth-child(27) { animation-delay: -2.7s; }
+.animated span:nth-child(28) { animation-delay: -2.8s; }
+.animated span:nth-child(29) { animation-delay: -2.9s; }
+.animated span:nth-child(30) { animation-delay: -3.0s; }
+.animated span:nth-child(31) { animation-delay: -3.1s; }
+.animated span:nth-child(32) { animation-delay: -3.2s; }
+.animated span:nth-child(33) { animation-delay: -3.3s; }
+.animated span:nth-child(34) { animation-delay: -3.4s; }
+.animated span:nth-child(35) { animation-delay: -3.5s; }
+.animated span:nth-child(36) { animation-delay: -3.6s; }
+.animated span:nth-child(37) { animation-delay: -3.7s; }
+.animated span:nth-child(38) { animation-delay: -3.8s; }
+
+//@media (prefers-reduced-motion: reduce) {
+//  .animation {
+//    animation: font_weight_wave 120s ease-in-out 0s infinite alternate both;
+//  }
+//
+//  .card {
+//	animation:box_shadow_wave ease-in-out 120s infinite;
+//  }
+//
+//  .card-heading > svg {
+//	animation:opacity_wave ease-in-out 0s infinite;
+//  }
+//}

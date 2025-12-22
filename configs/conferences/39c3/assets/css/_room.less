@@ -1,0 +1,100 @@
+body.room {
+	@media (min-width: @screen-sm-min) {
+		.tab-content {
+			border-left: 1px solid @nav-tabs-border-color;
+			border-bottom: 1px solid @nav-tabs-border-color;
+			border-right: 1px solid @nav-tabs-border-color;
+		}
+	}
+
+	.video.hd .player-wrap.tab-content {
+		padding: 0;
+	}
+
+	@media (max-width: @screen-md-max) {
+		.video.sd .player-wrap.tab-content {
+			padding: 0;
+		}
+	}
+
+	.player-wrap {
+		margin-bottom: 60px;
+		overflow: hidden;
+	}
+
+	.video-wrap {
+		margin: 0 auto;
+	}
+
+	.functions-wrap
+	{
+		> .tab-pane {
+			overflow: hidden;
+		}
+
+		#switcher {
+			.row {
+				margin-bottom: @padding-large-vertical;
+			}
+
+			.btn-group {
+				margin-bottom: @padding-base-vertical;
+			}
+		}
+
+		.notes.well {
+			margin-top: @padding-large-vertical;
+		}
+
+		#chat {
+			text-align: center;
+
+			> div {
+				margin: 25px;
+
+				> a {
+					font-size: 18px;
+
+					@media (min-width: @screen-sm-min) {
+						font-size: @jumbo-font-size;
+					}
+
+					&.matrixlink {
+						@matrix: #0dbd8b; // Element-Green
+						.button-variant(white; @matrix; darken(@matrix, 5%););
+					}
+					
+					&.mastodonlink {
+						@mastodon: #563ACC; // Mastodon-Purple
+						.button-variant(white; @mastodon; darken(@mastodon, 5%););
+					}
+
+					&.twitterlink {
+						@twitter: #55ACEE; // Twitter-Blue
+						.button-variant(white; @twitter; darken(@twitter, 5%););
+					}
+				}
+
+				> iframe.webchatframe {
+					width: 100%;
+					min-height: 12em;
+					height: 30vh;
+					border: 1px solid #ddd;
+				}
+			}
+		}
+
+		#feedback {
+			padding: floor(@grid-gutter-width/2) 0;
+
+			.feedback-error,
+			.feedback-thankyou {
+				font-size: @jumbo-font-size;
+				text-align: center;
+				padding: 30px;
+
+				display: none;
+			}
+		}
+	}
+}
