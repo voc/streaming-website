@@ -1,3 +1,10 @@
+<script type="text/javascript">
+	window.room = {
+		stream: "<?=h($room->getStream())?>",
+		tab: "<?=h($stream->getTab())?>",
+	};
+</script>
+
 <div class="container <?=h($stream->getTab())?> <?=h($stream->getSelection())?> <?=h($stream->getLanguage())?>">
 	<div class="row headline">
 		<div class="col-xs-12">
@@ -10,6 +17,9 @@
 			<li
 			    <? // The video tab can also be hls, so we need to check for that too ?>
 				<? if($tab->getTab() == $stream->getTab() || ($tab->getTab() == 'dash' && $stream->getTab() == 'hls')): ?>class="active"<? endif ?>
+				data-tab="<?=h($tab->getTab())?>"
+				<? // hide hlsll at first if not selected ?>
+				<? if($tab->getTab() == 'hlsll' && $stream->getTab() != 'hlsll'): ?>style="display:none"<? endif ?>
 			>
 				<a href="<?=h($tab->getLink())?>">
 					<?=h($tab->getDisplay())?>

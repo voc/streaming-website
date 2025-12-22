@@ -390,7 +390,7 @@ $(function() {
 					audioSrc = ctx.createMediaElementSource(player),
 					analyser = ctx.createAnalyser();
 
-				// we have to connect the MediaElementSource with the analyser 
+				// we have to connect the MediaElementSource with the analyser
 				audioSrc.connect(analyser);
 
 				// we could configure the analyser: e.g. analyser.fftSize (for further infos read the spec)
@@ -463,5 +463,27 @@ $(function() {
 
 	$('.embed-form').on('click', 'input[type=text]', function() {
 		$(this).select();
+	});
+});
+
+// Check hlsll availability
+$(function() {
+	if(!window.room || !window.room.stream || window.room.tab === 'hlsll')
+		return;
+
+	var checkHlsLL = function() {
+		return $.ajax({
+			url: "//livell.event.c3voc.de/hlsll/"+window.room.stream+"/index.m3u8",
+			method: 'HEAD',
+			timeout: 1000,
+		});
+	};
+
+	checkHlsLL(window.location.origin).done(function() {
+		console.log("HLS LL available");
+		$('[data-tab="hlsll"]').show();
+	}).fail(function() {
+		console.log("HLS LL not available");
+		$('[data-tab="hlsll"]').hide();
 	});
 });

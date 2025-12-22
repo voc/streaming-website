@@ -51,10 +51,10 @@ class RoomSelection
 
 			case 'music':
 				return 'Radio';
-			
+
 			case 'hls':
 				return 'HLS';
-			
+
 			case 'hlsll':
 				return 'Low-Latency HLS';
 

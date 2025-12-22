@@ -39,7 +39,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 				switch($stream->getPlayerType())
 				{
 					case 'video':
-						foreach (array("hls" => "HLS") as $proto => $display)
+						foreach ($stream->getVideoProtos() as $proto => $display)
 						{
 							$urls[$proto] = array(
 								'display' => $display,
@@ -81,7 +81,7 @@ foreach (Conferences::getActiveConferences() as $conference)
 							);
 						}
 						break;
-									
+
 					case 'dash':
 						if(!$room->h264Only()):
 							$urls['dash'] = array(
