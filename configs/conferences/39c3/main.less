@@ -76,6 +76,17 @@
 ///html/body/nav/div/div[2]/a[2]
 //html body.feedback nav.navbar.navbar-default.navbar-fixed-top div.container div.nav.navbar-right.button-wrapper a.btn.btn-default.navbar-btn.releases
 
+.navbar-brand {
+  color: @color-primary;
+  font-kerning: none;
+  font-family: 'KarioDuplexVar';
+  font-weight: 100;
+  animation: font_weight_wave 2s ease-in-out 0s infinite alternate both;
+}
+
+a .navbar-brand {
+}
+
 .navbar-btn:hover {
     background-color: @color-primary;
     border-color: @color-primary;
@@ -120,23 +131,23 @@
 
 // colors of the schedule ("Fahrplan") widget below the video-player
 //
-//  @schedule-now:       @brand-danger;
-//  @schedule-now-bg:    fade(lighten(@brand-danger, 5%), 60%);
-//  @schedule-border:    lighten(@brand-primary, 50%);
+@schedule-now:       @color-additional-01;
+@schedule-now-bg:    @color-dark;
+@schedule-border:    @color-primary;
 //
 //  @schedule-room:      darken(@brand-primary, 15%);
-//  @schedule-author:    #444;
+@schedule-author:    @color-primary-tint-05;
 //
 //  @schedule-selected-room: lighten(@brand-success, 10%);
 //
 //  @schedule-daychange:    darken(@brand-primary, 20%);
 //  @schedule-daychange-bg: fade(white, 30%);
 //
-//  @schedule-gap:          darken(@brand-primary, 20%);
-//  @schedule-gap-bg:       fade(white, 30%);
+@schedule-gap:          @color-primary-tint-05;
+@schedule-gap-bg:       @color-dark;
 //
-//  @schedule-pause:        white;
-//  @schedule-pause-bg:     lighten(black, 85%);
+//@schedule-pause:        white;
+@schedule-pause-bg:     @color-dark;
 
 html[data-theme="dark"] {
 		@color-background: #faf5f5;
