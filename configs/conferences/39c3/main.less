@@ -81,13 +81,20 @@
   font-kerning: none;
   font-family: 'KarioDuplexVar';
   font-weight: 100;
+  font-size: 1.5em;
   animation: font_weight_wave 2s ease-in-out 0s infinite alternate both;
 }
 
 a .navbar-brand {
 }
 
-.navbar-btn:hover {
+.btn-default, .btn-primary {
+    background-color: @color-dark;
+    border-color: @color-primary;
+    color: @color-primary-tint-07;
+}
+
+.btn-default:hover, .btn-primary:hover {
     background-color: @color-primary;
     border-color: @color-primary;
     color: @color-dark;
@@ -101,7 +108,7 @@ a .navbar-brand {
 @navbar-default-color: @color-primary;
 @navbar-default-link-color: @color-primary;
 @navbar-default-link-hover-bg: @color-primary;
-@navbar-default-bg:     transparent;
+@navbar-default-bg:     @color-dark;
 @navbar-default-border: transparent;
 
 @input-color: @color-primary-tint-07;
@@ -292,11 +299,31 @@ footer p {
 }
 @nav-tabs-border-color:                     @color-primary;
 @nav-tabs-link-hover-border-color:          @color-primary;
-@nav-tabs-active-link-hover-bg:             @color-dark;
-@nav-tabs-active-link-hover-color:          @color-primary-tint-01;
+
+@nav-tabs-active-link-hover-bg:             @color-primary;
+@nav-tabs-active-link-hover-color:          @color-dark;
 @nav-tabs-active-link-hover-border-color:   @color-primary;
+
 @nav-tabs-justified-link-border-color:            @color-primary;
 @nav-tabs-justified-active-link-border-color:     @color-primary;
+.nav-tabs.nav-justified a {
+    color:            @color-primary-tint-07;
+background-color:            @color-dark;
+border-color:            @color-primary;
+}
+
+.nav-tabs.nav-justified a {
+    color:            @color-primary-tint-07;
+background-color:            @color-dark;
+border-color:            @color-primary;
+}
+
+.nav-tabs.nav-justified a:hover {
+    color:            @color-dark;
+    background-color:            @color-primary;
+border-color:            @color-primary;
+}
+
 @border-radius-base: 0;
 
 //ul.nav-tabs {
@@ -371,7 +398,7 @@ footer p {
 	}
 }
 
-.panel-body {
+div.panel-body {
   animation:box_shadow_wave ease-in-out 4s infinite;
   height: 100%;
   border: 1px solid @color-primary;
