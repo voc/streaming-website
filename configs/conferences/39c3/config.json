@@ -70,7 +70,7 @@
     "rooms": [
       {
         "guid": "ba692ba3-421b-5371-8309-60acc34a3c05",
-        "name": "Saal One",
+        "name": "One",
         "slug": "one",
         "streamId": "s1",
         "streamingConfig": {
@@ -93,7 +93,7 @@
       },
       {
         "guid": "7202df07-050c-552f-8318-992f94e40ef0",
-        "name": "Saal Ground",
+        "name": "Ground",
         "slug": "ground",
         "streamId": "s2",
         "streamingConfig": {
@@ -115,7 +115,7 @@
       },
       {
         "guid": "62251a07-13e4-5a72-bb3c-8528416ee0f2",
-        "name": "Saal Zero",
+        "name": "Zero",
         "slug": "zero",
         "streamId": "s3",
         "streamingConfig": {
@@ -137,7 +137,7 @@
       },
       {
         "guid": "85a6ba5d-11d9-4efe-8d28-c5f7165a19ce",
-        "name": "Saal Fuse",
+        "name": "Fuse",
         "slug": "fuse",
         "streamId": "s4",
         "streamingConfig": {
@@ -159,7 +159,7 @@
       },
       {
         "guid": "9001b61b-b1f1-5bcd-89fd-135ed5e43e19",
-        "name": "Saal X 07",
+        "name": "Sendezentrum Bühne (Saal X 07)",
         "slug": "sendezentrum",
         "streamId": "s5",
         "streamingConfig": {
