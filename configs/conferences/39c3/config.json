@@ -1,7 +1,7 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "title": "39C3: Illegal Instructions",
+    "title": "39C3: Power Cycles",
     "acronym": "39c3",
     "description": "Live streaming from the 39th Chaos Communication Congress",
     "keywords": [
