@@ -182,7 +182,7 @@
         "guid": "ff13477b-07c6-4df9-aee7-4a2aadc59102",
         "name": "info-beamer",
         "slug": "infobeamer",
-        "streamId": "s96",
+        "streamId": "infobeamer",
         "streamingConfig": {
           "display": "info-beamer",
           "social": {
