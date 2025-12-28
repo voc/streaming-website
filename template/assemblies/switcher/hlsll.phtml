@@ -1,20 +1,18 @@
 <div class="container-fluid">
 
 	<div class="directlinks">
-		<? $proto = "hlsll"; $display ="HLS - Low Latency"; $res = "hd" ?>
-		<h4>Direct links (<?=h($display)?>)</h4>
-		<div class="row">
-			<? $selection = $room->createSelectionObject() ?>
-			<? $switcherstream = $room->createStreamObject($res) ?>
-			<div class="btn-group" role="group" title="<?=h($selection->getDisplay())?>">
-				<div class="btn btn-primary" disabled><?=h($selection->getDisplay())?></div>
-				<div class="btn">
-					<a href="<?=h($switcherstream->getVideoUrl($proto))?>" class="btn btn-default">
-						<span class="fa fa-video-camera"></span>
-						Video
-					</a>
-				</div>
-			</div>
+		<? $proto = "hlsll";
+		$display = "HLS - Low Latency";
+		$res = "hd" ?>
+		<h4>Direct links (<?= h($display) ?>)</h4>
+		<? $selection = $room->createSelectionObject() ?>
+		<? $switcherstream = $room->createStreamObject($res) ?>
+		<div class="btn-group" role="group" title="LL-HLS">
+			<div class="btn btn-primary" disabled>LL-HLS</div>
+			<a href="<?= h($switcherstream->getVideoUrl($proto)) ?>" class="btn btn-default">
+				<span class="fa fa-video-camera"></span>
+				Video
+			</a>
 		</div>
 	</div>
 </div>

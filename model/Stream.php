@@ -162,7 +162,7 @@ class Stream
 				if ($this->getRoom()->getConference()->has('cdn.hlsll_playlist_url')) {
 					return str_replace('{streamId}', $this->getRoom()->getStream(), $this->getRoom()->getConference()->get('cdn.hlsll_playlist_url'));
 				}
-				return proto().'://'.joinpath([$GLOBALS['CONFIG']['CDN'], 'hlsll', rawurlencode($this->getRoom()->getStream()).'/'.rawurlencode($this->getLanguage()).'_'.rawurlencode($selection).'.m3u8']);
+				return proto().'://'.joinpath(['livell.event.c3voc.de', 'hlsll', rawurlencode($this->getRoom()->getStream()).'/index.m3u8']);
 		}
 
 		return null;
