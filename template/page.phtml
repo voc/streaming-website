@@ -71,7 +71,7 @@
 		<link href="<?=h($assets)?>netcut/assets/style.css" rel="stylesheet">
 		<? else: ?>
 		<script type="text/javascript" src="<?=h($assets)?>mejs/mediaelement-and-player.min.js"></script>
-		<script type="text/javascript" src="<?=h($assets)?>voc-player/<?=$conference->get('PLAYER.VERSION') ?: 'player.umd.js?v=1.4.0-beta0'?>"></script>
+		<script type="text/javascript" src="<?=h($assets)?>voc-player/<?=$conference->get('PLAYER.VERSION') ?: 'player.umd.js?v=2.0.2-beta0'?>"></script>
 		<script type="text/javascript"> <!--
 			window.Clappr = window.VOCPlayer;
 			window.config = <?= json_encode($conference->getStreamingConfig(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
