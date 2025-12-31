@@ -52,7 +52,7 @@
           "title": "Startzeitpunkt der Konferenz",
           "description": "Befinden wir uns davor, wird die Closed-Seite mit einem Text der Art 'hat noch nicht angefangen' angezeigt. Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. ",
           "examples": ["2021-04-02T09:30:00+02:00"],
-          "options": {
+          "x-options": {
             "grid_columns": 2,
             "inputAttributes": {
               "placeholder": "Enter datetime"
@@ -68,7 +68,7 @@
           "type": "string",
           "format": "datetime-local",
           "examples": ["2021-04-05T18:30:00+02:00"],
-          "options": {
+          "x-options": {
             "grid_columns": 2,
             "inputAttributes": {
               "placeholder": "Enter datetime"
