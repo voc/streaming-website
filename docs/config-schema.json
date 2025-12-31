@@ -69,12 +69,10 @@
           "type": "object",
           "properties": {
             "main": {
-              "type": "string",
-              "format": "color"
+              "type": "string"
             },
             "background": {
-              "type": "string",
-              "format": "color"
+              "type": "string"
             }
           }
         },
@@ -92,7 +90,6 @@
           "title": "Räume",
           "description": "(= Audio & Video Produktionen, also auch DJ-Sets o.ä.)",
           "default": [],
-          "additionalItems": true,
           "items": {
             "anyOf": [
               {
@@ -102,7 +99,7 @@
                 "additionalProperties": false,
                 "properties": {
                   "guid": {
-                    "type": ["string", "null"],
+                    "type": "string",
                     "format": "uuid",
                     "title": "Raum GUID",
                     "description": "(aus Schedule)",
@@ -131,7 +128,7 @@
                     "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"]
                   },
                   "capacity": {
-                    "type": ["integer", "null"]
+                    "type": "integer"
                   },
                   "streamingConfig": {
                     "$ref": "#/definitions/RoomStreamingConfig"
@@ -194,26 +191,12 @@
           "title": "Globale Konfiguration für Chat",
           "properties": {
             "matrix": {
-              "$ref": "#/definitions/IrcConfig",
-              "type": ["object", "boolean"]
+              "$ref": "#/definitions/IrcConfig"
             },
             "irc": {
               "$ref": "#/definitions/IrcConfig",
               "title": "Globale Konfiguration der IRC-Links",
-              "description": "Wird dieser Block auf null gesetzt, werden keine IRC-Links mehr erzeugt. Sollen die IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem existieren sein. ggf. einfach auf true setzen.",
-              "required": ["display", "url"],
-              "properties": {
-                "url": {
-                  "title": "URL für die IRC-Links",
-                  "description": "Hierbei kann sowohl ein irc://-Link als auch ein Link zu einem WebIrc-Provider wie z.B. 'https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s' verwendet werden. %s wird durch den urlencodeten Raum-Slug ersetzt. Eine Anpassung kann ebenfalls in der Raum-Konfiguration vorgenommen werden.",
-                  "examples": ["https://webirc.hackint.org/#irc://irc.hackint.org/#36C3-%s", "ircs://irc.hackint.eu:6667/36C3-%s"]
-                },
-                "display": {
-                  "type": "string",
-                  "title": "Anzeigetext für die IRC-Links",
-                  "description": "%s wird durch den Raum-Slug ersetzt. Ist eine weitere Anpassung erfoderlich, kann ein IRC_CONFIG-Block in der Raum-Konfiguration zum Überschreiben dieser Angaben verwendet werden."
-                }
-              }
+              "description": "Wird dieser Block auf null gesetzt, werden keine IRC-Links mehr erzeugt. Sollen die IRC-Links für jeden Raum einzeln konfiguriert werden, muss dieser Block trotzdem existieren sein. ggf. einfach auf true setzen."
             }
           }
         },
@@ -230,7 +213,10 @@
               "type": "boolean"
             },
             "twitter": {
-              "type": ["boolean", "object"]
+              "anyOf": [
+                {"type": "boolean"},
+                {"type": "object"}
+              ]
             }
           },
           "examples": [
@@ -276,7 +262,6 @@
               "title": "Nur die angegebenen Räume aus dem Fahrplan beachten",
               "description": "Wird diese Option ignoriert, werden alle Räume angezeigt",
               "default": [],
-              "additionalItems": true,
               "items": {
                 "type": "string",
                 "description": "",
@@ -298,8 +283,7 @@
           "description": "Anpassung der Standard-Texte",
           "properties": {
             "banner": {
-              "type": ["string", "null"],
-              "format": "text",
+              "type": "string",
               "title": "HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)",
               "description": "wird üblicherweise für KeyVisuals oder Textmarke verwendet (vgl. Hintergrund des Sliders oben auf http://media.ccc.de/)\nDieser HTML-Block wird üblicherweise in der main.less speziell für die Konferenz umgestaltet.\nWird diese Zeile nicht konnfiguriert, wird kein Banner ausgegeben.",
               "examples": [
@@ -308,8 +292,7 @@
               ]
             },
             "footer": {
-              "type": ["string", "null"],
-              "format": "html",
+              "type": "string",
               "title": "HTML-Code für den Footer (z.B. für spezielle Attribuierung mit <a>-Tags)",
               "description": "Sollte üblicherweise nur Inline-Elemente enthalten. Wird diese Zeile gelassen, wird die Standard-Attribuierung für (c3voc.de) verwendet",
               "default": null,
@@ -319,8 +302,7 @@
             },
             "not_started": {
               "$id": "#/properties/conference/properties/streamingConfig/properties/html/properties/not_started",
-              "type": ["string", "null"],
-              "format": "textarea",
+              "type": "string",
               "title": "HTML-Code für die 'Event has not started yet' Seite",
               "description": "Ersetzt den Standardtext",
               "examples": [
@@ -330,7 +312,7 @@
           }
         },
         "extraFiles": {
-          "type": ["object", "null"],
+          "type": "object",
           "additionalProperties": true
         }
       }
@@ -455,20 +437,21 @@
           "description": "Ist dieses Option aktiviert, wird ein Embed-Tab unter dem Video angezeigt. Darüber kann der Player als iframe eingebunden werden. Wenn diese Option deaktivert ist, wird kein Embed-Tab angeboten und die URL zum Einbetten existiert nicht. Ebenso können alle Embedding-Funktionialitäten durch deaktiveren des globalen EMBED-Blocks deaktiviert werden.",
           "default": true
         },
-        "chat": {
-          "type": ["boolean", "object"],
-          "title": "Chat-Tab aktivieren/konfigurieren",
-          "description": "Ist diese Option aktiviert, wird ein Chat-Tab mit den jeweiligen Links angezeigt.",
-          "default": false,
-          "$ref": "#/definitions/ChatConfig"
-        },
-        "social": {
-          "type": ["object"],
-          "title": "Social Media konfigurieren (ebenfalls im Chat-Tab)",
-          "description": "Sind diese Optionen aktiviert, werden im Chat-Tab die jeweiligen Links angezeigt.",
-          "default": false,
-          "$ref": "#/definitions/SocialMediaConfig"
-        }
+	"chat": {
+	  "anyOf": [
+	    {"type": "boolean"},
+	    {"$ref": "#/definitions/ChatConfig"}
+	  ],
+	  "title": "Chat-Tab aktivieren/konfigurieren",
+	  "description": "Ist diese Option aktiviert, wird ein Chat-Tab mit den jeweiligen Links angezeigt.",
+	  "default": false
+	},
+	"social": {
+	  "$ref": "#/definitions/SocialMediaConfig",
+	  "title": "Social Media konfigurieren (ebenfalls im Chat-Tab)",
+	  "description": "Sind diese Optionen aktiviert, werden im Chat-Tab die jeweiligen Links angezeigt.",
+	  "default": false
+	}
       }
     },
     "TranslationConfig": {
@@ -497,7 +480,7 @@
       }
     },
     "IrcConfig": {
-      "$anyOf": [
+      "anyOf": [
         {
           "type": "boolean"
         },
@@ -530,8 +513,10 @@
           "type": "boolean"
         },
         "twitter": {
-          "type": ["boolean", "object"],
-          "$ref": "#/definitions/SocialMediaDetailConfig"
+          "anyOf": [
+            {"type": "boolean"},
+            {"$ref": "#/definitions/SocialMediaDetailConfig"}
+          ]
         }
       }
     },
