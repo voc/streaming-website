@@ -4,6 +4,7 @@ class Relive
 {
 	private $conference;
 	private $talks_by_id;
+	private $talks_by_code;
 	private $talks_by_guid;
 
 	public function __construct($conference)
@@ -77,6 +78,7 @@ class Relive
 		});
 
 		$this->talks_by_id = array();
+		$this->talks_by_code = array();
 		$this->talks_by_guid = array();
 		foreach ($talks as $talk)
 		{
@@ -90,8 +92,8 @@ class Relive
 				$talk['url'] = joinpath([
 					$this->getConference()->getSlug(),
 					'relive',
-					rawurlencode($talk['id']),
-				]);
+					rawurlencode($talk['guid'] ?? $talk['code'] ?? $talk['id']),
+				]).url_params();
 			}
 
 			if(isset($mapping[$talk['room']]))
@@ -103,6 +105,9 @@ class Relive
 
 			$this->talks_by_id[$talk['id']] = $talk;
 			$this->talks_by_guid[$talk['guid']] = $talk;
+			if (isset($talk['code'])) {
+				$this->talks_by_code[$talk['code']] = $talk;
+			}
 		}
 
 
@@ -118,9 +123,14 @@ class Relive
 		if(!isset($this->talks_by_id[$id]) && !isset($this->talks_by_guid[$id]))
 		throw new NotFoundException('Relive-Talk '.$id);
 
-		return is_numeric($id) 
-			? $this->talks_by_id[intval($id)]
-			: $this->talks_by_guid[$id];
+		if (is_numeric($id)) {
+			return $this->talks_by_id[intval($id)];
+		}
+		if (strlen($id) == 36 ) {
+			return $this->talks_by_guid[$id];
+		}
+		
+		return $this->talks_by_code[$id];
 	}
 
 	private function getScheduleToRoomMapping()
