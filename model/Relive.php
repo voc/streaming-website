@@ -83,7 +83,7 @@ class Relive
 			if($talk['status'] == 'not_running')
 				continue;
 
-			if($talk['status'] == 'released') {
+			if($talk['status'] == 'released' && !$GLOBALS['forceopen']) {
 				$talk['url'] = $talk['release_url'];
 			}
 			else {

@@ -6,7 +6,7 @@ if(!$relive->isEnabled())
 
 $talk = $relive->getTalk($_GET['id']);
 
-if($talk['status'] == 'released' && empty($_GET['redirect'])) {
+if($talk['status'] == 'released' && empty($_GET['redirect']) && !$GLOBALS['forceopen'] ) {
 	header("HTTP/1.1 301 Moved Permanently"); 
 	header('Location: ' . $talk['release_url']);
 	return;
