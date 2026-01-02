@@ -265,7 +265,7 @@ try {
 	}
 
 	// ROUTES AVAILABLE AFTER BUT NOT BEFORE THE CONFERENCE
-	else if(preg_match('@^relive/([0-9a-f-]+)$@', $route, $m))
+	else if(preg_match('@^relive/([\w-]+)$@', $route, $m))
 	{
 		$_GET = array(
 			'id' => $m[1],
@@ -274,7 +274,7 @@ try {
 	}
 
 	// ROUTES AVAILABLE AFTER BUT NOT BEFORE THE CONFERENCE
-	else if(preg_match('@^relive/([0-9]+)/cut$@', $route, $m))
+	else if(preg_match('@^relive/([\w-]+)/cut$@', $route, $m))
 	{
 		$_GET = array(
 			'id' => $m[1],
