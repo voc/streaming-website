@@ -10,5 +10,6 @@ CREATE TABLE feedback (
 	ipproto_v6 NUMERIC,
 	provider TEXT,
 	issues TEXT,
-	issuetext TEXT
+	issuetext TEXT,
+	sent NUMERIC
 );
