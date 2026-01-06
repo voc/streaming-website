@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # Port of the ruby mqttfeedback client to python using asyncio and aiomqtt
 # Sends feedback entries from the feedback sqlite database to an MQTT server
-#
-# Automatically restarts on script changes for easy deployment
 import os
 import json
 import argparse
@@ -12,10 +10,6 @@ import aiomqtt
 
 
 async def main():
-    file_path = os.path.realpath(__file__)
-    last_modified = os.path.getmtime(file_path)
-    restart = False
-
     args = parse_args()
     db = sqlite3.connect(args.file)
     db.row_factory = sqlite3.Row
@@ -25,11 +19,6 @@ async def main():
         ) as client:
             print("Service started, waiting for feedback")
             while True:
-                # Check whether our script file has changed on disk
-                current_modified = os.path.getmtime(file_path)
-                if current_modified != last_modified:
-                    restart = True
-                    break
                 feedbacks = read_feedbacks(db)
                 for feedback in feedbacks:
                     try:
@@ -45,9 +34,6 @@ async def main():
         pass
     db.close()
     print("Service stopped")
-    if restart:
-        print("Restarting Service")
-        os.execv(file_path, [file_path] + os.sys.argv[1:])
 
 
 # Read new feedback entries from the database.
