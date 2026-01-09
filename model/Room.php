@@ -11,8 +11,8 @@ class Room
 	{
 		$this->conference = $conference;
 
-		if(preg_match('/[^a-z0-9_\-]/i', $slug))
-			throw new Exception('Room Slug contains invalid Characters: "'.$slug.'"');
+		if(preg_match('/[^a-z0-9_\-]/', $slug))
+			throw new Exception('Room Slug contains invalid characters: "'.$slug.'"');
 
 		if(!$this->getConference()->hasRoom($slug))
 			throw new NotFoundException('Room '.$slug);
