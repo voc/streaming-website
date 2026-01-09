@@ -204,8 +204,11 @@ function do_download($url, $cache, $return_response = false)
 
 	$return = curl_exec($handle);
 	$info = curl_getinfo($handle);
-	curl_close($handle);
-
+	if (PHP_VERSION_ID >= 80000) {
+		unset($ch);
+	} else {
+		curl_share_close($ch);
+	}
 	// TODO: should we add proper exceptions?
 	if($info['http_code'] != 200)
 		return 'http-code = '.$info['http_code'];
@@ -244,9 +247,9 @@ function query_data($operation, $query, $variables = [], $assoc = false, $cache 
 	if (is_null($r)) {
 		throw new NotFoundException();
 	}
-	
+
 	// TODO: add error handling?
-	// TODO: should we return the cached value, when we did not get an answer? 
+	// TODO: should we return the cached value, when we did not get an answer?
 	if ($assoc) {
 		if (isset($r['data'])) {
 			return $r['data'];
