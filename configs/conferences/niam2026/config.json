@@ -14,7 +14,7 @@
       "schedule": {
         "url": "https://pretalx.news-infographics-analytics-maps.media/2026/schedule/export/schedule.xml",
         "roomfilter": [
-          "Wilhelm-von-Humboldt-Saal"
+          "humboldtsaal"
         ]
       },
       "features": {
@@ -24,7 +24,7 @@
     "rooms": [
       {
         "name": "Wilhelm-von-Humboldt-Saal",
-        "slug": "Wilhelm-von-Humboldt-Saal",
+        "slug": "humboldtsaal",
         "streamId": "niam2026",
         "guid": "7060c4f8-5065-5095-b64f-b60d63b5c67",
         "streamingConfig": {
