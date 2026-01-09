@@ -103,29 +103,28 @@
                     "format": "uuid",
                     "title": "Raum GUID",
                     "description": "(aus Schedule)",
-                    "default": "",
                     "examples": ["64f358c2-82f2-11ed-b6f2-370ab4c5fdf0"]
                   },
                   "name": {
                     "type": "string",
                     "title": "Raum Name",
                     "description": "(aus Schedule)",
-                    "default": "",
                     "examples": ["Saal 1"]
                   },
                   "slug": {
                     "type": "string",
                     "title": "Raum-Slug",
-                    "description": "Wird in den URLs oder im Feedback verwendet",
+                    "description": "Wird in den URLs oder im Feedback verwendet, wenn leer wird der Slug aus dem Raum-Namen generiert",
                     "default": "",
-                    "examples": ["halla", "vortrag", "piscopia"]
+                    "examples": ["halla", "vortrag", "piscopia"],
+                    "pattern": "^[a-z0-9-]+$"
                   },
                   "streamId": {
                     "type": "string",
                     "title": "Stream ID",
                     "description": "Der Name des Kanals im VOC Streaming CDN z.B. s1",
-                    "default": "",
-                    "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"]
+                    "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"],
+                    "pattern": "^[a-z0-9-]+$"
                   },
                   "capacity": {
                     "type": "integer"
@@ -239,7 +238,7 @@
         "schedule": {
           "type": "object",
           "title": "Konferenz-Fahrplan",
-          "required": ["url", "scale"],
+          "required": ["url"],
           "properties": {
             "url": {
               "type": "string",
@@ -506,7 +505,7 @@
       "properties": {
         "hashtag": {
           "type": "string",
-          "title": "Hashtag des Streams",
+          "title": "Hashtag der Konferenz bzw. des Raumes",
           "examples": ["#36C3", "#divocr2r"]
         },
         "mastodon":{

@@ -18,6 +18,7 @@ class ConferenceJson extends Conference
 		$this->rooms = [];
 		$acronym = isset($c->acronym) ? $c->acronym : $mandator;
 
+		$rooms = [];
 		if (isset($c->rooms)) {
 			if (is_array($c->rooms)) {
 				$rooms = $c->rooms;
@@ -29,6 +30,10 @@ class ConferenceJson extends Conference
 		foreach($rooms as $r) {
 			if (!$r) {
 				continue;
+			}
+			if (empty($r->slug)) {
+				// generate slug from room name if not set
+				$r->slug = count($rooms) == 1 ? 'live' : preg_replace('/[^a-z0-9]+/', '', strtolower($r->name));
 			}
 			$streamId = isset($r->streamId) ? $r->streamId : $r->slug;
 			$this->rooms[$r->slug] = array_merge(
@@ -57,7 +62,7 @@ class ConferenceJson extends Conference
 		if (isset($c->streamingConfig->features->relive) && $c->streamingConfig->features->relive) {
 			// TODO make configurable
 			$relive = [
-				"relive_json" => "https://cdn.c3voc.de/relive/".$acronym."/index.json"
+				"relive_json" => "https://".$GLOBALS['CONFIG']['CDN']."/relive/".$acronym."/index.json"
 			];
 		}
 
@@ -73,7 +78,7 @@ class ConferenceJson extends Conference
 						'title' 		=> $c->title,
 						'author' 		=> $c->organizer,
 						'description' 	=> $c->description,
-						'keywords'		=> isset($c->keywords) ? (is_array($c->keywords) ? implode(', ', $c->keywords) : "") : "",
+						'keywords'		=> isset($c->keywords) ? (is_array($c->keywords) ? implode(', ', $c->keywords) : null) : null,
 						"releases"		=> "https://media.ccc.de/c/".$media_slug,
 					],
 				),
