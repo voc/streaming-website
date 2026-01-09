@@ -323,26 +323,26 @@
       "description": "",
       "examples": [
         {
-          "display": "Piscopia",
-          "preview": true,
-          "stereo": false,
-          "sd_video": true,
-          "hd_video": true,
-          "slides": false,
-          "dash": true,
-          "audio": true
+          "chat": {
+            "matrix": {
+              "display": "#foobar:matrix.org",
+              "url": "https://matrix.to/#/#foobar:matrix.org"
+            }
+          }
         }
       ],
       "properties": {
         "display": {
           "type": "string",
           "title": "Anzeige-Name",
-          "description": "",
+          "description": "̈Uberschreibt den Raum-Namen in der UI",
           "default": "",
-          "examples": ["Piscopia"]
+          "examples": ["Saal 1"]
         },
         "display_short": {
-          "type": "string"
+          "type": "string",
+          "title": "Kurz-Name",
+          "description": "Kürzere Fassung des Raum-Namens in Fahrplan-Ansicht unter dem Player"
         },
         "wide": {
           "type": "boolean",
@@ -488,11 +488,17 @@
           "additionalProperties": false,
           "properties": {
             "display": {
-              "type": "string"
+              "type": "string",
+              "examples": [
+                "#foobar:matrix.org"
+              ]
             },
             "url": {
               "type": "string",
-              "format": "uri"
+              "format": "uri",
+              "examples": [
+                "https://matrix.to/#/#foobar:matrix.org"
+              ]
             }
           },
           "required": ["display", "url"]

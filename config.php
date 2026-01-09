@@ -269,7 +269,6 @@ $GLOBALS['CONFIG']['ROOM_DEFAULTS'] = array(
 	 * jeweiligen Links angezeigt.
 	 *
 	 * Ist dieses Feld auf true gesetzt, wird ein irc://-Link angezeigt.
-	 * WebIrc wird nach dem Congress nicht mehr unterstützt ;)
 	 *
 	 * Wenn diese Zeile auskommentiert oder auf false gesetzt ist,
 	 * wird kein IRC-Link angezeigt
@@ -277,7 +276,7 @@ $GLOBALS['CONFIG']['ROOM_DEFAULTS'] = array(
 	 * Ebenso können alle IRC-Links durch auskommentieren
 	 * des $CONFIG['IRC']-Blocks in der Konferenz Config deaktiviert werden
 	 */
-	'IRC' => true,
+	'IRC' => false,
 
 	/**
 	 * Twitter-Link aktivieren (boolean)
@@ -293,5 +292,5 @@ $GLOBALS['CONFIG']['ROOM_DEFAULTS'] = array(
 	 * Ebenso können alle Twitter-Links durch auskommentieren
 	 * des $CONFIG['TWITTER']-Blocks deaktiviert werden
 	 **/
-	'TWITTER' => true,
+	'TWITTER' => false,
 );
