@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "Winterkongress 2026",
+    "acronym": "dgwk2026",
+    "media_slug": "dgwk2026",
+    "description": "Der Winterkongress ist das jährliche Treffen der Digitalen Gesellschaft.",
+    "keywords": [
+    ],
+    "organizer": "Digitale Gesellschaft",
+    "start": "2026-02-20T18:30:00+01:00",
+    "end": "2026-02-21T23:00:00+01:00",
+    "time_zone_name": "Europe/Zurich",
+    "streamingConfig": {
+      "features": {
+        "relive": true,
+        "embed": true,
+        "feedback": false,
+        "releases": true,
+        "social": {
+          "hashtag": "#dgwk26",
+          "mastodon": true
+        },
+        "chat": {
+          "matrix": {
+            "display": "",
+            "url": ""
+          }
+        }
+      },
+      "schedule": {
+        "url": "https://cfp.winterkongress.ch/wk26/schedule/export/schedule.xml",
+        "scale": 7,
+        "index_offset": -1,
+        "roomfilter": [
+          "Aktionshalle",
+          "Clubraum",
+          "Fabriktheater"
+        ]
+      },
+      "html": {
+        "banner": null,
+        "footer": "\n\t\tby <a href=\"https://www.digitale-gesellschaft.ch/\">Digitale Gesellschaft</a>\n\t",
+        "not_started": null
+      },
+      "overviewPage": null,
+      "extraFiles": null
+    },
+    "rooms": [
+      {
+        "guid": "aa0b9382-6ea0-5b34-ac8e-d3e243313540",
+        "name": "Aktionshalle",
+        "slug": "5040-aktionshalle",
+        "streamId": "winterkongress1",
+        "streamingConfig": {
+          "display": "Aktionshalle",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      },
+      {
+        "guid": "a95b5928-d74c-5a3a-b0ee-708a7297b672",
+        "name": "Clubraum",
+        "slug": "5041-clubraum",
+        "streamId": "winterkongress2",
+        "streamingConfig": {
+          "display": "Clubraum",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      },
+      {
+        "guid": "f1b7f6b1-1419-5782-9be2-6a0e186fba6f",
+        "name": "Fabriktheater",
+        "slug": "5042-fabriktheater",
+        "streamId": "winterkongress3",
+        "streamingConfig": {
+          "display": "Fabriktheater",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      }
+    ]
+  }
+}
