@@ -36,7 +36,7 @@ $CONFIG['CONFERENCE'] = array(
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
@@ -101,7 +101,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	'BANNER_HTML' => "
-		<h2>Chaosradio #$EPISODE – ".strftime('%d. %B %Y', $DATE)."</h2>
+		<h2>Chaosradio #$EPISODE – ".long_date_from_timestamp($DATE)."</h2>
 		<h3>$TITLE</h3>
 	",
 

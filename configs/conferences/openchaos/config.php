@@ -94,7 +94,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
 	'BANNER_HTML' => '
-		<h2>OpenChaos – '.strftime('%d. %B %Y', $DATE).'</h2>
+		<h2>OpenChaos – '.long_date_from_timestamp($DATE).'</h2>
 		<h3>'.$TITLE.'</h3>
 		<img src="../configs/conferences/openchaos/c4-logo_transparent.svg" class="c4logo">
 	',

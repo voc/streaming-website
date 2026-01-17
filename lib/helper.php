@@ -264,3 +264,16 @@ function query_data($operation, $query, $variables = [], $assoc = false, $cache 
 		}
 	}
 }
+
+function long_date_from_timestamp($timestamp) {
+	$fmt = datefmt_create(
+    'de_DE',
+    IntlDateFormatter::LONG,
+    IntlDateFormatter::NONE,
+    'Europe/Berlin',
+	IntlDateFormatter::GREGORIAN,
+	'dd. MMMM yyyy'
+    );
+	return datefmt_format($fmt, $timestamp);
+
+}
