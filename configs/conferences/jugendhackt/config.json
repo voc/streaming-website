@@ -1,15 +1,15 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "description": "Jugend hackt Live Streaming, 2025 edition",
-    "media_slug": "jh25",
+    "description": "Jugend hackt Live Streaming, 2026 edition",
+    "media_slug": "jh26",
     "organizer": "Jugend hackt",
-    "start": "2025-11-02T12:00:00+01:00",
-    "end": "2025-11-02T18:00:00+01:00",
-    "title": "Jugend hackt Berlin 2025",
+    "start": "2026-02-08T12:00:00+01:00",
+    "end": "2026-02-08T18:00:00+01:00",
+    "title": "Jugend hackt Rhein-Neckar 2026",
     "streamingConfig": {
       "html": {
-        "footer": "by <a href='http://jugendhackt.de/'>Jugend hackt 2025</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "footer": "by <a href='http://jugendhackt.de/'>Jugend hackt 2026</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
         "banner": "<img src='/configs/conferences/jugendhackt/illustrationen.svg' class='jh-illus'>"
       },
       "features": {
@@ -22,9 +22,9 @@
     },
     "rooms": [
       {
-        "name": "Berlin",
+        "name": "Rhein-Neckar",
         "slug": "saal",
-        "streamId": "s6"
+        "streamId": "s5"
       }
     ]
   }
