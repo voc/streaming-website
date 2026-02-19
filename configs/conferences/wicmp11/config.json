@@ -1,0 +1,41 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "WICMP 11",
+    "description": "Wintergalaktischen Club Mate Party 11₍₂₎",
+    "keywords": ["WICMP"],
+    "organizer": "Bits’n’Bugs e.V.",
+    "start": "2026-02-26T15:30:00+01:00",
+    "end": "2026-03-01T16:30:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "relive": true,
+        "embed": true,
+        "feedback": false,
+        "social": {
+          "hashtag": "#wicmp11",
+          "mastodon": true
+        }
+      },
+      "schedule": {
+        "url": "https://cfp.w.icmp.camp/wicmp11/schedule/export/schedule.xml",
+        "scale": 7,
+        "index_offset": -1
+      },
+      "html": {
+        "banner": null,
+        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://w.imcp.camp/\">WICMP</a>\n\t",
+        "not_started": null
+      },
+      "extraFiles": null
+    },
+    "rooms": [
+      {
+        "guid": "4606a978-6650-5e18-bf50-ae8b363a44a2",
+        "name": "Raum Meltdown",
+        "slug": "meltdown",
+        "streamId": "s1"
+      }
+    ]
+  }
+}
