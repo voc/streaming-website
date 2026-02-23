@@ -1,0 +1,254 @@
+{
+    "conference": {
+        "title": "Chemnitzer Linux-Tage 2026",
+        "acronym": "clt26",
+        "organizer": "Chemnitzer Linux-Tage 2026",
+        "description": "",
+        "keywords": null,
+        "start": "2026-03-28T07:00:00+00:00",
+        "end": "2026-03-29T17:15:00+00:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": true,
+                "feedback": false,
+                "chat": {
+                    "irc": null,
+                    "twitter": null
+                }
+            },
+            "schedule": {
+                "url": "https://chemnitzer.linux-tage.de/schedule.xml",
+                "scale": 7,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Lecture Rooms",
+                        "items": [
+                            {
+                                "slug": "v1"
+                            },
+                            {
+                                "slug": "v2"
+                            },
+                            {
+                                "slug": "v3"
+                            },
+                            {
+                                "slug": "v4"
+                            },
+                            {
+                                "slug": "v5"
+                            },
+                            {
+                                "slug": "v6"
+                            },
+                            {
+                                "slug": "v7"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "banner": null,
+                "footer": "\n\t\tby <a href=\"https://chemnitzer.linux-tage.de/\">Chemnitzer Linux-Tage</a>, <a href=\"https://www.tu-chemnitz.de/informatik/mi/index.md\">Professur Medieninformatik</a> &amp; <a href=\"https://c3voc.de\">C3VOC</a>\n\t",
+                "not_started": null
+            },
+            "extraFiles": null
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "v1",
+                "name": "V1",
+                "streamId": "cltvideov1",
+                "streamingConfig": {
+                    "display": "V1",
+                    "stream": "cltvideov1",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "v1",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "v2",
+                "name": "V2",
+                "streamId": "cltvideov2",
+                "streamingConfig": {
+                    "display": "V2",
+                    "stream": "cltvideov2",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "v2",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "v3",
+                "name": "V3",
+                "streamId": "cltvideov3",
+                "streamingConfig": {
+                    "display": "V3",
+                    "stream": "cltvideov3",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "v3",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "v4",
+                "name": "V4",
+                "streamId": "cltvideov4",
+                "streamingConfig": {
+                    "display": "V4",
+                    "stream": "cltvideov4",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "v4",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "v5",
+                "name": "V5",
+                "streamId": "cltvideov5",
+                "streamingConfig": {
+                    "display": "V5",
+                    "stream": "cltvideov5",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "v5",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "v6",
+                "name": "V6",
+                "streamId": "cltvideov6",
+                "streamingConfig": {
+                    "display": "V6",
+                    "stream": "cltvideov6",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "v6",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            },
+            {
+                "guid": null,
+                "slug": "v7",
+                "name": "V7",
+                "streamId": "cltvideov7",
+                "streamingConfig": {
+                    "display": "V7",
+                    "stream": "cltvideov7",
+                    "preview": true,
+                    "translation": null,
+                    "sd_video": true,
+                    "hd_video": true,
+                    "dash": true,
+                    "h264_only": true,
+                    "hls": true,
+                    "slides": false,
+                    "audio": false,
+                    "music": false,
+                    "schedule": true,
+                    "schedule_name": "v7",
+                    "feedback": false,
+                    "subtitles": false,
+                    "embed": true,
+                    "irc": false,
+                    "twitter": false
+                }
+            }
+        ]
+    }
+}
