@@ -63,7 +63,7 @@
           "type": "string",
           "examples": ["Europe/Amsterdam", "Europe/Berlin"],
           "default": "Europe/Amsterdam",
-          "pattern": "^([A-Z][a-z+]/[A-Z][a-z+]|UTC)$"
+          "pattern": "^([A-Z][a-z]+/[A-Z][a-z]+|UTC)$"
         },
         "colors": {
           "type": "object",
