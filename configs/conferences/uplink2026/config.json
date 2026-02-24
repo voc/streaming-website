@@ -1,0 +1,62 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "title": "Uplink 2026",
+        "acronym": "uplink26",
+        "media_slug": "uplink26",
+        "description": "Live streaming from the Uplink 2026",
+        "keywords": [
+            "Python"
+        ],
+        "organizer": "Selfnet e.V.",
+        "start": "2026-03-06T08:00:00+02:00",
+        "end": "2026-03-08T19:00:00+02:00",
+        "time_zone_name": "Europe/Berlin",
+        "streamingConfig": {
+            "features": {
+                "relive": true,
+                "embed": true,
+                "feedback": false,
+                "releases": true,
+                "social": {
+                    "hashtag": "#uplink26",
+                    "mastodon": true
+                },
+                "chat": {}
+            },
+            "schedule": {
+                "url": "https://cfp.selfnet.de/uplink-2026/schedule/export/schedule.xml",
+                "scale": 7,
+                "index_offset": -1,
+                "roomfilter": [
+                  "Vortragssaal"
+                ]
+            },
+            "html": {
+                "banner" : "<img src='/configs/conferences/uplink2026/uplink.svg' alt='Uplink'>",
+                "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a>, <a href=\"https://chaoswest.tv/\">Chaos-West TV</a>, <a href=\"https://winkekatze.tv/\">winkekatze.tv</a> & <a href=\"https://selfnet.de/\">Selfnet e.V.</a>\n\t",
+                "not_started": null
+            }
+        },
+        "overviewPage": null,
+        "extraFiles": null,
+        "rooms": [
+            {
+                "guid": "c3352bbe-c737-40a7-bca1-aeeaffd31f2e",
+                "name": "Vortragssaal",
+                "slug": "vortragssaal",
+                "streamId": "cwtv",
+                "streamingConfig": {
+                    "display": "vortragssaal",
+                    "schedule": true,
+                    "preview": true,
+                    "translation": false,
+                    "subtitles": false,
+                    "feedback": false,
+                    "chat": {},
+                    "social": true
+                }
+            }
+        ]
+    }
+}
