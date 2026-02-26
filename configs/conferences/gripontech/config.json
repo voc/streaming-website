@@ -1,11 +1,11 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "description": "In the run-up to the 2026 municipal elections, we invite Amsterdams future politicians to discuss our digital public space.",
+    "description": "In the run-up to the 2026 municipal elections, we invite Amsterdams future politicians to discuss our digital public space. Broadcast starts at 19:30h.",
     "media_slug": "gripontech",
     "organizer": "Waag Futurelab",
-    "start": "2026-03-12T19:30:00+01:00",
-    "end": "2026-03-12T21:00:00+01:00",
+    "start": "2026-03-12T18:00:00+01:00",
+    "end": "2026-03-12T21:30:00+01:00",
     "time_zone_name": "Europe/Amsterdam",
     "title": "Amsterdam Election debate: getting a grip on tech",
     "streamingConfig": {
@@ -21,7 +21,7 @@
       {
         "name": "Waag",
         "slug": "waag",
-        "streamId": "s1"
+        "streamId": "waag"
       }
     ]
   }
