@@ -1,0 +1,149 @@
+@import "../../../assets/css/_structure.less";
+
+
+body {
+    background: linear-gradient(180deg, rgba(26, 82, 95, 1), rgba(96, 61, 85, 0.7) 100vh, rgba(26, 82, 95, 1) 75%, rgba(26, 82, 95, .7) 100%), url(noise.svg);
+    min-height: 100vh;
+    color: white;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, #schedule-event-detail-popover #modal-title {
+    color: #ef9db9;
+    background: white;
+    width: fit-content;
+    padding: 4px 10px 0px 10px;
+    font-family: "Courier Prime", monospace;
+	font-weight: bold;
+}
+
+strong, b, h4 {
+    color: white !important;
+    background: #966185;
+}
+
+h4 {
+    width: max-content;
+}
+
+a:link, a:visited, a, .navbar-brand {
+    color: #f3b539 !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(u-4n0q2lgwslOqpF_6gQ8kELawRZVsf6lvg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(u-4n0q2lgwslOqpF_6gQ8kELawRZWMf6.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(u-4i0q2lgwslOqpF_6gQ8kELawRR4-Lvp9nsBXw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(u-4i0q2lgwslOqpF_6gQ8kELawRR4-Lvqdns.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(u-450q2lgwslOqpF_6gQ8kELaw9pWt_-.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(u-450q2lgwslOqpF_6gQ8kELawFpWg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(u-4k0q2lgwslOqpF_6gQ8kELY7pMT-7fq8Ho.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(u-4k0q2lgwslOqpF_6gQ8kELY7pMT-Dfqw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 3px;
+}
+
+.navbar {
+	background: #1e5460;
+	border: none;
+}
+
+nav .navbar-brand i.icon {
+	background-image: url(logo.png) !important;
+	background-size: 65px 27px;
+	width: 65px;
+}
+
+.block.event {
+	background: #ef9db9;
+}
+
+.schedule .now .label {
+	color: black;
+}
+
+#schedule-event-detail-popover #modal-header {
+	background-color: #966185;
+}
+
+#modal-body {
+	color: black;
+}
+
+.schedule .room.highlight .block {
+    background-color: #3c534a;
+}
+
+.room.highlight h5 {
+	color: #f3b539 !important;
+}
