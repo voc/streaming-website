@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "FOSSGIS-Konferenz 2026",
+    "acronym": "fossgis2026",
+    "description": "Die FOSSGIS-Konferenz ist die deutschsprachige Konferenz zu Open-Source-GIS und OpenStreetMap. Sie findet vom 25. bis 28. März 2026 in Göttingen und im Netz statt.",
+    "keywords": [ "FOSSGIS 2026", "OpenStreetMap", "GIS", "OpenSource", "Geo" ],
+    "organizer": "FOSSGIS e.V.",
+    "start": "2026-03-25T00:08:00+01:00",
+    "end": "2026-03-28T16:00:00+01:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": true,
+        "audio": false,
+        "sd_video": false,
+        "social": {
+          "hashtag": "#fossgis2026",
+          "mastodon": true
+        }
+      },
+      "overviewPage": {},
+      "schedule": {
+        "url": "https://pretalx.com/fossgis2026/schedule/export/schedule.xml",
+        "scale": 3
+      },
+      "html": {
+        "footer": "<a href=\"https://www.fossgis-konferenz.de/2026/\">FOSSGIS-Konferenz 2026</a> by <a href=\"https://www.fossgis.de/\">FOSSGIS e.V</a> &amp; <a href=\"https://c3voc.de\">C3VOC</a>"
+      }
+    },
+    "rooms": [
+      {
+        "slug": "hs1",
+        "guid": "524fe067-6644-53c8-acee-89050c42a7d3",
+        "name": "HS1 (ZHG 011)",
+        "streamId": "s1"
+      },
+      {
+        "slug": "hs2",
+        "guid": "15fdae44-0233-5ac1-9b6f-dae6aba11a2e",
+        "name": "HS2 (ZHG 010)",
+        "streamId": "s2"
+      },
+      {
+        "slug": "hs3",
+        "guid": "abe2afea-9f28-52d5-9d83-1abff09588f4",
+        "name": "HS3 (ZHG 009)",
+        "streamId": "s3"
+      },
+      {
+        "slug": "hs4",
+        "guid": "a1aeb55c-bb50-5197-87d8-5bc80f265f13",
+        "name": "HS4 (ZHG 008)",
+        "streamId": "s4"
+      }
+    ]
+  }
+}
