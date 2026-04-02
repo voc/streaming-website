@@ -82,7 +82,7 @@ class ConferenceJson extends Conference
 						"releases"		=> "https://media.ccc.de/c/".$media_slug,
 					],
 				),
-				'schedule' => isset($c->streamingConfig->schedule) ? (array)$c->streamingConfig->schedule : [],
+				'schedule' => isset($c->streamingConfig->schedule) ? (array)$c->streamingConfig->schedule : null,
 				'rooms' => $this->rooms,
 				'overview' => [
 					'groups' => $groups
