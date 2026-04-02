@@ -1,0 +1,46 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "description": "Das 23. Easterhegg, Ostern 2026 in Koblenz",
+        "media_slug": "eh23",
+        "organizer": "eWWnt e.V. in Kooperation mit Westwoodlabs e.V. und Universität Koblenz",
+        "start": "2026-04-03T14:00:00+02:00",
+        "end": "2025-04-06T14:30:00+02:00",
+        "title": "Easterhegg 2026: The Bunny is a Lie",
+        "streamingConfig": {
+            "html": {
+                "footer": "by eWWnt e.V. &amp; <a href='https://westwoodlabs.de/'>Westwoodlabs e.V.</a> &amp; <a href='https://c3voc.de'>C3VOC</a>"
+            },
+            "schedule": {
+                "url": "https://pretalx.eh23.easterhegg.eu/eh23/schedule/export/schedule.xml",
+                "scale": 7,
+                "roomfilter": [
+                    "The Rabbit Hole",
+		    "Test Chamber 01"
+                ]
+            },
+            "features": {
+                "embed": true,
+                "feedback": true,
+                "social": {
+                    "hashtag": "#eh23",
+                    "mastodon": true
+                }
+            }
+        },
+        "rooms": [
+            {
+                "name": "Test Chamber 01",
+                "slug": "1-test-chamber-01",
+                "streamId": "s2",
+                "guid": "aa61ac8c-20c7-5986-a1ff-8bba8b11c49e"
+            },
+            {
+                "name": "The Rabbit Hole",
+                "slug": "2-the-rabbit-hole",
+                "streamId": "s1",
+                "guid": "07e1290f-3175-58b3-84a3-090cd39166be"
+            }
+        ]
+    }
+}
