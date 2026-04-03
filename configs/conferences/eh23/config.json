@@ -22,6 +22,7 @@
             "features": {
                 "embed": true,
                 "feedback": true,
+                "relive": true,
                 "social": {
                     "hashtag": "#eh23",
                     "mastodon": true
@@ -30,16 +31,16 @@
         },
         "rooms": [
             {
-                "name": "Test Chamber 01",
-                "slug": "1-test-chamber-01",
-                "streamId": "s2",
-                "guid": "aa61ac8c-20c7-5986-a1ff-8bba8b11c49e"
-            },
-            {
                 "name": "The Rabbit Hole",
-                "slug": "2-the-rabbit-hole",
+                "slug": "the-rabbit-hole",
                 "streamId": "s1",
                 "guid": "07e1290f-3175-58b3-84a3-090cd39166be"
+            },
+            {
+                "name": "Test Chamber 01",
+                "slug": "test-chamber-01",
+                "streamId": "s2",
+                "guid": "aa61ac8c-20c7-5986-a1ff-8bba8b11c49e"
             }
         ]
     }
