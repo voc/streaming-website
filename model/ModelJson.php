@@ -39,6 +39,7 @@ class ModelJson
 		if(!is_array($keychain))
 			$keychain = explode('.', $keychain);
 
+		// TODO this implementation forbids (room) slugs with uppercase characters
 		$key = strtolower($keychain[0]);
 		if (is_array($model) ? !isset($model[$key]) : !isset($model->$key))
 			return $default;

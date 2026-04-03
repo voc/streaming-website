@@ -1,6 +1,6 @@
 <?php
 
-header('Content-Type: application/json');
+$OUTPUT_JSON = true;
 
 $struct = [];
 foreach (Conferences::getActiveConferences() as $conference)
@@ -101,4 +101,5 @@ foreach (Conferences::getActiveConferences() as $conference)
 	}
 }
 
+header('Content-Type: application/json');
 echo json_encode($struct, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);

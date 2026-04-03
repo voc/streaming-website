@@ -2,6 +2,7 @@
 
 date_default_timezone_set('Europe/Berlin');
 $GLOBALS['CONFIG'] = [];
+$OUTPUT_JSON = false;
 
 /**
  * Wenn die Webseite über diese Domain aufgerufen wird,
@@ -66,7 +67,7 @@ $GLOBALS['CONFIG']['DOWNLOAD'] = [
 	 *
 	 * Auskommentieren, um alle Konferenzen zu beachten
 	 */
-	'MAX_CONFERENCE_AGE' => 365 /* Tage */,
+	'MAX_CONFERENCE_AGE' => 60 /* Tage */,
 ];
 
 $GLOBALS['CONFIG']['CDN'] = "cdn.c3voc.de";
