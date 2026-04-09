@@ -1,0 +1,64 @@
+@import "../../../assets/css/_structure.less";
+
+@glt-dark-green: #455b40;
+@glt-sun: #fff7cf;
+@glt-sunray-dark: #ffb37b;
+@glt-sunray-mid: #f2d557;
+@glt-sunray-bright: #ffe3cc;
+
+@orange: dark(@glt-sunray-dark, 10%);
+@light: fade(@glt-sunray-dark, 20%);
+@medium: #ff0000;
+@dark: @glt-dark-green;
+@bright: #dcedd5;
+
+//@text-color: @glt-dark-green;
+
+@link-color:            @dark;
+@panel-primary-border:  @dark;
+
+@panel-bg: white;
+@panel-default-heading-bg: @light;
+//@panel-default-text:       @dark;
+
+body {
+	background-image: url(bg-plain.svg), linear-gradient(to bottom right, @glt-sunray-bright, @glt-sunray-dark);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+//h1 { color: white; }
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+nav .navbar-brand .icon {
+	background-image: url(steirertux.png);
+	background-size: contain;
+}
+
+.tab-content > .active {
+    background: white;
+}
+
+.glt25 {
+    background-image: url(steirertux.png);
+	background-repeat: no-repeat;
+	background-size: 194px 240px;
+
+	position: fixed;
+	left: 10px;
+	bottom: 40px;
+
+	width: 194px;
+	height: 240px;
+
+	opacity: 0.4;
+	z-index: -100;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
+}
