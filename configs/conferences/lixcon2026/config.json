@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "LixCon 2026",
+    "acronym": "lixcon2026",
+    "description": "",
+    "organizer": "Lix Core Team, DGNum & AFNix",
+    "start": "2026-04-17T08:00:00+02:00",
+    "end": "2026-04-17T22:00:00+02:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": false,
+        "feedback": true,
+        "social": {
+          "hashtag": "#lixcon",
+          "mastodon": true
+        },
+        "chat": {
+          "matrix": false,
+          "irc": false
+        }
+      },
+      "schedule": {
+        "url": "https://pretalx.dgnum.eu/lixcon-2026/schedule/export/schedule.xml",
+        "index_offset": 0,
+        "scale": 7
+      }
+    },
+    "rooms": [
+      {
+        "guid": "4c6a19ab-b527-5b15-bfef-31e821ea155f",
+        "name": "Amphitheater Dussane",
+        "slug": "dussane",
+        "streamId": "s4",
+        "streamingConfig": {
+          "wide": true,
+          "chat": {
+            "matrix": {
+              "display": "tbd",
+              "url": "tbd"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
