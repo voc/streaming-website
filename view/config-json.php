@@ -80,7 +80,7 @@ function formatSections($pageConfig) {
 	{
 		$section = array(
 			'title' => $sectionTitle,
-			'items' => [], 
+			'items' => [],
 		);
 
 		foreach($items as $item)
@@ -90,7 +90,7 @@ function formatSections($pageConfig) {
 			);
 		}
 		$struct[] = $section;
-	}	
+	}
 	return $struct;
 }
 
@@ -119,7 +119,36 @@ if (!empty($conference)) {
 }
 else {
 	$struct = [];
-	foreach (Conferences::getActiveConferences() as $conference)
+	$conferences = [];
+	// return conferences starting after the given date if "from" parameter is provided
+	if (isset($_GET['from'])) {
+		// default long in the future
+		$to = new DateTime('now');
+		$to->add(new DateInterval('P10Y'));
+		if (isset($_GET['to'])) {
+			$to = DateTime::createFromFormat(DateTime::RFC3339, $_GET['to']);
+		}
+		if (!$to) {
+			header('HTTP/1.1 400 Bad Request');
+			echo "Invalid 'to' parameter, expected RFC3339 format\n";
+			exit;
+		}
+
+		$from = DateTime::createFromFormat(DateTime::RFC3339, $_GET['from']);
+		if (!$from) {
+			header('HTTP/1.1 400 Bad Request');
+			echo "Invalid 'from' parameter, expected RFC3339 format\n";
+			exit;
+		}
+		$conferences = array_values(array_filter(
+			Conferences::getConferencesSorted(),
+			fn($conference): bool => $from <= $conference->endsAt() && $to >= $conference->startsAt()
+		));
+	} else {
+		// return active conferences if no "from" parameter is given
+		$conferences = Conferences::getActiveConferences();
+	}
+	foreach ($conferences as $conference)
 	{
 		$struct[] = formatConference($conference);
 	}
