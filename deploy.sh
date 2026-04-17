@@ -68,26 +68,8 @@ if [ "x$DEPLOY_BRANCH" != "xmaster" ]; then
     echo ""
 fi
 
-for host in lb.alb.c3voc.de lb.dort.c3voc.de lb.wob.c3voc.de; do
+for host in lb.alb.c3voc.de lb.bre.c3voc.de lb.wob.c3voc.de; do
 echo "deploying to $host"
-ssh voc@$host 'sudo sh' << EOT
-cd /srv/nginx/streaming-website
-
-echo "updating code"
-git fetch origin
-git reset --hard HEAD
-git checkout $DEPLOY_BRANCH
-git reset --hard origin/$DEPLOY_BRANCH
-
-echo "fixing permissions"
-chown -R voc:staff .
-chown -R downloader configs
-
-echo "re-downloading schedules"
-sudo -udownloader php index.php download
-
-echo "clearing cache"
-./clear_cache
-EOT
+ssh voc@$host 'sudo systemctl restart update-streaming-website'
 echo "deploying to $host done"
 done
