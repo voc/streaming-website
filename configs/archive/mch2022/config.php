@@ -295,9 +295,9 @@ $CONFIG['SCHEDULE'] = array(
 );
 
 $CONFIG['FEEDBACK'] = array(
-    'DSN' => 'sqlite:/opt/streaming-feedback/feedback.sqlite3',
+    'DSN' => 'sqlite:/var/lib/streaming-feedback/feedback.sqlite3',
     'USERNAME' => 'katze',
-    'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
+    'PASSWORD' => trim(@file_get_contents('/var/lib/streaming-feedback/password')),
 );
 
 /**

@@ -410,7 +410,7 @@ $CONFIG['ROOMS'] = array(
 	 * zugegriffen werden.
 	 */
 //	'USERNAME' => 'katze',
-//	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
+//	'PASSWORD' => trim(@file_get_contents('/var/lib/streaming-feedback/password')),
 //);
 
 /**

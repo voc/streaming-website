@@ -389,7 +389,7 @@ $CONFIG['SCHEDULE'] = array(
 //	 * die .sqlite3-Datei schreiben darf, er muss auch im übergeordneten Order neue
 //	 * (Lock-)Dateien anlegen dürfen
 //	 */
-//	'DSN' => 'sqlite:/opt/streaming-feedback/feedback.sqlite3',
+//	'DSN' => 'sqlite:/var/lib/streaming-feedback/feedback.sqlite3',
 //
 //	/**
 //	 * Login-Daten für die /feedback/read/-Seite, auf der eingegangenes
@@ -400,7 +400,7 @@ $CONFIG['SCHEDULE'] = array(
 //	 * zugegriffen werden.
 //	 */
 //	'USERNAME' => 'katze',
-//	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
+//	'PASSWORD' => trim(@file_get_contents('/var/lib/streaming-feedback/password')),
 //);
 
 /**

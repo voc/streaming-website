@@ -12,7 +12,7 @@ $CONFIG['CONFERENCE'] = array(
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
-	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt. 
+	 * Gut-Nach-Hause-Seite sowie einem Ausblick auf die kommenden Events angezeigt.
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
@@ -395,7 +395,7 @@ $CONFIG['FEEDBACK'] = array(
 	 * die .sqlite3-Datei schreiben darf, er muss auch im übergeordneten Order neue
 	 * (Lock-)Dateien anlegen dürfen
 	 */
-	'DSN' => 'sqlite:/opt/streaming-feedback/feedback.sqlite3',
+	'DSN' => 'sqlite:/var/lib/streaming-feedback/feedback.sqlite3',
 
 	/**
 	 * Login-Daten für die /feedback/read/-Seite, auf der eingegangenes
@@ -406,7 +406,7 @@ $CONFIG['FEEDBACK'] = array(
 	 * zugegriffen werden.
 	 */
 	'USERNAME' => 'katze',
-	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
+	'PASSWORD' => trim(@file_get_contents('/var/lib/streaming-feedback/password')),
 );
 
 /**

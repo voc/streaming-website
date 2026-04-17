@@ -190,12 +190,12 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
 				'DASH' => true,
-				'AUDIO' => true,				
+				'AUDIO' => true,
 				'MUSIC' => false,
 				'SCHEDULE' => true,
 				'SCHEDULE_NAME' => 'Borg',
@@ -221,12 +221,12 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
 				'DASH' => true,
-				'AUDIO' => true,				
+				'AUDIO' => true,
 				'MUSIC' => false,
 				'SCHEDULE' => true,
 				'SCHEDULE_NAME' => 'Clarke',
@@ -253,12 +253,12 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
 				'DASH' => true,
-				'AUDIO' => true,				
+				'AUDIO' => true,
 				'MUSIC' => false,
 				'SCHEDULE' => true,
 				'SCHEDULE_NAME' => 'Dijkstra',
@@ -285,12 +285,12 @@ $CONFIG['ROOMS'] = array(
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 					['endpoint' => 'translated-2', 'label' => 'Translated2']
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'SLIDES' => true,
 				'DASH' => true,
-				'AUDIO' => true,				
+				'AUDIO' => true,
 				'MUSIC' => false,
 				'SCHEDULE' => true,
 				'SCHEDULE_NAME' => 'Eliza',
@@ -316,7 +316,7 @@ $CONFIG['ROOMS'] = array(
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,
@@ -340,7 +340,7 @@ $CONFIG['ROOMS'] = array(
 					'URL'     => 'https://webirc.hackint.org/#irc://irc.hackint.org/#chaoswest-stage',
 				),
 			),
-		
+
 			'wikipakawg' => array(
 				'DISPLAY' => 'WikiPakaWG Esszimmer',
 				'DISPLAY_SHORT' => 'WikiPakaWG',
@@ -349,7 +349,7 @@ $CONFIG['ROOMS'] = array(
 				'TRANSLATION' => [
 					['endpoint' => 'translated',   'label' => 'Translated1'],
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,
@@ -368,7 +368,7 @@ $CONFIG['ROOMS'] = array(
 					'TEXT'    => '#wikipakaWG',
 				),
 			),
-		
+
 			'oio' => array(
 				'DISPLAY' => 'Open Infrastructure Orbit',
 				'DISPLAY_SHORT' => 'OIO',
@@ -376,7 +376,7 @@ $CONFIG['ROOMS'] = array(
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,
@@ -430,7 +430,7 @@ $CONFIG['ROOMS'] = array(
 				'PREVIEW' => true,
 				'TRANSLATION' => [
 				],
-		
+
 				'SD_VIDEO' => true,
 				'HD_VIDEO' => true,
 				'DASH' => true,
@@ -449,7 +449,7 @@ $CONFIG['ROOMS'] = array(
 					'TEXT'    => '@sendezentrum',
 				),
 			),
-			
+
 );
 
 /**
@@ -504,7 +504,7 @@ $CONFIG['FEEDBACK'] = array(
 	 * die .sqlite3-Datei schreiben darf, er muss auch im übergeordneten Order neue
 	 * (Lock-)Dateien anlegen dürfen
 	 */
-	'DSN' => 'sqlite:/opt/streaming-feedback/feedback.sqlite3',
+	'DSN' => 'sqlite:/var/lib/streaming-feedback/feedback.sqlite3',
 
 	/**
 	 * Login-Daten für die /feedback/read/-Seite, auf der eingegangenes
@@ -515,7 +515,7 @@ $CONFIG['FEEDBACK'] = array(
 	 * zugegriffen werden.
 	 */
 	'USERNAME' => 'katze',
-	'PASSWORD' => trim(@file_get_contents('/opt/streaming-feedback/feedback-password')),
+	'PASSWORD' => trim(@file_get_contents('/var/lib/streaming-feedback/password')),
 );
 
 /**
