@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "Libre Graphics Meeting 2026",
+    "acronym": "lgm2026",
+    "media_slug": "lgm2026",
+    "description": "Live streaming from the Libre Graphics Meeting 2026",
+    "keywords": ["Graphics"],
+    "organizer": "Libre Graphics Meeting",
+    "start": "2026-04-22T12:00:00+02:00",
+    "end": "2026-04-25T19:00:00+02:00",
+    "time_zone_name": "Europe/Berlin",
+    "streamingConfig": {
+      "features": {
+        "relive": true,
+        "embed": true,
+        "feedback": false,
+        "releases": true,
+        "social": {
+          "hashtag": "#lgm26",
+          "mastodon": true
+        },
+        "chat": {}
+      },
+      "schedule": {
+        "url": "https://pretalx.c3voc.de/lgm-2026/schedule/export/schedule.xml",
+        "scale": 7,
+        "roomfilter": ["Zollhaus"]
+      },
+      "html": {
+        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a>, <a href=\"https://chaoswest.tv/\">Chaos-West TV</a>, <a href=\"https://winkekatze.tv/\">winkekatze.tv</a>\n\t",
+        "not_started": null
+      }
+    },
+    "overviewPage": null,
+    "extraFiles": null,
+    "rooms": [
+      {
+        "guid": "903ae83d-8e1a-5b45-b3f3-2b9abea83bfc",
+        "name": "Zollhaus",
+        "slug": "zollhaus",
+        "streamId": "cwtv",
+        "streamingConfig": {
+          "display": "Zollhaus",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      }
+    ]
+  }
+}
