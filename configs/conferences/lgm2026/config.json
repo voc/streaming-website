@@ -37,11 +37,11 @@
     "rooms": [
       {
         "guid": "903ae83d-8e1a-5b45-b3f3-2b9abea83bfc",
-        "name": "Zollhaus",
-        "slug": "zollhaus",
+        "name": "Zollhof",
+        "slug": "zollhof",
         "streamId": "cwtv",
         "streamingConfig": {
-          "display": "Zollhaus",
+          "display": "Zollhof",
           "schedule": true,
           "preview": true,
           "translation": false,
