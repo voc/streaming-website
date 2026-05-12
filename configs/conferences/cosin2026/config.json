@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "Chaos Singularity 2026",
+    "acronym": "cosin2026",
+    "media_slug": "cosin2026",
+    "description": "Die Chaos Singularity ist eine Mischung aus technisch-gesellschaftlichem Kongress, kreativem Beisammensein und Hacker*innen-Familientreffen.",
+    "keywords": [
+    ],
+    "organizer": "Chaos Computer Club Schweiz (CCC-CH)",
+    "start": "2026-06-12T19:00:00+02:00",
+    "end": "2026-06-14T15:00:00+02:00",
+    "time_zone_name": "Europe/Zurich",
+    "streamingConfig": {
+      "features": {
+        "relive": false,
+        "embed": true,
+        "feedback": false,
+        "releases": true,
+        "social": {
+          "hashtag": "#cosin2026",
+          "mastodon": true
+        },
+        "chat": {
+          "matrix": {
+            "display": "",
+            "url": ""
+          }
+        }
+      },
+      "schedule": {
+        "url": "https://pretalx.chaostreff.ch/cosin-2026/schedule/export/schedule.xml",
+        "scale": 7,
+        "index_offset": -1,
+        "roomfilter": [
+          "Lecture Room"
+        ]
+      },
+      "html": {
+        "banner": null,
+        "footer": "\n\t\tChaos Singularity by <a href=\"https://ccc-ch.ch/\">Chaos Computer Club Schweiz</a>\n\t",
+        "not_started": null
+      },
+      "overviewPage": null,
+      "extraFiles": null
+    },
+    "rooms": [
+      {
+        "guid": "ab4a6856-ece0-4799-8ef6-6841b412a08a",
+        "name": "Lecture Room",
+        "slug": "6-lecture-room",
+        "streamId": "cosin1",
+        "streamingConfig": {
+          "display": "Lecture Room",
+          "schedule": true,
+          "preview": true,
+          "translation": false,
+          "subtitles": false,
+          "feedback": false,
+          "chat": {},
+          "social": true
+        }
+      }
+    ]
+  }
+}
