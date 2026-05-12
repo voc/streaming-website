@@ -44,7 +44,7 @@
       {
         "guid": "a69f9377-8eb2-5bfd-ab1f-8f00a1807821",
         "name": "ENUM",
-        "slug": "ENUM",
+        "slug": "enum",
         "streamId": "tdf_enum",
         "streamingConfig": {
           "display": "ENUM",
@@ -60,7 +60,7 @@
       {
         "guid": "095dea89-e024-57b6-994e-13a93ee5014d",
         "name": "BOOL",
-        "slug": "BOOL",
+        "slug": "bool",
         "streamId": "tdf_bool",
         "streamingConfig": {
           "display": "BOOL",
