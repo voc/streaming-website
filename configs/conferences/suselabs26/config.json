@@ -1,0 +1,72 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "title": "SUSE Labs Conference 2026",
+        "acronym": "suselabs26",
+        "organizer": "SUSE",
+        "description": "SUSE Labs Conference 2026",
+        "keywords": [
+            "SUSE",
+            "SUSE Labs",
+            "2026",
+            "Video",
+            "Media",
+            "Streaming"
+        ],
+        "start": "2026-05-18T08:00:00+02:00",
+        "end": "2026-05-20T20:00:00+02:00",
+        "streamingConfig": {
+            "features": {
+                "embed": true,
+                "relive": false,
+                "releases": false,
+                "feedback": false,
+                "social": {
+                    "hashtag": "#suselabs26",
+                    "mastodon": false
+                }
+            },
+            "schedule": {
+                "url": "",
+                "roomfilter": [
+                    "Track 1",
+                    "Track 2"
+                ],
+                "scale": 2,
+                "simulate_offset": 0
+            },
+            "overviewPage": {
+                "sections": [
+                    {
+                        "title": "Rooms",
+                        "items": [
+                            {
+                                "slug": "track1"
+                            },
+                            {
+                                "slug": "track2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "html": {
+                "footer": "by <a href=\"https://c3voc.de\">C3VOC</a>"
+            }
+        },
+        "rooms": [
+            {
+                "guid": null,
+                "slug": "track1",
+                "name": "Track 1",
+                "streamId": "suselabs1"
+            },
+            {
+                "guid": null,
+                "slug": "track2",
+                "name": "Track 2",
+                "streamId": "suselabs2"
+            }
+        ]
+    }
+}
