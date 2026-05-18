@@ -1,4 +1,4 @@
-name: validate & sync
+name: validate
 
 on:
   workflow_dispatch:
@@ -23,30 +23,10 @@ jobs:
       with:
         files: |
           configs/conferences/**/config.json
-    
+
     - name: Validate json files
       if: steps.check-for-changed-configs.outputs.any_changed == 'true'
       uses: dsanders11/json-schema-validate-action@v1.2.0
       with:
         schema: docs/config-schema.json
         files: configs/conferences/**/config.json 
-
-  mirror:
-    runs-on: ubuntu-latest
-    if: ${{ github.ref != 'refs/heads/master' || (github.event_name == 'push' && contains(github.event.head_commit.message, 'Merge pull request')) }}
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-
-    - name: Mirror to VOC forgejo
-      env: 
-        secrets_available:  ${{ secrets.SSH_PRIVATE_KEY }} != ''
-      if: ${{ env.secrets_available }}
-      uses: pixta-dev/repository-mirroring-action@v1.1.1
-      with:
-        target_repo_url:
-          ssh://forgejo.c3voc.de/voc/streaming-website.git
-        ssh_username: forgejo
-        ssh_private_key:
-          ${{ secrets.SSH_PRIVATE_KEY }}
