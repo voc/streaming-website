@@ -166,12 +166,14 @@ try {
 			exit;
 		}
 	}
-	else if(false && !Conferences::exists($mandator))
+	else if(!Conferences::exists($mandator))
 	{
-		// old url OR wrong client OR
-		// -> error
-		require('view/404.php');
-		exit;
+		// of mandator is asm26, and this folder does not exist check if generic asm folder exists
+		// remove all numeric characters from the mandator and check if it matches a folder name
+		$real_mandator = preg_replace('/[0-9]+$/', '', $mandator);
+		if ( Conferences::exists($real_mandator) ) {
+			$mandator = $real_mandator;
+		}	
 	}
 	else {
 		// fallthrough through to the main mandator-based routes
