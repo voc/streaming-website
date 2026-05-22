@@ -173,6 +173,12 @@
           "description": "Wird diese Option deaktivert, wird die UI für temporäre Mitschnitte nicht angezeigt",
           "default": false
         },
+        "releases": {
+          "type": "boolean",
+          "title": "Releases aktiv",
+          "description": "Wird diese Option deaktivert, wird der 'Releases'-Button auf der Startseite nicht angezeigt",
+          "default": true
+        },
         "embed": {
           "type": "boolean",
           "title": "Embedding",

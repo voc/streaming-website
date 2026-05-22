@@ -33,7 +33,7 @@ echo
 DEPLOY_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
 # Fetch all remotes so we know what's actually on there. This is helpful
-# if people have configured gitolite and github.
+# if people have configured forgejo and github.
 git fetch --all
 
 echo
