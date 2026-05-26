@@ -22,7 +22,7 @@
 		<? $rooms = $schedule->getSchedule() ?>
 		<? foreach($rooms as $roomname => $events): ?>
 			<? $scheduleRoom = $schedule->getMappedRoom($roomname) ?>
-			<div class="room <? if(isset($room) && ($roomname == $room->getScheduleName() ||  ($scheduleRoom && $scheduleRoom->getId() === $room->getId()))): ?>highlight<? endif ?>" style="width: <?= h($totalWidth) ?>px">
+			<div class="room <? if(isset($room) && ($roomname == $room->getScheduleName() || ($scheduleRoom && !is_null($scheduleRoom->getId()) && $scheduleRoom->getId() === $room->getId()))): ?>highlight<? endif ?>" style="width: <?= h($totalWidth) ?>px">
 				<? $fromstart = 0; ?>
 				<? foreach($events as $event): ?>
 					<? $special = $event['special'] ?? ''; ?>
