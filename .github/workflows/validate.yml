@@ -15,7 +15,7 @@ jobs:
         fetch-depth: 0
 
     - name: PHP Lint
-      uses: michaelw90/PHP-Lint@2.1.0
+      uses: voc/PHP-Lint@v1.0.0
 
     - name: Check for any changed config.json files
       id: check-for-changed-configs
@@ -29,4 +29,4 @@ jobs:
       uses: dsanders11/json-schema-validate-action@v1.2.0
       with:
         schema: docs/config-schema.json
-        files: configs/conferences/**/config.json 
+        files: configs/conferences/**/config.json
