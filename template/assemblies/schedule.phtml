@@ -30,6 +30,7 @@
 					<? $event_guid = $event['guid'] ?? ''; ?>
 					<? $event_url = $event['url'] ?? ''; ?>
 					<? $json_event_title = str_replace(array('\\', '"', "'"), array('\\\\', '\\x22', '\\x27'), $event['title'] ?? ''); ?>
+					<? $json_event_html_title = str_replace(array('\\', '"', "'"), array('\\\\', '\\"', '\''), $event['title'] ?? ''); ?>
 					<div
 						class="block <?=h($special ?: 'event')?> <?=h($event_is_optout ? 'optout' : '')?>"
 						style="width: <?=h(round($event['duration'] / $schedule->getScale()))?>px; left: <?=h(round($fromstart / $schedule->getScale()))?>px"
@@ -74,7 +75,7 @@
 										<?=h($scheduleRoom ? $scheduleRoom->getDisplayShort() : $roomname) ?>
 									</h4>
 								<? endif ?>
-								<h3 title="<?=$json_event_title?>">
+								<h3 title="<?=$json_event_html_title?>">
 									<?=h($event['title'])?><? if ($event_is_optout): ?><i> (no recording)</i><? endif ?>
 								</h3>
 								<? if(! empty(trim($event['speaker']))): ?>
