@@ -10,7 +10,7 @@
         "streamingConfig": {
             "html": {
                 "footer": "by <a href='https://jugendhackt.de/'>Jugend hackt 2026</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
-                "banner": "<img src='/configs/conferences/jugendhackt/illustrationen.svg' class='jh-illus'>"
+                "banner": "<img src='/configs/conferences/jugendhackt/logo.svg' class='jh-illus'>"
             },
             "features": {
                 "social": {

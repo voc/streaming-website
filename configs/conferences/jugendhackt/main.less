@@ -26,6 +26,8 @@
 @light-grey: lighten(@darker-grey, 20%);
 @lighter-grey: lighten(@darker-grey, 30%);
 
+@white: #fff;
+
 
 // often configured values (and their defaults):
 //
@@ -35,10 +37,14 @@
 @link-color: @body-text;
 @link-hover-color: @lighter-grey;
 
-// @navbar-height:         70px;
+@navbar-height: 70px;
 
-@navbar-default-bg: @light-grey;
-@navbar-default-border: @light-grey;
+@media (max-width: @screen-sm-min) {
+	@navbar-height: 50px;
+}
+
+@navbar-default-bg: @white;
+@navbar-default-border: @white;
 
 @navbar-default-link-color: @pw-color;
 @navbar-default-link-hover-color: @link-hover-color;
@@ -232,9 +238,13 @@ body.room .tab-content {
 }
 
 img.jh-illus {
-	height: 100px;
+	height: calc(@navbar-height * 1.515);
 	position: absolute;
-	top: 50px;
-	left: 10px;
-	z-index: -100;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
 }
