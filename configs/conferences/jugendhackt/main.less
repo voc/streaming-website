@@ -42,6 +42,10 @@
 @link-color: @body-text;
 @link-hover-color: @slate-gray;
 
+@nav-tabs-border-color: #000;
+@nav-tabs-active-link-hover-border-color: #000;
+@nav-tabs-justified-link-border-color: #000;
+
 @navbar-height: 70px;
 
 @media (max-width: @screen-sm-min) {
@@ -221,27 +225,27 @@ div.group-live {
 	text-decoration: underline;
 }
 
-/*.alert {
+.alert {
 	a {
 		text-decoration: underline;
 	}
 
 	&.alert-success a {
-		color: @state-success-text;
+		color: @emerald-green;
 	}
 
 	&.alert-info a {
-		color: @state-info-text;
+		color: @sky-blue;
 	}
 
 	&.alert-warning a {
-		color: @state-warning-text;
+		color: @yellow;
 	}
 
 	&.alert-danger a {
-		color: @state-danger-text;
+		color: @red;
 	}
-}*/
+}
 
 body.multiview .cell {
 	color: black;
@@ -268,7 +272,8 @@ footer {
 }
 
 .nav-tabs > li.active > a {
-	color: @pw-color
+	color: @pw-color;
+	background-color: @accent !important;
 }
 
 .nav-tabs > li > a {
