@@ -39,6 +39,7 @@
     <g
        id="g39644"
        transform="translate(970,654)">
+      <!--Change the color of the logo here -->
       <path
          d="M 0,208 V 69.33606 H 788.64648 V 0 L 858,69.33606 V 208 Z"
          style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"

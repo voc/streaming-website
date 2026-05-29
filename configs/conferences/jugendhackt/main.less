@@ -1,5 +1,6 @@
 @import "../../../assets/css/_structure.less";
 
+@white: #ffffff;
 @ivory: #fffff0;
 @yellow: #FFFF00;
 @orange: #FFA500;
@@ -27,27 +28,19 @@
 
 // conference specific styles here
 @pw-color: black;
-@accent: @accent-softgreen; // change to your city here
+@accent: @bright-blue;
 
 @body-text: @pw-color;
 
 @overview-color: @pw-color;
 
-@darker-grey: #52575b;
-@dark-grey: lighten(@darker-grey, 10%);
-@light-grey: lighten(@darker-grey, 20%);
-@lighter-grey: lighten(@darker-grey, 30%);
-
-@white: #fff;
-
-
 // often configured values (and their defaults):
 //
-@brand-primary: @darker-grey;
+@brand-primary: @accent;
 @text-color: @body-text;
 
 @link-color: @body-text;
-@link-hover-color: @lighter-grey;
+@link-hover-color: @slate-gray;
 
 @navbar-height: 70px;
 
@@ -120,8 +113,7 @@ nav {
 .room {
 	h1 {
 		font-weight: bold;
-		margin: 40px 0 20px 0;
-		color: @accent;
+		margin: @navbar-height 0 20px 0;
 	}
 }
 
@@ -129,9 +121,28 @@ nav {
 	h1, h2 {
 		font-weight: bold;
 
-		margin: 40px 0 20px 0;
-		color: @accent;
+		margin: 20px 0 20px 0;
 	}
+}
+
+div.room {
+	background: @bright-blue;
+	color: @ivory;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+div.recordings {
+	background: @hot-pink;
+	color: @ivory;
+}
+
+div.group-live {
+	background: @red;
+}
+
+.show-inactive-toggle {
+	margin: 8px 0;
 }
 
 .room, .recordings, .recording {
@@ -140,28 +151,54 @@ nav {
 		color: @overview-color;
 	}
 
+	.panel-default {
+		border: none;
+	}
+
+	.panel-primary {
+		background-color: @light-violet;
+		color: @overview-color;
+		border-radius: 0;
+		border: none;
+
+		& > .panel-body {
+			padding: 0;
+
+			& > a {
+				padding: 8px 12px;
+			}
+		}
+
+		a {
+			color: @overview-color;
+		}
+	}
+}
+
+.room {
 	.panel {
-		//background: none;
-		background-color: @lighter-grey;
-		border: 1px solid @dark-grey;
+		background-color: @orange;
+		color: @black;
+		margin-bottom: 0;
+		border-radius: 0;
 
 		&:hover {
 			text-decoration: none;
-			background-color: @dark-grey;
+			background-color: darken(@orange, 10);
 		}
 
 		.panel-title {
 			font-size: 25px;
-			color: @overview-color;
+			color: @black;
 		}
 
-		.panel-primary {
-			background-color: @lighter-grey;
-			border-color: @lighter-grey;
-			color: @overview-color;
+		.panel-body {
+			background-color: @blue;
+			color: @white;
 
-			a {
-				color: @overview-color;
+			&:hover {
+				text-decoration: none;
+				background-color: darken(@blue, 10);
 			}
 		}
 
@@ -170,12 +207,8 @@ nav {
 			display: block !important;
 			font-weight: bold;
 			padding: 8px 15px;
-
-			a {
-				color: @overview-color;
-			}
+			border: none;
 		}
-
 	}
 }
 
@@ -184,7 +217,7 @@ nav {
 }
 
 .well a {
-	color: @dark-grey;
+	color: @slate-gray;
 	text-decoration: underline;
 }
 
@@ -225,13 +258,13 @@ body.multiview .cell {
 
 
 footer {
-	background-color: @darker-grey;
-	color: lightgrey;
+	background-color: @slate-gray;
+	color: @ivory;
 }
 
 .nav-tabs.nav-justified > .active > a {
-	border: 1px solid @dark-grey;
-	background-color: white;
+	background-color: @white;
+	border: 1px solid @slate-gray;
 }
 
 .nav-tabs > li.active > a {
@@ -239,14 +272,14 @@ footer {
 }
 
 .nav-tabs > li > a {
-	background-color: white;
+	background-color: @white;
 }
 
 body.room .tab-content {
-	background-color: @lighter-grey;
-	border-left: 1px solid @dark-grey;
-	border-bottom: 1px solid @dark-grey;
-	border-right: 1px solid @dark-grey;
+	background-color: @light-gray;
+	border-left: 1px solid @slate-gray;
+	border-bottom: 1px solid @slate-gray;
+	border-right: 1px solid @slate-gray;
 }
 
 img.jh-illus {
