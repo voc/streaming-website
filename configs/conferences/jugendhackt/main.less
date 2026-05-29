@@ -1,51 +1,74 @@
 @import "../../../assets/css/_structure.less";
 
 // accent/ brand colors of the different cities
-@accent-softblue:       #00a6de;  // Jugend hackt Logo
-@accent-softgreen:      #00b48d;  // Hamburg, MV
-@accent-softorange:     #f3971b;  // Dresden
-@accent-softpurple:     #51509d;  // Frankfurt
-@accent-softred:        #e6414a;  // Halle
-@accent-deepblue:       #00498c;  // Berlin
-@accent-deepgreen:      #4cad37;  // AT/Linz
-@accent-deeporange:     #ea680c;  // Rhein-Neckar, München, Ulm
-@accent-deeppurple:     #4c2582;  // Köln
-@accent-deepred:        #e52420;  // CH/Zürich
-@accent-pink:           #e95197;  // kein Event
+@accent-softblue: #00a6de; // Jugend hackt Logo
+@accent-softgreen: #00b48d; // Hamburg, MV
+@accent-softorange: #f3971b; // Dresden
+@accent-softpurple: #51509d; // Frankfurt
+@accent-softred: #e6414a; // Halle
+@accent-deepblue: #00498c; // Berlin
+@accent-deepgreen: #4cad37; // AT/Linz
+@accent-deeporange: #ea680c; // Rhein-Neckar, München, Ulm
+@accent-deeppurple: #4c2582; // Köln
+@accent-deepred: #e52420; // CH/Zürich
+@accent-pink: #e95197; // kein Event
 
 // conference specific styles here
-@pw-color:     black;
-@accent:       @accent-softgreen;  // change to your city here
+@pw-color: black;
+@accent: @accent-softgreen; // change to your city here
 
-@body-text:     @pw-color;
+@body-text: @pw-color;
 
 @overview-color: @pw-color;
 
-@darker-grey:   #52575b;
-@dark-grey:     lighten(@darker-grey, 10%);
-@light-grey:    lighten(@darker-grey, 20%);
-@lighter-grey:  lighten(@darker-grey, 30%);
+@darker-grey: #52575b;
+@dark-grey: lighten(@darker-grey, 10%);
+@light-grey: lighten(@darker-grey, 20%);
+@lighter-grey: lighten(@darker-grey, 30%);
 
 
 // often configured values (and their defaults):
 //
-@brand-primary:         @darker-grey;
-@text-color:            @body-text;
+@brand-primary: @darker-grey;
+@text-color: @body-text;
 
-@link-color:            @body-text;
-@link-hover-color:      @lighter-grey;
+@link-color: @body-text;
+@link-hover-color: @lighter-grey;
 
 // @navbar-height:         70px;
 
-@navbar-default-bg:     @light-grey;
+@navbar-default-bg: @light-grey;
 @navbar-default-border: @light-grey;
 
 @navbar-default-link-color: @pw-color;
 @navbar-default-link-hover-color: @link-hover-color;
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('/configs/conferences/jugendhackt/SourceSansPro-Regular.ttf.woff2') format('woff2');
+	font-family: 'Geist';
+	src: url('/configs/conferences/jugendhackt/Geist-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geist';
+	src: url('/configs/conferences/jugendhackt/Geist-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geist Mono';
+	src: url('/configs/conferences/jugendhackt/GeistMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geist Mono';
+	src: url('/configs/conferences/jugendhackt/GeistMono-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
 }
 
 body {
@@ -54,12 +77,22 @@ body {
 	background-attachment: fixed;
 	background-size: 100%;
 	padding: @navbar-height 0;
-	font-family: "Source Sans Pro","Noto Sans",Arial,sans-serif;
-    font-size: 16px
+	font-family: "Geist", "Noto Sans", Arial, sans-serif;
+	font-size: 16px
 }
 
 h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: 'Geist Mono', 'monospace', system-ui;
 	font-weight: bold;
+}
+
+nav {
+	.navbar-brand {
+		.icon {
+			background: url('/configs/conferences/jugendhackt/alpaka.svg') center no-repeat;
+			background-size: contain;
+		}
+	}
 }
 
 .group-live {
@@ -80,50 +113,52 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 
 		margin: 40px 0 20px 0;
 		color: @accent;
-    }
+	}
 }
 
 .room, .recordings, .recording {
-    a, a:hover {
-        text-decoration: none;
-        color: @overview-color;
-    }
+	a, a:hover {
+		text-decoration: none;
+		color: @overview-color;
+	}
 
-    .panel {
-        //background: none;
-        background-color: @lighter-grey;
-        border: 1px solid @dark-grey;
+	.panel {
+		//background: none;
+		background-color: @lighter-grey;
+		border: 1px solid @dark-grey;
 
-        &:hover {
-            text-decoration: none;
-            background-color: @dark-grey;
-        }
+		&:hover {
+			text-decoration: none;
+			background-color: @dark-grey;
+		}
 
-        .panel-title {
-            font-size: 25px;
-            color: @overview-color;
-        }
+		.panel-title {
+			font-size: 25px;
+			color: @overview-color;
+		}
 
-        .panel-primary {
-            background-color: @lighter-grey;
-            border-color: @lighter-grey;
-            color: @overview-color;
-            a {
-                color: @overview-color;
-            }
-        }
+		.panel-primary {
+			background-color: @lighter-grey;
+			border-color: @lighter-grey;
+			color: @overview-color;
 
-        .panel-heading {
-            background: none;
-            display: block !important;
-            font-weight: bold;
-            padding: 8px 15px;
-            a {
-                color: @overview-color;
-            }
-        }
+			a {
+				color: @overview-color;
+			}
+		}
 
-    }
+		.panel-heading {
+			background: none;
+			display: block !important;
+			font-weight: bold;
+			padding: 8px 15px;
+
+			a {
+				color: @overview-color;
+			}
+		}
+
+	}
 }
 
 .overview .room-group-live-music .room .panel .panel-body {
@@ -134,19 +169,24 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 	color: @dark-grey;
 	text-decoration: underline;
 }
+
 .alert {
 	a {
 		text-decoration: underline;
 	}
+
 	&.alert-success a {
 		color: @state-success-text;
 	}
+
 	&.alert-info a {
 		color: @state-info-text;
 	}
+
 	&.alert-warning a {
 		color: @state-warning-text;
 	}
+
 	&.alert-danger a {
 		color: @state-danger-text;
 	}
@@ -167,20 +207,21 @@ body.multiview .cell {
 
 
 footer {
-    background-color: @darker-grey;
+	background-color: @darker-grey;
 	color: lightgrey;
 }
 
-.nav-tabs.nav-justified > .active > a{
-    border: 1px solid @dark-grey;
-    background-color: white;
+.nav-tabs.nav-justified > .active > a {
+	border: 1px solid @dark-grey;
+	background-color: white;
 }
 
 .nav-tabs > li.active > a {
-    color: @pw-color
+	color: @pw-color
 }
+
 .nav-tabs > li > a {
-    background-color: white;
+	background-color: white;
 }
 
 body.room .tab-content {
@@ -190,19 +231,10 @@ body.room .tab-content {
 	border-right: 1px solid @dark-grey;
 }
 
-
-img.jh-logo {
-	height: 130px;
-	position: absolute;
-	top: 55px;
-	left: 10px;
-	z-index: -100;
-}
-
 img.jh-illus {
 	height: 100px;
 	position: absolute;
-	top: 70px;
-	right: 10px;
+	top: 50px;
+	left: 10px;
 	z-index: -100;
 }
