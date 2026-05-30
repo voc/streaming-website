@@ -1,51 +1,89 @@
 @import "../../../assets/css/_structure.less";
 
-// accent/ brand colors of the different cities
-@accent-softblue:       #00a6de;  // Jugend hackt Logo
-@accent-softgreen:      #00b48d;  // Hamburg, MV
-@accent-softorange:     #f3971b;  // Dresden
-@accent-softpurple:     #51509d;  // Frankfurt
-@accent-softred:        #e6414a;  // Halle
-@accent-deepblue:       #00498c;  // Berlin
-@accent-deepgreen:      #4cad37;  // AT/Linz
-@accent-deeporange:     #ea680c;  // Rhein-Neckar, München, Ulm
-@accent-deeppurple:     #4c2582;  // Köln
-@accent-deepred:        #e52420;  // CH/Zürich
-@accent-pink:           #e95197;  // kein Event
+@white: #ffffff;
+@ivory: #fffff0;
+@yellow: #FFFF00;
+@orange: #FFA500;
+@red: #FF0000;
+@hot-pink: #FF69B4;
+@pink: #FFC0CB;
+@light-violet: #CF9FFF;
+@violet: #7F00FF;
+@blue: #0000FF;
+@bright-blue: #0096FF;
+@sky-blue: #87CEEB;
+@baby-blue: #96D8FF;
+@emerald-green: #50C878;
+@grass-green: #7CFC00;
+@mint-green: #98FB98;
+@oxblood: #4A0404;
+@chestnut: #954535;
+@buff: #DAA06D;
+@desert: #FAD5A5;
+@almond: #EADDCA;
+@light-gray: #D3D3D3;
+@ash-gray: #B2BEB5;
+@slate-gray: #708090;
+@black: #000;
 
 // conference specific styles here
-@pw-color:     black;
-@accent:       @accent-softgreen;  // change to your city here
+@pw-color: black;
+@accent: @bright-blue;
 
-@body-text:     @pw-color;
+@body-text: @pw-color;
 
 @overview-color: @pw-color;
 
-@darker-grey:   #52575b;
-@dark-grey:     lighten(@darker-grey, 10%);
-@light-grey:    lighten(@darker-grey, 20%);
-@lighter-grey:  lighten(@darker-grey, 30%);
-
-
 // often configured values (and their defaults):
 //
-@brand-primary:         @darker-grey;
-@text-color:            @body-text;
+@brand-primary: @accent;
+@text-color: @body-text;
 
-@link-color:            @body-text;
-@link-hover-color:      @lighter-grey;
+@link-color: @body-text;
+@link-hover-color: @slate-gray;
 
-// @navbar-height:         70px;
+@nav-tabs-border-color: #000;
+@nav-tabs-active-link-hover-border-color: #000;
+@nav-tabs-justified-link-border-color: #000;
 
-@navbar-default-bg:     @light-grey;
-@navbar-default-border: @light-grey;
+@navbar-height: 70px;
+
+@media (max-width: @screen-sm-min) {
+	@navbar-height: 50px;
+}
+
+@navbar-default-bg: @white;
+@navbar-default-border: @white;
 
 @navbar-default-link-color: @pw-color;
 @navbar-default-link-hover-color: @link-hover-color;
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('/configs/conferences/jugendhackt/SourceSansPro-Regular.ttf.woff2') format('woff2');
+	font-family: 'Geist';
+	src: url('/configs/conferences/jugendhackt/Geist-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geist';
+	src: url('/configs/conferences/jugendhackt/Geist-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geist Mono';
+	src: url('/configs/conferences/jugendhackt/GeistMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geist Mono';
+	src: url('/configs/conferences/jugendhackt/GeistMono-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
 }
 
 body {
@@ -54,12 +92,22 @@ body {
 	background-attachment: fixed;
 	background-size: 100%;
 	padding: @navbar-height 0;
-	font-family: "Source Sans Pro","Noto Sans",Arial,sans-serif;
-    font-size: 16px
+	font-family: "Geist", "Noto Sans", Arial, sans-serif;
+	font-size: 16px
 }
 
 h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-brand {
+	font-family: 'Geist Mono', 'monospace', system-ui;
 	font-weight: bold;
+}
+
+nav {
+	.navbar-brand {
+		.icon {
+			background: url('/configs/conferences/jugendhackt/alpaka.svg') center no-repeat;
+			background-size: contain;
+		}
+	}
 }
 
 .group-live {
@@ -69,8 +117,7 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 .room {
 	h1 {
 		font-weight: bold;
-		margin: 40px 0 20px 0;
-		color: @accent;
+		margin: @navbar-height 0 20px 0;
 	}
 }
 
@@ -78,52 +125,95 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 	h1, h2 {
 		font-weight: bold;
 
-		margin: 40px 0 20px 0;
-		color: @accent;
-    }
+		margin: 20px 0 20px 0;
+	}
+}
+
+div.room {
+	background: @bright-blue;
+	color: @ivory;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+div.recordings {
+	background: @hot-pink;
+	color: @ivory;
+}
+
+div.group-live {
+	background: @red;
+}
+
+.show-inactive-toggle {
+	margin: 8px 0;
 }
 
 .room, .recordings, .recording {
-    a, a:hover {
-        text-decoration: none;
-        color: @overview-color;
-    }
+	a, a:hover {
+		text-decoration: none;
+		color: @overview-color;
+	}
 
-    .panel {
-        //background: none;
-        background-color: @lighter-grey;
-        border: 1px solid @dark-grey;
+	.panel-default {
+		border: none;
+	}
 
-        &:hover {
-            text-decoration: none;
-            background-color: @dark-grey;
-        }
+	.panel-primary {
+		background-color: @light-violet;
+		color: @overview-color;
+		border-radius: 0;
+		border: none;
 
-        .panel-title {
-            font-size: 25px;
-            color: @overview-color;
-        }
+		& > .panel-body {
+			padding: 0;
 
-        .panel-primary {
-            background-color: @lighter-grey;
-            border-color: @lighter-grey;
-            color: @overview-color;
-            a {
-                color: @overview-color;
-            }
-        }
+			& > a {
+				padding: 8px 12px;
+			}
+		}
 
-        .panel-heading {
-            background: none;
-            display: block !important;
-            font-weight: bold;
-            padding: 8px 15px;
-            a {
-                color: @overview-color;
-            }
-        }
+		a {
+			color: @overview-color;
+		}
+	}
+}
 
-    }
+.room {
+	.panel {
+		background-color: @orange;
+		color: @black;
+		margin-bottom: 0;
+		border-radius: 0;
+
+		&:hover {
+			text-decoration: none;
+			background-color: darken(@orange, 10);
+		}
+
+		.panel-title {
+			font-size: 25px;
+			color: @black;
+		}
+
+		.panel-body {
+			background-color: @blue;
+			color: @white;
+
+			&:hover {
+				text-decoration: none;
+				background-color: darken(@blue, 10);
+			}
+		}
+
+		.panel-heading {
+			background: none;
+			display: block !important;
+			font-weight: bold;
+			padding: 8px 15px;
+			border: none;
+		}
+	}
 }
 
 .overview .room-group-live-music .room .panel .panel-body {
@@ -131,24 +221,29 @@ h1, h2, body.overview .room a.title, body.overview .panel-primary a, .navbar-bra
 }
 
 .well a {
-	color: @dark-grey;
+	color: @slate-gray;
 	text-decoration: underline;
 }
+
 .alert {
 	a {
 		text-decoration: underline;
 	}
+
 	&.alert-success a {
-		color: @state-success-text;
+		color: @emerald-green;
 	}
+
 	&.alert-info a {
-		color: @state-info-text;
+		color: @sky-blue;
 	}
+
 	&.alert-warning a {
-		color: @state-warning-text;
+		color: @yellow;
 	}
+
 	&.alert-danger a {
-		color: @state-danger-text;
+		color: @red;
 	}
 }
 
@@ -167,42 +262,39 @@ body.multiview .cell {
 
 
 footer {
-    background-color: @darker-grey;
-	color: lightgrey;
+	background-color: @slate-gray;
+	color: @ivory;
 }
 
-.nav-tabs.nav-justified > .active > a{
-    border: 1px solid @dark-grey;
-    background-color: white;
+.nav-tabs.nav-justified > .active > a {
+	background-color: @white;
+	border: 1px solid @slate-gray;
 }
 
 .nav-tabs > li.active > a {
-    color: @pw-color
+	color: @pw-color;
+	background-color: @accent !important;
 }
+
 .nav-tabs > li > a {
-    background-color: white;
+	background-color: @white;
 }
 
 body.room .tab-content {
-	background-color: @lighter-grey;
-	border-left: 1px solid @dark-grey;
-	border-bottom: 1px solid @dark-grey;
-	border-right: 1px solid @dark-grey;
-}
-
-
-img.jh-logo {
-	height: 130px;
-	position: absolute;
-	top: 55px;
-	left: 10px;
-	z-index: -100;
+	background-color: @light-gray;
+	border-left: 1px solid @slate-gray;
+	border-bottom: 1px solid @slate-gray;
+	border-right: 1px solid @slate-gray;
 }
 
 img.jh-illus {
-	height: 100px;
+	height: calc(@navbar-height * 1.515);
 	position: absolute;
-	top: 70px;
-	right: 10px;
-	z-index: -100;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+
+	@media (max-width: @screen-sm-min) {
+		display: none;
+	}
 }
