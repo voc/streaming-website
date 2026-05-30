@@ -25,21 +25,6 @@
                 "name": "Frankfurt am Main",
                 "slug": "saal",
                 "streamId": "s4"
-            },
-            {
-                "name": "Frankfurt am Main 2",
-                "slug": "saal2",
-                "streamId": "s5"
-            },
-            {
-                "name": "Frankfurt am Main 3",
-                "slug": "saal3",
-                "streamId": "s3"
-            },
-            {
-                "name": "Frankfurt am Main 4",
-                "slug": "saal4",
-                "streamId": "s2"
             }
         ]
     }
