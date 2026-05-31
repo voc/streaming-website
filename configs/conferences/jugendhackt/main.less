@@ -26,6 +26,8 @@
 @slate-gray: #708090;
 @black: #000;
 
+@magic-background-from-styleguide: #C1C6C7;
+
 // conference specific styles here
 @pw-color: black;
 @accent: @bright-blue;
@@ -87,10 +89,13 @@
 }
 
 body {
+	/*
 	background-image: url("/configs/conferences/jugendhackt/bg.png");
 	background-repeat: repeat;
 	background-attachment: fixed;
 	background-size: 100%;
+	*/
+	background-color: @magic-background-from-styleguide;
 	padding: @navbar-height 0;
 	font-family: "Geist", "Noto Sans", Arial, sans-serif;
 	font-size: 16px
