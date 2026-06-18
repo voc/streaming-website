@@ -8,7 +8,7 @@ on:
     branches: [ master ]
 
 jobs:
-  lint-and-validate:
+  lint-php:
     name: Lint PHP configs
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +20,7 @@ jobs:
       uses: voc/PHP-Lint@v1.0.0
 
   validate-jsons:
-    name: Validate  JSON configs
+    name: Validate JSON configs
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v6
