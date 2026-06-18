@@ -23,11 +23,8 @@
         "index_offset": -1
       },
       "html": {
-        "banner": null,
-        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://2025.mrmcd.net/\">MRMCD e.V.</a>\n\t",
-        "not_started": null
-      },
-      "extraFiles": null
+        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://2025.mrmcd.net/\">MRMCD e.V.</a>\n\t"
+      }
     },
     "rooms": [
       {

@@ -12,14 +12,11 @@
       "features": {
         "embed": true,
         "relive": true,
-        "audio": false,
-        "sd_video": false,
         "social": {
           "hashtag": "#fossgis2026",
           "mastodon": true
         }
       },
-      "overviewPage": {},
       "schedule": {
         "url": "https://pretalx.com/fossgis2026/schedule/export/schedule.xml",
         "scale": 3
@@ -33,25 +30,41 @@
         "slug": "hs1",
         "guid": "524fe067-6644-53c8-acee-89050c42a7d3",
         "name": "HS1 (ZHG 011)",
-        "streamId": "s1"
+        "streamId": "s1",
+        "streamingConfig": {
+          "audio": false,
+          "sd_video": false
+        }
       },
       {
         "slug": "hs2",
         "guid": "15fdae44-0233-5ac1-9b6f-dae6aba11a2e",
         "name": "HS2 (ZHG 010)",
-        "streamId": "s2"
+        "streamId": "s2",
+        "streamingConfig": {
+          "audio": false,
+          "sd_video": false
+        }
       },
       {
         "slug": "hs3",
         "guid": "abe2afea-9f28-52d5-9d83-1abff09588f4",
         "name": "HS3 (ZHG 009)",
-        "streamId": "s3"
+        "streamId": "s3",
+        "streamingConfig": {
+          "audio": false,
+          "sd_video": false
+        }
       },
       {
         "slug": "hs4",
         "guid": "a1aeb55c-bb50-5197-87d8-5bc80f265f13",
         "name": "HS4 (ZHG 008)",
-        "streamId": "s4"
+        "streamId": "s4",
+        "streamingConfig": {
+          "audio": false,
+          "sd_video": false
+        }
       }
     ]
   }

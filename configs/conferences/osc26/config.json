@@ -11,14 +11,11 @@
       "features": {
         "embed": true,
         "relive": true,
-        "audio": false,
-        "sd_video": false,
         "social": {
           "hashtag": "#osc26",
           "mastodon": true
         }
       },
-      "overviewPage": {},
       "schedule": {
         "url": "https://events.opensuse.org/conferences/oSC26/schedule.xml",
         "scale": 3
@@ -32,13 +29,21 @@
         "slug": "s41",
         "guid": "202f95c7-57c6-4a71-b4b8-dd520eaf3c4f",
         "name": "Saal",
-        "streamId": "s41"
+        "streamId": "s41",
+        "streamingConfig": {
+          "audio": false,
+          "sd_video": false
+        }
       },
       {
         "slug": "s42",
         "guid": "28b15e3c-be64-4e66-ab2d-35d5e9fff611",
         "name": "Gallerie",
-        "streamId": "s42"
+        "streamId": "s42",
+        "streamingConfig": {
+          "audio": false,
+          "sd_video": false
+        }
       }
     ]
   }
