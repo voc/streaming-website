@@ -3,6 +3,7 @@
   "conference": {
     "title": "openSUSE Conference 2026",
     "acronym": "osc26",
+    "organizer": "openSUSE Project",
     "description": "The openSUSE Conference is an annual gathering of openSUSE Project and Open Source Communities. Known as oSC, it features a blend of virtual and in-person presentations as well as workshops and social gatherings.",
     "start": "2026-06-25T09:00:00+01:00",
     "end": "2026-06-27T13:00:00+01:00",
