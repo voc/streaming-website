@@ -30,13 +30,11 @@
                 "index_offset": -1
             },
             "html": {
-                "banner" : null,
-                "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://www.python-summit.ch/\">Swiss Python Summit</a>\n\t",
-                "not_started": null
+                "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://www.python-summit.ch/\">Swiss Python Summit</a>\n\t"
             }
         },
-        "overviewPage": null,
-        "extraFiles": null,
+
+
         "rooms": [
             {
                 "guid": "73b6b66b-e0dd-5fe2-ad4d-fda51c58f296",
@@ -47,11 +45,9 @@
                     "display": "Aula",
                     "schedule": true,
                     "preview": true,
-                    "translation": false,
                     "subtitles": false,
                     "feedback": false,
-                    "chat": {},
-                    "social": true
+                    "chat": {}
                 }
             }
         ]

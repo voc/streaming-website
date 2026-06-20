@@ -40,11 +40,10 @@
           "display": "KCR",
           "schedule": true,
           "preview": true,
-          "translation": false,
           "subtitles": false,
           "feedback": false,
           "chat": {},
-          "social": true
+          "social": {}
         }
       }
     ]

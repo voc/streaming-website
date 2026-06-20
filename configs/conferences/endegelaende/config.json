@@ -8,8 +8,7 @@
     "title": "Pressekonferenz",
     "streamingConfig": {
       "html": {
-        "footer": "by <a href='https://ende-gelaende.org'>Ende Gelände</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
-        "banner": ""
+        "footer": "by <a href='https://ende-gelaende.org'>Ende Gelände</a> &amp; <a href='https://c3voc.de'>C3VOC</a>"
       },
       "features": {
         "relive": true

@@ -4,38 +4,55 @@
   "type": "object",
   "title": "VOC streaming-website configuration",
   "description": " deployed at https://streaming.media.ccc.de",
-  "required": ["conference"],
+  "required": [
+    "conference"
+  ],
   "properties": {
     "conference": {
       "type": "object",
-      "required": ["title"],
+      "required": [
+        "title"
+      ],
       "additionalProperties": false,
       "properties": {
         "title": {
           "type": "string",
           "title": "Titel der Konferenz",
           "description": "Kann Leer- und Sonderzeichen enthalten. Dieser wird im Seiten-Header, im &lt;title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als Anzeigetext benutzt.",
-          "examples": ["DiVOC - Reboot to Respawn"]
+          "examples": [
+            "DiVOC - Reboot to Respawn"
+          ]
         },
         "acronym": {
           "title": "Acronym",
           "description": "VOC Kürzel für die Konferenz, falls nicht bekannt bitte nicht selbst ausdenken sondern nachfragen. Wird in den URLs als Slug für die Konferenz verwendet. Identisch mit Verzeichnisname, wenn nicht anders ausgemacht.",
           "type": "string",
-          "examples": ["36c3", "rc3", "divoc-ptt"],
+          "examples": [
+            "36c3",
+            "rc3",
+            "divoc-ptt"
+          ],
           "pattern": "^[a-z0-9_-]+$"
         },
         "media_slug": {
           "title": "Acronym auf media.ccc.de",
           "description": "Falls das Acronym auf streaming.media.ccc.de und media.ccc.de unterschiedlich ist, kann es hier für media.ccc.de überschrieben werden.",
           "type": "string",
-          "examples": ["36c3", "rc3", "divoc-ptt"],
-          "pattern": "^[a-z0-9_-]+$"
+          "examples": [
+            "36c3",
+            "rc3",
+            "divoc-ptt"
+          ],
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "organizer": {
           "type": "string",
           "title": "Veranstalter",
           "description": "Wird für den &lt;meta name=\"author\">-Tag verwendt. Ist das Feld leer, wird kein solcher &ltmeta>-Tag generiert.",
-          "examples": ["CCC", "DiVOC"]
+          "examples": [
+            "CCC",
+            "DiVOC"
+          ]
         },
         "description": {
           "type": "string",
@@ -51,17 +68,24 @@
           "format": "date-time",
           "title": "Startzeitpunkt der Konferenz",
           "description": "Befinden wir uns davor, wird die Closed-Seite mit einem Text der Art 'hat noch nicht angefangen' angezeigt. Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. ",
-          "examples": ["2021-04-02T09:30:00+02:00"]
+          "examples": [
+            "2021-04-02T09:30:00+02:00"
+          ]
         },
         "end": {
           "type": "string",
           "format": "date-time",
-          "examples": ["2021-04-05T18:30:00+02:00"]
+          "examples": [
+            "2021-04-05T18:30:00+02:00"
+          ]
         },
         "time_zone_name": {
           "title": "Zeitzone",
           "type": "string",
-          "examples": ["Europe/Amsterdam", "Europe/Berlin"],
+          "examples": [
+            "Europe/Amsterdam",
+            "Europe/Berlin"
+          ],
           "default": "Europe/Amsterdam",
           "pattern": "^([A-Z][a-z]+/[A-Z][a-z]+|UTC)$"
         },
@@ -76,8 +100,8 @@
             }
           }
         },
-        "keywords" :{
-          "type":"array",
+        "keywords": {
+          "type": "array",
           "items": {
             "type": "string"
           }
@@ -95,7 +119,11 @@
               {
                 "type": "object",
                 "default": {},
-                "required": ["name", "slug", "streamId"],
+                "required": [
+                  "name",
+                  "slug",
+                  "streamId"
+                ],
                 "additionalProperties": false,
                 "properties": {
                   "guid": {
@@ -103,27 +131,43 @@
                     "format": "uuid",
                     "title": "Raum GUID",
                     "description": "(aus Schedule)",
-                    "examples": ["64f358c2-82f2-11ed-b6f2-370ab4c5fdf0"]
+                    "examples": [
+                      "64f358c2-82f2-11ed-b6f2-370ab4c5fdf0"
+                    ]
                   },
                   "name": {
                     "type": "string",
                     "title": "Raum Name",
                     "description": "(aus Schedule)",
-                    "examples": ["Saal 1"]
+                    "examples": [
+                      "Saal 1"
+                    ]
                   },
                   "slug": {
                     "type": "string",
                     "title": "Raum-Slug",
                     "description": "Wird in den URLs oder im Feedback verwendet, wenn leer wird der Slug aus dem Raum-Namen generiert",
                     "default": "",
-                    "examples": ["halla", "vortrag", "piscopia"],
+                    "examples": [
+                      "halla",
+                      "vortrag",
+                      "piscopia"
+                    ],
                     "pattern": "^[a-z0-9-]+$"
                   },
                   "streamId": {
                     "type": "string",
                     "title": "Stream ID",
                     "description": "Der Name des Kanals im VOC Streaming CDN z.B. s1",
-                    "examples": ["s1", "s2", "s3", "s4", "q1", "divoc", "cccb"],
+                    "examples": [
+                      "s1",
+                      "s2",
+                      "s3",
+                      "s4",
+                      "q1",
+                      "divoc",
+                      "cccb"
+                    ],
                     "pattern": "^[a-z0-9-]+$"
                   },
                   "capacity": {
@@ -159,7 +203,11 @@
           "$ref": "#/definitions/RoomStreamingConfig"
         }
       },
-      "required": ["streamId", "name", "slug"]
+      "required": [
+        "streamId",
+        "name",
+        "slug"
+      ]
     },
     "Features": {
       "type": "object",
@@ -212,15 +260,22 @@
             "hashtag": {
               "type": "string",
               "title": "Hashtag der Konferenz",
-              "examples": ["#36C3", "#divocr2r"]
+              "examples": [
+                "#36C3",
+                "#divocr2r"
+              ]
             },
-            "mastodon":{
+            "mastodon": {
               "type": "boolean"
             },
             "twitter": {
               "anyOf": [
-                {"type": "boolean"},
-                {"type": "object"}
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "object"
+                }
               ]
             }
           },
@@ -239,12 +294,16 @@
       "title": "Konfigurationen",
       "description": "",
       "default": {},
-      "required": ["features"],
+      "required": [
+        "features"
+      ],
       "properties": {
         "schedule": {
           "type": "object",
           "title": "Konferenz-Fahrplan",
-          "required": ["url"],
+          "required": [
+            "url"
+          ],
           "properties": {
             "url": {
               "type": "string",
@@ -271,7 +330,9 @@
                 "type": "string",
                 "description": "",
                 "default": "",
-                "examples": ["Piscopia"]
+                "examples": [
+                  "Piscopia"
+                ]
               }
             }
           },
@@ -343,7 +404,9 @@
           "title": "Anzeige-Name",
           "description": "̈Uberschreibt den Raum-Namen in der UI",
           "default": "",
-          "examples": ["Saal 1"]
+          "examples": [
+            "Saal 1"
+          ]
         },
         "display_short": {
           "type": "string",
@@ -434,7 +497,9 @@
           "type": "integer",
           "title": "ID des Raumes im L2S2-System",
           "description": "",
-          "examples": [1]
+          "examples": [
+            1
+          ]
         },
         "embed": {
           "type": "boolean",
@@ -442,27 +507,34 @@
           "description": "Ist dieses Option aktiviert, wird ein Embed-Tab unter dem Video angezeigt. Darüber kann der Player als iframe eingebunden werden. Wenn diese Option deaktivert ist, wird kein Embed-Tab angeboten und die URL zum Einbetten existiert nicht. Ebenso können alle Embedding-Funktionialitäten durch deaktiveren des globalen EMBED-Blocks deaktiviert werden.",
           "default": true
         },
-	"chat": {
-	  "anyOf": [
-	    {"type": "boolean"},
-	    {"$ref": "#/definitions/ChatConfig"}
-	  ],
-	  "title": "Chat-Tab aktivieren/konfigurieren",
-	  "description": "Ist diese Option aktiviert, wird ein Chat-Tab mit den jeweiligen Links angezeigt.",
-	  "default": false
-	},
-	"social": {
-	  "$ref": "#/definitions/SocialMediaConfig",
-	  "title": "Social Media konfigurieren (ebenfalls im Chat-Tab)",
-	  "description": "Sind diese Optionen aktiviert, werden im Chat-Tab die jeweiligen Links angezeigt.",
-	  "default": false
-	}
+        "chat": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/definitions/ChatConfig"
+            }
+          ],
+          "title": "Chat-Tab aktivieren/konfigurieren",
+          "description": "Ist diese Option aktiviert, wird ein Chat-Tab mit den jeweiligen Links angezeigt.",
+          "default": false
+        },
+        "social": {
+          "$ref": "#/definitions/SocialMediaConfig",
+          "title": "Social Media konfigurieren (ebenfalls im Chat-Tab)",
+          "description": "Sind diese Optionen aktiviert, werden im Chat-Tab die jeweiligen Links angezeigt.",
+          "default": false
+        }
       }
     },
     "TranslationConfig": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["endpoint", "label"],
+      "required": [
+        "endpoint",
+        "label"
+      ],
       "properties": {
         "endpoint": {
           "type": "string"
@@ -472,7 +544,7 @@
         }
       }
     },
-    "ChatConfig":{
+    "ChatConfig": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -507,7 +579,10 @@
               ]
             }
           },
-          "required": ["display", "url"]
+          "required": [
+            "display",
+            "url"
+          ]
         }
       ]
     },
@@ -518,15 +593,22 @@
         "hashtag": {
           "type": "string",
           "title": "Hashtag der Konferenz bzw. des Raumes",
-          "examples": ["#36C3", "#divocr2r"]
+          "examples": [
+            "#36C3",
+            "#divocr2r"
+          ]
         },
-        "mastodon":{
+        "mastodon": {
           "type": "boolean"
         },
         "twitter": {
           "anyOf": [
-            {"type": "boolean"},
-            {"$ref": "#/definitions/SocialMediaDetailConfig"}
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/definitions/SocialMediaDetailConfig"
+            }
           ]
         }
       }
@@ -543,14 +625,19 @@
           "type": "string"
         }
       },
-      "required": ["display", "text"]
+      "required": [
+        "display",
+        "text"
+      ]
     },
     "Page": {
       "type": "object",
       "title": "Konfiguration der Stream-Übersicht auf der Startseite",
       "description": "Wenn hier nichts angegeben ist, wird die Startseite automatisch aus der Raumliste generiert",
       "default": {},
-      "required": ["sections"],
+      "required": [
+        "sections"
+      ],
       "properties": {
         "sections": {
           "type": "array",
@@ -606,14 +693,20 @@
             "title": "Abschnitt",
             "description": "",
             "default": {},
-            "required": ["title", "items"],
+            "required": [
+              "title",
+              "items"
+            ],
             "properties": {
               "title": {
                 "type": "string",
                 "title": "Titel der Gruppe",
                 "description": "",
                 "default": "Live",
-                "examples": ["Live", "Audio"]
+                "examples": [
+                  "Live",
+                  "Audio"
+                ]
               },
               "items": {
                 "type": "array",
@@ -621,7 +714,9 @@
                 "description": "",
                 "items": {
                   "type": "object",
-                  "required": ["slug"],
+                  "required": [
+                    "slug"
+                  ],
                   "additionalProperties": true,
                   "properties": {
                     "slug": {
