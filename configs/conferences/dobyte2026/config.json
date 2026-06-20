@@ -33,11 +33,11 @@
     "rooms": [
       {
         "guid": "c1409ac2-0218-59dd-9be8-52f6d36cde83",
-        "name": "KCR",
+        "name": "Saal im KCR",
         "slug": "kcr",
         "streamId": "cwtv",
         "streamingConfig": {
-          "display": "KCR",
+          "display": "Saal im KCR",
           "schedule": true,
           "preview": true,
           "subtitles": false,
