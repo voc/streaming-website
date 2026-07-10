@@ -205,9 +205,9 @@ function do_download($url, $cache, $return_response = false)
 	$return = curl_exec($handle);
 	$info = curl_getinfo($handle);
 	if (PHP_VERSION_ID >= 80000) {
-		unset($ch);
+		unset($handle);
 	} else {
-		curl_share_close($ch);
+		curl_close($handle);
 	}
 	// TODO: should we add proper exceptions?
 	if($info['http_code'] != 200)
