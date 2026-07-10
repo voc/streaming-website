@@ -33,7 +33,7 @@
         "streamId": "c3re",
         "streamingConfig": {
           "subtitles": false,
-          "feedback": false,
+          "feedback": false
         }
       }
     ]
