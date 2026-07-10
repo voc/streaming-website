@@ -28,7 +28,4 @@ jobs:
         fetch-depth: 0
 
     - name: Validate json files
-      uses: dsanders11/json-schema-validate-action@v2.0.0
-      with:
-        schema: docs/config-schema.json
-        files: configs/conferences/**/config.json
+      run: ./local_validate.sh

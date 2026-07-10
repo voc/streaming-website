@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Before this, run `npm i -g ajv-cli ajv-formats`
+# Just needs npm/node for running
+set -euo pipefail
 
-ajv validate -s docs/config-schema.json -c ajv-formats -d "configs/conferences/**/config.json"
+npx --yes --package ajv@8.20.0 --package ajv-formats@3.0.1 node command/validate-json.mjs
