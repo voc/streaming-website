@@ -9,33 +9,37 @@ import process from "node:process";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
 
-// load ajv and ajv-formats from npx cache environment
-function loadAjvPackages() {
+// load library from npx cache environment
+function loadPackages() {
   const candidates = process.env.PATH.split(path.delimiter)
     .filter((entry) => entry.endsWith(`${path.sep}node_modules${path.sep}.bin`))
     .map((entry) => path.dirname(entry));
 
   for (const nodeModulesPath of candidates) {
-    if (!existsSync(path.join(nodeModulesPath, "ajv", "package.json"))) {
+    if (
+      !existsSync(
+        path.join(nodeModulesPath, "json-schema-library", "package.json"),
+      )
+    ) {
       continue;
     }
-
     const requireFromNodeModules = createRequire(
       path.join(nodeModulesPath, "package.json"),
     );
-    const ajvModule = requireFromNodeModules("ajv");
-    const ajvFormatsModule = requireFromNodeModules("ajv-formats");
+    const jsonschemalib = requireFromNodeModules("json-schema-library");
 
     return {
-      Ajv: ajvModule.default ?? ajvModule,
-      addFormats: ajvFormatsModule.default ?? ajvFormatsModule,
+      compileSchema: jsonschemalib.compileSchema,
+      SchemaNode: jsonschemalib.SchemaNode,
     };
   }
 
-  throw new Error("Unable to resolve ajv from the current npx environment");
+  throw new Error(
+    "Unable to resolve libraries from the current npx environment",
+  );
 }
 
-const { Ajv, addFormats } = loadAjvPackages();
+const { compileSchema, SchemaNode } = loadPackages();
 
 function readJson(file) {
   const content = readFileSync(file, "utf8");
@@ -49,29 +53,23 @@ function readJson(file) {
 }
 
 async function validateConferenceConfigs(globPattern) {
-  const schemaPath = "docs/config-schema.json";
-  const schema = readJson(schemaPath);
-  const ajv = new Ajv({ allErrors: true, strict: false });
-
-  addFormats(ajv);
-
-  const validate = ajv.compile(schema);
+  const schemaPath = path.join(repoRoot, "docs/config-schema.json");
+  const schema = compileSchema(readJson(schemaPath));
 
   const files = await glob(globPattern);
   for await (const file of files) {
-    const relpath = path.relative(repoRoot, file);
     const data = readJson(file);
-    const valid = validate(data);
-
+    const { valid, errors } = schema.validate(data);
+    const relpath = path.relative(repoRoot, file);
     if (!valid) {
-      const errors = (validate.errors ?? [])
+      const errorMessages = (errors ?? [])
         .map((error) => {
           const instancePath = error.instancePath || "/";
           return `${instancePath} ${error.message}`;
         })
         .join("\n");
 
-      throw new Error(`${relpath}:\n${errors}`);
+      throw new Error(`${relpath}:\n${errorMessages}`);
     }
 
     console.log(`${relpath} valid`);
