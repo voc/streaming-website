@@ -36,8 +36,8 @@
             {
                 "guid": "5007de4d-8e94-4918-89b2-e84d147e2da5",
                 "name": "Vortragssaal",
-                "slug": "vortragssaal",
-                "streamId": "main",
+                "slug": "voxconf",
+                "streamId": "voxconf",
                 "streamingConfig": {
                     "display": "vortragssaal",
                     "schedule": true,
