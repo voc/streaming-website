@@ -3,7 +3,7 @@
     "conference": {
         "title": "VoxConf 2026",
         "acronym": "voxconf2",
-        "media_slug": "voxconf",
+        "media_slug": "voxconf2026",
         "description": "Live streaming from VoxConf 2026 Munich, including Foreman Birthday Party",
         "keywords": [ "VoxConf", "Vox Pupuli", "Foreman Birthday Party" ],
         "organizer": "VoxConf steering council",
@@ -19,8 +19,7 @@
                 "social": {
                     "hashtag": "#uplink26",
                     "mastodon": true
-                },
-                "chat": {}
+                }
             },
             "schedule": {
                 "url": "https://import.c3voc.de/schedule/voxconf2026.xml?showall=yes",
@@ -38,14 +37,7 @@
                 "name": "Vortragssaal",
                 "slug": "voxconf",
                 "streamId": "voxconf",
-                "streamingConfig": {
-                    "display": "vortragssaal",
-                    "schedule": true,
-                    "preview": true,
-                    "subtitles": false,
-                    "feedback": false,
-                    "chat": {}
-                }
+                "streamingConfig": {}
             }
         ]
     }
