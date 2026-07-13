@@ -5,7 +5,7 @@
     "acronym": "c3re",
     "media_slug": "c3re",
     "description": "Live streaming from c3RE Sommerfest 2026",
-    "organizer": "Chaostreff Dortmund",
+    "organizer": "Chaostreff Recklinghausen",
     "start": "2026-07-11T13:37:00+02:00",
     "end": "2026-07-11T23:23:00+02:00",
     "time_zone_name": "Europe/Berlin",
@@ -28,7 +28,7 @@
     "rooms": [
       {
         "guid": "405ec096-b69e-41bd-a0bc-66bd7c4867bf",
-        "name": "Vortragsraum",
+        "name": "Steigerstube",
         "slug": "c3re",
         "streamId": "c3re",
         "streamingConfig": {
