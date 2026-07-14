@@ -168,7 +168,7 @@
                       "divoc",
                       "cccb"
                     ],
-                    "pattern": "^[a-z0-9-]+$"
+                    "pattern": "^[a-z0-9-_]+$"
                   },
                   "capacity": {
                     "type": "integer"
