@@ -1,0 +1,112 @@
+@import "../../../assets/css/_structure.less";
+
+@blue: #2EADD9;
+@pink: #F55089;
+@orange: #F77F02;
+@yellow: #F9E200;
+@dark-green: #213018;
+@mid-green: #528329;
+@mid-blue: #005D96;
+@pale-green: #AFC944;
+
+@white: #ffffff;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #242424;
+@black: #000000;
+
+
+@brand-primary: @orange;
+@well-bg: @dark;
+@navbar-default-bg: @dark;
+@navbar-default-link-color: @orange;
+@navbar-default-link-hover-color: @yellow;
+// @state-warning-bg: lighten(@yellow, 25%);
+// @state-info-bg: lighten(@blue, 25%);
+
+@schedule-author:    @white;
+
+@btn-default-bg: @orange;
+@panel-default-heading-bg: @dark;
+@panel-default-text: @white;
+@panel-bg: fade(@dark, 40%);
+@schedule-bg: @dark;
+@schedule-now-bg: fade(@dark, 40%);
+
+@navbar-h: 100px;
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-VF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: @black;
+    color: @white;
+    padding-top: @navbar-h;
+    font-family: 'Raleway';
+}
+
+
+nav {
+    height: @navbar-h;
+    background: url(2026header.png) left center/60%;
+}
+
+.btn-default {
+    border-color: @btn-default-bg;
+}
+
+nav .navbar-brand .icon {
+    background-image: url(emf2026-logo-white-gradient.svg);
+    background-size: 50px calc(@navbar-h - 25);
+    width: 50px;
+    height: calc(@navbar-h - 25);
+    margin-top: -25px;
+}
+
+.nav.navbar-right.button-wrapper {
+    margin-top: 3px;
+}
+
+.navbar-brand {
+    color: @white !important;
+}
+
+nav .container {
+    margin-top: 22px;
+}
+
+.schedule .now .label {
+    color: @white;
+}
+
+body .schedule .block h4 {
+    color: @grey-light;
+}
+.schedule .block h3 {
+    font-size: 14px;
+}
+
+body.schedule {
+    padding-top: @navbar-h;
+}
+
+.schedule .room.highlight .block {
+    background-color: @grey-darker;
+}
+
+.schedule .block.pause, .schedule .block.optout {
+    background-color: @grey-darker;
+}
+
+#modal-content {
+    background-color: @grey-darker;
+}
+
+#modal-body {
+    padding: 5px;
+}
