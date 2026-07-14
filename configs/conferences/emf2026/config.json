@@ -21,8 +21,8 @@
           "mastodon": true
         },
         "chat": {
-          "irc": null,
-          "matrix": null
+          "irc": false,
+          "matrix": false
         }
       },
       "schedule": {
