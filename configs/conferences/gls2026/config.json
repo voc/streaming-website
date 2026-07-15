@@ -14,8 +14,8 @@
     "streamingConfig": {
       "features": {
         "embed": true,
-        "relive": true,
-        "feedback": true,
+        "relive": false,
+        "feedback": false,
         "social": {
           "hashtag": "#GlastonledburyshireonSevern",
           "mastodon": true
