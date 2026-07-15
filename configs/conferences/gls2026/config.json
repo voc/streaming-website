@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "Glastonledburyshire-on-Severn Television",
+    "acronym": "gls2026",
+    "description": "Live streaming from our beloved nation state of Glastonledburyshire-on-Severn",
+    "keywords": [
+      "EMF", "EMF2026", "EMF26", "Electromagnetic Field", "Streaming", "Hacker", "gls", "glastonledburyshire-on-severn", "glastonledburyshire"
+    ],
+    "organizer": "Glastonledburyshire-on-Severn",
+    "start": "2026-07-16T00:00:00+01:00",
+    "end": "2026-07-20T00:00:00+01:00",
+    "time_zone_name": "Europe/London",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": false,
+        "feedback": false,
+        "social": {
+          "hashtag": "#GlastonledburyshireonSevern",
+          "mastodon": true
+        },
+        "chat": {
+          "irc": false,
+          "matrix": false
+        }
+      },
+      "html": {
+        "footer": "\n\t\tBrought to you by <a href=\"https://glastonledburyshire-on-severn-gov.uk\">the independent nation state of Glastonledburyshir-<br />e-on-Severn</a>. Powered by <a href=\"https://c3voc.de\">C3VOC</a>."
+      }
+    },
+    "rooms": [
+      {
+        "name": "Glastonledburyshire-on-Severn Stage",
+        "slug": "stagegls",
+        "streamId": "glastonledburyshire",
+        "streamingConfig": {
+          "wide": true
+        }
+      }
+    ]
+  }
+}

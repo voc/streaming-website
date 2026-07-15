@@ -1,0 +1,212 @@
+@import "../../../assets/css/_structure.less";
+
+@white: #ffffff;
+@black: #000000;
+@grey-lighter: #333333;
+@grey-darker: #2a2a2a;
+@grey-light: #c1c1c1;
+@dark: #242424;
+
+@gls-brand-colour: #1d70b8;
+@gls-text-colour: #0b0c0c;
+@gls-template-background-colour: #f4f8fb;
+@gls-body-background-colour: #ffffff;
+@gls-print-text-colour: #000;
+@gls-secondary-text-colour: #484949;
+@gls-focus-colour: #fd0;
+@gls-focus-text-colour: #0b0c0c;
+@gls-error-colour: #ca3535;
+@gls-success-colour: #0f7a52;
+@gls-border-colour: #cecece;
+@gls-input-border-colour: #0b0c0c;
+@gls-hover-colour: #cecece;
+@gls-link-colour: #1a65a6;
+@gls-link-visited-colour: #54319f;
+@gls-link-hover-colour: #0f385c;
+@gls-link-active-colour: #0b0c0c;
+@gls-surface-background-colour: #f4f8fb;
+@gls-surface-text-colour: #0b0c0c;
+@gls-surface-border-colour: #8eb8dc;
+
+
+@brand-primary: @gls-brand-colour;
+@brand-success: @gls-success-colour;
+@brand-danger:  @gls-error-colour;
+
+@body-bg:    @gls-body-background-colour;
+@text-color: @gls-text-colour;
+
+@font-family-sans-serif: "Inter", arial, sans-serif;
+@font-family-base:       @font-family-sans-serif;
+@headings-font-weight:   700;
+@headings-color:         @gls-text-colour;
+
+@link-color:       @gls-link-colour;
+@link-hover-color: @gls-link-hover-colour;
+
+@border-radius-base:  0;
+@border-radius-large: 0;
+@border-radius-small: 0;
+
+@navbar-height:                    @navbar-h;
+@navbar-default-bg:                @gls-brand-colour;
+@navbar-default-border:            transparent;
+@navbar-default-color:             @white;
+@navbar-default-link-color:        @white;
+@navbar-default-link-hover-color:  @white;
+@navbar-default-link-hover-bg:     darken(@gls-brand-colour, 8%);
+@navbar-default-link-active-color: @white;
+@navbar-default-link-active-bg:    darken(@gls-brand-colour, 12%);
+@navbar-default-brand-color:       @white;
+@navbar-default-brand-hover-color: @white;
+@navbar-default-toggle-icon-bar-bg:      @white;
+@navbar-default-toggle-border-color:     fade(@white, 40%);
+@navbar-default-toggle-hover-bg:         darken(@gls-brand-colour, 8%);
+
+@btn-default-color:  @white;
+@btn-default-bg:     @gls-success-colour;
+@btn-default-border: @gls-success-colour;
+
+@input-border:       @gls-input-border-colour;
+@input-color:        @gls-text-colour;
+@input-border-focus: @gls-brand-colour;
+
+@panel-bg:                 @white;
+@panel-default-text:       @gls-text-colour;
+@panel-default-heading-bg: @gls-surface-background-colour;
+@panel-default-border:     @gls-surface-border-colour;
+@panel-inner-border:       @gls-surface-border-colour;
+@well-bg:                  @gls-surface-background-colour;
+@well-border:              @gls-surface-border-colour;
+
+@schedule-author: @gls-secondary-text-colour;
+@schedule-bg:     @gls-surface-background-colour;
+@schedule-now-bg: fade(@gls-surface-background-colour, 60%);
+
+@navbar-h: 100px;
+
+
+body {
+    background-color: @gls-body-background-colour;
+    color: @gls-text-colour;
+    padding-top: @navbar-h;
+    font-family: @font-family-sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: @gls-text-colour;
+    font-weight: 700;
+}
+
+main a,
+.container a:not(.btn):not(.navbar-brand):not(.thumbnail) {
+    color: @gls-link-colour;
+    text-decoration: underline;
+
+    &:visited { color: @gls-link-visited-colour; }
+    &:hover {
+        color: @gls-link-hover-colour;
+        text-decoration-thickness: 3px;
+    }
+    &:active { color: @gls-link-active-colour; }
+}
+
+a:focus,
+button:focus,
+.btn:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid transparent;
+    color: @gls-focus-text-colour;
+    background-color: @gls-focus-colour;
+    box-shadow: 0 -2px @gls-focus-colour, 0 4px @gls-focus-text-colour;
+    text-decoration: none;
+}
+
+.btn:focus,
+button.btn:focus {
+    background-color: @gls-success-colour;
+    box-shadow: 0 0 0 3px @gls-focus-colour;
+}
+
+nav {
+    height: @navbar-h;
+    border-bottom: none;
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: @white !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav .navbar-brand .icon {
+    background-image: url(pint3-white.svg);
+    background-size: 50px calc(@navbar-h - 25);
+    width: 50px;
+    height: calc(@navbar-h - 25);
+    margin-top: -25px;
+}
+
+.nav.navbar-right.button-wrapper {
+    margin-top: 3px;
+}
+
+nav .container {
+    margin-top: 22px;
+}
+
+.btn-default,
+.btn-primary {
+    border-color: @gls-success-colour;
+    box-shadow: 0 2px 0 darken(@gls-success-colour, 12%);
+
+    &:hover,
+    &:focus {
+        background-color: darken(@gls-success-colour, 5%);
+        border-color: darken(@gls-success-colour, 5%);
+    }
+}
+
+.schedule .now .label {
+    color: @white;
+}
+
+body .schedule .block h4 {
+    color: @gls-secondary-text-colour;
+}
+
+.schedule .block h3 {
+    font-size: 14px;
+    color: @gls-text-colour;
+}
+
+body.schedule {
+    padding-top: @navbar-h;
+}
+
+.schedule .room.highlight .block {
+    background-color: @gls-surface-background-colour;
+}
+
+.schedule .block.pause, .schedule .block.optout {
+    background-color: @gls-surface-background-colour;
+}
+
+#modal-content {
+    background-color: @white;
+    color: @gls-text-colour;
+    border: 1px solid @gls-surface-border-colour;
+}
+
+#modal-body {
+    padding: 5px;
+}
+
+footer {
+    height: 60px;
+}
