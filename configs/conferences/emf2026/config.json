@@ -68,7 +68,7 @@
       {
         "name": "Arcade Workshop",
         "slug": "arcade",
-        "streamId": "emf_arcade",
+        "streamId": "s94",
         "streamingConfig": {
           "wide": true
         }
