@@ -22,16 +22,15 @@
                 "relive": true,
                 "feedback": false,
                 "social": {
-                    "hashtag": "#glt26",
+                    "hashtag": "#akademy2026",
                     "mastodon": true
                 }
             },
             "schedule": {
-                "url": "https://pretalx.linuxtage.at/glt26/schedule/export/schedule.xml",
+                "url": "...",
                 "roomfilter": [
-                    "HS i1",
-                    "HS i2",
-                    "HS i7"
+                    "Room 1",
+                    "Room 2"
                 ],
                 "scale": 3,
                 "simulate_offset": 0
@@ -42,13 +41,10 @@
                         "title": "Vortragsräume",
                         "items": [
                             {
-                                "slug": "i1"
+                                "slug": "1"
                             },
                             {
-                                "slug": "i2"
-                            },
-                            {
-                                "slug": "i7"
+                                "slug": "2"
                             }
                         ]
                     }
@@ -60,22 +56,16 @@
         },
         "rooms": [
             {
-                "guid": "8517d910-48fc-513b-895f-2999a175a79c",
-                "slug": "i1",
-                "name": "HS i1",
+                "guid": "...",
+                "slug": "1",
+                "name": "Room 1",
                 "streamId": "s1"
             },
             {
-                "guid": "eb5b1b73-c4e5-5ee7-83bb-0f87d0573b4f",
-                "slug": "i2",
-                "name": "HS i2",
+                "guid": "...",
+                "slug": "2",
+                "name": "Room 2",
                 "streamId": "s2"
-            },
-            {
-                "guid": "96ae1c26-7bc2-5c61-8d72-40e54770d9b1",
-                "slug": "i7",
-                "name": "HS i7",
-                "streamId": "s3"
             }
         ]
     }
