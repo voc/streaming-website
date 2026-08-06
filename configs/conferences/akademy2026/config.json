@@ -27,7 +27,7 @@
                 }
             },
             "schedule": {
-                "url": "...",
+                "url": "https://conf.kde.org/export/timetable/11.json",
                 "roomfilter": [
                     "Room 1",
                     "Room 2"
@@ -56,13 +56,13 @@
         },
         "rooms": [
             {
-                "guid": "...",
+                "guid": "",
                 "slug": "1",
                 "name": "Room 1",
                 "streamId": "s1"
             },
             {
-                "guid": "...",
+                "guid": "",
                 "slug": "2",
                 "name": "Room 2",
                 "streamId": "s2"
