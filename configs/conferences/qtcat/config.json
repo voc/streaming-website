@@ -23,11 +23,15 @@
       "html": {
         "banner": "<div class='container'><img class='qtcat-logo' src='/configs/conferences/qtcat/logo_light.svg'></div>",
         "footer": "\n\t\tby <a href=\"https://www.uni-hamburg.de\">Universität Hamburg</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+      },
+      "schedule": {
+        "url": "https://pretalx.c3voc.de/qtcat-2026/schedule/export/schedule.xml"
       }
     },
     "rooms": [
       {
-        "name": "Vortrag",
+        "guid": "0b442e86-9836-5821-aaf4-4266ff3542bb",
+        "name": "R. 221",
         "slug": "vortrag",
         "streamId": "qtcat",
         "streamingConfig": {
