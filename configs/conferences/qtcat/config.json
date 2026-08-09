@@ -1,0 +1,39 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "title": "Queer and Trans People in Category Theory",
+    "acronym": "qtcat2026",
+    "description": "Live streaming from the QTCat 2026",
+    "keywords": [
+      "Video", "Media", "Streaming", "Category Theory", "Uni Hamburg"
+    ],
+    "organizer": "Uni Hamburg",
+    "start": "2026-08-12T08:00:00+02:00",
+    "end": "2026-08-14T17:00:00+02:00",
+    "streamingConfig": {
+      "features": {
+        "embed": true,
+        "relive": false,
+        "feedback": true,
+        "chat": {
+          "irc": false,
+          "matrix": false
+        }
+      },
+      "html": {
+        "banner": "<div class='container'><img class='qtcat-logo' src='/configs/conferences/qtcat/logo_light.svg'></div>",
+        "footer": "\n\t\tby <a href=\"https://www.uni-hamburg.de\">Universität Hamburg</a> &\n\t\t<a href=\"https://c3voc.de\">C3VOC</a>\n\t"
+      }
+    },
+    "rooms": [
+      {
+        "name": "Vortrag",
+        "slug": "vortrag",
+        "streamId": "qtcat",
+        "streamingConfig": {
+          "wide": true
+        }
+      }
+    ]
+  }
+}
