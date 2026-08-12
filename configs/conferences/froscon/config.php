@@ -8,7 +8,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2025-08-16 08:00"),
+	'STARTS_AT' => strtotime("2026-08-15 08:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2025-08-17 19:00"),
+	'ENDS_AT' => strtotime("2026-08-16 19:00"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -33,14 +33,14 @@ $CONFIG['CONFERENCE'] = array(
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
 	 * Anzeigetext benutzt
 	 */
-	'TITLE' => 'FrOSCon 20',
+	'TITLE' => 'FrOSCon 21',
 
 	/**
 	 * Veranstalter
 	 * Wird für den <meta name="author">-Tag verdet. Wird diese Zeile auskommentiert, wird kein solcher
 	 * <meta>-Tag generiert.
 	 */
-	'AUTHOR' => 'FrOSCon 2025',
+	'AUTHOR' => 'FrOSCon 2026',
 
 	/**
 	 * Beschreibungstext
@@ -82,7 +82,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/c/froscon2025',
+	'RELEASES' => 'https://media.ccc.de/c/froscon2026',
 
 	/**
 	 * Alternativ kann ein ReLive-Json konfiguriert werden, um die interne
@@ -91,7 +91,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Wird beides aktiviert, hat der externe Link Vorrang!
 	 * Wird beides auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/froscon2025/index.json',
+	'RELIVE_JSON' => 'https://cdn.c3voc.de/relive/froscon2026/index.json',
 
 	/**
 	 * APCU-Cache-Zeit in Sekunden
@@ -114,7 +114,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'HS1', 'HS3', 'HS4', 'HS5', 'HS6', 'HS7', 'HS8'
+			'hs1', 'hs3', 'hs4', 'hs5', 'hs6', 'hs7', 'hs8'
 		),
 	),
 );
@@ -125,7 +125,7 @@ $CONFIG['OVERVIEW'] = array(
  * Liste der Räume (= Audio & Video Produktionen, also auch DJ-Sets oä.)
  */
 $CONFIG['ROOMS'] = array(
-	'HS1' => array(
+	'hs1' => array(
 		'DISPLAY' => 'HS 1/2',
 		'STREAM' => 's1',
 		'PREVIEW' => true,
@@ -146,7 +146,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'HS3' => array(
+	'hs3' => array(
 		'DISPLAY' => 'HS 3',
 		'STREAM' => 's3',
 		'PREVIEW' => true,
@@ -167,7 +167,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'HS4' => array(
+	'hs4' => array(
 		'DISPLAY' => 'HS 4',
 		'STREAM' => 's4',
 		'PREVIEW' => true,
@@ -188,7 +188,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'HS5' => array(
+	'hs5' => array(
 		'DISPLAY' => 'HS 5',
 		'STREAM' => 's5',
 		'PREVIEW' => true,
@@ -209,7 +209,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'HS6' => array(
+	'hs6' => array(
 		'DISPLAY' => 'HS 6',
 		'STREAM' => 's6',
 		'PREVIEW' => true,
@@ -230,7 +230,7 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'HS7' => array(
+	'hs7' => array(
 		'DISPLAY' => 'HS 7',
 		'STREAM' => 's2',
 		'PREVIEW' => true,
@@ -251,9 +251,9 @@ $CONFIG['ROOMS'] = array(
 		'IRC' => false,
 		'TWITTER' => false,
 	),
-	'HS8' => array(
+	'hs8' => array(
 		'DISPLAY' => 'HS 8',
-		'STREAM' => 's41',
+		'STREAM' => 's94',
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
@@ -301,7 +301,7 @@ $CONFIG['SCHEDULE'] = array(
 	 * aufhören zu funktionieren. Wenn die Quelle unverlässlich ist ;) sollte ein
 	 * externer HTTP-Cache vorgeschaltet werden.
 	 */
-	'URL' => 'https://programm.froscon.org/2025/schedule.xml',
+	'URL' => 'https://programm.froscon.org/2026/schedule.xml',
 
 	/**
 	 * Nur die angegebenen Räume aus dem Fahrplan beachten
