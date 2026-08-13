@@ -1,0 +1,138 @@
+@import "../../../assets/css/_structure.less";
+
+@white: #FAFAFA;
+@dark-gray: #2C2B2B;
+@black: #151515;
+@radioactive-green: #02ff67;
+@lavender-sky: #a77aff;
+
+@dark-radioactive-green: darken(@radioactive-green, 38%);
+@super-dark-radioactive-green: darken(@radioactive-green, 44%);
+@light-radioactive-green: lighten(@radioactive-green, 40%);
+
+@lavender-sky-dark: darken(@lavender-sky, 10%);
+
+@navbar-height: 60px;
+
+@media (max-width: @screen-sm-min) {
+	@navbar-height: 50px;
+}
+
+@gray-lighter: #333333;
+@gray-light: #d2d2d2;
+
+@brand-primary: @radioactive-green;
+@well-bg: @lavender-sky-dark;
+@navbar-default-color: @gray-light;
+@navbar-default-link-color: @white;
+@btn-default-color: @dark-gray;
+@panel-default-heading-bg: @lavender-sky-dark;
+@panel-default-text: @white;
+@panel-bg: @lavender-sky-dark;
+@footer-height: 40px;
+
+@panel-default-border: @gray-light;
+
+/* Chau Philomene One */
+@font-face {
+	font-family: 'ChauPhilomeneOne';
+	src: url('/configs/conferences/hackmas2026/fonts/ChauPhilomeneOne-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background-color: @lavender-sky;
+	color: @white;
+	font: normal 150% 'ChauPhilomeneOne', sans-serif;
+}
+
+nav {
+	.navbar-brand {
+		.icon {
+			background: url('/configs/conferences/hackmas2026/blob-hearth_Default_Pride-Flag.svg') center no-repeat;
+			background-size: contain;
+		}
+	}
+}
+
+.panel-title {
+	font-size: 24px;
+}
+
+.overview .panel-title {
+	font-weight: bold;
+}
+
+.navbar-default {
+	background-color: @lavender-sky;
+	color: @white;
+	border-bottom: none;
+}
+
+footer {
+	background-color: @lavender-sky-dark;
+}
+
+.schedule {
+	.room.highlight {
+		.block {
+			background-color: @radioactive-green;
+		}
+
+		a:hover {
+			color: @light-radioactive-green;
+		}
+	}
+
+	.block {
+		h3 {
+			font-size: 1.2em !important;
+			padding-bottom: 0.1em;
+			margin-bottom: 0;
+			color: @white;
+		}
+
+		h4 {
+			color: darken(@white, 10%);
+		}
+
+		h5 {
+			color: darken(@white, 10%);
+		}
+
+		border: 1px solid @dark-radioactive-green !important;
+	}
+
+	.block:nth-child(2n) {
+		background-color: @dark-radioactive-green;
+	}
+
+	.block:nth-child(2n+1) {
+		background-color: @super-dark-radioactive-green;
+	}
+
+	.block.pause, .block.optout {
+		background-color: @super-dark-radioactive-green !important;
+	}
+
+	.block.pause h3 {
+		color: @light-radioactive-green !important;
+	}
+
+	.block.gap {
+		background-color: @super-dark-radioactive-green !important;
+	}
+
+	.block.daychange {
+		background-color: @super-dark-radioactive-green !important;
+
+		h3 {
+			color: @light-radioactive-green !important;
+		}
+	}
+}
+
+body.overview .room .program-schedule .talk {
+	font: bold 100% monospace;
+}
