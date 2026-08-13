@@ -1,23 +1,59 @@
 @import "../../../assets/css/_structure.less";
 
-@blue-bg-light: #313495;
-@blue-bg-dark: #202257;
+@blue-bg-dark: #111a29;
+@blue-bg-mid: fade(#192335, 84%);
+@blue-bg-light: fade(#2a384f, 50%);
+@blue-bright: #1231d1;
 @green-light: #daffc7;
 @green-lightest: #effafb;
 
-@link-color:                @green-light;
-@link-color-focus:          @green-lightest;
-@panel-primary-border:      @green-light;
+@brand-primary:             @green-light;
+@brand-danger:              @blue-bright;
 
-@panel-default-heading-bg:  @blue-bg-dark;
-@panel-default-text:        @green-light;
-@panel-bg:                  @blue-bg-dark;
-@panel-default-border:      @green-light;
-
+@body-bg:                   @blue-bg-dark;
 @text-color:                @green-lightest;
 @text-color-highlight:      @green-light;
-@text-color-dark:           black;
 @text-shadow-color:         @blue-bg-dark;
+@link-color:                @green-light;
+@link-hover-color:          @green-lightest;
+
+@navbar-default-color:      @text-color-highlight;
+@navbar-default-bg:         darken(@blue-bright, 15%);
+@navbar-default-link-color: @link-color;
+@navbar-default-link-hover-color: @link-hover-color;
+
+@panel-bg:                  @blue-bg-light;
+@panel-default-heading-bg:  @blue-bg-light;
+@panel-default-text:        @green-light;
+@panel-default-border:      @green-light;
+@panel-primary-border:      @green-light;
+@panel-link-hover-body-bg:  @blue-bg-mid;
+
+@nav-link-hover-bg:         @blue-bg-light;
+@nav-tabs-border-color:     @green-light;
+@nav-tabs-link-hover-border-color: @green-lightest;
+@nav-tabs-active-link-hover-bg: @panel-link-hover-body-bg;
+@nav-tabs-active-link-hover-color: @link-hover-color;
+@nav-tabs-active-link-hover-border-color: @panel-default-border;
+
+@btn-default-color:         @link-color;
+@btn-default-color-hover:   @link-hover-color;
+@btn-default-bg:            @blue-bg-light;
+@btn-default-border:        @panel-default-border;
+
+@btn-primary-color:         @blue-bg-dark;
+
+@input-bg:                  @blue-bg-light;
+@input-bg-disabled:         @blue-bg-mid;
+@input-color:               @link-color;
+
+@dropdown-bg:               @blue-bg-light;
+@dropdown-border:           @green-light;
+@dropdown-link-color:       @link-color;
+@dropdown-link-hover-color: @link-hover-color;
+
+@schedule-border:           @green-lightest;
+@schedule-selected-room:    @green-light;
 
 @font-face {
     font-family: 'Exo';
@@ -34,7 +70,7 @@
 }
 
 h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-    line-height: 1.1;
+    line-height: 1.2;
     color: @text-color;
     text-shadow: @text-shadow-color 0 0 3px;
 }
@@ -43,66 +79,89 @@ h1, h2, .h1, .h2  {
     font-family: Exo, sans-serif;
     font-size: 64px;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.2;
     color: @text-color-highlight;
     text-shadow: @text-shadow-color 0 0 5px;
 }
 
-body.overview .panel-body {
-    min-height: 10px;
-}
+body.overview {
+    .panel-title {
+        font-weight: bold;
+    }
 
-.overview .panel-title {
-    font-weight: bold;
+    .panel-body {
+        min-height: 10px;
+    }
+
+    .recordings .panel {
+        &:has(.panel-body a:hover), &:has(.panel-body a:focus) {
+            background-color: @panel-link-hover-body-bg;
+        }
+    }
 }
 
 a {
-    color: @link-color;
-
     &:hover, &:focus {
-        color: @link-color-focus;
+        .panel {
+            background-color: @panel-link-hover-body-bg;
+        }
+    }
+}
+
+.btn.btn-default {
+    &:hover, &:focus {
+        color: @btn-default-color-hover;
     }
 }
 
 #schedule {
     #schedule-event-detail-popover {
-        color: @text-color-dark;
-
-        a {
-            color: @blue-bg-dark;
-        }
-
-        a:hover, a:focus {
-            color: @text-color-dark;
-        }
-
+        background-color: fade(@blue-bg-light, 100%);
 
         #modal-header {
             background-color: @blue-bg-dark;
         }
     }
 
+    .now {
+        text-shadow: @green-lightest 0 0 1.2px;
+    }
+
+    .room.highlight {
+        h1, h2, h3, .h1, .h2, .h3  {
+            color: black;
+        }
+
+        h4, h5, h6, .h4, .h5, .h6 {
+            color: @blue-bg-mid;
+        }
+    }
+
+    .room:not(.highlight) {
+        .block.pause, .block.optout {
+            background-color: transparent;
+        }
+
+        h1, h2, h3, .h1, .h2, .h3  {
+            color: @green-lightest;
+        }
+
+        h4, h5, h6, .h4, .h5, .h6 {
+            color: @green-light;
+        }
+    }
+
     h1, h2, h3, h4, h5, h6, .h1, .h2 .h3, .h4, .h5, .h6 {
-        color: @text-color-dark;
         text-shadow: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
 nav.navbar {
     .navbar-brand {
-        height: 51px;
         padding-left: 20px;
         line-height: 18px;
-        color: @text-color-highlight;
-
-        a {
-            color: @link-color;
-        }
-
-        // not in/on "a" by design..
-        &:hover, &:focus {
-            color: @link-color-focus;
-        }
 
         .icon {
             background-image: url(froscon21.svg);
@@ -117,45 +176,9 @@ nav.navbar {
     }
 
     &.navbar-default {
-        color: @text-color-highlight;
-        background: @panel-default-heading-bg;
-        border-bottom-color: #04a4e8;
-        border-bottom-width: 3px;
+        border-bottom-color: @blue-bright;
+        border-bottom-width: 6px;
     }
-}
-
-@media(min-width: 1780px) {
-    nav.navbar.navbar-default {
-        margin: 0 300px;
-    }
-
-    nav.navbar.navbar-default:before {
-        position: absolute;
-        top: 19px;
-        left: -300px;
-        width: 300px;
-        height: 64px;
-        content: " ";
-        background: url(styleelem-left.svg) left top no-repeat;
-    }
-
-    nav.navbar.navbar-default:after {
-        position: absolute;
-        top: 19px;
-        right: -300px;
-        width: 300px;
-        height: 64px;
-        content: " ";
-        background: url(styleelem-right.svg) right top no-repeat;
-    }
-}
-
-.nav-tabs > li.active > a {
-    color: @text-color-dark;
-}
-
-.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-    color: @text-color-dark;
 }
 
 .froscon {
@@ -176,10 +199,6 @@ nav.navbar {
     }
 }
 
-//body.room .tab-content {
-//    background-color: @strahlend;
-//}
-
 footer {
     position: unset;
     color: @text-color-highlight;
@@ -190,7 +209,7 @@ footer {
         color: @link-color;
 
         &:hover, &:focus {
-            color: @link-color-focus;
+            color: @link-hover-color;
         }
     }
 }
@@ -198,6 +217,6 @@ footer {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    background: 0 51px linear-gradient(202deg, @blue-bg-light 12%,@blue-bg-dark 88%) fixed no-repeat, @blue-bg-dark;
+    background: 0 52px linear-gradient(176deg, mix(@blue-bg-dark, @blue-bg-mid, 30%) 0%, @blue-bg-mid 10%, @blue-bg-mid 58%, @blue-bg-dark 100%) fixed no-repeat, @blue-bright;
 }
 
