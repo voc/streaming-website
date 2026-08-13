@@ -110,9 +110,12 @@
 			></span>
 		<? endif ?>
 
-
 		<? if($page != 'allconferences' && $conference->hasAdditionalHtml()): ?>
 			<?= $conference->getAdditionalHtml() ?>
+		<? endif ?>
+
+		<? if(@$conference_has_script): ?>
+			<script type="text/javascript" src="<?=h($conference_assets)?>gen/main.js"></script>
 		<? endif ?>
 	</body>
 </html>
