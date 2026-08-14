@@ -89,6 +89,7 @@ try {
 		'assemblies' => 'template/assemblies/',
 		'assets' => forceslash('assets'),
 		'conference_assets' => '',
+		'conference_has_script' => false,
 
 		'conference' => new GenericConference(),
 	));
