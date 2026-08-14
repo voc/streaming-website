@@ -36,6 +36,7 @@ class Feedback
 	{
 		$db = new PDO($this->get('DSN'));
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
 		$stm = $db->prepare('
 			INSERT INTO feedback (reported, datetime, net, os, player, stream, ipproto_v4, ipproto_v6, provider, issues, issuetext)
