@@ -128,6 +128,7 @@ $CONFIG['ROOMS'] = array(
 	'hs1' => array(
 		'DISPLAY' => 'HS 1/2',
 		'STREAM' => 's1',
+		'WIDE' => true,
 		'PREVIEW' => true,
 		'TRANSLATION' => true,
 		'SD_VIDEO' => true,
