@@ -130,8 +130,9 @@ foreach (Conferences::getActiveConferences() as $conference)
 		);
 	}
 	$struct[] = array(
+		'mandator' => $conference->getSlug(),
 		'conference' => $conference->getTitle(),
-		'slug' => $conference->getSlug(),
+		'slug' => $conference->getAcronym(),
 		'author' => $conference->getAuthor(),
 		'description' => $conference->getDescription(),
 		'keywords' => $conference->getKeywords(),

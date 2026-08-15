@@ -28,6 +28,11 @@ $CONFIG['CONFERENCE'] = array(
 	 */
 	//'CLOSED' => 'running',
 
+	/** 
+	 * Slug der Konferenz auf media.ccc.de, fallback auf MANDATOR falls nicht angegeben. 
+	 */
+    'ACRONYM' => 'froscon2026',
+
 	/**
 	 * Titel der Konferenz (kann Leer- und Sonderzeichen enthalten)
 	 * Dieser im Seiten-Header, im <title>-Tag, in der About-Seite und ggf. ab weiteren Stellen als
@@ -76,7 +81,7 @@ $CONFIG['CONFERENCE'] = array(
 	 *
 	 * Wird diese Zeile auskommentiert, wird kein Banner ausgegeben.
 	 */
-	 'BANNER_HTML' => '<div class="froscon"></div>',
+	'BANNER_HTML' => '<div class="froscon"></div>',
 
 	/**
 	 * Link zu den Recordings
