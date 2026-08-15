@@ -17,6 +17,11 @@
           "mastodon": false
         }
       },
+      "schedule": {
+        "url": "https://schedule.hope.net/hope26/schedule.xml",
+        "scale": 3,
+        "roomfilter": ["Grand Ballroom", "Crystal Ballroom", "Gramercy Park Suite"]
+      },
       "html": {
         "footer": "<a href=\"https://www.hope.net/\">HOPE26</a> by HOPE On Planet Earth</a>"
       }
