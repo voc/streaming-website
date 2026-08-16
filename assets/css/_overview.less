@@ -45,6 +45,27 @@ body.overview {
 			text-decoration: none;
 		}
 
+		// stretch panels to equal height within a row; the flex line's height
+		// is still content-driven, the extra space just goes to the panel-body
+		display: flex;
+		flex-direction: column;
+
+		.room-link {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+
+			.panel {
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+
+				.panel-body {
+					flex-grow: 1;
+				}
+			}
+		}
+
 		.panel-heading {
 			display: none;
 		}
