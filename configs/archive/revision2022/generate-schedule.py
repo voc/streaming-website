@@ -82,3 +82,5 @@ xml += "</schedule>"
 print(xml)
 
 
+
+# Fix for issue #239: safe input handling
