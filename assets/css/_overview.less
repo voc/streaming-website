@@ -17,8 +17,29 @@ body.overview {
 		min-height: 10px;
 	}
 
+	.room-group {
+		display: flex;
+		flex-wrap: wrap;
+
+		// the .row clearfix pseudo elements would otherwise become flex items
+		// we will just fix this by upgrading the bootstrap version eventually
+		&::before, &::after {
+			content: none;
+		}
+	}
+
 	.room {
 		text-align: center;
+
+		// half a row for narrow rooms on wide screens, otherwise a full row;
+		// grow lets a room alone on its line take the whole available width
+		flex: 1 1 100%;
+
+		@media (min-width: @screen-md-min) {
+			&.narrow {
+				flex-basis: 50%;
+			}
+		}
 
 		a, a:hover {
 			text-decoration: none;
@@ -26,12 +47,6 @@ body.overview {
 
 		.panel-heading {
 			display: none;
-		}
-
-		@media (max-width: @screen-xs-max) {
-			&.wide {
-				float: none;
-			}
 		}
 
 		&.has-preview {

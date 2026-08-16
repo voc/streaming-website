@@ -21,8 +21,6 @@
 						return isset($upcoming['next']);
 					});
 				}
-				$count = count($rooms);
-				$idx = 0;
 				usort($rooms, function ($r_a, $r_b) {
 					global $upcomingTalksPerRoom;
 					$u_a = $upcomingTalksPerRoom[ $r_a->getSlug() ];
@@ -38,34 +36,20 @@
 					return @$a['start'] <=> @$b['start']; 
 				});
 
-				foreach($rooms as $room): 
-					$is_wide = 0;
-					/* when the count is odd and this is the last item - make it full width */
-					if (($count % 2 == 1) && ($idx == $count - 1)) {
-						$is_wide = 1;
-					}
-					elseif ($room->requestsWide()) {
-						$is_wide = 1;
-						$count++;
-						/* Increase the index if we are using a whole line, this means when the room is
-						 * an even entry. Odd entries on the other hand steal one index from the
-						 * "previous" row which they originally belong to. */
-						if ($idx % 2 != 1) {
-							$idx++;
-						}
-					}
+				foreach($rooms as $room):
+					/* rooms alone on their line grow to full width via flex,
+					 * wide rooms request a whole line via flex-basis */
+					$is_wide = $room->requestsWide();
 				?>
 			
 				<div class="
 					room
 					room-<?=h($room->getSlug())?>
-					clearfix
+					col-xs-12
 					<? if ($is_wide): ?>
 						wide
-						col-xs-12
 					<? else: ?>
 						narrow
-						col-md-6
 					<? endif ?>
 
 					<? if($room->hasPreview()): ?>
@@ -132,10 +116,6 @@
 						</div>
 					</a>
 				</div>
-				<? $idx++ ?>
-				<? if ($is_wide): ?>
-					<div class="clearfix"></div>
-				<? endif ?>
 			<? endforeach ?>
 			<label for="show-inactive-<?=h(slugify($group))?>-toggle" class="btn btn-default show-inactive-toggle">
 				<span class="show-inactive-text">Show</span>
