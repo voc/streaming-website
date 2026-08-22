@@ -1,10 +1,10 @@
 {
     "$schema": "../../../docs/config-schema.json",
     "conference": {
-        "title": "Hack ma's Castle 2026",
+        "title": "Håck ma's Castle 2026",
         "acronym": "hackmas2026",
         "organizer": "Chaos Computer Club Wien",
-        "description": "Live streaming from the Hack ma's Castle 2026",
+        "description": "Live streaming from the Håck ma's Castle 2026",
         "keywords": [
             "hackmas",
             "håckmas"
