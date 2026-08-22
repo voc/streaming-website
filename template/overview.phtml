@@ -1,6 +1,6 @@
 <? include("$assemblies/banner.phtml") ?>
 
-<div class="container">
+<div class="container overview-content">
 	<? $i = 0; foreach($overview->getGroups() as $group => $rooms): ?>
 		<? if($group): ?>
 			<div class="row group group-<?=h(slugify($group))?>">
@@ -33,7 +33,7 @@
 						return -($u_a['next'] <=> $u_b['next']);
 					}
 
-					return @$a['start'] <=> @$b['start']; 
+					return @$a['start'] <=> @$b['start'];
 				});
 
 				foreach($rooms as $room):
@@ -41,7 +41,7 @@
 					 * wide rooms request a whole line via flex-basis */
 					$is_wide = $room->requestsWide();
 				?>
-			
+
 				<div class="
 					room
 					room-<?=h($room->getSlug())?>
@@ -86,7 +86,7 @@
 
 								<? endif ?>
 
-								<? if($room->hasSchedule()): 
+								<? if($room->hasSchedule()):
 									$upcoming = @$upcomingTalksPerRoom[ $room->getSlug() ] ?: [];
 									$current = @$upcoming['current'];
 									$next = @$upcoming['next'];

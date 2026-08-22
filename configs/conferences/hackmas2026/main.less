@@ -10,7 +10,7 @@
 @super-dark-radioactive-green: darken(@radioactive-green, 44%);
 @light-radioactive-green: lighten(@radioactive-green, 40%);
 
-@lavender-sky-dark: darken(@lavender-sky, 5%);
+@lavender-sky-dark: darken(@lavender-sky, 7%);
 
 @navbar-height: 60px;
 
@@ -41,10 +41,47 @@
 	font-style: normal;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	background-color: @lavender-sky;
 	color: @white;
 	font: normal 150% 'ChauPhilomeneOne', sans-serif;
+}
+
+body.overview {
+	background-image: url('/configs/conferences/hackmas2026/bg.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	background-color: @lavender-sky;
+
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	@media (max-width: @screen-md-min) {
+		background-image: url('/configs/conferences/hackmas2026/bg-vertical.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: contain;
+		background-color: @lavender-sky;
+	}
+}
+
+.overview-content {
+	background-color: @lavender-sky-dark;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+	align-self: center;
+	justify-self: center;
+	margin: 0 8px;
 }
 
 nav {
@@ -65,7 +102,7 @@ nav {
 }
 
 .navbar-default {
-	background-color: @lavender-sky;
+	background-color: transparent;
 	color: @white;
 	border-bottom: none;
 }
