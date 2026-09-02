@@ -43,7 +43,7 @@ a {
 	color: lighten(@text-color, 20%);
 }
 
-.navbar {
+.navbar {font-stretch: condensed;
 	background-color: @background-color;
 	border-bottom: 1px solid @color-primary !important;
 }
@@ -67,13 +67,10 @@ footer {
 }
 
 h1 {
-	position: absolute;
-	left: -1rem;
-	margin-top: -3rem;
+	font-stretch: condensed;
 	font-size: 5rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	z-index: -9;
 }
 
 .nav-tabs.nav-justified > .active > a {
@@ -82,20 +79,29 @@ h1 {
 
 ul.nav.nav-player.nav-tabs.nav-justified > li.active > a,
 .nav-tabs > li.active > a {
-	background-color: rgba(100, 100, 100, 0.2);
+	background-color: rgba(25, 36, 82, 0.8);
 	backdrop-filter: blur(4px);
+	font-stretch: expanded;
 	border: none;
 }
 
 ul.nav.nav-player.nav-tabs.nav-justified > li > a,
 .nav-tabs > li > a,
 .panel-default > .panel-heading {
-	background-color: rgba(30, 30, 30, 0.2);
+	background-color: rgba(25, 36, 82, 0.3);
 	border: none;
 	backdrop-filter: blur(4px);
-	color: lighten(@text-color, 20%);
+	color: lighten(@text-color, 20%) !important;
+	font-stretch: expanded;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+ul.nav.nav-player.nav-tabs.nav-justified > li > a:hover,
+.nav-tabs > li > a:hover,
+.panel-default > .panel-heading:hover {
+	background-color: rgba(25, 36, 82, 1) !important;
+	backdrop-filter: blur(4px);
 }
 
 .player-wrap.tab-content {
@@ -103,7 +109,7 @@ ul.nav.nav-player.nav-tabs.nav-justified > li > a,
 }
 
 .panel {
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(25, 36, 82, 0.3);
 	backdrop-filter: blur(4px);
 	border: none;
 }
@@ -126,9 +132,7 @@ row.group-live h2 {
 
 .row.recordings h2 span,
 .row.group-live h2 span {
-	position: absolute;
-	left: -1rem;
-	margin-top: -3rem;
+	font-stretch: condensed;
 	font-size: 5rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -141,4 +145,20 @@ h3 {
 
 .block.pause {
 	background-color: darken(@background-color, 10%) !important;
+}
+
+.container-fluid, .tab-pane {
+	border: 1px solid @color-primary;
+}
+
+.form-control {
+	background-color: darken(@background-color, 10%) !important;
+	color: @text-color !important;
+	border: 1px solid @color-primary !important;
+}
+
+.btn-default {
+	background-color: darken(@color-secondary, 40%) !important;
+	color: @text-color !important;
+	border: none !important;
 }
