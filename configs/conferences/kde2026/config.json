@@ -1,8 +1,9 @@
+
 {
     "$schema": "../../../docs/config-schema.json",
     "conference": {
-        "title": "Akademy 2026",
-        "acronym": "akademy",
+        "title": "KDE Akademy 2026",
+        "acronym": "kde2026",
         "organizer": "KDE Community",
         "description": "Akademy 2026",
         "keywords": [
@@ -32,8 +33,7 @@
                     "Room 1",
                     "Room 2"
                 ],
-                "scale": 3,
-                "simulate_offset": 0
+                "scale": 3
             },
             "overviewPage": {
                 "sections": [
