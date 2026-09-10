@@ -27,7 +27,7 @@
                 }
             },
             "schedule": {
-                "url": "https://conf.kde.org/export/timetable/11.json",
+                "url": "https://data.c3voc.de/kde2026/schedule.json",
                 "roomfilter": [
                     "Room 1",
                     "Room 2"
