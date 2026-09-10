@@ -188,4 +188,11 @@ class Conferences
 	public static function getCustomStylesDir($mandator) {
 		return forceslash(Conferences::MANDATOR_DIR).forceslash($mandator);
 	}
+
+	public static function hasCustomScript($mandator) {
+		return file_exists(Conferences::getCustomScript($mandator));
+	}
+	public static function getCustomScript($mandator) {
+		return forceslash(Conferences::getCustomStylesDir($mandator)).'main.js';
+	}
 }

@@ -89,6 +89,7 @@ try {
 		'assemblies' => 'template/assemblies/',
 		'assets' => forceslash('assets'),
 		'conference_assets' => '',
+		'conference_has_script' => false,
 
 		'conference' => new GenericConference(),
 	));
@@ -212,6 +213,7 @@ try {
 		'route' => $route,
 		'canonicalurl' => joinpath([baseurl(), $mandator, $route]),
 		'conference_assets' => forceslash($mandator),
+		'conference_has_script' => Conferences::hasCustomScript($mandator),
 
 		'conference' => $conference,
 		'feedback' => $conference ? $conference->getFeedback() : false,
@@ -236,6 +238,17 @@ try {
 		}
 		else {
 			handle_lesscss_request('assets/css/main.less', '../../assets/css/');
+		}
+	}
+
+	else if($route == 'gen/main.js')
+	{
+		if(Conferences::hasCustomScript($mandator))
+		{
+			handle_customjs_request(Conferences::getCustomScript($mandator));
+		}
+		else {
+			throw new NotFoundException();
 		}
 	}
 

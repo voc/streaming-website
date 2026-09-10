@@ -79,6 +79,14 @@ function handle_lesscss_request($lessfile, $relative_path)
 	print($css);
 }
 
+function handle_customjs_request($jsfile)
+{
+	$js = file_get_contents($jsfile);
+	header('Content-Type: application/javascript');
+	header('Content-Length: '.strlen($js));
+	print($js);
+}
+
 function days_diff($date)
 {
 	$seconds = strtotime( $date ) - time();
