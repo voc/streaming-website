@@ -31,19 +31,19 @@
         "guid": "914b7b21-2a1b-5967-b733-6c2f7321cf04",
         "name": "Weltraum - C205",
         "slug": "c205",
-        "streamId": "s3"
+        "streamId": "s1"
       },
       {
         "guid": "28e09f7a-8cfd-59ef-a068-5bbf03de1622",
         "name": "Freiraum - C120",
         "slug": "c120",
-        "streamId": "s4"
+        "streamId": "s6"
       },
       {
         "guid": "21f96f6e-7713-5700-bc9b-acacae0f4440",
         "name": "Maschinenraum - C110",
         "slug": "c110",
-        "streamId": "s5"
+        "streamId": "s2"
       }
     ]
   }
