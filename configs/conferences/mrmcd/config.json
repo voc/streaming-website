@@ -1,47 +1,47 @@
 {
   "$schema": "../../../docs/config-schema.json",
   "conference": {
-    "title": "MRMCD 2025",
-    "description": "VOLLE TRANSPARENZ",
+    "title": "MRMCD 2026",
+    "description": "GRENZEN ÜBERWINDEN",
     "keywords": ["MRMCD"],
     "organizer": "MRMCD e.V.",
-    "start": "2025-09-12T14:30:00+02:00",
-    "end": "2025-09-14T17:30:00+02:00",
+    "start": "2025-09-11T14:30:00+02:00",
+    "end": "2025-09-13T17:30:00+02:00",
     "streamingConfig": {
       "features": {
         "relive": true,
         "embed": true,
         "feedback": false,
         "social": {
-          "hashtag": "#mrmcd25",
+          "hashtag": "#mrmcd26",
           "mastodon": true
         }
       },
       "schedule": {
-        "url": "https://talks.mrmcd.net/2025/schedule/export/schedule.xml",
+        "url": "https://talks.mrmcd.net/2026/schedule/export/schedule.xml",
         "scale": 7,
         "index_offset": -1
       },
       "html": {
-        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://2025.mrmcd.net/\">MRMCD e.V.</a>\n\t"
+        "footer": "\n\t\tby <a href=\"https://c3voc.de\">C3VOC</a> & <a href=\"https://2026.mrmcd.net/\">MRMCD e.V.</a>\n\t"
       }
     },
     "rooms": [
       {
-        "guid": "8bb4bf55-beed-5b14-b83f-5f53edf3d8de",
-        "name": "C205 - FOIA arena",
+        "guid": "914b7b21-2a1b-5967-b733-6c2f7321cf04",
+        "name": "Weltraum - C205",
         "slug": "c205",
         "streamId": "s3"
       },
       {
-        "guid": "13fbdc77-cdb1-548b-a49b-df80d85a7108",
-        "name": "C120 - Art. 15 GDPR",
+        "guid": "28e09f7a-8cfd-59ef-a068-5bbf03de1622",
+        "name": "Freiraum - C120",
         "slug": "c120",
         "streamId": "s4"
       },
       {
-        "guid": "a0c9533a-dd14-588d-ab74-63d33a229fc9",
-        "name": "C110 - Brief enquiry",
+        "guid": "21f96f6e-7713-5700-bc9b-acacae0f4440",
+        "name": "Maschinenraum - C110",
         "slug": "c110",
         "streamId": "s5"
       }
