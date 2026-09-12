@@ -20,7 +20,7 @@
         "streamingConfig": {
             "features": {
                 "embed": true,
-                "relive": true,
+                "relive": false,
                 "feedback": false,
                 "social": {
                     "hashtag": "#akademy2026",
