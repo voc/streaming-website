@@ -1,5 +1,64 @@
 @import "../../../assets/css/_structure.less";
 
+// farben aus README von design exports für pretalx kopiert/abgeleitet
+@ds-primary:                #ff095c;
+@ds-bg:                     #ffffff;
+@ds-text:                   #1a1a1a;
+
+@brand-primary:             @ds-primary;
+@brand-danger:              @ds-primary;
+@link-color:                @ds-primary;
+@link-hover-color:          darken(@ds-primary, 15%);
+@body-bg:                   @ds-bg;
+@text-color:                @ds-text;
+
+@navbar-default-bg:         @ds-bg;
+@navbar-default-border:     @ds-primary;
+@navbar-default-link-color: @ds-text;
+@navbar-default-link-hover-color: @ds-primary;
+
+@panel-default-border:      @ds-primary;
+@panel-default-heading-bg:  fade(@ds-primary, 8%);
+@nav-tabs-border-color:     @ds-primary;
+@nav-tabs-active-link-hover-border-color: @ds-primary;
+@btn-default-border:        @ds-primary;
+@btn-default-color:         @ds-primary;
+
+@schedule-border:           @ds-primary;
+@schedule-room:             @ds-primary;
+
+// TODO: Besser voc logo lassen, oder kleines passendes machen lassen
+nav.navbar {
+    &.navbar-default {
+        border-bottom-width: 3px;
+    }
+}
+
+// horizontale kacheln (von pretalx bg images abgeleitet)
+@header-height: 242px;
+
 .banner {
     text-align: center;
+    margin: -20px 0 20px;                 // align to navbar
+    height: @header-height;
+    background: url(header-image.png) center top repeat-y;
+    background-size: auto @header-height;
+
+    img {
+        max-width: 60%;
+        height: auto;
+        margin-top: (@header-height - 140px) / 2;
+    }
+
+    @media (max-width: @screen-md-max) {
+        height: 180px;
+        background-size: auto 180px;
+        img { margin-top: 20px; }
+    }
+
+    @media (max-width: @screen-xs-max) {
+        height: 110px;
+        background-size: auto 110px;
+        img { max-width: 80%; margin-top: 10px; }
+    }
 }
