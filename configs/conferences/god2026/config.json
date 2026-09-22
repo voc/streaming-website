@@ -25,14 +25,14 @@
     },
     "rooms": [
       {
-        "name": "Track 1",
+        "name": "Saal Baden",
         "slug": "track1",
-        "streamId": "s3"
+        "streamId": "s4"
       },
       {
-        "name": "Track 2",
+        "name": "Saal Fidelitas",
         "slug": "track2",
-        "streamId": "s4"
+        "streamId": "s5"
       }
     ]
   }
