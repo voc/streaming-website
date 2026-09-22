@@ -27,7 +27,7 @@
       {
         "name": "Loft",
         "slug": "loft",
-        "streamId": "s5",
+        "streamId": "s1",
         "guid": "24cbbfcb-a21d-5c3d-9938-9a2c0ddeb150",
         "streamingConfig": {
           "wide": true
@@ -36,7 +36,7 @@
       {
         "name": "Galerie",
         "slug": "galerie",
-        "streamId": "s4",
+        "streamId": "s2",
         "guid": "f73717af-dcf4-523c-968d-885a98f92c1d",
         "streamingConfig": {
           "wide": true
