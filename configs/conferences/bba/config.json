@@ -9,6 +9,9 @@
         "streamingConfig": {
             "html": {
                 "footer": "by <a href='https://bigbrotherawards.de/'>BigBrotherAwards</a> &amp; <a href='https://c3voc.de'>C3VOC</a>"
+            },
+            "features": {
+                "releases": false
             }
         },
         "rooms": [
