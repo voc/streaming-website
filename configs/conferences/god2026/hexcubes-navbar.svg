@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hex cubes from the German OWASP Day 2026 slide, rearranged side by side to fit the navbar -->
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="374" viewBox="3510 33 390 374">
+  <defs>
+    <linearGradient id="gradCubeL" gradientUnits="userSpaceOnUse" x1="3665.55" y1="385.56" x2="3745.55" y2="524.13">
+      <stop offset="0" stop-color="#24ffd6"/><stop offset="1" stop-color="#9736f5"/>
+    </linearGradient>
+    <linearGradient id="gradCubeR" gradientUnits="userSpaceOnUse" x1="3757.02" y1="313.63" x2="3858.85" y2="162.66">
+      <stop offset="0" stop-color="#24ffd6"/><stop offset="1" stop-color="#9141f3"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path id="cube-right" d="M 3805.00,133.00 L 3899.83,187.75 L 3899.83,297.25 L 3805.00,352.00 L 3710.17,297.25 L 3710.17,187.75 Z" fill="url(#gradCubeR)"/>
+    <path id="glass-right" d="M 3805.00,33.00 L 3899.83,87.75 L 3899.83,197.25 L 3805.00,252.00 L 3710.17,197.25 L 3710.17,87.75 Z" fill="#ffffff" fill-opacity="0.37"/>
+  </g>
+  <g transform="translate(-94,-146)">
+    <path id="cube-left" d="M 3699.00,334.00 L 3793.83,388.75 L 3793.83,498.25 L 3699.00,553.00 L 3604.17,498.25 L 3604.17,388.75 Z" fill="url(#gradCubeL)"/>
+    <path id="glass-left" d="M 3699.00,234.00 L 3793.83,288.75 L 3793.83,398.25 L 3699.00,453.00 L 3604.17,398.25 L 3604.17,288.75 Z" fill="#ffffff" fill-opacity="0.37"/>
+  </g>
+</svg>

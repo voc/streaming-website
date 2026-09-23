@@ -1,0 +1,251 @@
+@import "../../../assets/css/_structure.less";
+
+// Stolen from FrOSCon 2026 design
+
+@blue-bg-dark: #242b62;
+@blue-bg-mid: fade(#0626e1, 50%);
+@blue-bg-light: fade(#0626e1, 50%);
+@blue-bright: darken(#0168f0, 5%);
+@green-light: #01fbd5;
+@green-lightest: white;
+
+@brand-primary:             @green-light;
+@brand-danger:              @blue-bright;
+
+@body-bg:                   @blue-bg-dark;
+@text-color:                @green-lightest;
+@text-color-highlight:      @green-light;
+@text-shadow-color:         @blue-bg-dark;
+@link-color:                @green-light;
+@link-hover-color:          @green-lightest;
+
+@navbar-default-color:      @text-color-highlight;
+@navbar-default-bg:         darken(@blue-bright, 15%);
+@navbar-default-link-color: @link-color;
+@navbar-default-link-hover-color: @link-hover-color;
+
+@panel-bg:                  @blue-bg-light;
+@panel-default-heading-bg:  @blue-bg-light;
+@panel-default-text:        @green-light;
+@panel-default-border:      @green-light;
+@panel-primary-border:      @green-light;
+@panel-link-hover-body-bg:  @blue-bg-mid;
+
+@nav-link-hover-bg:         @blue-bg-light;
+@nav-tabs-border-color:     @green-light;
+@nav-tabs-link-hover-border-color: @green-lightest;
+@nav-tabs-active-link-hover-bg: @panel-link-hover-body-bg;
+@nav-tabs-active-link-hover-color: @link-hover-color;
+@nav-tabs-active-link-hover-border-color: @panel-default-border;
+
+@btn-default-color:         @link-color;
+@btn-default-color-hover:   @link-hover-color;
+@btn-default-bg:            @blue-bg-light;
+@btn-default-border:        @panel-default-border;
+
+@btn-primary-color:         @blue-bg-dark;
+
+@input-bg:                  @blue-bg-light;
+@input-bg-disabled:         @blue-bg-mid;
+@input-color:               @link-color;
+
+@dropdown-bg:               @blue-bg-light;
+@dropdown-border:           @green-light;
+@dropdown-link-color:       @link-color;
+@dropdown-link-hover-color: @link-hover-color;
+
+@schedule-border:           @green-lightest;
+@schedule-selected-room:    @green-light;
+
+
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    line-height: 1.2;
+    color: @text-color;
+    text-shadow: @text-shadow-color 0 0 3px;
+}
+
+h1, h2, .h1, .h2  {
+    font-family: Exo, sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: @text-color-highlight;
+    text-shadow: @text-shadow-color 0 0 5px;
+}
+
+body.overview {
+    .panel-title {
+        font-weight: bold;
+    }
+
+    .panel-body {
+        min-height: 10px;
+    }
+
+    .recordings .panel {
+        &:has(.panel-body a:hover), &:has(.panel-body a:focus) {
+            background-color: @panel-link-hover-body-bg;
+        }
+    }
+}
+
+a {
+    &:hover, &:focus {
+        .panel {
+            background-color: @panel-link-hover-body-bg;
+        }
+    }
+}
+
+.btn.btn-default {
+    &:hover, &:focus {
+        color: @btn-default-color-hover;
+    }
+}
+
+.schedule {
+    #schedule-event-detail-popover {
+        background-color: fade(@blue-bg-light, 100%);
+
+        #modal-header {
+            background-color: @blue-bg-dark;
+        }
+    }
+
+    .now {
+        text-shadow: @green-lightest 0 0 1.2px;
+    }
+
+    .room.highlight {
+        h1, h2, h3, .h1, .h2, .h3  {
+            color: black;
+        }
+
+        h4, h5, h6, .h4, .h5, .h6 {
+            color: @blue-bg-mid;
+        }
+    }
+
+    .room:not(.highlight) {
+        .block.pause, .block.optout {
+            background-color: transparent;
+        }
+
+        h1, h2, h3, .h1, .h2, .h3  {
+            color: @green-lightest;
+        }
+
+        h4, h5, h6, .h4, .h5, .h6 {
+            color: @green-light;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2 .h3, .h4, .h5, .h6 {
+        text-shadow: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+// hex cube artwork sizes; the ratios come from the svg viewBoxes
+@cubes-ratio:               (520 / 296);
+@navbar-cubes-ratio:        (374 / 390);
+@navbar-cubes-inset:        4px;
+@navbar-cubes-right:        24px;
+@navbar-cubes-height:       (@navbar-height - 2 * @navbar-cubes-inset);
+@navbar-cubes-width:        round(@navbar-cubes-height / @navbar-cubes-ratio);
+// hide the navbar cubes once they would run into the centered container
+@navbar-cubes-breakpoint:   (@container-lg + 2 * (@navbar-cubes-right + @navbar-cubes-width + 8px));
+
+nav.navbar {
+    .navbar-brand {
+        padding-left: 20px;
+        line-height: 18px;
+
+        .icon {
+            background-image: url(god2026.svg);
+            background-size: contain;
+            width: 90px;
+            margin-top: -5px;
+        }
+    }
+
+    .button-wrapper > .navbar-time {
+        line-height: 18px;
+    }
+
+    &.navbar-default {
+        border-bottom-color: darken(@blue-bright, 10%);
+        border-bottom-width: 6px;
+    }
+
+    // hex cubes from the slide artwork, on the right edge of the navbar
+    &::after {
+        content: "";
+        position: absolute;
+        top: @navbar-cubes-inset;
+        right: @navbar-cubes-right;
+        width: @navbar-cubes-width;
+        height: @navbar-cubes-height;
+        background: url(hexcubes-navbar.svg) no-repeat center / contain;
+        pointer-events: none;
+
+        @media (max-width: (@navbar-cubes-breakpoint - 1)) {
+            display: none;
+        }
+    }
+}
+
+.froscon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    background-attachment: fixed;
+
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+
+    z-index: -100;
+
+    @media (max-width: @screen-sm-min) {
+        display: none;
+    }
+}
+
+footer {
+    position: unset;
+    color: @text-color-highlight;
+    text-shadow: @text-shadow-color 0 0 3px;
+    background: none;
+
+    a {
+        color: @link-color;
+
+        &:hover, &:focus {
+            color: @link-hover-color;
+        }
+    }
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    background: 0 52px linear-gradient(176deg, mix(@blue-bg-dark, @blue-bg-mid, 30%) 0%, @blue-bg-mid 10%, @blue-bg-mid 58%, @blue-bg-dark 100%) fixed no-repeat, @blue-bright;
+
+    // large, faint hex cubes in the bottom left corner
+    &::before {
+        content: "";
+        position: fixed;
+        left: 32px;
+        bottom: 32px;
+        width: 30vh;
+        height: (30vh * @cubes-ratio);
+        background: url(hexcubes.svg) no-repeat bottom left / contain;
+        opacity: 0.12;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
