@@ -6,8 +6,8 @@
     "description": "",
     "keywords": ["OWASP", "Web Security", "Conference"],
     "organizer": "OWASP Germany Chapter",
-    "start": "2026-09-24T08:00:00+01:00",
-    "end": "2026-09-24T19:00:00+01:00",
+    "start": "2026-09-24T07:30:00+02:00",
+    "end": "2026-09-24T19:30:00+02:00",
     "streamingConfig": {
       "features": {
         "embed": true,
