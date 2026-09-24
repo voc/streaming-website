@@ -76,8 +76,8 @@ class ConferenceJson extends Conference
 					$relive,
 					[
 						'title' 		=> $c->title,
-						'author' 		=> $c->organizer,
-						'description' 	=> $c->description,
+						'author' 		=> isset($c->organizer) ? $c->organizer : null,
+						'description' 	=> isset($c->description) ? $c->description : null,
 						'keywords'		=> isset($c->keywords) ? (is_array($c->keywords) ? implode(', ', $c->keywords) : null) : null,
 						"releases"		=> "https://media.ccc.de/c/".$media_slug,
 					],
