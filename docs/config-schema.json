@@ -11,7 +11,9 @@
     "conference": {
       "type": "object",
       "required": [
-        "title"
+        "title",
+        "description",
+        "organizer"
       ],
       "additionalProperties": false,
       "properties": {
