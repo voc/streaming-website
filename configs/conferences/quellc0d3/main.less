@@ -1,0 +1,85 @@
+@import "../../../assets/css/_structure.less";
+
+@background: #1e1f20;
+@light-bg: lighten(@background, 10%);
+@lighter-bg: lighten(@background, 20%);
+@cyan: #279cbd;
+@magenta: #ff00d9;
+@green: #04f500;
+@yellow: #ffff45;
+@white: #eef3ed;
+
+body {
+	min-height: 100vh;
+	min-width: 100vh;
+	background-image: url("./bg.png");
+	background-size: cover !important;
+	color: @green;
+}
+
+a, a:hover {
+	color: @cyan;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus, .nav-tabs > li > a:hover, body.room .tab-content {
+	border: 1px solid @cyan !important;
+}
+.nav-tabs.nav-justified > li > a {
+	border-bottom: 0 !important;
+}
+.navbar {
+	background-color: darken(@magenta, 40%);
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background-color: @light-bg !important;
+	color: @cyan
+}
+.navbar-brand {
+	color: @green !important;
+}
+.modal {
+	color: @white;
+}
+#schedule-event-detail-popover {
+	border: 1px solid @cyan !important;
+}
+#schedule-event-detail-popover hr {
+	border: 0;
+}
+#schedule-event-detail-popover a {
+	color: @cyan;
+}
+.form-control, .btn, #schedule-event-detail-popover {
+	background-color: @background !important;
+	color: @white;
+}
+.schedule .block.daychange {
+	background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+	text-shadow: none;
+}
+.schedule .block{
+	color: @magenta;
+}
+.schedule a {
+	color: @background;
+}
+#schedule-event-detail-popover #modal-header {
+	background-color: @light-bg;
+	color: @green;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: @lighter-bg !important;
+	color: @cyan !important;
+}
+.panel-heading {
+	background-color: @light-bg !important;
+	color: @yellow !important;
+}
+
+.panel-heading a { color: @yellow; }
+.panel { background-color: @light-bg; }
+
+.icon { background-image: url("https://quellcode.0x90.space/2026/images/quellc0d3_logo_plain.svg") !important; }
+footer { background: none; }
+footer a { color: @green; }
