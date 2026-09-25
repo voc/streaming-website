@@ -26,7 +26,7 @@
       {
         "name": "Vortragsraum",
         "slug": "6-vortragsraum",
-        "streamId": "s3",
+        "streamId": "s6",
         "guid": "30696aee-b914-525c-b43c-ae5588b1eedc",
         "streamingConfig": {
           "wide": true
