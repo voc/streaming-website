@@ -23,7 +23,7 @@
         "rooms": [
             {
                 "name": "Hamburg",
-                "slug": "cafe",
+                "slug": "saal",
                 "streamId": "s4"
             }
         ]
