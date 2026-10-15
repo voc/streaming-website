@@ -1,0 +1,33 @@
+{
+    "$schema": "../../../docs/config-schema.json",
+    "conference": {
+        "description": "Das Vintage Computing Festival Berlin (VCFB) ist eine Veranstaltung rund um historische Computer und Rechentechnik. In Ausstellungen, Vorträgen und Workshops präsentieren die Mitwirkenden aus ganz Deutschland und darüber hinaus verschiedene Aspekte des Themas Vintage Computing. Dabei werden nicht nur Retro-Computer ausgestellt, sondern z.B. auch historische Betriebssysteme, Programmiersprachen, Netzwerktechnik sowie Taschenrechner und Rechenmaschinen. Der Großteil der präsentierten Geräte ist funktionsfähig. Das seit 2014 stattfindende VCFB ist stetig gewachsen und konnte 2019 fast 3000 Besucher anlocken. 2020 und 2021 fand das VCFB als Online- bzw. Hybrid-Veranstaltung statt.",
+        "media_slug": "vcfb26",
+        "organizer": "Vintage Computing Festival Berlin",
+        "start": "2026-10-17T10:00:00+02:00",
+        "end": "2026-10-18T18:00:00+02:00",
+        "title": "Vintage Computing Festival Berlin 2026",
+        "streamingConfig": {
+            "html": {
+                "footer": "by <a href='https://vcfb.de/'>Vintage Computing Festival Berlin</a> &amp; <a href='https://c3voc.de'>C3VOC</a>"
+            },
+            "schedule": {
+                "url": "https://vcfb.de/2026/schedule_voc.xml"
+            },
+            "features": {
+                "social": {
+                    "hashtag": "#VCFB",
+                    "mastodon": true,
+                    "twitter": false
+                }
+            }
+        },
+        "rooms": [
+            {
+                "name": "G001",
+                "slug": "g001",
+                "streamId": "s1"
+            }
+        ]
+    }
+}
