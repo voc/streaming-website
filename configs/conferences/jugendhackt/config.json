@@ -18,11 +18,15 @@
                     "mastodon": true,
                     "twitter": false
                 }
+            },
+            "schedule": {
+                "url": "https://fahrplan.alpaka.space/congress/schedule/"
             }
         },
         "rooms": [
             {
-                "name": "Congress Berlin",
+                "guid": "7c4db2f2-e456-5fa2-a32f-7630996adf82",
+                "name": "Bühne 2",
                 "slug": "saal",
                 "streamId": "s2"
             }
