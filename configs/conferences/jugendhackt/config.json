@@ -20,7 +20,7 @@
                 }
             },
             "schedule": {
-                "url": "https://fahrplan.alpaka.space/congress/schedule/"
+                "url": "https://fahrplan.alpaka.space/congress/schedule/export/schedule.xml"
             }
         },
         "rooms": [
