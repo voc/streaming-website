@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../docs/config-schema.json",
+  "conference": {
+    "description": "The Matrix Conference 2026",
+    "media_slug": "matrix-conf-2026",
+    "organizer": "The Matrix Conference",
+    "start": "2026-10-21T09:00:00+02:00",
+    "end": "2026-10-22T19:00:00+02:00",
+    "title": "The Matrix Conference 2026",
+    "streamingConfig": {
+      "html": {
+        "footer": "by <a href='https://conference.matrix.org/'>The Matrix Conference</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
+        "banner": "<img src='/configs/conferences/matrix-conference-2026/logo.svg'  alt='The Matrix Conference Logo' width='220px'>"
+      },
+      "schedule": {
+        "url": "https://cfp.2026.matrix.org/matrix-conference-2026/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Sofya",
+          "Katherine",
+          "Peter"
+        ]
+      },
+      "features": {
+        "relive": true
+      }
+    },
+    "rooms": [
+      {
+        "name": "Sofya",
+        "slug": "sofya",
+        "streamId": "s3",
+        "guid": "ad94b07e-ea65-53fd-8aab-3b3bf6c633ea",
+        "streamingConfig": {
+          "wide": true
+        }
+      },
+      {
+        "name": "Katherine",
+        "slug": "katherine",
+        "streamId": "s5",
+        "guid": "d1cad1c4-5423-57bf-bc0c-2663da0866d4",
+        "streamingConfig": {
+          "wide": false
+        }
+      },
+      {
+        "name": "Peter",
+        "slug": "peter",
+        "streamId": "s6",
+        "guid": "d5990945-3b74-52d6-8b90-9edc15d27885",
+        "streamingConfig": {
+          "wide": false
+        }
+      }
+    ]
+  }
+}
