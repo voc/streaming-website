@@ -10,7 +10,7 @@
     "streamingConfig": {
       "html": {
         "footer": "by <a href='https://conference.matrix.org/'>The Matrix Conference</a> &amp; <a href='https://c3voc.de'>C3VOC</a>",
-        "banner": "<img src='https://conference.matrix.org/_astro/logo.M_Cb7Cm2_Z1OTTPl.svg' alt='The Matrix Conference Logo' width='220px'>"
+        "banner": "<img src='/configs/conferences/matrix-conf-2026/logo.svg'  alt='The Matrix Conference Logo' width='220px'>"
       },
       "schedule": {
         "url": "https://cfp.2026.matrix.org/matrix-conference-2026/schedule/export/schedule.xml",
