@@ -71,10 +71,10 @@ class Schedule
 	{
 		try {
 			$schedule = file_get_contents($this->getScheduleCache());
-	
+
 			if(!$schedule)
 				return null;
-	
+
 			return simplexml_load_string($schedule);
 		} catch (ErrorException $e) {
 			return null;
@@ -118,6 +118,7 @@ class Schedule
 		{
 			$daystart = new DateTimeImmutable('+100 year');
 			$dayend = new DateTimeImmutable('-100 year');
+			$has_events = false;
 
 			foreach($day->room as $room)
 			{
@@ -136,8 +137,12 @@ class Schedule
 
 					$daystart = $start < $daystart ? $start : $daystart;
 					$dayend = $end > $dayend ? $end : $dayend;
+					$has_events = true;
 				}
 			}
+
+			if (!$has_events)
+				continue;
 
 			// stringify again to store in simplexml
 			$day['start'] = $daystart->format('c');
@@ -176,7 +181,7 @@ class Schedule
 				// if this room has no events on this day -> add long gap
 				if(!$result) {
 					$nextday = $schedule->day[$dayidx];
-					
+
 					// but not if it is the last day
 					if(!$nextday) {
 						continue;
