@@ -83,7 +83,7 @@ $CONFIG['CONFERENCE'] = array(
 	 * Link zu den Recordings
 	 * Wird diese Zeile auskommentiert, wird der Link nicht angezeigt
 	 */
-	'RELEASES' => 'https://media.ccc.de/b/events/dhcp/2026',
+	'RELEASES' => 'https://media.ccc.de/c/dhcp26',
 
 	/**
 	 * Link zu einer (externen) ReLive-Übersichts-Seite
@@ -121,7 +121,7 @@ $CONFIG['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'Vortragsraum',
+			'vortragsraum',
 		),
 	),
 );
@@ -136,11 +136,13 @@ $CONFIG['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $CONFIG['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'Vortragsraum' => array(
+	'vortragsraum' => array(
 		/**
 		 * Angezeige-Name
 		 */
 		'DISPLAY' => 'Vortragsraum',
+
+		'GUID' => 'fbb28305-9337-4170-8dbd-4830f51cce2a',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -362,12 +364,12 @@ $CONFIG['SCHEDULE'] = array(
 	 */
 	'URL' => 'https://talks.dhcp.cfhn.it/dhcp26/schedule/export/schedule.xml',
 
-        /**
-         * Nur die angegebenen Räume aus dem Fahrplan beachten
-         *
-         * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
-         */
-        'ROOMFILTER' => array('D002 Vortragsraum'),
+	/**
+	 * Nur die angegebenen Räume aus dem Fahrplan beachten
+	 *
+	 * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
+	 */
+	'ROOMFILTER' => array('D002 Vortragsraum'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
