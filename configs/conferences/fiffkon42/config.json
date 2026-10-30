@@ -10,6 +10,12 @@
       "html": {
         "footer": "by <a href='https://2026.fiffkon.de/'>FIfF e.V</a> &amp; <a href='https://c3voc.de'>C3VOC</a>"
       },
+      "schedule": {
+        "url": "https://fahrplan.2026.fiffkon.de/fiffkon26/schedule/export/schedule.xml",
+        "roomfilter": [
+          "Delphi Saal"
+        ]
+      },
       "features": {
         "relive": true
       }
@@ -17,8 +23,12 @@
     "rooms": [
       {
         "name": "Delphi Saal",
-        "slug": "",
-        "streamId": "s1"
+        "slug": "delphisaal",
+        "streamId": "s1",
+        "guid": "79972bc7-07fe-5e02-a97c-22f101d4d8623",
+        "streamingConfig": {
+          "wide": true
+        }
       }
     ]
   }
