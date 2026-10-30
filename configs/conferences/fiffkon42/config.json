@@ -23,7 +23,7 @@
     "rooms": [
       {
         "name": "Delphi Saal",
-        "slug": "delphisaal",
+        "slug": "",
         "streamId": "s1",
         "guid": "79972bc7-07fe-5e02-a97c-22f101d4d8623",
         "streamingConfig": {
