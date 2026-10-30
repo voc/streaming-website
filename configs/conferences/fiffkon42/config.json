@@ -10,12 +10,6 @@
       "html": {
         "footer": "by <a href='https://2026.fiffkon.de/'>FIfF e.V</a> &amp; <a href='https://c3voc.de'>C3VOC</a>"
       },
-      "schedule": {
-        "url": "https://fahrplan.2026.fiffkon.de/fiffkon26/schedule/export/schedule.xml",
-        "roomfilter": [
-          "Delphi Saal"
-        ]
-      },
       "features": {
         "relive": true
       }
