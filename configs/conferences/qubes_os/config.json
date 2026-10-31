@@ -21,7 +21,7 @@
     "streamingConfig": {
       "features": {
         "embed": true,
-        "relive": false,
+        "relive": true,
         "feedback": false
       },
       "schedule": {
